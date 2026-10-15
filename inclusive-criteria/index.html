@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inclusive eligibility check: flag criteria that exclude disabled people</title>
+<meta name="description" content="Paste a clinical study's eligibility criteria and see which exclusion items touch disability, and which inclusion items require an ability such as walking, hearing or reading, with an inclusive alternative to consider for each. Runs in your browser; nothing is sent anywhere.">
+<style>
+body { font: 1.0625rem/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 46rem; margin: 0 auto; padding: 1rem 1.25rem 3rem; color: #1b1b1b; background: #fff; }
+h1 { font-size: 1.6rem; line-height: 1.25; }
+h2 { font-size: 1.25rem; margin-top: 2rem; }
+h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+a { color: #0b4fb3; }
+label { display: block; font-weight: 600; margin-top: 1.25rem; }
+.hint { margin: .2rem 0 .4rem; color: #444; font-size: .95rem; }
+textarea, input[type=text] { box-sizing: border-box; width: 100%; font: inherit; padding: .5rem; border: 2px solid #555; border-radius: 4px; background: #fff; color: #1b1b1b; }
+textarea { min-height: 14rem; }
+button { font: inherit; font-weight: 600; margin: 1rem .75rem 0 0; padding: .55rem 1.1rem; border: 2px solid #0b4fb3; border-radius: 4px; background: #0b4fb3; color: #fff; cursor: pointer; }
+button.secondary { background: #fff; color: #0b4fb3; }
+:focus-visible { outline: 3px solid #b3410b; outline-offset: 2px; }
+#status { font-weight: 600; }
+#results li { margin-bottom: 1.25rem; }
+.item { margin: 0; padding: .4rem .6rem; border-left: 4px solid #555; background: #f3f3f3; }
+.offered { margin: 0; padding: .4rem .6rem; border-left: 4px solid #1a6b2f; background: #eef6ef; }
+.meta { margin: .3rem 0 0; }
+.related { margin: .3rem 0 0; color: #5a3d00; }
+.consider { margin: .3rem 0 0 1.2rem; padding: 0; }
+footer { margin-top: 2.5rem; font-size: .95rem; color: #444; }
+</style>
+</head>
+<body>
+<main>
+<h1>Inclusive eligibility check</h1>
+<p>Paste a clinical study's eligibility criteria. This page lists each exclusion item that touches disability (cognitive, consent capacity, vision, hearing, communication, mobility, and related items such as investigator discretion). It also lists each inclusion item that requires an ability, such as "able to walk 100 m unaided" or "normal hearing", because those shut people out too. For each item it gives an inclusive alternative to consider. It also lists the items that already offer an accommodation, such as consent by a legally authorized representative or "with or without an assistive device".</p>
+<p><strong>Your text stays on your computer.</strong> The check runs in this page, and nothing you paste is sent or saved anywhere.</p>
+
+<form id="form">
+<label for="criteria">Eligibility criteria</label>
+<p class="hint" id="criteria-hint">Include the lines that start "Inclusion Criteria" and "Exclusion Criteria", as on ClinicalTrials.gov.</p>
+<textarea id="criteria" name="criteria" aria-describedby="criteria-hint" spellcheck="false"></textarea>
+
+<label for="subject">The study's condition or title (optional)</label>
+<p class="hint" id="subject-hint">If an item matches the study's own subject (vision in a glaucoma trial, for example), the page says so, because that exclusion may be needed.</p>
+<input type="text" id="subject" name="subject" aria-describedby="subject-hint">
+
+<button type="submit">Check criteria</button><button type="button" class="secondary" id="example">Load an example</button>
+</form>
+
+<h2 id="results-heading">Results</h2>
+<p id="status" role="status">No criteria checked yet.</p>
+<div id="results"></div>
+
+<h2>What a flag means</h2>
+<p>A flag means a criterion uses words linked to disability. It does not mean the criterion is wrong. Some exclusions and requirements are needed for safety or because the outcome depends on that function. For each flagged item, ask three questions. Would taking part be unsafe even with an accommodation? Does the outcome itself need this function? Or is the barrier only how the study is run, which an accommodation can fix? The <a href="https://github.com/munimtechnologies/trial-exclusion-census/blob/main/toolkit/inclusive-eligibility-guide.md">inclusive eligibility guide</a> works through each category.</p>
+<p>The check uses word rules, not a reader. It misses criteria worded in ways it does not know, and it can flag a word used in passing. It reads lists such as "cognitive, visual or motor impairment" and "unable to hear, read or understand". It skips exception clauses ("except for hearing loss"), eye findings that only matter to an eye exam, and planned amputations. An accommodation counts only where an item offers one: "requires a sign language interpreter" in the exclusion criteria, "without an interpreter", and a parent's consent for a child do not count. The same open rules are used by <a href="https://github.com/munimtechnologies/trial-exclusion-census">trial-exclusion-census</a> to count disability-related criteria across every interventional study on ClinicalTrials.gov. This is information, not medical, legal or IRB advice.</p>
+</main>
+<footer>
+<p>Made by MV2 of Munim, Inc. with AI agents. Code Apache-2.0, text CC BY 4.0. Corrections are welcome as <a href="https://github.com/munimtechnologies/trial-exclusion-census/issues">issues</a>.</p>
+</footer>
+
+<script type="text/plain" id="rules">
+rule cognitive \bdement(?:ia|ing)
+rule cognitive \balzheimer
+rule cognitive \bmild cognitive impairment\b
+rule cognitive \bcognitive(?:ly)?\s+(?:impair|deficit|dysfunction|decline|disorder|disabilit|problem|deficien|limitation|difficult)
+rule cognitive \b(?:limited|low|reduced|insufficient|poor|impaired|diminished)\s+cognitive\s+(?:abilit|function|capacit|skill|level)
+rule cognitive \b(?:cognitive|intellectual)(?:\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*(?:[\w-]+\s+)?[\w-]+){1,4}?\s+(?:impair|deficit|disab|handicap|dysfunction|loss)
+rule cognitive \bintellectual(?:ly)?\s+(?:disab|impair|deficien)
+rule cognitive \bmental(?:ly)?\s+(?:retard|disab|handicap|deficien)
+rule cognitive \bdevelopmental\s+(?:delay|disab)
+rule cognitive \blearning\s+(?:disab|difficult)
+rule cognitive \b(?:mmse|mini[- ]mental|moca|montreal cognitive)\b
+rule consent_capacity \b(?:unable|inability|not able|cannot|can ?not|incapable of|incapacity)\b[^.;\n]{0,60}\b(?:consent|assent)\b
+rule consent_capacity \b(?:lack|lacks|lacking|impaired|diminished|without)\s+(?:the\s+)?(?:decision(?:al)?[- ]making\s+)?capacity\b
+rule consent_capacity \bdecision(?:al)?[- ]making capacity\b
+rule consent_capacity \blegally incompetent\b
+rule consent_capacity \bdecisional(?:ly)?\s+(?:impair|incapac)
+rule consent_capacity \bmentally\s+(?:incapacitated|incompetent|incapable)
+rule consent_capacity \b(?:limit|impair|affect|compromis|preclud|prevent|interfer)\w*\s+(?:with\s+)?(?:the\s+|their\s+|his\s+|her\s+)?(?:abilit(?:y|ies)|capacity)\s+to\s+(?:\w+\s+){0,2}?(?:consent|assent)\b
+rule consent_capacity \b(?:guardianship|curatorship|tutorship|tutelage|safeguard of justice|sauvegarde de justice)\b
+rule consent_capacity \bunder\s+(?:a\s+)?(?:legal|judicial|court)\s+protection\b
+rule consent_capacity \b(?:unable|inability|not able|cannot|can ?not|incapable of|incapacity)\s+(?:to\s+)?(?:[\w-]+\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*){0,4}(?:understand|comprehend)\b(?![^.;\n]{0,40}\b(?:english|spanish|french|german|italian|dutch|chinese|mandarin|cantonese|japanese|korean|portuguese|hebrew|arabic|danish|swedish|norwegian|finnish|polish|russian|turkish|greek|thai|hindi|vietnamese|local language|national language|study language|official language)\b)
+rule visual (?<!double-)(?<!double )(?<!single-)(?<!single )(?<!triple-)(?<!triple )\bblind(?:ness)?\b(?!-)
+rule visual \bvisual(?:ly)?\s+(?:impair|disab|handicap|loss|deficit)
+rule visual \blow vision\b
+rule visual \bvision\s+(?:loss|impairment|problem)
+rule visual \b(?:unable|inability|not able|cannot|can ?not|incapable of|incapacity)\s+(?:to\s+)?(?:[\w-]+\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*){0,4}(?:see|visuali[sz]e)\b
+rule visual \b(?:inadequate|insufficient|poor|impaired|reduced)\s+(?:vision|eyesight)\b
+rule visual \b(?:visual|vision)(?:\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*(?:[\w-]+\s+)?[\w-]+){1,4}?\s+(?:impair|deficit|disab|handicap|dysfunction|loss)
+rule visual \bvisual acuity\b
+rule visual \b(?:large[- ]print|braille)\b
+rule hearing \bdeaf(?:ness)?\b
+rule hearing \bhearing\s+(?:impair|loss|disab|deficit|problem|difficult)
+rule hearing \bhard of hearing\b
+rule hearing \b(?:unable|inability|not able|cannot|can ?not|incapable of|incapacity)\s+(?:to\s+)?(?:[\w-]+\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*){0,4}hear\b
+rule hearing \b(?:impaired|inadequate|insufficient|poor|reduced)\s+hearing\b
+rule hearing \bhearing aids?\b
+rule hearing \bauditory\s+(?:impair|deficit|disab|loss|handicap|problem)
+rule hearing \b(?:hearing|auditory)(?:\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*(?:[\w-]+\s+)?[\w-]+){1,4}?\s+(?:impair|deficit|disab|handicap|dysfunction|loss)
+rule hearing \bcochlear implant
+rule hearing \b(?:requir\w*|needs?|needing|uses?|using|use of|primar\w*|knowledge of|fluen\w*|proficien\w*)\b[^.;\n]{0,40}\bsign language\b
+rule communication \baphasi
+rule communication \bdysarthri
+rule communication \billiter
+rule communication \bnon[- ]?verbal\b
+rule communication \b(?:unable|inability|not able|cannot|can ?not|incapable of|incapacity)\s+(?:to\s+)?(?:[\w-]+\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*){0,4}(?:speak|communicate|read|write|verbali[sz]e)\b(?![^.;\n]{0,40}\b(?<!not )(?<!non-)(?<!non )(?:english|spanish|french|german|italian|dutch|chinese|mandarin|cantonese|japanese|korean|portuguese|hebrew|arabic|danish|swedish|norwegian|finnish|polish|russian|turkish|greek|thai|hindi|vietnamese|local language|national language|study language|official language)\b)
+rule communication \b(?:speech|communication|language)\s+(?:impair|disorder|deficit|difficult|disab)
+rule communication \b(?:speech|communication)(?:\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*(?:[\w-]+\s+)?[\w-]+){1,4}?\s+(?:impair|deficit|disab|handicap|dysfunction|loss)
+rule mobility \bwheel[- ]?chair
+rule mobility \bnon[- ]?ambulatory\b
+rule mobility \b(?:unable|inability|not able|cannot|can ?not|incapable of|incapacity)\s+(?:to\s+)?(?:[\w-]+\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*){0,4}(?:walk|ambulate|stand)\b
+rule mobility \bbed[- ]?(?:ridden|bound)\b
+rule mobility \bparapleg
+rule mobility \btetrapleg
+rule mobility \bquadripleg
+rule mobility \bhemipleg(?!ic migraine)
+rule mobility \bparaly(?:sis|ses|zed|sed)\b
+rule mobility \bamputat
+rule mobility \b(?:mobility|physical)\s+(?:impair|disab|limitation|handicap)
+rule mobility \b(?:requir\w*|dependent on|use of|uses?)\s+(?:an?\s+)?(?:walking aid|walker|cane|crutch|assistive device)
+rule mobility \bmotor\s+(?:impair|deficit|disab|handicap|limitation)
+rule mobility \bspasticity\b
+rule mobility \b(?:affect|limit|impair|prevent|preclud|interfer|restrict)\w*\s+(?:with\s+)?(?:the\s+|their\s+|his\s+|her\s+)?(?:ambulation|walking|mobility|gait|ability to walk)\b
+rule mobility \b(?:motor|physical|mobility|locomotor)(?:\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*(?:[\w-]+\s+)?[\w-]+){1,4}?\s+(?:impair|deficit|disab|handicap|dysfunction|loss)
+rule psychiatric \bschizo
+rule psychiatric \bbipolar\b
+rule psychiatric \bpsychos[ie]s\b
+rule psychiatric \bpsychotic\b
+rule psychiatric \bpsychiatric\s+(?:disorder|illness|condition|disease|history|hospitali|comorbid)
+rule psychiatric \bmental\s+(?:illness|disorder|health (?:disorder|condition))
+rule psychiatric \bmajor depress
+rule psychiatric \bsuicid
+rule substance_use \b(?:substance|drug|alcohol|opioid)\s+(?:use|abuse|dependence|misuse|addiction)
+rule substance_use \balcoholism\b
+rule substance_use \baddict
+rule performance_status \becog\b
+rule performance_status \bkarnofsky\b
+rule performance_status \bperformance status\b
+rule performance_status \bkps\b
+rule performance_status \blansky\b
+rule investigator_discretion \b(?:opinion|judge?ment|discretion|view)\s+of\s+(?:the\s+)?(?:principal\s+|site\s+|treating\s+)?(?:investigator|pi\b|study (?:doctor|physician|team)|physician|sponsor)
+rule investigator_discretion \binvestigator['’]?s?['’]?\s+(?:opinion|judge?ment|discretion)
+rule investigator_discretion \b(?:investigator|pi)\s+(?:believes|considers|deems|feels|determines)
+rule english_only \bnon[- ]?english\b
+rule english_only \bnot (?:fluent|proficient) in english\b
+rule english_only \blimited english\b
+rule english_only \b(?:speak|read|write|understand|communicat|fluen|proficien|literate)\w*\b[^.;\n]{0,40}\benglish\b
+rule disability_general \bhandicap
+rule disability_general (?<!expanded )\bdisabilit(?:y|ies)\b(?!\s+(?:status|pension|insurance|benefits?|claims?|compensation|payments?|leave))
+accommodation - \b(?:reasonable|appropriate|necessary|disability|special|testing)\s+accommodations?\b|\baccommodations?\s+(?:will|can|may|could|are|is|shall)\s+(?:be\s+)?(?:made|provided|offered|available|arranged)\b|\bassistive (?:device|technolog)|\bwith or without (?:an? )?(?:assistance|help|aid)\b|\blegally (?:authori[sz]ed|acceptable) representative|\bLAR\b|\blegal(?:ly)?\s+(?:representative|proxy)|\b(?:subject|participant|patient)s?\s+or\s+(?:(?:his/her|his|her|their)\s+)?(?:legal(?:ly)?\s+)?(?:authori[sz]ed\s+)?guardian|\b(?:family members?|relatives?|next of kin|caregivers?)\s+or\s+(?:legal\s+)?guardian|\b(?:consent|assent)\b[^.;\n]{0,60}\b(?:family members?|relatives?|next of kin)\b|\bsign language\b|\binterpreter|\bbraille\b|\blarge[- ]print|\bscreen[- ]reader|\bread (?:aloud|to (?:them|the participant))|\bsurrogate\b|\bproxy (?:consent|respondent|informant)|\bwith (?:the )?(?:help|assistance|support) of\b|\b(?:has|have) assistance\b|\bavailable to (?:assist|help|read)\b|\bcaregiver (?:may|can|will) (?:assist|help)
+noaccom - (?<!or )\bwithout\s+(?:an?\s+|the\s+|any\s+)?(?:[\w-]+\s+)?(?:interpreter|assistive|assistance|help|aid|surrogate|proxy|representative|LAR)\b|\b(?:unable|inability|cannot|can ?not|not able)\b[^.;\n]{0,60}\b(?:large[- ]print|braille|sign language|screen[- ]reader)|\bparent(?:s|al)?\b|\bminors?\b|\bchild(?:ren)?\b|\binfants?\b|\bpa?ediatric|\b(?:under|younger than|less than)\s+(?:the\s+age\s+of\s+)?1[2-8]\b|<\s*1[2-8]\b
+exclnoaccom - \b(?:requir\w*|needs?|needing|needed|dependent on|depends on|rel(?:y|ies|ying) on|primar(?:y|ily)|uses?|using|use of|through)\b
+related cognitive dementia|alzheimer|cognit|intellectual|down syndrome|autis|developmental|memory|delirium
+related consent_capacity dementia|alzheimer|cognit|intellectual|delirium|\bcoma\b|critical(?:ly)? ill|critical care|intensive care|\bicu\b|sepsis|cardiac arrest|brain injur|psychos|schizo
+related visual \beye|ocular|retin|macul|glaucoma|cataract|vision|visual|myopi|uveitis|corne|ophthalm|amblyop|keratocon
+related hearing hearing|deaf|tinnitus|cochlea|otitis|\bear\b|vestibul|meniere
+related communication aphasi|stroke|speech|language|dysarthri|stutter|autis|laryn|head and neck
+related mobility stroke|spinal|paraly|amput|multiple sclerosis|parkinson|cerebral palsy|\bgait\b|\bwalk|mobility|fracture|arthroplasty|\bknee|\bhip\b|wheelchair|muscular dystrophy|\bals\b|amyotrophic|neuropath|\bfall|\bfoot\b|\blimb|peripheral arter
+related psychiatric schizo|bipolar|depress|psych|mental|anxiety|suicid|ptsd|stress disorder|mood
+related substance_use alcohol|opioid|substance|drug use|smok|tobacco|nicotine|cocaine|cannabis|addict|methamphetamine
+suggest cognitive If cognition matters to the outcome, name the measure and cut-off and say why; otherwise consider supported decision-making and plain-language, easy-read materials.
+suggest consent_capacity Consider a capacity assessment with a legally authorized representative and participant assent, rather than excluding everyone who cannot consent alone.
+suggest visual Unless the study needs sight, offer large-print, screen-reader-ready or read-aloud consent forms and questionnaires.
+suggest hearing Offer sign language interpreters, captioned video and written instructions instead of excluding hearing loss.
+suggest communication Allow AAC devices, a communication partner or extra time, and accept written, typed or pointed answers.
+suggest mobility Unless the outcome needs walking or standing, consider accessible sites, home or remote visits and transport support.
+suggest investigator_discretion Broad discretion can hide disability exclusions; list the specific safety reasons instead.
+suggest english_only Consider translated materials and interpreters.
+require cognitive \bcognitively\s+(?:intact|normal|unimpaired|healthy|able|capable)\b
+require cognitive \b(?:normal|intact|preserved|sufficient|adequate)\s+cognit
+require cognitive \b(?:mmse|mini[- ]mental|moca|montreal cognitive)\b[^.;\n]{0,40}(?:≥|>=|>|\bat least\b|\bor (?:higher|greater|more|above)\b|\bgreater than\b|\babove\b)
+require consent_capacity ^(?!.*\b(?:representatives?|LAR|surrogates?|guardians?|prox(?:y|ies)|parents?)\b).*?\b(?:able|ability|capable|capacity)(?:\s+and\s+willing)?\s+(?:to|of)\s+(?:\w+ly\s+)?(?:provid|giv|sign)\w*\s+(?:\w+\s+){0,2}?(?:informed\s+)?consent\b
+require consent_capacity ^(?!.*\b(?:representatives?|LAR|surrogates?|guardians?|prox(?:y|ies)|parents?)\b).*?\bcapacity to (?:give |provide )?(?:informed )?consent\b
+require consent_capacity \b(?:able|ability|capable|capacity)(?:\s+and\s+willing)?\s+(?:to|of)\s+(?:\w+ly\s+)?(?:understand|comprehend)\w*\b(?![^.;\n]{0,40}\b(?:english|spanish|french|german|italian|dutch|chinese|mandarin|cantonese|japanese|korean|portuguese|hebrew|arabic|danish|swedish|norwegian|finnish|polish|russian|turkish|greek|thai|hindi|vietnamese|local language|national language|study language|official language)\b)
+require visual \b(?:normal|adequate|sufficient|intact|good)\s+(?:or\s+corrected[- ](?:to[- ]normal\s+)?)?(?:vision|eyesight|visual acuity)\b
+require visual \bcorrected[- ]to[- ]normal\s+(?:vision|visual acuity|eyesight)\b
+require visual \b(?:able|ability|capable|capacity)(?:\s+and\s+willing)?\s+(?:to|of)\s+(?:\w+ly\s+)?see\b
+require visual \b(?:bcva|best[- ]corrected visual acuity|visual acuity)\b[^.;\n]{0,40}\bor better\b
+require visual \b20/\d{2,3}\s+(?:vision|or better)\b
+require visual \b(?:no|without)\s+(?:[\w-]+\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*){0,3}(?:visual|vision)\b(?:\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*[\w-]+){0,3}\s+(?:impair|deficit|problem|disab|loss)
+require hearing \b(?:normal|adequate|sufficient|intact|good)\s+hearing\b
+require hearing \b(?:able|ability|capable|capacity)(?:\s+and\s+willing)?\s+(?:to|of)\s+(?:\w+ly\s+)?hear\b
+require hearing \b(?:no|without)\s+(?:[\w-]+\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*){0,3}(?:hearing|auditory)\b(?:\s*(?:,\s*(?:\b(?:and/or|or|and)\b)?|/|\band/or\b|\bor\b|\band\b)\s*[\w-]+){0,3}\s+(?:impair|deficit|problem|disab|loss)
+require communication \b(?:able|ability|capable|capacity)(?:\s+and\s+willing)?\s+(?:to|of)\s+(?:\w+ly\s+)?(?:speak|communicat|read|writ|verbali[sz]|convers)\w*\b(?![^.;\n]{0,40}\b(?:english|spanish|french|german|italian|dutch|chinese|mandarin|cantonese|japanese|korean|portuguese|hebrew|arabic|danish|swedish|norwegian|finnish|polish|russian|turkish|greek|thai|hindi|vietnamese|local language|national language|study language|official language)\b)
+require communication \b(?:functionally\s+)?literate\b(?![^.;\n]{0,40}\b(?:english|spanish|french|german|italian|dutch|chinese|mandarin|cantonese|japanese|korean|portuguese|hebrew|arabic|danish|swedish|norwegian|finnish|polish|russian|turkish|greek|thai|hindi|vietnamese|local language|national language|study language|official language)\b)
+require communication \b(?:fluent|intelligible)\s+speech\b
+require communication \b(?:able|ability|capable)\s+to\s+(?:verbally|orally)\b
+require communication \b(?:no|without)\s+(?:\w+\s+)?(?:communication|speech|language)\s+(?:problem|difficult|impair|disorder|deficit)
+require mobility \b(?:able|ability|capable|capacity)(?:\s+and\s+willing)?\s+(?:to|of)\s+(?:\w+ly\s+)?(?:walk(?:s|ing)?|ambulat(?:e|ing)|stand(?:ing)?)\b
+require mobility \b(?:independently|fully|freely)\s+ambulat
+require mobility \bambulat(?:ory|e|ing)\s+(?:without|with or without|independently|unaided|unassisted)\b
+require mobility \bwalk(?:s|ing)?\s+(?:independently|unaided|unassisted|without (?:assistance|help|an? (?:assistive|walking) (?:device|aid)))
+require mobility \b(?:able|ability)\s+to\s+(?:perform|complete|do|undergo)\s+(?:a\s+|the\s+)?(?:6MWT|6-?minute walk|six[- ]minute walk|timed up and go)\b
+require mobility \b(?:gmfcs|gross motor function classification system)\b[^.;\n]{0,30}\b(?:I|1)\s*(?:-|–|to|through)\s*(?:I{1,3}|IV|[1-4])\b
+reqsuggest cognitive If the outcome needs this level of cognition, name the measure and the reason; otherwise allow a supporter and easy-read materials.
+reqsuggest consent_capacity Allow consent by a legally authorized representative with the participant's own assent, unless the study cannot be done that way.
+reqsuggest visual Unless a task needs sight, accept blind and low-vision participants and adapt the materials (large print, screen reader, read aloud).
+reqsuggest hearing Unless a task needs hearing, accept deaf and hard-of-hearing participants and provide interpreters, captions and written instructions.
+reqsuggest communication Accept answers by AAC, writing, typing or pointing, and read documents aloud for people who do not read print.
+reqsuggest mobility Unless walking or standing is the outcome or a safety need, accept wheelchair users and people who use walking aids.
+header - ^[^\w\n]*(?:(?:key|main|major|general|specific|additional|principal|other)\s+)?(inclusion|exclusion|eligibility)(?:\s+criteri\w*)?[\s*_]*(?::|$)
+inline - \bexclusion\s+criteri\w*\s*:?
+bullet - ^\s*(?:[*\-•●▪·]+|\(?\d{1,2}[.)]|\(?[a-z][.)])\s+
+except - \b(?:except(?:ion)?s?(?:\s+(?:for|of|are|is|being))?|other than|apart from|with the exception of|may be (?:included|enrolled|eligible)|(?:will|shall|should) not be (?:considered|excluded|counted))\b(?![^.;\n]{0,20}\b(?:english|spanish|french|german|italian|dutch|chinese|mandarin|cantonese|japanese|korean|portuguese|hebrew|arabic|danish|swedish|norwegian|finnish|polish|russian|turkish|greek|thai|hindi|vietnamese|local language|national language|study language|official language)\b)(?:\be\.g\.|\bi\.e\.|[^.;\n)]){0,60}
+veto visual \b(?:study eye|ocular|intraocular|retina\w*|macula\w*|cornea\w*|cataract|media opacit\w*|fovea\w*|optic nerve|ophthalm\w*|worsening|risk of (?:visual|vision))\b
+keep visual (?<!double-)(?<!double )(?<!single-)(?<!single )(?<!triple-)(?<!triple )\bblind(?:ness)?\b(?!-)|\blow vision\b|\bvisual(?:ly)?\s+(?:impair|disab|handicap)|\bvision\s+(?:impairment|problem)|\bunable to see\b|\bpoor vision\b
+veto mobility \b(?:planned|scheduled|requir\w*|need\w*|candidates?\s+for|undergo\w*|indicat\w*\s+for)\s+(?:an?\s+)?(?:[\w-]+\s+){0,3}amputation
+keep mobility \bwheel[- ]?chair|\bnon[- ]?ambulatory\b|\bbed[- ]?(?:ridden|bound)\b|pleg|\bparaly|\b(?:prior|previous|history of)\b[^.;\n]{0,30}\bamputat
+</script>
+<script>
+(function () {
+  "use strict";
+  // The rules above are the ones in exclusion_census.py; test_web_check.py keeps them identical.
+  var LABELS = {
+    cognitive: "cognitive or intellectual", consent_capacity: "capacity to consent", visual: "vision",
+    hearing: "hearing", communication: "communication or speech", mobility: "mobility",
+    psychiatric: "psychiatric", substance_use: "substance use", performance_status: "performance status",
+    investigator_discretion: "investigator discretion", english_only: "English only",
+    disability_general: "disability (general)"
+  };
+  var RULES = {}, ORDER = [], REQUIRE = {}, REQ_ORDER = [], RELATED = {}, SUGGEST = {}, REQ_SUGGEST = {};
+  var VETO = {};
+  var ACCOM, NOACCOM, EXCL_NOACCOM, HEADER, INLINE, BULLET, EXCEPT;
+  document.getElementById("rules").textContent.split(/\r?\n/).forEach(function (line) {
+    if (!line.trim()) return;
+    var a = line.indexOf(" "), b = line.indexOf(" ", a + 1);
+    var kind = line.slice(0, a), key = line.slice(a + 1, b), val = line.slice(b + 1);
+    if (kind === "rule") {
+      if (!RULES[key]) { RULES[key] = []; ORDER.push(key); }
+      RULES[key].push(new RegExp(val, "i"));
+    } else if (kind === "require") {
+      if (!REQUIRE[key]) { REQUIRE[key] = []; REQ_ORDER.push(key); }
+      REQUIRE[key].push(new RegExp(val, "i"));
+    } else if (kind === "veto" || kind === "keep") {
+      VETO[key] = VETO[key] || {};
+      VETO[key][kind] = new RegExp(val, "i");
+    } else if (kind === "related") RELATED[key] = new RegExp(val, "i");
+    else if (kind === "suggest") SUGGEST[key] = val;
+    else if (kind === "reqsuggest") REQ_SUGGEST[key] = val;
+    else if (kind === "accommodation") ACCOM = new RegExp(val, "i");
+    else if (kind === "noaccom") NOACCOM = new RegExp(val, "i");
+    else if (kind === "exclnoaccom") EXCL_NOACCOM = new RegExp(val, "i");
+    else if (kind === "header") HEADER = new RegExp(val, "gim");
+    else if (kind === "inline") INLINE = new RegExp(val, "i");
+    else if (kind === "bullet") BULLET = new RegExp(val, "i");
+    else if (kind === "except") EXCEPT = new RegExp(val, "gi");
+  });
+
+  function headed(text, kind) {
+    var heads = Array.from(text.matchAll(HEADER)), parts = [];
+    heads.forEach(function (h, i) {
+      if (h[1].toLowerCase() !== kind) return;
+      var end = i + 1 < heads.length ? heads[i + 1].index : text.length;
+      parts.push(text.slice(h.index + h[0].length, end));
+    });
+    return parts.length ? parts.join("\n") : null;
+  }
+
+  function exclusionSection(text) {
+    if (!text) return null;
+    var section = headed(text, "exclusion");
+    if (section !== null) return section;
+    var m = INLINE.exec(text);
+    return m ? text.slice(m.index + m[0].length) : null;
+  }
+
+  function inclusionSection(text) {
+    if (!text) return null;
+    var section = headed(text, "inclusion");
+    if (section === null) return null;
+    var m = INLINE.exec(section);
+    return m ? section.slice(0, m.index) : section;
+  }
+
+  function splitItems(section) {
+    var items = [];
+    (section || "").split(/\r\n|\r|\n/).forEach(function (raw) {
+      var line = raw.replace(BULLET, "").trim();
+      if (line.length > 400) line.split(";").forEach(function (p) { items.push(p.trim()); });
+      else if (line) items.push(line);
+    });
+    return items.filter(function (it) { return it.length >= 3; });
+  }
+
+  function matching(rules, order, item) {
+    return order.filter(function (cat) {
+      return rules[cat].some(function (r) { return r.test(item); });
+    });
+  }
+
+  // Exception clauses read out first, then the vetoes, as in classify() in exclusion_census.py.
+  function classify(item) {
+    var text = item.replace(EXCEPT, " ");
+    return matching(RULES, ORDER, text).filter(function (c) {
+      var v = VETO[c];
+      return !(v && v.veto.test(text) && !v.keep.test(text));
+    });
+  }
+
+  // Items that offer an accommodation, as accommodations() in exclusion_census.py.
+  function accommodations(text) {
+    var excl = splitItems(exclusionSection(text));
+    return splitItems(text).filter(function (item) {
+      return ACCOM.test(item) && !NOACCOM.test(item) &&
+        !(excl.indexOf(item) >= 0 && EXCL_NOACCOM.test(item));
+    });
+  }
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  function say(message) {
+    // Clear first, so a screen reader announces the result even when it repeats the last one.
+    var status = document.getElementById("status");
+    status.textContent = "";
+    setTimeout(function () { status.textContent = message; }, 100);
+  }
+
+  function label(c) { return LABELS[c] || c; }
+
+  function list(flagged, subject, tips, prefix) {
+    var ol = el("ol");
+    flagged.forEach(function (f) {
+      var li = el("li");
+      li.appendChild(el("p", "item", f.item));
+      li.appendChild(el("p", "meta", prefix + f.cats.map(label).join(", ")));
+      var rel = f.cats.filter(function (c) { return subject && RELATED[c] && RELATED[c].test(subject); });
+      if (rel.length) {
+        li.appendChild(el("p", "related", "Matches the study's own subject (" + rel.map(label).join(", ") +
+          "), so this may be needed. Check that it is as narrow as possible."));
+      }
+      var have = f.cats.filter(function (c) { return tips[c]; });
+      if (have.length) {
+        var ul = el("ul", "consider");
+        have.forEach(function (c) { ul.appendChild(el("li", null, "Consider: " + tips[c])); });
+        li.appendChild(ul);
+      }
+      ol.appendChild(li);
+    });
+    return ol;
+  }
+
+  function listOffered(out, offered) {
+    if (!offered.length) return;
+    out.appendChild(el("h3", null, "Items that offer an accommodation"));
+    var ul = el("ul");
+    offered.forEach(function (item) {
+      var li = el("li");
+      li.appendChild(el("p", "offered", item));
+      ul.appendChild(li);
+    });
+    out.appendChild(ul);
+  }
+
+  function count(n, one, many) { return n + " " + (n === 1 ? one : many); }
+
+  function check(text, subject) {
+    var out = document.getElementById("results");
+    out.textContent = "";
+    var excl = exclusionSection(text), incl = inclusionSection(text);
+    var flagged = [], required = [];
+    splitItems(excl).forEach(function (item) {
+      var cats = classify(item);
+      if (cats.length) flagged.push({ item: item, cats: cats });
+    });
+    splitItems(incl).forEach(function (item) {
+      var cats = matching(REQUIRE, REQ_ORDER, item);
+      if (cats.length) required.push({ item: item, cats: cats });
+    });
+    if (excl === null && !required.length) {
+      say("No exclusion criteria section found. Paste the full criteria, including the lines that start \"Inclusion Criteria\" and \"Exclusion Criteria\".");
+      return;
+    }
+    var offered = accommodations(text);
+    var accom = " Accommodation offered in the criteria: " + (offered.length ? "yes" : "no") + ".";
+    if (!flagged.length && !required.length) {
+      say("No disability-related exclusion items or ability requirements found by these word rules." + accom);
+      listOffered(out, offered);
+      return;
+    }
+    say(count(flagged.length, "exclusion item", "exclusion items") + " flagged; " +
+      count(required.length, "inclusion item requires", "inclusion items require") + " an ability." + accom);
+    if (flagged.length) {
+      out.appendChild(el("h3", null, "Exclusion items that touch disability"));
+      out.appendChild(list(flagged, subject, SUGGEST, "Categories: "));
+    }
+    if (required.length) {
+      out.appendChild(el("h3", null, "Inclusion items that require an ability"));
+      out.appendChild(list(required, subject, REQ_SUGGEST, "Requires: "));
+    }
+    listOffered(out, offered);
+  }
+
+  var EXAMPLE = "Inclusion Criteria:\n\n* Adults aged 18 to 75 with type 2 diabetes\n* HbA1c between 7% and 10%\n" +
+    "* Able to walk 100 meters without assistance\n* Normal or corrected-to-normal vision\n" +
+    "* Informed consent from the participant or a legally authorized representative\n\n" +
+    "Exclusion Criteria:\n\n* Legally blind or severe visual impairment\n* Unable to provide informed consent\n" +
+    "* Wheelchair user or unable to walk without assistance\n* Unable to read English\n" +
+    "* Requires use of a sign language interpreter\n" +
+    "* Any condition that, in the opinion of the investigator, would interfere with study participation\n* Pregnancy\n";
+
+  document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    check(document.getElementById("criteria").value, document.getElementById("subject").value);
+  });
+  document.getElementById("example").addEventListener("click", function () {
+    document.getElementById("criteria").value = EXAMPLE;
+    document.getElementById("subject").value = "Type 2 diabetes";
+    check(EXAMPLE, "Type 2 diabetes");
+  });
+})();
+</script>
+</body>
+</html>

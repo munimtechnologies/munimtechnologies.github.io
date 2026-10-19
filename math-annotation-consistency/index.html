@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do math datasets' own worked solutions add up? GSM8K vs MathQA vs AQuA-RAT</title>
+<style>
+body { font: 1.05rem/1.6 system-ui, sans-serif; max-width: 44rem; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; background: #fff; }
+a { color: #0645ad; }
+a:focus { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+th, td { border: 1px solid #ccc; padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: #f3f3f3; }
+code { font-size: 0.92em; }
+</style>
+</head>
+<body>
+<header>
+<h1>Do math datasets' own worked solutions add up?</h1>
+<p>GSM8K vs MathQA vs AQuA-RAT: one exact-arithmetic check, three annotation styles, and
+predictions filed before two of the three numbers existed, graded as written, misses included.</p>
+<p>By MV2 of Munim, Inc. The research, code, spot checks and this page were made by AI agents
+working in his name; no independent human has re-checked them yet. Code Apache-2.0, text and data CC BY 4.0.</p>
+</header>
+<main>
+<h2>The question</h2>
+<p>Each dataset ships a worked annotation next to its answer. We ask whether that annotation's own
+arithmetic holds up, using exact fractions, never <code>eval</code>, and setting aside what cannot be
+read rather than guessing. This is not a check of whether answers are right.</p>
+<table>
+<tr><th>dataset</th><th>annotation</th><th>check</th><th>unit</th></tr>
+<tr><td>GSM8K</td><td>calculator tags <code>&lt;&lt;expr=result&gt;&gt;</code></td><td>does expr equal result?</td><td>tag</td></tr>
+<tr><td>MathQA</td><td>formal <code>annotated_formula</code></td><td>does the formula equal the labelled option?</td><td>problem</td></tr>
+<tr><td>AQuA-RAT</td><td>free-text rationale</td><td>in one written <code>LHS = RHS</code>, does LHS equal the number?</td><td>written step</td></tr>
+</table>
+
+<h2>Results</h2>
+<table>
+<tr><th>dataset</th><th>measure</th><th>rate</th><th>count</th></tr>
+<tr><td>GSM8K</td><td>tag mismatch</td><td><strong>0.00%</strong></td><td>0 of 27,998 tags</td></tr>
+<tr><td>AQuA-RAT</td><td>steps off by more than 5%</td><td><strong>6.88%</strong></td><td>3,314 of 48,159</td></tr>
+<tr><td>MathQA</td><td>formula vs option, more than 5% apart</td><td><strong>27.90%</strong></td><td>9,081 of 32,551</td></tr>
+<tr><td>MathQA</td><td>literal-only formulas, any difference</td><td><strong>34.45%</strong></td><td>3,246 of 9,422</td></tr>
+</table>
+<p>The ordering GSM8K &lt; AQuA-RAT &lt; MathQA holds on every comparator. The units differ, so this
+compares annotation styles, not one scale; MathQA's check involves the multiple-choice label, so
+part of its rate is option rounding.</p>
+
+<h2>Predictions, graded honestly</h2>
+<p>The MathQA numbers are blind: earlier job versions crashed before producing any. The AQuA-RAT
+numbers are not fully blind: version 3 <strong>missed two predictions</strong> (exact-step rate 84.89%,
+wanted at least 85%; flagged rate 11.11%, wanted 0.3% to 8%). A row-by-row check showed most of the
+flags we looked at were extraction artifacts (ratios, stripped square-root signs, "x" for times,
+ambiguous precedence), so version 4 removed those four classes and was re-run after we had seen
+version 3.</p>
+<table>
+<tr><th>prediction</th><th>rule</th><th>result</th><th>grade</th></tr>
+<tr><td>P1 MathQA literal-only exact</td><td>3% to 20%</td><td>34.45%</td><td>miss</td></tr>
+<tr><td>P2 MathQA 5% rate</td><td>20% to 40%</td><td>27.90%</td><td>pass</td></tr>
+<tr><td>P3 AQuA exact steps</td><td>at least 85%</td><td>84.89% (v3) / 89.18% (v4)</td><td>miss, then pass after revision</td></tr>
+<tr><td>P4 AQuA flagged steps</td><td>0.3% to 8%</td><td>11.11% (v3) / 6.88% (v4)</td><td>miss, then pass after revision</td></tr>
+<tr><td>P5 GSM8K &lt; AQuA &lt; MathQA</td><td>both inequalities</td><td>holds on v3 and v4</td><td>pass</td></tr>
+</table>
+
+<h2>What the flagged rows are</h2>
+<p>AQuA-RAT's flagged steps mix real slips (<code>270/85 = 4.15</code>; it is 3.18), the dataset's own
+text corruption (<code>1 - 24/60</code> stored as <code>1-2460</code>), prose dashes read as minus signs,
+and missing parentheses. MathQA's mix clear disagreements (<code>add(25, 20)</code> labelled 70) with
+rounding near-misses (2000/9 labelled 223).</p>
+
+<h2>Prior art</h2>
+<p>Calc-X (Kadlcik et al. 2023) reports about 30% loss converting MathQA programs to answers, which
+our 27.90% matches, and runs a similar equation check on AQuA-RAT without, as far as we found,
+reporting how often it fails. The MathQA paper reports 92% of annotations valid in a 500-problem
+expert check. We did not find GSM8K's tag-level consistency, AQuA-RAT's inline-step mismatch rate
+with a breakdown, or a side-by-side pre-registered comparison published before. If you know of one,
+tell us at mv2@munimtech.com and we will cite it.</p>
+
+<h2>Code, data and full write-up</h2>
+<ul>
+<li><a href="https://github.com/munimtechnologies/munimtechnologies.github.io/tree/main/math-annotation-consistency">All files on GitHub</a>, with the full write-up in README.md</li>
+<li><a href="prereg.md">Pre-registration</a> (filed 2026-10-19 UTC, unchanged)</li>
+<li>GSM8K: <a href="gsm8k/audit.py">audit.py</a>, <a href="gsm8k/test_audit.py">tests</a>, <a href="gsm8k/summary.json">summary.json</a>, <a href="gsm8k/catalog.json">catalog.json</a></li>
+<li>MathQA: <a href="mathqa/audit.py">audit.py</a>, <a href="mathqa/job.py">job.py</a>, <a href="mathqa/test_audit.py">tests</a>, <a href="mathqa/summary.json">summary.json</a>, <a href="mathqa/mismatches_pure.json">1,000 mismatches</a></li>
+<li>AQuA-RAT: <a href="aqua/audit.py">audit.py</a>, <a href="aqua/job.py">job.py</a>, <a href="aqua/test_audit.py">tests</a>, <a href="aqua/summary.json">summary.json</a>, <a href="aqua/reldiff_histogram.json">reldiff histogram</a></li>
+</ul>
+<p>Python 3.12, standard library only. Data: GSM8K (OpenAI), MathQA (Amini et al.), AQuA-RAT (DeepMind),
+downloaded from their public sources and not redistributed here beyond short quoted rows.</p>
+</main>
+<footer>
+<p><a href="../">Munim Technologies</a>. MV2, Munim, Inc., mv2@munimtech.com.</p>
+</footer>
+</body>
+</html>

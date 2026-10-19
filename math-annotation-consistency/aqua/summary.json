@@ -1,0 +1,80 @@
+{
+  "dataset": "google-deepmind/AQuA (AQuA-RAT, Ling et al. 2017)",
+  "version": "v4 (false-positive-hardened extractor)",
+  "question": "Within a single written equation LHS=RHS in an AQuA-RAT rationale, does the compound left side's exact arithmetic equal the plain number on the right?",
+  "method": "Conservative extraction, v4: ratio/radical/x-times boundary artifacts dropped; precedence-ambiguous linearizations set aside; percent steps set aside; exact Fraction arithmetic; audited only when the right side is a bare number and the left applies >=1 operation.",
+  "overall": {
+    "records": 97975,
+    "records_with_steps": 32328,
+    "records_all_exact": 27804,
+    "audited_steps": 48159,
+    "exact_steps": 42950,
+    "percent_setaside": 5178,
+    "ambiguous_setaside": 3306,
+    "unevaluable_setaside": 9527,
+    "buckets": {
+      "exact": 42951,
+      "gt_5pct": 3314,
+      "le_5pct": 442,
+      "le_1pct": 585,
+      "le_0p1pct": 867
+    },
+    "exact_step_rate": 0.891837455096659,
+    "genuine_error_steps_gt_5pct": 3314,
+    "genuine_error_rate_gt_5pct": 0.06881372121514151
+  },
+  "per_split": {
+    "train": {
+      "records": 97467,
+      "records_with_steps": 32150,
+      "records_all_exact": 27648,
+      "audited_steps": 47916,
+      "exact_steps": 42729,
+      "percent_setaside": 5138,
+      "ambiguous_setaside": 3299,
+      "unevaluable_setaside": 9480,
+      "buckets": {
+        "exact": 42730,
+        "gt_5pct": 3298,
+        "le_5pct": 441,
+        "le_1pct": 584,
+        "le_0p1pct": 863
+      },
+      "exact_step_rate": 0.891748059103431
+    },
+    "dev": {
+      "records": 254,
+      "records_with_steps": 89,
+      "records_all_exact": 77,
+      "audited_steps": 113,
+      "exact_steps": 101,
+      "percent_setaside": 27,
+      "ambiguous_setaside": 6,
+      "unevaluable_setaside": 26,
+      "buckets": {
+        "exact": 101,
+        "gt_5pct": 9,
+        "le_0p1pct": 2,
+        "le_1pct": 1
+      },
+      "exact_step_rate": 0.8938053097345132
+    },
+    "test": {
+      "records": 254,
+      "records_with_steps": 89,
+      "records_all_exact": 79,
+      "audited_steps": 130,
+      "exact_steps": 120,
+      "percent_setaside": 13,
+      "ambiguous_setaside": 1,
+      "unevaluable_setaside": 21,
+      "buckets": {
+        "exact": 120,
+        "gt_5pct": 7,
+        "le_5pct": 1,
+        "le_0p1pct": 2
+      },
+      "exact_step_rate": 0.9230769230769231
+    }
+  }
+}

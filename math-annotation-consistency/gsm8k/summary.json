@@ -1,0 +1,89 @@
+{
+ "artifact": "gsm8k-annotation-audit",
+ "by": "AI agents working in MV2's name, Munim, Inc.",
+ "method": "restricted-AST exact-Fraction evaluation of each <<expr=result>> annotation; last-annotation-to-#### chain check. No re-solving.",
+ "sources": {
+  "train": {
+   "url": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/train.jsonl",
+   "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+   "n_bytes": 4166206,
+   "n_rows": 7473
+  },
+  "test": {
+   "url": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/test.jsonl",
+   "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+   "n_bytes": 749738,
+   "n_rows": 1319
+  }
+ },
+ "per_split": [
+  {
+   "split": "train",
+   "n_problems": 7473,
+   "n_problems_with_annotations": 7378,
+   "n_annotations": 23716,
+   "classes": {
+    "exact": 23714,
+    "rounding": 0,
+    "mismatch": 0,
+    "no_equals": 0,
+    "unparseable_expr": 2,
+    "unparseable_result": 0
+   },
+   "exact_rate": 0.9999156687468376,
+   "exact_or_rounding_rate": 0.9999156687468376,
+   "mismatch_rate": 0.0,
+   "last_matches_count": 7000,
+   "last_matches_rate": 0.9487666034155597,
+   "final_appears_count": 7013,
+   "final_appears_rate": 0.9505285985361887,
+   "final_unparseable_count": 0
+  },
+  {
+   "split": "test",
+   "n_problems": 1319,
+   "n_problems_with_annotations": 1301,
+   "n_annotations": 4282,
+   "classes": {
+    "exact": 4281,
+    "rounding": 0,
+    "mismatch": 0,
+    "no_equals": 0,
+    "unparseable_expr": 0,
+    "unparseable_result": 1
+   },
+   "exact_rate": 0.9997664642690332,
+   "exact_or_rounding_rate": 0.9997664642690332,
+   "mismatch_rate": 0.0,
+   "last_matches_count": 1208,
+   "last_matches_rate": 0.9285165257494236,
+   "final_appears_count": 1208,
+   "final_appears_rate": 0.9285165257494236,
+   "final_unparseable_count": 0
+  }
+ ],
+ "total": {
+  "n_problems": 8792,
+  "n_problems_with_annotations": 8679,
+  "n_annotations": 27998,
+  "classes": {
+   "exact": 27995,
+   "rounding": 0,
+   "mismatch": 0,
+   "no_equals": 0,
+   "unparseable_expr": 2,
+   "unparseable_result": 1
+  },
+  "exact_rate": 0.9998928494892493,
+  "exact_or_rounding_rate": 0.9998928494892493,
+  "mismatch_rate": 0.0,
+  "last_matches_count": 8208,
+  "last_matches_rate": 0.9457310750086415,
+  "final_appears_count": 8221,
+  "final_appears_rate": 0.9472289434266621
+ },
+ "catalog_counts": {
+  "bad_annotations": 3,
+  "chain_breaks": 471
+ }
+}

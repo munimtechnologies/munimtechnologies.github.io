@@ -1,0 +1,30 @@
+{
+  "overall": {
+    "exact": 42951,
+    "gt_5pct": 3314,
+    "le_5pct": 442,
+    "le_1pct": 585,
+    "le_0p1pct": 867
+  },
+  "per_split": {
+    "train": {
+      "exact": 42730,
+      "gt_5pct": 3298,
+      "le_5pct": 441,
+      "le_1pct": 584,
+      "le_0p1pct": 863
+    },
+    "dev": {
+      "exact": 101,
+      "gt_5pct": 9,
+      "le_0p1pct": 2,
+      "le_1pct": 1
+    },
+    "test": {
+      "exact": 120,
+      "gt_5pct": 7,
+      "le_5pct": 1,
+      "le_0p1pct": 2
+    }
+  }
+}

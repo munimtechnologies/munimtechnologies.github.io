@@ -1,0 +1,3801 @@
+{
+ "bad_annotations": [
+  {
+   "split": "train",
+   "index": 394,
+   "annotation": "560//10=56",
+   "expr": "560//10",
+   "result": "56",
+   "class": "unparseable_expr",
+   "expr_value": null
+  },
+  {
+   "split": "train",
+   "index": 4169,
+   "annotation": "180//3=60",
+   "expr": "180//3",
+   "result": "60",
+   "class": "unparseable_expr",
+   "expr_value": null
+  },
+  {
+   "split": "test",
+   "index": 319,
+   "annotation": "3/4=3/4",
+   "expr": "3/4",
+   "result": "3/4",
+   "class": "unparseable_result",
+   "expr_value": "3/4"
+  }
+ ],
+ "chain_breaks": [
+  {
+   "split": "train",
+   "index": 23,
+   "last_result": "20",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 32,
+   "last_result": "13",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 44,
+   "last_result": "250",
+   "final": "300",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 48,
+   "last_result": "4",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 53,
+   "last_result": "4",
+   "final": "36",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 71,
+   "last_result": "43",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 85,
+   "last_result": "7",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 123,
+   "last_result": "1/4",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 167,
+   "last_result": "100",
+   "final": "1920",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 184,
+   "last_result": "3950",
+   "final": "3750",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 198,
+   "last_result": "3",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 232,
+   "last_result": "14",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 256,
+   "last_result": "4",
+   "final": "108",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 264,
+   "last_result": "5400",
+   "final": "21600",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 289,
+   "last_result": "26",
+   "final": "220",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 293,
+   "last_result": "30",
+   "final": "54",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 303,
+   "last_result": "4",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 323,
+   "last_result": "60",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 343,
+   "last_result": "49/100",
+   "final": "49",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 356,
+   "last_result": "64",
+   "final": "66",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 359,
+   "last_result": "100",
+   "final": "328",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 365,
+   "last_result": "30",
+   "final": "70",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 394,
+   "last_result": "560",
+   "final": "56",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 415,
+   "last_result": "48",
+   "final": "78",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 455,
+   "last_result": "16",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 464,
+   "last_result": "10",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 497,
+   "last_result": "30",
+   "final": "10000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 515,
+   "last_result": "8",
+   "final": "24",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 529,
+   "last_result": "25",
+   "final": "26",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 552,
+   "last_result": "160000",
+   "final": "16000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 566,
+   "last_result": "640",
+   "final": "1280",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 593,
+   "last_result": "10",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 601,
+   "last_result": "30",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 609,
+   "last_result": "38",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 623,
+   "last_result": "12",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 636,
+   "last_result": "42",
+   "final": "52",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 657,
+   "last_result": "90",
+   "final": "730",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 735,
+   "last_result": "2",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 753,
+   "last_result": "46",
+   "final": "322",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 764,
+   "last_result": "30",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 786,
+   "last_result": "9",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 795,
+   "last_result": "9",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 837,
+   "last_result": "20",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 874,
+   "last_result": "350",
+   "final": "300",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 913,
+   "last_result": "790",
+   "final": "180",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 953,
+   "last_result": "6",
+   "final": "13",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 959,
+   "last_result": "200",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 983,
+   "last_result": "36",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 991,
+   "last_result": "12000",
+   "final": "72000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1010,
+   "last_result": "384/25",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1028,
+   "last_result": "1100",
+   "final": "5100",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1072,
+   "last_result": "1000",
+   "final": "1600",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1078,
+   "last_result": "64",
+   "final": "65",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1090,
+   "last_result": "180",
+   "final": "165",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1094,
+   "last_result": "50",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1116,
+   "last_result": "35",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1135,
+   "last_result": "10",
+   "final": "38",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1137,
+   "last_result": "9",
+   "final": "43",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1147,
+   "last_result": "2600",
+   "final": "208000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1154,
+   "last_result": "207",
+   "final": "1035",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1242,
+   "last_result": "99/2",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1253,
+   "last_result": "24",
+   "final": "83",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1270,
+   "last_result": "24",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1287,
+   "last_result": "4",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1323,
+   "last_result": "144",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1400,
+   "last_result": "12",
+   "final": "22",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1403,
+   "last_result": "6",
+   "final": "11026",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1409,
+   "last_result": "20",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1421,
+   "last_result": "49",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1427,
+   "last_result": "260",
+   "final": "200",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1435,
+   "last_result": "1/20",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1451,
+   "last_result": "465000",
+   "final": "445000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1460,
+   "last_result": "4",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1479,
+   "last_result": "40",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1567,
+   "last_result": "7",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1575,
+   "last_result": "40000",
+   "final": "38000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1586,
+   "last_result": "2",
+   "final": "120",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1599,
+   "last_result": "18",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1607,
+   "last_result": "19",
+   "final": "57",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1608,
+   "last_result": "3",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1617,
+   "last_result": "9/10",
+   "final": "90",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1624,
+   "last_result": "12",
+   "final": "18",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1661,
+   "last_result": "2005",
+   "final": "2000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1673,
+   "last_result": "18",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1722,
+   "last_result": "300",
+   "final": "180",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1756,
+   "last_result": "2060",
+   "final": "138",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1776,
+   "last_result": "29",
+   "final": "94",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1793,
+   "last_result": "24",
+   "final": "150",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1814,
+   "last_result": "20",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1817,
+   "last_result": "1450",
+   "final": "29",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1842,
+   "last_result": "15",
+   "final": "17",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1852,
+   "last_result": "80",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1870,
+   "last_result": "40",
+   "final": "80",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1885,
+   "last_result": "3200",
+   "final": "700",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1901,
+   "last_result": "3",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1938,
+   "last_result": "6",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1942,
+   "last_result": "27",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1949,
+   "last_result": "37/2",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1971,
+   "last_result": "41040",
+   "final": "4104",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1983,
+   "last_result": "27",
+   "final": "33",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 1997,
+   "last_result": "80",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2011,
+   "last_result": "480",
+   "final": "16",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2020,
+   "last_result": "120",
+   "final": "240",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2025,
+   "last_result": "2",
+   "final": "120",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2028,
+   "last_result": "375",
+   "final": "225",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 2032,
+   "last_result": "165",
+   "final": "150",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2033,
+   "last_result": "85",
+   "final": "62",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2078,
+   "last_result": "20",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2084,
+   "last_result": "8",
+   "final": "22",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2106,
+   "last_result": "5/2",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2146,
+   "last_result": "42",
+   "final": "32",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2154,
+   "last_result": "400",
+   "final": "300",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2168,
+   "last_result": "1800",
+   "final": "4200",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2182,
+   "last_result": "32",
+   "final": "80",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2204,
+   "last_result": "15",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2218,
+   "last_result": "2",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2244,
+   "last_result": "8",
+   "final": "67",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2250,
+   "last_result": "15/2",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2265,
+   "last_result": "80",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2270,
+   "last_result": "4/5",
+   "final": "80",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2293,
+   "last_result": "3/4",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2299,
+   "last_result": "2/5",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2304,
+   "last_result": "3",
+   "final": "97",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2369,
+   "last_result": "300",
+   "final": "800",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2405,
+   "last_result": "17",
+   "final": "19",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2416,
+   "last_result": "21",
+   "final": "14",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2439,
+   "last_result": "16",
+   "final": "39",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2444,
+   "last_result": "700",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2445,
+   "last_result": "72",
+   "final": "69",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2473,
+   "last_result": "4",
+   "final": "13",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2494,
+   "last_result": "878",
+   "final": "27",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2512,
+   "last_result": "40",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2516,
+   "last_result": "10",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2525,
+   "last_result": "19",
+   "final": "32",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2541,
+   "last_result": "200",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2562,
+   "last_result": "9",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2581,
+   "last_result": "6",
+   "final": "44",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2584,
+   "last_result": "1/5",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2600,
+   "last_result": "21",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2612,
+   "last_result": "10",
+   "final": "210",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2656,
+   "last_result": "300",
+   "final": "1000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2686,
+   "last_result": "6",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2720,
+   "last_result": "21",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2725,
+   "last_result": "180",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2770,
+   "last_result": "108",
+   "final": "106",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2781,
+   "last_result": "72",
+   "final": "36",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2802,
+   "last_result": "64",
+   "final": "112",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2849,
+   "last_result": "29/5",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2850,
+   "last_result": "100",
+   "final": "1900",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2877,
+   "last_result": "30",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 2885,
+   "last_result": "22",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2906,
+   "last_result": "10",
+   "final": "90",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2917,
+   "last_result": "120",
+   "final": "80",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 2935,
+   "last_result": "49/5",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2936,
+   "last_result": "258",
+   "final": "86",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2963,
+   "last_result": "61",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 2969,
+   "last_result": "1/4",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3014,
+   "last_result": "1933",
+   "final": "1825",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3026,
+   "last_result": "150",
+   "final": "64",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3036,
+   "last_result": "12",
+   "final": "22",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3057,
+   "last_result": "1",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3062,
+   "last_result": "28",
+   "final": "14",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3065,
+   "last_result": "176",
+   "final": "352",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3116,
+   "last_result": "57",
+   "final": "67",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3153,
+   "last_result": "10",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3221,
+   "last_result": "11",
+   "final": "44",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3232,
+   "last_result": "11000",
+   "final": "99000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3234,
+   "last_result": "62300",
+   "final": "6230",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3263,
+   "last_result": "4",
+   "final": "16",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 3279,
+   "last_result": "80",
+   "final": "160",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3298,
+   "last_result": "300",
+   "final": "61",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3331,
+   "last_result": "320",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3334,
+   "last_result": "4200",
+   "final": "7200",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3350,
+   "last_result": "6",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3353,
+   "last_result": "345",
+   "final": "357",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3362,
+   "last_result": "300",
+   "final": "600",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3390,
+   "last_result": "25",
+   "final": "55",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3400,
+   "last_result": "20",
+   "final": "146",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3404,
+   "last_result": "330",
+   "final": "355",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3409,
+   "last_result": "10",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3417,
+   "last_result": "20",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3433,
+   "last_result": "1",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 3517,
+   "last_result": "1/2",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3520,
+   "last_result": "240",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3565,
+   "last_result": "10",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3576,
+   "last_result": "570",
+   "final": "150",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3577,
+   "last_result": "9",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3687,
+   "last_result": "120",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3693,
+   "last_result": "40",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3722,
+   "last_result": "5",
+   "final": "45",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3754,
+   "last_result": "30",
+   "final": "420",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3755,
+   "last_result": "158",
+   "final": "237",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3807,
+   "last_result": "4",
+   "final": "36",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3870,
+   "last_result": "26",
+   "final": "54",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3873,
+   "last_result": "3/2",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 3895,
+   "last_result": "8",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3899,
+   "last_result": "7",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3918,
+   "last_result": "83",
+   "final": "166",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3928,
+   "last_result": "180",
+   "final": "9",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 3944,
+   "last_result": "38",
+   "final": "82",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4011,
+   "last_result": "50",
+   "final": "16",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4013,
+   "last_result": "54",
+   "final": "14",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4045,
+   "last_result": "4/5",
+   "final": "80",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4062,
+   "last_result": "2160",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4079,
+   "last_result": "12",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4086,
+   "last_result": "150",
+   "final": "160",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4120,
+   "last_result": "14",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4131,
+   "last_result": "45000",
+   "final": "50000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4145,
+   "last_result": "2000",
+   "final": "3000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4170,
+   "last_result": "55",
+   "final": "80",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4173,
+   "last_result": "2",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4176,
+   "last_result": "20",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4177,
+   "last_result": "33",
+   "final": "307",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4194,
+   "last_result": "21",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4203,
+   "last_result": "700",
+   "final": "350",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4206,
+   "last_result": "80",
+   "final": "17",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4209,
+   "last_result": "4",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4261,
+   "last_result": "40",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4264,
+   "last_result": "35",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4267,
+   "last_result": "44000",
+   "final": "94000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4274,
+   "last_result": "288",
+   "final": "432",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4310,
+   "last_result": "126",
+   "final": "156",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4330,
+   "last_result": "12",
+   "final": "72",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4339,
+   "last_result": "45",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4362,
+   "last_result": "49",
+   "final": "79",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4394,
+   "last_result": "60",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4403,
+   "last_result": "2",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4419,
+   "last_result": "18/5",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4430,
+   "last_result": "80",
+   "final": "16",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4485,
+   "last_result": "2",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4504,
+   "last_result": "1",
+   "final": "88",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4508,
+   "last_result": "1600",
+   "final": "2600",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4534,
+   "last_result": "21",
+   "final": "42",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4555,
+   "last_result": "10",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4593,
+   "last_result": "224",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4603,
+   "last_result": "18",
+   "final": "67",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4622,
+   "last_result": "10",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4644,
+   "last_result": "8",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4653,
+   "last_result": "10",
+   "final": "100",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4677,
+   "last_result": "17",
+   "final": "28",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4714,
+   "last_result": "27",
+   "final": "33",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4752,
+   "last_result": "6",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4796,
+   "last_result": "120",
+   "final": "140",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4803,
+   "last_result": "8",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4814,
+   "last_result": "10",
+   "final": "83",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4820,
+   "last_result": "7/5",
+   "final": "70",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4846,
+   "last_result": "12",
+   "final": "4096",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4850,
+   "last_result": "2",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4866,
+   "last_result": "145",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4873,
+   "last_result": "1/4",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4910,
+   "last_result": "300",
+   "final": "100",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4937,
+   "last_result": "12000",
+   "final": "24000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4983,
+   "last_result": "6/5",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 4987,
+   "last_result": "100",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5041,
+   "last_result": "45",
+   "final": "9",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5066,
+   "last_result": "5",
+   "final": "3400",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5127,
+   "last_result": "34",
+   "final": "17",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5142,
+   "last_result": "64",
+   "final": "9",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5145,
+   "last_result": "60",
+   "final": "86",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5152,
+   "last_result": "16",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 5172,
+   "last_result": "40",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5192,
+   "last_result": "600",
+   "final": "850",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5209,
+   "last_result": "18",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5262,
+   "last_result": "6",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5270,
+   "last_result": "128",
+   "final": "32",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5276,
+   "last_result": "12",
+   "final": "32",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5280,
+   "last_result": "15",
+   "final": "540",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5282,
+   "last_result": "14",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5291,
+   "last_result": "25",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5307,
+   "last_result": "4",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5327,
+   "last_result": "600",
+   "final": "680",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5350,
+   "last_result": "16",
+   "final": "33",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5363,
+   "last_result": "6",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5391,
+   "last_result": "10",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5418,
+   "last_result": "30",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5431,
+   "last_result": "7",
+   "final": "23",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5441,
+   "last_result": "1000",
+   "final": "250",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5468,
+   "last_result": "640",
+   "final": "960",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5475,
+   "last_result": "2",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5497,
+   "last_result": "840",
+   "final": "14",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5500,
+   "last_result": "1530",
+   "final": "1330",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5565,
+   "last_result": "60",
+   "final": "54",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5578,
+   "last_result": "60",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5588,
+   "last_result": "50",
+   "final": "22",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5597,
+   "last_result": "3",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5619,
+   "last_result": "442",
+   "final": "142",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5678,
+   "last_result": "69",
+   "final": "44",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5724,
+   "last_result": "1",
+   "final": "90",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 5728,
+   "last_result": "18/5",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5816,
+   "last_result": "600",
+   "final": "840",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5829,
+   "last_result": "5500",
+   "final": "220",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5866,
+   "last_result": "10",
+   "final": "180",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5872,
+   "last_result": "10",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5873,
+   "last_result": "11",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5878,
+   "last_result": "3/2",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5907,
+   "last_result": "140",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5936,
+   "last_result": "900",
+   "final": "500",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5946,
+   "last_result": "15",
+   "final": "45",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5950,
+   "last_result": "18",
+   "final": "14",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5983,
+   "last_result": "103",
+   "final": "63",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 5991,
+   "last_result": "125",
+   "final": "100",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6013,
+   "last_result": "14",
+   "final": "56",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6049,
+   "last_result": "315",
+   "final": "540",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6089,
+   "last_result": "14",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6094,
+   "last_result": "130",
+   "final": "13",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6117,
+   "last_result": "16",
+   "final": "24",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6123,
+   "last_result": "1000",
+   "final": "5000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6157,
+   "last_result": "70",
+   "final": "110",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6169,
+   "last_result": "48",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6234,
+   "last_result": "9",
+   "final": "18",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6246,
+   "last_result": "144",
+   "final": "24",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6251,
+   "last_result": "60",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6261,
+   "last_result": "10",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6272,
+   "last_result": "12",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6280,
+   "last_result": "90",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6305,
+   "last_result": "32",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6308,
+   "last_result": "7980",
+   "final": "19",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6309,
+   "last_result": "9",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6325,
+   "last_result": "36",
+   "final": "14",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6351,
+   "last_result": "150000",
+   "final": "150",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6354,
+   "last_result": "16",
+   "final": "21",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6364,
+   "last_result": "450",
+   "final": "600",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6368,
+   "last_result": "250000",
+   "final": "60000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6399,
+   "last_result": "25000",
+   "final": "5000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6402,
+   "last_result": "30",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6407,
+   "last_result": "32",
+   "final": "64",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6460,
+   "last_result": "3/5",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6473,
+   "last_result": "36",
+   "final": "18",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6492,
+   "last_result": "50",
+   "final": "100",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6512,
+   "last_result": "1120",
+   "final": "3320",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6537,
+   "last_result": "54000",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6556,
+   "last_result": "60",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6605,
+   "last_result": "1320",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6617,
+   "last_result": "17",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6625,
+   "last_result": "12",
+   "final": "36",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6644,
+   "last_result": "37",
+   "final": "56",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6683,
+   "last_result": "20",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6744,
+   "last_result": "2000",
+   "final": "250",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6748,
+   "last_result": "72",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6760,
+   "last_result": "6",
+   "final": "14",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6828,
+   "last_result": "196",
+   "final": "291",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6830,
+   "last_result": "12",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6840,
+   "last_result": "32",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6844,
+   "last_result": "1800",
+   "final": "7200",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6845,
+   "last_result": "1/2",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6889,
+   "last_result": "2200",
+   "final": "1000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6894,
+   "last_result": "250",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6925,
+   "last_result": "2400",
+   "final": "120",
+   "last_matches": false,
+   "final_in_results": true
+  },
+  {
+   "split": "train",
+   "index": 6937,
+   "last_result": "1/2",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 6951,
+   "last_result": "60000",
+   "final": "55000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7002,
+   "last_result": "8",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7017,
+   "last_result": "20",
+   "final": "400",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7037,
+   "last_result": "20",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7076,
+   "last_result": "135",
+   "final": "95",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7077,
+   "last_result": "24",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7096,
+   "last_result": "36",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7102,
+   "last_result": "225",
+   "final": "28125",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7112,
+   "last_result": "3/5",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7133,
+   "last_result": "75",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7139,
+   "last_result": "25",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7146,
+   "last_result": "21",
+   "final": "43",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7147,
+   "last_result": "40",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7148,
+   "last_result": "427",
+   "final": "227",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7168,
+   "last_result": "15",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7182,
+   "last_result": "10",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7189,
+   "last_result": "25",
+   "final": "52",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7235,
+   "last_result": "8",
+   "final": "11",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7241,
+   "last_result": "100",
+   "final": "75",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7291,
+   "last_result": "3",
+   "final": "15",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7330,
+   "last_result": "6",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7332,
+   "last_result": "22500",
+   "final": "67500",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7364,
+   "last_result": "15/4",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7373,
+   "last_result": "4",
+   "final": "810",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7406,
+   "last_result": "48",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7430,
+   "last_result": "200",
+   "final": "120",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7444,
+   "last_result": "20",
+   "final": "280",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7467,
+   "last_result": "24",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "train",
+   "index": 7470,
+   "last_result": "2",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 13,
+   "last_result": "12",
+   "final": "18",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 14,
+   "last_result": "12",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 29,
+   "last_result": "99",
+   "final": "104",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 34,
+   "last_result": "25",
+   "final": "23",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 43,
+   "last_result": "60",
+   "final": "48",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 81,
+   "last_result": "37",
+   "final": "17",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 98,
+   "last_result": "25",
+   "final": "5",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 107,
+   "last_result": "5",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 114,
+   "last_result": "300",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 135,
+   "last_result": "15",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 140,
+   "last_result": "4",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 141,
+   "last_result": "100",
+   "final": "400",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 160,
+   "last_result": "24",
+   "final": "16",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 176,
+   "last_result": "160",
+   "final": "100",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 211,
+   "last_result": "2",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 226,
+   "last_result": "96",
+   "final": "33",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 237,
+   "last_result": "30",
+   "final": "90",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 239,
+   "last_result": "420",
+   "final": "280",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 244,
+   "last_result": "2",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 308,
+   "last_result": "2",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 341,
+   "last_result": "240",
+   "final": "260",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 348,
+   "last_result": "1100",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 350,
+   "last_result": "3",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 356,
+   "last_result": "38",
+   "final": "21",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 387,
+   "last_result": "24",
+   "final": "36",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 393,
+   "last_result": "450",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 394,
+   "last_result": "72",
+   "final": "92",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 416,
+   "last_result": "124",
+   "final": "56",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 420,
+   "last_result": "12000",
+   "final": "17000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 431,
+   "last_result": "18",
+   "final": "1",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 433,
+   "last_result": "24",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 440,
+   "last_result": "40",
+   "final": "98",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 450,
+   "last_result": "19",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 458,
+   "last_result": "7",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 473,
+   "last_result": "1",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 482,
+   "last_result": "174",
+   "final": "26",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 493,
+   "last_result": "1/4",
+   "final": "25",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 511,
+   "last_result": "210",
+   "final": "110",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 576,
+   "last_result": "7344",
+   "final": "11232",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 593,
+   "last_result": "32",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 598,
+   "last_result": "69/20",
+   "final": "69",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 607,
+   "last_result": "1/10",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 609,
+   "last_result": "1",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 624,
+   "last_result": "112",
+   "final": "85",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 635,
+   "last_result": "6",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 659,
+   "last_result": "5",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 682,
+   "last_result": "120",
+   "final": "80",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 689,
+   "last_result": "3",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 699,
+   "last_result": "16",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 728,
+   "last_result": "150",
+   "final": "40",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 756,
+   "last_result": "11",
+   "final": "22",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 769,
+   "last_result": "105",
+   "final": "110",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 783,
+   "last_result": "8",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 798,
+   "last_result": "210",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 806,
+   "last_result": "1000",
+   "final": "70",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 808,
+   "last_result": "48",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 821,
+   "last_result": "70",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 825,
+   "last_result": "47",
+   "final": "153",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 842,
+   "last_result": "80",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 856,
+   "last_result": "27/4",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 858,
+   "last_result": "490",
+   "final": "3430",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 866,
+   "last_result": "16",
+   "final": "28",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 872,
+   "last_result": "4",
+   "final": "13",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 873,
+   "last_result": "12/25",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 881,
+   "last_result": "24",
+   "final": "16",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 963,
+   "last_result": "40",
+   "final": "147",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 977,
+   "last_result": "32",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 988,
+   "last_result": "6000",
+   "final": "6",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1024,
+   "last_result": "20",
+   "final": "300",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1025,
+   "last_result": "40",
+   "final": "30",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1035,
+   "last_result": "8",
+   "final": "35",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1038,
+   "last_result": "6",
+   "final": "4",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1043,
+   "last_result": "130",
+   "final": "130000",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1047,
+   "last_result": "3",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1110,
+   "last_result": "250",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1113,
+   "last_result": "2",
+   "final": "-3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1126,
+   "last_result": "20000",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1141,
+   "last_result": "240",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1152,
+   "last_result": "3/5",
+   "final": "12",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1158,
+   "last_result": "11500",
+   "final": "7300",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1159,
+   "last_result": "2",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1168,
+   "last_result": "12",
+   "final": "20",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1173,
+   "last_result": "1/10",
+   "final": "10",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1176,
+   "last_result": "44/25",
+   "final": "2",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1179,
+   "last_result": "15",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1204,
+   "last_result": "252",
+   "final": "168",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1208,
+   "last_result": "99",
+   "final": "27",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1220,
+   "last_result": "8",
+   "final": "32",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1223,
+   "last_result": "4",
+   "final": "8",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1225,
+   "last_result": "10",
+   "final": "3",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1235,
+   "last_result": "3600",
+   "final": "60",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1243,
+   "last_result": "15",
+   "final": "50",
+   "last_matches": false,
+   "final_in_results": false
+  },
+  {
+   "split": "test",
+   "index": 1280,
+   "last_result": "5",
+   "final": "7",
+   "last_matches": false,
+   "final_in_results": false
+  }
+ ]
+}

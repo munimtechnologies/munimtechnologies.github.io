@@ -1,0 +1,66 @@
+{
+  "about": "Labeled corpus of ROUGE-1 residual-ASCII hazards for non-Latin text, pinned to the documented default tokenizer in google-research/rouge (tokenize.py) and the count-based ROUGE-N scoring in rouge_scorer.py. Each 'expected' value is hand-traced from the tokenizer and reproduced by test_rouge1.py (stdlib only). Chinese glosses are provided; strings use real characters.",
+  "tokenizer": "lowercase; re.sub(r'[^a-z0-9]+', ' ', text); re.split(r'\\s+', text); keep tokens matching r'^[a-z0-9]+$'; default use_stemmer=False so no stemmer is applied",
+  "cases": [
+    {
+      "id": "opposite-meaning-perfect-score",
+      "direction": "false_positive",
+      "reference": "2024年气候改善",
+      "reference_gloss": "2024 climate improves",
+      "prediction": "2024年气候恶化",
+      "prediction_gloss": "2024 climate worsens (opposite meaning)",
+      "reference_tokens": ["2024"],
+      "prediction_tokens": ["2024"],
+      "rouge1_fmeasure": 1.0,
+      "note": "Both sentences collapse to the single residual ASCII token '2024'; ROUGE-1 reports a perfect match between opposite claims."
+    },
+    {
+      "id": "ranking-inversion-correct",
+      "direction": "ranking_inversion",
+      "reference": "2024年气候改善",
+      "reference_gloss": "2024 climate improves (gold)",
+      "prediction": "气候改善",
+      "prediction_gloss": "climate improves (correct meaning, no year)",
+      "reference_tokens": ["2024"],
+      "prediction_tokens": [],
+      "rouge1_fmeasure": 0.0,
+      "note": "A correct summary that omits the year has no surviving ASCII token and scores 0."
+    },
+    {
+      "id": "ranking-inversion-wrong",
+      "direction": "ranking_inversion",
+      "reference": "2024年气候改善",
+      "reference_gloss": "2024 climate improves (gold)",
+      "prediction": "2024年战争结束",
+      "prediction_gloss": "2024 war ends (wrong meaning)",
+      "reference_tokens": ["2024"],
+      "prediction_tokens": ["2024"],
+      "rouge1_fmeasure": 1.0,
+      "note": "A wrong summary that happens to share the year scores 1.0, outranking the correct one above."
+    },
+    {
+      "id": "pure-non-latin-zero",
+      "direction": "false_negative_known",
+      "reference": "气候改善",
+      "reference_gloss": "climate improves",
+      "prediction": "气候恶化",
+      "prediction_gloss": "climate worsens",
+      "reference_tokens": [],
+      "prediction_tokens": [],
+      "rouge1_fmeasure": 0.0,
+      "note": "Both strings tokenize to empty; this is the already-documented zero-ROUGE phenomenon, included for contrast."
+    },
+    {
+      "id": "thousands-separator-false-negative",
+      "direction": "false_negative",
+      "reference": "2024",
+      "reference_gloss": "the number 2024",
+      "prediction": "2,024",
+      "prediction_gloss": "the same number with a thousands separator",
+      "reference_tokens": ["2024"],
+      "prediction_tokens": ["2", "024"],
+      "rouge1_fmeasure": 0.0,
+      "note": "ASCII-only, language-independent: a comma splits one number into two tokens so an identical value scores 0."
+    }
+  ]
+}

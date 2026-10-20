@@ -1,0 +1,53 @@
+{
+  "description": "Hand-built cases for the IFEval punctuation:no_comma (CommaChecker) audit. Each text is given as Unicode code points so this file is pure ASCII. 'shipped' = IFEval's re.search(r',') reading (ASCII comma only); 'intended' = any character whose Unicode name contains COMMA. A flip means the shipped checker and the intended reading disagree on the no_comma verdict.",
+  "cases": [
+    {
+      "id": "K1-fullwidth-comma",
+      "note": "FULLWIDTH COMMA U+FF0C between two letters. Common in CJK text and in CJK keyboards typing Latin. Shipped sees no ASCII comma -> PASS no_comma; the text visibly contains a comma.",
+      "text_codepoints": [97, 65292, 98],
+      "expected_shipped_pass": true,
+      "expected_intended_pass": false,
+      "expected_flip": true
+    },
+    {
+      "id": "K2-ideographic-comma",
+      "note": "IDEOGRAPHIC COMMA U+3001, the standard enumeration comma in Chinese/Japanese. Shipped PASS no_comma though a comma is present.",
+      "text_codepoints": [97, 12289, 98],
+      "expected_shipped_pass": true,
+      "expected_intended_pass": false,
+      "expected_flip": true
+    },
+    {
+      "id": "K3-arabic-comma",
+      "note": "ARABIC COMMA U+060C used in Arabic/Persian/Urdu text. Shipped PASS no_comma though a comma is present.",
+      "text_codepoints": [97, 1548, 98],
+      "expected_shipped_pass": true,
+      "expected_intended_pass": false,
+      "expected_flip": true
+    },
+    {
+      "id": "K4-fullwidth-comma-in-english",
+      "note": "'Yes<FULLWIDTH COMMA>I agree' -- an otherwise-English response that used a fullwidth comma (a frequent artefact of CJK input methods or copy-paste). Shipped PASS no_comma.",
+      "text_codepoints": [89, 101, 115, 65292, 73, 32, 97, 103, 114, 101, 101],
+      "expected_shipped_pass": true,
+      "expected_intended_pass": false,
+      "expected_flip": true
+    },
+    {
+      "id": "K5-ascii-comma-control",
+      "note": "Control: a plain ASCII comma U+002C. Both the shipped and intended readings see a comma, so both FAIL no_comma -- no flip.",
+      "text_codepoints": [97, 44, 98],
+      "expected_shipped_pass": false,
+      "expected_intended_pass": false,
+      "expected_flip": false
+    },
+    {
+      "id": "K6-no-comma-control",
+      "note": "Control: no comma of any script. Both readings PASS no_comma -- no flip.",
+      "text_codepoints": [97, 32, 98],
+      "expected_shipped_pass": true,
+      "expected_intended_pass": true,
+      "expected_flip": false
+    }
+  ]
+}

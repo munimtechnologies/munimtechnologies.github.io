@@ -1,0 +1,83 @@
+{
+  "corpus": {
+    "summary": {
+      "n_cases": 6,
+      "n_verdict_flip": 4,
+      "all_reproduced": true
+    },
+    "cases": [
+      {
+        "id": "K1-fullwidth-comma",
+        "shipped_pass": true,
+        "intended_pass": false,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "K2-ideographic-comma",
+        "shipped_pass": true,
+        "intended_pass": false,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "K3-arabic-comma",
+        "shipped_pass": true,
+        "intended_pass": false,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "K4-fullwidth-comma-in-english",
+        "shipped_pass": true,
+        "intended_pass": false,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "K5-ascii-comma-control",
+        "shipped_pass": false,
+        "intended_pass": false,
+        "flip": false,
+        "expected_flip": false,
+        "reproduced": true
+      },
+      {
+        "id": "K6-no-comma-control",
+        "shipped_pass": true,
+        "intended_pass": true,
+        "flip": false,
+        "expected_flip": false,
+        "reproduced": true
+      }
+    ]
+  },
+  "exposure": {
+    "available": true,
+    "input_data": "/data/input_data.jsonl",
+    "response_file": "/data/input_response_data_gpt4_20231107_145030.jsonl",
+    "response_file_present": true,
+    "n_prompts": 541,
+    "n_no_comma_instances": 66,
+    "n_matched_to_response": 66,
+    "n_shipped_pass": 44,
+    "n_false_pass": 0,
+    "false_pass_examples": [],
+    "distinct_nonascii_commas_in_nocomma_responses": [],
+    "blast_radius": {
+      "n_responses_total": 541,
+      "n_responses_with_nonascii_comma": 2,
+      "distinct_nonascii_commas": [
+        {
+          "codepoint": "U+060C",
+          "name": "ARABIC COMMA",
+          "n_responses": 2
+        }
+      ]
+    }
+  }
+}

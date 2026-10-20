@@ -1,0 +1,77 @@
+{
+  "note": "Six hand-built, hand-traced cases comparing IFEval's word count (re.findall(r'\\w+')) with a whitespace split, and the length_constraints:number_words verdict under each. expected_* fields are fixed before the sealed run (see prereg.md). Every case is a minimal, self-contained string; none require any model or network.",
+  "cases": [
+    {
+      "id": "W1-contractions",
+      "value": "I don't think we can't go now.",
+      "num_words": 8,
+      "relation": "at least",
+      "expected_count_ifeval": 9,
+      "expected_count_ws": 7,
+      "expected_verdict_ifeval": "PASS",
+      "expected_verdict_ws": "FAIL",
+      "expected_flip": true,
+      "mechanism": "The apostrophe is not a word char, so \\w+ splits each contraction: don't -> don, t and can't -> can, t. IFEval counts 9, a whitespace split counts 7; 'at least 8' passes under IFEval but fails under whitespace."
+    },
+    {
+      "id": "W2-hyphen-decimal",
+      "value": "state-of-the-art models score 3.5 points",
+      "num_words": 6,
+      "relation": "at least",
+      "expected_count_ifeval": 9,
+      "expected_count_ws": 5,
+      "expected_verdict_ifeval": "PASS",
+      "expected_verdict_ws": "FAIL",
+      "expected_flip": true,
+      "mechanism": "Hyphens and the decimal point are not word chars: state-of-the-art -> 4 tokens, 3.5 -> 3, 5. IFEval counts 9 vs 5 for a whitespace split; 'at least 6' flips."
+    },
+    {
+      "id": "W3-acronyms",
+      "value": "The U.S.A. met the U.K.",
+      "num_words": 6,
+      "relation": "less than",
+      "expected_count_ifeval": 8,
+      "expected_count_ws": 5,
+      "expected_verdict_ifeval": "FAIL",
+      "expected_verdict_ws": "PASS",
+      "expected_flip": true,
+      "mechanism": "Periods inside acronyms split them: U.S.A. -> U, S, A and U.K. -> U, K. IFEval counts 8 vs 5; 'less than 6' passes under a whitespace split but fails under IFEval."
+    },
+    {
+      "id": "W4-emoji-punct-undercount",
+      "value": "Done ✅ !!! 🎉 — finally",
+      "num_words": 3,
+      "relation": "at least",
+      "expected_count_ifeval": 2,
+      "expected_count_ws": 6,
+      "expected_verdict_ifeval": "FAIL",
+      "expected_verdict_ws": "PASS",
+      "expected_flip": true,
+      "mechanism": "Tokens with no word character (an emoji, '!!!', an em dash) are dropped by \\w+ but kept by a whitespace split, so here IFEval UNDER-counts: 2 vs 6. 'at least 3' flips in the opposite direction."
+    },
+    {
+      "id": "W5-underscore-control",
+      "value": "Set the max_retries value to five",
+      "num_words": 6,
+      "relation": "at least",
+      "expected_count_ifeval": 6,
+      "expected_count_ws": 6,
+      "expected_verdict_ifeval": "PASS",
+      "expected_verdict_ws": "PASS",
+      "expected_flip": false,
+      "mechanism": "Control: the underscore IS a word char, so max_retries stays one token under both counters. Counts agree (6 = 6) and no verdict flips -- not all text diverges."
+    },
+    {
+      "id": "W6-grouped-digits",
+      "value": "We earned 1,000,000 dollars in 2026.",
+      "num_words": 7,
+      "relation": "at least",
+      "expected_count_ifeval": 8,
+      "expected_count_ws": 6,
+      "expected_verdict_ifeval": "PASS",
+      "expected_verdict_ws": "FAIL",
+      "expected_flip": true,
+      "mechanism": "Thousands separators split the number: 1,000,000 -> 1, 000, 000. IFEval counts 8 vs 6; 'at least 7' flips."
+    }
+  ]
+}

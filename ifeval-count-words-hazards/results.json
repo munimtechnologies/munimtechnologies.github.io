@@ -1,0 +1,112 @@
+{
+  "corpus": {
+    "summary": {
+      "n_cases": 6,
+      "n_count_diff": 5,
+      "n_verdict_flip": 5,
+      "all_reproduced": true
+    },
+    "cases": [
+      {
+        "id": "W1-contractions",
+        "count_ifeval": 9,
+        "count_ws": 7,
+        "verdict_ifeval": "PASS",
+        "verdict_ws": "FAIL",
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "W2-hyphen-decimal",
+        "count_ifeval": 9,
+        "count_ws": 5,
+        "verdict_ifeval": "PASS",
+        "verdict_ws": "FAIL",
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "W3-acronyms",
+        "count_ifeval": 8,
+        "count_ws": 5,
+        "verdict_ifeval": "FAIL",
+        "verdict_ws": "PASS",
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "W4-emoji-punct-undercount",
+        "count_ifeval": 2,
+        "count_ws": 6,
+        "verdict_ifeval": "FAIL",
+        "verdict_ws": "PASS",
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "W5-underscore-control",
+        "count_ifeval": 6,
+        "count_ws": 6,
+        "verdict_ifeval": "PASS",
+        "verdict_ws": "PASS",
+        "flip": false,
+        "expected_flip": false,
+        "reproduced": true
+      },
+      {
+        "id": "W6-grouped-digits",
+        "count_ifeval": 8,
+        "count_ws": 6,
+        "verdict_ifeval": "PASS",
+        "verdict_ws": "FAIL",
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      }
+    ]
+  },
+  "exposure": {
+    "available": true,
+    "input_data": "/data/input_data.jsonl",
+    "response_file": "/data/input_response_data_gpt4_20231107_145030.jsonl",
+    "response_file_present": true,
+    "n_prompts": 541,
+    "n_number_words_instances": 52,
+    "n_matched_to_response": 52,
+    "n_count_diff": 45,
+    "n_overcount_ifeval_gt_ws": 42,
+    "n_undercount_ifeval_lt_ws": 3,
+    "n_verdict_flip": 2,
+    "flip_by_relation": {
+      "less than": 0,
+      "at least": 2
+    },
+    "flip_examples": [
+      {
+        "key": 19,
+        "relation": "at least",
+        "num_words": 600,
+        "count_ifeval": 618,
+        "count_ws": 584,
+        "verdict_ifeval": "PASS",
+        "verdict_ws": "FAIL"
+      },
+      {
+        "key": 2246,
+        "relation": "at least",
+        "num_words": 400,
+        "count_ifeval": 424,
+        "count_ws": 392,
+        "verdict_ifeval": "PASS",
+        "verdict_ws": "FAIL"
+      }
+    ],
+    "abs_diff_mean": 8.0577,
+    "abs_diff_median": 5.0,
+    "abs_diff_max": 39
+  }
+}

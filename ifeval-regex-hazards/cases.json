@@ -1,0 +1,105 @@
+{
+  "note": "Nine hand-built cases that each trigger one hazard class of the raw-regex IFEval keyword checkers. expected_upstream/expected_intended are fixed before the sealed run (see prereg.md). Every case is a minimal, self-contained string; none require any model or network.",
+  "cases": [
+    {
+      "id": "C1-kf-cpp-possessive",
+      "checker": "keyword_frequency",
+      "hazard": "false_pass",
+      "keyword": "C++",
+      "value": "C++ is great. I code in c, C, and C. See C++.",
+      "frequency": 3,
+      "relation": "at least",
+      "expected_upstream": "PASS",
+      "expected_intended": "FAIL",
+      "mechanism": "On CPython 3.11+ 'C++' is a valid regex: '+' then a possessive '+', i.e. one-or-more 'C'. It counts runs of C (6 here) instead of the literal substring 'C++' (2), so 'at least 3' wrongly passes. On CPython <=3.10 the same pattern raises re.error('multiple repeat') instead."
+    },
+    {
+      "id": "C3-kf-paren",
+      "checker": "keyword_frequency",
+      "hazard": "crash",
+      "keyword": "(note",
+      "value": "Please (note this).",
+      "frequency": 1,
+      "relation": "at least",
+      "expected_upstream": "CRASH",
+      "expected_intended": "PASS",
+      "mechanism": "'(note' opens a group that is never closed -> re.error('missing ), unterminated subpattern'). The literal reading finds '(note' once, satisfying 'at least 1'."
+    },
+    {
+      "id": "S1-kf-anychar-falsepass",
+      "checker": "keyword_frequency",
+      "hazard": "false_pass",
+      "keyword": "a.b",
+      "value": "axb ayb azb",
+      "frequency": 3,
+      "relation": "at least",
+      "expected_upstream": "PASS",
+      "expected_intended": "FAIL",
+      "mechanism": "'.' matches any character, so 'a.b' matches axb/ayb/azb (3) while the literal 'a.b' occurs 0 times. 'at least 3' wrongly passes."
+    },
+    {
+      "id": "S2-kf-anchor-falsefail",
+      "checker": "keyword_frequency",
+      "hazard": "false_fail",
+      "keyword": "x^2",
+      "value": "The variance grows as x^2, then x^2, then x^2.",
+      "frequency": 2,
+      "relation": "at least",
+      "expected_upstream": "FAIL",
+      "expected_intended": "PASS",
+      "mechanism": "'^' is a start-of-string anchor even mid-pattern, so 'x^2' can never match (no start-of-string immediately after 'x') -> 0 matches. The literal 'x^2' occurs 3 times, so 'at least 2' should pass."
+    },
+    {
+      "id": "S4-kf-star-falsefail",
+      "checker": "keyword_frequency",
+      "hazard": "false_fail",
+      "keyword": "c*",
+      "value": "I prefer tea.",
+      "frequency": 3,
+      "relation": "less than",
+      "expected_upstream": "FAIL",
+      "expected_intended": "PASS",
+      "mechanism": "'c*' is zero-or-more 'c', which matches the empty string at every position, so re.findall returns one empty match per position (14 here) -> 'fewer than 3' wrongly fails. The literal 'c*' occurs 0 times, which is correctly fewer than 3."
+    },
+    {
+      "id": "C4-fw-charclass",
+      "checker": "forbidden_words",
+      "hazard": "crash",
+      "word": "a[b",
+      "value": "Normal text here.",
+      "expected_upstream": "CRASH",
+      "expected_intended": "PASS",
+      "mechanism": "'a[b' opens a character class that is never closed, so re.search(r'\\ba[b\\b', ...) raises re.error('unterminated character set'). The literal 'a[b' is absent, so nothing is forbidden -> PASS."
+    },
+    {
+      "id": "S3-fw-anychar-falsefail",
+      "checker": "forbidden_words",
+      "hazard": "false_fail",
+      "word": "a.c",
+      "value": "The abc method.",
+      "expected_upstream": "FAIL",
+      "expected_intended": "PASS",
+      "mechanism": "'.' matches any character, so r'\\ba.c\\b' matches 'abc' and the word is treated as present (FAIL). The literal 'a.c' is absent, so the response is clean (PASS)."
+    },
+    {
+      "id": "S5-fw-alt-falsefail",
+      "checker": "forbidden_words",
+      "hazard": "false_fail",
+      "word": "cat|dog",
+      "value": "I have a cat.",
+      "expected_upstream": "FAIL",
+      "expected_intended": "PASS",
+      "mechanism": "'|' is alternation, so r'\\bcat|dog\\b' parses as (\\bcat) OR (dog\\b) and matches 'cat' (FAIL). The literal 'cat|dog' is absent (PASS)."
+    },
+    {
+      "id": "S7-fw-optional-falsefail",
+      "checker": "forbidden_words",
+      "hazard": "false_fail",
+      "word": "colou?r",
+      "value": "What is the color?",
+      "expected_upstream": "FAIL",
+      "expected_intended": "PASS",
+      "mechanism": "'?' makes the preceding 'u' optional, so r'\\bcolou?r\\b' matches 'color' (FAIL). The literal 'colou?r' is absent (PASS)."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "corpus": {
+    "summary": {
+      "n_cases": 9,
+      "n_crash": 2,
+      "n_false_pass": 2,
+      "n_false_fail": 5,
+      "all_reproduced": true
+    },
+    "cases": [
+      {
+        "id": "C1-kf-cpp-possessive",
+        "checker": "keyword_frequency",
+        "hazard": "false_pass",
+        "upstream": "PASS",
+        "intended": "FAIL",
+        "expected_upstream": "PASS",
+        "expected_intended": "FAIL",
+        "reproduced": true
+      },
+      {
+        "id": "C3-kf-paren",
+        "checker": "keyword_frequency",
+        "hazard": "crash",
+        "upstream": "CRASH",
+        "intended": "PASS",
+        "expected_upstream": "CRASH",
+        "expected_intended": "PASS",
+        "reproduced": true
+      },
+      {
+        "id": "S1-kf-anychar-falsepass",
+        "checker": "keyword_frequency",
+        "hazard": "false_pass",
+        "upstream": "PASS",
+        "intended": "FAIL",
+        "expected_upstream": "PASS",
+        "expected_intended": "FAIL",
+        "reproduced": true
+      },
+      {
+        "id": "S2-kf-anchor-falsefail",
+        "checker": "keyword_frequency",
+        "hazard": "false_fail",
+        "upstream": "FAIL",
+        "intended": "PASS",
+        "expected_upstream": "FAIL",
+        "expected_intended": "PASS",
+        "reproduced": true
+      },
+      {
+        "id": "S4-kf-star-falsefail",
+        "checker": "keyword_frequency",
+        "hazard": "false_fail",
+        "upstream": "FAIL",
+        "intended": "PASS",
+        "expected_upstream": "FAIL",
+        "expected_intended": "PASS",
+        "reproduced": true
+      },
+      {
+        "id": "C4-fw-charclass",
+        "checker": "forbidden_words",
+        "hazard": "crash",
+        "upstream": "CRASH",
+        "intended": "PASS",
+        "expected_upstream": "CRASH",
+        "expected_intended": "PASS",
+        "reproduced": true
+      },
+      {
+        "id": "S3-fw-anychar-falsefail",
+        "checker": "forbidden_words",
+        "hazard": "false_fail",
+        "upstream": "FAIL",
+        "intended": "PASS",
+        "expected_upstream": "FAIL",
+        "expected_intended": "PASS",
+        "reproduced": true
+      },
+      {
+        "id": "S5-fw-alt-falsefail",
+        "checker": "forbidden_words",
+        "hazard": "false_fail",
+        "upstream": "FAIL",
+        "intended": "PASS",
+        "expected_upstream": "FAIL",
+        "expected_intended": "PASS",
+        "reproduced": true
+      },
+      {
+        "id": "S7-fw-optional-falsefail",
+        "checker": "forbidden_words",
+        "hazard": "false_fail",
+        "upstream": "FAIL",
+        "intended": "PASS",
+        "expected_upstream": "FAIL",
+        "expected_intended": "PASS",
+        "reproduced": true
+      }
+    ]
+  },
+  "exposure": {
+    "source": "/data/input_data.jsonl",
+    "available": true,
+    "n_prompts": 541,
+    "keyword_frequency": {
+      "instances": 42,
+      "with_metachar": 0,
+      "invalid_regex_crash": 0,
+      "metachar_examples": [],
+      "invalid_examples": []
+    },
+    "forbidden_words": {
+      "instances": 49,
+      "words_with_metachar": 0,
+      "words_invalid_regex_crash": 0,
+      "metachar_examples": [],
+      "invalid_examples": []
+    }
+  }
+}

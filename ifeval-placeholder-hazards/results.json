@@ -1,0 +1,216 @@
+{
+  "corpus": {
+    "summary": {
+      "n_cases": 6,
+      "n_false_pass": 5,
+      "n_false_fail": 1,
+      "all_reproduced": true
+    },
+    "cases": [
+      {
+        "id": "P1-inline-links-falsepass",
+        "hazard": "false_pass",
+        "num_placeholders": 2,
+        "upstream_count": 2,
+        "intended_count": 0,
+        "upstream": "PASS",
+        "intended": "FAIL",
+        "expected_upstream": "PASS",
+        "expected_intended": "FAIL",
+        "reproduced": true
+      },
+      {
+        "id": "P2-citations-falsepass",
+        "hazard": "false_pass",
+        "num_placeholders": 3,
+        "upstream_count": 3,
+        "intended_count": 0,
+        "upstream": "PASS",
+        "intended": "FAIL",
+        "expected_upstream": "PASS",
+        "expected_intended": "FAIL",
+        "reproduced": true
+      },
+      {
+        "id": "P3-checkboxes-falsepass",
+        "hazard": "false_pass",
+        "num_placeholders": 2,
+        "upstream_count": 3,
+        "intended_count": 0,
+        "upstream": "PASS",
+        "intended": "FAIL",
+        "expected_upstream": "PASS",
+        "expected_intended": "FAIL",
+        "reproduced": true
+      },
+      {
+        "id": "P4-footnotes-falsepass",
+        "hazard": "false_pass",
+        "num_placeholders": 2,
+        "upstream_count": 2,
+        "intended_count": 0,
+        "upstream": "PASS",
+        "intended": "FAIL",
+        "expected_upstream": "PASS",
+        "expected_intended": "FAIL",
+        "reproduced": true
+      },
+      {
+        "id": "P5-mixed-answer-falsepass",
+        "hazard": "false_pass",
+        "num_placeholders": 3,
+        "upstream_count": 3,
+        "intended_count": 0,
+        "upstream": "PASS",
+        "intended": "FAIL",
+        "expected_upstream": "PASS",
+        "expected_intended": "FAIL",
+        "reproduced": true
+      },
+      {
+        "id": "P7-multiline-placeholder-falsefail",
+        "hazard": "false_fail",
+        "num_placeholders": 2,
+        "upstream_count": 0,
+        "intended_count": 2,
+        "upstream": "FAIL",
+        "intended": "PASS",
+        "expected_upstream": "FAIL",
+        "expected_intended": "PASS",
+        "reproduced": true
+      }
+    ]
+  },
+  "exposure": {
+    "source": "/data/input_data.jsonl",
+    "available": true,
+    "n_prompts": 541,
+    "placeholder_checker": {
+      "instances": 27,
+      "prompts_with_checker": 27,
+      "num_placeholders_distribution": {
+        "1": 7,
+        "2": 2,
+        "3": 7,
+        "5": 1,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "10": 1,
+        "12": 1,
+        "15": 1,
+        "20": 1
+      },
+      "examples": [
+        {
+          "key": 1005,
+          "num_placeholders": 12
+        },
+        {
+          "key": 1372,
+          "num_placeholders": 7
+        },
+        {
+          "key": 1512,
+          "num_placeholders": 20
+        },
+        {
+          "key": 1619,
+          "num_placeholders": 6
+        },
+        {
+          "key": 1908,
+          "num_placeholders": 8
+        },
+        {
+          "key": 1927,
+          "num_placeholders": 10
+        },
+        {
+          "key": 2136,
+          "num_placeholders": 1
+        },
+        {
+          "key": 2162,
+          "num_placeholders": 3
+        },
+        {
+          "key": 2164,
+          "num_placeholders": 3
+        },
+        {
+          "key": 218,
+          "num_placeholders": 1
+        },
+        {
+          "key": 2246,
+          "num_placeholders": 3
+        },
+        {
+          "key": 2284,
+          "num_placeholders": 3
+        },
+        {
+          "key": 2304,
+          "num_placeholders": 1
+        },
+        {
+          "key": 2439,
+          "num_placeholders": 2
+        },
+        {
+          "key": 2471,
+          "num_placeholders": 15
+        },
+        {
+          "key": 2765,
+          "num_placeholders": 1
+        },
+        {
+          "key": 2785,
+          "num_placeholders": 3
+        },
+        {
+          "key": 3035,
+          "num_placeholders": 1
+        },
+        {
+          "key": 3126,
+          "num_placeholders": 1
+        },
+        {
+          "key": 3221,
+          "num_placeholders": 8
+        },
+        {
+          "key": 3245,
+          "num_placeholders": 2
+        },
+        {
+          "key": 3280,
+          "num_placeholders": 6
+        },
+        {
+          "key": 3350,
+          "num_placeholders": 5
+        },
+        {
+          "key": 3494,
+          "num_placeholders": 7
+        },
+        {
+          "key": 3619,
+          "num_placeholders": 3
+        },
+        {
+          "key": 3743,
+          "num_placeholders": 3
+        },
+        {
+          "key": 3744,
+          "num_placeholders": 1
+        }
+      ]
+    }
+  }
+}

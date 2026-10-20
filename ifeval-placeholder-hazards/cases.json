@@ -1,0 +1,65 @@
+{
+  "_about": "Hand-constructed hazard cases for IFEval's PlaceholderChecker (detectable_content:number_placeholders). The checker counts EVERY square-bracket span as a 'placeholder' via re.findall(r'\\[.*?\\]', value); the instruction only asks for fill-in placeholders 'such as [address]'. 'expected_upstream'/'expected_intended' are outcomes reasoned by hand BEFORE the machine run (see prereg.md); test_ifeval_placeholder_hazards.py asserts the machine reproduces them. Outcomes PASS/FAIL (this checker never raises). INTENDED = a conservative count that excludes inline/reference links, reference/footnote definitions, footnote refs, task-list checkboxes and pure-numeric citations, and uses re.DOTALL. CC BY 4.0.",
+  "cases": [
+    {
+      "id": "P1-inline-links-falsepass",
+      "checker": "placeholder",
+      "value": "See [OpenAI](https://openai.com) and [Google](https://google.com) for details.",
+      "num_placeholders": 2,
+      "expected_upstream": "PASS",
+      "expected_intended": "FAIL",
+      "hazard": "false_pass",
+      "note": "Two inline markdown links. Upstream counts [OpenAI] and [Google] = 2 >= 2 -> PASS. Intended: both spans are followed by '(' (link anchors), so 0 genuine placeholders -> 0 >= 2 is FAIL. A response with no fill-in placeholder is scored as following the instruction."
+    },
+    {
+      "id": "P2-citations-falsepass",
+      "checker": "placeholder",
+      "value": "The model scores well [1]. Prior work agrees [2]. See also [3].",
+      "num_placeholders": 3,
+      "expected_upstream": "PASS",
+      "expected_intended": "FAIL",
+      "hazard": "false_pass",
+      "note": "Three numeric citation markers. Upstream counts [1],[2],[3] = 3 >= 3 -> PASS. Intended: inner is all digits for each, so excluded; 0 genuine placeholders -> FAIL."
+    },
+    {
+      "id": "P3-checkboxes-falsepass",
+      "checker": "placeholder",
+      "value": "- [x] Download data\n- [ ] Train model\n- [ ] Evaluate",
+      "num_placeholders": 2,
+      "expected_upstream": "PASS",
+      "expected_intended": "FAIL",
+      "hazard": "false_pass",
+      "note": "A GitHub task list. Upstream counts [x],[ ],[ ] = 3 >= 2 -> PASS. Intended: inner is 'x'/' '/' ' (checkbox tokens), all excluded; 0 genuine placeholders -> FAIL."
+    },
+    {
+      "id": "P4-footnotes-falsepass",
+      "checker": "placeholder",
+      "value": "This holds in theory[^1] and in practice[^2].",
+      "num_placeholders": 2,
+      "expected_upstream": "PASS",
+      "expected_intended": "FAIL",
+      "hazard": "false_pass",
+      "note": "Two footnote references. Upstream counts [^1],[^2] = 2 >= 2 -> PASS. Intended: inner starts with '^' (footnote), excluded; 0 genuine placeholders -> FAIL."
+    },
+    {
+      "id": "P5-mixed-answer-falsepass",
+      "checker": "placeholder",
+      "value": "According to [the paper](https://arxiv.org/abs/2311.07911), IFEval has 25 instruction types [1]. The code is on [GitHub](https://github.com/google-research/google-research).",
+      "num_placeholders": 3,
+      "expected_upstream": "PASS",
+      "expected_intended": "FAIL",
+      "hazard": "false_pass",
+      "note": "A realistic link-and-citation answer with zero fill-in placeholders. Upstream counts [the paper],[1],[GitHub] = 3 >= 3 -> PASS. Intended: two link anchors (followed by '(') and one numeric citation, all excluded; 0 genuine placeholders -> FAIL."
+    },
+    {
+      "id": "P7-multiline-placeholder-falsefail",
+      "checker": "placeholder",
+      "value": "Fill in the form:\n[Full\nName]\n[Mailing\nAddress]",
+      "num_placeholders": 2,
+      "expected_upstream": "FAIL",
+      "expected_intended": "PASS",
+      "hazard": "false_fail",
+      "note": "Two genuine placeholders that each wrap a line break. The upstream pattern has no re.DOTALL, so '.' cannot cross '\\n' and neither span matches -> count 0 >= 2 is FAIL. Intended (DOTALL) counts both = 2 >= 2 -> PASS. The same regex is both too broad (brackets in links) and too narrow (no DOTALL)."
+    }
+  ]
+}

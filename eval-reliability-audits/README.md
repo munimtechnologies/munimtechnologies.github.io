@@ -20,7 +20,8 @@ leaderboard order without raising an error.
 | [math-annotation-consistency](https://github.com/munimtechnologies/munimtechnologies.github.io/tree/main/math-annotation-consistency) | Internal self-consistency of worked solutions vs. labelled answers across GSM8K, AQuA-RAT and MathQA, under one exact-`Fraction` method, **pre-registered before the numbers existed** | GSM8K calculator tags **0.00%** off (0 / 27,998); AQuA-RAT written steps **6.88%** off by >5% (3,314 / 48,159); MathQA formula-vs-option **27.90%** off by >5% (9,081 / 32,551). Inconsistency rises GSM8K < AQuA-RAT < MathQA on every comparator | `python` audit scripts (stdlib) |
 | [rouge-tokenizer-hazards](https://github.com/munimtechnologies/munimtechnologies.github.io/tree/main/rouge-tokenizer-hazards) | The default ROUGE tokenizer's ASCII-only filter on non-Latin text | ROUGE-1 F = 1.0 between two summaries of opposite meaning; a wrong summary ranked above a correct one when the only surviving tokens are incidental shared digits. Complements the known false-negative (zero-ROUGE) direction in arXiv:2507.08342 | `python -m unittest` (stdlib) |
 | [math-equiv-hazards](https://github.com/munimtechnologies/munimtechnologies.github.io/tree/main/math-equiv-hazards) | The Hendrycks MATH answer-equivalence check (`strip_string` / `is_equiv`) used by lm-evaluation-harness `hendrycks_math` and verl's MATH reward, pinned at three upstream commits | 27 labelled cases, 14 hazards, in five groups. Example: a hedged answer such as `2 \text{ or } 3` is scored correct against gold `2`, because everything after the first `\text{ ` is dropped (verl pays reward 1.0). Whether `x =` is stripped depends on a leading space. Fraction and decimal rescues work only for positive values. In lm-evaluation-harness alone, one `/` can switch off all normalization | `python -m unittest` (stdlib) |
-| [math-equiv-prevalence](https://github.com/munimtechnologies/munimtechnologies.github.io/tree/main/math-equiv-prevalence) | **Exposure** of all 12,500 real MATH gold answers to the `math-equiv-hazards` mechanisms, with a byte-identical checker, **pre-registered before the numbers existed** | All 6 predictions HIT. 101 golds (0.808%) carry a dropped `\text{ ` tail; **6** drop a genuine `or`/`and` connective (3 in the test split). 34 golds (0.272%) flip score on a single leading space. The sign-asymmetric slash rescue holds at scale: 1,389/1,389 positive integer-fractions accept `a/b`, 0/122 negative ones. Exposure, not measured misscoring | `python -m unittest` + `job.py` (stdlib) |
+| [math-equiv-prevalence](https://github.com/munimtechnologies/munimtechnologies.github.io/tree/main/math-equiv-prevalence) | Exposure of all **12,500 real MATH gold answers** to the `math-equiv-hazards` mechanisms, **pre-registered before any count existed**; checker byte-identical to the published `math_equiv.py` | All 6 predictions HIT. 101 golds (0.808%) drop a `\text{ ` unit tail, 6 of them dropping a genuine `or`/`and` connective; 34 golds (0.272%) flip score on a single leading space; the slash rescue accepts 1,389/1,389 positive integer-fractions and 0/122 negative ones. Exposure, not measured misscoring | `python` audit + stdlib tests |
+| [ifeval-placeholder-hazards](https://github.com/munimtechnologies/munimtechnologies.github.io/tree/main/ifeval-placeholder-hazards) | The reference IFEval `PlaceholderChecker` (`detectable_content:number_placeholders`) in `google-research/google-research`, which counts every `\[.*?\]` span as a placeholder, pinned at `master` 2026-10-20 | 6 pre-registered cases, all reproduced (5 false PASS, 1 false FAIL). An answer whose only brackets are markdown links, numeric citations, footnotes or task-list checkboxes satisfies "contain at least N placeholders" with **zero** genuine placeholders; lacking `re.DOTALL`, a real placeholder wrapping a line break is missed. 27 of 541 official IFEval prompts depend on this checker | `python -m unittest` (stdlib) |
 
 All code is Apache-2.0; each labelled corpus (`cases.json`) and write-up is CC BY 4.0. Upstream
 functions transcribed for reproduction keep their own licences, attributed in each repo.
@@ -30,17 +31,18 @@ functions transcribed for reproduction keep their own licences, attributed in ea
 - **Prior art first.** Each audit states what was already known and cites it, then says plainly
   what part is new. Where a finding overlaps a published report, that overlap is credited, not
   hidden.
-- **Pre-registration where it applies.** The cross-benchmark annotation audit and the
-  math-equiv prevalence study each fixed their hypotheses and method before any number was
-  computed; their `prereg.md` files record the predictions and how each was later graded.
+- **Pre-registration where it applies.** The cross-benchmark annotation audit, the MATH
+  prevalence study and the IFEval placeholder audit each fixed their hypotheses and method
+  before any number was computed; each `prereg.md` records the predictions and how each was
+  later graded.
 - **Execution-verified.** Every case is recomputed by its own tests or audit script using only
   the standard library, against a pinned upstream copy.
 - **Stated limits.** Most entries are mechanism and self-consistency corpora, not prevalence
   studies: they show that a failure class exists and how it is triggered, not how often it
-  occurs in real model outputs. The math-equiv prevalence study measures *exposure* of the
-  benchmark's gold answers — still not how often a model triggers a hazard. The spot checks and
-  hand labels to date were performed by AI agents, not by an independent human reviewer —
-  closing that gap with a funded human re-annotation pass is an explicit next step.
+  occurs in real model outputs. The `math-equiv-prevalence` entry measures exposure over real
+  gold answers but still not the rate at which models trigger the hazard. The spot checks to
+  date were performed by AI agents, not by an independent human reviewer — closing that gap
+  with a funded human re-annotation pass is an explicit next step.
 
 ## About
 

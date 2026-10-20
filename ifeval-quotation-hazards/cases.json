@@ -1,0 +1,53 @@
+{
+  "description": "Hand-built cases for the IFEval startend:quotation (QuotationChecker) audit. Each text is given as Unicode code points so this file is pure ASCII. 'shipped' = IFEval's reading (stripped value starts and ends with the ASCII QUOTATION MARK U+0022); 'intended' = stripped value starts and ends with a double quotation mark of any script (Unicode name contains QUOTATION MARK and DOUBLE, or is U+0022; single quotes excluded). A flip means the shipped checker and the intended reading disagree on whether the response is wrapped in double quotation marks.",
+  "cases": [
+    {
+      "id": "Q1-curly-double-quotes",
+      "note": "LEFT/RIGHT DOUBLE QUOTATION MARK U+201C..U+201D wrapping 'hello'. These curly typographic quotes are emitted by many models, editors and markdown renderers. The response is plainly wrapped in double quotes, yet shipped sees no ASCII U+0022 -> FAIL (a false fail).",
+      "text_codepoints": [8220, 104, 101, 108, 108, 111, 8221],
+      "expected_shipped_pass": false,
+      "expected_intended_pass": true,
+      "expected_flip": true
+    },
+    {
+      "id": "Q2-german-low9-quotes",
+      "note": "DOUBLE LOW-9 QUOTATION MARK U+201E open and LEFT DOUBLE QUOTATION MARK U+201C close (German style). Both are double quotation marks; shipped FAIL, intended PASS.",
+      "text_codepoints": [8222, 104, 101, 108, 108, 111, 8220],
+      "expected_shipped_pass": false,
+      "expected_intended_pass": true,
+      "expected_flip": true
+    },
+    {
+      "id": "Q3-guillemets",
+      "note": "LEFT/RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK U+00AB..U+00BB (French/German double quotes). Unicode names them double angle quotation marks; shipped FAIL, intended PASS.",
+      "text_codepoints": [171, 104, 101, 108, 108, 111, 187],
+      "expected_shipped_pass": false,
+      "expected_intended_pass": true,
+      "expected_flip": true
+    },
+    {
+      "id": "Q4-ascii-double-quotes-control",
+      "note": "Control: plain ASCII QUOTATION MARK U+0022 at both ends. Both the shipped and intended readings see the response as wrapped -> PASS, no flip.",
+      "text_codepoints": [34, 104, 101, 108, 108, 111, 34],
+      "expected_shipped_pass": true,
+      "expected_intended_pass": true,
+      "expected_flip": false
+    },
+    {
+      "id": "Q5-no-quotes-control",
+      "note": "Control: no quotation marks at all. Both readings see no wrapping -> FAIL, no flip.",
+      "text_codepoints": [104, 101, 108, 108, 111],
+      "expected_shipped_pass": false,
+      "expected_intended_pass": false,
+      "expected_flip": false
+    },
+    {
+      "id": "Q6-mixed-curly-open-ascii-close",
+      "note": "LEFT DOUBLE QUOTATION MARK U+201C open, ASCII QUOTATION MARK U+0022 close -- a frequent artefact when an opening smart quote is auto-substituted but the closing one is not. Shipped sees the first char is not ASCII U+0022 -> FAIL; intended PASS. One non-ASCII boundary is enough to break the shipped check.",
+      "text_codepoints": [8220, 104, 101, 108, 108, 111, 34],
+      "expected_shipped_pass": false,
+      "expected_intended_pass": true,
+      "expected_flip": true
+    }
+  ]
+}

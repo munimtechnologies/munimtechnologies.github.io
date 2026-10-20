@@ -1,0 +1,77 @@
+{
+  "corpus": {
+    "summary": {
+      "n_cases": 6,
+      "n_verdict_flip": 4,
+      "all_reproduced": true
+    },
+    "cases": [
+      {
+        "id": "Q1-curly-double-quotes",
+        "shipped_pass": false,
+        "intended_pass": true,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "Q2-german-low9-quotes",
+        "shipped_pass": false,
+        "intended_pass": true,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "Q3-guillemets",
+        "shipped_pass": false,
+        "intended_pass": true,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      },
+      {
+        "id": "Q4-ascii-double-quotes-control",
+        "shipped_pass": true,
+        "intended_pass": true,
+        "flip": false,
+        "expected_flip": false,
+        "reproduced": true
+      },
+      {
+        "id": "Q5-no-quotes-control",
+        "shipped_pass": false,
+        "intended_pass": false,
+        "flip": false,
+        "expected_flip": false,
+        "reproduced": true
+      },
+      {
+        "id": "Q6-mixed-curly-open-ascii-close",
+        "shipped_pass": false,
+        "intended_pass": true,
+        "flip": true,
+        "expected_flip": true,
+        "reproduced": true
+      }
+    ]
+  },
+  "exposure": {
+    "available": true,
+    "input_data": "/data/input_data.jsonl",
+    "response_file": "/data/input_response_data_gpt4_20231107_145030.jsonl",
+    "response_file_present": true,
+    "n_prompts": 541,
+    "n_quotation_instances": 41,
+    "n_matched_to_response": 41,
+    "n_shipped_pass": 41,
+    "n_false_fail": 0,
+    "false_fail_examples": [],
+    "distinct_boundary_quotes_in_quotation_false_fails": [],
+    "blast_radius": {
+      "n_responses_total": 541,
+      "n_responses_wrapped_in_nonascii_double_quotes": 0,
+      "distinct_boundary_quotes": []
+    }
+  }
+}

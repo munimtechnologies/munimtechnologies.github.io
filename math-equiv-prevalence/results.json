@@ -1,0 +1,1729 @@
+{
+ "study": "math-equiv-prevalence",
+ "prereg": "prereg.md",
+ "checker": {
+  "local_sha256": "94c4256abd1e6a11e0010745903e013bcd0c9511bc6eb82f1bb508af2bea1783",
+  "published_sha256": "94c4256abd1e6a11e0010745903e013bcd0c9511bc6eb82f1bb508af2bea1783",
+  "byte_identical": true,
+  "identical_ignoring_trailing_whitespace": true
+ },
+ "sources": {
+  "train.jsonl": {
+   "rows": 12000,
+   "sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076"
+  },
+  "test.jsonl": {
+   "rows": 500,
+   "sha256": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132"
+  }
+ },
+ "n_rows": 12500,
+ "n_unique": 12499,
+ "n_no_gold": 0,
+ "no_gold_ids": [],
+ "all": {
+  "n_gold": 12499,
+  "M0": {
+   "L": 12499,
+   "C": 12499
+  },
+  "M1": {
+   "L": {
+    "count": 2,
+    "by_type": {
+     "ValueError": 2
+    },
+    "ids": [
+     "train/algebra/2432.json",
+     "train/precalculus/961.json"
+    ]
+   },
+   "C": {
+    "count": 0,
+    "by_type": {},
+    "ids": []
+   }
+  },
+  "M1_L_only": [
+   {
+    "id": "train/algebra/2432.json",
+    "gold": "12^{1/7}"
+   },
+   {
+    "id": "train/precalculus/961.json",
+    "gold": "\\begin{pmatrix} 0 \\\\ 1/11 \\end{pmatrix}"
+   }
+  ],
+  "M2": {
+   "count": 101,
+   "M2a": 101,
+   "M2b": 6,
+   "M2c": 0,
+   "items": [
+    {
+     "id": "test/counting_and_probability/231.json",
+     "gold": "18\\text{ ways.}",
+     "n": 1,
+     "tail": "ways.}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/1015.json",
+     "gold": "2 \\text{ euros}",
+     "n": 1,
+     "tail": "euros}",
+     "connective": false
+    },
+    {
+     "id": "train/number_theory/336.json",
+     "gold": "7 \\text{ distinct integers}",
+     "n": 1,
+     "tail": "distinct integers}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/1726.json",
+     "gold": "180\\text{ miles}",
+     "n": 1,
+     "tail": "miles}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/1713.json",
+     "gold": "90\\text{ units}",
+     "n": 1,
+     "tail": "units}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/2468.json",
+     "gold": "13.5\\text{ pounds}",
+     "n": 1,
+     "tail": "pounds}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/822.json",
+     "gold": "20\\text{ square units}",
+     "n": 1,
+     "tail": "square units}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/2507.json",
+     "gold": "382 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/143.json",
+     "gold": "18\\text{ units}",
+     "n": 1,
+     "tail": "units}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/700.json",
+     "gold": "108\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/precalculus/870.json",
+     "gold": "7, -2, \\text{ and } -5",
+     "n": 1,
+     "tail": "and } -5",
+     "connective": true
+    },
+    {
+     "id": "test/number_theory/991.json",
+     "gold": "5\\text{ digits}",
+     "n": 1,
+     "tail": "digits}",
+     "connective": false
+    },
+    {
+     "id": "train/number_theory/105.json",
+     "gold": "4\\!:\\!51\\!:\\!06 \\text{ p.m.}",
+     "n": 1,
+     "tail": "p.m.}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/1021.json",
+     "gold": "8\\text{ cm}",
+     "n": 1,
+     "tail": "cm}",
+     "connective": false
+    },
+    {
+     "id": "train/counting_and_probability/358.json",
+     "gold": "240\\text{ ways.}",
+     "n": 1,
+     "tail": "ways.}",
+     "connective": false
+    },
+    {
+     "id": "train/intermediate_algebra/877.json",
+     "gold": "-12 \\text{ or } -30",
+     "n": 1,
+     "tail": "or } -30",
+     "connective": true
+    },
+    {
+     "id": "train/geometry/636.json",
+     "gold": "250\\text{ inches}",
+     "n": 1,
+     "tail": "inches}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/82.json",
+     "gold": "1599 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/counting_and_probability/991.json",
+     "gold": "1920\\text{ ways.}",
+     "n": 1,
+     "tail": "ways.}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/709.json",
+     "gold": "3\\text{ cm}",
+     "n": 1,
+     "tail": "cm}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/916.json",
+     "gold": "40\\text{ min}",
+     "n": 1,
+     "tail": "min}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/799.json",
+     "gold": "4\\text{ units}",
+     "n": 1,
+     "tail": "units}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2240.json",
+     "gold": "65 \\text{ children tickets }",
+     "n": 1,
+     "tail": "children tickets }",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/946.json",
+     "gold": "7 \\text{ days}",
+     "n": 1,
+     "tail": "days}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1734.json",
+     "gold": "17\\text{ meters}",
+     "n": 1,
+     "tail": "meters}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/289.json",
+     "gold": "137.5\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/2055.json",
+     "gold": "441\\text{ pounds}",
+     "n": 1,
+     "tail": "pounds}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/1125.json",
+     "gold": "0.25\\,\\text{ cm}",
+     "n": 1,
+     "tail": "cm}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1007.json",
+     "gold": "162\\text{ minutes}",
+     "n": 1,
+     "tail": "minutes}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/52.json",
+     "gold": "4 \\text{ feet}",
+     "n": 1,
+     "tail": "feet}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/1092.json",
+     "gold": "\\frac{3}{4}\\pi\\text{ inches}",
+     "n": 1,
+     "tail": "inches}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/118.json",
+     "gold": "9\\text{ values}",
+     "n": 1,
+     "tail": "values}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1387.json",
+     "gold": "3.25\\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/637.json",
+     "gold": "4319 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2091.json",
+     "gold": "440\\text{ cm}^2",
+     "n": 1,
+     "tail": "cm}^2",
+     "connective": false
+    },
+    {
+     "id": "train/number_theory/131.json",
+     "gold": "2 \\text{ pieces}",
+     "n": 1,
+     "tail": "pieces}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/1569.json",
+     "gold": "\\frac{68}{3}\\text{ pounds}",
+     "n": 1,
+     "tail": "pounds}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/1862.json",
+     "gold": "118 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/326.json",
+     "gold": "188\\text{ units}",
+     "n": 1,
+     "tail": "units}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/678.json",
+     "gold": "6\\frac{1}{6}\\text{ feet}",
+     "n": 1,
+     "tail": "feet}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/2609.json",
+     "gold": "80\\text{ cents}",
+     "n": 1,
+     "tail": "cents}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/205.json",
+     "gold": "40\\text{ feet}",
+     "n": 1,
+     "tail": "feet}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2305.json",
+     "gold": "312 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/number_theory/1098.json",
+     "gold": "18 \\text{ integers}",
+     "n": 1,
+     "tail": "integers}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/447.json",
+     "gold": "99\\pi \\text{ square inches}",
+     "n": 1,
+     "tail": "square inches}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1154.json",
+     "gold": "135\\text{ square feet}",
+     "n": 1,
+     "tail": "square feet}",
+     "connective": false
+    },
+    {
+     "id": "test/counting_and_probability/628.json",
+     "gold": "8\\text{ meals}",
+     "n": 1,
+     "tail": "meals}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/152.json",
+     "gold": "\\frac{11}{15}\\text{ days}",
+     "n": 1,
+     "tail": "days}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/1835.json",
+     "gold": "9\\text{ min}",
+     "n": 1,
+     "tail": "min}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/391.json",
+     "gold": "45 \\text{ units}^2",
+     "n": 1,
+     "tail": "units}^2",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/387.json",
+     "gold": "5225 \\text{ cubic inches}",
+     "n": 1,
+     "tail": "cubic inches}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1578.json",
+     "gold": "45\\text{ mph}",
+     "n": 1,
+     "tail": "mph}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1718.json",
+     "gold": "18\\text{ hours}",
+     "n": 1,
+     "tail": "hours}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1124.json",
+     "gold": "12\\text{ and }13",
+     "n": 1,
+     "tail": "and }13",
+     "connective": true
+    },
+    {
+     "id": "test/algebra/1900.json",
+     "gold": "9\\text{ a.m.}",
+     "n": 1,
+     "tail": "a.m.}",
+     "connective": false
+    },
+    {
+     "id": "train/intermediate_algebra/57.json",
+     "gold": "-2 \\text{ or } -12",
+     "n": 1,
+     "tail": "or } -12",
+     "connective": true
+    },
+    {
+     "id": "train/prealgebra/243.json",
+     "gold": "2\\text{ miles}",
+     "n": 1,
+     "tail": "miles}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/1962.json",
+     "gold": "20\\text{ miles}",
+     "n": 1,
+     "tail": "miles}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1526.json",
+     "gold": "9 \\text{ multiples}",
+     "n": 1,
+     "tail": "multiples}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/766.json",
+     "gold": "12\\sqrt{13}\\text{ feet}",
+     "n": 1,
+     "tail": "feet}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/163.json",
+     "gold": "10\\text{ cm}",
+     "n": 1,
+     "tail": "cm}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/495.json",
+     "gold": "10\\text{ inches}",
+     "n": 1,
+     "tail": "inches}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1521.json",
+     "gold": "12 \\text{ gm}",
+     "n": 1,
+     "tail": "gm}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/401.json",
+     "gold": "21\\text{ dogs}",
+     "n": 1,
+     "tail": "dogs}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/708.json",
+     "gold": "54\\text{ gallons}",
+     "n": 1,
+     "tail": "gallons}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/616.json",
+     "gold": "21\\text{ units}",
+     "n": 1,
+     "tail": "units}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/117.json",
+     "gold": "60\\text{ inches}",
+     "n": 1,
+     "tail": "inches}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/1077.json",
+     "gold": "69\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/counting_and_probability/875.json",
+     "gold": "210\\text{ ways}",
+     "n": 1,
+     "tail": "ways}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/301.json",
+     "gold": "32\\text{ square cm}",
+     "n": 1,
+     "tail": "square cm}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/340.json",
+     "gold": "147\\text{ cm}",
+     "n": 1,
+     "tail": "cm}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1852.json",
+     "gold": "20\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/216.json",
+     "gold": "480 + 480\\sqrt{3}\\text{ feet}",
+     "n": 1,
+     "tail": "feet}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1180.json",
+     "gold": "12\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/795.json",
+     "gold": "25 \\text{ ft}",
+     "n": 1,
+     "tail": "ft}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/120.json",
+     "gold": "3\\text{ boxes}",
+     "n": 1,
+     "tail": "boxes}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/838.json",
+     "gold": "34\\text{ sq. units}",
+     "n": 1,
+     "tail": "sq. units}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/1055.json",
+     "gold": "2, 3, \\text{ and } 4",
+     "n": 1,
+     "tail": "and } 4",
+     "connective": true
+    },
+    {
+     "id": "train/number_theory/837.json",
+     "gold": "8\\!:\\!34 \\text{ p.m.}",
+     "n": 1,
+     "tail": "p.m.}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/1395.json",
+     "gold": "840\\text{ square inches}",
+     "n": 1,
+     "tail": "square inches}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1697.json",
+     "gold": "40\\text{ points}",
+     "n": 1,
+     "tail": "points}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/689.json",
+     "gold": "428\\text{ square centimeters}",
+     "n": 1,
+     "tail": "square centimeters}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/1853.json",
+     "gold": "140\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/1604.json",
+     "gold": "81\\text{ teachers}",
+     "n": 1,
+     "tail": "teachers}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2160.json",
+     "gold": "85\\text{ feet}",
+     "n": 1,
+     "tail": "feet}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/365.json",
+     "gold": "14 \\text{ right triangles}",
+     "n": 1,
+     "tail": "right triangles}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2329.json",
+     "gold": "19 \\text{ and }43",
+     "n": 1,
+     "tail": "and }43",
+     "connective": true
+    },
+    {
+     "id": "train/prealgebra/600.json",
+     "gold": "18 \\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/419.json",
+     "gold": "114\\text{ square units}",
+     "n": 1,
+     "tail": "square units}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/137.json",
+     "gold": "575\\text{ students}",
+     "n": 1,
+     "tail": "students}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1879.json",
+     "gold": "90\\text{ square\nunits}",
+     "n": 1,
+     "tail": "squareunits}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1746.json",
+     "gold": "100\\text{ square units}",
+     "n": 1,
+     "tail": "square units}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/581.json",
+     "gold": "5\\text{ inches}",
+     "n": 1,
+     "tail": "inches}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/59.json",
+     "gold": "12\\text{ square units}",
+     "n": 1,
+     "tail": "square units}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/719.json",
+     "gold": "\\approx 8.24 \\text{ mph}",
+     "n": 1,
+     "tail": "mph}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/431.json",
+     "gold": "16\\text{ daps}",
+     "n": 1,
+     "tail": "daps}",
+     "connective": false
+    },
+    {
+     "id": "train/algebra/2326.json",
+     "gold": "20\\text{ days}",
+     "n": 1,
+     "tail": "days}",
+     "connective": false
+    },
+    {
+     "id": "train/geometry/726.json",
+     "gold": "20 \\text{ sq units}",
+     "n": 1,
+     "tail": "sq units}",
+     "connective": false
+    },
+    {
+     "id": "train/prealgebra/635.json",
+     "gold": "7\\text{ hours}.",
+     "n": 1,
+     "tail": "hours}.",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1003.json",
+     "gold": "\\frac{270}7\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1044.json",
+     "gold": "5.4 \\text{ cents}",
+     "n": 1,
+     "tail": "cents}",
+     "connective": false
+    }
+   ]
+  },
+  "M3": {
+   "L": {
+    "count": 34,
+    "ids": [
+     "train/intermediate_algebra/1539.json",
+     "train/algebra/2432.json",
+     "test/intermediate_algebra/2103.json",
+     "test/precalculus/1109.json",
+     "test/intermediate_algebra/992.json",
+     "test/algebra/2653.json",
+     "train/geometry/176.json",
+     "train/algebra/1140.json",
+     "train/precalculus/95.json",
+     "test/counting_and_probability/754.json",
+     "test/intermediate_algebra/1732.json",
+     "train/intermediate_algebra/1035.json",
+     "train/intermediate_algebra/2128.json",
+     "train/geometry/1101.json",
+     "train/prealgebra/312.json",
+     "train/number_theory/760.json",
+     "train/intermediate_algebra/2076.json",
+     "train/number_theory/907.json",
+     "test/intermediate_algebra/1723.json",
+     "test/intermediate_algebra/1169.json",
+     "test/algebra/2363.json",
+     "test/intermediate_algebra/1097.json",
+     "train/algebra/2767.json",
+     "train/precalculus/961.json",
+     "test/precalculus/1055.json",
+     "train/intermediate_algebra/832.json",
+     "train/algebra/1321.json",
+     "test/intermediate_algebra/253.json",
+     "train/algebra/1013.json",
+     "train/precalculus/414.json",
+     "train/intermediate_algebra/1333.json",
+     "test/algebra/1464.json",
+     "test/precalculus/323.json",
+     "test/precalculus/356.json"
+    ]
+   },
+   "C": {
+    "count": 32,
+    "ids": [
+     "train/intermediate_algebra/1539.json",
+     "test/intermediate_algebra/2103.json",
+     "test/precalculus/1109.json",
+     "test/intermediate_algebra/992.json",
+     "test/algebra/2653.json",
+     "train/geometry/176.json",
+     "train/algebra/1140.json",
+     "train/precalculus/95.json",
+     "test/counting_and_probability/754.json",
+     "test/intermediate_algebra/1732.json",
+     "train/intermediate_algebra/1035.json",
+     "train/intermediate_algebra/2128.json",
+     "train/geometry/1101.json",
+     "train/prealgebra/312.json",
+     "train/number_theory/760.json",
+     "train/intermediate_algebra/2076.json",
+     "train/number_theory/907.json",
+     "test/intermediate_algebra/1723.json",
+     "test/intermediate_algebra/1169.json",
+     "test/algebra/2363.json",
+     "test/intermediate_algebra/1097.json",
+     "train/algebra/2767.json",
+     "test/precalculus/1055.json",
+     "train/intermediate_algebra/832.json",
+     "train/algebra/1321.json",
+     "test/intermediate_algebra/253.json",
+     "train/algebra/1013.json",
+     "train/precalculus/414.json",
+     "train/intermediate_algebra/1333.json",
+     "test/algebra/1464.json",
+     "test/precalculus/323.json",
+     "test/precalculus/356.json"
+    ]
+   },
+   "items": [
+    {
+     "id": "train/intermediate_algebra/1539.json",
+     "gold": "y = \\frac{63}{32}"
+    },
+    {
+     "id": "train/algebra/2432.json",
+     "gold": "12^{1/7}"
+    },
+    {
+     "id": "test/intermediate_algebra/2103.json",
+     "gold": "y = \\frac{1}{2} x + 2"
+    },
+    {
+     "id": "test/precalculus/1109.json",
+     "gold": "x = -1"
+    },
+    {
+     "id": "test/intermediate_algebra/992.json",
+     "gold": "y = x+3"
+    },
+    {
+     "id": "test/algebra/2653.json",
+     "gold": "x = 3"
+    },
+    {
+     "id": "train/geometry/176.json",
+     "gold": "AB=12+12\\sqrt{3}"
+    },
+    {
+     "id": "train/algebra/1140.json",
+     "gold": "x = 2"
+    },
+    {
+     "id": "train/precalculus/95.json",
+     "gold": "y = -\\frac{5}{2} x - \\frac{29}{4}"
+    },
+    {
+     "id": "test/counting_and_probability/754.json",
+     "gold": "k = 15"
+    },
+    {
+     "id": "test/intermediate_algebra/1732.json",
+     "gold": "y = x^2 + 2"
+    },
+    {
+     "id": "train/intermediate_algebra/1035.json",
+     "gold": "y = x+2"
+    },
+    {
+     "id": "train/intermediate_algebra/2128.json",
+     "gold": "y = -3x + 30"
+    },
+    {
+     "id": "train/geometry/1101.json",
+     "gold": "y = -1"
+    },
+    {
+     "id": "train/prealgebra/312.json",
+     "gold": "b = -4"
+    },
+    {
+     "id": "train/number_theory/760.json",
+     "gold": "n = 255"
+    },
+    {
+     "id": "train/intermediate_algebra/2076.json",
+     "gold": "y = -\\frac{47}{8}"
+    },
+    {
+     "id": "train/number_theory/907.json",
+     "gold": "k = 1"
+    },
+    {
+     "id": "test/intermediate_algebra/1723.json",
+     "gold": "y = -\\frac{1}{2} x^2 + 4x - 6"
+    },
+    {
+     "id": "test/intermediate_algebra/1169.json",
+     "gold": "y = -\\frac{1}{4}"
+    },
+    {
+     "id": "test/algebra/2363.json",
+     "gold": "x = -1"
+    },
+    {
+     "id": "test/intermediate_algebra/1097.json",
+     "gold": "x = \\frac{3}{2}"
+    },
+    {
+     "id": "train/algebra/2767.json",
+     "gold": "q = 3"
+    },
+    {
+     "id": "train/precalculus/961.json",
+     "gold": "\\begin{pmatrix} 0 \\\\ 1/11 \\end{pmatrix}"
+    },
+    {
+     "id": "test/precalculus/1055.json",
+     "gold": "y = 3x^2 - 34x + 88"
+    },
+    {
+     "id": "train/intermediate_algebra/832.json",
+     "gold": "y = -\\frac{10}{3}"
+    },
+    {
+     "id": "train/algebra/1321.json",
+     "gold": "x = 12"
+    },
+    {
+     "id": "test/intermediate_algebra/253.json",
+     "gold": "y = 2x"
+    },
+    {
+     "id": "train/algebra/1013.json",
+     "gold": "k = \\frac{-33}{2}"
+    },
+    {
+     "id": "train/precalculus/414.json",
+     "gold": "y = 2x - 13"
+    },
+    {
+     "id": "train/intermediate_algebra/1333.json",
+     "gold": "x = \\frac{3}{2}"
+    },
+    {
+     "id": "test/algebra/1464.json",
+     "gold": "x = 4"
+    },
+    {
+     "id": "test/precalculus/323.json",
+     "gold": "y = 2x + 3"
+    },
+    {
+     "id": "test/precalculus/356.json",
+     "gold": "y = -2x"
+    }
+   ]
+  },
+  "M4": {
+   "L": {
+    "count": 2,
+    "ids": [
+     "train/algebra/2432.json",
+     "train/precalculus/961.json"
+    ]
+   },
+   "C": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  "M5": {
+   "exposed": 1964,
+   "L": 0,
+   "C": 0
+  },
+  "M6": {
+   "pos": {
+    "n": 1389,
+    "L": 1389,
+    "C": 1389
+   },
+   "neg": {
+    "n": 122,
+    "L": 0,
+    "C": 0
+   },
+   "neg_ids": [
+    "train/algebra/1402.json",
+    "train/algebra/2617.json",
+    "train/precalculus/922.json",
+    "test/algebra/1019.json",
+    "train/intermediate_algebra/1922.json",
+    "test/precalculus/732.json",
+    "train/algebra/38.json",
+    "train/intermediate_algebra/2163.json",
+    "test/intermediate_algebra/2153.json",
+    "train/algebra/810.json",
+    "test/intermediate_algebra/1091.json",
+    "train/geometry/925.json",
+    "test/geometry/110.json",
+    "test/precalculus/227.json",
+    "test/algebra/1968.json",
+    "test/algebra/2603.json",
+    "train/algebra/1350.json",
+    "train/prealgebra/769.json",
+    "train/algebra/1734.json",
+    "train/intermediate_algebra/2079.json",
+    "test/algebra/986.json",
+    "test/intermediate_algebra/774.json",
+    "train/counting_and_probability/75.json",
+    "test/precalculus/995.json",
+    "train/intermediate_algebra/1486.json",
+    "train/algebra/24959.json",
+    "train/algebra/1951.json",
+    "train/algebra/1474.json",
+    "test/intermediate_algebra/1485.json",
+    "train/intermediate_algebra/1881.json",
+    "train/algebra/394.json",
+    "test/algebra/540.json",
+    "train/algebra/2485.json",
+    "train/precalculus/16.json",
+    "test/intermediate_algebra/869.json",
+    "train/algebra/1790.json",
+    "train/intermediate_algebra/2075.json",
+    "train/intermediate_algebra/301.json",
+    "train/algebra/574.json",
+    "test/intermediate_algebra/790.json",
+    "train/intermediate_algebra/19.json",
+    "train/intermediate_algebra/1966.json",
+    "test/algebra/2106.json",
+    "train/algebra/503.json",
+    "train/intermediate_algebra/89.json",
+    "test/precalculus/609.json",
+    "test/precalculus/540.json",
+    "train/algebra/924.json",
+    "train/intermediate_algebra/1976.json",
+    "train/precalculus/143.json",
+    "test/geometry/638.json",
+    "test/precalculus/873.json",
+    "train/precalculus/937.json",
+    "test/intermediate_algebra/2020.json",
+    "train/precalculus/753.json",
+    "test/intermediate_algebra/1717.json",
+    "train/geometry/637.json",
+    "train/algebra/2093.json",
+    "test/prealgebra/1650.json",
+    "test/precalculus/23.json",
+    "test/prealgebra/1494.json",
+    "train/algebra/1641.json",
+    "train/intermediate_algebra/1298.json",
+    "test/geometry/661.json",
+    "test/geometry/932.json",
+    "test/intermediate_algebra/2029.json",
+    "train/intermediate_algebra/615.json",
+    "test/algebra/395.json",
+    "test/algebra/132.json",
+    "test/algebra/1538.json",
+    "train/algebra/84.json",
+    "test/algebra/968.json",
+    "train/algebra/1876.json",
+    "train/algebra/1546.json",
+    "test/precalculus/495.json",
+    "test/precalculus/1181.json",
+    "train/algebra/1998.json",
+    "test/algebra/2433.json",
+    "train/algebra/1393.json",
+    "test/precalculus/428.json",
+    "test/precalculus/913.json",
+    "train/precalculus/93.json",
+    "test/intermediate_algebra/1543.json",
+    "test/intermediate_algebra/972.json",
+    "test/precalculus/644.json",
+    "test/intermediate_algebra/1071.json",
+    "train/algebra/586.json",
+    "train/intermediate_algebra/1769.json",
+    "train/algebra/403.json",
+    "train/algebra/1686.json",
+    "train/algebra/2836.json",
+    "test/counting_and_probability/805.json",
+    "train/algebra/2401.json",
+    "train/algebra/1799.json",
+    "test/intermediate_algebra/779.json",
+    "test/algebra/2481.json",
+    "test/intermediate_algebra/1808.json",
+    "train/intermediate_algebra/1117.json",
+    "train/algebra/321.json",
+    "train/algebra/1675.json",
+    "train/algebra/24731.json",
+    "test/precalculus/954.json",
+    "test/precalculus/992.json",
+    "test/precalculus/216.json",
+    "train/precalculus/674.json",
+    "train/precalculus/498.json",
+    "train/intermediate_algebra/256.json",
+    "train/algebra/112.json",
+    "train/intermediate_algebra/633.json",
+    "test/algebra/220.json",
+    "test/intermediate_algebra/828.json",
+    "test/precalculus/21.json",
+    "train/algebra/1743.json",
+    "train/algebra/2065.json",
+    "test/intermediate_algebra/1982.json",
+    "train/algebra/1887.json",
+    "test/algebra/2823.json",
+    "test/algebra/302.json",
+    "test/precalculus/735.json",
+    "test/algebra/2517.json",
+    "test/geometry/947.json",
+    "test/intermediate_algebra/1791.json"
+   ]
+  }
+ },
+ "predictions": {
+  "P1": {
+   "hit": true,
+   "value_pct": 0.8080646451716137
+  },
+  "P2": {
+   "hit": true,
+   "value": 6
+  },
+  "P3": {
+   "hit": true,
+   "L_pct": 0.016001280102408193,
+   "C_pct": 0.0
+  },
+  "P4": {
+   "hit": true,
+   "pos": {
+    "n": 1389,
+    "L": 1389,
+    "C": 1389
+   },
+   "neg": {
+    "n": 122,
+    "L": 0,
+    "C": 0
+   }
+  },
+  "P5": {
+   "hit": true,
+   "value_pct": 0.2720217617409393
+  },
+  "P6": {
+   "hit": true,
+   "value": {
+    "L": 12499,
+    "C": 12499
+   }
+  }
+ },
+ "original_test": {
+  "n_gold": 5000,
+  "M0": {
+   "L": 5000,
+   "C": 5000
+  },
+  "M1": {
+   "L": {
+    "count": 0,
+    "by_type": {},
+    "ids": []
+   },
+   "C": {
+    "count": 0,
+    "by_type": {},
+    "ids": []
+   }
+  },
+  "M1_L_only": [],
+  "M2": {
+   "count": 44,
+   "M2a": 44,
+   "M2b": 3,
+   "M2c": 0,
+   "items": [
+    {
+     "id": "test/counting_and_probability/231.json",
+     "gold": "18\\text{ ways.}",
+     "n": 1,
+     "tail": "ways.}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/143.json",
+     "gold": "18\\text{ units}",
+     "n": 1,
+     "tail": "units}",
+     "connective": false
+    },
+    {
+     "id": "test/precalculus/870.json",
+     "gold": "7, -2, \\text{ and } -5",
+     "n": 1,
+     "tail": "and } -5",
+     "connective": true
+    },
+    {
+     "id": "test/number_theory/991.json",
+     "gold": "5\\text{ digits}",
+     "n": 1,
+     "tail": "digits}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/82.json",
+     "gold": "1599 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/counting_and_probability/991.json",
+     "gold": "1920\\text{ ways.}",
+     "n": 1,
+     "tail": "ways.}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2240.json",
+     "gold": "65 \\text{ children tickets }",
+     "n": 1,
+     "tail": "children tickets }",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1734.json",
+     "gold": "17\\text{ meters}",
+     "n": 1,
+     "tail": "meters}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/1125.json",
+     "gold": "0.25\\,\\text{ cm}",
+     "n": 1,
+     "tail": "cm}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1007.json",
+     "gold": "162\\text{ minutes}",
+     "n": 1,
+     "tail": "minutes}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/1092.json",
+     "gold": "\\frac{3}{4}\\pi\\text{ inches}",
+     "n": 1,
+     "tail": "inches}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1387.json",
+     "gold": "3.25\\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2091.json",
+     "gold": "440\\text{ cm}^2",
+     "n": 1,
+     "tail": "cm}^2",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/1569.json",
+     "gold": "\\frac{68}{3}\\text{ pounds}",
+     "n": 1,
+     "tail": "pounds}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/1862.json",
+     "gold": "118 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/326.json",
+     "gold": "188\\text{ units}",
+     "n": 1,
+     "tail": "units}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2305.json",
+     "gold": "312 \\text{ dollars}",
+     "n": 1,
+     "tail": "dollars}",
+     "connective": false
+    },
+    {
+     "id": "test/number_theory/1098.json",
+     "gold": "18 \\text{ integers}",
+     "n": 1,
+     "tail": "integers}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/447.json",
+     "gold": "99\\pi \\text{ square inches}",
+     "n": 1,
+     "tail": "square inches}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1154.json",
+     "gold": "135\\text{ square feet}",
+     "n": 1,
+     "tail": "square feet}",
+     "connective": false
+    },
+    {
+     "id": "test/counting_and_probability/628.json",
+     "gold": "8\\text{ meals}",
+     "n": 1,
+     "tail": "meals}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/391.json",
+     "gold": "45 \\text{ units}^2",
+     "n": 1,
+     "tail": "units}^2",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1578.json",
+     "gold": "45\\text{ mph}",
+     "n": 1,
+     "tail": "mph}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1718.json",
+     "gold": "18\\text{ hours}",
+     "n": 1,
+     "tail": "hours}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1124.json",
+     "gold": "12\\text{ and }13",
+     "n": 1,
+     "tail": "and }13",
+     "connective": true
+    },
+    {
+     "id": "test/algebra/1900.json",
+     "gold": "9\\text{ a.m.}",
+     "n": 1,
+     "tail": "a.m.}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1526.json",
+     "gold": "9 \\text{ multiples}",
+     "n": 1,
+     "tail": "multiples}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1521.json",
+     "gold": "12 \\text{ gm}",
+     "n": 1,
+     "tail": "gm}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/1077.json",
+     "gold": "69\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/counting_and_probability/875.json",
+     "gold": "210\\text{ ways}",
+     "n": 1,
+     "tail": "ways}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1852.json",
+     "gold": "20\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1180.json",
+     "gold": "12\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/795.json",
+     "gold": "25 \\text{ ft}",
+     "n": 1,
+     "tail": "ft}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1697.json",
+     "gold": "40\\text{ points}",
+     "n": 1,
+     "tail": "points}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/1604.json",
+     "gold": "81\\text{ teachers}",
+     "n": 1,
+     "tail": "teachers}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2160.json",
+     "gold": "85\\text{ feet}",
+     "n": 1,
+     "tail": "feet}",
+     "connective": false
+    },
+    {
+     "id": "test/algebra/2329.json",
+     "gold": "19 \\text{ and }43",
+     "n": 1,
+     "tail": "and }43",
+     "connective": true
+    },
+    {
+     "id": "test/algebra/137.json",
+     "gold": "575\\text{ students}",
+     "n": 1,
+     "tail": "students}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1879.json",
+     "gold": "90\\text{ square\nunits}",
+     "n": 1,
+     "tail": "squareunits}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1746.json",
+     "gold": "100\\text{ square units}",
+     "n": 1,
+     "tail": "square units}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/581.json",
+     "gold": "5\\text{ inches}",
+     "n": 1,
+     "tail": "inches}",
+     "connective": false
+    },
+    {
+     "id": "test/geometry/59.json",
+     "gold": "12\\text{ square units}",
+     "n": 1,
+     "tail": "square units}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1003.json",
+     "gold": "\\frac{270}7\\text{ degrees}",
+     "n": 1,
+     "tail": "degrees}",
+     "connective": false
+    },
+    {
+     "id": "test/prealgebra/1044.json",
+     "gold": "5.4 \\text{ cents}",
+     "n": 1,
+     "tail": "cents}",
+     "connective": false
+    }
+   ]
+  },
+  "M3": {
+   "L": {
+    "count": 15,
+    "ids": [
+     "test/intermediate_algebra/2103.json",
+     "test/precalculus/1109.json",
+     "test/intermediate_algebra/992.json",
+     "test/algebra/2653.json",
+     "test/counting_and_probability/754.json",
+     "test/intermediate_algebra/1732.json",
+     "test/intermediate_algebra/1723.json",
+     "test/intermediate_algebra/1169.json",
+     "test/algebra/2363.json",
+     "test/intermediate_algebra/1097.json",
+     "test/precalculus/1055.json",
+     "test/intermediate_algebra/253.json",
+     "test/algebra/1464.json",
+     "test/precalculus/323.json",
+     "test/precalculus/356.json"
+    ]
+   },
+   "C": {
+    "count": 15,
+    "ids": [
+     "test/intermediate_algebra/2103.json",
+     "test/precalculus/1109.json",
+     "test/intermediate_algebra/992.json",
+     "test/algebra/2653.json",
+     "test/counting_and_probability/754.json",
+     "test/intermediate_algebra/1732.json",
+     "test/intermediate_algebra/1723.json",
+     "test/intermediate_algebra/1169.json",
+     "test/algebra/2363.json",
+     "test/intermediate_algebra/1097.json",
+     "test/precalculus/1055.json",
+     "test/intermediate_algebra/253.json",
+     "test/algebra/1464.json",
+     "test/precalculus/323.json",
+     "test/precalculus/356.json"
+    ]
+   },
+   "items": [
+    {
+     "id": "test/intermediate_algebra/2103.json",
+     "gold": "y = \\frac{1}{2} x + 2"
+    },
+    {
+     "id": "test/precalculus/1109.json",
+     "gold": "x = -1"
+    },
+    {
+     "id": "test/intermediate_algebra/992.json",
+     "gold": "y = x+3"
+    },
+    {
+     "id": "test/algebra/2653.json",
+     "gold": "x = 3"
+    },
+    {
+     "id": "test/counting_and_probability/754.json",
+     "gold": "k = 15"
+    },
+    {
+     "id": "test/intermediate_algebra/1732.json",
+     "gold": "y = x^2 + 2"
+    },
+    {
+     "id": "test/intermediate_algebra/1723.json",
+     "gold": "y = -\\frac{1}{2} x^2 + 4x - 6"
+    },
+    {
+     "id": "test/intermediate_algebra/1169.json",
+     "gold": "y = -\\frac{1}{4}"
+    },
+    {
+     "id": "test/algebra/2363.json",
+     "gold": "x = -1"
+    },
+    {
+     "id": "test/intermediate_algebra/1097.json",
+     "gold": "x = \\frac{3}{2}"
+    },
+    {
+     "id": "test/precalculus/1055.json",
+     "gold": "y = 3x^2 - 34x + 88"
+    },
+    {
+     "id": "test/intermediate_algebra/253.json",
+     "gold": "y = 2x"
+    },
+    {
+     "id": "test/algebra/1464.json",
+     "gold": "x = 4"
+    },
+    {
+     "id": "test/precalculus/323.json",
+     "gold": "y = 2x + 3"
+    },
+    {
+     "id": "test/precalculus/356.json",
+     "gold": "y = -2x"
+    }
+   ]
+  },
+  "M4": {
+   "L": {
+    "count": 0,
+    "ids": []
+   },
+   "C": {
+    "count": 0,
+    "ids": []
+   }
+  },
+  "M5": {
+   "exposed": 788,
+   "L": 0,
+   "C": 0
+  },
+  "M6": {
+   "pos": {
+    "n": 557,
+    "L": 557,
+    "C": 557
+   },
+   "neg": {
+    "n": 58,
+    "L": 0,
+    "C": 0
+   },
+   "neg_ids": [
+    "test/algebra/1019.json",
+    "test/precalculus/732.json",
+    "test/intermediate_algebra/2153.json",
+    "test/intermediate_algebra/1091.json",
+    "test/geometry/110.json",
+    "test/precalculus/227.json",
+    "test/algebra/1968.json",
+    "test/algebra/2603.json",
+    "test/algebra/986.json",
+    "test/intermediate_algebra/774.json",
+    "test/precalculus/995.json",
+    "test/intermediate_algebra/1485.json",
+    "test/algebra/540.json",
+    "test/intermediate_algebra/869.json",
+    "test/intermediate_algebra/790.json",
+    "test/algebra/2106.json",
+    "test/precalculus/609.json",
+    "test/precalculus/540.json",
+    "test/geometry/638.json",
+    "test/precalculus/873.json",
+    "test/intermediate_algebra/2020.json",
+    "test/intermediate_algebra/1717.json",
+    "test/prealgebra/1650.json",
+    "test/precalculus/23.json",
+    "test/prealgebra/1494.json",
+    "test/geometry/661.json",
+    "test/geometry/932.json",
+    "test/intermediate_algebra/2029.json",
+    "test/algebra/395.json",
+    "test/algebra/132.json",
+    "test/algebra/1538.json",
+    "test/algebra/968.json",
+    "test/precalculus/495.json",
+    "test/precalculus/1181.json",
+    "test/algebra/2433.json",
+    "test/precalculus/428.json",
+    "test/precalculus/913.json",
+    "test/intermediate_algebra/1543.json",
+    "test/intermediate_algebra/972.json",
+    "test/precalculus/644.json",
+    "test/intermediate_algebra/1071.json",
+    "test/counting_and_probability/805.json",
+    "test/intermediate_algebra/779.json",
+    "test/algebra/2481.json",
+    "test/intermediate_algebra/1808.json",
+    "test/precalculus/954.json",
+    "test/precalculus/992.json",
+    "test/precalculus/216.json",
+    "test/algebra/220.json",
+    "test/intermediate_algebra/828.json",
+    "test/precalculus/21.json",
+    "test/intermediate_algebra/1982.json",
+    "test/algebra/2823.json",
+    "test/algebra/302.json",
+    "test/precalculus/735.json",
+    "test/algebra/2517.json",
+    "test/geometry/947.json",
+    "test/intermediate_algebra/1791.json"
+   ]
+  }
+ },
+ "exploratory_answer_field_mismatch": {
+  "count": 3,
+  "items": [
+   {
+    "id": "train/algebra/24014.json",
+    "gold": "2",
+    "answer": "None"
+   },
+   {
+    "id": "train/algebra/1397.json",
+    "gold": "{17}.",
+    "answer": "17"
+   },
+   {
+    "id": "train/algebra/25040.json",
+    "gold": "9",
+    "answer": "None"
+   }
+  ]
+ }
+}

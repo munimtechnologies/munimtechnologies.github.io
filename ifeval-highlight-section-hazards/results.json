@@ -1,0 +1,33 @@
+{
+  "audit": "ifeval-highlight-section-hazards",
+  "target": "IFEval HighlightSectionChecker (detectable_format:number_highlighted_sections)",
+  "what": "IFEval counts highlighted sections as (single-asterisk matches) + (double-asterisk matches); a single '***text***' bold-italic span is matched as both a single '*text*' and a double '**text**', so ONE visual highlight is counted as 2, and a response can satisfy a 'highlight at least N sections' quota it did not really meet.",
+  "method": {
+    "checker": "verbatim reproduction of HighlightSectionChecker.check_following.",
+    "corpus": "6 hand-traced cases; verdict = checker pass/fail vs ground-truth span count.",
+    "corrected_count": "upstream count minus one per '***text***' span (each span is one visual highlight).",
+    "exposure": "across GPT-4 responses to the highlight-requiring prompts: how many use a triple-asterisk span, how many have an inflated count, and in how many the inflation would FLIP the pass/fail verdict; examples kept for manual review."
+  },
+  "synthetic_corpus": {
+    "n_cases": 6,
+    "n_match": 3,
+    "n_correct_neg": 2,
+    "n_false_pass": 1,
+    "n_false_fail": 0,
+    "n_flips": 1,
+    "all_reproduced": true
+  },
+  "exposure": {
+    "available": true,
+    "n_prompts_total": 541,
+    "n_prompts_require_highlight": 48,
+    "n_responses_present": 47,
+    "n_responses_missing": 1,
+    "n_checker_pass": 44,
+    "n_responses_with_triple_span": 0,
+    "n_responses_count_inflated": 0,
+    "n_verdict_flips_if_corrected": 0,
+    "inflate_examples": [],
+    "flip_examples": []
+  }
+}

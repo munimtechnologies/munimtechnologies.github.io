@@ -1,0 +1,99 @@
+{
+  "audit": "ifeval-postscript-hazards",
+  "target_checker": "IFEval detectable_content:postscript (PostscriptChecker)",
+  "synthetic_corpus": {
+    "n_cases": 6,
+    "n_verdict_flip": 4,
+    "n_false_pass": 1,
+    "n_false_fail": 3,
+    "all_reproduced": true
+  },
+  "cases": [
+    {
+      "id": "P1-inline-false-pass",
+      "marker": "P.S.",
+      "text": "I think p.s. stands for postscript in formal writing.",
+      "shipped_verdict": true,
+      "intended_verdict": false,
+      "shipped_expected": true,
+      "intended_expected": false,
+      "kind": "false_pass",
+      "reproduced": true,
+      "note": "Inline 'p.s.' mid-sentence. No ^ anchor, so the shipped pattern finds it and passes a response that contains no actual postscript."
+    },
+    {
+      "id": "P2-PS-no-dots-false-fail",
+      "marker": "P.S.",
+      "text": "PS I forgot to mention the meeting is at noon.",
+      "shipped_verdict": false,
+      "intended_verdict": true,
+      "shipped_expected": false,
+      "intended_expected": true,
+      "kind": "false_fail",
+      "reproduced": true,
+      "note": "'PS' with no dots is a legitimate postscript spelling, but the shipped pattern hard-codes 'p.' and 's.' literal dots, so it fails."
+    },
+    {
+      "id": "P3-one-dot-false-fail",
+      "marker": "P.S.",
+      "text": "P.S I will call you tomorrow afternoon.",
+      "shipped_verdict": false,
+      "intended_verdict": true,
+      "shipped_expected": false,
+      "intended_expected": true,
+      "kind": "false_fail",
+      "reproduced": true,
+      "note": "'P.S' (no trailing dot) is a legitimate spelling; the shipped pattern requires 's.' so it fails."
+    },
+    {
+      "id": "P4-colon-false-fail",
+      "marker": "P.S.",
+      "text": "P.S: remember to bring the signed documents.",
+      "shipped_verdict": false,
+      "intended_verdict": true,
+      "shipped_expected": false,
+      "intended_expected": true,
+      "kind": "false_fail",
+      "reproduced": true,
+      "note": "'P.S:' with a colon is a legitimate spelling; the shipped pattern requires 's.' so it fails."
+    },
+    {
+      "id": "P5-canonical-control",
+      "marker": "P.S.",
+      "text": "P.S. Thanks again for all your help.",
+      "shipped_verdict": true,
+      "intended_verdict": true,
+      "shipped_expected": true,
+      "intended_expected": true,
+      "kind": "control_pass",
+      "reproduced": true,
+      "note": "Canonical 'P.S.' at line start. Both pass; control."
+    },
+    {
+      "id": "P6-psychology-control",
+      "marker": "P.S.",
+      "text": "Psychology is a fascinating field of study.",
+      "shipped_verdict": false,
+      "intended_verdict": false,
+      "shipped_expected": false,
+      "intended_expected": false,
+      "kind": "control_fail",
+      "reproduced": true,
+      "note": "'Psychology' starts with 'ps'. Both fail; the intended guard (?![a-z]) keeps it from matching. Control."
+    }
+  ],
+  "official_exposure": {
+    "available": true,
+    "n_prompts": 541,
+    "n_postscript_instances": 26,
+    "n_markers_seen": {
+      "P.S.": 10,
+      "P.P.S": 16
+    },
+    "n_matched_to_gpt4_response": 26,
+    "n_verdict_flip": 0,
+    "n_false_pass": 0,
+    "n_false_fail": 0,
+    "flips": []
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "audit": "mwp-equation-answer-census",
+  "what": "For each public MWP problem, evaluate its own annotated equation and check it equals its own annotated numeric answer. Mismatch = the released annotation is internally inconsistent.",
+  "method": {
+    "infix": "ast-based numeric eval over +,-,*,/ (no python eval); SVAMP.json.",
+    "prefix": "stack machine over number tokens + Numbers column; ASDiv-A/MAWPS CV release.",
+    "tolerance": "match if |computed - answer| <= 1e-3 absolute or relative.",
+    "dedup": "within each dataset by (equation|numbers|answer|question)."
+  },
+  "synthetic_corpus": {
+    "n_cases": 10,
+    "n_match": 7,
+    "n_mismatch": 2,
+    "n_unevaluable": 1,
+    "all_reproduced": true
+  },
+  "datasets": {
+    "SVAMP": {
+      "available": true,
+      "n_total": 1000,
+      "n_evaluable": 1000,
+      "n_unevaluable": 0,
+      "n_match": 999,
+      "n_mismatch": 1,
+      "mismatch_rate_of_evaluable": 0.001,
+      "mismatch_examples": [
+        {
+          "head": "Rachel's tree had 4 apples. She picked 2 apples from her tree. Thereafter 3 new apples gre",
+          "equation": "( ( 4.0 - 2.0 ) + 3.0 )",
+          "numbers": [],
+          "annotated_answer": 1.0,
+          "computed": 5.0
+        }
+      ],
+      "unevaluable_examples": [],
+      "source_files": [
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/SVAMP.json"
+      ]
+    },
+    "ASDiv-A": {
+      "available": true,
+      "n_total": 1217,
+      "n_evaluable": 1217,
+      "n_unevaluable": 0,
+      "n_match": 1217,
+      "n_mismatch": 0,
+      "mismatch_rate_of_evaluable": 0.0,
+      "mismatch_examples": [],
+      "unevaluable_examples": [],
+      "source_files": [
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_asdiv-a/fold0/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_asdiv-a/fold1/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_asdiv-a/fold2/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_asdiv-a/fold3/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_asdiv-a/fold4/dev.csv"
+      ]
+    },
+    "MAWPS": {
+      "available": true,
+      "n_total": 1813,
+      "n_evaluable": 1813,
+      "n_unevaluable": 0,
+      "n_match": 1805,
+      "n_mismatch": 8,
+      "mismatch_rate_of_evaluable": 0.00441257584114727,
+      "mismatch_examples": [
+        {
+          "head": "Mrs. Hilt has number0 markers . They are divided equally into number1 packages . Mrs. Hilt",
+          "equation": "/ number0 number1",
+          "numbers": [
+            40.0,
+            7.0
+          ],
+          "annotated_answer": "5.0",
+          "computed": 5.714285714285714
+        },
+        {
+          "head": "A recipe calls for number0 cups of sugar . You find that you only have number1 cups of sug",
+          "equation": "/ number1 number0",
+          "numbers": [
+            2.0,
+            0.3333
+          ],
+          "annotated_answer": "0.165",
+          "computed": 0.16665
+        },
+        {
+          "head": "One stamp costs number0 cents . If the cost of each stamp remains the same , how much woul",
+          "equation": "* number0 number1",
+          "numbers": [
+            34.0,
+            4.0
+          ],
+          "annotated_answer": "134.0",
+          "computed": 136.0
+        },
+        {
+          "head": "On a recent trip to CA , we averaged number0 miles per hour . On the return trip we averag",
+          "equation": "/ + number0 number1 2.0",
+          "numbers": [
+            50.0,
+            60.0
+          ],
+          "annotated_answer": "54.545",
+          "computed": 55.0
+        },
+        {
+          "head": "James has number0 balloons . Amy has number1 balloons . How many more balloons does James ",
+          "equation": "- number0 number1",
+          "numbers": [
+            1222.0,
+            513.0
+          ],
+          "annotated_answer": "208.0",
+          "computed": 709.0
+        },
+        {
+          "head": "On Saturday , Sara spent $ number0 each on number1 tickets to a movie theater . She also r",
+          "equation": "+ * number0 number1 number2",
+          "numbers": [
+            10.62,
+            2.0,
+            1.59,
+            13.95
+          ],
+          "annotated_answer": "36.78",
+          "computed": 22.83
+        },
+        {
+          "head": "Mrs. Hilt bought a notebook for $ number0 . She paid with nickels . How many nickels did s",
+          "equation": "/ number0 5.0",
+          "numbers": [
+            1.3
+          ],
+          "annotated_answer": "26.0",
+          "computed": 0.26
+        },
+        {
+          "head": "There was a stack of number0 sheets of used paper . Lexie wants to place it in boxes for r",
+          "equation": "/ number0 7.0",
+          "numbers": [
+            700.0,
+            100.0
+          ],
+          "annotated_answer": "7.0",
+          "computed": 100.0
+        }
+      ],
+      "unevaluable_examples": [],
+      "source_files": [
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_mawps/fold0/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_mawps/fold1/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_mawps/fold2/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_mawps/fold3/dev.csv",
+        "https://raw.githubusercontent.com/arkilpatel/SVAMP/main/data/cv_mawps/fold4/dev.csv"
+      ]
+    }
+  }
+}

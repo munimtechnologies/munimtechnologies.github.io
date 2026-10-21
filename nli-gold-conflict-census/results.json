@@ -1,0 +1,893 @@
+{
+ "census": {
+  "by_split": {
+   "dev": {
+    "distinct_exact_pairs": 9840,
+    "distinct_norm_pairs": 9840,
+    "duplicate_exact_pairs": 2,
+    "exact_conflict_examples": [],
+    "exact_conflict_pairs": 0,
+    "member": "snli_1.0/snli_1.0_dev.jsonl",
+    "norm_conflict_examples": [],
+    "norm_conflict_pairs": 0,
+    "rows_valid": 9842
+   },
+   "test": {
+    "distinct_exact_pairs": 9824,
+    "distinct_norm_pairs": 9824,
+    "duplicate_exact_pairs": 0,
+    "exact_conflict_examples": [],
+    "exact_conflict_pairs": 0,
+    "member": "snli_1.0/snli_1.0_test.jsonl",
+    "norm_conflict_examples": [],
+    "norm_conflict_pairs": 0,
+    "rows_valid": 9824
+   },
+   "train": {
+    "distinct_exact_pairs": 548741,
+    "distinct_norm_pairs": 548560,
+    "duplicate_exact_pairs": 596,
+    "exact_conflict_examples": [
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A black dog walks on the beach near the rocks.",
+      "premise": "A black dog walks on the beach near the rocks."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "She is playing tennis with her blue tennis clothes on, it looks hot out there.",
+      "premise": "She is playing tennis with her blue tennis clothes on, it looks hot out there."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man is walking.",
+      "premise": "a man walking down an alleyway"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A boy with blue face paint sucks his thumb.",
+      "premise": "A boy with blue face paint sucks his thumb."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man is dressed as a clown.",
+      "premise": "A man with black hair is wearing a red and yellow shirt and has a yellow clown nose and face makeup on."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "a group of backpackers preparing for their trek.",
+      "premise": "a group of backpackers preparing for their trek."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Two men outdoors",
+      "premise": "Two men in black shirts are standing outdoors near a few other people in the grass."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Men with reflective safety jackets",
+      "premise": "Men with reflective safety jackets on are working on a street intersection with many orange reflective cones."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A girl and boy on the back of a bicycle waiting for dad to pedal.",
+      "premise": "A little girl and boy on the back of a bicycle waiting for dad to pedal."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man is in a bathroom.",
+      "premise": "A man standing at a urinal with a coffee cup."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "N/A",
+      "premise": "Cannot see picture to describe."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The image links are broken.",
+      "premise": "The image links are broken."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The bird has legs.",
+      "premise": "A bird perches in an empty window frame."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "the room is small",
+      "premise": "An orchestra in a large room."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis": "fo",
+      "premise": "A man with his surfboard stands in the sand."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A woman is in a bowling alley.",
+      "premise": "A woman in a black shirt, jean shorts and white tennis shoes is bowling."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A brown dog bares his teeth",
+      "premise": "A brown dog shows his teeth."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man is riding a motorcycle.",
+      "premise": "A shirtless man with sunglasses and a helmet is riding a motorcycle next to traffic cones."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "The boy is outside.",
+      "premise": "A little boy with a scooter riding down a sidewalk."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man in a cutoff V-neck with a shoulder tattoo plays an accordion.",
+      "premise": "A man in a cutoff V-neck with a shoulder tattoo plays an accordion."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Men are playing volleyball.",
+      "premise": "Men playing volleyball in the sand."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis": "The muscian is famous",
+      "premise": "A young male musician plays a guitar and sings on stage."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A long-haired man looks at different items while two women sit in front of him.",
+      "premise": "A long-haired man looks at different items while two women sit in front of him."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The building has different sized windows.",
+      "premise": "There are tall windows and small windows that make up the majority of the building."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Two children near a frozen lake.",
+      "premise": "Two children playing near a lake."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Blowing bubbles as she walks.",
+      "premise": "Blowing bubbles as she walks."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man is protesting.",
+      "premise": "A man wearing sunglasses holds a sign at a demonstration."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "a person holds a fish",
+      "premise": "The person in blue jeans holds a yellow fish."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man dressed in a long-sleeved shirt, pants, and tall boots is sweeping in a yard.",
+      "premise": "A tall man dressed in a long-sleeved shirt, pants, and tall boots is sweeping in a yard."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A sad man with a big backpack is walking through a grass trail up a hill.",
+      "premise": "A man with a big backpack is walking through a grass trail up a hill."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Two men are outside.",
+      "premise": "Two young, White males are outside near many bushes."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Three girls playing and smiling on the grass, under an umbrella.",
+      "premise": "Three girls playing and smiling on the grass, under an umbrella."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The man is a daredevil.",
+      "premise": "A shirtless man jumping off a large concrete structure into a river with his friends watching from the structure."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis": "That makes no sense. Sorry.",
+      "premise": "A policeman is leaning in picked up front to all of the bus as he looks at an old lady passenger getting off he makes a fish face pout"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The two girls are inside.",
+      "premise": "Two girls are competing and one wearing blue is on the floor while the one wearing white is on top of her."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Problem. see below",
+      "premise": "some is waiting at a bus stop station"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "A man is juggling.",
+      "premise": "A man in black is juggling 3 flamed bottles."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A woman is holding a baby.",
+      "premise": "Woman in red shirt is holding an infant."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "Jumping with purple balls is so much fun!"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The woman is standing up on a bicycle riding through a city.",
+      "premise": "The woman is standing up on a bicycle riding through a city."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A girl is doing gymnastics.",
+      "premise": "A female gymnast is performing."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Three children are playing.",
+      "premise": "Two children are climbing on the wall of a white building whilst one child plays with a green ball."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A bunch of writers are in a room.",
+      "premise": "A group of journalists are gathered in a conference room."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man, a woman, a girl, and a younger girl look puzzled and concerned.",
+      "premise": "A man, a woman, a girl, and a younger girl look puzzled and concerned."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "People, including a man and a woman in pink shirts, are walking along a Chinese street.",
+      "premise": "People, including a man and a woman in pink shirts, are walking along a Chinese street."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "It is raining outside.",
+      "premise": "Two men and a woman stand together on a wet street wearing jackets, hats, and the woman carries an umbrella."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "It rained outside",
+      "premise": "Outside the window you can see an area of dirt that appears muddy from the rain."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The trees are big.",
+      "premise": "Three big trees and the back side of a girl in bikini."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "A man is climbing on tanks.",
+      "premise": "A man with a white shirt and rubber boots is climbing on tanks in order to retrieve items from a specific tank."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Someone holding a baby.",
+      "premise": "one of the young is holding a baby in her arms"
+     }
+    ],
+    "exact_conflict_pairs": 64,
+    "member": "snli_1.0/snli_1.0_train.jsonl",
+    "norm_conflict_examples": [
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a black dog walks on the beach near the rocks",
+      "premise_norm": "a black dog walks on the beach near the rocks"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "she is playing tennis with her blue tennis clothes on, it looks hot out there",
+      "premise_norm": "she is playing tennis with her blue tennis clothes on, it looks hot out there"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man is walking",
+      "premise_norm": "a man walking down an alleyway"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a boy with blue face paint sucks his thumb",
+      "premise_norm": "a boy with blue face paint sucks his thumb"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man is dressed as a clown",
+      "premise_norm": "a man with black hair is wearing a red and yellow shirt and has a yellow clown nose and face makeup on"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a group of backpackers preparing for their trek",
+      "premise_norm": "a group of backpackers preparing for their trek"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a person is standing",
+      "premise_norm": "a person standing on the sidewalk, next to a window, wearing warm clothes"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "two men outdoors",
+      "premise_norm": "two men in black shirts are standing outdoors near a few other people in the grass"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man is in a bar",
+      "premise_norm": "a man stands next to three video game machines and a beer sign"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "men with reflective safety jackets",
+      "premise_norm": "men with reflective safety jackets on are working on a street intersection with many orange reflective cones"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a girl and boy on the back of a bicycle waiting for dad to pedal",
+      "premise_norm": "a little girl and boy on the back of a bicycle waiting for dad to pedal"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man is in a bathroom",
+      "premise_norm": "a man standing at a urinal with a coffee cup"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "cannot see picture to describe"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis_norm": "the man is sleeping",
+      "premise_norm": "a man standing on a boat with a long pole is pushing the boat in the ocean"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the image links are broken",
+      "premise_norm": "the image links are broken"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the bird has legs",
+      "premise_norm": "a bird perches in an empty window frame"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the bench is made of wood",
+      "premise_norm": "the wood used for the seat portion of the bench is comprised of different colored slats"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "the room is small",
+      "premise_norm": "an orchestra in a large room"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis_norm": "fo",
+      "premise_norm": "a man with his surfboard stands in the sand"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man is singing",
+      "premise_norm": "a man wearing a green sleeveless t-shirt, red and white and black underpants and blue tights is singing or talking into a microphone"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a woman is in a bowling alley",
+      "premise_norm": "a woman in a black shirt, jean shorts and white tennis shoes is bowling"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a brown dog bares his teeth",
+      "premise_norm": "a brown dog shows his teeth"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man is riding a motorcycle",
+      "premise_norm": "a shirtless man with sunglasses and a helmet is riding a motorcycle next to traffic cones"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "the boy is outside",
+      "premise_norm": "a little boy with a scooter riding down a sidewalk"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man in a cutoff v-neck with a shoulder tattoo plays an accordion",
+      "premise_norm": "a man in a cutoff v-neck with a shoulder tattoo plays an accordion"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "men are playing volleyball",
+      "premise_norm": "men playing volleyball in the sand"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis_norm": "the muscian is famous",
+      "premise_norm": "a young male musician plays a guitar and sings on stage"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a long-haired man looks at different items while two women sit in front of him",
+      "premise_norm": "a long-haired man looks at different items while two women sit in front of him"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "there are two men",
+      "premise_norm": "a bald man with tattoos on his head a face stands with a man in tan with backs turned to the camera"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the building has different sized windows",
+      "premise_norm": "there are tall windows and small windows that make up the majority of the building"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "two children near a frozen lake",
+      "premise_norm": "two children playing near a lake"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "blowing bubbles as she walks",
+      "premise_norm": "blowing bubbles as she walks"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man is protesting",
+      "premise_norm": "a man wearing sunglasses holds a sign at a demonstration"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "a person holds a fish",
+      "premise_norm": "the person in blue jeans holds a yellow fish"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a man dressed in a long-sleeved shirt, pants, and tall boots is sweeping in a yard",
+      "premise_norm": "a tall man dressed in a long-sleeved shirt, pants, and tall boots is sweeping in a yard"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "there are dogs outside",
+      "premise_norm": "the two dogs with clothing are in a flat uncut field"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the man and child are in the water",
+      "premise_norm": "man and child in yellow kayak"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a sad man with a big backpack is walking through a grass trail up a hill",
+      "premise_norm": "a man with a big backpack is walking through a grass trail up a hill"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "two men are outside",
+      "premise_norm": "two young, white males are outside near many bushes"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the boys are playing a soccer game",
+      "premise_norm": "a little boy in the air above another boy on the ground where a soccer ball lies at his feet with the soccer net behind them"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "three girls playing and smiling on the grass, under an umbrella",
+      "premise_norm": "three girls playing and smiling on the grass, under an umbrella"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the man is a daredevil",
+      "premise_norm": "a shirtless man jumping off a large concrete structure into a river with his friends watching from the structure"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the zebra is hungry",
+      "premise_norm": "a zebra is nibbling on some grass"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis_norm": "that makes no sense. sorry",
+      "premise_norm": "a policeman is leaning in picked up front to all of the bus as he looks at an old lady passenger getting off he makes a fish face pout"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the two girls are inside",
+      "premise_norm": "two girls are competing and one wearing blue is on the floor while the one wearing white is on top of her"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "problem. see below",
+      "premise_norm": "some is waiting at a bus stop station"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "a man is juggling",
+      "premise_norm": "a man in black is juggling 3 flamed bottles"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "a woman is holding a baby",
+      "premise_norm": "woman in red shirt is holding an infant"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "jumping with purple balls is so much fun!"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the woman is standing up on a bicycle riding through a city",
+      "premise_norm": "the woman is standing up on a bicycle riding through a city"
+     }
+    ],
+    "norm_conflict_pairs": 82,
+    "rows_valid": 549367
+   }
+  },
+  "zip": "snli_1.0.zip"
+ },
+ "dataset": "SNLI 1.0 (Bowman et al. 2015), official zip, train/dev/test",
+ "method": {
+  "exact": "exact string pair",
+  "excluded": "rows with gold_label '-' (no annotator majority)",
+  "normalized": "lowercased, whitespace-collapsed, trailing period dropped",
+  "note": "SNLI repeats a premise across labels by design; that is NOT counted. Only a repeated (premise, hypothesis) PAIR with differing labels counts.",
+  "question": "does one (premise, hypothesis) pair carry two gold labels?"
+ },
+ "name": "nli-gold-conflict-census",
+ "synthetic_corpus": {
+  "counts": {
+   "distinct_exact_pairs": 4,
+   "distinct_norm_pairs": 3,
+   "duplicate_exact_pairs": 2,
+   "exact_conflict_pairs": 1,
+   "norm_conflict_pairs": 2,
+   "rows_valid": 6
+  },
+  "target": {
+   "distinct_exact_pairs": 4,
+   "distinct_norm_pairs": 3,
+   "duplicate_exact_pairs": 2,
+   "exact_conflict_pairs": 1,
+   "norm_conflict_pairs": 2,
+   "rows_valid": 6
+  },
+  "target_met": true
+ }
+}

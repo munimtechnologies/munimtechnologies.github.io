@@ -1,0 +1,218 @@
+{
+  "audit": "ifeval-title-hazards",
+  "target": "IFEval TitleChecker (detectable_format:title)",
+  "what": "IFEval accepts a title via re.findall(r'<<[^\\n]+>>', value); that marker is also ordinary left-shift/right-shift operator and shell heredoc/redirect syntax, so a single line containing 'a << b >> c' is credited with a title that was never written (false pass).",
+  "method": {
+    "checker": "verbatim reproduction of TitleChecker.check_following.",
+    "corpus": "5 hand-traced cases; verdict = checker vs intended semantic.",
+    "exposure": "count of prompts requiring a title; checker verdicts on their GPT-4 responses; marker occurrences across all responses with examples for manual inspection (no auto-labelling of real data)."
+  },
+  "synthetic_corpus": {
+    "n_cases": 5,
+    "n_checker_true": 4,
+    "n_flips": 3,
+    "n_false_pass": 3,
+    "n_false_fail": 0,
+    "all_reproduced": true
+  },
+  "exposure": {
+    "available": true,
+    "n_prompts_total": 541,
+    "n_prompts_require_title": 37,
+    "title_prompt_responses": {
+      "checker_true": 37,
+      "checker_false": 0,
+      "response_missing": 0
+    },
+    "n_responses_total": 541,
+    "n_responses_with_marker": 37,
+    "marker_examples": [
+      {
+        "prompt_head": "Write an email to my boss telling him that I am quitting. The email must contain a title w",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Resignation Notice>>"
+        ]
+      },
+      {
+        "prompt_head": "Explain why people are grossed out by worms but not by eating a dead cow. Give exactly two",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Cultural Conditioning and Familiarity>>",
+          "<<Perception of Cleanliness and Edibility>>"
+        ]
+      },
+      {
+        "prompt_head": "Can you elaborate on the following text: \"Increased axle weight increased the damage to th",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Understanding the Impact of Axle Weight on Road Damage>>"
+        ]
+      },
+      {
+        "prompt_head": "What are the pros and cons of kotlin vs java? Your answer must have a title contained in d",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Kotlin vs Java>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a blog post about the latest news in the US with a title in double angular brackets,",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The Unfolding Drama of the US Infrastructure Bill: A Beacon of Hope for the Economy>>"
+        ]
+      },
+      {
+        "prompt_head": "I want to apply for a job as a software engineer at Google. Can you write me two different",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Concise Cover Letter>>",
+          "<<Detailed Cover Letter>>"
+        ]
+      },
+      {
+        "prompt_head": "Name a new fashion company that young people might like, and give it a name with multiple ",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Double Edge>>"
+        ]
+      },
+      {
+        "prompt_head": "First repeat the request below, word for word without change, then give your answer. Do no",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<story of xyz>>",
+          "<<The Redemption of John>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a plot for a story about two people who swap fingerprints. Include a title wrapped i",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<title>>",
+          "<<Fingerprint Fiasco>>"
+        ]
+      },
+      {
+        "prompt_head": "Gandalf was a wizard who fought in the War of the Ring. Is that a good explanation for a 1",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Yes, this is a good explanation for a 10 year old.>>"
+        ]
+      },
+      {
+        "prompt_head": "Elaborate on the following sentence into a formal story: \"My dog is brown, and my cat is b",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The Tale of the Brown Dog and the Black Cat>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a 200 word essay on the 2000 presidential election. The title should be wrapped in d",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The 2000 Presidential Election: A Historic Controversy>>"
+        ]
+      },
+      {
+        "prompt_head": "A sales pitch for moms is needed for a new kind of diaper that is designed to be more comf",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The Diaper Revolution: Say Goodbye to Grumpy Bums!>>"
+        ]
+      },
+      {
+        "prompt_head": "First repeat the request below word for word without change, then give your answer.\nDo not",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Midnight Shadow>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a joke about a startup that sells dog food in a song. Your entire response should be",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<CANINE CROONERS>>"
+        ]
+      },
+      {
+        "prompt_head": "I've got a collection of military insignia that I'd like to get rid of, but I don't know h",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Selling Military Insignia Online>>",
+          "<<Donating to a Museum>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a haiku about foolish behavior in the form of a question, for an audience of young r",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Foolish Choices>>",
+          "<<The Cost of Play>>"
+        ]
+      },
+      {
+        "prompt_head": "write a haiku about ireland in the style of basho. include a title wrapped in double angul",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<green whispers>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a weird ad for a copyright infringement lawyer who represents witches. Use only lowe",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<got a spell on your copyright? we've got the magic to fight back>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a poem about flooding in Donnell, TX. The poem should have a title in double angular",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<When the Skies Wept Over Donnell>>",
+          "<<FLOODING>>",
+          "<<UNITY>>",
+          "<<HOPE>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a brief about limping in ASEAN countries. Your answer must contain a title, wrapped ",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The Prevalence and Management of Limping in ASEAN Countries>>"
+        ]
+      },
+      {
+        "prompt_head": "Write me a letter in the style of Shakespeare about the mandates and instructions of the K",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The Royal Mandates and Instructions of His Majesty>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a copy for an ad selling a sloop. It's a small sailboat with one mast that's easy to",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<Sail Away with Our Stunning Sloop>>",
+          "<<Sloop Specifications>>",
+          "<<Special Offer>>"
+        ]
+      },
+      {
+        "prompt_head": "Please write a riddle about the inverse function with a title wrapped in double angular br",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The Mirror of Mathematics>>"
+        ]
+      },
+      {
+        "prompt_head": "Write a blog post about the echoing biotechnology field in 2023, then criticize the blog p",
+        "is_title_prompt": true,
+        "marker_matches": [
+          "<<The Resounding Echo of Biotechnology in 2023>>"
+        ]
+      }
+    ]
+  }
+}

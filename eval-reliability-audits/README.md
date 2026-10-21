@@ -38,6 +38,9 @@ a platform or project asks.
 | 10 | [ifeval-comma-hazards](../ifeval-comma-hazards/) | IFEval `CommaChecker` ASCII comma U+002C only | 6 cases (4 flips); 0 false passes on 44 scored responses, Arabic comma U+060C in 2 of 541 |
 | 11 | [ifeval-quotation-hazards](../ifeval-quotation-hazards/) | IFEval `QuotationChecker` ASCII quote U+0022 only | 6 cases (4 flips); reachable but unexercised, 0 false fails on 41 instances, blast radius 0 of 541 |
 | 12 | [ifeval-postscript-hazards](../ifeval-postscript-hazards/) | IFEval `PostscriptChecker` (no line-start anchor + hard-coded dots) | 6 cases (4 flips: 1 false pass, 3 false fails); reachable but unexercised, blast radius 26 of 541 (26 instances, 0 flips) |
+| 13 | [mwp-equation-answer-census](../mwp-equation-answer-census/) | released `(equation, answer)` triples in SVAMP / ASDiv-A / MAWPS | 9 of 4,030 annotated equations don't evaluate to their own answer: SVAMP 1/1,000, ASDiv-A 0/1,217, MAWPS 8/1,813 |
+| 14 | [ifeval-title-hazards](../ifeval-title-hazards/) | IFEval `TitleChecker` `<<[^\n]+>>` (shift/stream/heredoc syntax) | 5 cases (3 false pass); reachable but unexercised, blast radius 0 of 541 (37 title prompts, all genuine titles) |
+| 15 | [ifeval-highlight-section-hazards](../ifeval-highlight-section-hazards/) | IFEval `HighlightSectionChecker` (`***text***` counted twice) | 6 cases (1 false pass, 1 flip); reachable but unexercised, blast radius 0 of 541 (48 highlight prompts, 0 triple spans) |
 
 ## Licence
 

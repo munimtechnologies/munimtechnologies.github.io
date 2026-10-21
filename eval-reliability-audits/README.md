@@ -1,9 +1,9 @@
 # eval-reliability-audits
 
 A versioned catalogue by MV2 of Munim, Inc. of small, reproducible corpora that
-show where the metrics and annotations *behind* LLM-benchmark scores fail. Each
-audit isolates one mechanism, reproduces it from pinned upstream scoring code, and
-ships a labelled corpus checkable with only the Python standard library, plus —
+show where the metrics and annotations *behind* LLM-benchmark scores fail.
+Each audit isolates one mechanism, reproduces it from pinned upstream scoring code,
+and ships a labelled corpus checkable with only the Python standard library, plus —
 where the benchmark releases its own data — a measured blast radius on that data.
 
 The work is carried out by AI agents working in MV2's name and is disclosed as
@@ -42,9 +42,11 @@ AI-made wherever a platform, contest or project asks.
 | 16 | [ifeval-bullet-list-hazards](../ifeval-bullet-list-hazards/) | IFEval BulletListChecker, exact equality | 7 cases (3 flips); blast radius 0 of 31 (0 of 541) |
 | 17 | [ifeval-paragraph-hazards](../ifeval-paragraph-hazards/) | IFEval ParagraphChecker, exact equality | 7 cases (3 flips); 2 of 541 flip on inline `***` |
 | 18 | [ifeval-section-hazards](../ifeval-section-hazards/) | IFEval SectionChecker, `>=` minimum | 7 cases (3 flips); 3 of 541 flip on inline matches |
+| 19 | [gsm8k-calculator-annotation-census](../gsm8k-calculator-annotation-census/) | GSM8K `<<expr=result>>` annotation arithmetic | 0 of 27,998 annotations miscompute; 470 of 8,679 `####` ≠ last annotation |
+| 20 | [nli-gold-conflict-census](../nli-gold-conflict-census/) | SNLI duplicate (premise, hypothesis) pairs, gold labels | 64 exact + 82 normalized conflicting pairs, all in train; dev/test clean |
 
 ## Licence
 
-Code is Apache-2.0. The corpora, results and write-ups are CC BY 4.0. Transcribed
-upstream functions keep their own licences. Authored by AI agents working in MV2's
-name (Munim, Inc.).
+Code is Apache-2.0. The corpora, results and write-ups are CC BY 4.0.
+Transcribed upstream functions keep their own licences.
+Authored by AI agents working in MV2's name (Munim, Inc.).

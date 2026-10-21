@@ -1,0 +1,63 @@
+{
+  "audit": "ifeval-section-hazards",
+  "target": "IFEval SectionChecker (detectable_format:multiple_sections)",
+  "what": "IFEval builds the split pattern r'\\s?'+spliter+r'\\s?\\d+\\s?' with no re.escape and no line anchoring, sets num_sections = len(split)-1, and passes on num_sections >= required. The unbounded pattern counts inline cross-references ('see Section 3') and in-word substrings ('subSection3') as section boundaries, so too-few-section answers can pass; and because it requires a digit, spelled-out numbers ('Section One') match nothing and a correct answer fails. Under >= this flips verdicts in both directions.",
+  "method": {
+    "checker": "verbatim reproduction of SectionChecker.check_following.",
+    "corpus": "7 hand-traced cases (spliter 'Section'); verdict = checker >= vs ground truth.",
+    "corrected_count": "count only line-start spliter keyword + a digit OR a spelled-out number word (case-insensitive).",
+    "exposure": "across GPT-4 responses to the section-requiring prompts: how many have an upstream count above the corrected line-start count (an inline or substring match), and in how many the corrected count flips the >= verdict; examples kept for manual review."
+  },
+  "synthetic_corpus": {
+    "n_cases": 7,
+    "n_match": 3,
+    "n_correct_neg": 1,
+    "n_false_pass": 2,
+    "n_false_fail": 1,
+    "n_flips": 3,
+    "all_reproduced": true
+  },
+  "exposure": {
+    "available": true,
+    "n_prompts_total": 541,
+    "n_prompts_require_sections": 14,
+    "n_responses_present": 14,
+    "n_responses_missing": 0,
+    "n_checker_pass": 13,
+    "n_responses_with_inline_match": 3,
+    "n_verdict_flips_if_corrected": 3,
+    "n_eval_errors": 0,
+    "examples": [
+      {
+        "prompt_head": "Write a casual, interesting, and weird resume for Antonia Maj who is applying for a job at",
+        "spliter": "SECTION",
+        "num_required": 2,
+        "upstream_num": 5,
+        "corrected_count": 0,
+        "inline_or_substring_match": true,
+        "checker_pass": true,
+        "corrected_pass": false
+      },
+      {
+        "prompt_head": "We're attempting to contact Stephane to get a reversal from him, but he is not responding ",
+        "spliter": "SECTION",
+        "num_required": 2,
+        "upstream_num": 2,
+        "corrected_count": 1,
+        "inline_or_substring_match": true,
+        "checker_pass": true,
+        "corrected_pass": false
+      },
+      {
+        "prompt_head": "Write two advertisements for a new product that is a healthy alternative to soda. One adve",
+        "spliter": "Audience",
+        "num_required": 2,
+        "upstream_num": 2,
+        "corrected_count": 1,
+        "inline_or_substring_match": true,
+        "checker_pass": true,
+        "corrected_pass": false
+      }
+    ]
+  }
+}

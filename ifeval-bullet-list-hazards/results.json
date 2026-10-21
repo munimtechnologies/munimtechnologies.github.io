@@ -1,0 +1,32 @@
+{
+  "audit": "ifeval-bullet-list-hazards",
+  "target": "IFEval BulletListChecker (detectable_format:number_bullet_lists)",
+  "what": "IFEval counts bullet points with '^\\s*\\*[^\\*].*$' and '^\\s*-.*$' (re.MULTILINE) and passes only on EXACT equality with the required count. The dash pattern needs no space after '-', so a negative number, a '---' rule or a stray dash line is counted as a bullet; the asterisk pattern counts a '*italic*' line as a bullet. Under exact equality this flips verdicts in both directions.",
+  "method": {
+    "checker": "verbatim reproduction of BulletListChecker.check_following.",
+    "corpus": "7 hand-traced cases; verdict = checker exact-equality vs ground truth.",
+    "corrected_count": "count only marker lines followed by a space and content (a rendered CommonMark list item).",
+    "exposure": "across GPT-4 responses to the bullet-requiring prompts: how many contain a counted-but-unrendered marker line, how many have an inflated count, and in how many the inflation flips the exact-equality verdict; examples kept for manual review."
+  },
+  "synthetic_corpus": {
+    "n_cases": 7,
+    "n_match": 3,
+    "n_correct_neg": 1,
+    "n_false_pass": 1,
+    "n_false_fail": 2,
+    "n_flips": 3,
+    "all_reproduced": true
+  },
+  "exposure": {
+    "available": true,
+    "n_prompts_total": 541,
+    "n_prompts_require_bullets": 31,
+    "n_responses_present": 31,
+    "n_responses_missing": 0,
+    "n_checker_pass": 27,
+    "n_responses_with_suspicious_line": 0,
+    "n_responses_count_inflated": 0,
+    "n_verdict_flips_if_corrected": 0,
+    "examples": []
+  }
+}

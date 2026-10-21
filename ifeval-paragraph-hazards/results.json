@@ -1,0 +1,53 @@
+{
+  "audit": "ifeval-paragraph-hazards",
+  "target": "IFEval ParagraphChecker (length_constraints:number_paragraphs)",
+  "what": "IFEval splits a response on the divider regex r'\\s?\\*\\*\\*\\s?' (NOT line-anchored), trims boundary-empty segments, HARD-FAILS on an interior-empty segment, and passes only on EXACT equality with the required paragraph count. An inline '***emphasis***' span is matched twice and over-counts; a single prose line using '***' as separators is read as multiple paragraphs; a doubled divider triggers an interior-empty hard fail. Under exact equality this flips verdicts in both directions.",
+  "method": {
+    "checker": "verbatim reproduction of ParagraphChecker.check_following.",
+    "corpus": "7 hand-traced cases; verdict = checker exact-equality vs ground truth.",
+    "corrected_count": "split only on a STANDALONE '***' divider line and keep non-empty blocks.",
+    "exposure": "across GPT-4 responses to the paragraph-requiring prompts: how many contain a non-standalone (inline) divider, how many hard-fail on an interior-empty segment, and in how many the corrected count flips the exact-equality verdict; examples kept for manual review."
+  },
+  "synthetic_corpus": {
+    "n_cases": 7,
+    "n_match": 3,
+    "n_correct_neg": 1,
+    "n_false_pass": 1,
+    "n_false_fail": 2,
+    "n_flips": 3,
+    "all_reproduced": true
+  },
+  "exposure": {
+    "available": true,
+    "n_prompts_total": 541,
+    "n_prompts_require_paragraphs": 27,
+    "n_responses_present": 27,
+    "n_responses_missing": 0,
+    "n_checker_pass": 23,
+    "n_responses_with_nonstandalone_divider": 2,
+    "n_responses_hard_fail": 0,
+    "n_verdict_flips_if_corrected": 2,
+    "examples": [
+      {
+        "prompt_head": "Write a funny poem for kids about a product that you would like to sell. The poem should h",
+        "num_required": 6,
+        "upstream_num": 6,
+        "hard_fail": false,
+        "corrected_count": 1,
+        "nonstandalone_divider": true,
+        "checker_pass": true,
+        "corrected_pass": false
+      },
+      {
+        "prompt_head": "What does the word \"jock\" mean to you? Please generate an answer with two parts. The two p",
+        "num_required": 2,
+        "upstream_num": 2,
+        "hard_fail": false,
+        "corrected_count": 1,
+        "nonstandalone_divider": true,
+        "checker_pass": true,
+        "corrected_pass": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,904 @@
+{
+ "census": {
+  "by_split": {
+   "dev_matched": {
+    "distinct_exact_pairs": 9815,
+    "distinct_norm_pairs": 9814,
+    "duplicate_exact_pairs": 0,
+    "exact_conflict_examples": [],
+    "exact_conflict_pairs": 0,
+    "member": "multinli_1.0/multinli_1.0_dev_matched.jsonl",
+    "norm_conflict_examples": [],
+    "norm_conflict_pairs": 0,
+    "rows_valid": 9815
+   },
+   "dev_mismatched": {
+    "distinct_exact_pairs": 9830,
+    "distinct_norm_pairs": 9830,
+    "duplicate_exact_pairs": 2,
+    "exact_conflict_examples": [],
+    "exact_conflict_pairs": 0,
+    "member": "multinli_1.0/multinli_1.0_dev_mismatched.jsonl",
+    "norm_conflict_examples": [],
+    "norm_conflict_pairs": 0,
+    "rows_valid": 9832
+   },
+   "train": {
+    "distinct_exact_pairs": 392577,
+    "distinct_norm_pairs": 392565,
+    "duplicate_exact_pairs": 105,
+    "exact_conflict_examples": [
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "Native  'Me win, me passum heap big law ..."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "Saint-Germain-des-Pr??s"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Sorry, Tuppence.",
+      "premise": "Sorry, Tuppence."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "The questions are complex ",
+      "premise": "Table 2.2: Complexity of Questions Example Characteristic"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "weatherwise or otherwise weatherwise"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Most of the sulfur dioxide that is allowed are controlled by the Acid Rain Program.",
+      "premise": "Ninety-five percent of the total amount of sulfur dioxide allowances allocated each year under Section 423 will be allocated based on the amount of sulfur dioxide allowances allocated under the Acid R"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "AICPA American Institute of Certified Public Accountants APB Accounting Principles Board ARB Accounting Research Bulletin COSO Committee of Sponsoring Organizations of the Treadway Commission FAS Fina"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Amarillo Dumas Panhandle",
+      "premise": "Amarillo Dumas Panhandle"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "It would be informative to split the IC mail exchange into two groups.",
+      "premise": "Second, it would be informative to divide the IC mail exchange into LC and AO components."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "Net debt represents the federal government's total financial liabilities.",
+      "premise": "Net debt represents the federal government's total financial liabilities, including debt held by the public, less its total financial assets."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "Tony  Shoes (so Clinton will have Shoes and Socks)."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The budget is reported in a Statement of Program Measures.",
+      "premise": "The research and development outputs and outcomes should be the same as those measured for the Government Performance and Results Act (GPRA) and the budget and will be reported in a Statement of Progr"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "They had olive trees that had statues hidden under them.",
+      "premise": "Under the gnarled olive trees archaeologists have uncovered a treasure trove of statues, jewellery, pitchers, tools, and coins, which are now displayed in the town's two archaeological museums."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "It is close.",
+      "premise": "okay so that's real close"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "N/a",
+      "premise": "the ATM machines"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Department of Labor's Board of Alien Labor Certification Appeals.",
+      "premise": "Department of Labor's Board of Alien Labor Certification Appeals."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "There are major statues that are now in their first years of implementation.",
+      "premise": "Major statutes now in their first years of implementation hold substantial promise for creating a more accountable and effective federal government."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Daniel was surprised at how insistent I was.",
+      "premise": "Daniel looked around, surprised by my urgency."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The campaign lawyer said to me that he could't get what would prevent it from the Internet.",
+      "premise": "But a campaign lawyer I spoke to for this story said he couldn't see what would prevent it on the Internet, so long as Yahoo charged at least the going rate for the ads."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "En voila une affaire! "
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "Wes Widmaier "
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "yeah yeah not not uh no not the uh the area you know i am the TI plant as far as you know what they make and everything but the weather no"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Originally where are you from.",
+      "premise": "are where you from originally"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "7. Soderstrom CA, Smith GS, Dischinger PC, McDuff DR, Hebel JR, Gorelick DA, et al."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "What the",
+      "premise": "What the  "
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Minor Restricted Activity Days $48 per case",
+      "premise": "Minor Restricted Activity Days $48 per case3 Median WTP estimate to avoid one MRAD from Tolley, et al."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "Vend??me Op??ra Madeleine"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis": "Na",
+      "premise": "I?\u00abkembecis stay open until the early hours of the morning to serve bowls of tripe soup to peckish late-night revellers on their way home."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The leather jackets are expensive.",
+      "premise": "because they have got some of these like the leather jackets are are quite expensive"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "The people of Kerrville and Kerr County have a great opportunity. ",
+      "premise": "This is a great opportunity for people in Kerrville and Kerr County to sit down with the different agencies and get their recovery questions answered, said Mindy Wendele, City of Kerrville spokeswoman"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "Vienna Noise Choir"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Figure 15 shows spending as a share of GDP under the Eliminate Non Social Security Surpluses simulation.",
+      "premise": "Figure 15 shows spending as a share of GDP under the Eliminate NonSocial Security Surpluses simulation."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "mean is we moved closer, in,",
+      "premise": "mean is we moved closer, in,"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "In a couple of generations somebody will read the old adage.",
+      "premise": "no i hope we get to the point where maybe a couple of generations from now when somebody reads the old adage"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Trump is progressive.",
+      "premise": "And it's not stretching to assign Donald Trump to the Northern progressive camp."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "It's a good deal.",
+      "premise": "yeah ooh what a deal yeah"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "There is nothing but farms in rural areas.",
+      "premise": "yeah that's uh that's the same with me well um i grew up in a rural area there's nothing but farms"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "n/a",
+      "premise": "for postage is whether or not is owns a personal computer."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "Transplanting animal tissue into human embryos is far more imminent than human cloning.",
+      "premise": "Scientists point out that transplanting animal tissue into human embryos is far more imminent than human cloning."
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "You are still suffering.",
+      "premise": "so you're still suffering then"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The Honorable Thad Cochran is Ranking Minority Member Subcommittee on International Security.",
+      "premise": "The Honorable Daniel K. Akaka Chairman The Honorable Thad Cochran Ranking Minority Member Subcommittee on International Security, Proliferation, and"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The greatest pitfall in the exploratory study is that the findings can be convincing.",
+      "premise": "The greatest pitfall in the exploratory study is  that is, the findings may seem so convincing that it can be difficult to resist pressures to report on these as if they had the strength of the larger"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "The programs are diverse.",
+      "premise": "the diversity of the programs."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "We use accounting principles in government entities.",
+      "premise": "We also help to promulgate generally accepted accounting principles for federal government entities."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "na",
+      "premise": "--Yours pedantically,"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis": "If you have the right mix of soil and it stays moist your vegetables will grow wonderfully.",
+      "premise": "you just need to get the you need to get the right mix of soil so that it doesn't dry out"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "asdasd",
+      "premise": "(Click for Chatterbox's take on Snitchensgate."
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis": "You won't have to mess with that anymore but you really should.",
+      "premise": "so you don't have to fool with any of that anymore"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis": "It is sad.",
+      "premise": "yes that's that's sad"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis": "The federal CIO tends to be constrained by organizational attributes",
+      "premise": "In the other factor, the federal CIO tends to be constrained by organizational attributes typical of the federal sector."
+     }
+    ],
+    "exact_conflict_pairs": 83,
+    "member": "multinli_1.0/multinli_1.0_train.jsonl",
+    "norm_conflict_examples": [
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "native 'me win, me passum heap big law"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "saint-germain-des-pr??s"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "sorry, tuppence",
+      "premise_norm": "sorry, tuppence"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "the questions are complex",
+      "premise_norm": "table 2.2: complexity of questions example characteristic"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "weatherwise or otherwise weatherwise"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "most of the sulfur dioxide that is allowed are controlled by the acid rain program",
+      "premise_norm": "ninety-five percent of the total amount of sulfur dioxide allowances allocated each year under section 423 will be allocated based on the amount of sulfur dioxide allowances allocated under the acid r"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "most visitors prefer formentera",
+      "premise_norm": "but most visitors prefer to linger in formentera"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "aicpa american institute of certified public accountants apb accounting principles board arb accounting research bulletin coso committee of sponsoring organizations of the treadway commission fas fina"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "amarillo dumas panhandle",
+      "premise_norm": "amarillo dumas panhandle"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "it would be informative to split the ic mail exchange into two groups",
+      "premise_norm": "second, it would be informative to divide the ic mail exchange into lc and ao components"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "net debt represents the federal government's total financial liabilities",
+      "premise_norm": "net debt represents the federal government's total financial liabilities, including debt held by the public, less its total financial assets"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "tony shoes (so clinton will have shoes and socks)"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the budget is reported in a statement of program measures",
+      "premise_norm": "the research and development outputs and outcomes should be the same as those measured for the government performance and results act (gpra) and the budget and will be reported in a statement of progr"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "they had olive trees that had statues hidden under them",
+      "premise_norm": "under the gnarled olive trees archaeologists have uncovered a treasure trove of statues, jewellery, pitchers, tools, and coins, which are now displayed in the town's two archaeological museums"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "it is close",
+      "premise_norm": "okay so that's real close"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "the atm machines"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "department of labor's board of alien labor certification appeals",
+      "premise_norm": "department of labor's board of alien labor certification appeals"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "there are major statues that are now in their first years of implementation",
+      "premise_norm": "major statutes now in their first years of implementation hold substantial promise for creating a more accountable and effective federal government"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "daniel was surprised at how insistent i was",
+      "premise_norm": "daniel looked around, surprised by my urgency"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the campaign lawyer said to me that he could't get what would prevent it from the internet",
+      "premise_norm": "but a campaign lawyer i spoke to for this story said he couldn't see what would prevent it on the internet, so long as yahoo charged at least the going rate for the ads"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "en voila une affaire!"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "wes widmaier"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "yeah yeah not not uh no not the uh the area you know i am the ti plant as far as you know what they make and everything but the weather no"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "originally where are you from",
+      "premise_norm": "are where you from originally"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "7. soderstrom ca, smith gs, dischinger pc, mcduff dr, hebel jr, gorelick da, et al"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "what the",
+      "premise_norm": "what the"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "minor restricted activity days $48 per case",
+      "premise_norm": "minor restricted activity days $48 per case3 median wtp estimate to avoid one mrad from tolley, et al"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "vend??me op??ra madeleine"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis_norm": "na",
+      "premise_norm": "i?\u00abkembecis stay open until the early hours of the morning to serve bowls of tripe soup to peckish late-night revellers on their way home"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the leather jackets are expensive",
+      "premise_norm": "because they have got some of these like the leather jackets are are quite expensive"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "the people of kerrville and kerr county have a great opportunity",
+      "premise_norm": "this is a great opportunity for people in kerrville and kerr county to sit down with the different agencies and get their recovery questions answered, said mindy wendele, city of kerrville spokeswoman"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "vienna noise choir"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "figure 15 shows spending as a share of gdp under the eliminate non social security surpluses simulation",
+      "premise_norm": "figure 15 shows spending as a share of gdp under the eliminate nonsocial security surpluses simulation"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "mean is we moved closer, in,",
+      "premise_norm": "mean is we moved closer, in,"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the eastern group of structures has three jain temples",
+      "premise_norm": "the eastern group of structures includes three jain temples"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "in a couple of generations somebody will read the old adage",
+      "premise_norm": "no i hope we get to the point where maybe a couple of generations from now when somebody reads the old adage"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "trump is progressive",
+      "premise_norm": "and it's not stretching to assign donald trump to the northern progressive camp"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "it's a good deal",
+      "premise_norm": "yeah ooh what a deal yeah"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "there is nothing but farms in rural areas",
+      "premise_norm": "yeah that's uh that's the same with me well um i grew up in a rural area there's nothing but farms"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "n/a",
+      "premise_norm": "for postage is whether or not is owns a personal computer"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "transplanting animal tissue into human embryos is far more imminent than human cloning",
+      "premise_norm": "scientists point out that transplanting animal tissue into human embryos is far more imminent than human cloning"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "you are still suffering",
+      "premise_norm": "so you're still suffering then"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the honorable thad cochran is ranking minority member subcommittee on international security",
+      "premise_norm": "the honorable daniel k. akaka chairman the honorable thad cochran ranking minority member subcommittee on international security, proliferation, and"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the greatest pitfall in the exploratory study is that the findings can be convincing",
+      "premise_norm": "the greatest pitfall in the exploratory study is that is, the findings may seem so convincing that it can be difficult to resist pressures to report on these as if they had the strength of the larger "
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "the programs are diverse",
+      "premise_norm": "the diversity of the programs"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment"
+      ],
+      "hypothesis_norm": "we use accounting principles in government entities",
+      "premise_norm": "we also help to promulgate generally accepted accounting principles for federal government entities"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "na",
+      "premise_norm": "--yours pedantically,"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis_norm": "if you have the right mix of soil and it stays moist your vegetables will grow wonderfully",
+      "premise_norm": "you just need to get the you need to get the right mix of soil so that it doesn't dry out"
+     },
+     {
+      "gold_labels": [
+       "entailment",
+       "neutral"
+      ],
+      "hypothesis_norm": "asdasd",
+      "premise_norm": "(click for chatterbox's take on snitchensgate"
+     },
+     {
+      "gold_labels": [
+       "contradiction",
+       "neutral"
+      ],
+      "hypothesis_norm": "you won't have to mess with that anymore but you really should",
+      "premise_norm": "so you don't have to fool with any of that anymore"
+     }
+    ],
+    "norm_conflict_pairs": 86,
+    "rows_valid": 392702
+   }
+  },
+  "zip": "multinli_1.0.zip"
+ },
+ "dataset": "MultiNLI 1.0 (Williams et al. 2018), official zip, train/dev_matched/dev_mismatched",
+ "method": {
+  "exact": "exact string pair",
+  "excluded": "rows with gold_label '-' (no annotator majority)",
+  "normalized": "lowercased, whitespace-collapsed, trailing period dropped",
+  "note": "MultiNLI reuses a premise across labels by design; that is NOT counted. Only a repeated (premise, hypothesis) PAIR with differing labels counts. Test labels are withheld upstream, so there is no test split.",
+  "question": "does one (premise, hypothesis) pair carry two gold labels?"
+ },
+ "name": "multinli-gold-conflict-census",
+ "synthetic_corpus": {
+  "counts": {
+   "distinct_exact_pairs": 4,
+   "distinct_norm_pairs": 3,
+   "duplicate_exact_pairs": 2,
+   "exact_conflict_pairs": 1,
+   "norm_conflict_pairs": 2,
+   "rows_valid": 6
+  },
+  "target": {
+   "distinct_exact_pairs": 4,
+   "distinct_norm_pairs": 3,
+   "duplicate_exact_pairs": 2,
+   "exact_conflict_pairs": 1,
+   "norm_conflict_pairs": 2,
+   "rows_valid": 6
+  },
+  "target_met": true
+ }
+}

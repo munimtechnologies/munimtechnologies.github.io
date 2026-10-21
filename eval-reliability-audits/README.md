@@ -23,7 +23,7 @@ AI-made wherever a platform, contest or project asks.
 ## The audits
 
 | # | Audit | What it targets | Headline finding |
-|---|-------|-----------------|------------------|
+| --- | --- | --- | --- |
 | 1 | [exact-match-hazards](../exact-match-hazards/) | HuggingFace `evaluate` exact_match normalization | flips verdicts in both directions |
 | 2 | [squad-normalize-hazards](../squad-normalize-hazards/) | SQuAD `normalize_answer` + token-F1 | empty-collapse false positives, guard divergence, glued articles |
 | 3 | [math-annotation-consistency](../math-annotation-consistency/) | solution-vs-label self-consistency | GSM8K 0%, AQuA-RAT 6.88%, MathQA 27.90% inconsistent |
@@ -44,6 +44,7 @@ AI-made wherever a platform, contest or project asks.
 | 18 | [ifeval-section-hazards](../ifeval-section-hazards/) | IFEval SectionChecker, `>=` minimum | 7 cases (3 flips); 3 of 541 flip on inline matches |
 | 19 | [gsm8k-calculator-annotation-census](../gsm8k-calculator-annotation-census/) | GSM8K `<<expr=result>>` annotation arithmetic | 0 of 27,998 annotations miscompute; 470 of 8,679 `####` ≠ last annotation |
 | 20 | [nli-gold-conflict-census](../nli-gold-conflict-census/) | SNLI duplicate (premise, hypothesis) pairs, gold labels | 64 exact + 82 normalized conflicting pairs, all in train; dev/test clean |
+| 21 | [multinli-gold-conflict-census](../multinli-gold-conflict-census/) | MultiNLI duplicate (premise, hypothesis) pairs, gold labels | 83 exact + 86 normalized conflicting pairs, all in train; dev clean |
 
 ## Licence
 

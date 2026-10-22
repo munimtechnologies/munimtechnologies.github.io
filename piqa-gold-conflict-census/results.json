@@ -1,0 +1,108 @@
+{
+ "dataset": "PIQA (Bisk et al., AAAI 2020), Academic Free License v3.0",
+ "source_files": {
+  "train": {
+   "jsonl": "https://raw.githubusercontent.com/ybisk/ybisk.github.io/master/piqa/data/train.jsonl",
+   "labels": "https://raw.githubusercontent.com/ybisk/ybisk.github.io/master/piqa/data/train-labels.lst"
+  },
+  "valid": {
+   "jsonl": "https://raw.githubusercontent.com/ybisk/ybisk.github.io/master/piqa/data/valid.jsonl",
+   "labels": "https://raw.githubusercontent.com/ybisk/ybisk.github.io/master/piqa/data/valid-labels.lst"
+  }
+ },
+ "expected_rows": {
+  "train": 16113,
+  "valid": 1838
+ },
+ "observed_rows": {
+  "train": 16113,
+  "valid": 1838
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "rows": 7,
+   "malformed": 0,
+   "unique_goals": 4,
+   "unique_triples": 6,
+   "triple_duplicate_groups": 1,
+   "triple_conflict_groups": 1,
+   "triple_conflict_rows": 2,
+   "norm_triple_conflict_groups": 2,
+   "norm_additional": 1,
+   "goal_duplicate_groups": 3,
+   "exact_triple_conflict_examples": [
+    {
+     "goal": "boil an egg",
+     "sol1_prefix": "Lower the egg into boiling water for ten minutes.",
+     "sol2_prefix": "Lower the egg into cold oil for ten minutes.",
+     "labels": [
+      0,
+      1
+     ],
+     "n_rows": 2
+    }
+   ]
+  },
+  "target": {
+   "rows": 7,
+   "unique_goals": 4,
+   "unique_triples": 6,
+   "triple_duplicate_groups": 1,
+   "triple_conflict_groups": 1,
+   "triple_conflict_rows": 2,
+   "norm_triple_conflict_groups": 2,
+   "norm_additional": 1,
+   "goal_duplicate_groups": 3
+  }
+ },
+ "per_split": {
+  "train": {
+   "rows": 16113,
+   "malformed": 0,
+   "unique_goals": 14874,
+   "unique_triples": 16107,
+   "triple_duplicate_groups": 6,
+   "triple_conflict_groups": 0,
+   "triple_conflict_rows": 0,
+   "norm_triple_conflict_groups": 0,
+   "norm_additional": 0,
+   "goal_duplicate_groups": 485,
+   "exact_triple_conflict_examples": []
+  },
+  "valid": {
+   "rows": 1838,
+   "malformed": 0,
+   "unique_goals": 1803,
+   "unique_triples": 1838,
+   "triple_duplicate_groups": 0,
+   "triple_conflict_groups": 0,
+   "triple_conflict_rows": 0,
+   "norm_triple_conflict_groups": 0,
+   "norm_additional": 0,
+   "goal_duplicate_groups": 27,
+   "exact_triple_conflict_examples": []
+  }
+ },
+ "combined": {
+  "rows": 17951,
+  "malformed": 0,
+  "unique_goals": 16531,
+  "unique_triples": 17944,
+  "triple_duplicate_groups": 6,
+  "triple_conflict_groups": 0,
+  "triple_conflict_rows": 0,
+  "norm_triple_conflict_groups": 0,
+  "norm_additional": 0,
+  "goal_duplicate_groups": 522,
+  "exact_triple_conflict_examples": []
+ },
+ "predictions": {
+  "P1_combined_triple_conflicts_le_20": true,
+  "P2_valid_triple_conflicts_eq_0": true,
+  "P3_combined_goal_duplicate_groups_ge_1": true,
+  "P4_combined_triple_duplicate_groups_ge_1": true
+ },
+ "note": "Only (goal, sol1, sol2) triple conflicts are defects; goal reuse across different solution pairs is legitimate because PIQA reuses goals by design. The unlabelled test split (tests.jsonl) is excluded."
+}

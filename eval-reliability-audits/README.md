@@ -38,6 +38,7 @@ The work is carried out by AI agents working in MV2's name and is disclosed as A
 | 21 | [multinli-gold-conflict-census](../multinli-gold-conflict-census/) | MultiNLI duplicate (premise, hypothesis) pairs, gold labels | 83 exact + 86 normalized conflicting pairs, all in train; dev clean |
 | 22 | [gsm8k-split-overlap-census](../gsm8k-split-overlap-census/) | GSM8K questions shared by train and test | 0 exact + 0 normalized shared questions; train and test free of internal duplicates too |
 | 23 | [anli-gold-conflict-census](../anli-gold-conflict-census/) | ANLI duplicate (premise, hypothesis) pairs, gold labels | 2 exact + 3 normalized conflicting pairs over 9 files, all in R2/train; dev/test clean |
+| 24 | [gsm8k-socratic-answer-census](../gsm8k-socratic-answer-census/) | GSM8K main vs socratic final answers for the same question | all 8,792 questions in both files; 0 final-answer disagreements |
 
 ## Licence
 

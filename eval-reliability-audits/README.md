@@ -50,6 +50,7 @@ project asks.
 | 26 | [boolq-gold-conflict-census](../boolq-gold-conflict-census/) | BoolQ duplicate (question, passage) pairs, gold yes/no answers | 0 duplicate pairs and 0 gold conflicts over 12,697 labelled rows; every question unique |
 | 27 | [piqa-gold-conflict-census](../piqa-gold-conflict-census/) | PIQA duplicate (goal, sol1, sol2) triples, gold labels | 0 gold conflicts over 17,951 labelled rows; 6 verbatim-duplicate triples in train, all label-consistent |
 | 28 | [commonsenseqa-gold-conflict-census](../commonsenseqa-gold-conflict-census/) | CommonsenseQA duplicate (stem, option-set) questions, gold answer texts | 0 conflicts, 0 duplicate questions and 0 reused stems over 10,962 labelled rows; every question fully distinct |
+| 29 | [snli-multinli-overlap-census](../snli-multinli-overlap-census/) | identical (premise, hypothesis) pairs shared by SNLI and MultiNLI, gold labels | 0 exact + 0 normalized shared pairs over 568,404 SNLI and 412,222 MultiNLI pairs; the two corpora are fully disjoint, so merging them adds no cross-corpus duplicate or gold conflict |
 
 ## Licence
 

@@ -1,16 +1,15 @@
 # eval-reliability-audits
 
 A versioned catalogue by MV2 of Munim, Inc. of small, reproducible corpora that
-show where the metrics and annotations *behind* LLM-benchmark scores fail.
-Each audit isolates one mechanism, reproduces it from pinned upstream scoring code,
-and ships a labelled corpus checkable with only the Python standard library, plus —
+show where the metrics and annotations *behind* LLM-benchmark scores fail. Each
+audit isolates one mechanism, reproduces it from pinned upstream scoring code, and
+ships a labelled corpus checkable with only the Python standard library, plus —
 where the benchmark releases its own data — a measured blast radius on that data.
 
 The work is carried out by AI agents working in MV2's name and is disclosed as
 AI-made wherever a platform, contest or project asks.
 
 ## Method
-
 - **Prior art first.** Search papers, issues and code before claiming a finding
   is new; state plainly why it is.
 - **Pre-register before measuring.** Hand-trace a synthetic corpus and freeze its
@@ -21,7 +20,6 @@ AI-made wherever a platform, contest or project asks.
   results are reported as such, never dressed up.
 
 ## The audits
-
 | # | Audit | What it targets | Headline finding |
 | --- | --- | --- | --- |
 | 1 | [exact-match-hazards](../exact-match-hazards/) | HuggingFace `evaluate` exact_match normalization | flips verdicts in both directions |
@@ -45,9 +43,10 @@ AI-made wherever a platform, contest or project asks.
 | 19 | [gsm8k-calculator-annotation-census](../gsm8k-calculator-annotation-census/) | GSM8K `<<expr=result>>` annotation arithmetic | 0 of 27,998 annotations miscompute; 470 of 8,679 `####` ≠ last annotation |
 | 20 | [nli-gold-conflict-census](../nli-gold-conflict-census/) | SNLI duplicate (premise, hypothesis) pairs, gold labels | 64 exact + 82 normalized conflicting pairs, all in train; dev/test clean |
 | 21 | [multinli-gold-conflict-census](../multinli-gold-conflict-census/) | MultiNLI duplicate (premise, hypothesis) pairs, gold labels | 83 exact + 86 normalized conflicting pairs, all in train; dev clean |
+| 22 | [gsm8k-split-overlap-census](../gsm8k-split-overlap-census/) | GSM8K questions shared by train and test | 0 exact + 0 normalized shared questions; train and test free of internal duplicates too |
 
 ## Licence
-
-Code is Apache-2.0. The corpora, results and write-ups are CC BY 4.0.
+Code is Apache-2.0.
+The corpora, results and write-ups are CC BY 4.0.
 Transcribed upstream functions keep their own licences.
 Authored by AI agents working in MV2's name (Munim, Inc.).

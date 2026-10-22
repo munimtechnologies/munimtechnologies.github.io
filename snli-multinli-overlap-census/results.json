@@ -1,0 +1,109 @@
+{
+ "datasets": {
+  "snli": "SNLI 1.0 (Bowman et al., EMNLP 2015), CC BY-SA 4.0",
+  "multinli": "MultiNLI 1.0 (Williams et al., NAACL 2018), multiple (see corpus)"
+ },
+ "expected_labelled_rows": {
+  "snli": {
+   "train": 549367,
+   "dev": 9842,
+   "test": 9824
+  },
+  "multinli": {
+   "train": 392702,
+   "dev_matched": 9815,
+   "dev_mismatched": 9832
+  }
+ },
+ "observed_raw_rows": {
+  "snli": {
+   "dev": 10000,
+   "test": 10000,
+   "train": 550152
+  },
+  "multinli": {
+   "dev_mismatched": 10000,
+   "train": 392702,
+   "dev_matched": 10000
+  }
+ },
+ "observed_labelled_rows": {
+  "snli": {
+   "dev": 9842,
+   "test": 9824,
+   "train": 549367
+  },
+  "multinli": {
+   "dev_mismatched": 9832,
+   "train": 392702,
+   "dev_matched": 9815
+  }
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "snli_rows_kept": 4,
+   "snli_malformed": 1,
+   "snli_unique_pairs": 4,
+   "snli_unique_norm_pairs": 4,
+   "multinli_rows_kept": 4,
+   "multinli_malformed": 0,
+   "multinli_unique_pairs": 4,
+   "multinli_unique_norm_pairs": 4,
+   "exact_overlap_pairs": 2,
+   "exact_overlap_same_label": 1,
+   "exact_overlap_conflicting_label": 1,
+   "norm_overlap_pairs": 3,
+   "norm_overlap_same_label": 2,
+   "norm_overlap_conflicting_label": 1,
+   "norm_additional_over_exact": 1
+  },
+  "target": {
+   "snli_rows_kept": 4,
+   "snli_malformed": 1,
+   "snli_unique_pairs": 4,
+   "snli_unique_norm_pairs": 4,
+   "multinli_rows_kept": 4,
+   "multinli_malformed": 0,
+   "multinli_unique_pairs": 4,
+   "multinli_unique_norm_pairs": 4,
+   "exact_overlap_pairs": 2,
+   "exact_overlap_same_label": 1,
+   "exact_overlap_conflicting_label": 1,
+   "norm_overlap_pairs": 3,
+   "norm_overlap_same_label": 2,
+   "norm_overlap_conflicting_label": 1,
+   "norm_additional_over_exact": 1
+  }
+ },
+ "result": {
+  "snli": {
+   "rows_kept": 569033,
+   "malformed": 1119,
+   "unique_pairs": 568404,
+   "unique_norm_pairs": 568377
+  },
+  "multinli": {
+   "rows_kept": 412349,
+   "malformed": 353,
+   "unique_pairs": 412222,
+   "unique_norm_pairs": 412213
+  },
+  "exact_overlap_pairs": 0,
+  "exact_overlap_same_label": 0,
+  "exact_overlap_conflicting_label": 0,
+  "norm_overlap_pairs": 0,
+  "norm_overlap_same_label": 0,
+  "norm_overlap_conflicting_label": 0,
+  "norm_additional_over_exact": 0,
+  "examples": []
+ },
+ "predictions": {
+  "P1_exact_overlap_pairs_le_50": true,
+  "P2_exact_overlap_conflicting_eq_0": true,
+  "P3_norm_additional_le_100": true,
+  "P4_exact_overlap_pairs_ge_1": false
+ },
+ "note": "The pair key is (premise=sentence1, hypothesis=sentence2); the gold is the 3-way NLI label. Rows with gold_label '-' are excluded. A shared pair is 'conflicting' when the union of the two corpora's labels for it has more than one distinct label. SNLI train/dev/test and MultiNLI train/dev_matched/dev_mismatched are included; MultiNLI has no public labelled test split."
+}

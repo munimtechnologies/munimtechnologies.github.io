@@ -1,0 +1,75 @@
+{
+ "dataset": "GSM8K (openai/grade-school-math, Cobbe et al. 2021)",
+ "files": {
+  "train": "train.jsonl",
+  "test": "test.jsonl",
+  "train_socratic": "train_socratic.jsonl",
+  "test_socratic": "test_socratic.jsonl"
+ },
+ "final_answer_rule": "text after the last '####', stripped, commas and a leading '$' removed",
+ "match_rule": "rows paired by EXACT question text; agreement is identical normalized final answer",
+ "per_split": {
+  "train": {
+   "main_rows_valid": 7473,
+   "socratic_rows_valid": 7473,
+   "main_distinct_questions": 7473,
+   "socratic_distinct_questions": 7473,
+   "questions_in_both": 7473,
+   "questions_only_in_main": 0,
+   "questions_only_in_socratic": 0,
+   "final_answer_agree": 7473,
+   "final_answer_disagree": 0,
+   "disagree_examples": []
+  },
+  "test": {
+   "main_rows_valid": 1319,
+   "socratic_rows_valid": 1319,
+   "main_distinct_questions": 1319,
+   "socratic_distinct_questions": 1319,
+   "questions_in_both": 1319,
+   "questions_only_in_main": 0,
+   "questions_only_in_socratic": 0,
+   "final_answer_agree": 1319,
+   "final_answer_disagree": 0,
+   "disagree_examples": []
+  }
+ },
+ "combined_train_and_test": {
+  "main_rows_valid": 8792,
+  "socratic_rows_valid": 8792,
+  "main_distinct_questions": 8792,
+  "socratic_distinct_questions": 8792,
+  "questions_in_both": 8792,
+  "questions_only_in_main": 0,
+  "questions_only_in_socratic": 0,
+  "final_answer_agree": 8792,
+  "final_answer_disagree": 0,
+  "disagree_examples": []
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "public": {
+   "main_rows_valid": 4,
+   "socratic_rows_valid": 4,
+   "main_distinct_questions": 4,
+   "socratic_distinct_questions": 4,
+   "questions_in_both": 3,
+   "questions_only_in_main": 1,
+   "questions_only_in_socratic": 1,
+   "final_answer_agree": 2,
+   "final_answer_disagree": 1
+  },
+  "target": {
+   "main_rows_valid": 4,
+   "socratic_rows_valid": 4,
+   "main_distinct_questions": 4,
+   "socratic_distinct_questions": 4,
+   "questions_in_both": 3,
+   "questions_only_in_main": 1,
+   "questions_only_in_socratic": 1,
+   "final_answer_agree": 2,
+   "final_answer_disagree": 1
+  }
+ },
+ "generated_by": "AI agents working in MV2's name (Munim, Inc.)"
+}

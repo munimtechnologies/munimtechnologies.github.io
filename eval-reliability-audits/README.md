@@ -1,15 +1,22 @@
 # eval-reliability-audits
 
-A versioned catalogue by MV2 of Munim, Inc. of small, reproducible corpora that show where the metrics and annotations *behind* LLM-benchmark scores fail. Each audit isolates one mechanism, reproduces it from pinned upstream scoring code, and ships a labelled corpus checkable with only the Python standard library, plus — where the benchmark releases its own data — a measured blast radius on that data.
+A versioned catalogue by MV2 of Munim, Inc. of small, reproducible corpora that show where the metrics and annotations
+*behind* LLM-benchmark scores fail. Each audit isolates one mechanism, reproduces it from pinned upstream scoring code,
+and ships a labelled corpus checkable with only the Python standard library, plus — where the benchmark releases its
+own data — a measured blast radius on that data.
 
-The work is carried out by AI agents working in MV2's name and is disclosed as AI-made wherever a platform, contest or project asks.
+The work is carried out by AI agents working in MV2's name and is disclosed as AI-made wherever a platform, contest or
+project asks.
 
 ## Method
 
 - **Prior art first.** Search papers, issues and code before claiming a finding is new; state plainly why it is.
-- **Pre-register before measuring.** Hand-trace a synthetic corpus and freeze its expected counts and verdicts before touching any real data.
-- **Verify in a sealed container.** The corpus assertion and the exposure measurement run in an isolated runner; results are frozen to `results.json`.
-- **Honest limits.** One checker, one dataset per audit; negative and latent results are reported as such, never dressed up.
+- **Pre-register before measuring.** Hand-trace a synthetic corpus and freeze its expected counts and verdicts before
+  touching any real data.
+- **Verify in a sealed container.** The corpus assertion and the exposure measurement run in an isolated runner;
+  results are frozen to `results.json`.
+- **Honest limits.** One checker, one dataset per audit; negative and latent results are reported as such, never
+  dressed up.
 
 ## The audits
 
@@ -39,7 +46,9 @@ The work is carried out by AI agents working in MV2's name and is disclosed as A
 | 22 | [gsm8k-split-overlap-census](../gsm8k-split-overlap-census/) | GSM8K questions shared by train and test | 0 exact + 0 normalized shared questions; train and test free of internal duplicates too |
 | 23 | [anli-gold-conflict-census](../anli-gold-conflict-census/) | ANLI duplicate (premise, hypothesis) pairs, gold labels | 2 exact + 3 normalized conflicting pairs over 9 files, all in R2/train; dev/test clean |
 | 24 | [gsm8k-socratic-answer-census](../gsm8k-socratic-answer-census/) | GSM8K main vs socratic final answers for the same question | all 8,792 questions in both files; 0 final-answer disagreements |
+| 25 | [gsm8k-socratic-step-census](../gsm8k-socratic-step-census/) | GSM8K socratic steps and calculator annotations vs main | all 8,792 annotation sequences identical; 8,786 step lists identical, 6 dangling sub-questions |
 
 ## Licence
 
-Code is Apache-2.0. The corpora, results and write-ups are CC BY 4.0. Transcribed upstream functions keep their own licences. Authored by AI agents working in MV2's name (Munim, Inc.).
+Code is Apache-2.0. The corpora, results and write-ups are CC BY 4.0. Transcribed upstream functions keep their own
+licences. Authored by AI agents working in MV2's name (Munim, Inc.).

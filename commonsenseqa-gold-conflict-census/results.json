@@ -1,0 +1,105 @@
+{
+ "dataset": "CommonsenseQA (Talmor et al., NAACL 2019), MIT License",
+ "source_files": {
+  "train": "https://s3.amazonaws.com/commensenseqa/train_rand_split.jsonl",
+  "dev": "https://s3.amazonaws.com/commensenseqa/dev_rand_split.jsonl"
+ },
+ "expected_rows": {
+  "train": 9741,
+  "dev": 1221
+ },
+ "observed_rows": {
+  "train": 9741,
+  "dev": 1221
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "rows": 8,
+   "malformed": 0,
+   "unique_stems": 4,
+   "unique_items": 6,
+   "item_duplicate_groups": 2,
+   "item_conflict_groups": 1,
+   "item_conflict_rows": 2,
+   "norm_item_conflict_groups": 2,
+   "norm_additional": 1,
+   "stem_duplicate_groups": 4,
+   "item_conflict_examples": [
+    {
+     "stem": "What opens a locked door?",
+     "options": [
+      "a hammer",
+      "a key",
+      "a song"
+     ],
+     "gold_texts": [
+      "a hammer",
+      "a key"
+     ],
+     "n_rows": 2
+    }
+   ]
+  },
+  "target": {
+   "rows": 8,
+   "unique_stems": 4,
+   "unique_items": 6,
+   "item_duplicate_groups": 2,
+   "item_conflict_groups": 1,
+   "item_conflict_rows": 2,
+   "norm_item_conflict_groups": 2,
+   "norm_additional": 1,
+   "stem_duplicate_groups": 4
+  }
+ },
+ "per_split": {
+  "train": {
+   "rows": 9741,
+   "malformed": 0,
+   "unique_stems": 9741,
+   "unique_items": 9741,
+   "item_duplicate_groups": 0,
+   "item_conflict_groups": 0,
+   "item_conflict_rows": 0,
+   "norm_item_conflict_groups": 0,
+   "norm_additional": 0,
+   "stem_duplicate_groups": 0,
+   "item_conflict_examples": []
+  },
+  "dev": {
+   "rows": 1221,
+   "malformed": 0,
+   "unique_stems": 1221,
+   "unique_items": 1221,
+   "item_duplicate_groups": 0,
+   "item_conflict_groups": 0,
+   "item_conflict_rows": 0,
+   "norm_item_conflict_groups": 0,
+   "norm_additional": 0,
+   "stem_duplicate_groups": 0,
+   "item_conflict_examples": []
+  }
+ },
+ "combined": {
+  "rows": 10962,
+  "malformed": 0,
+  "unique_stems": 10962,
+  "unique_items": 10962,
+  "item_duplicate_groups": 0,
+  "item_conflict_groups": 0,
+  "item_conflict_rows": 0,
+  "norm_item_conflict_groups": 0,
+  "norm_additional": 0,
+  "stem_duplicate_groups": 0,
+  "item_conflict_examples": []
+ },
+ "predictions": {
+  "P1_combined_item_conflicts_le_20": true,
+  "P2_dev_item_conflicts_eq_0": true,
+  "P3_combined_item_duplicate_groups_ge_1": false,
+  "P4_combined_stem_duplicate_groups_ge_1": false
+ },
+ "note": "The item key is (stem, sorted option-text set); the gold compared is the answer TEXT, so option reshuffles are not conflicts. Same stem with a different option set is legitimate reuse (context). The unlabelled test split (test_rand_split_no_answers.jsonl) is excluded."
+}

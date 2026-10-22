@@ -1,0 +1,386 @@
+{
+ "dataset": "GSM8K (openai/grade-school-math, Cobbe et al. 2021)",
+ "files": {
+  "train": "train.jsonl",
+  "test": "test.jsonl",
+  "train_socratic": "train_socratic.jsonl",
+  "test_socratic": "test_socratic.jsonl"
+ },
+ "match_rule": "rows paired by EXACT question text",
+ "step_rule": "lines before the last '####', stripped; each socratic line loses the text up to and including its first ' ** '; steps identical iff the two line lists are equal",
+ "annotation_rule": "every <<expr=result>> in the whole answer, in order (calc_eval.find_annotations); identical iff sequences equal",
+ "per_split": {
+  "train": {
+   "pairs": 7473,
+   "only_in_main": 0,
+   "only_in_socratic": 0,
+   "socratic_lines_in_pairs": 26724,
+   "socratic_lines_with_separator": 26720,
+   "step_count_equal": 7469,
+   "steps_identical": 7469,
+   "annotations_identical": 7473,
+   "annotations_differ": 0,
+   "main_annotations_total": 23716,
+   "socratic_annotations_total": 23716,
+   "main_annotation_classes": {
+    "match": 23714,
+    "rounded": 0,
+    "mismatch": 0,
+    "unparseable_expr": 2,
+    "unparseable_result": 0
+   },
+   "socratic_annotation_classes": {
+    "match": 23714,
+    "rounded": 0,
+    "mismatch": 0,
+    "unparseable_expr": 2,
+    "unparseable_result": 0
+   },
+   "annotation_diff_examples": [],
+   "step_diff_examples": [
+    {
+     "question": "A plane takes off at 6:00 a.m. and flies for 4 hours from New York City to Chicago. The plane stays at the port in Chicago for 1 hour and then departs for Miami. If the aircraft took three times as many hours to fly to Miami than it took to fly from New York to Chicago, calculate the total time to travel from New York to Miami.",
+     "main_steps": [
+      "Before departing for Miami from Chicago, the total time the plane had taken for the journey is 4+1 = <<4+1=5>>5 hours.",
+      "It took 3*4 = <<3*4=12>>12 hours to fly to Miami",
+      "The total flying time from New York to Miami is 12+5 = <<12+5=17>>17 hours"
+     ],
+     "socratic_steps": [
+      "Before departing for Miami from Chicago, the total time the plane had taken for the journey is 4+1 = <<4+1=5>>5 hours.",
+      "It took 3*4 = <<3*4=12>>12 hours to fly to Miami",
+      "How many hours did the plane take to fly from New York to Miami? **",
+      "The total flying time from New York to Miami is 12+5 = <<12+5=17>>17 hours"
+     ]
+    },
+    {
+     "question": "In 10 years, Terry will be 4 times the age that Nora is currently. If Nora is currently 10 years old, how old is Terry now?",
+     "main_steps": [
+      "Terry will be 4*10=<<4*10=40>>40 years old in 10 years",
+      "Currently, Terry is 40-10 = <<40-10=30>>30 years old."
+     ],
+     "socratic_steps": [
+      "Terry will be 4*10=<<4*10=40>>40 years old in 10 years",
+      "How old is Terry now? **",
+      "Currently, Terry is 40-10 = <<40-10=30>>30 years old."
+     ]
+    },
+    {
+     "question": "Kirt has a $6000 monthly salary when he started his job. After a year of working, his salary increased by 30%. How much are his total earnings after 3 years?",
+     "main_steps": [
+      "His annual salary for the first year of working is 6000 x 12= $<<6000*12=72000>>72000.",
+      "Kirt's monthly increase is $6000 x 30/100= $<<6000*30/100=1800>>1800.",
+      "So, he received $6000 + $1800= $<<6000+1800=7800>>7800 monthly on the second and third year of working.",
+      "Kirt's annual salary in the second and third year was $7800 x 12 = $93600.",
+      "Thus, his total earning after 3 years is $72000 + $93600 + $93600 = $<<72000+93600+93600=259200>>259200."
+     ],
+     "socratic_steps": [
+      "His annual salary for the first year of working is 6000 x 12= $<<6000*12=72000>>72000.",
+      "Kirt's monthly increase is $6000 x 30/100= $<<6000*30/100=1800>>1800.",
+      "So, he received $6000 + $1800= $<<6000+1800=7800>>7800 monthly on the second and third year of working.",
+      "Kirt's annual salary in the second and third year was $7800 x 12 = $93600.",
+      "How much are his total earnings after 3 years? **",
+      "Thus, his total earning after 3 years is $72000 + $93600 + $93600 = $<<72000+93600+93600=259200>>259200."
+     ]
+    },
+    {
+     "question": "Mark builds an apartment that is 16 by 10 feet.  There are 6 rooms in total.  All the rooms are the same size except the living room which is as big as 3 other rooms.  How big is the living room?",
+     "main_steps": [
+      "Total square footage is 16*10=<<16*10=160>>160 square feet",
+      "There are 3+3=<<3+3=6>>6 rooms",
+      "6-1=<<6-1=5>>5 of them are the same size",
+      "If x is the size of the normal room then the square footage of all rooms is 5x+3x=8x",
+      "So each room is 160/8=<<160/8=20>>20 square feet",
+      "So the living room is 20*3=<<20*3=60>>60 square feet"
+     ],
+     "socratic_steps": [
+      "Total square footage is 16*10=<<16*10=160>>160 square feet",
+      "How many square feet are in the apartment? **",
+      "There are 3+3=<<3+3=6>>6 rooms",
+      "6-1=<<6-1=5>>5 of them are the same size",
+      "If x is the size of the normal room then the square footage of all rooms is 5x+3x=8x",
+      "So each room is 160/8=<<160/8=20>>20 square feet",
+      "So the living room is 20*3=<<20*3=60>>60 square feet"
+     ]
+    }
+   ]
+  },
+  "test": {
+   "pairs": 1319,
+   "only_in_main": 0,
+   "only_in_socratic": 0,
+   "socratic_lines_in_pairs": 4821,
+   "socratic_lines_with_separator": 4819,
+   "step_count_equal": 1317,
+   "steps_identical": 1317,
+   "annotations_identical": 1319,
+   "annotations_differ": 0,
+   "main_annotations_total": 4282,
+   "socratic_annotations_total": 4282,
+   "main_annotation_classes": {
+    "match": 4281,
+    "rounded": 0,
+    "mismatch": 0,
+    "unparseable_expr": 0,
+    "unparseable_result": 1
+   },
+   "socratic_annotation_classes": {
+    "match": 4281,
+    "rounded": 0,
+    "mismatch": 0,
+    "unparseable_expr": 0,
+    "unparseable_result": 1
+   },
+   "annotation_diff_examples": [],
+   "step_diff_examples": [
+    {
+     "question": "An ice cream truck is traveling through a neighborhood. Children from various homes have started chasing the truck and, by the time the truck has reached the end of the first street, there are 5 children it. On the second street, each child is joined by another child and on the third street, each child in the existing group is joined by another 2 children. The original 5 children then give up and leave the group. How many children are now following the truck?",
+     "main_steps": [
+      "On the second street, each child is joined by another child so the group doubles to 5 children * 2 = <<5*2=10>>10 children.",
+      "On the third street, each child is joined by 2 more so the group has tripled to 10 children * 3 = <<10*3=30>>30 children.",
+      "After the initial children leave, the group now has 30 children – 5 original children = <<30-5=25>>25 children."
+     ],
+     "socratic_steps": [
+      "On the second street, each child is joined by another child so the group doubles to 5 children * 2 = <<5*2=10>>10 children.",
+      "How many children are in the group after the second street? **",
+      "On the third street, each child is joined by 2 more so the group has tripled to 10 children * 3 = <<10*3=30>>30 children.",
+      "After the initial children leave, the group now has 30 children – 5 original children = <<30-5=25>>25 children."
+     ]
+    },
+    {
+     "question": "Johnny's dad brought him to watch some horse racing and his dad bet money. On the first race, he lost $5. On the second race, he won $1 more than twice the amount he previously lost. On the third race, he lost 1.5 times as much as he won in the second race. How much did he lose on average that day?",
+     "main_steps": [
+      "On the second race he won $11 because 1+ 5 x 2 = <<1+5*2=11>>11",
+      "On the third race he lost $15 because 10 x 1.5 = <<10*1.5=15>>15",
+      "He lost a total of $20 on the first and third races because 15 + 5 = <<15+5=20>>20",
+      "He lost $9 that day because 11 - 20 = <<11-20=-9>>-9",
+      "He lost an average of $3 per race because 9 / 3 = <<9/3=3>>3"
+     ],
+     "socratic_steps": [
+      "On the second race he won $11 because 1+ 5 x 2 = <<1+5*2=11>>11",
+      "On the third race he lost $15 because 10 x 1.5 = <<10*1.5=15>>15",
+      "He lost a total of $20 on the first and third races because 15 + 5 = <<15+5=20>>20",
+      "How much did he lose on average that day? **",
+      "He lost $9 that day because 11 - 20 = <<11-20=-9>>-9",
+      "He lost an average of $3 per race because 9 / 3 = <<9/3=3>>3"
+     ]
+    }
+   ]
+  }
+ },
+ "combined_train_and_test": {
+  "pairs": 8792,
+  "only_in_main": 0,
+  "only_in_socratic": 0,
+  "socratic_lines_in_pairs": 31545,
+  "socratic_lines_with_separator": 31539,
+  "step_count_equal": 8786,
+  "steps_identical": 8786,
+  "annotations_identical": 8792,
+  "annotations_differ": 0,
+  "main_annotations_total": 27998,
+  "socratic_annotations_total": 27998,
+  "main_annotation_classes": {
+   "match": 27995,
+   "rounded": 0,
+   "mismatch": 0,
+   "unparseable_expr": 2,
+   "unparseable_result": 1
+  },
+  "socratic_annotation_classes": {
+   "match": 27995,
+   "rounded": 0,
+   "mismatch": 0,
+   "unparseable_expr": 2,
+   "unparseable_result": 1
+  },
+  "annotation_diff_examples": [],
+  "step_diff_examples": [
+   {
+    "question": "A plane takes off at 6:00 a.m. and flies for 4 hours from New York City to Chicago. The plane stays at the port in Chicago for 1 hour and then departs for Miami. If the aircraft took three times as many hours to fly to Miami than it took to fly from New York to Chicago, calculate the total time to travel from New York to Miami.",
+    "main_steps": [
+     "Before departing for Miami from Chicago, the total time the plane had taken for the journey is 4+1 = <<4+1=5>>5 hours.",
+     "It took 3*4 = <<3*4=12>>12 hours to fly to Miami",
+     "The total flying time from New York to Miami is 12+5 = <<12+5=17>>17 hours"
+    ],
+    "socratic_steps": [
+     "Before departing for Miami from Chicago, the total time the plane had taken for the journey is 4+1 = <<4+1=5>>5 hours.",
+     "It took 3*4 = <<3*4=12>>12 hours to fly to Miami",
+     "How many hours did the plane take to fly from New York to Miami? **",
+     "The total flying time from New York to Miami is 12+5 = <<12+5=17>>17 hours"
+    ]
+   },
+   {
+    "question": "An ice cream truck is traveling through a neighborhood. Children from various homes have started chasing the truck and, by the time the truck has reached the end of the first street, there are 5 children it. On the second street, each child is joined by another child and on the third street, each child in the existing group is joined by another 2 children. The original 5 children then give up and leave the group. How many children are now following the truck?",
+    "main_steps": [
+     "On the second street, each child is joined by another child so the group doubles to 5 children * 2 = <<5*2=10>>10 children.",
+     "On the third street, each child is joined by 2 more so the group has tripled to 10 children * 3 = <<10*3=30>>30 children.",
+     "After the initial children leave, the group now has 30 children – 5 original children = <<30-5=25>>25 children."
+    ],
+    "socratic_steps": [
+     "On the second street, each child is joined by another child so the group doubles to 5 children * 2 = <<5*2=10>>10 children.",
+     "How many children are in the group after the second street? **",
+     "On the third street, each child is joined by 2 more so the group has tripled to 10 children * 3 = <<10*3=30>>30 children.",
+     "After the initial children leave, the group now has 30 children – 5 original children = <<30-5=25>>25 children."
+    ]
+   },
+   {
+    "question": "In 10 years, Terry will be 4 times the age that Nora is currently. If Nora is currently 10 years old, how old is Terry now?",
+    "main_steps": [
+     "Terry will be 4*10=<<4*10=40>>40 years old in 10 years",
+     "Currently, Terry is 40-10 = <<40-10=30>>30 years old."
+    ],
+    "socratic_steps": [
+     "Terry will be 4*10=<<4*10=40>>40 years old in 10 years",
+     "How old is Terry now? **",
+     "Currently, Terry is 40-10 = <<40-10=30>>30 years old."
+    ]
+   },
+   {
+    "question": "Johnny's dad brought him to watch some horse racing and his dad bet money. On the first race, he lost $5. On the second race, he won $1 more than twice the amount he previously lost. On the third race, he lost 1.5 times as much as he won in the second race. How much did he lose on average that day?",
+    "main_steps": [
+     "On the second race he won $11 because 1+ 5 x 2 = <<1+5*2=11>>11",
+     "On the third race he lost $15 because 10 x 1.5 = <<10*1.5=15>>15",
+     "He lost a total of $20 on the first and third races because 15 + 5 = <<15+5=20>>20",
+     "He lost $9 that day because 11 - 20 = <<11-20=-9>>-9",
+     "He lost an average of $3 per race because 9 / 3 = <<9/3=3>>3"
+    ],
+    "socratic_steps": [
+     "On the second race he won $11 because 1+ 5 x 2 = <<1+5*2=11>>11",
+     "On the third race he lost $15 because 10 x 1.5 = <<10*1.5=15>>15",
+     "He lost a total of $20 on the first and third races because 15 + 5 = <<15+5=20>>20",
+     "How much did he lose on average that day? **",
+     "He lost $9 that day because 11 - 20 = <<11-20=-9>>-9",
+     "He lost an average of $3 per race because 9 / 3 = <<9/3=3>>3"
+    ]
+   },
+   {
+    "question": "Kirt has a $6000 monthly salary when he started his job. After a year of working, his salary increased by 30%. How much are his total earnings after 3 years?",
+    "main_steps": [
+     "His annual salary for the first year of working is 6000 x 12= $<<6000*12=72000>>72000.",
+     "Kirt's monthly increase is $6000 x 30/100= $<<6000*30/100=1800>>1800.",
+     "So, he received $6000 + $1800= $<<6000+1800=7800>>7800 monthly on the second and third year of working.",
+     "Kirt's annual salary in the second and third year was $7800 x 12 = $93600.",
+     "Thus, his total earning after 3 years is $72000 + $93600 + $93600 = $<<72000+93600+93600=259200>>259200."
+    ],
+    "socratic_steps": [
+     "His annual salary for the first year of working is 6000 x 12= $<<6000*12=72000>>72000.",
+     "Kirt's monthly increase is $6000 x 30/100= $<<6000*30/100=1800>>1800.",
+     "So, he received $6000 + $1800= $<<6000+1800=7800>>7800 monthly on the second and third year of working.",
+     "Kirt's annual salary in the second and third year was $7800 x 12 = $93600.",
+     "How much are his total earnings after 3 years? **",
+     "Thus, his total earning after 3 years is $72000 + $93600 + $93600 = $<<72000+93600+93600=259200>>259200."
+    ]
+   },
+   {
+    "question": "Mark builds an apartment that is 16 by 10 feet.  There are 6 rooms in total.  All the rooms are the same size except the living room which is as big as 3 other rooms.  How big is the living room?",
+    "main_steps": [
+     "Total square footage is 16*10=<<16*10=160>>160 square feet",
+     "There are 3+3=<<3+3=6>>6 rooms",
+     "6-1=<<6-1=5>>5 of them are the same size",
+     "If x is the size of the normal room then the square footage of all rooms is 5x+3x=8x",
+     "So each room is 160/8=<<160/8=20>>20 square feet",
+     "So the living room is 20*3=<<20*3=60>>60 square feet"
+    ],
+    "socratic_steps": [
+     "Total square footage is 16*10=<<16*10=160>>160 square feet",
+     "How many square feet are in the apartment? **",
+     "There are 3+3=<<3+3=6>>6 rooms",
+     "6-1=<<6-1=5>>5 of them are the same size",
+     "If x is the size of the normal room then the square footage of all rooms is 5x+3x=8x",
+     "So each room is 160/8=<<160/8=20>>20 square feet",
+     "So the living room is 20*3=<<20*3=60>>60 square feet"
+    ]
+   }
+  ]
+ },
+ "audit19_crosscheck": {
+  "expected_main_classes": {
+   "match": 27995,
+   "rounded": 0,
+   "mismatch": 0,
+   "unparseable_expr": 2,
+   "unparseable_result": 1
+  },
+  "ok": true
+ },
+ "predictions": {
+  "P1_pairs": {
+   "predicted": 8792,
+   "observed": 8792,
+   "held": true
+  },
+  "P2_annotation_identical_share": {
+   "predicted_min": 0.99,
+   "observed": 1.0,
+   "held": true
+  },
+  "P3_socratic_mismatch": {
+   "predicted": 0,
+   "observed": 0,
+   "held": true
+  },
+  "P4_separator_share": {
+   "predicted_min": 0.99,
+   "observed": 0.99981,
+   "held": true
+  }
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "public": {
+   "pairs": 3,
+   "only_in_main": 1,
+   "only_in_socratic": 1,
+   "socratic_lines_in_pairs": 5,
+   "socratic_lines_with_separator": 4,
+   "step_count_equal": 3,
+   "steps_identical": 1,
+   "annotations_identical": 2,
+   "annotations_differ": 1,
+   "main_annotations_total": 6,
+   "socratic_annotations_total": 6,
+   "main_annotation_classes": {
+    "match": 6,
+    "rounded": 0,
+    "mismatch": 0,
+    "unparseable_expr": 0,
+    "unparseable_result": 0
+   },
+   "socratic_annotation_classes": {
+    "match": 5,
+    "rounded": 0,
+    "mismatch": 1,
+    "unparseable_expr": 0,
+    "unparseable_result": 0
+   }
+  },
+  "target": {
+   "pairs": 3,
+   "only_in_main": 1,
+   "only_in_socratic": 1,
+   "socratic_lines_in_pairs": 5,
+   "socratic_lines_with_separator": 4,
+   "step_count_equal": 3,
+   "steps_identical": 1,
+   "annotations_identical": 2,
+   "annotations_differ": 1,
+   "main_annotations_total": 6,
+   "socratic_annotations_total": 6,
+   "main_annotation_classes": {
+    "match": 6,
+    "rounded": 0,
+    "mismatch": 0,
+    "unparseable_expr": 0,
+    "unparseable_result": 0
+   },
+   "socratic_annotation_classes": {
+    "match": 5,
+    "rounded": 0,
+    "mismatch": 1,
+    "unparseable_expr": 0,
+    "unparseable_result": 0
+   }
+  }
+ },
+ "generated_by": "AI agents working in MV2's name (Munim, Inc.)"
+}

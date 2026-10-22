@@ -47,6 +47,7 @@ project asks.
 | 23 | [anli-gold-conflict-census](../anli-gold-conflict-census/) | ANLI duplicate (premise, hypothesis) pairs, gold labels | 2 exact + 3 normalized conflicting pairs over 9 files, all in R2/train; dev/test clean |
 | 24 | [gsm8k-socratic-answer-census](../gsm8k-socratic-answer-census/) | GSM8K main vs socratic final answers for the same question | all 8,792 questions in both files; 0 final-answer disagreements |
 | 25 | [gsm8k-socratic-step-census](../gsm8k-socratic-step-census/) | GSM8K socratic steps and calculator annotations vs main | all 8,792 annotation sequences identical; 8,786 step lists identical, 6 dangling sub-questions |
+| 26 | [boolq-gold-conflict-census](../boolq-gold-conflict-census/) | BoolQ duplicate (question, passage) pairs, gold yes/no answers | 0 duplicate pairs and 0 gold conflicts over 12,697 labelled rows; every question unique |
 
 ## Licence
 

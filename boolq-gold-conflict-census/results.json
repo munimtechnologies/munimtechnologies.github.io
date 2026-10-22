@@ -1,0 +1,101 @@
+{
+ "dataset": "BoolQ (Clark et al., NAACL 2019), CC BY-SA 3.0",
+ "source_files": {
+  "train": "https://raw.githubusercontent.com/svinkapeppa/boolq/master/train.jsonl",
+  "dev": "https://raw.githubusercontent.com/svinkapeppa/boolq/master/dev.jsonl"
+ },
+ "expected_rows": {
+  "train": 9427,
+  "dev": 3270
+ },
+ "observed_rows": {
+  "train": 9427,
+  "dev": 3270
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "rows": 6,
+   "malformed": 0,
+   "unique_questions": 4,
+   "unique_passages": 5,
+   "qp_duplicate_groups": 1,
+   "qp_conflict_groups": 1,
+   "qp_conflict_rows": 2,
+   "norm_qp_conflict_groups": 2,
+   "norm_additional": 1,
+   "question_conflict_groups": 2,
+   "exact_qp_conflict_examples": [
+    {
+     "question": "is a tomato a fruit",
+     "passage_prefix": "A tomato is botanically a fruit.",
+     "answers": [
+      "False",
+      "True"
+     ],
+     "n_rows": 2
+    }
+   ]
+  },
+  "target": {
+   "rows": 6,
+   "unique_questions": 4,
+   "unique_passages": 5,
+   "qp_duplicate_groups": 1,
+   "qp_conflict_groups": 1,
+   "qp_conflict_rows": 2,
+   "norm_qp_conflict_groups": 2,
+   "norm_additional": 1,
+   "question_conflict_groups": 2
+  }
+ },
+ "per_split": {
+  "train": {
+   "rows": 9427,
+   "malformed": 0,
+   "unique_questions": 9427,
+   "unique_passages": 7927,
+   "qp_duplicate_groups": 0,
+   "qp_conflict_groups": 0,
+   "qp_conflict_rows": 0,
+   "norm_qp_conflict_groups": 0,
+   "norm_additional": 0,
+   "question_conflict_groups": 0,
+   "exact_qp_conflict_examples": []
+  },
+  "dev": {
+   "rows": 3270,
+   "malformed": 0,
+   "unique_questions": 3270,
+   "unique_passages": 2938,
+   "qp_duplicate_groups": 0,
+   "qp_conflict_groups": 0,
+   "qp_conflict_rows": 0,
+   "norm_qp_conflict_groups": 0,
+   "norm_additional": 0,
+   "question_conflict_groups": 0,
+   "exact_qp_conflict_examples": []
+  }
+ },
+ "combined": {
+  "rows": 12697,
+  "malformed": 0,
+  "unique_questions": 12697,
+  "unique_passages": 10144,
+  "qp_duplicate_groups": 0,
+  "qp_conflict_groups": 0,
+  "qp_conflict_rows": 0,
+  "norm_qp_conflict_groups": 0,
+  "norm_additional": 0,
+  "question_conflict_groups": 0,
+  "exact_qp_conflict_examples": []
+ },
+ "predictions": {
+  "P1_combined_qp_conflicts_le_20": true,
+  "P2_dev_qp_conflicts_eq_0": true,
+  "P3_combined_question_conflicts_ge_5": false,
+  "P4_combined_qp_duplicate_groups_ge_1": false
+ },
+ "note": "Only (question, passage) gold conflicts are defects; question-only conflicts are legitimate because the BoolQ answer depends on the passage. test.jsonl is unlabelled and excluded."
+}

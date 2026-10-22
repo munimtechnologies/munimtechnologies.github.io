@@ -1,0 +1,45 @@
+{
+ "dataset": "GSM8K (openai/grade-school-math)",
+ "train_file": "train.jsonl",
+ "test_file": "test.jsonl",
+ "train_rows_raw": 7473,
+ "test_rows_raw": 1319,
+ "normalizer": "whitespace-collapsed then lowercased question text (only near-dup rule)",
+ "final_answer_rule": "text after the last '####', stripped, commas and leading '$' removed",
+ "result": {
+  "train_rows_valid": 7473,
+  "test_rows_valid": 1319,
+  "train_distinct_exact": 7473,
+  "test_distinct_exact": 1319,
+  "exact_overlap_pairs": 0,
+  "exact_overlap_answer_conflicts": 0,
+  "norm_overlap_pairs": 0,
+  "norm_overlap_answer_conflicts": 0,
+  "exact_overlap_examples": [],
+  "norm_overlap_examples": []
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "public": {
+   "train_rows_valid": 3,
+   "test_rows_valid": 4,
+   "train_distinct_exact": 3,
+   "test_distinct_exact": 4,
+   "exact_overlap_pairs": 2,
+   "exact_overlap_answer_conflicts": 1,
+   "norm_overlap_pairs": 3,
+   "norm_overlap_answer_conflicts": 1
+  },
+  "target": {
+   "train_rows_valid": 3,
+   "test_rows_valid": 4,
+   "train_distinct_exact": 3,
+   "test_distinct_exact": 4,
+   "exact_overlap_pairs": 2,
+   "exact_overlap_answer_conflicts": 1,
+   "norm_overlap_pairs": 3,
+   "norm_overlap_answer_conflicts": 1
+  }
+ },
+ "generated_by": "AI agents working in MV2's name (Munim, Inc.)"
+}

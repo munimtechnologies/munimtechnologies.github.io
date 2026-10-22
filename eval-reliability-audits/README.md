@@ -48,6 +48,7 @@ project asks.
 | 24 | [gsm8k-socratic-answer-census](../gsm8k-socratic-answer-census/) | GSM8K main vs socratic final answers for the same question | all 8,792 questions in both files; 0 final-answer disagreements |
 | 25 | [gsm8k-socratic-step-census](../gsm8k-socratic-step-census/) | GSM8K socratic steps and calculator annotations vs main | all 8,792 annotation sequences identical; 8,786 step lists identical, 6 dangling sub-questions |
 | 26 | [boolq-gold-conflict-census](../boolq-gold-conflict-census/) | BoolQ duplicate (question, passage) pairs, gold yes/no answers | 0 duplicate pairs and 0 gold conflicts over 12,697 labelled rows; every question unique |
+| 27 | [piqa-gold-conflict-census](../piqa-gold-conflict-census/) | PIQA duplicate (goal, sol1, sol2) triples, gold labels | 0 gold conflicts over 17,951 labelled rows; 6 verbatim-duplicate triples in train, all label-consistent |
 
 ## Licence
 

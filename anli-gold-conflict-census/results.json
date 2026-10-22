@@ -1,0 +1,233 @@
+{
+ "dataset": "ANLI v1.0 (facebookresearch/anli, Nie et al. 2020)",
+ "files": [
+  "R1/dev",
+  "R1/test",
+  "R1/train",
+  "R2/dev",
+  "R2/test",
+  "R2/train",
+  "R3/dev",
+  "R3/test",
+  "R3/train"
+ ],
+ "premise_key_in_data": "context",
+ "normalizer": "whitespace-collapsed then lowercased premise and hypothesis (only near-dup rule)",
+ "conflict_rule": "a distinct (premise, hypothesis) pair carrying >1 gold label among {e,n,c}",
+ "per_file": {
+  "R1/dev": {
+   "rows_valid": 1000,
+   "distinct_exact_pairs": 1000,
+   "distinct_norm_pairs": 1000,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  },
+  "R1/test": {
+   "rows_valid": 1000,
+   "distinct_exact_pairs": 1000,
+   "distinct_norm_pairs": 1000,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  },
+  "R1/train": {
+   "rows_valid": 16946,
+   "distinct_exact_pairs": 16943,
+   "distinct_norm_pairs": 16941,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  },
+  "R2/dev": {
+   "rows_valid": 1000,
+   "distinct_exact_pairs": 1000,
+   "distinct_norm_pairs": 1000,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  },
+  "R2/test": {
+   "rows_valid": 1000,
+   "distinct_exact_pairs": 1000,
+   "distinct_norm_pairs": 1000,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  },
+  "R2/train": {
+   "rows_valid": 45460,
+   "distinct_exact_pairs": 45429,
+   "distinct_norm_pairs": 45415,
+   "exact_conflict_pairs": 1,
+   "norm_conflict_pairs": 2,
+   "exact_conflict_examples": [
+    {
+     "premise": "Lathan McKay is an American curator, producer, actor, writer, and entrepreneur. A former professional skateboarder, he has assembled the largest collection of Evel Knievel memorabilia in the world. That now resides at the official Evel Knievel Museum with Harley Davidson.",
+     "hypothesis": "Lathan McKay was born in South America.",
+     "labels": [
+      "c",
+      "n"
+     ]
+    }
+   ],
+   "norm_conflict_examples": [
+    {
+     "normalized_premise": "lathan mckay is an american curator, producer, actor, writer, and entrepreneur. a former professional skateboarder, he has assembled the largest collection of evel knievel memorabilia in the world. that now resides at the official evel knievel museum with harley davidson.",
+     "normalized_hypothesis": "lathan mckay was born in south america.",
+     "labels": [
+      "c",
+      "n"
+     ],
+     "originals": [
+      [
+       "Lathan McKay is an American curator, producer, actor, writer, and entrepreneur. A former professional skateboarder, he has assembled the largest collection of Evel Knievel memorabilia in the world. That now resides at the official Evel Knievel Museum with Harley Davidson.",
+       "Lathan McKay was born in South America."
+      ]
+     ]
+    },
+    {
+     "normalized_premise": "the nigeria u-20 men's national soccer team, also known as the nigeria under-20s or nicknamed the \"flying eagles\", is the youth team for national soccer in nigeria. it plays a large role in the development of nigerian soccer, and is considered to be the feeder team for the nigeria men's national soccer team and is controlled by the nigeria football federation.",
+     "normalized_hypothesis": "the \"flying eagles\" are a completely autonomous organization made up of men under 20 years old.",
+     "labels": [
+      "c",
+      "n"
+     ],
+     "originals": [
+      [
+       "The Nigeria U-20 men's national soccer team, also known as the Nigeria Under-20s or nicknamed the \"Flying Eagles\", is the youth team for national soccer in Nigeria. It plays a large role in the development of Nigerian soccer, and is considered to be the feeder team for the Nigeria men's national soccer team and is controlled by the Nigeria Football Federation.",
+       "The \"Flying Eagles\" are a completely autonomous organization made up of men under 20 years old."
+      ],
+      [
+       "The Nigeria U-20 men's national soccer team, also known as the Nigeria Under-20s or nicknamed the \"Flying Eagles\", is the youth team for national soccer in Nigeria. It plays a large role in the development of Nigerian soccer, and is considered to be the feeder team for the Nigeria men's national soccer team and is controlled by the Nigeria Football Federation.",
+       "The \"Flying Eagles\" are a completely autonomous organization made up of men under 20 years old. "
+      ]
+     ]
+    }
+   ]
+  },
+  "R3/dev": {
+   "rows_valid": 1200,
+   "distinct_exact_pairs": 1200,
+   "distinct_norm_pairs": 1200,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  },
+  "R3/test": {
+   "rows_valid": 1200,
+   "distinct_exact_pairs": 1200,
+   "distinct_norm_pairs": 1200,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  },
+  "R3/train": {
+   "rows_valid": 100459,
+   "distinct_exact_pairs": 100361,
+   "distinct_norm_pairs": 100320,
+   "exact_conflict_pairs": 0,
+   "norm_conflict_pairs": 0,
+   "exact_conflict_examples": [],
+   "norm_conflict_examples": []
+  }
+ },
+ "combined_all_rounds_and_splits": {
+  "rows_valid": 169265,
+  "distinct_exact_pairs": 169132,
+  "distinct_norm_pairs": 169075,
+  "exact_conflict_pairs": 2,
+  "norm_conflict_pairs": 3,
+  "exact_conflict_examples": [
+   {
+    "premise": "Lathan McKay is an American curator, producer, actor, writer, and entrepreneur. A former professional skateboarder, he has assembled the largest collection of Evel Knievel memorabilia in the world. That now resides at the official Evel Knievel Museum with Harley Davidson.",
+    "hypothesis": "Lathan McKay was born in South America.",
+    "labels": [
+     "c",
+     "n"
+    ]
+   },
+   {
+    "premise": "Waste in the ponds produced by leaching gold from ore is a source of potential environmental dangers.",
+    "hypothesis": "Gold is an ore.",
+    "labels": [
+     "e",
+     "n"
+    ]
+   }
+  ],
+  "norm_conflict_examples": [
+   {
+    "normalized_premise": "lathan mckay is an american curator, producer, actor, writer, and entrepreneur. a former professional skateboarder, he has assembled the largest collection of evel knievel memorabilia in the world. that now resides at the official evel knievel museum with harley davidson.",
+    "normalized_hypothesis": "lathan mckay was born in south america.",
+    "labels": [
+     "c",
+     "n"
+    ],
+    "originals": [
+     [
+      "Lathan McKay is an American curator, producer, actor, writer, and entrepreneur. A former professional skateboarder, he has assembled the largest collection of Evel Knievel memorabilia in the world. That now resides at the official Evel Knievel Museum with Harley Davidson.",
+      "Lathan McKay was born in South America."
+     ]
+    ]
+   },
+   {
+    "normalized_premise": "the nigeria u-20 men's national soccer team, also known as the nigeria under-20s or nicknamed the \"flying eagles\", is the youth team for national soccer in nigeria. it plays a large role in the development of nigerian soccer, and is considered to be the feeder team for the nigeria men's national soccer team and is controlled by the nigeria football federation.",
+    "normalized_hypothesis": "the \"flying eagles\" are a completely autonomous organization made up of men under 20 years old.",
+    "labels": [
+     "c",
+     "n"
+    ],
+    "originals": [
+     [
+      "The Nigeria U-20 men's national soccer team, also known as the Nigeria Under-20s or nicknamed the \"Flying Eagles\", is the youth team for national soccer in Nigeria. It plays a large role in the development of Nigerian soccer, and is considered to be the feeder team for the Nigeria men's national soccer team and is controlled by the Nigeria Football Federation.",
+      "The \"Flying Eagles\" are a completely autonomous organization made up of men under 20 years old."
+     ],
+     [
+      "The Nigeria U-20 men's national soccer team, also known as the Nigeria Under-20s or nicknamed the \"Flying Eagles\", is the youth team for national soccer in Nigeria. It plays a large role in the development of Nigerian soccer, and is considered to be the feeder team for the Nigeria men's national soccer team and is controlled by the Nigeria Football Federation.",
+      "The \"Flying Eagles\" are a completely autonomous organization made up of men under 20 years old. "
+     ]
+    ]
+   },
+   {
+    "normalized_premise": "waste in the ponds produced by leaching gold from ore is a source of potential environmental dangers.",
+    "normalized_hypothesis": "gold is an ore.",
+    "labels": [
+     "e",
+     "n"
+    ],
+    "originals": [
+     [
+      "Waste in the ponds produced by leaching gold from ore is a source of potential environmental dangers.",
+      "Gold is an ore."
+     ]
+    ]
+   }
+  ]
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "public": {
+   "rows_valid": 7,
+   "distinct_exact_pairs": 5,
+   "distinct_norm_pairs": 4,
+   "exact_conflict_pairs": 1,
+   "norm_conflict_pairs": 2
+  },
+  "target": {
+   "rows_valid": 7,
+   "distinct_exact_pairs": 5,
+   "distinct_norm_pairs": 4,
+   "exact_conflict_pairs": 1,
+   "norm_conflict_pairs": 2
+  }
+ },
+ "generated_by": "AI agents working in MV2's name (Munim, Inc.)"
+}

@@ -1,0 +1,77 @@
+{
+ "dataset": "SciQ (Welbl, Liu and Gardner, 2017), CC BY-NC 3.0 -- train+valid+test, each multiple-choice science question with a correct_answer, three distractors, and (for most) a support passage",
+ "expected_total": 13679,
+ "observed_total": 13679,
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_valid": 4,
+   "n_malformed": 1,
+   "n_with_support": 3,
+   "n_empty_support": 1,
+   "n_gold_in_support": 2,
+   "n_any_distractor_in_support": 1,
+   "total_distractor_in_support": 1,
+   "n_distractors_total": 9,
+   "n_support_eq_a_choice": 0
+  },
+  "target": {
+   "n_valid": 4,
+   "n_malformed": 1,
+   "n_with_support": 3,
+   "n_empty_support": 1,
+   "n_gold_in_support": 2,
+   "n_any_distractor_in_support": 1,
+   "total_distractor_in_support": 1,
+   "n_distractors_total": 9,
+   "n_support_eq_a_choice": 0
+  }
+ },
+ "census": {
+  "n_valid": 13679,
+  "n_malformed": 0,
+  "n_with_support": 12252,
+  "n_empty_support": 1427,
+  "n_gold_in_support": 11219,
+  "n_any_distractor_in_support": 1451,
+  "total_distractor_in_support": 1651,
+  "n_distractors_total": 36756,
+  "n_support_eq_a_choice": 0,
+  "gold_coverage_rate": 0.9156872347371857,
+  "distractor_coverage_rate": 0.044917836543693544,
+  "examples": [
+   {
+    "question": "compounds that are capable of accepting electrons, such as o 2 or f2, are called what?",
+    "gold": "oxidants",
+    "support": "oxidants and reductants compounds that are capable of accepting electrons, such as o 2 or f2, are calledoxidants (or oxidizing agents) because they can oxidize "
+   },
+   {
+    "question": "what term in biotechnology means a genetically exact copy of an organism?",
+    "gold": "clone",
+    "support": "but transgenic animals just have one novel gene. what about an animal with a whole new genome? could a clone , a genetically exact copy of an organism, be devel"
+   },
+   {
+    "question": "vertebrata are characterized by the presence of what?",
+    "gold": "backbone",
+    "support": "figure 29.7 vertebrata are characterized by the presence of a backbone, such as the one that runs through the middle of this fish. all vertebrates are in the cr"
+   },
+   {
+    "question": "what is the height above or below sea level called?",
+    "gold": "elevation",
+    "support": "as you know, the surface of earth is not flat. some places are high, and some places are low. for example, mountain ranges like the sierra nevada in california "
+   },
+   {
+    "question": "ice cores, varves and what else indicate the environmental conditions at the time of their creation?",
+    "gold": "tree rings",
+    "support": "tree rings, ice cores, and varves indicate the environmental conditions at the time they were made."
+   }
+  ]
+ },
+ "predictions": {
+  "P1_gold_leaks_more_than_distractor": true,
+  "P2_some_questions_have_no_support": true,
+  "P3_gold_in_support_for_majority": true
+ },
+ "note": "For each SciQ question the gold answer is correct_answer and the support is the support passage. 'gold in support' = the normalized gold text is a non-empty substring of the normalized support; the same test is applied to each distractor. Questions with an empty support are counted in n_empty_support and excluded from the rates (nothing to leak into); their distractors are not counted. gold_coverage_rate = with-support questions whose gold is in the support / with-support questions; distractor_coverage_rate = distractor-in-support hits / total distractors over with-support questions (option count controlled). Text is lowercased and whitespace-collapsed only (punctuation kept), so the leak counts are a conservative lower bound. n_support_eq_a_choice counts verbatim support==choice matches. Rows missing correct_answer are malformed and excluded."
+}

@@ -1,0 +1,167 @@
+{
+ "dataset": "AI2 ARC (ARC-V1-Feb2018; Clark et al., 2018), CC BY-SA 4.0",
+ "expected_rows_per_split": {
+  "c_train": 1119,
+  "c_dev": 299,
+  "c_test": 1172,
+  "e_train": 2251,
+  "e_dev": 570,
+  "e_test": 2376
+ },
+ "observed_rows_per_split": {
+  "c_dev": 299,
+  "c_test": 1172,
+  "c_train": 1119,
+  "e_dev": 570,
+  "e_test": 2376,
+  "e_train": 2251
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "X_rows": 4,
+   "X_malformed": 1,
+   "X_unique_ids": 4,
+   "X_duplicate_ids": 0,
+   "X_unique_identity_keys": 2,
+   "X_identity_keys_multi": 1,
+   "X_identity_keys_conflict": 1,
+   "Y_rows": 3,
+   "Y_malformed": 0,
+   "Y_unique_ids": 3,
+   "Y_duplicate_ids": 0,
+   "Y_unique_identity_keys": 3,
+   "Y_identity_keys_multi": 0,
+   "Y_identity_keys_conflict": 0,
+   "ov_X_Y_shared_ids": 1,
+   "ov_X_Y_shared_identities": 2,
+   "ov_X_Y_shared_identity_gold_conflict": 1
+  },
+  "target": {
+   "X_rows": 4,
+   "X_malformed": 1,
+   "X_unique_ids": 4,
+   "X_duplicate_ids": 0,
+   "X_unique_identity_keys": 2,
+   "X_identity_keys_multi": 1,
+   "X_identity_keys_conflict": 1,
+   "Y_rows": 3,
+   "Y_malformed": 0,
+   "Y_unique_ids": 3,
+   "Y_duplicate_ids": 0,
+   "Y_unique_identity_keys": 3,
+   "Y_identity_keys_multi": 0,
+   "Y_identity_keys_conflict": 0,
+   "ov_X_Y_shared_ids": 1,
+   "ov_X_Y_shared_identities": 2,
+   "ov_X_Y_shared_identity_gold_conflict": 1
+  }
+ },
+ "within_split": {
+  "c_train": {
+   "rows": 1119,
+   "id_missing": 0,
+   "malformed": 0,
+   "unique_ids": 1119,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 1118,
+   "identity_keys_multi": 1,
+   "identity_keys_conflict": 0
+  },
+  "c_dev": {
+   "rows": 299,
+   "id_missing": 0,
+   "malformed": 0,
+   "unique_ids": 299,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 299,
+   "identity_keys_multi": 0,
+   "identity_keys_conflict": 0
+  },
+  "c_test": {
+   "rows": 1172,
+   "id_missing": 0,
+   "malformed": 0,
+   "unique_ids": 1172,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 1172,
+   "identity_keys_multi": 0,
+   "identity_keys_conflict": 0
+  },
+  "e_train": {
+   "rows": 2251,
+   "id_missing": 0,
+   "malformed": 0,
+   "unique_ids": 2251,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 2251,
+   "identity_keys_multi": 0,
+   "identity_keys_conflict": 0
+  },
+  "e_dev": {
+   "rows": 570,
+   "id_missing": 0,
+   "malformed": 0,
+   "unique_ids": 570,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 570,
+   "identity_keys_multi": 0,
+   "identity_keys_conflict": 0
+  },
+  "e_test": {
+   "rows": 2376,
+   "id_missing": 0,
+   "malformed": 0,
+   "unique_ids": 2376,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 2376,
+   "identity_keys_multi": 0,
+   "identity_keys_conflict": 0
+  }
+ },
+ "easy_vs_challenge": {
+  "shared_ids": 0,
+  "shared_identities": 0,
+  "shared_identity_gold_conflict": 0
+ },
+ "cross_split": {
+  "challenge:c_train|c_dev": {
+   "shared_ids": 0,
+   "shared_identities": 0,
+   "shared_identity_gold_conflict": 0
+  },
+  "challenge:c_train|c_test": {
+   "shared_ids": 0,
+   "shared_identities": 0,
+   "shared_identity_gold_conflict": 0
+  },
+  "challenge:c_dev|c_test": {
+   "shared_ids": 0,
+   "shared_identities": 0,
+   "shared_identity_gold_conflict": 0
+  },
+  "easy:e_train|e_dev": {
+   "shared_ids": 0,
+   "shared_identities": 0,
+   "shared_identity_gold_conflict": 0
+  },
+  "easy:e_train|e_test": {
+   "shared_ids": 0,
+   "shared_identities": 3,
+   "shared_identity_gold_conflict": 0
+  },
+  "easy:e_dev|e_test": {
+   "shared_ids": 0,
+   "shared_identities": 0,
+   "shared_identity_gold_conflict": 0
+  }
+ },
+ "predictions": {
+  "P1_easy_challenge_disjoint_by_id": true,
+  "P2_easy_challenge_disjoint_by_identity": true,
+  "P3_no_cross_split_id_leakage_within_set": true,
+  "P4_no_within_split_gold_conflict": true
+ },
+ "note": "Identity = normalized (stem, frozenset of choice texts); gold = the choice text whose label == answerKey. Malformed rows (answerKey matches no label) are counted and excluded from the identity/gold analysis. easy_vs_challenge pools each set's three splits and counts shared ids, shared identities and shared-identity gold conflicts. cross_split counts leakage between the train/dev/test splits inside each set. within_split counts duplicate ids and self-conflicting duplicate questions."
+}

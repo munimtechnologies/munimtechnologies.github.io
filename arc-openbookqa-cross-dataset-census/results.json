@@ -1,0 +1,64 @@
+{
+ "datasets": {
+  "A": "AI2 ARC (ARC-V1-Feb2018; Clark et al., 2018), CC BY-SA 4.0 -- all 6 splits pooled",
+  "B": "OpenBookQA-V1-Sep2018 (Mihaylov et al., 2018), Apache-2.0 -- Main train+dev+test"
+ },
+ "expected_totals": {
+  "arc": 7787,
+  "openbookqa_main": 5957
+ },
+ "observed_totals": {
+  "arc": 7787,
+  "openbookqa_main": 5957
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "a_rows": 4,
+   "b_rows": 4,
+   "a_malformed": 1,
+   "b_malformed": 0,
+   "a_distinct_identities": 3,
+   "b_distinct_identities": 4,
+   "a_distinct_stems": 3,
+   "b_distinct_stems": 4,
+   "shared_identities": 2,
+   "shared_identity_gold_conflict": 1,
+   "shared_stems": 3
+  },
+  "target": {
+   "a_rows": 4,
+   "b_rows": 4,
+   "a_malformed": 1,
+   "b_malformed": 0,
+   "a_distinct_identities": 3,
+   "b_distinct_identities": 4,
+   "a_distinct_stems": 3,
+   "b_distinct_stems": 4,
+   "shared_identities": 2,
+   "shared_identity_gold_conflict": 1,
+   "shared_stems": 3
+  }
+ },
+ "census": {
+  "a_rows": 7787,
+  "b_rows": 5957,
+  "a_malformed": 0,
+  "b_malformed": 0,
+  "a_distinct_identities": 7783,
+  "b_distinct_identities": 5894,
+  "a_distinct_stems": 7752,
+  "b_distinct_stems": 5793,
+  "shared_identities": 0,
+  "shared_identity_gold_conflict": 0,
+  "shared_stems": 3,
+  "examples": []
+ },
+ "predictions": {
+  "P1_arc_obqa_disjoint_by_identity": true,
+  "P2_no_shared_identity_gold_conflict": true,
+  "P3_arc_obqa_disjoint_by_stem": false
+ },
+ "note": "A question's identity is (normalized stem, frozenset of normalized choice texts); its gold is the TEXT of the choice whose label == answerKey. The census pools all six ARC splits (A) and the three OpenBookQA Main splits (B) and counts shared identities, shared-identity gold conflicts (a shared question labelled differently in the two datasets) and shared stems (same question text, looser signal). Rows whose answerKey matches no choice label are malformed and excluded from the identity/gold analysis."
+}

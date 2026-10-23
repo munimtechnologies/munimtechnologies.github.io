@@ -1,0 +1,206 @@
+{
+ "dataset": "WinoGrande 1.1 (Sakaguchi et al., AAAI 2020), Apache-2.0 / CC-BY",
+ "expected_rows_per_split": {
+  "xs": 160,
+  "s": 640,
+  "m": 2558,
+  "l": 10234,
+  "xl": 40398,
+  "dev": 1267
+ },
+ "observed_rows_per_split": {
+  "m": 2558,
+  "l": 10234,
+  "s": 640,
+  "dev": 1267,
+  "xl": 40398,
+  "xs": 160
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "A_rows": 3,
+   "A_unique_qids": 3,
+   "A_duplicate_qids": 0,
+   "A_unique_identity_keys": 3,
+   "A_identity_keys_multi": 0,
+   "A_identity_keys_conflict": 0,
+   "B_rows": 4,
+   "B_unique_qids": 4,
+   "B_duplicate_qids": 0,
+   "B_unique_identity_keys": 2,
+   "B_identity_keys_multi": 1,
+   "B_identity_keys_conflict": 1,
+   "nest_A_B_shared_qids": 2,
+   "nest_A_B_qids_only_in_smaller": 1,
+   "nest_A_B_shared_answer_conflict": 1
+  },
+  "target": {
+   "A_rows": 3,
+   "A_unique_qids": 3,
+   "A_duplicate_qids": 0,
+   "A_unique_identity_keys": 3,
+   "A_identity_keys_multi": 0,
+   "A_identity_keys_conflict": 0,
+   "B_rows": 4,
+   "B_unique_qids": 4,
+   "B_duplicate_qids": 0,
+   "B_unique_identity_keys": 2,
+   "B_identity_keys_multi": 1,
+   "B_identity_keys_conflict": 1,
+   "nest_A_B_shared_qids": 2,
+   "nest_A_B_qids_only_in_smaller": 1,
+   "nest_A_B_shared_answer_conflict": 1
+  }
+ },
+ "result": {
+  "within": {
+   "xs": {
+    "rows": 160,
+    "qid_missing": 0,
+    "unique_qids": 160,
+    "duplicate_qids": 0,
+    "qid_internal_answer_conflict": 0,
+    "unique_identity_keys": 160,
+    "identity_keys_multi": 0,
+    "identity_keys_conflict": 0
+   },
+   "s": {
+    "rows": 640,
+    "qid_missing": 0,
+    "unique_qids": 640,
+    "duplicate_qids": 0,
+    "qid_internal_answer_conflict": 0,
+    "unique_identity_keys": 638,
+    "identity_keys_multi": 2,
+    "identity_keys_conflict": 0
+   },
+   "m": {
+    "rows": 2558,
+    "qid_missing": 0,
+    "unique_qids": 2558,
+    "duplicate_qids": 0,
+    "qid_internal_answer_conflict": 0,
+    "unique_identity_keys": 2556,
+    "identity_keys_multi": 2,
+    "identity_keys_conflict": 0
+   },
+   "l": {
+    "rows": 10234,
+    "qid_missing": 0,
+    "unique_qids": 10234,
+    "duplicate_qids": 0,
+    "qid_internal_answer_conflict": 0,
+    "unique_identity_keys": 10232,
+    "identity_keys_multi": 2,
+    "identity_keys_conflict": 0
+   },
+   "xl": {
+    "rows": 40398,
+    "qid_missing": 0,
+    "unique_qids": 40398,
+    "duplicate_qids": 0,
+    "qid_internal_answer_conflict": 0,
+    "unique_identity_keys": 40394,
+    "identity_keys_multi": 4,
+    "identity_keys_conflict": 2
+   },
+   "dev": {
+    "rows": 1267,
+    "qid_missing": 0,
+    "unique_qids": 1267,
+    "duplicate_qids": 0,
+    "qid_internal_answer_conflict": 0,
+    "unique_identity_keys": 1267,
+    "identity_keys_multi": 0,
+    "identity_keys_conflict": 0
+   }
+  },
+  "nesting": {
+   "xs->s": {
+    "smaller_unique_qids": 160,
+    "larger_unique_qids": 640,
+    "shared_qids": 160,
+    "qids_only_in_smaller": 0,
+    "shared_answer_conflict": 0
+   },
+   "s->m": {
+    "smaller_unique_qids": 640,
+    "larger_unique_qids": 2558,
+    "shared_qids": 640,
+    "qids_only_in_smaller": 0,
+    "shared_answer_conflict": 0
+   },
+   "m->l": {
+    "smaller_unique_qids": 2558,
+    "larger_unique_qids": 10234,
+    "shared_qids": 2558,
+    "qids_only_in_smaller": 0,
+    "shared_answer_conflict": 0
+   },
+   "l->xl": {
+    "smaller_unique_qids": 10234,
+    "larger_unique_qids": 40398,
+    "shared_qids": 10234,
+    "qids_only_in_smaller": 0,
+    "shared_answer_conflict": 0
+   }
+  }
+ },
+ "dev_overlap_with_xl": {
+  "shared_qids": 0,
+  "shared_identities": 0
+ },
+ "label_cross_check": {
+  "m": {
+   "rows": 2558,
+   "lst_lines": 2558,
+   "mismatches": 0,
+   "note": ""
+  },
+  "l": {
+   "rows": 10234,
+   "lst_lines": 10234,
+   "mismatches": 0,
+   "note": ""
+  },
+  "s": {
+   "rows": 640,
+   "lst_lines": 640,
+   "mismatches": 0,
+   "note": ""
+  },
+  "dev": {
+   "rows": 1267,
+   "lst_lines": 1267,
+   "mismatches": 0,
+   "note": ""
+  },
+  "xl": {
+   "rows": 40398,
+   "lst_lines": 40398,
+   "mismatches": 0,
+   "note": ""
+  },
+  "xs": {
+   "rows": 160,
+   "lst_lines": 160,
+   "mismatches": 0,
+   "note": ""
+  }
+ },
+ "nesting_keys": [
+  "xs->s",
+  "s->m",
+  "m->l",
+  "l->xl"
+ ],
+ "predictions": {
+  "P1_nesting_holds_no_ids_lost": true,
+  "P2_no_cross_size_answer_conflict": true,
+  "P3_no_within_split_gold_conflict": false,
+  "P4_dev_disjoint_from_xl": true
+ },
+ "note": "Identity = normalized (sentence, option1, option2); gold = the jsonl 'answer' field ('1'/'2'). Nesting checks each smaller training size is a subset of the next larger by qID, with the same answer for shared qIDs. Within-split flags two questions with an identical identity but a different gold. dev_overlap_with_xl is a train/dev leakage check. label_cross_check compares the inline answers against the -labels.lst files by line order."
+}

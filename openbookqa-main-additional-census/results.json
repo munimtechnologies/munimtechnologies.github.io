@@ -1,0 +1,104 @@
+{
+ "dataset": "OpenBookQA-V1-Sep2018 (Mihaylov et al., EMNLP 2018), Apache-2.0",
+ "expected_rows_per_split": {
+  "train": 4957,
+  "dev": 500,
+  "test": 500
+ },
+ "observed_rows_per_split": {
+  "main": {
+   "train": 4957,
+   "test": 500,
+   "dev": 500
+  },
+  "additional": {
+   "test": 500,
+   "train": 4957,
+   "dev": 500
+  }
+ },
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "main_rows": 6,
+   "main_malformed": 0,
+   "main_unique_ids": 6,
+   "main_duplicate_ids": 0,
+   "main_unique_identity_keys": 4,
+   "main_identity_keys_multi": 2,
+   "main_identity_keys_conflict": 1,
+   "additional_rows": 6,
+   "additional_malformed": 0,
+   "additional_unique_ids": 6,
+   "additional_duplicate_ids": 0,
+   "additional_unique_identity_keys": 4,
+   "additional_identity_keys_multi": 2,
+   "additional_identity_keys_conflict": 1,
+   "crossfile_shared_ids": 5,
+   "crossfile_answerkey_agree": 4,
+   "crossfile_answerkey_disagree": 1,
+   "crossfile_answer_text_disagree": 1,
+   "crossfile_ids_only_in_main": 1,
+   "crossfile_ids_only_in_additional": 1
+  },
+  "target": {
+   "main_rows": 6,
+   "main_malformed": 0,
+   "main_unique_ids": 6,
+   "main_duplicate_ids": 0,
+   "main_unique_identity_keys": 4,
+   "main_identity_keys_multi": 2,
+   "main_identity_keys_conflict": 1,
+   "additional_rows": 6,
+   "additional_malformed": 0,
+   "additional_unique_ids": 6,
+   "additional_duplicate_ids": 0,
+   "additional_unique_identity_keys": 4,
+   "additional_identity_keys_multi": 2,
+   "additional_identity_keys_conflict": 1,
+   "crossfile_shared_ids": 5,
+   "crossfile_answerkey_agree": 4,
+   "crossfile_answerkey_disagree": 1,
+   "crossfile_answer_text_disagree": 1,
+   "crossfile_ids_only_in_main": 1,
+   "crossfile_ids_only_in_additional": 1
+  }
+ },
+ "result": {
+  "main": {
+   "rows": 5957,
+   "malformed": 0,
+   "unique_ids": 5957,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 5894,
+   "identity_keys_multi": 63,
+   "identity_keys_conflict": 1
+  },
+  "additional": {
+   "rows": 5957,
+   "malformed": 0,
+   "unique_ids": 5957,
+   "duplicate_ids": 0,
+   "unique_identity_keys": 5894,
+   "identity_keys_multi": 63,
+   "identity_keys_conflict": 1
+  },
+  "crossfile": {
+   "shared_ids": 5957,
+   "answerkey_agree": 5957,
+   "answerkey_disagree": 0,
+   "answer_text_disagree": 0,
+   "ids_only_in_main": 0,
+   "ids_only_in_additional": 0,
+   "examples": []
+  }
+ },
+ "predictions": {
+  "P1_crossfile_answerkey_disagree_eq_0": true,
+  "P2_no_ids_in_only_one_file": true,
+  "P3_no_within_file_gold_conflict": false,
+  "P4_duplicate_questions_ge_1": true
+ },
+ "note": "A question's identity is (normalized stem, sorted normalized choice texts); its gold is the TEXT of the choice whose label == answerKey. Cross-file compares Main/{split}.jsonl against Additional/{split}_complete.jsonl on every shared (split, id). Within-file flags two questions with an identical identity but different gold. Rows whose answerKey matches no choice label are malformed and excluded from the gold comparisons."
+}

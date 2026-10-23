@@ -1,0 +1,74 @@
+{
+ "dataset": "OpenBookQA-V1-Sep2018 Additional (Mihaylov et al., 2018), Apache-2.0 -- train+dev+test, each question annotated with its gold core fact fact1",
+ "expected_total": 5957,
+ "observed_total": 5957,
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_valid": 4,
+   "n_malformed": 1,
+   "n_gold_in_fact": 2,
+   "n_any_distractor_in_fact": 1,
+   "total_distractor_in_fact": 1,
+   "n_distractors_total": 4,
+   "n_fact_eq_a_choice": 1,
+   "n_fact_eq_gold_choice": 1
+  },
+  "target": {
+   "n_valid": 4,
+   "n_malformed": 1,
+   "n_gold_in_fact": 2,
+   "n_any_distractor_in_fact": 1,
+   "total_distractor_in_fact": 1,
+   "n_distractors_total": 4,
+   "n_fact_eq_a_choice": 1,
+   "n_fact_eq_gold_choice": 1
+  }
+ },
+ "census": {
+  "n_valid": 5957,
+  "n_malformed": 0,
+  "n_gold_in_fact": 379,
+  "n_any_distractor_in_fact": 97,
+  "total_distractor_in_fact": 105,
+  "n_distractors_total": 17871,
+  "n_fact_eq_a_choice": 0,
+  "n_fact_eq_gold_choice": 0,
+  "gold_coverage_rate": 0.06362262884002015,
+  "distractor_coverage_rate": 0.005875440658049354,
+  "examples": [
+   {
+    "id": "9-794",
+    "gold": "carbon",
+    "fact": "as the population of plants decreases , carbon in the atmosphere will increase"
+   },
+   {
+    "id": "1189",
+    "gold": "keeping warm",
+    "fact": "thick feathers can be used for keeping warm"
+   },
+   {
+    "id": "9-271",
+    "gold": "the circulatory system",
+    "fact": "the circulatory system carries oxygen from the digestive and respiratory systems to the rest of the body"
+   },
+   {
+    "id": "8-79",
+    "gold": "expand",
+    "fact": "as heat increases , a flexible container containing gas will expand"
+   },
+   {
+    "id": "1835",
+    "gold": "arctic",
+    "fact": "arctic animals live in an arctic environment"
+   }
+  ]
+ },
+ "predictions": {
+  "P1_gold_leaks_more_than_distractor": true,
+  "P2_some_gold_text_in_fact": true,
+  "P3_no_fact_equals_a_choice": true
+ },
+ "note": "For each Additional question, the gold answer is the choice whose label == answerKey and the gold fact is fact1. 'gold in fact' = the normalized gold text is a non-empty substring of the normalized fact; the same test is applied to each distractor. gold_coverage_rate = questions with gold-in-fact / valid questions; distractor_coverage_rate = distractor-in-fact hits / total distractors (option count controlled). Text is lowercased and whitespace-collapsed only (punctuation kept), so the leak counts are a conservative lower bound. n_fact_eq_a_choice counts verbatim fact==choice matches. Rows whose answerKey matches no choice label are malformed and excluded."
+}

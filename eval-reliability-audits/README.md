@@ -52,6 +52,7 @@ project asks.
 | 28 | [commonsenseqa-gold-conflict-census](../commonsenseqa-gold-conflict-census/) | CommonsenseQA duplicate (stem, option-set) questions, gold answer texts | 0 conflicts, 0 duplicate questions and 0 reused stems over 10,962 labelled rows; every question fully distinct |
 | 29 | [snli-multinli-overlap-census](../snli-multinli-overlap-census/) | identical (premise, hypothesis) pairs shared by SNLI and MultiNLI, gold labels | 0 exact + 0 normalized shared pairs over 568,404 SNLI and 412,222 MultiNLI pairs; the two corpora are fully disjoint, so merging them adds no cross-corpus duplicate or gold conflict |
 | 30 | [openbookqa-main-additional-census](../openbookqa-main-additional-census/) | OpenBookQA Main vs Additional answer-key agreement + within-file duplicate-question gold conflicts | Main and Additional agree on the answer key for all 5,957 shared ids (0 disagreements, 0 ids in only one file); of 63 duplicate (stem, choice-set) pairs per file, 1 carries a conflicting gold — present in both files |
+| 31 | [winogrande-nested-subset-census](../winogrande-nested-subset-census/) | WinoGrande train-size nesting (xs⊂s⊂m⊂l⊂xl), dev/train leakage, inline-vs-labels agreement, within-split gold conflicts | nesting is exact (0 ids lost, 0 cross-size gold flips across all 4 size steps), dev shares no id with train_xl, inline answers match the label files on all 55,257 rows; but train_xl holds 2 verbatim-identical questions with opposite gold |
 
 ## Licence
 

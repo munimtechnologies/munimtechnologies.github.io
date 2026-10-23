@@ -1,0 +1,95 @@
+{
+ "dataset": "QASC (Khot, Clark, Guerquin, Jansen and Sabharwal, 2020), CC BY -- train+validation (the annotated splits; the public test split has no answer key or facts), each an 8-way multiple-choice science question with two retrieved facts fact1/fact2 and a combinedfact stating their composition",
+ "expected_total": 9060,
+ "observed_total": 9060,
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_valid": 3,
+   "n_unannotated": 1,
+   "n_malformed": 1,
+   "n_distractors_total": 6,
+   "gold_in_fact1": 2,
+   "gold_in_fact2": 0,
+   "gold_in_combinedfact": 3,
+   "dist_in_fact1": 1,
+   "dist_in_fact2": 1,
+   "dist_in_combinedfact": 0,
+   "n_gold_in_either_single": 2,
+   "n_gold_in_combined_not_single": 1
+  },
+  "target": {
+   "n_valid": 3,
+   "n_unannotated": 1,
+   "n_malformed": 1,
+   "n_distractors_total": 6,
+   "gold_in_fact1": 2,
+   "gold_in_fact2": 0,
+   "gold_in_combinedfact": 3,
+   "dist_in_fact1": 1,
+   "dist_in_fact2": 1,
+   "dist_in_combinedfact": 0,
+   "n_gold_in_either_single": 2,
+   "n_gold_in_combined_not_single": 1
+  }
+ },
+ "census": {
+  "n_valid": 9060,
+  "n_unannotated": 0,
+  "n_malformed": 0,
+  "n_distractors_total": 63420,
+  "gold_in_fact1": 2792,
+  "gold_in_fact2": 4401,
+  "gold_in_combinedfact": 7940,
+  "dist_in_fact1": 605,
+  "dist_in_fact2": 418,
+  "dist_in_combinedfact": 467,
+  "n_gold_in_either_single": 6789,
+  "n_gold_in_combined_not_single": 1287,
+  "gold_rate_fact1": 0.30816777041942606,
+  "gold_rate_fact2": 0.4857615894039735,
+  "gold_rate_combinedfact": 0.8763796909492274,
+  "dist_rate_fact1": 0.009539577420372123,
+  "dist_rate_fact2": 0.006590980763166194,
+  "dist_rate_combinedfact": 0.007363607694733523,
+  "examples": [
+   {
+    "gold": "vapor turning into a liquid",
+    "fact1": "beads of water are formed by water vapor condensing",
+    "fact2": "condensation is the change of water vapor to a liquid.",
+    "combinedfact": "vapor turning into a liquid leaves behind beads of water"
+   },
+   {
+    "gold": "on cold surfaces",
+    "fact1": "beads of water are formed by water vapor condensing",
+    "fact2": "moisture builds up in the air and condenses wherever the surfaces are cold.",
+    "combinedfact": "water beads form on cold surfaces."
+   },
+   {
+    "gold": "preserves it",
+    "fact1": "dehydrating food is used for preserving food",
+    "fact2": "foods usually were covered with copious quantities of salt or saturated salt brine, and the salt was allowed to infuse i",
+    "combinedfact": "salting food preserves it"
+   },
+   {
+    "gold": "last longer",
+    "fact1": "dehydrating food is used for preserving food",
+    "fact2": "to keep cut flowers lasting longer, use a commercial florist preservative such as floralife.",
+    "combinedfact": "dehydrating food is used to make it last longer."
+   },
+   {
+    "gold": "preserved",
+    "fact1": "dehydrating food is used for preserving food",
+    "fact2": "some food is dehydrated, while others are dried much like beef jerky.",
+    "combinedfact": "beef jerky is preserved"
+   }
+  ]
+ },
+ "predictions": {
+  "P1_combined_leaks_more_than_distractor": true,
+  "P2_combined_leaks_more_than_single_facts": true,
+  "P3_combined_leaks_for_majority": true
+ },
+ "note": "For each annotated QASC question the gold answer is the choice whose label == answerKey and the distractors are the other choices. 'gold in <field>' = the normalized gold text is a non-empty substring of the normalized fact field (fact1, fact2 or combinedfact); the same test is applied to each distractor. gold_rate_<field> = valid questions whose gold is in that field / valid questions; dist_rate_<field> = distractor-in-field hits / total distractors (option count controlled). n_gold_in_either_single counts valid questions whose gold is in fact1 or fact2; n_gold_in_combined_not_single counts those whose gold is in the combinedfact but in neither single fact -- the composition-only leaks. Text is lowercased and whitespace-collapsed only (punctuation kept), so every rate is a conservative lower bound. Rows whose answerKey matches no choice are malformed and excluded; rows with no answerKey are unannotated and excluded."
+}

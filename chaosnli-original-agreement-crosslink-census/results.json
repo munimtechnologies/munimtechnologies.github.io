@@ -1,0 +1,297 @@
+{
+ "dataset": "ChaosNLI v1.0 (Nie, Zhou, Bansal, EMNLP 2020) joined to the original SNLI 1.0 (dev+test) and MultiNLI 1.0 (matched+mismatched dev) examples by uid == pairID. For each re-annotated example we read the ORIGINAL gold_label and up to 5 annotator_labels and the 100 ChaosNLI votes, and cross-tabulate the 100-vote outcome by original agreement level.",
+ "chaos_source": "earino/chaosnli HF auto-converted parquet (refs/convert/parquet), downloaded by job.py with retries; falls back to a loose jsonl or the official zip if present.",
+ "n_chaos_records": 3113,
+ "n_joined": 3113,
+ "n_orphan": 0,
+ "join_coverage": 1.0,
+ "orphan_sample": {
+  "snli": [],
+  "mnli_m": []
+ },
+ "index_sizes": {
+  "snli": 20000,
+  "mnli_m": 19973
+ },
+ "expected_subset_rows": {
+  "snli": 1514,
+  "mnli_m": 1599
+ },
+ "chaos_subset_rows": {
+  "snli": 1514,
+  "mnli_m": 1599
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_joined": 7,
+   "n_orig_gold_valid": 6,
+   "n_orig_gold_dash": 1,
+   "n_old_eq_origgold": 5,
+   "b5_n": 2,
+   "b5_old_eq_plur": 2,
+   "b5_old_diff_plur": 0,
+   "b5_strict": 2,
+   "b5_no_strict": 0,
+   "b4_n": 2,
+   "b4_old_eq_plur": 2,
+   "b4_old_diff_plur": 0,
+   "b4_strict": 2,
+   "b4_no_strict": 0,
+   "b3_n": 2,
+   "b3_old_eq_plur": 1,
+   "b3_old_diff_plur": 1,
+   "b3_strict": 0,
+   "b3_no_strict": 2,
+   "bdash_n": 1,
+   "bdash_old_eq_plur": 1,
+   "bdash_old_diff_plur": 0,
+   "bdash_strict": 1,
+   "bdash_no_strict": 0,
+   "bother_n": 0,
+   "bother_old_eq_plur": 0,
+   "bother_old_diff_plur": 0,
+   "bother_strict": 0,
+   "bother_no_strict": 0
+  },
+  "target": {
+   "n_joined": 7,
+   "n_orig_gold_valid": 6,
+   "n_orig_gold_dash": 1,
+   "n_old_eq_origgold": 5,
+   "b5_n": 2,
+   "b5_old_eq_plur": 2,
+   "b5_old_diff_plur": 0,
+   "b5_strict": 2,
+   "b5_no_strict": 0,
+   "b4_n": 2,
+   "b4_old_eq_plur": 2,
+   "b4_old_diff_plur": 0,
+   "b4_strict": 2,
+   "b4_no_strict": 0,
+   "b3_n": 2,
+   "b3_old_eq_plur": 1,
+   "b3_old_diff_plur": 1,
+   "b3_strict": 0,
+   "b3_no_strict": 2,
+   "bdash_n": 1,
+   "bdash_old_eq_plur": 1,
+   "bdash_old_diff_plur": 0,
+   "bdash_strict": 1,
+   "bdash_no_strict": 0,
+   "bother_n": 0,
+   "bother_old_eq_plur": 0,
+   "bother_old_diff_plur": 0,
+   "bother_strict": 0,
+   "bother_no_strict": 0
+  }
+ },
+ "overall": {
+  "totals": {
+   "n_joined": 3113,
+   "n_orig_gold_valid": 3113,
+   "n_orig_gold_dash": 0,
+   "n_old_eq_origgold": 3113
+  },
+  "buckets": {
+   "5": {
+    "n": 0,
+    "old_eq_plur": 0,
+    "old_diff_plur": 0,
+    "strict": 0,
+    "no_strict": 0
+   },
+   "4": {
+    "n": 0,
+    "old_eq_plur": 0,
+    "old_diff_plur": 0,
+    "strict": 0,
+    "no_strict": 0
+   },
+   "3": {
+    "n": 3113,
+    "old_eq_plur": 2213,
+    "old_diff_plur": 872,
+    "strict": 2802,
+    "no_strict": 311
+   },
+   "dash": {
+    "n": 0,
+    "old_eq_plur": 0,
+    "old_diff_plur": 0,
+    "strict": 0,
+    "no_strict": 0
+   },
+   "other": {
+    "n": 0,
+    "old_eq_plur": 0,
+    "old_diff_plur": 0,
+    "strict": 0,
+    "no_strict": 0
+   }
+  }
+ },
+ "per_subset": {
+  "snli": {
+   "n_joined": 1514,
+   "n_orig_gold_valid": 1514,
+   "n_orig_gold_dash": 0,
+   "n_old_eq_origgold": 1514,
+   "b5_n": 0,
+   "b5_old_eq_plur": 0,
+   "b5_old_diff_plur": 0,
+   "b5_strict": 0,
+   "b5_no_strict": 0,
+   "b4_n": 0,
+   "b4_old_eq_plur": 0,
+   "b4_old_diff_plur": 0,
+   "b4_strict": 0,
+   "b4_no_strict": 0,
+   "b3_n": 1514,
+   "b3_old_eq_plur": 1129,
+   "b3_old_diff_plur": 371,
+   "b3_strict": 1445,
+   "b3_no_strict": 69,
+   "bdash_n": 0,
+   "bdash_old_eq_plur": 0,
+   "bdash_old_diff_plur": 0,
+   "bdash_strict": 0,
+   "bdash_no_strict": 0,
+   "bother_n": 0,
+   "bother_old_eq_plur": 0,
+   "bother_old_diff_plur": 0,
+   "bother_strict": 0,
+   "bother_no_strict": 0
+  },
+  "mnli_m": {
+   "n_joined": 1599,
+   "n_orig_gold_valid": 1599,
+   "n_orig_gold_dash": 0,
+   "n_old_eq_origgold": 1599,
+   "b5_n": 0,
+   "b5_old_eq_plur": 0,
+   "b5_old_diff_plur": 0,
+   "b5_strict": 0,
+   "b5_no_strict": 0,
+   "b4_n": 0,
+   "b4_old_eq_plur": 0,
+   "b4_old_diff_plur": 0,
+   "b4_strict": 0,
+   "b4_no_strict": 0,
+   "b3_n": 1599,
+   "b3_old_eq_plur": 1084,
+   "b3_old_diff_plur": 501,
+   "b3_strict": 1357,
+   "b3_no_strict": 242,
+   "bdash_n": 0,
+   "bdash_old_eq_plur": 0,
+   "bdash_old_diff_plur": 0,
+   "bdash_strict": 0,
+   "bdash_no_strict": 0,
+   "bother_n": 0,
+   "bother_old_eq_plur": 0,
+   "bother_old_diff_plur": 0,
+   "bother_strict": 0,
+   "bother_no_strict": 0
+  }
+ },
+ "rates": {
+  "overall": {
+   "no_strict_unanimous": 0.0,
+   "no_strict_bare_majority": 0.09990362993896562,
+   "no_strict_four": 0.0,
+   "old_flip_unanimous": 0.0,
+   "old_flip_bare_majority": 0.2826580226904376,
+   "old_flip_four": 0.0
+  }
+ },
+ "predictions": {
+  "P1_join_coverage_at_least_99pct": true,
+  "P2_unanimous_less_ambiguous_than_bare_majority": true,
+  "P3_bare_majority_flips_more_than_unanimous": true
+ },
+ "examples_orig_unanimous_no_strict": [],
+ "examples_bare_majority_flipped": [
+  {
+   "uid": "3948003394.jpg#1r1n",
+   "subset": "snli",
+   "old": "c",
+   "plurality": "n",
+   "counts": [
+    2,
+    77,
+    21
+   ],
+   "names": [
+    "e",
+    "n",
+    "c"
+   ]
+  },
+  {
+   "uid": "3261712960.jpg#0r1c",
+   "subset": "snli",
+   "old": "c",
+   "plurality": "n",
+   "counts": [
+    22,
+    55,
+    23
+   ],
+   "names": [
+    "e",
+    "n",
+    "c"
+   ]
+  },
+  {
+   "uid": "3261712960.jpg#0r1e",
+   "subset": "snli",
+   "old": "n",
+   "plurality": "e",
+   "counts": [
+    49,
+    36,
+    15
+   ],
+   "names": [
+    "e",
+    "n",
+    "c"
+   ]
+  },
+  {
+   "uid": "2537197415.jpg#3r1n",
+   "subset": "snli",
+   "old": "e",
+   "plurality": "n",
+   "counts": [
+    42,
+    58,
+    0
+   ],
+   "names": [
+    "e",
+    "n",
+    "c"
+   ]
+  },
+  {
+   "uid": "3690358925.jpg#3r1e",
+   "subset": "snli",
+   "old": "e",
+   "plurality": "n",
+   "counts": [
+    30,
+    69,
+    1
+   ],
+   "names": [
+    "e",
+    "n",
+    "c"
+   ]
+  }
+ ],
+ "note": "Buckets are by how many of the up to 5 ORIGINAL annotators agreed with the original gold (5 unanimous, 4, 3 bare majority) or 'dash' when the original gold was '-' (no majority). For each bucket we count how often ChaosNLI's old gold still equals the 100-vote plurality (old_eq_plur) vs flips (old_diff_plur), and how often the 100 votes reach a strict (>50) majority (strict) vs none (no_strict). P1 is a structural coverage bet; P2 and P3 are directional (a finding either way), with the exact per-bucket rates reported. ChaosNLI is CC BY-NC 4.0; this audit reads the official release and reports counts, it does not redistribute it."
+}

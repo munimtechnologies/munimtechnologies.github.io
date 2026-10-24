@@ -1,0 +1,91 @@
+{
+ "dataset": "MultiNLI 1.0 (Williams, Nangia, Bowman, NAACL 2018), validated five-vote dev_matched + dev_mismatched splits read from multinli_1.0.zip. Each valid-gold row is bucketed by its normalised gold (entailment / neutral / contradiction) and tallied for unanimity and individual annotator agreement; '-' (no-majority) rows are counted separately. Uses the same census module as audit 42 (SNLI), so the two per-class tables are directly comparable.",
+ "members_read": {
+  "multinli_1.0_dev_mismatched.jsonl": 10000,
+  "multinli_1.0_dev_matched.jsonl": 10000
+ },
+ "n_total": 20000,
+ "n_valid": 19647,
+ "n_dash": 353,
+ "rows_as_expected": true,
+ "expected_total_rows": 20000,
+ "aggregate_individual_agreement": 0.8885427800682038,
+ "unanimous_rate_spread": 0.2327380947069509,
+ "unanimous_rate_ordering_high_to_low": [
+  "c",
+  "e",
+  "n"
+ ],
+ "per_label": {
+  "e": {
+   "n": 6942,
+   "unanimous": 4417,
+   "unanimous_rate": 0.6362719677326419,
+   "individual_agreement_rate": 0.8997983290118121,
+   "gold_eq_majority": 6942
+  },
+  "n": {
+   "n": 6252,
+   "unanimous": 2866,
+   "unanimous_rate": 0.4584133077415227,
+   "individual_agreement_rate": 0.8467370441458734,
+   "gold_eq_majority": 6252
+  },
+  "c": {
+   "n": 6453,
+   "unanimous": 4460,
+   "unanimous_rate": 0.6911514024484736,
+   "individual_agreement_rate": 0.9169378583604525,
+   "gold_eq_majority": 6453
+  }
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_total": 6,
+   "n_dash": 1,
+   "n_valid": 5,
+   "e_n": 2,
+   "e_unanimous": 1,
+   "e_labels_total": 10,
+   "e_labels_agree": 8,
+   "e_gold_eq_majority": 2,
+   "n_n": 2,
+   "n_unanimous": 0,
+   "n_labels_total": 10,
+   "n_labels_agree": 7,
+   "n_gold_eq_majority": 2,
+   "c_n": 1,
+   "c_unanimous": 1,
+   "c_labels_total": 5,
+   "c_labels_agree": 5,
+   "c_gold_eq_majority": 1
+  },
+  "target": {
+   "n_total": 6,
+   "n_dash": 1,
+   "n_valid": 5,
+   "e_n": 2,
+   "e_unanimous": 1,
+   "e_labels_total": 10,
+   "e_labels_agree": 8,
+   "e_gold_eq_majority": 2,
+   "n_n": 2,
+   "n_unanimous": 0,
+   "n_labels_total": 10,
+   "n_labels_agree": 7,
+   "n_gold_eq_majority": 2,
+   "c_n": 1,
+   "c_unanimous": 1,
+   "c_labels_total": 5,
+   "c_labels_agree": 5,
+   "c_gold_eq_majority": 1
+  }
+ },
+ "predictions": {
+  "P1_gold_is_strict_majority_in_every_class": true,
+  "P2_neutral_less_unanimous_than_entailment": true,
+  "P3_unanimous_rate_spread_exceeds_0_05": true
+ },
+ "note": "Unanimous = all five annotators chose the gold. 'individual_agreement_rate' is the share of individual annotator labels equal to the gold (the MultiNLI paper's agreement statistic), reported per class and in aggregate. P1 is a by-construction check (expected to hold, as audit 38 verified across all splits); P2 and P3 are directional bets, a finding either way, with the exact per-class rates reported. This audit measures annotator AGREEMENT per class, not label correctness: a unanimous gold can still be wrong and a '-' row is not an error. It covers only the validated dev_matched + dev_mismatched splits (MultiNLI train is single-annotator, see audit 38). This audit reads the official release and reports counts; it does not redistribute MultiNLI."
+}

@@ -1,0 +1,107 @@
+{
+ "dataset": "MultiNLI 1.0 (Williams, Nangia and Bowman, 2018), OANC-derived, released for research -- the raw train/dev_matched/dev_mismatched jsonl splits read straight from multinli_1.0.zip, each row carrying an annotator_labels list and a single gold_label",
+ "raw_split_total_expected": {
+  "train": 392702,
+  "dev_matched": 9815,
+  "dev_mismatched": 9832
+ },
+ "rows_as_expected": false,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_total": 5,
+   "n_labeled": 4,
+   "n_no_consensus": 1,
+   "n_no_annotators": 0,
+   "n_gold_matches_majority": 3,
+   "n_gold_mismatch_majority": 1,
+   "n_labeled_without_majority": 0,
+   "n_no_consensus_with_majority": 0,
+   "n_multi": 4,
+   "n_unanimous_multi": 1
+  },
+  "target": {
+   "n_total": 5,
+   "n_labeled": 4,
+   "n_no_consensus": 1,
+   "n_no_annotators": 0,
+   "n_gold_matches_majority": 3,
+   "n_gold_mismatch_majority": 1,
+   "n_labeled_without_majority": 0,
+   "n_no_consensus_with_majority": 0,
+   "n_multi": 4,
+   "n_unanimous_multi": 1
+  }
+ },
+ "per_split": {
+  "train": {
+   "n_total": 392702,
+   "n_labeled": 392702,
+   "n_no_consensus": 0,
+   "n_no_annotators": 0,
+   "n_gold_matches_majority": 392702,
+   "n_gold_mismatch_majority": 0,
+   "n_labeled_without_majority": 0,
+   "n_no_consensus_with_majority": 0,
+   "n_multi": 0,
+   "n_unanimous_multi": 0,
+   "agreement_hist": {
+    "1": 392702
+   },
+   "examples_mismatch": [],
+   "examples_consensus_with_majority": []
+  },
+  "dev_matched": {
+   "n_total": 10000,
+   "n_labeled": 9815,
+   "n_no_consensus": 185,
+   "n_no_annotators": 0,
+   "n_gold_matches_majority": 9815,
+   "n_gold_mismatch_majority": 0,
+   "n_labeled_without_majority": 0,
+   "n_no_consensus_with_majority": 0,
+   "n_multi": 10000,
+   "n_unanimous_multi": 5759,
+   "agreement_hist": {
+    "5": 10000
+   },
+   "examples_mismatch": [],
+   "examples_consensus_with_majority": []
+  },
+  "dev_mismatched": {
+   "n_total": 10000,
+   "n_labeled": 9832,
+   "n_no_consensus": 168,
+   "n_no_annotators": 0,
+   "n_gold_matches_majority": 9832,
+   "n_gold_mismatch_majority": 0,
+   "n_labeled_without_majority": 0,
+   "n_no_consensus_with_majority": 0,
+   "n_multi": 10000,
+   "n_unanimous_multi": 5984,
+   "agreement_hist": {
+    "5": 10000
+   },
+   "examples_mismatch": [],
+   "examples_consensus_with_majority": []
+  }
+ },
+ "totals": {
+  "n_gold_mismatch_majority": 0,
+  "n_labeled_without_majority": 0,
+  "n_no_consensus_with_majority": 0,
+  "no_consensus_counts": {
+   "train": 0,
+   "dev_matched": 185,
+   "dev_mismatched": 168
+  },
+  "train_single_label": true,
+  "dev_fully_multi": true
+ },
+ "predictions": {
+  "P1_gold_is_strict_majority_everywhere": true,
+  "P2_no_consensus_rows_have_no_majority": true,
+  "P3_train_unvalidated_single_label_dev_fully_validated": true
+ },
+ "note": "For each MultiNLI row the gold is gold_label and the annotators are annotator_labels. strict majority = a label held by more than half the annotators. A labeled row (gold in entailment/neutral/contradiction) is checked for gold == strict majority and for having a majority at all; a '-' row is checked for having no majority. n_gold_mismatch_majority, n_labeled_without_majority and n_no_consensus_with_majority should all be 0 if the documented derivation and filter rules hold. MultiNLI validated only its dev and test sets, so train is expected to be entirely single-annotator with no '-' rows (hist {1: 392702}), unlike SNLI's train, whose file holds a validated subset. The per-split no_consensus counts are the first published row-by-row figures for this release; they are reported, not pre-bet on an exact number. n_multi counts rows with >= 2 annotators and n_unanimous_multi those whose annotators all agree."
+}

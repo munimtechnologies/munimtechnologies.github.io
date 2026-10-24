@@ -1,0 +1,86 @@
+{
+ "dataset": "SNLI 1.0 (Bowman, Angeli, Potts, Manning, EMNLP 2015), validated five-vote dev + test splits read from snli_1.0.zip. Each valid-gold row is bucketed by its normalised gold (entailment / neutral / contradiction) and tallied for unanimity and individual annotator agreement; '-' (no-majority) rows are counted separately.",
+ "members_read": {
+  "snli_1.0_dev.jsonl": 10000,
+  "snli_1.0_test.jsonl": 10000
+ },
+ "n_total": 20000,
+ "n_valid": 19666,
+ "n_dash": 334,
+ "rows_as_expected": true,
+ "expected_total_rows": 20000,
+ "aggregate_individual_agreement": 0.8790051876716509,
+ "unanimous_rate_spread": 0.25034982796963745,
+ "per_label": {
+  "e": {
+   "n": 6697,
+   "unanimous": 3907,
+   "unanimous_rate": 0.583395550246379,
+   "individual_agreement_rate": 0.8877139528631598,
+   "gold_eq_majority": 6697
+  },
+  "n": {
+   "n": 6454,
+   "unanimous": 2642,
+   "unanimous_rate": 0.40935853734118377,
+   "individual_agreement_rate": 0.8372388568594632,
+   "gold_eq_majority": 6454
+  },
+  "c": {
+   "n": 6515,
+   "unanimous": 4298,
+   "unanimous_rate": 0.6597083653108212,
+   "individual_agreement_rate": 0.9114242731264008,
+   "gold_eq_majority": 6515
+  }
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_total": 6,
+   "n_dash": 1,
+   "n_valid": 5,
+   "e_n": 2,
+   "e_unanimous": 1,
+   "e_labels_total": 10,
+   "e_labels_agree": 8,
+   "e_gold_eq_majority": 2,
+   "n_n": 2,
+   "n_unanimous": 0,
+   "n_labels_total": 10,
+   "n_labels_agree": 7,
+   "n_gold_eq_majority": 2,
+   "c_n": 1,
+   "c_unanimous": 1,
+   "c_labels_total": 5,
+   "c_labels_agree": 5,
+   "c_gold_eq_majority": 1
+  },
+  "target": {
+   "n_total": 6,
+   "n_dash": 1,
+   "n_valid": 5,
+   "e_n": 2,
+   "e_unanimous": 1,
+   "e_labels_total": 10,
+   "e_labels_agree": 8,
+   "e_gold_eq_majority": 2,
+   "n_n": 2,
+   "n_unanimous": 0,
+   "n_labels_total": 10,
+   "n_labels_agree": 7,
+   "n_gold_eq_majority": 2,
+   "c_n": 1,
+   "c_unanimous": 1,
+   "c_labels_total": 5,
+   "c_labels_agree": 5,
+   "c_gold_eq_majority": 1
+  }
+ },
+ "predictions": {
+  "P1_gold_is_strict_majority_in_every_class": true,
+  "P2_neutral_less_unanimous_than_entailment": true,
+  "P3_unanimous_rate_spread_exceeds_0_05": true
+ },
+ "note": "Unanimous = all five annotators chose the gold. 'individual_agreement_rate' is the share of individual annotator labels equal to the gold (the SNLI paper's agreement statistic), reported per class and in aggregate. P1 is a by-construction check (expected to hold, as audit 37 verified across all splits); P2 and P3 are directional bets, a finding either way, with the exact per-class rates reported. This audit measures annotator AGREEMENT per class, not label correctness: a unanimous gold can still be wrong and a '-' row is not an error. It covers only the validated dev + test splits (SNLI train is largely single-annotator). This audit reads the official release and reports counts; it does not redistribute SNLI."
+}

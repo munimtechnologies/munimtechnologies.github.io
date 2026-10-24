@@ -1,0 +1,534 @@
+{
+ "dataset": "ChaosNLI v1.0 (Nie, Zhou and Bansal, EMNLP 2020): 100 fresh crowd annotations per example for samples of the SNLI, MNLI-matched and alphaNLI development sets. Each record carries old_label (the original 5-annotator benchmark gold), majority_label (the 100-annotation plurality), and label_count (per-label vote counts summing to 100). Unlike SNLI/MultiNLI (audits 37/38) the comparison here is non-tautological: it pits the original gold against an independent, much larger annotation round.",
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_records": 5,
+   "n_sum100": 5,
+   "n_old_eq_majority": 4,
+   "n_old_differs_majority": 1,
+   "n_majority_eq_plurality": 5,
+   "n_strict_exists": 2,
+   "n_no_strict_majority": 3,
+   "n_old_eq_strict": 1,
+   "n_old_differs_strict": 1,
+   "n_old_on_no_strict": 3
+  },
+  "target": {
+   "n_records": 5,
+   "n_sum100": 5,
+   "n_old_eq_majority": 4,
+   "n_old_differs_majority": 1,
+   "n_majority_eq_plurality": 5,
+   "n_strict_exists": 2,
+   "n_no_strict_majority": 3,
+   "n_old_eq_strict": 1,
+   "n_old_differs_strict": 1,
+   "n_old_on_no_strict": 3
+  }
+ },
+ "subset_rows_expected": {
+  "snli": 1514,
+  "mnli_m": 1599,
+  "alphanli": 1532
+ },
+ "card_old_differs_majority_expected": {
+  "snli": 378,
+  "mnli_m": 508
+ },
+ "per_subset": {
+  "alphanli": {
+   "n_records": 1532,
+   "n_sum100": 1532,
+   "n_old_eq_majority": 1369,
+   "n_old_differs_majority": 163,
+   "n_majority_eq_plurality": 1524,
+   "n_strict_exists": 1524,
+   "n_no_strict_majority": 8,
+   "n_old_eq_strict": 1367,
+   "n_old_differs_strict": 157,
+   "n_old_on_no_strict": 8,
+   "entropy_mean": 0.4143120105701698,
+   "entropy_max": 1.0,
+   "examples_old_differs_majority": [
+    {
+     "uid": "6395a2c4-3d82-438d-b72e-c437a0094f28-1",
+     "old": "1",
+     "majority": "2",
+     "counts": [
+      15,
+      85
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "42e384fe-399a-4f32-b01c-fe294bf5743c-1",
+     "old": "1",
+     "majority": "2",
+     "counts": [
+      46,
+      54
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "4dc40bfe-a71b-4fe6-a432-6db883a4eafb-1",
+     "old": "1",
+     "majority": "2",
+     "counts": [
+      16,
+      84
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "8c5a16a4-a621-479d-ba9e-a854d1b84c15-1",
+     "old": "1",
+     "majority": "2",
+     "counts": [
+      43,
+      57
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "50af3182-9fc4-4f20-8dfc-d36e16a3c8a4-1",
+     "old": "2",
+     "majority": "1",
+     "counts": [
+      91,
+      9
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    }
+   ],
+   "examples_no_strict_with_old": [
+    {
+     "uid": "a1af5c72-d6ec-471b-809d-cb9270db4eb4-1",
+     "old": "2",
+     "counts": [
+      50,
+      50
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "60112710-5083-49a2-ad00-f41b325a5c82-1",
+     "old": "2",
+     "counts": [
+      50,
+      50
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "ee4ef74a-3b3e-4ce1-b013-09cdf05b41d4-1",
+     "old": "2",
+     "counts": [
+      50,
+      50
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "e6aa4d18-ca05-41c2-a28b-067c52d59be11",
+     "old": "1",
+     "counts": [
+      50,
+      50
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    },
+    {
+     "uid": "f1e2a35f-bdf3-4645-a9a2-af7810affb2c-1",
+     "old": "1",
+     "counts": [
+      50,
+      50
+     ],
+     "names": [
+      "1",
+      "2"
+     ]
+    }
+   ]
+  },
+  "mnli_m": {
+   "n_records": 1599,
+   "n_sum100": 1599,
+   "n_old_eq_majority": 1091,
+   "n_old_differs_majority": 508,
+   "n_majority_eq_plurality": 1585,
+   "n_strict_exists": 1357,
+   "n_no_strict_majority": 242,
+   "n_old_eq_strict": 964,
+   "n_old_differs_strict": 393,
+   "n_old_on_no_strict": 242,
+   "entropy_mean": 1.0717955619478583,
+   "entropy_max": 1.584381457724494,
+   "examples_old_differs_majority": [
+    {
+     "uid": "20648n",
+     "old": "n",
+     "majority": "e",
+     "counts": [
+      48,
+      45,
+      7
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "67610c",
+     "old": "c",
+     "majority": "e",
+     "counts": [
+      48,
+      12,
+      40
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "47639c",
+     "old": "n",
+     "majority": "c",
+     "counts": [
+      2,
+      46,
+      52
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "140440e",
+     "old": "e",
+     "majority": "n",
+     "counts": [
+      28,
+      64,
+      8
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "79141n",
+     "old": "n",
+     "majority": "e",
+     "counts": [
+      76,
+      24,
+      0
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    }
+   ],
+   "examples_no_strict_with_old": [
+    {
+     "uid": "20648n",
+     "old": "n",
+     "counts": [
+      48,
+      45,
+      7
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "67610c",
+     "old": "c",
+     "counts": [
+      48,
+      12,
+      40
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "77299n",
+     "old": "n",
+     "counts": [
+      46,
+      45,
+      9
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "56320c",
+     "old": "c",
+     "counts": [
+      16,
+      42,
+      42
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "48300n",
+     "old": "n",
+     "counts": [
+      15,
+      43,
+      42
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    }
+   ]
+  },
+  "snli": {
+   "n_records": 1514,
+   "n_sum100": 1514,
+   "n_old_eq_majority": 1136,
+   "n_old_differs_majority": 378,
+   "n_majority_eq_plurality": 1500,
+   "n_strict_exists": 1445,
+   "n_no_strict_majority": 69,
+   "n_old_eq_strict": 1104,
+   "n_old_differs_strict": 341,
+   "n_old_on_no_strict": 69,
+   "entropy_mean": 0.7980137586545453,
+   "entropy_max": 1.5830689115989398,
+   "examples_old_differs_majority": [
+    {
+     "uid": "3948003394.jpg#1r1n",
+     "old": "c",
+     "majority": "n",
+     "counts": [
+      2,
+      77,
+      21
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "3261712960.jpg#0r1c",
+     "old": "c",
+     "majority": "n",
+     "counts": [
+      22,
+      55,
+      23
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "3261712960.jpg#0r1e",
+     "old": "n",
+     "majority": "e",
+     "counts": [
+      49,
+      36,
+      15
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "2537197415.jpg#3r1n",
+     "old": "e",
+     "majority": "n",
+     "counts": [
+      42,
+      58,
+      0
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "3690358925.jpg#3r1e",
+     "old": "e",
+     "majority": "n",
+     "counts": [
+      30,
+      69,
+      1
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    }
+   ],
+   "examples_no_strict_with_old": [
+    {
+     "uid": "3261712960.jpg#0r1e",
+     "old": "n",
+     "counts": [
+      49,
+      36,
+      15
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "3271178748.jpg#0r1n",
+     "old": "c",
+     "counts": [
+      36,
+      33,
+      31
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "2853682342.jpg#1r1n",
+     "old": "e",
+     "counts": [
+      43,
+      48,
+      9
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "4696903210.jpg#1r1n",
+     "old": "e",
+     "counts": [
+      47,
+      47,
+      6
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    },
+    {
+     "uid": "5075833333.jpg#3r1c",
+     "old": "c",
+     "counts": [
+      42,
+      26,
+      32
+     ],
+     "names": [
+      "e",
+      "n",
+      "c"
+     ]
+    }
+   ]
+  }
+ },
+ "rates": {
+  "alphanli": {
+   "old_differs_majority_frac": 0.10639686684073107,
+   "no_strict_majority_frac": 0.005221932114882507,
+   "old_on_no_strict_frac": 0.005221932114882507
+  },
+  "mnli_m": {
+   "old_differs_majority_frac": 0.31769856160100063,
+   "no_strict_majority_frac": 0.15134459036898062,
+   "old_on_no_strict_frac": 0.15134459036898062
+  },
+  "snli": {
+   "old_differs_majority_frac": 0.24966974900924702,
+   "no_strict_majority_frac": 0.04557463672391017,
+   "old_on_no_strict_frac": 0.04557463672391017
+  }
+ },
+ "predictions": {
+  "P1_old_differs_majority_matches_card": true,
+  "P2_all_counts_sum_to_100": true,
+  "P3_some_examples_lack_strict_majority_at_100": true
+ },
+ "note": "For each example we read label_count (per-label votes, sum 100), the original gold old_label, and ChaosNLI's majority_label (a plurality / argmax). strict_majority = a label with strictly more than half (> 50) of the 100 votes; plurality = the unique argmax (a tie at the top -> none). n_old_differs_majority verifies ChaosNLI's documented old-vs-plurality disagreement (378 SNLI / 508 MNLI). n_no_strict_majority counts examples where even 100 fresh annotators reach no strict majority, yet the benchmark assigns one hard gold label; n_old_on_no_strict counts how many of those still carry an old gold. n_majority_eq_plurality checks that ChaosNLI's majority_label equals our recomputed argmax. P1 verifies the documented disagreement counts; P2 that every label_count sums to 100; P3 (direction only, exact count reported) that a nonzero number of examples lack a strict 100-vote majority. alphaNLI is reported (2-choice) but not bet on; headline predictions are on the two 3-way subsets."
+}

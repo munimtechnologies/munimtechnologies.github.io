@@ -1,0 +1,148 @@
+{
+ "dataset": "OpenBookQA main (allenai/openbookqa), ARC-Easy and ARC-Challenge (allenai/ai2_arc), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. For each multiple-choice question this audit measures, per benchmark, how the length of the gold option compares with its distractors -- by characters (after stripping) and by whitespace tokens -- reporting how often the gold is the unique longest / unique shortest option, the accuracy of a tie-aware 'pick the longest' heuristic versus the random-choice baseline, and the mean gold vs distractor length. It extends the answer-leakage family (audits 34-36) to a length-shortcut lens. Measures a construction property of the benchmark, not model output.",
+ "rows_as_expected": true,
+ "split_counts_check": {
+  "openbookqa": {
+   "observed": {
+    "test": 500,
+    "train": 4957,
+    "validation": 500
+   },
+   "expected": {
+    "train": 4957,
+    "validation": 500,
+    "test": 500
+   },
+   "match": true
+  },
+  "arc-easy": {
+   "observed": {
+    "test": 2376,
+    "train": 2251,
+    "validation": 570
+   },
+   "expected": {
+    "train": 2251,
+    "validation": 570,
+    "test": 2376
+   },
+   "match": true
+  },
+  "arc-challenge": {
+   "observed": {
+    "test": 1172,
+    "train": 1119,
+    "validation": 299
+   },
+   "expected": {
+    "train": 1119,
+    "validation": 299,
+    "test": 1172
+   },
+   "match": true
+  }
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "n_fixture_rows": 9
+ },
+ "by_benchmark": {
+  "openbookqa": {
+   "n_valid": 5957,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 5957
+   },
+   "chance_accuracy": 0.25,
+   "char": {
+    "unique_longest_count": 2329,
+    "unique_shortest_count": 687,
+    "unique_longest_rate": 0.3909686083599127,
+    "unique_shortest_rate": 0.11532650663085446,
+    "longest_accuracy": 0.433467629119803,
+    "shortest_accuracy": 0.1496558670471714,
+    "mean_gold_len": 17.741144871579653,
+    "mean_distractor_len": 14.934586760673717
+   },
+   "token": {
+    "unique_longest_count": 1071,
+    "unique_shortest_count": 222,
+    "unique_longest_rate": 0.1797884841363102,
+    "unique_shortest_rate": 0.037267080745341616,
+    "longest_accuracy": 0.3444686922947793,
+    "shortest_accuracy": 0.20625594538638017,
+    "mean_gold_len": 3.0663085445694143,
+    "mean_distractor_len": 2.7765653852610375
+   }
+  },
+  "arc-easy": {
+   "n_valid": 5197,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 14,
+    "4": 5173,
+    "5": 10
+   },
+   "chance_accuracy": 0.25012827913539865,
+   "char": {
+    "unique_longest_count": 1066,
+    "unique_shortest_count": 1036,
+    "unique_longest_rate": 0.20511833750240524,
+    "unique_shortest_rate": 0.199345776409467,
+    "longest_accuracy": 0.24929446475530756,
+    "shortest_accuracy": 0.2505772561092938,
+    "mean_gold_len": 22.736578795458918,
+    "mean_distractor_len": 22.591133637005196
+   },
+   "token": {
+    "unique_longest_count": 415,
+    "unique_shortest_count": 269,
+    "unique_longest_rate": 0.07985376178564556,
+    "unique_shortest_rate": 0.05176063113334616,
+    "longest_accuracy": 0.2507664678340068,
+    "shortest_accuracy": 0.24268488230389326,
+    "mean_gold_len": 3.7662112757360013,
+    "mean_distractor_len": 3.722011933021107
+   }
+  },
+  "arc-challenge": {
+   "n_valid": 2590,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 8,
+    "4": 2577,
+    "5": 5
+   },
+   "chance_accuracy": 0.25016087516087515,
+   "char": {
+    "unique_longest_count": 581,
+    "unique_shortest_count": 389,
+    "unique_longest_rate": 0.22432432432432434,
+    "unique_shortest_rate": 0.15019305019305018,
+    "longest_accuracy": 0.2776061776061776,
+    "shortest_accuracy": 0.19285714285714287,
+    "mean_gold_len": 29.822393822393824,
+    "mean_distractor_len": 28.480751899060127
+   },
+   "token": {
+    "unique_longest_count": 307,
+    "unique_shortest_count": 182,
+    "unique_longest_rate": 0.11853281853281854,
+    "unique_shortest_rate": 0.07027027027027027,
+    "longest_accuracy": 0.27526383526383524,
+    "shortest_accuracy": 0.22127413127413129,
+    "mean_gold_len": 5.048648648648649,
+    "mean_distractor_len": 4.876915153856058
+   }
+  }
+ },
+ "predictions": {
+  "P1_clean_parse_every_benchmark": true,
+  "P2_gold_unique_longest_above_chance_every_benchmark": false,
+  "P3_mean_gold_longer_than_distractors_every_benchmark": true
+ },
+ "note": "P1 (structural, finding either way): every benchmark parses with 0 bad_key and 0 degenerate questions. P2 (directional headline, finding either way): in every benchmark the gold option is the UNIQUE longest more often than the random-choice baseline (1/n_options) -- a construction-side length shortcut. P3 (directional, finding either way): in every benchmark the mean gold character length exceeds the mean distractor character length. 'longest_accuracy' is the expected accuracy of a heuristic that always picks the longest option and splits ties uniformly. Lengths are characters after str.strip(); a token view is reported alongside. Measures AGREEMENT with a length heuristic, not correctness of any model."
+}

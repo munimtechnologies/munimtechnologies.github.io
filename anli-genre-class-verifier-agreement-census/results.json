@@ -1,0 +1,428 @@
+{
+ "dataset": "ANLI v1.0 (Nie, Williams, Dinan, Bansal, Weston and Kiela, 2020), R1/R2/R3, joined to the separately released verifier_labels_R1-3.jsonl by uid. This audit tallies, per (genre, gold-class) cell RESTRICTED TO R3 (the single round where all six genres coexist, so the adversary round is held fixed), how decisively ANLI's verifiers back the writer's adversarial gold: strict-majority agreement, the fraction of individual verifier votes equalling gold (gold_support_rate), and the unanimous rate. It crosses audit 49's genre dimension with audits 42/44/45's class dimension inside one round. The all-lines match/differ/no-majority totals (over every joined line) reproduce audits 39/48/49 as a cross-check. Reuses audits 39/45/46/47/48/49 label/majority primitives verbatim. Measures AGREEMENT, not correctness.",
+ "rows_as_expected": true,
+ "synthetic_corpus": {
+  "target_met": true,
+  "observed": {
+   "n_verifier_lines": 9,
+   "n_joined": 8,
+   "n_orphan": 1,
+   "n_gold_unexpected": 0,
+   "n_genre_absent": 1,
+   "n_not_r3": 1,
+   "all_lines_match": 7,
+   "all_lines_differ": 0,
+   "all_lines_no_majority": 1,
+   "gc_news_c_n": 1,
+   "gc_news_c_gold_majority": 1,
+   "gc_news_c_no_majority": 0,
+   "gc_news_c_gold_votes": 2,
+   "gc_news_c_total_votes": 3,
+   "gc_news_c_unanimous": 0,
+   "gc_news_e_n": 1,
+   "gc_news_e_gold_majority": 1,
+   "gc_news_e_no_majority": 0,
+   "gc_news_e_gold_votes": 3,
+   "gc_news_e_total_votes": 3,
+   "gc_news_e_unanimous": 1,
+   "gc_news_n_n": 1,
+   "gc_news_n_gold_majority": 1,
+   "gc_news_n_no_majority": 0,
+   "gc_news_n_gold_votes": 2,
+   "gc_news_n_total_votes": 2,
+   "gc_news_n_unanimous": 1,
+   "gc_wiki_c_n": 1,
+   "gc_wiki_c_gold_majority": 1,
+   "gc_wiki_c_no_majority": 0,
+   "gc_wiki_c_gold_votes": 3,
+   "gc_wiki_c_total_votes": 3,
+   "gc_wiki_c_unanimous": 1,
+   "gc_wiki_e_n": 1,
+   "gc_wiki_e_gold_majority": 1,
+   "gc_wiki_e_no_majority": 0,
+   "gc_wiki_e_gold_votes": 2,
+   "gc_wiki_e_total_votes": 2,
+   "gc_wiki_e_unanimous": 1,
+   "gc_wiki_n_n": 1,
+   "gc_wiki_n_gold_majority": 0,
+   "gc_wiki_n_no_majority": 1,
+   "gc_wiki_n_gold_votes": 1,
+   "gc_wiki_n_total_votes": 2,
+   "gc_wiki_n_unanimous": 0
+  },
+  "target": {
+   "n_verifier_lines": 9,
+   "n_joined": 8,
+   "n_orphan": 1,
+   "n_gold_unexpected": 0,
+   "n_genre_absent": 1,
+   "n_not_r3": 1,
+   "all_lines_match": 7,
+   "all_lines_differ": 0,
+   "all_lines_no_majority": 1,
+   "gc_news_c_n": 1,
+   "gc_news_c_gold_majority": 1,
+   "gc_news_c_no_majority": 0,
+   "gc_news_c_gold_votes": 2,
+   "gc_news_c_total_votes": 3,
+   "gc_news_c_unanimous": 0,
+   "gc_news_e_n": 1,
+   "gc_news_e_gold_majority": 1,
+   "gc_news_e_no_majority": 0,
+   "gc_news_e_gold_votes": 3,
+   "gc_news_e_total_votes": 3,
+   "gc_news_e_unanimous": 1,
+   "gc_news_n_n": 1,
+   "gc_news_n_gold_majority": 1,
+   "gc_news_n_no_majority": 0,
+   "gc_news_n_gold_votes": 2,
+   "gc_news_n_total_votes": 2,
+   "gc_news_n_unanimous": 1,
+   "gc_wiki_c_n": 1,
+   "gc_wiki_c_gold_majority": 1,
+   "gc_wiki_c_no_majority": 0,
+   "gc_wiki_c_gold_votes": 3,
+   "gc_wiki_c_total_votes": 3,
+   "gc_wiki_c_unanimous": 1,
+   "gc_wiki_e_n": 1,
+   "gc_wiki_e_gold_majority": 1,
+   "gc_wiki_e_no_majority": 0,
+   "gc_wiki_e_gold_votes": 2,
+   "gc_wiki_e_total_votes": 2,
+   "gc_wiki_e_unanimous": 1,
+   "gc_wiki_n_n": 1,
+   "gc_wiki_n_gold_majority": 0,
+   "gc_wiki_n_no_majority": 1,
+   "gc_wiki_n_gold_votes": 1,
+   "gc_wiki_n_total_votes": 2,
+   "gc_wiki_n_unanimous": 0
+  }
+ },
+ "main_totals_by_round_split": {
+  "R3/dev": 1200,
+  "R3/train": 100459,
+  "R3/test": 1200,
+  "R2/dev": 1000,
+  "R2/train": 45460,
+  "R2/test": 1000,
+  "R1/dev": 1000,
+  "R1/train": 16946,
+  "R1/test": 1000
+ },
+ "totals": {
+  "n_verifier_lines": 29803,
+  "n_joined": 29803,
+  "n_orphan": 0,
+  "n_gold_unexpected": 0,
+  "n_genre_absent": 0,
+  "n_not_r3": 12695,
+  "all_lines_match": 29765,
+  "all_lines_differ": 7,
+  "all_lines_no_majority": 31
+ },
+ "by_cell_r3": {
+  "fiction|c": {
+   "n": 845,
+   "gold_majority": 845,
+   "no_majority": 0,
+   "gold_votes": 1690,
+   "total_votes": 1928,
+   "unanimous": 607,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8765560165975104,
+   "unanimous_rate": 0.7183431952662722
+  },
+  "fiction|e": {
+   "n": 1034,
+   "gold_majority": 1034,
+   "no_majority": 0,
+   "gold_votes": 2068,
+   "total_votes": 2336,
+   "unanimous": 766,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8852739726027398,
+   "unanimous_rate": 0.7408123791102514
+  },
+  "fiction|n": {
+   "n": 991,
+   "gold_majority": 991,
+   "no_majority": 0,
+   "gold_votes": 1982,
+   "total_votes": 2313,
+   "unanimous": 660,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8568958063121487,
+   "unanimous_rate": 0.6659939455095862
+  },
+  "legal/formal|c": {
+   "n": 682,
+   "gold_majority": 682,
+   "no_majority": 0,
+   "gold_votes": 1364,
+   "total_votes": 1606,
+   "unanimous": 440,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8493150684931506,
+   "unanimous_rate": 0.6451612903225806
+  },
+  "legal/formal|e": {
+   "n": 1023,
+   "gold_majority": 1023,
+   "no_majority": 0,
+   "gold_votes": 2046,
+   "total_votes": 2359,
+   "unanimous": 710,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.867316659601526,
+   "unanimous_rate": 0.6940371456500489
+  },
+  "legal/formal|n": {
+   "n": 1098,
+   "gold_majority": 1098,
+   "no_majority": 0,
+   "gold_votes": 2196,
+   "total_votes": 2580,
+   "unanimous": 714,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8511627906976744,
+   "unanimous_rate": 0.6502732240437158
+  },
+  "news|c": {
+   "n": 818,
+   "gold_majority": 818,
+   "no_majority": 0,
+   "gold_votes": 1636,
+   "total_votes": 1882,
+   "unanimous": 572,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.869287991498406,
+   "unanimous_rate": 0.6992665036674817
+  },
+  "news|e": {
+   "n": 987,
+   "gold_majority": 987,
+   "no_majority": 0,
+   "gold_votes": 1974,
+   "total_votes": 2279,
+   "unanimous": 682,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8661693725318121,
+   "unanimous_rate": 0.690982776089159
+  },
+  "news|n": {
+   "n": 1052,
+   "gold_majority": 1052,
+   "no_majority": 0,
+   "gold_votes": 2104,
+   "total_votes": 2451,
+   "unanimous": 705,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8584251325989392,
+   "unanimous_rate": 0.6701520912547528
+  },
+  "procedural/causal|c": {
+   "n": 676,
+   "gold_majority": 676,
+   "no_majority": 0,
+   "gold_votes": 1352,
+   "total_votes": 1599,
+   "unanimous": 429,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8455284552845529,
+   "unanimous_rate": 0.6346153846153846
+  },
+  "procedural/causal|e": {
+   "n": 984,
+   "gold_majority": 984,
+   "no_majority": 0,
+   "gold_votes": 1968,
+   "total_votes": 2268,
+   "unanimous": 684,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8677248677248677,
+   "unanimous_rate": 0.6951219512195121
+  },
+  "procedural/causal|n": {
+   "n": 1159,
+   "gold_majority": 1159,
+   "no_majority": 0,
+   "gold_votes": 2318,
+   "total_votes": 2725,
+   "unanimous": 752,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8506422018348624,
+   "unanimous_rate": 0.6488352027610008
+  },
+  "rte|c": {
+   "n": 768,
+   "gold_majority": 768,
+   "no_majority": 0,
+   "gold_votes": 1536,
+   "total_votes": 1798,
+   "unanimous": 506,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8542825361512792,
+   "unanimous_rate": 0.6588541666666666
+  },
+  "rte|e": {
+   "n": 1112,
+   "gold_majority": 1112,
+   "no_majority": 0,
+   "gold_votes": 2224,
+   "total_votes": 2515,
+   "unanimous": 821,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8842942345924454,
+   "unanimous_rate": 0.7383093525179856
+  },
+  "rte|n": {
+   "n": 985,
+   "gold_majority": 985,
+   "no_majority": 0,
+   "gold_votes": 1970,
+   "total_votes": 2320,
+   "unanimous": 635,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8491379310344828,
+   "unanimous_rate": 0.6446700507614214
+  },
+  "wikipedia|c": {
+   "n": 903,
+   "gold_majority": 903,
+   "no_majority": 0,
+   "gold_votes": 1806,
+   "total_votes": 2069,
+   "unanimous": 640,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8728854519091348,
+   "unanimous_rate": 0.70874861572536
+  },
+  "wikipedia|e": {
+   "n": 1064,
+   "gold_majority": 1064,
+   "no_majority": 0,
+   "gold_votes": 2128,
+   "total_votes": 2453,
+   "unanimous": 739,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8675091724419078,
+   "unanimous_rate": 0.6945488721804511
+  },
+  "wikipedia|n": {
+   "n": 927,
+   "gold_majority": 927,
+   "no_majority": 0,
+   "gold_votes": 1854,
+   "total_votes": 2184,
+   "unanimous": 597,
+   "gold_majority_rate": 1.0,
+   "no_majority_rate": 0.0,
+   "gold_support_rate": 0.8489010989010989,
+   "unanimous_rate": 0.6440129449838188
+  }
+ },
+ "full_genres": [
+  "fiction",
+  "legal/formal",
+  "news",
+  "procedural/causal",
+  "rte",
+  "wikipedia"
+ ],
+ "class_support_by_genre": {
+  "fiction": {
+   "e": 0.8852739726027398,
+   "n": 0.8568958063121487,
+   "c": 0.8765560165975104
+  },
+  "legal/formal": {
+   "e": 0.867316659601526,
+   "n": 0.8511627906976744,
+   "c": 0.8493150684931506
+  },
+  "news": {
+   "e": 0.8661693725318121,
+   "n": 0.8584251325989392,
+   "c": 0.869287991498406
+  },
+  "procedural/causal": {
+   "e": 0.8677248677248677,
+   "n": 0.8506422018348624,
+   "c": 0.8455284552845529
+  },
+  "rte": {
+   "e": 0.8842942345924454,
+   "n": 0.8491379310344828,
+   "c": 0.8542825361512792
+  },
+  "wikipedia": {
+   "e": 0.8675091724419078,
+   "n": 0.8489010989010989,
+   "c": 0.8728854519091348
+  }
+ },
+ "class_order_by_genre": {
+  "fiction": [
+   "e",
+   "c",
+   "n"
+  ],
+  "legal/formal": [
+   "e",
+   "n",
+   "c"
+  ],
+  "news": [
+   "c",
+   "e",
+   "n"
+  ],
+  "procedural/causal": [
+   "e",
+   "n",
+   "c"
+  ],
+  "rte": [
+   "e",
+   "c",
+   "n"
+  ],
+  "wikipedia": [
+   "c",
+   "e",
+   "n"
+  ]
+ },
+ "neutral_lowest_by_genre": {
+  "fiction": true,
+  "legal/formal": false,
+  "news": true,
+  "procedural/causal": false,
+  "rte": true,
+  "wikipedia": true
+ },
+ "n_genres_neutral_lowest": 4,
+ "predictions": {
+  "P1_every_cell_gold_majority_above_min": true,
+  "P2_neutral_lowest_support_in_majority_of_genres": true,
+  "P3_reproduces_audit39_join": true
+ },
+ "note": "Per-(genre, class) verifier agreement on ANLI's verified subset, within R3 only (round held fixed). gold_majority_rate = share of a cell's examples whose writer gold equals the strict verifier majority; gold_support_rate = fraction of that cell's individual verifier votes equalling the writer gold; unanimous_rate = share of lines on which all verifiers agree. P1 (structural, finding either way) bets gold == strict majority on >99% in EVERY cell with >=100 R3 examples. P2 (directional, finding either way) bets that WITHIN R3 neutral is the least decisively verified class (lowest gold_support_rate) in at least 4 of the 6 genres -- testing whether the 'neutral is hardest' class effect of audits 42/44/45 is robust across text domains once the round is fixed. P3 (cross-check) reproduces audits 39/48/49 (gold == strict majority on 29,765 of 29,803 joined lines). Measures AGREEMENT, not correctness."
+}

@@ -1,0 +1,159 @@
+{
+ "dataset": "CommonsenseQA (tau/commonsense_qa, train+validation; test has no gold), HellaSwag (Rowan/hellaswag, train+validation; test has no gold) and MMLU (cais/mmlu config 'all', test+validation+dev; auxiliary_train excluded as a mix of other datasets), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. For each multiple-choice question this audit measures, per benchmark, how the length of the gold option compares with its distractors -- by characters (after stripping) and by whitespace tokens -- reporting how often the gold is the unique longest / unique shortest option, the accuracy of a tie-aware 'pick the longest' heuristic versus the random-choice baseline, and the mean gold vs distractor length. It tests whether audit 51's crowd-authored-vs-exam-sourced length-shortcut split generalizes. Measures a construction property of the benchmark, not model output.",
+ "crowd_benchmarks": [
+  "commonsenseqa",
+  "hellaswag"
+ ],
+ "exam_benchmarks": [
+  "mmlu"
+ ],
+ "rows_as_expected": true,
+ "split_counts_check": {
+  "commonsenseqa": {
+   "observed": {
+    "train": 9741,
+    "validation": 1221
+   },
+   "expected": {
+    "train": 9741,
+    "validation": 1221
+   },
+   "match": true
+  },
+  "hellaswag": {
+   "observed": {
+    "train": 39905,
+    "validation": 10042
+   },
+   "expected": {
+    "train": 39905,
+    "validation": 10042
+   },
+   "match": true
+  },
+  "mmlu": {
+   "observed": {
+    "dev": 285,
+    "test": 14042,
+    "validation": 1531
+   },
+   "expected": {
+    "test": 14042,
+    "validation": 1531,
+    "dev": 285
+   },
+   "match": true
+  }
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "n_fixture_rows": 7
+ },
+ "by_benchmark": {
+  "commonsenseqa": {
+   "n_valid": 10962,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 10962
+   },
+   "chance_accuracy": 0.2,
+   "char": {
+    "unique_longest_count": 1881,
+    "unique_shortest_count": 1382,
+    "unique_longest_rate": 0.17159277504105092,
+    "unique_shortest_rate": 0.12607188469257435,
+    "longest_accuracy": 0.20044851912668005,
+    "shortest_accuracy": 0.16560086358936935,
+    "mean_gold_len": 9.443623426382047,
+    "mean_distractor_len": 9.31335522714833
+   },
+   "token": {
+    "unique_longest_count": 722,
+    "unique_shortest_count": 180,
+    "unique_longest_rate": 0.06586389345010035,
+    "unique_shortest_rate": 0.016420361247947456,
+    "longest_accuracy": 0.18562762269658822,
+    "shortest_accuracy": 0.18554400048652922,
+    "mean_gold_len": 1.505838350665937,
+    "mean_distractor_len": 1.5220762634555738
+   }
+  },
+  "hellaswag": {
+   "n_valid": 49947,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 49947
+   },
+   "chance_accuracy": 0.25,
+   "char": {
+    "unique_longest_count": 12110,
+    "unique_shortest_count": 12060,
+    "unique_longest_rate": 0.24245700442469018,
+    "unique_shortest_rate": 0.2414559432998979,
+    "longest_accuracy": 0.24589398095314366,
+    "shortest_accuracy": 0.24623767860598902,
+    "mean_gold_len": 138.2636594790478,
+    "mean_distractor_len": 136.7703632517135
+   },
+   "token": {
+    "unique_longest_count": 10918,
+    "unique_shortest_count": 11301,
+    "unique_longest_rate": 0.21859170720964222,
+    "unique_shortest_rate": 0.2262598354255511,
+    "longest_accuracy": 0.23773866965650256,
+    "shortest_accuracy": 0.2535387510761407,
+    "mean_gold_len": 24.74346807616073,
+    "mean_distractor_len": 24.64869428260623
+   }
+  },
+  "mmlu": {
+   "n_valid": 15858,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 15858
+   },
+   "chance_accuracy": 0.25,
+   "char": {
+    "unique_longest_count": 3727,
+    "unique_shortest_count": 2871,
+    "unique_longest_rate": 0.23502333207214024,
+    "unique_shortest_rate": 0.18104426787741204,
+    "longest_accuracy": 0.2804998528608063,
+    "shortest_accuracy": 0.22646823895405052,
+    "mean_gold_len": 43.14692899482911,
+    "mean_distractor_len": 41.47181233446841
+   },
+   "token": {
+    "unique_longest_count": 2673,
+    "unique_shortest_count": 1626,
+    "unique_longest_rate": 0.1685584562996595,
+    "unique_shortest_rate": 0.10253499810821037,
+    "longest_accuracy": 0.2806417370832808,
+    "shortest_accuracy": 0.22965800647412452,
+    "mean_gold_len": 6.928553411527305,
+    "mean_distractor_len": 6.6393197965275155
+   }
+  }
+ },
+ "predictions": {
+  "P1_clean_parse_every_benchmark": true,
+  "P2_crowd_shortcut_and_no_exam_shortcut": false,
+  "P2_detail": {
+   "crowd_gold_unique_longest_above_chance": {
+    "commonsenseqa": false,
+    "hellaswag": false
+   },
+   "exam_gold_unique_longest_at_or_below_chance": {
+    "mmlu": true
+   }
+  },
+  "P3_crowd_pick_longest_beats_chance": {
+   "commonsenseqa": true,
+   "hellaswag": false
+  }
+ },
+ "note": "P1 (structural, finding either way): every benchmark parses with 0 bad_key and 0 degenerate questions over its gold-bearing splits. P2 (directional headline, finding either way): audit 51's split generalizes -- the gold is the UNIQUE longest option more often than the random-choice baseline in BOTH crowd-authored benchmarks (CommonsenseQA, HellaSwag) AND at or below chance in exam-sourced MMLU. P3 (exploitability, finding either way): in each crowd-authored benchmark a tie-aware 'pick the longest' heuristic beats the random-choice baseline. 'longest_accuracy' is the expected accuracy of a heuristic that always picks the longest option and splits ties uniformly. Lengths are characters after str.strip(); a token view is reported alongside. Measures AGREEMENT with a length heuristic, not correctness of any model."
+}

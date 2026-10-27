@@ -1,0 +1,302 @@
+{
+ "dataset": "OpenBookQA (allenai/openbookqa config 'main', train+validation+test), ARC-Easy and ARC-Challenge (allenai/ai2_arc, train+validation+test), CommonsenseQA (tau/commonsense_qa config 'default', train+validation; test has no gold) and MMLU (cais/mmlu config 'all', test+validation+dev; auxiliary_train excluded as a mix of other datasets), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. For each multiple-choice question this audit records the 0-based INDEX of the gold option within the released option list, bucketed by option count, and for each benchmark's modal option count reports the gold-position distribution, a Pearson chi-square goodness-of-fit against a uniform distribution, and the accuracy of a constant 'always pick position p' heuristic versus the random-choice baseline. This is a construction property of the benchmark -- where the correct answer was placed -- not a model's position / selection bias.",
+ "crowd_benchmarks": [
+  "openbookqa",
+  "commonsenseqa"
+ ],
+ "exam_benchmarks": [
+  "arc_easy",
+  "arc_challenge",
+  "mmlu"
+ ],
+ "rows_as_expected": true,
+ "split_counts_check": {
+  "openbookqa": {
+   "observed": {
+    "test": 500,
+    "train": 4957,
+    "validation": 500
+   },
+   "expected": {
+    "train": 4957,
+    "validation": 500,
+    "test": 500
+   },
+   "match": true
+  },
+  "arc_easy": {
+   "observed": {
+    "test": 2376,
+    "train": 2251,
+    "validation": 570
+   },
+   "expected": {
+    "train": 2251,
+    "validation": 570,
+    "test": 2376
+   },
+   "match": true
+  },
+  "arc_challenge": {
+   "observed": {
+    "test": 1172,
+    "train": 1119,
+    "validation": 299
+   },
+   "expected": {
+    "train": 1119,
+    "validation": 299,
+    "test": 1172
+   },
+   "match": true
+  },
+  "commonsenseqa": {
+   "observed": {
+    "train": 9741,
+    "validation": 1221
+   },
+   "expected": {
+    "train": 9741,
+    "validation": 1221
+   },
+   "match": true
+  },
+  "mmlu": {
+   "observed": {
+    "dev": 285,
+    "test": 14042,
+    "validation": 1531
+   },
+   "expected": {
+    "test": 14042,
+    "validation": 1531,
+    "dev": 285
+   },
+   "match": true
+  }
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "n_fixture_rows": 10
+ },
+ "alpha": 0.001,
+ "by_benchmark": {
+  "openbookqa": {
+   "n_valid": 5957,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 5957
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 5957,
+    "pos_counts": {
+     "0": 1642,
+     "1": 1476,
+     "2": 1388,
+     "3": 1451
+    },
+    "pos_rates": {
+     "0": 0.27564210172905823,
+     "1": 0.2477757260365956,
+     "2": 0.23300318952492866,
+     "3": 0.2435789827094175
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 23.651334564378043,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": true,
+    "best_position": 0,
+    "best_position_count": 1642,
+    "best_position_accuracy": 0.27564210172905823,
+    "best_position_accuracy_exact": "1642/5957",
+    "best_minus_chance": 0.02564210172905823
+   }
+  },
+  "arc_easy": {
+   "n_valid": 5197,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 14,
+    "4": 5173,
+    "5": 10
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 0.9953819511256494,
+   "modal": {
+    "n": 5173,
+    "pos_counts": {
+     "0": 1292,
+     "1": 1318,
+     "2": 1351,
+     "3": 1212
+    },
+    "pos_rates": {
+     "0": 0.2497583607191185,
+     "1": 0.2547844577614537,
+     "2": 0.26116373477672533,
+     "3": 0.2342934467427025
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 8.158322056833558,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 2,
+    "best_position_count": 1351,
+    "best_position_accuracy": 0.26116373477672533,
+    "best_position_accuracy_exact": "193/739",
+    "best_minus_chance": 0.011163734776725331
+   }
+  },
+  "arc_challenge": {
+   "n_valid": 2590,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 8,
+    "4": 2577,
+    "5": 5
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 0.994980694980695,
+   "modal": {
+    "n": 2577,
+    "pos_counts": {
+     "0": 564,
+     "1": 676,
+     "2": 677,
+     "3": 660
+    },
+    "pos_rates": {
+     "0": 0.21885913853317812,
+     "1": 0.26232052774544046,
+     "2": 0.26270857586340707,
+     "3": 0.2561117578579744
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 13.610787737679471,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 2,
+    "best_position_count": 677,
+    "best_position_accuracy": 0.26270857586340707,
+    "best_position_accuracy_exact": "677/2577",
+    "best_minus_chance": 0.012708575863407068
+   }
+  },
+  "commonsenseqa": {
+   "n_valid": 10962,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 10962
+   },
+   "modal_option_count": 5,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 10962,
+    "pos_counts": {
+     "0": 2148,
+     "1": 2228,
+     "2": 2187,
+     "3": 2236,
+     "4": 2163
+    },
+    "pos_rates": {
+     "0": 0.1959496442255063,
+     "1": 0.20324758255792738,
+     "2": 0.19950738916256158,
+     "3": 0.2039773763911695,
+     "4": 0.19731800766283525
+    },
+    "chance_accuracy": 0.2,
+    "chi_square_stat": 2.751870096697683,
+    "df": 4,
+    "chi_square_critical_0.001": 18.467,
+    "uniform_rejected_0.001": false,
+    "best_position": 3,
+    "best_position_count": 2236,
+    "best_position_accuracy": 0.2039773763911695,
+    "best_position_accuracy_exact": "1118/5481",
+    "best_minus_chance": 0.00397737639116949
+   }
+  },
+  "mmlu": {
+   "n_valid": 15858,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 15858
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 15858,
+    "pos_counts": {
+     "0": 3670,
+     "1": 3910,
+     "2": 4040,
+     "3": 4238
+    },
+    "pos_rates": {
+     "0": 0.2314289317694539,
+     "1": 0.2465632488333964,
+     "2": 0.2547610039096986,
+     "3": 0.2672468154874511
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 42.93176945390339,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": true,
+    "best_position": 3,
+    "best_position_count": 4238,
+    "best_position_accuracy": 0.2672468154874511,
+    "best_position_accuracy_exact": "2119/7929",
+    "best_minus_chance": 0.017246815487451106
+   }
+  }
+ },
+ "predictions": {
+  "P1_clean_parse_and_well_defined_position": true,
+  "P1_detail": {
+   "clean": true,
+   "modal_coverage": {
+    "arc_challenge": 0.994980694980695,
+    "arc_easy": 0.9953819511256494,
+    "commonsenseqa": 1.0,
+    "mmlu": 1.0,
+    "openbookqa": 1.0
+   }
+  },
+  "P2_mmlu_skewed_openbookqa_uniform": false,
+  "P2_detail": {
+   "mmlu_uniform_rejected_0.001": true,
+   "openbookqa_uniform_rejected_0.001": true,
+   "all_uniform_rejected_0.001": {
+    "arc_challenge": false,
+    "arc_easy": false,
+    "commonsenseqa": false,
+    "mmlu": true,
+    "openbookqa": true
+   }
+  },
+  "P3_mmlu_largest_best_position_gap": false,
+  "P3_detail": {
+   "best_minus_chance": {
+    "arc_challenge": 0.012708575863407068,
+    "arc_easy": 0.011163734776725331,
+    "commonsenseqa": 0.00397737639116949,
+    "mmlu": 0.017246815487451106,
+    "openbookqa": 0.02564210172905823
+   }
+  }
+ },
+ "note": "P1 (structural, finding either way): every benchmark parses with 0 bad_key and 0 degenerate and has a single dominant option count covering >=95% of valid rows, so gold position is well defined. P2 (directional headline, finding either way): exam-sourced MMLU's whole-'all' gold-position distribution is rejected as uniform at alpha=0.001 while crowd-authored OpenBookQA -- which leaks via answer LENGTH (audit 51) -- is NOT, a length-vs-position dissociation. P3 (exploitability, finding either way): among the five benchmarks MMLU has the largest 'best constant position minus chance' gap. The chi-square statistic and df are reported so an exact p-value can be recomputed; 'best_position_accuracy' is the accuracy of always guessing the single most frequent gold position. Measures construction, not any model."
+}

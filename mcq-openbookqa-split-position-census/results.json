@@ -1,0 +1,193 @@
+{
+ "dataset": "OpenBookQA (allenai/openbookqa config 'main', train+validation+test), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. For each question this audit records the 0-based INDEX of the gold option within the released option list, keyed by SPLIT. Per split it reports the gold-position distribution, a Pearson chi-square goodness-of-fit against a uniform distribution, and a best-constant-position baseline; it then reproduces audit 53's pooled OpenBookQA-main numbers as a cross-check. Note the two evaluation splits hold only 500 questions each, so a non-rejection there is low power, not proof of uniformity -- the raw chi-square and df are reported per split so a reader can recompute an exact p-value. This is a construction property of the benchmark -- where the correct answer was placed -- not a model's position / selection bias.",
+ "rows_as_expected": true,
+ "split_counts_check": {
+  "observed": {
+   "test": 500,
+   "train": 4957,
+   "validation": 500
+  },
+  "expected": {
+   "train": 4957,
+   "validation": 500,
+   "test": 500
+  },
+  "match": true
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "n_fixture_rows": 10
+ },
+ "alpha": 0.001,
+ "pooled_openbookqa_main": {
+  "n_valid": 5957,
+  "n_bad_key": 0,
+  "n_degenerate": 0,
+  "option_count_hist": {
+   "4": 5957
+  },
+  "modal_option_count": 4,
+  "modal_coverage": 1.0,
+  "modal": {
+   "n": 5957,
+   "pos_counts": {
+    "0": 1642,
+    "1": 1476,
+    "2": 1388,
+    "3": 1451
+   },
+   "pos_rates": {
+    "0": 0.27564210172905823,
+    "1": 0.2477757260365956,
+    "2": 0.23300318952492866,
+    "3": 0.2435789827094175
+   },
+   "chance_accuracy": 0.25,
+   "chi_square_stat": 23.651334564378043,
+   "df": 3,
+   "chi_square_critical_0.001": 16.266,
+   "uniform_rejected_0.001": true,
+   "best_position": 0,
+   "best_position_count": 1642,
+   "best_position_accuracy": 0.27564210172905823,
+   "best_position_accuracy_exact": "1642/5957",
+   "best_minus_chance": 0.02564210172905823
+  }
+ },
+ "by_split": {
+  "test": {
+   "n_valid": 500,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 500
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 500,
+    "pos_counts": {
+     "0": 138,
+     "1": 126,
+     "2": 132,
+     "3": 104
+    },
+    "pos_rates": {
+     "0": 0.276,
+     "1": 0.252,
+     "2": 0.264,
+     "3": 0.208
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 5.28,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 0,
+    "best_position_count": 138,
+    "best_position_accuracy": 0.276,
+    "best_position_accuracy_exact": "69/250",
+    "best_minus_chance": 0.026000000000000023
+   }
+  },
+  "train": {
+   "n_valid": 4957,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 4957
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 4957,
+    "pos_counts": {
+     "0": 1378,
+     "1": 1212,
+     "2": 1146,
+     "3": 1221
+    },
+    "pos_rates": {
+     "0": 0.2779907201936655,
+     "1": 0.24450272342142426,
+     "2": 0.23118821868065362,
+     "3": 0.2463183377042566
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 23.41960863425459,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": true,
+    "best_position": 0,
+    "best_position_count": 1378,
+    "best_position_accuracy": 0.2779907201936655,
+    "best_position_accuracy_exact": "1378/4957",
+    "best_minus_chance": 0.027990720193665497
+   }
+  },
+  "validation": {
+   "n_valid": 500,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 500
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 500,
+    "pos_counts": {
+     "0": 126,
+     "1": 138,
+     "2": 110,
+     "3": 126
+    },
+    "pos_rates": {
+     "0": 0.252,
+     "1": 0.276,
+     "2": 0.22,
+     "3": 0.252
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 3.168,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 1,
+    "best_position_count": 138,
+    "best_position_accuracy": 0.276,
+    "best_position_accuracy_exact": "69/250",
+    "best_minus_chance": 0.026000000000000023
+   }
+  }
+ },
+ "predictions": {
+  "n_splits": 3,
+  "P1_clean_partition_and_pooled_reproduces_audit53": true,
+  "P1_detail": {
+   "clean": true,
+   "all_modal_k_is_4": true,
+   "coverage_ge_0.95": true,
+   "sum_valid": 5957,
+   "expected_total_valid": 5957,
+   "partition_ok": true,
+   "pooled_best_position": 0,
+   "pooled_uniform_rejected_0.001": true
+  },
+  "P2_pos0_skew_present_in_test_split": true,
+  "P2_detail": {
+   "test_n": 500,
+   "test_pos0_rate": 0.276,
+   "test_best_position": 0,
+   "test_uniform_rejected_0.001": false,
+   "test_chi_square_stat": 5.28
+  },
+  "P3_pos0_is_modal_in_every_split": false,
+  "P3_detail": {
+   "test": 0,
+   "train": 0,
+   "validation": 1
+  }
+ },
+ "note": "P1 (structural, finding either way): every split parses with 0 bad_key and 0 degenerate, is modal 4-option with coverage >=95%, the per-split valid counts partition OpenBookQA-main exactly (sum == audit 53's 5,957), and the pooled re-key reproduces audit 53's skew (first option is the modal gold position and uniform is rejected at 0.001). P2 (directional headline, finding either way): the pos-0/A skew is present in the reported TEST split -- its gold sits at the first option more often than chance and the first option is its modal gold position. P3 (consistency, finding either way): the first option is the modal gold position in every split (the skew direction does not flip across splits). Measures construction, not any model."
+}

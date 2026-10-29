@@ -1,0 +1,1425 @@
+{
+ "dataset": "MMLU-Redux 2.0 (edinburgh-dawg/mmlu-redux-2.0, CC BY 4.0; Gema et al. 2024, arXiv 2406.04127): 100 expert-re-annotated questions from each of MMLU's 57 subjects, read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Every question is classified into ONE meta-option category (roman > aota > nota > letterref > plain; meta_option.py, unchanged from audit 56) and cross-tabulated against its error_type label. Error rates are over judged questions (ok + five error types); 'expert' (annotators unsure) is counted but excluded from rates. This measures the benchmark's construction and annotation, not any model.",
+ "synthetic_corpus": {
+  "position_target_met": true,
+  "meta_target_met": true,
+  "error_target_met": true
+ },
+ "subject_row_counts": {
+  "abstract_algebra": 100,
+  "anatomy": 100,
+  "astronomy": 100,
+  "business_ethics": 100,
+  "clinical_knowledge": 100,
+  "college_biology": 100,
+  "college_chemistry": 100,
+  "college_computer_science": 100,
+  "college_mathematics": 100,
+  "college_medicine": 100,
+  "college_physics": 100,
+  "computer_security": 100,
+  "conceptual_physics": 100,
+  "econometrics": 100,
+  "electrical_engineering": 100,
+  "elementary_mathematics": 100,
+  "formal_logic": 100,
+  "global_facts": 100,
+  "high_school_biology": 100,
+  "high_school_chemistry": 100,
+  "high_school_computer_science": 100,
+  "high_school_european_history": 100,
+  "high_school_geography": 100,
+  "high_school_government_and_politics": 100,
+  "high_school_macroeconomics": 100,
+  "high_school_mathematics": 100,
+  "high_school_microeconomics": 100,
+  "high_school_physics": 100,
+  "high_school_psychology": 100,
+  "high_school_statistics": 100,
+  "high_school_us_history": 100,
+  "high_school_world_history": 100,
+  "human_aging": 100,
+  "human_sexuality": 100,
+  "international_law": 100,
+  "jurisprudence": 100,
+  "logical_fallacies": 100,
+  "machine_learning": 100,
+  "management": 100,
+  "marketing": 100,
+  "medical_genetics": 100,
+  "miscellaneous": 100,
+  "moral_disputes": 100,
+  "moral_scenarios": 100,
+  "nutrition": 100,
+  "philosophy": 100,
+  "prehistory": 100,
+  "professional_accounting": 100,
+  "professional_law": 100,
+  "professional_medicine": 100,
+  "professional_psychology": 100,
+  "public_relations": 100,
+  "security_studies": 100,
+  "sociology": 100,
+  "us_foreign_policy": 100,
+  "virology": 100,
+  "world_religions": 100
+ },
+ "mmlu_reference_audit56": {
+  "meta_option_rate": 0.0486,
+  "aota_is_gold_rate": 0.596,
+  "pooled_last_rate_all": 0.267,
+  "note": "see audit 56 (mcq-mmlu-meta-option-census)"
+ },
+ "report": {
+  "n_rows": 5700,
+  "n_invalid": 0,
+  "n_subjects": 57,
+  "by_category": {
+   "aota": {
+    "n": 168,
+    "n_ok": 154,
+    "n_error": 13,
+    "n_unsure": 1,
+    "n_unknown": 0,
+    "n_judged": 167,
+    "error_rate": 0.07784431137724551,
+    "n_answer_set_error": 3,
+    "answer_set_error_rate": 0.017964071856287425,
+    "error_type_rates": {
+     "bad_question_clarity": 0.041916167664670656,
+     "bad_options_clarity": 0.0,
+     "no_correct_answer": 0.011976047904191617,
+     "multiple_correct_answers": 0.005988023952095809,
+     "wrong_groundtruth": 0.017964071856287425
+    },
+    "label_counts": {
+     "bad_question_clarity": 7,
+     "expert": 1,
+     "multiple_correct_answers": 1,
+     "no_correct_answer": 2,
+     "ok": 154,
+     "wrong_groundtruth": 3
+    }
+   },
+   "letterref": {
+    "n": 24,
+    "n_ok": 24,
+    "n_error": 0,
+    "n_unsure": 0,
+    "n_unknown": 0,
+    "n_judged": 24,
+    "error_rate": 0.0,
+    "n_answer_set_error": 0,
+    "answer_set_error_rate": 0.0,
+    "error_type_rates": {
+     "bad_question_clarity": 0.0,
+     "bad_options_clarity": 0.0,
+     "no_correct_answer": 0.0,
+     "multiple_correct_answers": 0.0,
+     "wrong_groundtruth": 0.0
+    },
+    "label_counts": {
+     "ok": 24
+    }
+   },
+   "nota": {
+    "n": 101,
+    "n_ok": 94,
+    "n_error": 3,
+    "n_unsure": 4,
+    "n_unknown": 0,
+    "n_judged": 97,
+    "error_rate": 0.030927835051546393,
+    "n_answer_set_error": 0,
+    "answer_set_error_rate": 0.0,
+    "error_type_rates": {
+     "bad_question_clarity": 0.010309278350515464,
+     "bad_options_clarity": 0.010309278350515464,
+     "no_correct_answer": 0.0,
+     "multiple_correct_answers": 0.0,
+     "wrong_groundtruth": 0.010309278350515464
+    },
+    "label_counts": {
+     "bad_options_clarity": 1,
+     "bad_question_clarity": 1,
+     "expert": 4,
+     "ok": 94,
+     "wrong_groundtruth": 1
+    }
+   },
+   "plain": {
+    "n": 5343,
+    "n_ok": 4998,
+    "n_error": 318,
+    "n_unsure": 27,
+    "n_unknown": 0,
+    "n_judged": 5316,
+    "error_rate": 0.05981941309255079,
+    "n_answer_set_error": 72,
+    "answer_set_error_rate": 0.013544018058690745,
+    "error_type_rates": {
+     "bad_question_clarity": 0.022761474793077503,
+     "bad_options_clarity": 0.004514672686230248,
+     "no_correct_answer": 0.006395786305492852,
+     "multiple_correct_answers": 0.0071482317531978935,
+     "wrong_groundtruth": 0.018999247554552293
+    },
+    "label_counts": {
+     "bad_options_clarity": 24,
+     "bad_question_clarity": 121,
+     "expert": 27,
+     "multiple_correct_answers": 38,
+     "no_correct_answer": 34,
+     "ok": 4998,
+     "wrong_groundtruth": 101
+    }
+   },
+   "roman": {
+    "n": 64,
+    "n_ok": 60,
+    "n_error": 4,
+    "n_unsure": 0,
+    "n_unknown": 0,
+    "n_judged": 64,
+    "error_rate": 0.0625,
+    "n_answer_set_error": 0,
+    "answer_set_error_rate": 0.0,
+    "error_type_rates": {
+     "bad_question_clarity": 0.046875,
+     "bad_options_clarity": 0.0,
+     "no_correct_answer": 0.0,
+     "multiple_correct_answers": 0.0,
+     "wrong_groundtruth": 0.015625
+    },
+    "label_counts": {
+     "bad_question_clarity": 3,
+     "ok": 60,
+     "wrong_groundtruth": 1
+    }
+   }
+  },
+  "by_group": {
+   "plain": {
+    "n": 5343,
+    "n_ok": 4998,
+    "n_error": 318,
+    "n_unsure": 27,
+    "n_unknown": 0,
+    "n_judged": 5316,
+    "error_rate": 0.05981941309255079,
+    "n_answer_set_error": 72,
+    "answer_set_error_rate": 0.013544018058690745,
+    "error_type_rates": {
+     "bad_question_clarity": 0.022761474793077503,
+     "bad_options_clarity": 0.004514672686230248,
+     "no_correct_answer": 0.006395786305492852,
+     "multiple_correct_answers": 0.0071482317531978935,
+     "wrong_groundtruth": 0.018999247554552293
+    },
+    "label_counts": {
+     "bad_options_clarity": 24,
+     "bad_question_clarity": 121,
+     "expert": 27,
+     "multiple_correct_answers": 38,
+     "no_correct_answer": 34,
+     "ok": 4998,
+     "wrong_groundtruth": 101
+    }
+   },
+   "any_meta": {
+    "n": 357,
+    "n_ok": 332,
+    "n_error": 20,
+    "n_unsure": 5,
+    "n_unknown": 0,
+    "n_judged": 352,
+    "error_rate": 0.056818181818181816,
+    "n_answer_set_error": 3,
+    "answer_set_error_rate": 0.008522727272727272,
+    "error_type_rates": {
+     "bad_question_clarity": 0.03125,
+     "bad_options_clarity": 0.002840909090909091,
+     "no_correct_answer": 0.005681818181818182,
+     "multiple_correct_answers": 0.002840909090909091,
+     "wrong_groundtruth": 0.014204545454545454
+    },
+    "label_counts": {
+     "bad_options_clarity": 1,
+     "bad_question_clarity": 11,
+     "expert": 5,
+     "multiple_correct_answers": 1,
+     "no_correct_answer": 2,
+     "ok": 332,
+     "wrong_groundtruth": 5
+    }
+   },
+   "all": {
+    "n": 5700,
+    "n_ok": 5330,
+    "n_error": 338,
+    "n_unsure": 32,
+    "n_unknown": 0,
+    "n_judged": 5668,
+    "error_rate": 0.05963302752293578,
+    "n_answer_set_error": 75,
+    "answer_set_error_rate": 0.013232180663373325,
+    "error_type_rates": {
+     "bad_question_clarity": 0.02328863796753705,
+     "bad_options_clarity": 0.004410726887791108,
+     "no_correct_answer": 0.006351446718419196,
+     "multiple_correct_answers": 0.006880733944954129,
+     "wrong_groundtruth": 0.0187014820042343
+    },
+    "label_counts": {
+     "bad_options_clarity": 25,
+     "bad_question_clarity": 132,
+     "expert": 32,
+     "multiple_correct_answers": 39,
+     "no_correct_answer": 36,
+     "ok": 5330,
+     "wrong_groundtruth": 106
+    }
+   }
+  },
+  "undocumented_labels": [],
+  "meta_vs_plain_error_pooled": {
+   "table": [
+    [
+     20,
+     332
+    ],
+    [
+     318,
+     4998
+    ]
+   ],
+   "rate_1": 0.056818181818181816,
+   "rate_2": 0.05981941309255079,
+   "risk_ratio": 0.9498284734133791,
+   "chi_square_stat": 0.053028884895867226,
+   "df": 1,
+   "min_expected_cell": 20.990825688073393,
+   "rejected_0.05": false,
+   "rejected_0.001": false
+  },
+  "meta_vs_plain_error_by_subject_cmh": {
+   "n_strata": 57,
+   "n_informative_strata": 35,
+   "sum_observed_minus_expected": 0.398441020605969,
+   "sum_variance": 12.764136477841138,
+   "cmh_stat": 0.01243760180542799,
+   "df": 1,
+   "mh_odds_ratio": 1.0285290138746654,
+   "mh_or_numerator": 14.36460972017673,
+   "mh_or_denominator": 13.966168699570758,
+   "rejected_0.05": false,
+   "rejected_0.001": false
+  },
+  "aota_vs_plain_answer_set_pooled": {
+   "table": [
+    [
+     3,
+     164
+    ],
+    [
+     72,
+     5244
+    ]
+   ],
+   "rate_1": 0.017964071856287425,
+   "rate_2": 0.013544018058690745,
+   "risk_ratio": 1.3263473053892216,
+   "chi_square_stat": 0.23446436910996418,
+   "df": 1,
+   "min_expected_cell": 2.2843333941273025,
+   "rejected_0.05": false,
+   "rejected_0.001": false
+  },
+  "meta_vs_plain_answer_set_by_subject_cmh": {
+   "n_strata": 57,
+   "n_informative_strata": 18,
+   "sum_observed_minus_expected": -0.14547108103809148,
+   "sum_variance": 2.5218954670565847,
+   "cmh_stat": 0.008391242101358741,
+   "df": 1,
+   "mh_odds_ratio": 0.940635029805588,
+   "mh_or_numerator": 2.304982116557963,
+   "mh_or_denominator": 2.4504531975960546,
+   "rejected_0.05": false,
+   "rejected_0.001": false
+  },
+  "by_subject": {
+   "abstract_algebra": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.10204081632653061,
+    "meta_judged": 1,
+    "plain_judged": 98
+   },
+   "anatomy": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.01,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "astronomy": {
+    "n_meta": 6,
+    "n_plain": 94,
+    "meta_error_rate": 0.16666666666666666,
+    "plain_error_rate": 0.05319148936170213,
+    "meta_judged": 6,
+    "plain_judged": 94
+   },
+   "business_ethics": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.1414141414141414,
+    "meta_judged": 0,
+    "plain_judged": 99
+   },
+   "clinical_knowledge": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.01,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "college_biology": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.020202020202020204,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "college_chemistry": {
+    "n_meta": 5,
+    "n_plain": 95,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.2631578947368421,
+    "meta_judged": 5,
+    "plain_judged": 95
+   },
+   "college_computer_science": {
+    "n_meta": 28,
+    "n_plain": 72,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.041666666666666664,
+    "meta_judged": 28,
+    "plain_judged": 72
+   },
+   "college_mathematics": {
+    "n_meta": 14,
+    "n_plain": 86,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.011627906976744186,
+    "meta_judged": 14,
+    "plain_judged": 86
+   },
+   "college_medicine": {
+    "n_meta": 5,
+    "n_plain": 95,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.046511627906976744,
+    "meta_judged": 5,
+    "plain_judged": 86
+   },
+   "college_physics": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.0,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "computer_security": {
+    "n_meta": 5,
+    "n_plain": 95,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.031578947368421054,
+    "meta_judged": 5,
+    "plain_judged": 95
+   },
+   "conceptual_physics": {
+    "n_meta": 38,
+    "n_plain": 62,
+    "meta_error_rate": 0.10526315789473684,
+    "plain_error_rate": 0.01694915254237288,
+    "meta_judged": 38,
+    "plain_judged": 59
+   },
+   "econometrics": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.03,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "electrical_engineering": {
+    "n_meta": 27,
+    "n_plain": 73,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.0273972602739726,
+    "meta_judged": 27,
+    "plain_judged": 73
+   },
+   "elementary_mathematics": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.03,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "formal_logic": {
+    "n_meta": 2,
+    "n_plain": 98,
+    "meta_error_rate": 0.5,
+    "plain_error_rate": 0.12244897959183673,
+    "meta_judged": 2,
+    "plain_judged": 98
+   },
+   "global_facts": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.12121212121212122,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "high_school_biology": {
+    "n_meta": 2,
+    "n_plain": 98,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.05102040816326531,
+    "meta_judged": 2,
+    "plain_judged": 98
+   },
+   "high_school_chemistry": {
+    "n_meta": 3,
+    "n_plain": 97,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.010309278350515464,
+    "meta_judged": 3,
+    "plain_judged": 97
+   },
+   "high_school_computer_science": {
+    "n_meta": 6,
+    "n_plain": 94,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.0,
+    "meta_judged": 6,
+    "plain_judged": 94
+   },
+   "high_school_european_history": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.09,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "high_school_geography": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.0,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "high_school_government_and_politics": {
+    "n_meta": 2,
+    "n_plain": 98,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.0,
+    "meta_judged": 2,
+    "plain_judged": 98
+   },
+   "high_school_macroeconomics": {
+    "n_meta": 3,
+    "n_plain": 97,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.030927835051546393,
+    "meta_judged": 3,
+    "plain_judged": 97
+   },
+   "high_school_mathematics": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.0,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "high_school_microeconomics": {
+    "n_meta": 3,
+    "n_plain": 97,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.020618556701030927,
+    "meta_judged": 3,
+    "plain_judged": 97
+   },
+   "high_school_physics": {
+    "n_meta": 3,
+    "n_plain": 97,
+    "meta_error_rate": 0.3333333333333333,
+    "plain_error_rate": 0.020618556701030927,
+    "meta_judged": 3,
+    "plain_judged": 97
+   },
+   "high_school_psychology": {
+    "n_meta": 3,
+    "n_plain": 97,
+    "meta_error_rate": 1.0,
+    "plain_error_rate": 0.010309278350515464,
+    "meta_judged": 3,
+    "plain_judged": 97
+   },
+   "high_school_statistics": {
+    "n_meta": 8,
+    "n_plain": 92,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.021739130434782608,
+    "meta_judged": 8,
+    "plain_judged": 92
+   },
+   "high_school_us_history": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.0,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "high_school_world_history": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.01,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "human_aging": {
+    "n_meta": 2,
+    "n_plain": 98,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.12371134020618557,
+    "meta_judged": 2,
+    "plain_judged": 97
+   },
+   "human_sexuality": {
+    "n_meta": 14,
+    "n_plain": 86,
+    "meta_error_rate": 0.21428571428571427,
+    "plain_error_rate": 0.16666666666666666,
+    "meta_judged": 14,
+    "plain_judged": 84
+   },
+   "international_law": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.05,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "jurisprudence": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.010101010101010102,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "logical_fallacies": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 1.0,
+    "plain_error_rate": 0.25252525252525254,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "machine_learning": {
+    "n_meta": 13,
+    "n_plain": 87,
+    "meta_error_rate": 0.07692307692307693,
+    "plain_error_rate": 0.11494252873563218,
+    "meta_judged": 13,
+    "plain_judged": 87
+   },
+   "management": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.0,
+    "meta_judged": 1,
+    "plain_judged": 98
+   },
+   "marketing": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.04040404040404041,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "medical_genetics": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.0,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "miscellaneous": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.1,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "moral_disputes": {
+    "n_meta": 44,
+    "n_plain": 56,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.07142857142857142,
+    "meta_judged": 44,
+    "plain_judged": 56
+   },
+   "moral_scenarios": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.03,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "nutrition": {
+    "n_meta": 5,
+    "n_plain": 95,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.02127659574468085,
+    "meta_judged": 5,
+    "plain_judged": 94
+   },
+   "philosophy": {
+    "n_meta": 16,
+    "n_plain": 84,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.0,
+    "meta_judged": 11,
+    "plain_judged": 78
+   },
+   "prehistory": {
+    "n_meta": 9,
+    "n_plain": 91,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.0,
+    "meta_judged": 9,
+    "plain_judged": 91
+   },
+   "professional_accounting": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.061224489795918366,
+    "meta_judged": 0,
+    "plain_judged": 98
+   },
+   "professional_law": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.18181818181818182,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "professional_medicine": {
+    "n_meta": 0,
+    "n_plain": 100,
+    "meta_error_rate": null,
+    "plain_error_rate": 0.01,
+    "meta_judged": 0,
+    "plain_judged": 100
+   },
+   "professional_psychology": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.04040404040404041,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "public_relations": {
+    "n_meta": 1,
+    "n_plain": 99,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.09090909090909091,
+    "meta_judged": 1,
+    "plain_judged": 99
+   },
+   "security_studies": {
+    "n_meta": 31,
+    "n_plain": 69,
+    "meta_error_rate": 0.0967741935483871,
+    "plain_error_rate": 0.043478260869565216,
+    "meta_judged": 31,
+    "plain_judged": 69
+   },
+   "sociology": {
+    "n_meta": 14,
+    "n_plain": 86,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.023255813953488372,
+    "meta_judged": 14,
+    "plain_judged": 86
+   },
+   "us_foreign_policy": {
+    "n_meta": 26,
+    "n_plain": 74,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.013513513513513514,
+    "meta_judged": 26,
+    "plain_judged": 74
+   },
+   "virology": {
+    "n_meta": 7,
+    "n_plain": 93,
+    "meta_error_rate": 0.2857142857142857,
+    "plain_error_rate": 0.5913978494623656,
+    "meta_judged": 7,
+    "plain_judged": 93
+   },
+   "world_religions": {
+    "n_meta": 2,
+    "n_plain": 98,
+    "meta_error_rate": 0.0,
+    "plain_error_rate": 0.01020408163265306,
+    "meta_judged": 2,
+    "plain_judged": 98
+   }
+  }
+ },
+ "meta_gold_split": {
+  "aota|meta_is_gold": {
+   "n": 102,
+   "n_ok": 93,
+   "n_error": 9,
+   "n_unsure": 0,
+   "n_unknown": 0,
+   "n_judged": 102,
+   "error_rate": 0.08823529411764706,
+   "n_answer_set_error": 1,
+   "answer_set_error_rate": 0.00980392156862745,
+   "error_type_rates": {
+    "bad_question_clarity": 0.06862745098039216,
+    "bad_options_clarity": 0.0,
+    "no_correct_answer": 0.00980392156862745,
+    "multiple_correct_answers": 0.0,
+    "wrong_groundtruth": 0.00980392156862745
+   },
+   "label_counts": {
+    "bad_question_clarity": 7,
+    "no_correct_answer": 1,
+    "ok": 93,
+    "wrong_groundtruth": 1
+   }
+  },
+  "aota|meta_not_gold": {
+   "n": 66,
+   "n_ok": 61,
+   "n_error": 4,
+   "n_unsure": 1,
+   "n_unknown": 0,
+   "n_judged": 65,
+   "error_rate": 0.06153846153846154,
+   "n_answer_set_error": 2,
+   "answer_set_error_rate": 0.03076923076923077,
+   "error_type_rates": {
+    "bad_question_clarity": 0.0,
+    "bad_options_clarity": 0.0,
+    "no_correct_answer": 0.015384615384615385,
+    "multiple_correct_answers": 0.015384615384615385,
+    "wrong_groundtruth": 0.03076923076923077
+   },
+   "label_counts": {
+    "expert": 1,
+    "multiple_correct_answers": 1,
+    "no_correct_answer": 1,
+    "ok": 61,
+    "wrong_groundtruth": 2
+   }
+  },
+  "letterref|meta_is_gold": {
+   "n": 13,
+   "n_ok": 13,
+   "n_error": 0,
+   "n_unsure": 0,
+   "n_unknown": 0,
+   "n_judged": 13,
+   "error_rate": 0.0,
+   "n_answer_set_error": 0,
+   "answer_set_error_rate": 0.0,
+   "error_type_rates": {
+    "bad_question_clarity": 0.0,
+    "bad_options_clarity": 0.0,
+    "no_correct_answer": 0.0,
+    "multiple_correct_answers": 0.0,
+    "wrong_groundtruth": 0.0
+   },
+   "label_counts": {
+    "ok": 13
+   }
+  },
+  "letterref|meta_not_gold": {
+   "n": 11,
+   "n_ok": 11,
+   "n_error": 0,
+   "n_unsure": 0,
+   "n_unknown": 0,
+   "n_judged": 11,
+   "error_rate": 0.0,
+   "n_answer_set_error": 0,
+   "answer_set_error_rate": 0.0,
+   "error_type_rates": {
+    "bad_question_clarity": 0.0,
+    "bad_options_clarity": 0.0,
+    "no_correct_answer": 0.0,
+    "multiple_correct_answers": 0.0,
+    "wrong_groundtruth": 0.0
+   },
+   "label_counts": {
+    "ok": 11
+   }
+  },
+  "nota|meta_is_gold": {
+   "n": 22,
+   "n_ok": 19,
+   "n_error": 1,
+   "n_unsure": 2,
+   "n_unknown": 0,
+   "n_judged": 20,
+   "error_rate": 0.05,
+   "n_answer_set_error": 0,
+   "answer_set_error_rate": 0.0,
+   "error_type_rates": {
+    "bad_question_clarity": 0.05,
+    "bad_options_clarity": 0.0,
+    "no_correct_answer": 0.0,
+    "multiple_correct_answers": 0.0,
+    "wrong_groundtruth": 0.0
+   },
+   "label_counts": {
+    "bad_question_clarity": 1,
+    "expert": 2,
+    "ok": 19
+   }
+  },
+  "nota|meta_not_gold": {
+   "n": 79,
+   "n_ok": 75,
+   "n_error": 2,
+   "n_unsure": 2,
+   "n_unknown": 0,
+   "n_judged": 77,
+   "error_rate": 0.025974025974025976,
+   "n_answer_set_error": 0,
+   "answer_set_error_rate": 0.0,
+   "error_type_rates": {
+    "bad_question_clarity": 0.0,
+    "bad_options_clarity": 0.012987012987012988,
+    "no_correct_answer": 0.0,
+    "multiple_correct_answers": 0.0,
+    "wrong_groundtruth": 0.012987012987012988
+   },
+   "label_counts": {
+    "bad_options_clarity": 1,
+    "expert": 2,
+    "ok": 75,
+    "wrong_groundtruth": 1
+   }
+  }
+ },
+ "gold_position_by_error_class": {
+  "error": {
+   "n_valid": 338,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 338
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 338,
+    "pos_counts": {
+     "0": 91,
+     "1": 97,
+     "2": 84,
+     "3": 66
+    },
+    "pos_rates": {
+     "0": 0.2692307692307692,
+     "1": 0.2869822485207101,
+     "2": 0.2485207100591716,
+     "3": 0.1952662721893491
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 6.402366863905326,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 1,
+    "best_position_count": 97,
+    "best_position_accuracy": 0.2869822485207101,
+    "best_position_accuracy_exact": "97/338",
+    "best_minus_chance": 0.03698224852071008
+   }
+  },
+  "ok": {
+   "n_valid": 5330,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 5330
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 5330,
+    "pos_counts": {
+     "0": 1200,
+     "1": 1296,
+     "2": 1365,
+     "3": 1469
+    },
+    "pos_rates": {
+     "0": 0.225140712945591,
+     "1": 0.24315196998123828,
+     "2": 0.25609756097560976,
+     "3": 0.275609756097561
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 28.950844277673546,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": true,
+    "best_position": 3,
+    "best_position_count": 1469,
+    "best_position_accuracy": 0.275609756097561,
+    "best_position_accuracy_exact": "113/410",
+    "best_minus_chance": 0.025609756097561
+   }
+  },
+  "unsure": {
+   "n_valid": 32,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 32
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 32,
+    "pos_counts": {
+     "0": 7,
+     "1": 5,
+     "2": 9,
+     "3": 11
+    },
+    "pos_rates": {
+     "0": 0.21875,
+     "1": 0.15625,
+     "2": 0.28125,
+     "3": 0.34375
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 2.5,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 3,
+    "best_position_count": 11,
+    "best_position_accuracy": 0.34375,
+    "best_position_accuracy_exact": "11/32",
+    "best_minus_chance": 0.09375
+   }
+  }
+ },
+ "gold_position_by_group_and_error_class": {
+  "plain|error": {
+   "n_valid": 318,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 318
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 318,
+    "pos_counts": {
+     "0": 89,
+     "1": 94,
+     "2": 80,
+     "3": 55
+    },
+    "pos_rates": {
+     "0": 0.279874213836478,
+     "1": 0.29559748427672955,
+     "2": 0.25157232704402516,
+     "3": 0.17295597484276728
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 11.333333333333334,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 1,
+    "best_position_count": 94,
+    "best_position_accuracy": 0.29559748427672955,
+    "best_position_accuracy_exact": "47/159",
+    "best_minus_chance": 0.04559748427672955
+   }
+  },
+  "plain|ok": {
+   "n_valid": 4998,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 4998
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 4998,
+    "pos_counts": {
+     "0": 1133,
+     "1": 1236,
+     "2": 1316,
+     "3": 1313
+    },
+    "pos_rates": {
+     "0": 0.2266906762705082,
+     "1": 0.24729891956782712,
+     "2": 0.26330532212885155,
+     "3": 0.2627050820328131
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 17.774309723889555,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": true,
+    "best_position": 2,
+    "best_position_count": 1316,
+    "best_position_accuracy": 0.26330532212885155,
+    "best_position_accuracy_exact": "94/357",
+    "best_minus_chance": 0.013305322128851549
+   }
+  },
+  "any_meta|ok": {
+   "n_valid": 332,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 332
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 332,
+    "pos_counts": {
+     "0": 67,
+     "1": 60,
+     "2": 49,
+     "3": 156
+    },
+    "pos_rates": {
+     "0": 0.20180722891566266,
+     "1": 0.18072289156626506,
+     "2": 0.14759036144578314,
+     "3": 0.46987951807228917
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 87.59036144578313,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": true,
+    "best_position": 3,
+    "best_position_count": 156,
+    "best_position_accuracy": 0.46987951807228917,
+    "best_position_accuracy_exact": "39/83",
+    "best_minus_chance": 0.21987951807228917
+   }
+  },
+  "plain|unsure": {
+   "n_valid": 27,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 27
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 27,
+    "pos_counts": {
+     "0": 6,
+     "1": 4,
+     "2": 8,
+     "3": 9
+    },
+    "pos_rates": {
+     "0": 0.2222222222222222,
+     "1": 0.14814814814814814,
+     "2": 0.2962962962962963,
+     "3": 0.3333333333333333
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 2.185185185185185,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 3,
+    "best_position_count": 9,
+    "best_position_accuracy": 0.3333333333333333,
+    "best_position_accuracy_exact": "1/3",
+    "best_minus_chance": 0.08333333333333331
+   }
+  },
+  "any_meta|error": {
+   "n_valid": 20,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 20
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 20,
+    "pos_counts": {
+     "0": 2,
+     "1": 3,
+     "2": 4,
+     "3": 11
+    },
+    "pos_rates": {
+     "0": 0.1,
+     "1": 0.15,
+     "2": 0.2,
+     "3": 0.55
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 10.0,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 3,
+    "best_position_count": 11,
+    "best_position_accuracy": 0.55,
+    "best_position_accuracy_exact": "11/20",
+    "best_minus_chance": 0.30000000000000004
+   }
+  },
+  "any_meta|unsure": {
+   "n_valid": 5,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 5
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "modal": {
+    "n": 5,
+    "pos_counts": {
+     "0": 1,
+     "1": 1,
+     "2": 1,
+     "3": 2
+    },
+    "pos_rates": {
+     "0": 0.2,
+     "1": 0.2,
+     "2": 0.2,
+     "3": 0.4
+    },
+    "chance_accuracy": 0.25,
+    "chi_square_stat": 0.6000000000000001,
+    "df": 3,
+    "chi_square_critical_0.001": 16.266,
+    "uniform_rejected_0.001": false,
+    "best_position": 3,
+    "best_position_count": 2,
+    "best_position_accuracy": 0.4,
+    "best_position_accuracy_exact": "2/5",
+    "best_minus_chance": 0.15000000000000002
+   }
+  }
+ },
+ "flagged_meta_examples": [
+  {
+   "subject": "astronomy",
+   "category": "aota",
+   "choices": [
+    "stability of particles within rings.",
+    "gravitational effects at ring edges as the moons pass by.",
+    "gaps between rings.",
+    "Moons contribute to all of the above."
+   ],
+   "answer_index": 3,
+   "error_type": "bad_question_clarity"
+  },
+  {
+   "subject": "conceptual_physics",
+   "category": "aota",
+   "choices": [
+    "charge",
+    "energy",
+    "Both of these",
+    "Neither of these"
+   ],
+   "answer_index": 2,
+   "error_type": "wrong_groundtruth"
+  },
+  {
+   "subject": "conceptual_physics",
+   "category": "aota",
+   "choices": [
+    "steadily in one direction",
+    "in one direction",
+    "to and fro",
+    "All of these"
+   ],
+   "answer_index": 1,
+   "error_type": "multiple_correct_answers"
+  },
+  {
+   "subject": "conceptual_physics",
+   "category": "aota",
+   "choices": [
+    "build up to more than the sum of amplitudes",
+    "cancel completely",
+    "Both of these",
+    "Neither of these"
+   ],
+   "answer_index": 1,
+   "error_type": "wrong_groundtruth"
+  },
+  {
+   "subject": "conceptual_physics",
+   "category": "aota",
+   "choices": [
+    "reflection.",
+    "refraction.",
+    "interference.",
+    "All of these."
+   ],
+   "answer_index": 1,
+   "error_type": "wrong_groundtruth"
+  },
+  {
+   "subject": "formal_logic",
+   "category": "nota",
+   "choices": [
+    "The university raises tuition.",
+    "The governor approves of it.",
+    "The board of trustees recommends it.",
+    "None of the above"
+   ],
+   "answer_index": 3,
+   "error_type": "bad_question_clarity"
+  },
+  {
+   "subject": "high_school_physics",
+   "category": "roman",
+   "choices": [
+    "I only",
+    "II only",
+    "I & II only",
+    "I & III only"
+   ],
+   "answer_index": 2,
+   "error_type": "wrong_groundtruth"
+  },
+  {
+   "subject": "high_school_psychology",
+   "category": "roman",
+   "choices": [
+    "I only",
+    "II only",
+    "III only",
+    "I, II, and III"
+   ],
+   "answer_index": 3,
+   "error_type": "bad_question_clarity"
+  }
+ ],
+ "predictions": {
+  "P1_clean_load_and_documented_labels": true,
+  "P1_detail": {
+   "n_subjects": 57,
+   "n_rows": 5700,
+   "n_invalid": 0,
+   "undocumented_labels": []
+  },
+  "P2_meta_flagged_more_within_subject": false,
+  "P2_detail": {
+   "n_strata": 57,
+   "n_informative_strata": 35,
+   "sum_observed_minus_expected": 0.398441020605969,
+   "sum_variance": 12.764136477841138,
+   "cmh_stat": 0.01243760180542799,
+   "df": 1,
+   "mh_odds_ratio": 1.0285290138746654,
+   "mh_or_numerator": 14.36460972017673,
+   "mh_or_denominator": 13.966168699570758,
+   "rejected_0.05": false,
+   "rejected_0.001": false
+  },
+  "P3_aota_more_answer_set_errors": true,
+  "P3_detail": {
+   "aota_judged": 167,
+   "aota_rate": 0.017964071856287425,
+   "plain_rate": 0.013544018058690745,
+   "vacuous": false,
+   "min_n": 30
+  },
+  "P4_ok_subset_last_is_modal": true,
+  "P4_detail": {
+   "n": 5330,
+   "pos_counts": {
+    "0": 1200,
+    "1": 1296,
+    "2": 1365,
+    "3": 1469
+   },
+   "pos_rates": {
+    "0": 0.225140712945591,
+    "1": 0.24315196998123828,
+    "2": 0.25609756097560976,
+    "3": 0.275609756097561
+   },
+   "chance_accuracy": 0.25,
+   "chi_square_stat": 28.950844277673546,
+   "df": 3,
+   "chi_square_critical_0.001": 16.266,
+   "uniform_rejected_0.001": true,
+   "best_position": 3,
+   "best_position_count": 1469,
+   "best_position_accuracy": 0.275609756097561,
+   "best_position_accuracy_exact": "113/410",
+   "best_minus_chance": 0.025609756097561
+  }
+ },
+ "note": "P1 (structural): 57 subjects / 5,700 rows, all valid, all labels documented. P2 (headline): within subject, meta-option questions are flagged as erroneous more often than plain ones (CMH > 3.841, positive direction). P3: 'all of the above' questions carry more answer-set errors (no correct / multiple correct) than plain ones, pooled (direction only; vacuous below 30 judged). P4: among questions judged OK, the last position is the modal gold position. Each is a finding either way. The classifier is regex-based and conservative; flagged examples are listed for audit."
+}

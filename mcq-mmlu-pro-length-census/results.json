@@ -1,0 +1,720 @@
+{
+ "dataset": "MMLU-Pro (TIGER-Lab/MMLU-Pro config 'default', test split), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. For each question this audit compares the length of the GOLD option with its distractors -- by characters (after stripping) and by whitespace tokens -- keyed by MMLU-Pro CATEGORY. MMLU-Pro options run 3-10 per question (modal 10), so the random-choice baseline is accumulated exactly as sum(1/k). Per category it reports how often the gold is the unique longest / shortest option, the accuracy of a tie-aware 'pick the longest' heuristic versus the random-choice baseline, and the mean gold vs distractor length; it then summarises the cross-category distribution and compares the pooled pick-longest lift with MMLU's (audit 52/60). As a hard validity gate the pooled parse must reproduce audit 59's n_valid (12,032) and option-count histogram EXACTLY. This is a construction property of the benchmark -- how long the correct answer was written -- not a model's behaviour.",
+ "rows_as_expected": true,
+ "split_counts_check": {
+  "observed": {
+   "test": 12032
+  },
+  "expected": {
+   "test": 12032
+  },
+  "match": true
+ },
+ "synthetic_corpus": {
+  "target_met": true,
+  "n_fixture_rows": 7
+ },
+ "structural_gate": {
+  "passed": true,
+  "detail": {
+   "n_valid": {
+    "got": 12032,
+    "expected": 12032,
+    "match": true
+   },
+   "modal_option_count": {
+    "got": 10,
+    "expected": 10,
+    "match": true
+   },
+   "option_count_hist": {
+    "got": {
+     "3": 21,
+     "4": 606,
+     "5": 52,
+     "6": 93,
+     "7": 158,
+     "8": 320,
+     "9": 801,
+     "10": 9981
+    },
+    "expected": {
+     "3": 21,
+     "4": 606,
+     "5": 52,
+     "6": 93,
+     "7": 158,
+     "8": 320,
+     "9": 801,
+     "10": 9981
+    },
+    "match": true
+   },
+   "clean_parse": {
+    "got": [
+     0,
+     0
+    ],
+    "expected": [
+     0,
+     0
+    ],
+    "match": true
+   }
+  }
+ },
+ "pooled_mmlu_pro": {
+  "n_valid": 12032,
+  "n_bad_key": 0,
+  "n_degenerate": 0,
+  "option_count_hist": {
+   "3": 21,
+   "4": 606,
+   "5": 52,
+   "6": 93,
+   "7": 158,
+   "8": 320,
+   "9": 801,
+   "10": 9981
+  },
+  "modal_option_count": 10,
+  "modal_coverage": 0.8295378989361702,
+  "chance_accuracy": 0.11087694718844984,
+  "char": {
+   "unique_longest_count": 1655,
+   "unique_shortest_count": 741,
+   "unique_longest_rate": 0.13754986702127658,
+   "unique_shortest_rate": 0.061585771276595744,
+   "longest_accuracy": 0.18376805370862884,
+   "shortest_accuracy": 0.10537838251435326,
+   "mean_gold_len": 43.23761635638298,
+   "mean_distractor_len": 36.09704976558975
+  },
+  "token": {
+   "unique_longest_count": 1163,
+   "unique_shortest_count": 400,
+   "unique_longest_rate": 0.09665890957446809,
+   "unique_shortest_rate": 0.03324468085106383,
+   "longest_accuracy": 0.16758155500675448,
+   "shortest_accuracy": 0.1152137289978048,
+   "mean_gold_len": 7.058095079787234,
+   "mean_distractor_len": 5.987553698581769
+  }
+ },
+ "by_category": {
+  "business": {
+   "n_valid": 789,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 9,
+    "6": 2,
+    "7": 6,
+    "8": 5,
+    "9": 12,
+    "10": 755
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9569074778200254,
+   "chance_accuracy": 0.10253334540406783,
+   "char": {
+    "unique_longest_count": 41,
+    "unique_shortest_count": 33,
+    "unique_longest_rate": 0.051964512040557666,
+    "unique_shortest_rate": 0.04182509505703422,
+    "longest_accuracy": 0.12715160842537268,
+    "shortest_accuracy": 0.11129921339046814,
+    "mean_gold_len": 16.868187579214194,
+    "mean_distractor_len": 17.304186312330334
+   },
+   "token": {
+    "unique_longest_count": 5,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.0063371356147021544,
+    "unique_shortest_rate": 0.0076045627376425855,
+    "longest_accuracy": 0.09892821936548173,
+    "shortest_accuracy": 0.11333011447079888,
+    "mean_gold_len": 2.6666666666666665,
+    "mean_distractor_len": 2.75210744392056
+   }
+  },
+  "law": {
+   "n_valid": 1101,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 2,
+    "4": 67,
+    "5": 4,
+    "6": 13,
+    "7": 20,
+    "8": 42,
+    "9": 246,
+    "10": 707
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.6421435059037239,
+   "chance_accuracy": 0.11491717486267895,
+   "char": {
+    "unique_longest_count": 201,
+    "unique_shortest_count": 144,
+    "unique_longest_rate": 0.18256130790190736,
+    "unique_shortest_rate": 0.1307901907356948,
+    "longest_accuracy": 0.18885861338177415,
+    "shortest_accuracy": 0.13772328186497124,
+    "mean_gold_len": 89.22343324250681,
+    "mean_distractor_len": 81.26353670689846
+   },
+   "token": {
+    "unique_longest_count": 182,
+    "unique_shortest_count": 108,
+    "unique_longest_rate": 0.16530426884650318,
+    "unique_shortest_rate": 0.09809264305177112,
+    "longest_accuracy": 0.1954395715294898,
+    "shortest_accuracy": 0.13369195392356156,
+    "mean_gold_len": 14.444141689373296,
+    "mean_distractor_len": 13.087033551101761
+   }
+  },
+  "psychology": {
+   "n_valid": 798,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 1,
+    "4": 19,
+    "5": 2,
+    "6": 16,
+    "7": 25,
+    "8": 20,
+    "9": 74,
+    "10": 641
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8032581453634086,
+   "chance_accuracy": 0.10845069021760752,
+   "char": {
+    "unique_longest_count": 253,
+    "unique_shortest_count": 49,
+    "unique_longest_rate": 0.31704260651629074,
+    "unique_shortest_rate": 0.06140350877192982,
+    "longest_accuracy": 0.3299966185304531,
+    "shortest_accuracy": 0.081296992481203,
+    "mean_gold_len": 78.52130325814537,
+    "mean_distractor_len": 56.37908208296558
+   },
+   "token": {
+    "unique_longest_count": 221,
+    "unique_shortest_count": 25,
+    "unique_longest_rate": 0.2769423558897243,
+    "unique_shortest_rate": 0.03132832080200501,
+    "longest_accuracy": 0.32134552651469944,
+    "shortest_accuracy": 0.08939362294625453,
+    "mean_gold_len": 11.547619047619047,
+    "mean_distractor_len": 8.152839070314798
+   }
+  },
+  "biology": {
+   "n_valid": 717,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 1,
+    "4": 40,
+    "5": 2,
+    "6": 6,
+    "7": 5,
+    "8": 13,
+    "9": 33,
+    "10": 617
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8605299860529986,
+   "chance_accuracy": 0.11079398286511258,
+   "char": {
+    "unique_longest_count": 304,
+    "unique_shortest_count": 31,
+    "unique_longest_rate": 0.42398884239888424,
+    "unique_shortest_rate": 0.043235704323570434,
+    "longest_accuracy": 0.4460804498461402,
+    "shortest_accuracy": 0.061602023422107105,
+    "mean_gold_len": 98.35564853556485,
+    "mean_distractor_len": 61.638406034765495
+   },
+   "token": {
+    "unique_longest_count": 282,
+    "unique_shortest_count": 13,
+    "unique_longest_rate": 0.39330543933054396,
+    "unique_shortest_rate": 0.01813110181311018,
+    "longest_accuracy": 0.44470346018463175,
+    "shortest_accuracy": 0.06166567045228133,
+    "mean_gold_len": 15.281729428172943,
+    "mean_distractor_len": 9.705641193834044
+   }
+  },
+  "chemistry": {
+   "n_valid": 1132,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 21,
+    "5": 2,
+    "6": 5,
+    "7": 5,
+    "8": 10,
+    "9": 36,
+    "10": 1053
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9302120141342756,
+   "chance_accuracy": 0.1040173313141511,
+   "char": {
+    "unique_longest_count": 71,
+    "unique_shortest_count": 25,
+    "unique_longest_rate": 0.0627208480565371,
+    "unique_shortest_rate": 0.022084805653710248,
+    "longest_accuracy": 0.147116004823602,
+    "shortest_accuracy": 0.08892604745078243,
+    "mean_gold_len": 21.034452296819786,
+    "mean_distractor_len": 20.220058227085634
+   },
+   "token": {
+    "unique_longest_count": 17,
+    "unique_shortest_count": 29,
+    "unique_longest_rate": 0.015017667844522967,
+    "unique_shortest_rate": 0.02561837455830389,
+    "longest_accuracy": 0.10747483033260419,
+    "shortest_accuracy": 0.12274139043131976,
+    "mean_gold_len": 3.760600706713781,
+    "mean_distractor_len": 3.733460495934143
+   }
+  },
+  "history": {
+   "n_valid": 381,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 35,
+    "5": 4,
+    "6": 4,
+    "7": 11,
+    "8": 18,
+    "9": 33,
+    "10": 276
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7244094488188977,
+   "chance_accuracy": 0.11891013623297088,
+   "char": {
+    "unique_longest_count": 48,
+    "unique_shortest_count": 39,
+    "unique_longest_rate": 0.12598425196850394,
+    "unique_shortest_rate": 0.10236220472440945,
+    "longest_accuracy": 0.14018976794567345,
+    "shortest_accuracy": 0.12360329958755156,
+    "mean_gold_len": 51.04724409448819,
+    "mean_distractor_len": 47.93735800064914
+   },
+   "token": {
+    "unique_longest_count": 44,
+    "unique_shortest_count": 20,
+    "unique_longest_rate": 0.11548556430446194,
+    "unique_shortest_rate": 0.05249343832020997,
+    "longest_accuracy": 0.17780485772611757,
+    "shortest_accuracy": 0.10640961546473357,
+    "mean_gold_len": 8.010498687664041,
+    "mean_distractor_len": 7.458617332035054
+   }
+  },
+  "other": {
+   "n_valid": 924,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 5,
+    "4": 64,
+    "5": 6,
+    "6": 13,
+    "7": 29,
+    "8": 55,
+    "9": 90,
+    "10": 662
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7164502164502164,
+   "chance_accuracy": 0.11715496804782519,
+   "char": {
+    "unique_longest_count": 97,
+    "unique_shortest_count": 76,
+    "unique_longest_rate": 0.10497835497835498,
+    "unique_shortest_rate": 0.08225108225108226,
+    "longest_accuracy": 0.13047567511853225,
+    "shortest_accuracy": 0.11537999037999037,
+    "mean_gold_len": 46.51190476190476,
+    "mean_distractor_len": 34.46652497343252
+   },
+   "token": {
+    "unique_longest_count": 74,
+    "unique_shortest_count": 24,
+    "unique_longest_rate": 0.08008658008658008,
+    "unique_shortest_rate": 0.025974025974025976,
+    "longest_accuracy": 0.14192305710162853,
+    "shortest_accuracy": 0.11103638425066996,
+    "mean_gold_len": 7.117965367965368,
+    "mean_distractor_len": 5.361981934112646
+   }
+  },
+  "health": {
+   "n_valid": 818,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 4,
+    "4": 71,
+    "5": 8,
+    "6": 8,
+    "7": 21,
+    "8": 42,
+    "9": 67,
+    "10": 597
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7298288508557457,
+   "chance_accuracy": 0.11908448791089378,
+   "char": {
+    "unique_longest_count": 86,
+    "unique_shortest_count": 76,
+    "unique_longest_rate": 0.10513447432762836,
+    "unique_shortest_rate": 0.09290953545232274,
+    "longest_accuracy": 0.1253929444638491,
+    "shortest_accuracy": 0.1176766794737455,
+    "mean_gold_len": 32.256723716381416,
+    "mean_distractor_len": 31.23301117487164
+   },
+   "token": {
+    "unique_longest_count": 48,
+    "unique_shortest_count": 44,
+    "unique_longest_rate": 0.05867970660146699,
+    "unique_shortest_rate": 0.05378973105134474,
+    "longest_accuracy": 0.11928775177552683,
+    "shortest_accuracy": 0.1338499825358016,
+    "mean_gold_len": 4.809290953545232,
+    "mean_distractor_len": 4.696013289036545
+   }
+  },
+  "economics": {
+   "n_valid": 844,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 3,
+    "4": 88,
+    "5": 8,
+    "6": 6,
+    "7": 12,
+    "8": 30,
+    "9": 50,
+    "10": 647
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7665876777251185,
+   "chance_accuracy": 0.12004720529602046,
+   "char": {
+    "unique_longest_count": 182,
+    "unique_shortest_count": 48,
+    "unique_longest_rate": 0.2156398104265403,
+    "unique_shortest_rate": 0.05687203791469194,
+    "longest_accuracy": 0.2439977807868803,
+    "shortest_accuracy": 0.09130369367336191,
+    "mean_gold_len": 63.36255924170616,
+    "mean_distractor_len": 52.02325581395349
+   },
+   "token": {
+    "unique_longest_count": 157,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.18601895734597157,
+    "unique_shortest_rate": 0.016587677725118485,
+    "longest_accuracy": 0.2517321146468066,
+    "shortest_accuracy": 0.08921659896185963,
+    "mean_gold_len": 10.209715639810426,
+    "mean_distractor_len": 8.37048413046658
+   }
+  },
+  "math": {
+   "n_valid": 1351,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 1,
+    "4": 17,
+    "5": 8,
+    "6": 8,
+    "7": 10,
+    "8": 29,
+    "9": 41,
+    "10": 1237
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9156180606957809,
+   "chance_accuracy": 0.1042381892307873,
+   "char": {
+    "unique_longest_count": 46,
+    "unique_shortest_count": 42,
+    "unique_longest_rate": 0.034048852701702444,
+    "unique_shortest_rate": 0.031088082901554404,
+    "longest_accuracy": 0.10657126408421745,
+    "shortest_accuracy": 0.10624023357183979,
+    "mean_gold_len": 12.391561806069578,
+    "mean_distractor_len": 12.590851548653895
+   },
+   "token": {
+    "unique_longest_count": 17,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.012583271650629163,
+    "unique_shortest_rate": 0.006661732050333087,
+    "longest_accuracy": 0.10265999318552982,
+    "shortest_accuracy": 0.1093596160398529,
+    "mean_gold_len": 2.520355292376018,
+    "mean_distractor_len": 2.5665457000590766
+   }
+  },
+  "physics": {
+   "n_valid": 1299,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 6,
+    "5": 1,
+    "6": 4,
+    "7": 4,
+    "8": 14,
+    "9": 28,
+    "10": 1242
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9561200923787528,
+   "chance_accuracy": 0.10161601720493176,
+   "char": {
+    "unique_longest_count": 91,
+    "unique_shortest_count": 54,
+    "unique_longest_rate": 0.07005388760585066,
+    "unique_shortest_rate": 0.04157043879907621,
+    "longest_accuracy": 0.13825775627161307,
+    "shortest_accuracy": 0.10015518652932048,
+    "mean_gold_len": 21.741339491916857,
+    "mean_distractor_len": 21.367888639114646
+   },
+   "token": {
+    "unique_longest_count": 21,
+    "unique_shortest_count": 51,
+    "unique_longest_rate": 0.016166281755196306,
+    "unique_shortest_rate": 0.03926096997690531,
+    "longest_accuracy": 0.09495857619414201,
+    "shortest_accuracy": 0.13522123244986986,
+    "mean_gold_len": 3.983833718244804,
+    "mean_distractor_len": 4.074701711914232
+   }
+  },
+  "computer science": {
+   "n_valid": 410,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 1,
+    "4": 35,
+    "5": 4,
+    "6": 3,
+    "7": 7,
+    "8": 20,
+    "9": 23,
+    "10": 317
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7731707317073171,
+   "chance_accuracy": 0.11741192411924119,
+   "char": {
+    "unique_longest_count": 52,
+    "unique_shortest_count": 48,
+    "unique_longest_rate": 0.12682926829268293,
+    "unique_shortest_rate": 0.11707317073170732,
+    "longest_accuracy": 0.1533933410762679,
+    "shortest_accuracy": 0.16913472706155633,
+    "mean_gold_len": 38.514634146341464,
+    "mean_distractor_len": 33.06493893357164
+   },
+   "token": {
+    "unique_longest_count": 39,
+    "unique_shortest_count": 11,
+    "unique_longest_rate": 0.0951219512195122,
+    "unique_shortest_rate": 0.026829268292682926,
+    "longest_accuracy": 0.15882694541231127,
+    "shortest_accuracy": 0.13490321331784746,
+    "mean_gold_len": 6.9609756097560975,
+    "mean_distractor_len": 6.087280309800417
+   }
+  },
+  "philosophy": {
+   "n_valid": 499,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 2,
+    "4": 75,
+    "5": 2,
+    "6": 4,
+    "7": 2,
+    "8": 17,
+    "9": 47,
+    "10": 350
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7014028056112225,
+   "chance_accuracy": 0.1264855107039476,
+   "char": {
+    "unique_longest_count": 59,
+    "unique_shortest_count": 70,
+    "unique_longest_rate": 0.11823647294589178,
+    "unique_shortest_rate": 0.1402805611222445,
+    "longest_accuracy": 0.14358956007252602,
+    "shortest_accuracy": 0.16574180106244235,
+    "mean_gold_len": 38.44689378757515,
+    "mean_distractor_len": 36.71589167092488
+   },
+   "token": {
+    "unique_longest_count": 41,
+    "unique_shortest_count": 45,
+    "unique_longest_rate": 0.08216432865731463,
+    "unique_shortest_rate": 0.09018036072144289,
+    "longest_accuracy": 0.14593870280243026,
+    "shortest_accuracy": 0.1709943696917645,
+    "mean_gold_len": 6.533066132264529,
+    "mean_distractor_len": 6.157639243740419
+   }
+  },
+  "engineering": {
+   "n_valid": 969,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 1,
+    "4": 59,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 5,
+    "9": 21,
+    "10": 880
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9081527347781218,
+   "chance_accuracy": 0.10995994889183744,
+   "char": {
+    "unique_longest_count": 124,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.12796697626418987,
+    "unique_shortest_rate": 0.006191950464396285,
+    "longest_accuracy": 0.21933387390043738,
+    "shortest_accuracy": 0.06816305469556244,
+    "mean_gold_len": 30.392156862745097,
+    "mean_distractor_len": 29.353132138992425
+   },
+   "token": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.015479876160990712,
+    "unique_shortest_rate": 0.0010319917440660474,
+    "longest_accuracy": 0.12100430815601095,
+    "shortest_accuracy": 0.10648516716628172,
+    "mean_gold_len": 5.792569659442725,
+    "mean_distractor_len": 5.70939040519418
+   }
+  }
+ },
+ "predictions": {
+  "n_categories": 14,
+  "pooled_char_lift": 0.072891106520179,
+  "mmlu_pooled_char_lift": 0.03049985286080631,
+  "P1_structural_gate_and_clean": true,
+  "P1_detail": {
+   "gate_ok": true,
+   "clean": true,
+   "gate": {
+    "n_valid": {
+     "got": 12032,
+     "expected": 12032,
+     "match": true
+    },
+    "modal_option_count": {
+     "got": 10,
+     "expected": 10,
+     "match": true
+    },
+    "option_count_hist": {
+     "got": {
+      "3": 21,
+      "4": 606,
+      "5": 52,
+      "6": 93,
+      "7": 158,
+      "8": 320,
+      "9": 801,
+      "10": 9981
+     },
+     "expected": {
+      "3": 21,
+      "4": 606,
+      "5": 52,
+      "6": 93,
+      "7": 158,
+      "8": 320,
+      "9": 801,
+      "10": 9981
+     },
+     "match": true
+    },
+    "clean_parse": {
+     "got": [
+      0,
+      0
+     ],
+     "expected": [
+      0,
+      0
+     ],
+     "match": true
+    }
+   }
+  },
+  "P2_expansion_weakens_length_shortcut": false,
+  "P2_detail": {
+   "pooled_char_lift": 0.072891106520179,
+   "mmlu_pooled_char_lift": 0.03049985286080631
+  },
+  "P3_gold_still_longer_than_distractors_pooled": true,
+  "P3_detail": {
+   "pooled_mean_gold_len": 43.23761635638298,
+   "pooled_mean_distractor_len": 36.09704976558975
+  },
+  "P4_length_cue_not_pervasive_across_categories": false,
+  "P4_detail": {
+   "n_categories_positive_lift": 14,
+   "categories_positive_lift": [
+    "biology",
+    "business",
+    "chemistry",
+    "computer science",
+    "economics",
+    "engineering",
+    "health",
+    "history",
+    "law",
+    "math",
+    "other",
+    "philosophy",
+    "physics",
+    "psychology"
+   ]
+  }
+ },
+ "note": "P1 (structural gate, finding either way): every category parses with 0 bad_key / 0 degenerate and the pooled parse reproduces audit 59 exactly (n_valid 12,032, modal 10-option, identical option-count histogram). P2 (HEADLINE, directional, finding either way): MMLU-Pro's 10-way expansion weakens the pick-longest length shortcut -- the pooled char pick-longest lift over chance is smaller than MMLU's +3.05 points (audit 52/60). P3 (directional, finding either way): an authoring length bias survives in direction -- the pooled mean gold option is still longer (chars) than the mean distractor. P4 (spread, finding either way): the length cue is not pervasive across categories -- a strict minority of MMLU-Pro categories individually show a positive char pick-longest lift. 'longest_accuracy' is the expected accuracy of a heuristic that always picks the longest option and splits ties uniformly. Lengths are characters after str.strip(); a token view is reported alongside. Measures AGREEMENT with a length heuristic, not correctness of any model."
+}

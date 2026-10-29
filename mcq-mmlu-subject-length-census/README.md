@@ -63,14 +63,19 @@ The pooled recomputation reproduces audit 52's MMLU-all numbers exactly, so the 
 - **A clear high-lift cluster follows:** jurisprudence (40.7%, +15.7), nutrition (37.8%, +12.8), us_foreign_policy
   (37.1%, +12.1), medical_genetics (36.5%, +11.5), clinical_knowledge (34.5%, +9.5), sociology (34.1%, +9.1),
   logical_fallacies, high_school_european_history, high_school_microeconomics, high_school_statistics.
-- **And it reverses in a handful.** In **public_relations** the gold is the unique longest only 17.7% of the time
-  and "pick the *shortest*" option wins (32.3%); econometrics (17.8%), anatomy (18.9%), conceptual_physics and
-  human_aging all sit below chance for pick-longest. One subject (security_studies) picks longest well despite the
-  gold being *shorter* on average — its options vary enough that a unique-longest cue still exists.
+- **And it reverses in a handful.** In **public_relations** pick-longest scores only 17.7% (the gold is the unique
+  longest option 15.7% of the time) and "pick the *shortest*" option wins (32.3%); pick-longest also falls below
+  chance in econometrics (17.8%), anatomy (18.9%), conceptual_physics and human_aging. One subject
+  (security_studies) picks longest well despite the gold being *shorter* on average — its options vary enough that
+  a unique-longest cue still exists.
 
 So a closed-book MMLU accuracy should be read against a length-only floor that is ~28% *pooled* but near **50% in
 international law** and *below chance* in public relations. Whether a length shortcut exists is a property of how
 each subject's options were authored, not of the subject's difficulty.
+
+*Correction (2026-10-29):* an earlier version of this README gave 17.7% as public_relations' gold unique-longest
+rate. 17.7% is its pick-longest accuracy; the unique-longest rate is 15.7% (20 of 127). The econometrics and anatomy
+figures are likewise pick-longest accuracies. `results.json` was always correct.
 
 ## Reproduce
 

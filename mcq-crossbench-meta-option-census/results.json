@@ -1,0 +1,852 @@
+{
+ "datasets": "ARC-Easy and ARC-Challenge (allenai/ai2_arc; train+validation+test), CommonsenseQA (tau/commonsense_qa; train+validation, goldless test excluded) and HellaSwag (Rowan/hellaswag; train+validation, goldless test excluded), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Every question is classified into ONE meta-option category (roman > aota > nota > letterref > plain; see meta_option.py) and its gold position is recorded (position_census.py). This is a construction property of each benchmark, not any model's behaviour. MMLU numbers are cited from audit 56, not recomputed here.",
+ "alpha": 0.001,
+ "max_meta_tokens": 10,
+ "thresholds": {
+  "no_meta": 0.005,
+  "arc_meta": 0.01,
+  "last_rate": 0.9,
+  "p5_min_n": 30
+ },
+ "synthetic_corpus": {
+  "position_target_met": true,
+  "meta_target_met": true,
+  "n_position_fixture_rows": 10,
+  "n_meta_fixture_rows": 12
+ },
+ "split_counts_check": {
+  "arc_easy": {
+   "observed": {
+    "test": 2376,
+    "train": 2251,
+    "validation": 570
+   },
+   "expected": {
+    "train": 2251,
+    "validation": 570,
+    "test": 2376
+   },
+   "match": true,
+   "expected_total_valid": 5197
+  },
+  "arc_challenge": {
+   "observed": {
+    "test": 1172,
+    "train": 1119,
+    "validation": 299
+   },
+   "expected": {
+    "train": 1119,
+    "validation": 299,
+    "test": 1172
+   },
+   "match": true,
+   "expected_total_valid": 2590
+  },
+  "commonsense_qa": {
+   "observed": {
+    "train": 9741,
+    "validation": 1221
+   },
+   "expected": {
+    "train": 9741,
+    "validation": 1221
+   },
+   "match": true,
+   "expected_total_valid": 10962
+  },
+  "hellaswag": {
+   "observed": {
+    "train": 39905,
+    "validation": 10042
+   },
+   "expected": {
+    "train": 39905,
+    "validation": 10042
+   },
+   "match": true,
+   "expected_total_valid": 49947
+  }
+ },
+ "mmlu_reference_audit56": {
+  "meta_option_rate": 0.0486,
+  "aota_nota_last_rate": 0.925,
+  "aota_is_gold_rate": 0.596,
+  "pooled_last_rate_all": 0.267,
+  "note": "see audit 56 (mcq-mmlu-meta-option-census)"
+ },
+ "by_dataset": {
+  "arc_easy": {
+   "display": "ARC-Easy",
+   "n_valid": 5197,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "total_valid_meta": 5197,
+   "n_meta_questions": 0,
+   "meta_option_rate": 0.0,
+   "category_counts": {
+    "plain": 5197
+   },
+   "option_count_hist": {
+    "3": 14,
+    "4": 5173,
+    "5": 10
+   },
+   "gold_position_pooled": {
+    "n_valid": 5197,
+    "n_bad_key": 0,
+    "n_degenerate": 0,
+    "option_count_hist": {
+     "3": 14,
+     "4": 5173,
+     "5": 10
+    },
+    "modal_option_count": 4,
+    "modal_coverage": 0.9953819511256494,
+    "modal": {
+     "n": 5173,
+     "pos_counts": {
+      "0": 1292,
+      "1": 1318,
+      "2": 1351,
+      "3": 1212
+     },
+     "pos_rates": {
+      "0": 0.2497583607191185,
+      "1": 0.2547844577614537,
+      "2": 0.26116373477672533,
+      "3": 0.2342934467427025
+     },
+     "chance_accuracy": 0.25,
+     "chi_square_stat": 8.158322056833558,
+     "df": 3,
+     "chi_square_critical_0.001": 16.266,
+     "uniform_rejected_0.001": false,
+     "best_position": 2,
+     "best_position_count": 1351,
+     "best_position_accuracy": 0.26116373477672533,
+     "best_position_accuracy_exact": "193/739",
+     "best_minus_chance": 0.011163734776725331
+    }
+   },
+   "by_category_gold_position": {
+    "plain": {
+     "n_valid": 5197,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "3": 14,
+      "4": 5173,
+      "5": 10
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 0.9953819511256494,
+     "modal": {
+      "n": 5173,
+      "pos_counts": {
+       "0": 1292,
+       "1": 1318,
+       "2": 1351,
+       "3": 1212
+      },
+      "pos_rates": {
+       "0": 0.2497583607191185,
+       "1": 0.2547844577614537,
+       "2": 0.26116373477672533,
+       "3": 0.2342934467427025
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 8.158322056833558,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 2,
+      "best_position_count": 1351,
+      "best_position_accuracy": 0.26116373477672533,
+      "best_position_accuracy_exact": "193/739",
+      "best_minus_chance": 0.011163734776725331
+     }
+    }
+   },
+   "plain_vs_any_meta_gold_position": {
+    "plain": {
+     "n_valid": 5197,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "3": 14,
+      "4": 5173,
+      "5": 10
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 0.9953819511256494,
+     "modal": {
+      "n": 5173,
+      "pos_counts": {
+       "0": 1292,
+       "1": 1318,
+       "2": 1351,
+       "3": 1212
+      },
+      "pos_rates": {
+       "0": 0.2497583607191185,
+       "1": 0.2547844577614537,
+       "2": 0.26116373477672533,
+       "3": 0.2342934467427025
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 8.158322056833558,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 2,
+      "best_position_count": 1351,
+      "best_position_accuracy": 0.26116373477672533,
+      "best_position_accuracy_exact": "193/739",
+      "best_minus_chance": 0.011163734776725331
+     }
+    }
+   },
+   "meta_option_placement_and_gold": {
+    "plain": {
+     "n": 5197,
+     "n_with_meta_option": 0,
+     "meta_first_pos_counts": {},
+     "n_meta_last": 0,
+     "meta_last_rate": null,
+     "n_meta_gold": 0,
+     "meta_gold_rate": null,
+     "meta_gold_chance_rate": null,
+     "n_multi_meta": 0,
+     "n_inclusive_unique": 0,
+     "n_gold_inclusive": 0,
+     "gold_inclusive_rate": null,
+     "gold_inclusive_chance_rate": null
+    }
+   },
+   "examples": []
+  },
+  "arc_challenge": {
+   "display": "ARC-Challenge",
+   "n_valid": 2590,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "total_valid_meta": 2590,
+   "n_meta_questions": 0,
+   "meta_option_rate": 0.0,
+   "category_counts": {
+    "plain": 2590
+   },
+   "option_count_hist": {
+    "3": 8,
+    "4": 2577,
+    "5": 5
+   },
+   "gold_position_pooled": {
+    "n_valid": 2590,
+    "n_bad_key": 0,
+    "n_degenerate": 0,
+    "option_count_hist": {
+     "3": 8,
+     "4": 2577,
+     "5": 5
+    },
+    "modal_option_count": 4,
+    "modal_coverage": 0.994980694980695,
+    "modal": {
+     "n": 2577,
+     "pos_counts": {
+      "0": 564,
+      "1": 676,
+      "2": 677,
+      "3": 660
+     },
+     "pos_rates": {
+      "0": 0.21885913853317812,
+      "1": 0.26232052774544046,
+      "2": 0.26270857586340707,
+      "3": 0.2561117578579744
+     },
+     "chance_accuracy": 0.25,
+     "chi_square_stat": 13.610787737679471,
+     "df": 3,
+     "chi_square_critical_0.001": 16.266,
+     "uniform_rejected_0.001": false,
+     "best_position": 2,
+     "best_position_count": 677,
+     "best_position_accuracy": 0.26270857586340707,
+     "best_position_accuracy_exact": "677/2577",
+     "best_minus_chance": 0.012708575863407068
+    }
+   },
+   "by_category_gold_position": {
+    "plain": {
+     "n_valid": 2590,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "3": 8,
+      "4": 2577,
+      "5": 5
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 0.994980694980695,
+     "modal": {
+      "n": 2577,
+      "pos_counts": {
+       "0": 564,
+       "1": 676,
+       "2": 677,
+       "3": 660
+      },
+      "pos_rates": {
+       "0": 0.21885913853317812,
+       "1": 0.26232052774544046,
+       "2": 0.26270857586340707,
+       "3": 0.2561117578579744
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 13.610787737679471,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 2,
+      "best_position_count": 677,
+      "best_position_accuracy": 0.26270857586340707,
+      "best_position_accuracy_exact": "677/2577",
+      "best_minus_chance": 0.012708575863407068
+     }
+    }
+   },
+   "plain_vs_any_meta_gold_position": {
+    "plain": {
+     "n_valid": 2590,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "3": 8,
+      "4": 2577,
+      "5": 5
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 0.994980694980695,
+     "modal": {
+      "n": 2577,
+      "pos_counts": {
+       "0": 564,
+       "1": 676,
+       "2": 677,
+       "3": 660
+      },
+      "pos_rates": {
+       "0": 0.21885913853317812,
+       "1": 0.26232052774544046,
+       "2": 0.26270857586340707,
+       "3": 0.2561117578579744
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 13.610787737679471,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 2,
+      "best_position_count": 677,
+      "best_position_accuracy": 0.26270857586340707,
+      "best_position_accuracy_exact": "677/2577",
+      "best_minus_chance": 0.012708575863407068
+     }
+    }
+   },
+   "meta_option_placement_and_gold": {
+    "plain": {
+     "n": 2590,
+     "n_with_meta_option": 0,
+     "meta_first_pos_counts": {},
+     "n_meta_last": 0,
+     "meta_last_rate": null,
+     "n_meta_gold": 0,
+     "meta_gold_rate": null,
+     "meta_gold_chance_rate": null,
+     "n_multi_meta": 0,
+     "n_inclusive_unique": 0,
+     "n_gold_inclusive": 0,
+     "gold_inclusive_rate": null,
+     "gold_inclusive_chance_rate": null
+    }
+   },
+   "examples": []
+  },
+  "commonsense_qa": {
+   "display": "CommonsenseQA",
+   "n_valid": 10962,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "total_valid_meta": 10962,
+   "n_meta_questions": 0,
+   "meta_option_rate": 0.0,
+   "category_counts": {
+    "plain": 10962
+   },
+   "option_count_hist": {
+    "5": 10962
+   },
+   "gold_position_pooled": {
+    "n_valid": 10962,
+    "n_bad_key": 0,
+    "n_degenerate": 0,
+    "option_count_hist": {
+     "5": 10962
+    },
+    "modal_option_count": 5,
+    "modal_coverage": 1.0,
+    "modal": {
+     "n": 10962,
+     "pos_counts": {
+      "0": 2148,
+      "1": 2228,
+      "2": 2187,
+      "3": 2236,
+      "4": 2163
+     },
+     "pos_rates": {
+      "0": 0.1959496442255063,
+      "1": 0.20324758255792738,
+      "2": 0.19950738916256158,
+      "3": 0.2039773763911695,
+      "4": 0.19731800766283525
+     },
+     "chance_accuracy": 0.2,
+     "chi_square_stat": 2.751870096697683,
+     "df": 4,
+     "chi_square_critical_0.001": 18.467,
+     "uniform_rejected_0.001": false,
+     "best_position": 3,
+     "best_position_count": 2236,
+     "best_position_accuracy": 0.2039773763911695,
+     "best_position_accuracy_exact": "1118/5481",
+     "best_minus_chance": 0.00397737639116949
+    }
+   },
+   "by_category_gold_position": {
+    "plain": {
+     "n_valid": 10962,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "5": 10962
+     },
+     "modal_option_count": 5,
+     "modal_coverage": 1.0,
+     "modal": {
+      "n": 10962,
+      "pos_counts": {
+       "0": 2148,
+       "1": 2228,
+       "2": 2187,
+       "3": 2236,
+       "4": 2163
+      },
+      "pos_rates": {
+       "0": 0.1959496442255063,
+       "1": 0.20324758255792738,
+       "2": 0.19950738916256158,
+       "3": 0.2039773763911695,
+       "4": 0.19731800766283525
+      },
+      "chance_accuracy": 0.2,
+      "chi_square_stat": 2.751870096697683,
+      "df": 4,
+      "chi_square_critical_0.001": 18.467,
+      "uniform_rejected_0.001": false,
+      "best_position": 3,
+      "best_position_count": 2236,
+      "best_position_accuracy": 0.2039773763911695,
+      "best_position_accuracy_exact": "1118/5481",
+      "best_minus_chance": 0.00397737639116949
+     }
+    }
+   },
+   "plain_vs_any_meta_gold_position": {
+    "plain": {
+     "n_valid": 10962,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "5": 10962
+     },
+     "modal_option_count": 5,
+     "modal_coverage": 1.0,
+     "modal": {
+      "n": 10962,
+      "pos_counts": {
+       "0": 2148,
+       "1": 2228,
+       "2": 2187,
+       "3": 2236,
+       "4": 2163
+      },
+      "pos_rates": {
+       "0": 0.1959496442255063,
+       "1": 0.20324758255792738,
+       "2": 0.19950738916256158,
+       "3": 0.2039773763911695,
+       "4": 0.19731800766283525
+      },
+      "chance_accuracy": 0.2,
+      "chi_square_stat": 2.751870096697683,
+      "df": 4,
+      "chi_square_critical_0.001": 18.467,
+      "uniform_rejected_0.001": false,
+      "best_position": 3,
+      "best_position_count": 2236,
+      "best_position_accuracy": 0.2039773763911695,
+      "best_position_accuracy_exact": "1118/5481",
+      "best_minus_chance": 0.00397737639116949
+     }
+    }
+   },
+   "meta_option_placement_and_gold": {
+    "plain": {
+     "n": 10962,
+     "n_with_meta_option": 0,
+     "meta_first_pos_counts": {},
+     "n_meta_last": 0,
+     "meta_last_rate": null,
+     "n_meta_gold": 0,
+     "meta_gold_rate": null,
+     "meta_gold_chance_rate": null,
+     "n_multi_meta": 0,
+     "n_inclusive_unique": 0,
+     "n_gold_inclusive": 0,
+     "gold_inclusive_rate": null,
+     "gold_inclusive_chance_rate": null
+    }
+   },
+   "examples": []
+  },
+  "hellaswag": {
+   "display": "HellaSwag",
+   "n_valid": 49947,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "total_valid_meta": 49947,
+   "n_meta_questions": 1,
+   "meta_option_rate": 2.0021222495845597e-05,
+   "category_counts": {
+    "plain": 49946,
+    "aota": 1
+   },
+   "option_count_hist": {
+    "4": 49947
+   },
+   "gold_position_pooled": {
+    "n_valid": 49947,
+    "n_bad_key": 0,
+    "n_degenerate": 0,
+    "option_count_hist": {
+     "4": 49947
+    },
+    "modal_option_count": 4,
+    "modal_coverage": 1.0,
+    "modal": {
+     "n": 49947,
+     "pos_counts": {
+      "0": 12501,
+      "1": 12516,
+      "2": 12451,
+      "3": 12479
+     },
+     "pos_rates": {
+      "0": 0.2502853024205658,
+      "1": 0.2505856207580035,
+      "2": 0.2492842412957735,
+      "3": 0.2498448355256572
+     },
+     "chance_accuracy": 0.25,
+     "chi_square_stat": 0.1919434600676717,
+     "df": 3,
+     "chi_square_critical_0.001": 16.266,
+     "uniform_rejected_0.001": false,
+     "best_position": 1,
+     "best_position_count": 12516,
+     "best_position_accuracy": 0.2505856207580035,
+     "best_position_accuracy_exact": "4172/16649",
+     "best_minus_chance": 0.0005856207580035022
+    }
+   },
+   "by_category_gold_position": {
+    "plain": {
+     "n_valid": 49946,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "4": 49946
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 1.0,
+     "modal": {
+      "n": 49946,
+      "pos_counts": {
+       "0": 12501,
+       "1": 12516,
+       "2": 12450,
+       "3": 12479
+      },
+      "pos_rates": {
+       "0": 0.2502903135386217,
+       "1": 0.25059063788892005,
+       "2": 0.2492692107476074,
+       "3": 0.24984983782485085
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 0.1977335522364153,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 1,
+      "best_position_count": 12516,
+      "best_position_accuracy": 0.25059063788892005,
+      "best_position_accuracy_exact": "6258/24973",
+      "best_minus_chance": 0.0005906378889200536
+     }
+    },
+    "aota": {
+     "n_valid": 1,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "4": 1
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 1.0,
+     "modal": {
+      "n": 1,
+      "pos_counts": {
+       "0": 0,
+       "1": 0,
+       "2": 1,
+       "3": 0
+      },
+      "pos_rates": {
+       "0": 0.0,
+       "1": 0.0,
+       "2": 1.0,
+       "3": 0.0
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 3.0,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 2,
+      "best_position_count": 1,
+      "best_position_accuracy": 1.0,
+      "best_position_accuracy_exact": "1",
+      "best_minus_chance": 0.75
+     }
+    }
+   },
+   "plain_vs_any_meta_gold_position": {
+    "plain": {
+     "n_valid": 49946,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "4": 49946
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 1.0,
+     "modal": {
+      "n": 49946,
+      "pos_counts": {
+       "0": 12501,
+       "1": 12516,
+       "2": 12450,
+       "3": 12479
+      },
+      "pos_rates": {
+       "0": 0.2502903135386217,
+       "1": 0.25059063788892005,
+       "2": 0.2492692107476074,
+       "3": 0.24984983782485085
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 0.1977335522364153,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 1,
+      "best_position_count": 12516,
+      "best_position_accuracy": 0.25059063788892005,
+      "best_position_accuracy_exact": "6258/24973",
+      "best_minus_chance": 0.0005906378889200536
+     }
+    },
+    "any_meta": {
+     "n_valid": 1,
+     "n_bad_key": 0,
+     "n_degenerate": 0,
+     "option_count_hist": {
+      "4": 1
+     },
+     "modal_option_count": 4,
+     "modal_coverage": 1.0,
+     "modal": {
+      "n": 1,
+      "pos_counts": {
+       "0": 0,
+       "1": 0,
+       "2": 1,
+       "3": 0
+      },
+      "pos_rates": {
+       "0": 0.0,
+       "1": 0.0,
+       "2": 1.0,
+       "3": 0.0
+      },
+      "chance_accuracy": 0.25,
+      "chi_square_stat": 3.0,
+      "df": 3,
+      "chi_square_critical_0.001": 16.266,
+      "uniform_rejected_0.001": false,
+      "best_position": 2,
+      "best_position_count": 1,
+      "best_position_accuracy": 1.0,
+      "best_position_accuracy_exact": "1",
+      "best_minus_chance": 0.75
+     }
+    }
+   },
+   "meta_option_placement_and_gold": {
+    "plain": {
+     "n": 49946,
+     "n_with_meta_option": 0,
+     "meta_first_pos_counts": {},
+     "n_meta_last": 0,
+     "meta_last_rate": null,
+     "n_meta_gold": 0,
+     "meta_gold_rate": null,
+     "meta_gold_chance_rate": null,
+     "n_multi_meta": 0,
+     "n_inclusive_unique": 0,
+     "n_gold_inclusive": 0,
+     "gold_inclusive_rate": null,
+     "gold_inclusive_chance_rate": null
+    },
+    "aota": {
+     "n": 1,
+     "n_with_meta_option": 1,
+     "meta_first_pos_counts": {
+      "1": 1
+     },
+     "n_meta_last": 0,
+     "meta_last_rate": 0.0,
+     "n_meta_gold": 0,
+     "meta_gold_rate": 0.0,
+     "meta_gold_chance_rate": 0.25,
+     "n_multi_meta": 0,
+     "n_inclusive_unique": 0,
+     "n_gold_inclusive": 0,
+     "gold_inclusive_rate": null,
+     "gold_inclusive_chance_rate": null
+    }
+   },
+   "examples": [
+    {
+     "category": "aota",
+     "choices": [
+      "continues mixing the ingredients with tongs.",
+      "mixes all of those ingredients in a shaker.",
+      "presses balls of cookie dough onto a pan and bakes them.",
+      "adds a jelly, and stirs the rest."
+     ],
+     "answer_index_or_label": "2"
+    }
+   ]
+  }
+ },
+ "arc_pooled_meta": {
+  "total_valid": 7787,
+  "n_meta_questions": 0,
+  "meta_option_rate": 0.0,
+  "category_counts": {
+   "plain": 7787
+  },
+  "placement_and_gold": {
+   "plain": {
+    "n": 7787,
+    "n_with_meta_option": 0,
+    "meta_first_pos_counts": {},
+    "n_meta_last": 0,
+    "meta_last_rate": null,
+    "n_meta_gold": 0,
+    "meta_gold_rate": null,
+    "meta_gold_chance_rate": null,
+    "n_multi_meta": 0,
+    "n_inclusive_unique": 0,
+    "n_gold_inclusive": 0,
+    "gold_inclusive_rate": null,
+    "gold_inclusive_chance_rate": null
+   }
+  }
+ },
+ "pooled_aota_nota_placement": {
+  "n_questions": 1,
+  "n_last": 0,
+  "last_rate": 0.0
+ },
+ "predictions": {
+  "P1_all_datasets_clean_parse": true,
+  "P1_detail": {
+   "arc_easy": {
+    "n_valid": 5197,
+    "n_bad_key": 0,
+    "n_degenerate": 0
+   },
+   "arc_challenge": {
+    "n_valid": 2590,
+    "n_bad_key": 0,
+    "n_degenerate": 0
+   },
+   "commonsense_qa": {
+    "n_valid": 10962,
+    "n_bad_key": 0,
+    "n_degenerate": 0
+   },
+   "hellaswag": {
+    "n_valid": 49947,
+    "n_bad_key": 0,
+    "n_degenerate": 0
+   }
+  },
+  "P2_hellaswag_essentially_no_meta": true,
+  "P2_detail": {
+   "meta_option_rate": 2.0021222495845597e-05,
+   "n_meta_questions": 1,
+   "threshold": 0.005
+  },
+  "P3_commonsenseqa_essentially_no_meta": true,
+  "P3_detail": {
+   "meta_option_rate": 0.0,
+   "n_meta_questions": 0,
+   "threshold": 0.005
+  },
+  "P4_arc_carries_meta_options": false,
+  "P4_detail": {
+   "arc_pooled_meta_option_rate": 0.0,
+   "threshold": 0.01,
+   "mmlu_reference_rate": 0.0486
+  },
+  "P5_meta_options_sit_last_ge_90pct": false,
+  "P5_detail": {
+   "n_questions": 1,
+   "n_last": 0,
+   "last_rate": 0.0,
+   "vacuous": true,
+   "min_n": 30,
+   "threshold": 0.9
+  }
+ },
+ "note": "P1 (structural): all four datasets parse clean (0 degenerate, 0 bad_key) on their gold-bearing splits. P2/P3: HellaSwag (sentence completions) and CommonsenseQA (short noun phrases) carry essentially no meta options (rate < 0.5%). P4 (headline): ARC carries meta options at an exam-like rate (> 1%), like MMLU -- or, if it fails, the meta-option mechanism is MMLU-specific. P5: where they occur, 'all/none of the above' options sit last in >=90% of questions. Each is a finding either way. The classifier is regex-based and conservative; per-dataset examples are listed so a reader can audit it. Measures construction, not any model."
+}

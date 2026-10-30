@@ -1,0 +1,3886 @@
+{
+ "dataset": "SuperGPQA (m-a-p/SuperGPQA config 'default', split 'train', the full released set) read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Gold position = answer_letter (A = first option); the answer text is only used for the consistency count. Lengths are characters after str.strip() (whitespace tokens alongside). This is a construction property of the benchmark, not a model's behaviour.",
+ "split_counts": {
+  "train": 26529
+ },
+ "paper_row_count": 26529,
+ "row_count_matches_paper": true,
+ "fixtures": {
+  "core": true,
+  "discipline": true,
+  "calc": true,
+  "difficulty": true,
+  "quality": true,
+  "chi2": true
+ },
+ "structural_gate": {
+  "passed": true,
+  "detail": {
+   "n_valid": {
+    "got": 12032,
+    "expected": 12032,
+    "match": true
+   },
+   "pooled_unique_longest": {
+    "got": 1655,
+    "expected": 1655,
+    "match": true
+   },
+   "pooled_longest_accuracy": {
+    "got": 0.18376805370862884,
+    "expected": 0.18376805370862884,
+    "match": true
+   },
+   "clean_parse": {
+    "got": [
+     0,
+     0
+    ],
+    "expected": [
+     0,
+     0
+    ],
+    "match": true
+   }
+  }
+ },
+ "mmlu_pro_pooled": {
+  "n_valid": 12032,
+  "n_bad_key": 0,
+  "n_degenerate": 0,
+  "option_count_hist": {
+   "3": 21,
+   "4": 606,
+   "5": 52,
+   "6": 93,
+   "7": 158,
+   "8": 320,
+   "9": 801,
+   "10": 9981
+  },
+  "modal_option_count": 10,
+  "modal_coverage": 0.8295378989361702,
+  "chance_accuracy": 0.11087694718844984,
+  "char": {
+   "unique_longest_count": 1655,
+   "unique_shortest_count": 741,
+   "unique_longest_rate": 0.13754986702127658,
+   "unique_shortest_rate": 0.061585771276595744,
+   "longest_accuracy": 0.18376805370862884,
+   "shortest_accuracy": 0.10537838251435326,
+   "mean_gold_len": 43.23761635638298,
+   "mean_distractor_len": 36.09704976558975
+  },
+  "token": {
+   "unique_longest_count": 1163,
+   "unique_shortest_count": 400,
+   "unique_longest_rate": 0.09665890957446809,
+   "unique_shortest_rate": 0.03324468085106383,
+   "longest_accuracy": 0.16758155500675448,
+   "shortest_accuracy": 0.1152137289978048,
+   "mean_gold_len": 7.058095079787234,
+   "mean_distractor_len": 5.987553698581769
+  }
+ },
+ "pooled": {
+  "n_valid": 26529,
+  "n_bad_key": 0,
+  "n_degenerate": 0,
+  "option_count_hist": {
+   "4": 438,
+   "5": 204,
+   "6": 280,
+   "7": 441,
+   "8": 683,
+   "9": 1325,
+   "10": 23158
+  },
+  "modal_option_count": 10,
+  "modal_coverage": 0.8729315089147726,
+  "chance_accuracy": 0.10586014885178065,
+  "char": {
+   "unique_longest_count": 2109,
+   "unique_shortest_count": 1814,
+   "unique_longest_rate": 0.0794979079497908,
+   "unique_shortest_rate": 0.06837800143239474,
+   "longest_accuracy": 0.13013295722500742,
+   "shortest_accuracy": 0.12291194362324069,
+   "mean_gold_len": 34.895887519318485,
+   "mean_distractor_len": 34.23337348192661
+  },
+  "token": {
+   "unique_longest_count": 1327,
+   "unique_shortest_count": 713,
+   "unique_longest_rate": 0.05002073202910023,
+   "unique_shortest_rate": 0.02687624863357081,
+   "longest_accuracy": 0.13368308535672552,
+   "shortest_accuracy": 0.11664345158069007,
+   "mean_gold_len": 5.7080930302687625,
+   "mean_distractor_len": 5.566843059583701
+  }
+ },
+ "by_difficulty": {
+  "middle": {
+   "n_valid": 11748,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 236,
+    "5": 74,
+    "6": 133,
+    "7": 195,
+    "8": 335,
+    "9": 609,
+    "10": 10166
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8653387810691181,
+   "chance_accuracy": 0.10639815085039804,
+   "char": {
+    "unique_longest_count": 1112,
+    "unique_shortest_count": 848,
+    "unique_longest_rate": 0.09465440926115083,
+    "unique_shortest_rate": 0.07218249914879128,
+    "longest_accuracy": 0.13846953348357843,
+    "shortest_accuracy": 0.1201271341018532,
+    "mean_gold_len": 37.50170241743275,
+    "mean_distractor_len": 36.46537666174299
+   },
+   "token": {
+    "unique_longest_count": 736,
+    "unique_shortest_count": 358,
+    "unique_longest_rate": 0.06264896152536602,
+    "unique_shortest_rate": 0.030473272046305754,
+    "longest_accuracy": 0.14292642178878134,
+    "shortest_accuracy": 0.11588240619139495,
+    "mean_gold_len": 6.029281579843378,
+    "mean_distractor_len": 5.809138355489907
+   }
+  },
+  "hard": {
+   "n_valid": 7050,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 40,
+    "5": 35,
+    "6": 45,
+    "7": 118,
+    "8": 204,
+    "9": 491,
+    "10": 6117
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8676595744680851,
+   "chance_accuracy": 0.10398761679612743,
+   "char": {
+    "unique_longest_count": 302,
+    "unique_shortest_count": 286,
+    "unique_longest_rate": 0.04283687943262411,
+    "unique_shortest_rate": 0.04056737588652482,
+    "longest_accuracy": 0.12038202183946865,
+    "shortest_accuracy": 0.11070190251041315,
+    "mean_gold_len": 38.14822695035461,
+    "mean_distractor_len": 37.911788578292914
+   },
+   "token": {
+    "unique_longest_count": 180,
+    "unique_shortest_count": 139,
+    "unique_longest_rate": 0.02553191489361702,
+    "unique_shortest_rate": 0.01971631205673759,
+    "longest_accuracy": 0.11658308004052685,
+    "shortest_accuracy": 0.11089429246876055,
+    "mean_gold_len": 6.704822695035461,
+    "mean_distractor_len": 6.698337716307912
+   }
+  },
+  "easy": {
+   "n_valid": 7731,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 162,
+    "5": 95,
+    "6": 102,
+    "7": 128,
+    "8": 144,
+    "9": 225,
+    "10": 6875
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8892769370068555,
+   "chance_accuracy": 0.10675018940443853,
+   "char": {
+    "unique_longest_count": 695,
+    "unique_shortest_count": 680,
+    "unique_longest_rate": 0.08989781399560212,
+    "unique_shortest_rate": 0.08795757340576899,
+    "longest_accuracy": 0.12635673119763147,
+    "shortest_accuracy": 0.13827822639425277,
+    "mean_gold_len": 27.970249644289225,
+    "mean_distractor_len": 27.450820776033638
+   },
+   "token": {
+    "unique_longest_count": 411,
+    "unique_shortest_count": 216,
+    "unique_longest_rate": 0.05316259216142802,
+    "unique_shortest_rate": 0.027939464493597205,
+    "longest_accuracy": 0.13523066278207915,
+    "shortest_accuracy": 0.12304266681449452,
+    "mean_gold_len": 4.31108524123658,
+    "mean_distractor_len": 4.155625720143056
+   }
+  }
+ },
+ "by_calculation": {
+  "text": {
+   "n_valid": 15300,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 391,
+    "5": 166,
+    "6": 224,
+    "7": 295,
+    "8": 386,
+    "9": 602,
+    "10": 13236
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8650980392156863,
+   "chance_accuracy": 0.10778856727876336,
+   "char": {
+    "unique_longest_count": 1587,
+    "unique_shortest_count": 1379,
+    "unique_longest_rate": 0.10372549019607843,
+    "unique_shortest_rate": 0.09013071895424836,
+    "longest_accuracy": 0.13450848117024589,
+    "shortest_accuracy": 0.13168067226890756,
+    "mean_gold_len": 35.26241830065359,
+    "mean_distractor_len": 34.35869192884166
+   },
+   "token": {
+    "unique_longest_count": 1015,
+    "unique_shortest_count": 498,
+    "unique_longest_rate": 0.06633986928104575,
+    "unique_shortest_rate": 0.032549019607843135,
+    "longest_accuracy": 0.14328924162257495,
+    "shortest_accuracy": 0.12106069094304388,
+    "mean_gold_len": 5.34359477124183,
+    "mean_distractor_len": 5.110178200336457
+   }
+  },
+  "calculation": {
+   "n_valid": 11229,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 47,
+    "5": 38,
+    "6": 56,
+    "7": 146,
+    "8": 297,
+    "9": 723,
+    "10": 9922
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8836049514649568,
+   "chance_accuracy": 0.10323259502393886,
+   "char": {
+    "unique_longest_count": 522,
+    "unique_shortest_count": 435,
+    "unique_longest_rate": 0.046486775313919315,
+    "unique_shortest_rate": 0.038738979428266096,
+    "longest_accuracy": 0.12417111588898926,
+    "shortest_accuracy": 0.11096417015465906,
+    "mean_gold_len": 34.39647341704515,
+    "mean_distractor_len": 34.066423283642635
+   },
+   "token": {
+    "unique_longest_count": 312,
+    "unique_shortest_count": 215,
+    "unique_longest_rate": 0.027785199038204648,
+    "unique_shortest_rate": 0.019146851901326922,
+    "longest_accuracy": 0.12059428039924967,
+    "shortest_accuracy": 0.1106247711778035,
+    "mean_gold_len": 6.204737732656515,
+    "mean_distractor_len": 6.175215495385864
+   }
+  }
+ },
+ "by_difficulty_calculation": {
+  "middle|text": {
+   "n_valid": 7303,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 214,
+    "5": 64,
+    "6": 108,
+    "7": 142,
+    "8": 200,
+    "9": 330,
+    "10": 6245
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8551280295768862,
+   "chance_accuracy": 0.10827774626213624,
+   "char": {
+    "unique_longest_count": 861,
+    "unique_shortest_count": 676,
+    "unique_longest_rate": 0.1178967547583185,
+    "unique_shortest_rate": 0.09256469943858688,
+    "longest_accuracy": 0.1437163787875824,
+    "shortest_accuracy": 0.12691740076376526,
+    "mean_gold_len": 40.93317814596741,
+    "mean_distractor_len": 39.72479411529543
+   },
+   "token": {
+    "unique_longest_count": 585,
+    "unique_shortest_count": 270,
+    "unique_longest_rate": 0.08010406682185403,
+    "unique_shortest_rate": 0.03697110776393263,
+    "longest_accuracy": 0.15328903755577725,
+    "shortest_accuracy": 0.11924883011765115,
+    "mean_gold_len": 6.159934273586197,
+    "mean_distractor_len": 5.8685696010234265
+   }
+  },
+  "hard|text": {
+   "n_valid": 877,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 17,
+    "5": 9,
+    "6": 18,
+    "7": 30,
+    "8": 49,
+    "9": 69,
+    "10": 685
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7810718358038768,
+   "chance_accuracy": 0.10903920291035456,
+   "char": {
+    "unique_longest_count": 66,
+    "unique_shortest_count": 53,
+    "unique_longest_rate": 0.07525655644241733,
+    "unique_shortest_rate": 0.06043329532497149,
+    "longest_accuracy": 0.11556532913431432,
+    "shortest_accuracy": 0.10295198276954264,
+    "mean_gold_len": 61.53363740022805,
+    "mean_distractor_len": 61.59768100310099
+   },
+   "token": {
+    "unique_longest_count": 44,
+    "unique_shortest_count": 26,
+    "unique_longest_rate": 0.05017103762827822,
+    "unique_shortest_rate": 0.029646522234891677,
+    "longest_accuracy": 0.120636730556913,
+    "shortest_accuracy": 0.10974281008488534,
+    "mean_gold_len": 9.62029646522235,
+    "mean_distractor_len": 9.515707159228798
+   }
+  },
+  "middle|calculation": {
+   "n_valid": 4445,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 22,
+    "5": 10,
+    "6": 25,
+    "7": 53,
+    "8": 135,
+    "9": 279,
+    "10": 3921
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8821147356580428,
+   "chance_accuracy": 0.10331003267448712,
+   "char": {
+    "unique_longest_count": 251,
+    "unique_shortest_count": 172,
+    "unique_longest_rate": 0.05646794150731159,
+    "unique_shortest_rate": 0.03869516310461192,
+    "longest_accuracy": 0.12984912600210688,
+    "shortest_accuracy": 0.10897093220490296,
+    "mean_gold_len": 31.86389201349831,
+    "mean_distractor_len": 31.241035499166987
+   },
+   "token": {
+    "unique_longest_count": 151,
+    "unique_shortest_count": 88,
+    "unique_longest_rate": 0.03397075365579302,
+    "unique_shortest_rate": 0.019797525309336334,
+    "longest_accuracy": 0.12590095880872035,
+    "shortest_accuracy": 0.1103514739229025,
+    "mean_gold_len": 5.814623172103487,
+    "mean_distractor_len": 5.713879277201077
+   }
+  },
+  "hard|calculation": {
+   "n_valid": 6173,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 23,
+    "5": 26,
+    "6": 27,
+    "7": 88,
+    "8": 155,
+    "9": 422,
+    "10": 5432
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8799611210108537,
+   "chance_accuracy": 0.10326993641022476,
+   "char": {
+    "unique_longest_count": 236,
+    "unique_shortest_count": 233,
+    "unique_longest_rate": 0.03823100599384416,
+    "unique_shortest_rate": 0.03774501862951563,
+    "longest_accuracy": 0.12106633084682655,
+    "shortest_accuracy": 0.11180293598080736,
+    "mean_gold_len": 34.825854527782276,
+    "mean_distractor_len": 34.66959490633939
+   },
+   "token": {
+    "unique_longest_count": 136,
+    "unique_shortest_count": 113,
+    "unique_longest_rate": 0.022031427182893245,
+    "unique_shortest_rate": 0.018305524056374534,
+    "longest_accuracy": 0.11600717667054943,
+    "shortest_accuracy": 0.11105788392358941,
+    "mean_gold_len": 6.290620443868459,
+    "mean_distractor_len": 6.3126880132878105
+   }
+  },
+  "easy|text": {
+   "n_valid": 7120,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 160,
+    "5": 93,
+    "6": 98,
+    "7": 123,
+    "8": 137,
+    "9": 203,
+    "10": 6306
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8856741573033707,
+   "chance_accuracy": 0.10713276930622437,
+   "char": {
+    "unique_longest_count": 660,
+    "unique_shortest_count": 650,
+    "unique_longest_rate": 0.09269662921348315,
+    "unique_shortest_rate": 0.09129213483146068,
+    "longest_accuracy": 0.12739722668093453,
+    "shortest_accuracy": 0.1401050026752274,
+    "mean_gold_len": 26.20997191011236,
+    "mean_distractor_len": 25.605402413012683
+   },
+   "token": {
+    "unique_longest_count": 386,
+    "unique_shortest_count": 202,
+    "unique_longest_rate": 0.054213483146067415,
+    "unique_shortest_rate": 0.028370786516853933,
+    "longest_accuracy": 0.13582263242375603,
+    "shortest_accuracy": 0.1243131911004102,
+    "mean_gold_len": 3.9794943820224717,
+    "mean_distractor_len": 3.8059494928114366
+   }
+  },
+  "easy|calculation": {
+   "n_valid": 611,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "5": 2,
+    "6": 4,
+    "7": 5,
+    "8": 7,
+    "9": 22,
+    "10": 569
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9312602291325696,
+   "chance_accuracy": 0.1022919751643156,
+   "char": {
+    "unique_longest_count": 35,
+    "unique_shortest_count": 30,
+    "unique_longest_rate": 0.057283142389525366,
+    "unique_shortest_rate": 0.049099836333878884,
+    "longest_accuracy": 0.11423180838074455,
+    "shortest_accuracy": 0.11699075156521965,
+    "mean_gold_len": 48.48281505728314,
+    "mean_distractor_len": 48.40092421441774
+   },
+   "token": {
+    "unique_longest_count": 25,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.04091653027823241,
+    "unique_shortest_rate": 0.022913256955810146,
+    "longest_accuracy": 0.12833242407710493,
+    "shortest_accuracy": 0.10823721196061621,
+    "mean_gold_len": 8.175122749590834,
+    "mean_distractor_len": 8.12532347504621
+   }
+  }
+ },
+ "by_option_count": {
+  "10": {
+   "n_valid": 23158,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "10": 23158
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 1.0,
+   "chance_accuracy": 0.1,
+   "char": {
+    "unique_longest_count": 1798,
+    "unique_shortest_count": 1513,
+    "unique_longest_rate": 0.0776405561792901,
+    "unique_shortest_rate": 0.06533379393730028,
+    "longest_accuracy": 0.12704562652420845,
+    "shortest_accuracy": 0.11928724277804509,
+    "mean_gold_len": 35.43259348821142,
+    "mean_distractor_len": 34.59854525913771
+   },
+   "token": {
+    "unique_longest_count": 1179,
+    "unique_shortest_count": 597,
+    "unique_longest_rate": 0.05091113222212626,
+    "unique_shortest_rate": 0.025779428275326022,
+    "longest_accuracy": 0.1312986735702428,
+    "shortest_accuracy": 0.11145983697909598,
+    "mean_gold_len": 5.82688487779601,
+    "mean_distractor_len": 5.640964005719166
+   }
+  },
+  "06": {
+   "n_valid": 280,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 280
+   },
+   "modal_option_count": 6,
+   "modal_coverage": 1.0,
+   "chance_accuracy": 0.16666666666666666,
+   "char": {
+    "unique_longest_count": 25,
+    "unique_shortest_count": 29,
+    "unique_longest_rate": 0.08928571428571429,
+    "unique_shortest_rate": 0.10357142857142858,
+    "longest_accuracy": 0.14898809523809523,
+    "shortest_accuracy": 0.16422619047619047,
+    "mean_gold_len": 28.825,
+    "mean_distractor_len": 28.666428571428572
+   },
+   "token": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 12,
+    "unique_longest_rate": 0.039285714285714285,
+    "unique_shortest_rate": 0.04285714285714286,
+    "longest_accuracy": 0.16660714285714287,
+    "shortest_accuracy": 0.16732142857142857,
+    "mean_gold_len": 4.05,
+    "mean_distractor_len": 4.088571428571429
+   }
+  },
+  "09": {
+   "n_valid": 1325,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "9": 1325
+   },
+   "modal_option_count": 9,
+   "modal_coverage": 1.0,
+   "chance_accuracy": 0.1111111111111111,
+   "char": {
+    "unique_longest_count": 91,
+    "unique_shortest_count": 77,
+    "unique_longest_rate": 0.06867924528301887,
+    "unique_shortest_rate": 0.05811320754716981,
+    "longest_accuracy": 0.12809493860437257,
+    "shortest_accuracy": 0.10680473195567536,
+    "mean_gold_len": 31.7811320754717,
+    "mean_distractor_len": 31.245283018867923
+   },
+   "token": {
+    "unique_longest_count": 40,
+    "unique_shortest_count": 36,
+    "unique_longest_rate": 0.03018867924528302,
+    "unique_shortest_rate": 0.027169811320754716,
+    "longest_accuracy": 0.11326834381551362,
+    "shortest_accuracy": 0.12093770589997005,
+    "mean_gold_len": 4.989433962264151,
+    "mean_distractor_len": 4.960754716981132
+   }
+  },
+  "05": {
+   "n_valid": 204,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 204
+   },
+   "modal_option_count": 5,
+   "modal_coverage": 1.0,
+   "chance_accuracy": 0.2,
+   "char": {
+    "unique_longest_count": 28,
+    "unique_shortest_count": 28,
+    "unique_longest_rate": 0.13725490196078433,
+    "unique_shortest_rate": 0.13725490196078433,
+    "longest_accuracy": 0.19207516339869282,
+    "shortest_accuracy": 0.2190359477124183,
+    "mean_gold_len": 28.348039215686274,
+    "mean_distractor_len": 28.743872549019606
+   },
+   "token": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.06372549019607843,
+    "unique_shortest_rate": 0.029411764705882353,
+    "longest_accuracy": 0.20857843137254903,
+    "shortest_accuracy": 0.2065359477124183,
+    "mean_gold_len": 3.8137254901960786,
+    "mean_distractor_len": 3.8517156862745097
+   }
+  },
+  "07": {
+   "n_valid": 441,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "7": 441
+   },
+   "modal_option_count": 7,
+   "modal_coverage": 1.0,
+   "chance_accuracy": 0.14285714285714285,
+   "char": {
+    "unique_longest_count": 49,
+    "unique_shortest_count": 44,
+    "unique_longest_rate": 0.1111111111111111,
+    "unique_shortest_rate": 0.09977324263038549,
+    "longest_accuracy": 0.1653277183889429,
+    "shortest_accuracy": 0.15980995572832307,
+    "mean_gold_len": 29.133786848072564,
+    "mean_distractor_len": 28.793650793650794
+   },
+   "token": {
+    "unique_longest_count": 21,
+    "unique_shortest_count": 18,
+    "unique_longest_rate": 0.047619047619047616,
+    "unique_shortest_rate": 0.04081632653061224,
+    "longest_accuracy": 0.1489795918367347,
+    "shortest_accuracy": 0.16368102796674225,
+    "mean_gold_len": 4.764172335600907,
+    "mean_distractor_len": 4.722978080120937
+   }
+  },
+  "08": {
+   "n_valid": 683,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "8": 683
+   },
+   "modal_option_count": 8,
+   "modal_coverage": 1.0,
+   "chance_accuracy": 0.125,
+   "char": {
+    "unique_longest_count": 41,
+    "unique_shortest_count": 55,
+    "unique_longest_rate": 0.060029282576866766,
+    "unique_shortest_rate": 0.08052708638360176,
+    "longest_accuracy": 0.11672418601408352,
+    "shortest_accuracy": 0.13157812173185526,
+    "mean_gold_len": 31.202049780380673,
+    "mean_distractor_len": 30.896883497176322
+   },
+   "token": {
+    "unique_longest_count": 19,
+    "unique_shortest_count": 23,
+    "unique_longest_rate": 0.027818448023426062,
+    "unique_shortest_rate": 0.03367496339677892,
+    "longest_accuracy": 0.12635431918008785,
+    "shortest_accuracy": 0.13287666457505404,
+    "mean_gold_len": 4.967789165446559,
+    "mean_distractor_len": 4.913407236979712
+   }
+  },
+  "04": {
+   "n_valid": 438,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 438
+   },
+   "modal_option_count": 4,
+   "modal_coverage": 1.0,
+   "chance_accuracy": 0.25,
+   "char": {
+    "unique_longest_count": 77,
+    "unique_shortest_count": 68,
+    "unique_longest_rate": 0.17579908675799086,
+    "unique_shortest_rate": 0.1552511415525114,
+    "longest_accuracy": 0.2441019786910198,
+    "shortest_accuracy": 0.24143835616438356,
+    "mean_gold_len": 34.4337899543379,
+    "mean_distractor_len": 32.85007610350076
+   },
+   "token": {
+    "unique_longest_count": 44,
+    "unique_shortest_count": 21,
+    "unique_longest_rate": 0.1004566210045662,
+    "unique_shortest_rate": 0.04794520547945205,
+    "longest_accuracy": 0.2616057838660578,
+    "shortest_accuracy": 0.23078386605783865,
+    "mean_gold_len": 5.648401826484018,
+    "mean_distractor_len": 5.416286149162861
+   }
+  }
+ },
+ "by_discipline": {
+  "Engineering": {
+   "n_valid": 7892,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 73,
+    "5": 29,
+    "6": 48,
+    "7": 102,
+    "8": 178,
+    "9": 437,
+    "10": 7025
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8901419158641662,
+   "chance_accuracy": 0.10389343438000306,
+   "char": {
+    "unique_longest_count": 551,
+    "unique_shortest_count": 411,
+    "unique_longest_rate": 0.06981753674607197,
+    "unique_shortest_rate": 0.05207805372529144,
+    "longest_accuracy": 0.1292646662483206,
+    "shortest_accuracy": 0.11146745951294862,
+    "mean_gold_len": 34.14508362899139,
+    "mean_distractor_len": 33.53810336350753
+   },
+   "token": {
+    "unique_longest_count": 334,
+    "unique_shortest_count": 172,
+    "unique_longest_rate": 0.04232133806386214,
+    "unique_shortest_rate": 0.021794221996958945,
+    "longest_accuracy": 0.13116778896049042,
+    "shortest_accuracy": 0.1099961081746434,
+    "mean_gold_len": 5.925747592498733,
+    "mean_distractor_len": 5.7774676808282965
+   }
+  },
+  "Philosophy": {
+   "n_valid": 347,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 6,
+    "5": 4,
+    "6": 4,
+    "7": 10,
+    "8": 10,
+    "9": 6,
+    "10": 307
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8847262247838616,
+   "chance_accuracy": 0.10666254974612323,
+   "char": {
+    "unique_longest_count": 55,
+    "unique_shortest_count": 38,
+    "unique_longest_rate": 0.1585014409221902,
+    "unique_shortest_rate": 0.10951008645533142,
+    "longest_accuracy": 0.17594803531402955,
+    "shortest_accuracy": 0.13908901697086135,
+    "mean_gold_len": 44.89048991354467,
+    "mean_distractor_len": 42.79599332220367
+   },
+   "token": {
+    "unique_longest_count": 46,
+    "unique_shortest_count": 18,
+    "unique_longest_rate": 0.13256484149855907,
+    "unique_shortest_rate": 0.05187319884726225,
+    "longest_accuracy": 0.1954919720049403,
+    "shortest_accuracy": 0.12848451580440054,
+    "mean_gold_len": 6.734870317002882,
+    "mean_distractor_len": 6.226043405676127
+   }
+  },
+  "Medicine": {
+   "n_valid": 2755,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 9,
+    "5": 26,
+    "6": 53,
+    "7": 78,
+    "8": 75,
+    "9": 116,
+    "10": 2398
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8704174228675136,
+   "chance_accuracy": 0.10507806873505603,
+   "char": {
+    "unique_longest_count": 252,
+    "unique_shortest_count": 255,
+    "unique_longest_rate": 0.09147005444646097,
+    "unique_shortest_rate": 0.0925589836660617,
+    "longest_accuracy": 0.11580531789243223,
+    "shortest_accuracy": 0.1273303949528995,
+    "mean_gold_len": 30.79491833030853,
+    "mean_distractor_len": 30.891418050964475
+   },
+   "token": {
+    "unique_longest_count": 166,
+    "unique_shortest_count": 93,
+    "unique_longest_rate": 0.0602540834845735,
+    "unique_shortest_rate": 0.033756805807622504,
+    "longest_accuracy": 0.12491804223201683,
+    "shortest_accuracy": 0.1195688934981131,
+    "mean_gold_len": 4.464246823956443,
+    "mean_distractor_len": 4.416377254278422
+   }
+  },
+  "Economics": {
+   "n_valid": 873,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 3,
+    "5": 3,
+    "6": 5,
+    "7": 5,
+    "8": 15,
+    "9": 21,
+    "10": 821
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9404352806414662,
+   "chance_accuracy": 0.10218322151311841,
+   "char": {
+    "unique_longest_count": 121,
+    "unique_shortest_count": 65,
+    "unique_longest_rate": 0.13860252004581902,
+    "unique_shortest_rate": 0.07445589919816724,
+    "longest_accuracy": 0.17203540064364806,
+    "shortest_accuracy": 0.10713194785359734,
+    "mean_gold_len": 37.80641466208476,
+    "mean_distractor_len": 34.72628586197984
+   },
+   "token": {
+    "unique_longest_count": 84,
+    "unique_shortest_count": 12,
+    "unique_longest_rate": 0.09621993127147767,
+    "unique_shortest_rate": 0.013745704467353952,
+    "longest_accuracy": 0.17473090419825815,
+    "shortest_accuracy": 0.08581474208621975,
+    "mean_gold_len": 5.801832760595647,
+    "mean_distractor_len": 5.210907211165676
+   }
+  },
+  "Science": {
+   "n_valid": 9838,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 60,
+    "5": 64,
+    "6": 100,
+    "7": 169,
+    "8": 311,
+    "9": 635,
+    "10": 8499
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8638951006302094,
+   "chance_accuracy": 0.10448669235262038,
+   "char": {
+    "unique_longest_count": 605,
+    "unique_shortest_count": 570,
+    "unique_longest_rate": 0.061496239072982316,
+    "unique_shortest_rate": 0.05793860540760317,
+    "longest_accuracy": 0.1231355902122318,
+    "shortest_accuracy": 0.12127493167084548,
+    "mean_gold_len": 38.00985972758691,
+    "mean_distractor_len": 37.53053746878574
+   },
+   "token": {
+    "unique_longest_count": 373,
+    "unique_shortest_count": 234,
+    "unique_longest_rate": 0.03791421020532629,
+    "unique_shortest_rate": 0.023785322219963406,
+    "longest_accuracy": 0.12559160785680404,
+    "shortest_accuracy": 0.11457794847965615,
+    "mean_gold_len": 6.276783899166497,
+    "mean_distractor_len": 6.209024714695792
+   }
+  },
+  "Law": {
+   "n_valid": 656,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 8,
+    "5": 5,
+    "6": 11,
+    "7": 11,
+    "8": 8,
+    "9": 14,
+    "10": 599
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.913109756097561,
+   "chance_accuracy": 0.10496999612853271,
+   "char": {
+    "unique_longest_count": 94,
+    "unique_shortest_count": 77,
+    "unique_longest_rate": 0.14329268292682926,
+    "unique_shortest_rate": 0.1173780487804878,
+    "longest_accuracy": 0.16188056523422378,
+    "shortest_accuracy": 0.14373003774680604,
+    "mean_gold_len": 61.239329268292686,
+    "mean_distractor_len": 57.863207547169814
+   },
+   "token": {
+    "unique_longest_count": 78,
+    "unique_shortest_count": 41,
+    "unique_longest_rate": 0.11890243902439024,
+    "unique_shortest_rate": 0.0625,
+    "longest_accuracy": 0.16877903600464575,
+    "shortest_accuracy": 0.1331663763066202,
+    "mean_gold_len": 9.817073170731707,
+    "mean_distractor_len": 9.183787561146051
+   }
+  },
+  "History": {
+   "n_valid": 674,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 6,
+    "5": 15,
+    "6": 11,
+    "7": 15,
+    "8": 15,
+    "9": 15,
+    "10": 597
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8857566765578635,
+   "chance_accuracy": 0.10640631623569309,
+   "char": {
+    "unique_longest_count": 38,
+    "unique_shortest_count": 62,
+    "unique_longest_rate": 0.05637982195845697,
+    "unique_shortest_rate": 0.09198813056379822,
+    "longest_accuracy": 0.10889677829588809,
+    "shortest_accuracy": 0.14756311525599358,
+    "mean_gold_len": 19.43026706231454,
+    "mean_distractor_len": 20.418828380003436
+   },
+   "token": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 22,
+    "unique_longest_rate": 0.019287833827893175,
+    "unique_shortest_rate": 0.032640949554896145,
+    "longest_accuracy": 0.10083074278178136,
+    "shortest_accuracy": 0.13585205595591351,
+    "mean_gold_len": 3.2537091988130564,
+    "mean_distractor_len": 3.3714138464181413
+   }
+  },
+  "Education": {
+   "n_valid": 484,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 4,
+    "6": 8,
+    "7": 3,
+    "8": 11,
+    "9": 19,
+    "10": 438
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9049586776859504,
+   "chance_accuracy": 0.10350829725829726,
+   "char": {
+    "unique_longest_count": 68,
+    "unique_shortest_count": 47,
+    "unique_longest_rate": 0.14049586776859505,
+    "unique_shortest_rate": 0.09710743801652892,
+    "longest_accuracy": 0.16952725304998031,
+    "shortest_accuracy": 0.12962990292535748,
+    "mean_gold_len": 31.09090909090909,
+    "mean_distractor_len": 29.50094161958569
+   },
+   "token": {
+    "unique_longest_count": 47,
+    "unique_shortest_count": 13,
+    "unique_longest_rate": 0.09710743801652892,
+    "unique_shortest_rate": 0.026859504132231406,
+    "longest_accuracy": 0.1717335694608422,
+    "shortest_accuracy": 0.10821936901482355,
+    "mean_gold_len": 4.382231404958677,
+    "mean_distractor_len": 4.056732580037664
+   }
+  },
+  "Military Science": {
+   "n_valid": 205,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 17,
+    "5": 2,
+    "6": 2,
+    "7": 4,
+    "8": 4,
+    "9": 5,
+    "10": 171
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8341463414634146,
+   "chance_accuracy": 0.1156600851722803,
+   "char": {
+    "unique_longest_count": 22,
+    "unique_shortest_count": 18,
+    "unique_longest_rate": 0.1073170731707317,
+    "unique_shortest_rate": 0.08780487804878048,
+    "longest_accuracy": 0.13980255516840884,
+    "shortest_accuracy": 0.11392179636082075,
+    "mean_gold_len": 33.64390243902439,
+    "mean_distractor_len": 31.674705882352942
+   },
+   "token": {
+    "unique_longest_count": 18,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.08780487804878048,
+    "unique_shortest_rate": 0.024390243902439025,
+    "longest_accuracy": 0.17037553232675184,
+    "shortest_accuracy": 0.1166260162601626,
+    "mean_gold_len": 4.897560975609756,
+    "mean_distractor_len": 4.528235294117647
+   }
+  },
+  "Management": {
+   "n_valid": 501,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 6,
+    "6": 7,
+    "7": 11,
+    "8": 15,
+    "9": 13,
+    "10": 448
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8942115768463074,
+   "chance_accuracy": 0.10440626683141653,
+   "char": {
+    "unique_longest_count": 81,
+    "unique_shortest_count": 41,
+    "unique_longest_rate": 0.16167664670658682,
+    "unique_shortest_rate": 0.08183632734530938,
+    "longest_accuracy": 0.19060450527516395,
+    "shortest_accuracy": 0.11951652251053449,
+    "mean_gold_len": 36.119760479041915,
+    "mean_distractor_len": 30.484321355001143
+   },
+   "token": {
+    "unique_longest_count": 37,
+    "unique_shortest_count": 16,
+    "unique_longest_rate": 0.07385229540918163,
+    "unique_shortest_rate": 0.031936127744510975,
+    "longest_accuracy": 0.15839194626619776,
+    "shortest_accuracy": 0.11814307892152204,
+    "mean_gold_len": 5.16566866267465,
+    "mean_distractor_len": 4.3270771343556875
+   }
+  },
+  "Literature and Arts": {
+   "n_valid": 1676,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 252,
+    "5": 45,
+    "6": 26,
+    "7": 30,
+    "8": 38,
+    "9": 31,
+    "10": 1254
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7482100238663485,
+   "chance_accuracy": 0.1278123460999356,
+   "char": {
+    "unique_longest_count": 167,
+    "unique_shortest_count": 175,
+    "unique_longest_rate": 0.09964200477326969,
+    "unique_shortest_rate": 0.10441527446300716,
+    "longest_accuracy": 0.13876411145205894,
+    "shortest_accuracy": 0.16376718945334698,
+    "mean_gold_len": 23.477326968973745,
+    "mean_distractor_len": 22.880729725586388
+   },
+   "token": {
+    "unique_longest_count": 102,
+    "unique_shortest_count": 64,
+    "unique_longest_rate": 0.060859188544152745,
+    "unique_shortest_rate": 0.03818615751789976,
+    "longest_accuracy": 0.1532648122892753,
+    "shortest_accuracy": 0.1523307572830246,
+    "mean_gold_len": 3.8687350835322194,
+    "mean_distractor_len": 3.652077265062088
+   }
+  },
+  "Agronomy": {
+   "n_valid": 485,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "6": 3,
+    "7": 2,
+    "8": 3,
+    "9": 10,
+    "10": 465
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9587628865979382,
+   "chance_accuracy": 0.10159139257077401,
+   "char": {
+    "unique_longest_count": 47,
+    "unique_shortest_count": 42,
+    "unique_longest_rate": 0.09690721649484536,
+    "unique_shortest_rate": 0.0865979381443299,
+    "longest_accuracy": 0.1214023891343479,
+    "shortest_accuracy": 0.12772214040255278,
+    "mean_gold_len": 22.356701030927834,
+    "mean_distractor_len": 22.157212317666126
+   },
+   "token": {
+    "unique_longest_count": 18,
+    "unique_shortest_count": 21,
+    "unique_longest_rate": 0.03711340206185567,
+    "unique_shortest_rate": 0.04329896907216495,
+    "longest_accuracy": 0.11714940271641303,
+    "shortest_accuracy": 0.13468090328915072,
+    "mean_gold_len": 3.2350515463917526,
+    "mean_distractor_len": 3.1914795091456356
+   }
+  },
+  "Sociology": {
+   "n_valid": 143,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 1,
+    "6": 2,
+    "7": 1,
+    "9": 3,
+    "10": 136
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.951048951048951,
+   "chance_accuracy": 0.10216450216450217,
+   "char": {
+    "unique_longest_count": 8,
+    "unique_shortest_count": 13,
+    "unique_longest_rate": 0.055944055944055944,
+    "unique_shortest_rate": 0.09090909090909091,
+    "longest_accuracy": 0.09234654234654234,
+    "shortest_accuracy": 0.1343045843045843,
+    "mean_gold_len": 37.87412587412587,
+    "mean_distractor_len": 35.95583596214511
+   },
+   "token": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.07692307692307693,
+    "unique_shortest_rate": 0.013986013986013986,
+    "longest_accuracy": 0.14991952491952493,
+    "shortest_accuracy": 0.10622433122433123,
+    "mean_gold_len": 5.685314685314685,
+    "mean_distractor_len": 5.242113564668769
+   }
+  }
+ },
+ "by_field": {
+  "Engineering|Electronic Science and Technology": {
+   "n_valid": 246,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 2,
+    "6": 1,
+    "8": 3,
+    "9": 12,
+    "10": 228
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.926829268292683,
+   "chance_accuracy": 0.10193089430894309,
+   "char": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 10,
+    "unique_longest_rate": 0.052845528455284556,
+    "unique_shortest_rate": 0.04065040650406504,
+    "longest_accuracy": 0.1248015873015873,
+    "shortest_accuracy": 0.10145986578913409,
+    "mean_gold_len": 46.65040650406504,
+    "mean_distractor_len": 45.82722273143904
+   },
+   "token": {
+    "unique_longest_count": 10,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.04065040650406504,
+    "unique_shortest_rate": 0.02032520325203252,
+    "longest_accuracy": 0.12143179765130985,
+    "shortest_accuracy": 0.11303555297457736,
+    "mean_gold_len": 8.670731707317072,
+    "mean_distractor_len": 8.529789184234646
+   }
+  },
+  "Philosophy|Philosophy": {
+   "n_valid": 347,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 6,
+    "5": 4,
+    "6": 4,
+    "7": 10,
+    "8": 10,
+    "9": 6,
+    "10": 307
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8847262247838616,
+   "chance_accuracy": 0.10666254974612323,
+   "char": {
+    "unique_longest_count": 55,
+    "unique_shortest_count": 38,
+    "unique_longest_rate": 0.1585014409221902,
+    "unique_shortest_rate": 0.10951008645533142,
+    "longest_accuracy": 0.17594803531402955,
+    "shortest_accuracy": 0.13908901697086135,
+    "mean_gold_len": 44.89048991354467,
+    "mean_distractor_len": 42.79599332220367
+   },
+   "token": {
+    "unique_longest_count": 46,
+    "unique_shortest_count": 18,
+    "unique_longest_rate": 0.13256484149855907,
+    "unique_shortest_rate": 0.05187319884726225,
+    "longest_accuracy": 0.1954919720049403,
+    "shortest_accuracy": 0.12848451580440054,
+    "mean_gold_len": 6.734870317002882,
+    "mean_distractor_len": 6.226043405676127
+   }
+  },
+  "Medicine|Traditional Chinese Medicine": {
+   "n_valid": 268,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "6": 3,
+    "7": 10,
+    "8": 4,
+    "9": 13,
+    "10": 237
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8843283582089553,
+   "chance_accuracy": 0.10381722340677564,
+   "char": {
+    "unique_longest_count": 28,
+    "unique_shortest_count": 28,
+    "unique_longest_rate": 0.1044776119402985,
+    "unique_shortest_rate": 0.1044776119402985,
+    "longest_accuracy": 0.12765339966832503,
+    "shortest_accuracy": 0.13192371475953565,
+    "mean_gold_len": 29.753731343283583,
+    "mean_distractor_len": 29.681177976952625
+   },
+   "token": {
+    "unique_longest_count": 17,
+    "unique_shortest_count": 15,
+    "unique_longest_rate": 0.06343283582089553,
+    "unique_shortest_rate": 0.055970149253731345,
+    "longest_accuracy": 0.1226545842217484,
+    "shortest_accuracy": 0.13548773987206822,
+    "mean_gold_len": 4.582089552238806,
+    "mean_distractor_len": 4.492957746478873
+   }
+  },
+  "Economics|Applied Economics": {
+   "n_valid": 723,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "7": 3,
+    "8": 12,
+    "9": 15,
+    "10": 684
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.946058091286307,
+   "chance_accuracy": 0.10202199828755845,
+   "char": {
+    "unique_longest_count": 105,
+    "unique_shortest_count": 48,
+    "unique_longest_rate": 0.14522821576763487,
+    "unique_shortest_rate": 0.06639004149377593,
+    "longest_accuracy": 0.18132121451623526,
+    "shortest_accuracy": 0.10387439899888033,
+    "mean_gold_len": 37.38450899031812,
+    "mean_distractor_len": 33.9409289276808
+   },
+   "token": {
+    "unique_longest_count": 73,
+    "unique_shortest_count": 7,
+    "unique_longest_rate": 0.10096818810511757,
+    "unique_shortest_rate": 0.009681881051175657,
+    "longest_accuracy": 0.18554853015433928,
+    "shortest_accuracy": 0.08082669213374608,
+    "mean_gold_len": 5.763485477178423,
+    "mean_distractor_len": 5.096945137157107
+   }
+  },
+  "Science|Mathematics": {
+   "n_valid": 2622,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 21,
+    "5": 39,
+    "6": 32,
+    "7": 44,
+    "8": 50,
+    "9": 96,
+    "10": 2340
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8924485125858124,
+   "chance_accuracy": 0.10510515418982239,
+   "char": {
+    "unique_longest_count": 111,
+    "unique_shortest_count": 109,
+    "unique_longest_rate": 0.04233409610983982,
+    "unique_shortest_rate": 0.041571319603356215,
+    "longest_accuracy": 0.11131966389403461,
+    "shortest_accuracy": 0.12373990531885269,
+    "mean_gold_len": 42.53432494279176,
+    "mean_distractor_len": 42.35962490688401
+   },
+   "token": {
+    "unique_longest_count": 67,
+    "unique_shortest_count": 27,
+    "unique_longest_rate": 0.02555301296720061,
+    "unique_shortest_rate": 0.010297482837528604,
+    "longest_accuracy": 0.11939661956824428,
+    "shortest_accuracy": 0.10724789025704358,
+    "mean_gold_len": 6.384057971014493,
+    "mean_distractor_len": 6.400727400201569
+   }
+  },
+  "Science|Physics": {
+   "n_valid": 2845,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 16,
+    "5": 11,
+    "6": 23,
+    "7": 52,
+    "8": 136,
+    "9": 287,
+    "10": 2320
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8154657293497364,
+   "chance_accuracy": 0.10486846877005049,
+   "char": {
+    "unique_longest_count": 158,
+    "unique_shortest_count": 174,
+    "unique_longest_rate": 0.05553602811950791,
+    "unique_shortest_rate": 0.06115992970123023,
+    "longest_accuracy": 0.12508410745669094,
+    "shortest_accuracy": 0.11757120540073088,
+    "mean_gold_len": 39.83128295254833,
+    "mean_distractor_len": 39.6058343814663
+   },
+   "token": {
+    "unique_longest_count": 102,
+    "unique_shortest_count": 90,
+    "unique_longest_rate": 0.035852372583479786,
+    "unique_shortest_rate": 0.03163444639718805,
+    "longest_accuracy": 0.12555262644014842,
+    "shortest_accuracy": 0.11599854939046503,
+    "mean_gold_len": 7.052724077328647,
+    "mean_distractor_len": 7.027346127317727
+   }
+  },
+  "Medicine|Clinical Medicine": {
+   "n_valid": 1218,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 3,
+    "5": 10,
+    "6": 25,
+    "7": 30,
+    "8": 37,
+    "9": 53,
+    "10": 1060
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8702791461412152,
+   "chance_accuracy": 0.10485736440169938,
+   "char": {
+    "unique_longest_count": 110,
+    "unique_shortest_count": 107,
+    "unique_longest_rate": 0.090311986863711,
+    "unique_shortest_rate": 0.08784893267651889,
+    "longest_accuracy": 0.10886308546407068,
+    "shortest_accuracy": 0.12087340683399797,
+    "mean_gold_len": 31.092775041050903,
+    "mean_distractor_len": 31.381015410797012
+   },
+   "token": {
+    "unique_longest_count": 71,
+    "unique_shortest_count": 40,
+    "unique_longest_rate": 0.05829228243021346,
+    "unique_shortest_rate": 0.03284072249589491,
+    "longest_accuracy": 0.11806891338911044,
+    "shortest_accuracy": 0.11877068835196913,
+    "mean_gold_len": 4.362068965517241,
+    "mean_distractor_len": 4.33932116857332
+   }
+  },
+  "Engineering|Computer Science and Technology": {
+   "n_valid": 763,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 5,
+    "5": 4,
+    "6": 5,
+    "7": 6,
+    "8": 8,
+    "9": 34,
+    "10": 701
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9187418086500655,
+   "chance_accuracy": 0.10303834071855042,
+   "char": {
+    "unique_longest_count": 65,
+    "unique_shortest_count": 47,
+    "unique_longest_rate": 0.08519003931847968,
+    "unique_shortest_rate": 0.061598951507208385,
+    "longest_accuracy": 0.13127639434978886,
+    "shortest_accuracy": 0.11745823711747697,
+    "mean_gold_len": 36.74705111402359,
+    "mean_distractor_len": 35.56011294397384
+   },
+   "token": {
+    "unique_longest_count": 34,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.04456094364351245,
+    "unique_shortest_rate": 0.01834862385321101,
+    "longest_accuracy": 0.12808826894672243,
+    "shortest_accuracy": 0.10940106929622001,
+    "mean_gold_len": 6.157273918741809,
+    "mean_distractor_len": 5.853470054985882
+   }
+  },
+  "Engineering|Information and Communication Engineering": {
+   "n_valid": 504,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "7": 3,
+    "8": 7,
+    "9": 25,
+    "10": 468
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9285714285714286,
+   "chance_accuracy": 0.10145108969513732,
+   "char": {
+    "unique_longest_count": 27,
+    "unique_shortest_count": 27,
+    "unique_longest_rate": 0.05357142857142857,
+    "unique_shortest_rate": 0.05357142857142857,
+    "longest_accuracy": 0.11495181405895692,
+    "shortest_accuracy": 0.1195578231292517,
+    "mean_gold_len": 41.307539682539684,
+    "mean_distractor_len": 41.5698348951361
+   },
+   "token": {
+    "unique_longest_count": 22,
+    "unique_shortest_count": 12,
+    "unique_longest_rate": 0.04365079365079365,
+    "unique_shortest_rate": 0.023809523809523808,
+    "longest_accuracy": 0.13276407785336355,
+    "shortest_accuracy": 0.11183547493071302,
+    "mean_gold_len": 6.888888888888889,
+    "mean_distractor_len": 6.817938420348059
+   }
+  },
+  "Engineering|Control Science and Engineering": {
+   "n_valid": 190,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "9": 7,
+    "10": 183
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9631578947368421,
+   "chance_accuracy": 0.1004093567251462,
+   "char": {
+    "unique_longest_count": 20,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.10526315789473684,
+    "unique_shortest_rate": 0.02631578947368421,
+    "longest_accuracy": 0.15888680033416874,
+    "shortest_accuracy": 0.0753717627401838,
+    "mean_gold_len": 48.09473684210526,
+    "mean_distractor_len": 47.64357017028773
+   },
+   "token": {
+    "unique_longest_count": 9,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.04736842105263158,
+    "unique_shortest_rate": 0.021052631578947368,
+    "longest_accuracy": 0.13709482038429407,
+    "shortest_accuracy": 0.09864661654135339,
+    "mean_gold_len": 7.957894736842105,
+    "mean_distractor_len": 7.798003523194363
+   }
+  },
+  "Economics|Theoretical Economics": {
+   "n_valid": 150,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "6": 1,
+    "7": 2,
+    "8": 3,
+    "9": 6,
+    "10": 137
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9133333333333333,
+   "chance_accuracy": 0.10296031746031746,
+   "char": {
+    "unique_longest_count": 16,
+    "unique_shortest_count": 17,
+    "unique_longest_rate": 0.10666666666666667,
+    "unique_shortest_rate": 0.11333333333333333,
+    "longest_accuracy": 0.12727777777777777,
+    "shortest_accuracy": 0.12283333333333334,
+    "mean_gold_len": 39.84,
+    "mean_distractor_len": 38.53782148260212
+   },
+   "token": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.07333333333333333,
+    "unique_shortest_rate": 0.03333333333333333,
+    "longest_accuracy": 0.1225899470899471,
+    "shortest_accuracy": 0.10985714285714286,
+    "mean_gold_len": 5.986666666666666,
+    "mean_distractor_len": 5.763993948562784
+   }
+  },
+  "Law|Law": {
+   "n_valid": 591,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 5,
+    "5": 5,
+    "6": 9,
+    "7": 8,
+    "8": 7,
+    "9": 11,
+    "10": 546
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9238578680203046,
+   "chance_accuracy": 0.10421333225901754,
+   "char": {
+    "unique_longest_count": 87,
+    "unique_shortest_count": 72,
+    "unique_longest_rate": 0.14720812182741116,
+    "unique_shortest_rate": 0.1218274111675127,
+    "longest_accuracy": 0.1640050492842371,
+    "shortest_accuracy": 0.14641984261273602,
+    "mean_gold_len": 64.62267343485618,
+    "mean_distractor_len": 60.80826414365708
+   },
+   "token": {
+    "unique_longest_count": 73,
+    "unique_shortest_count": 37,
+    "unique_longest_rate": 0.12351945854483926,
+    "unique_shortest_rate": 0.06260575296108291,
+    "longest_accuracy": 0.17192812827330595,
+    "shortest_accuracy": 0.1327088872774152,
+    "mean_gold_len": 10.362098138747886,
+    "mean_distractor_len": 9.66093840509751
+   }
+  },
+  "History|History": {
+   "n_valid": 674,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 6,
+    "5": 15,
+    "6": 11,
+    "7": 15,
+    "8": 15,
+    "9": 15,
+    "10": 597
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8857566765578635,
+   "chance_accuracy": 0.10640631623569309,
+   "char": {
+    "unique_longest_count": 38,
+    "unique_shortest_count": 62,
+    "unique_longest_rate": 0.05637982195845697,
+    "unique_shortest_rate": 0.09198813056379822,
+    "longest_accuracy": 0.10889677829588809,
+    "shortest_accuracy": 0.14756311525599358,
+    "mean_gold_len": 19.43026706231454,
+    "mean_distractor_len": 20.418828380003436
+   },
+   "token": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 22,
+    "unique_longest_rate": 0.019287833827893175,
+    "unique_shortest_rate": 0.032640949554896145,
+    "longest_accuracy": 0.10083074278178136,
+    "shortest_accuracy": 0.13585205595591351,
+    "mean_gold_len": 3.2537091988130564,
+    "mean_distractor_len": 3.3714138464181413
+   }
+  },
+  "Medicine|Basic Medicine": {
+   "n_valid": 567,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 4,
+    "5": 8,
+    "6": 15,
+    "7": 28,
+    "8": 18,
+    "9": 28,
+    "10": 466
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8218694885361552,
+   "chance_accuracy": 0.10769155398785028,
+   "char": {
+    "unique_longest_count": 50,
+    "unique_shortest_count": 59,
+    "unique_longest_rate": 0.08818342151675485,
+    "unique_shortest_rate": 0.10405643738977072,
+    "longest_accuracy": 0.12297318104196411,
+    "shortest_accuracy": 0.1458840737941267,
+    "mean_gold_len": 29.811287477954146,
+    "mean_distractor_len": 30.15131442765473
+   },
+   "token": {
+    "unique_longest_count": 34,
+    "unique_shortest_count": 19,
+    "unique_longest_rate": 0.059964726631393295,
+    "unique_shortest_rate": 0.03350970017636684,
+    "longest_accuracy": 0.12902564317908233,
+    "shortest_accuracy": 0.1250076985526721,
+    "mean_gold_len": 4.322751322751323,
+    "mean_distractor_len": 4.349824052991099
+   }
+  },
+  "Education|Education": {
+   "n_valid": 247,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 3,
+    "6": 4,
+    "8": 4,
+    "9": 9,
+    "10": 226
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9149797570850202,
+   "chance_accuracy": 0.10371120107962213,
+   "char": {
+    "unique_longest_count": 36,
+    "unique_shortest_count": 26,
+    "unique_longest_rate": 0.145748987854251,
+    "unique_shortest_rate": 0.10526315789473684,
+    "longest_accuracy": 0.172008547008547,
+    "shortest_accuracy": 0.1303177816335711,
+    "mean_gold_len": 32.29554655870445,
+    "mean_distractor_len": 30.581834946980177
+   },
+   "token": {
+    "unique_longest_count": 22,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.08906882591093117,
+    "unique_shortest_rate": 0.03643724696356275,
+    "longest_accuracy": 0.17510121457489877,
+    "shortest_accuracy": 0.1154344193817878,
+    "mean_gold_len": 4.40080971659919,
+    "mean_distractor_len": 4.033656062701706
+   }
+  },
+  "Engineering|Materials Science and Engineering": {
+   "n_valid": 289,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 1,
+    "8": 4,
+    "9": 6,
+    "10": 278
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9619377162629758,
+   "chance_accuracy": 0.10092272202998846,
+   "char": {
+    "unique_longest_count": 20,
+    "unique_shortest_count": 13,
+    "unique_longest_rate": 0.06920415224913495,
+    "unique_shortest_rate": 0.04498269896193772,
+    "longest_accuracy": 0.1373633767232383,
+    "shortest_accuracy": 0.1086052067885978,
+    "mean_gold_len": 32.40484429065744,
+    "mean_distractor_len": 31.618900077459333
+   },
+   "token": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 7,
+    "unique_longest_rate": 0.03806228373702422,
+    "unique_shortest_rate": 0.02422145328719723,
+    "longest_accuracy": 0.1285741747679464,
+    "shortest_accuracy": 0.11512467732190916,
+    "mean_gold_len": 6.622837370242214,
+    "mean_distractor_len": 6.534856700232378
+   }
+  },
+  "Engineering|Electrical Engineering": {
+   "n_valid": 556,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "5": 1,
+    "6": 2,
+    "7": 17,
+    "8": 23,
+    "9": 61,
+    "10": 450
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8093525179856115,
+   "chance_accuracy": 0.10452281032317004,
+   "char": {
+    "unique_longest_count": 55,
+    "unique_shortest_count": 33,
+    "unique_longest_rate": 0.09892086330935251,
+    "unique_shortest_rate": 0.05935251798561151,
+    "longest_accuracy": 0.167413212287313,
+    "shortest_accuracy": 0.1074990007993605,
+    "mean_gold_len": 37.64208633093525,
+    "mean_distractor_len": 35.96909354905621
+   },
+   "token": {
+    "unique_longest_count": 33,
+    "unique_shortest_count": 13,
+    "unique_longest_rate": 0.05935251798561151,
+    "unique_shortest_rate": 0.023381294964028777,
+    "longest_accuracy": 0.14273795249514673,
+    "shortest_accuracy": 0.10497530546990978,
+    "mean_gold_len": 6.422661870503597,
+    "mean_distractor_len": 6.074051026757934
+   }
+  },
+  "Science|Systems Science": {
+   "n_valid": 50,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 1,
+    "7": 2,
+    "8": 1,
+    "10": 46
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.92,
+   "chance_accuracy": 0.10354761904761904,
+   "char": {
+    "unique_longest_count": 5,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.1,
+    "unique_shortest_rate": 0.02,
+    "longest_accuracy": 0.1104126984126984,
+    "shortest_accuracy": 0.0443015873015873,
+    "mean_gold_len": 64.14,
+    "mean_distractor_len": 64.90182648401826
+   },
+   "token": {
+    "unique_longest_count": 2,
+    "unique_shortest_count": 0,
+    "unique_longest_rate": 0.04,
+    "unique_shortest_rate": 0.0,
+    "longest_accuracy": 0.08012698412698413,
+    "shortest_accuracy": 0.07525396825396825,
+    "mean_gold_len": 10.6,
+    "mean_distractor_len": 10.904109589041095
+   }
+  },
+  "Engineering|Power Engineering and Engineering Thermophysics": {
+   "n_valid": 684,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 3,
+    "5": 4,
+    "6": 1,
+    "7": 4,
+    "8": 13,
+    "9": 25,
+    "10": 634
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9269005847953217,
+   "chance_accuracy": 0.10247203657291376,
+   "char": {
+    "unique_longest_count": 39,
+    "unique_shortest_count": 16,
+    "unique_longest_rate": 0.05701754385964912,
+    "unique_shortest_rate": 0.023391812865497075,
+    "longest_accuracy": 0.13484057365636312,
+    "shortest_accuracy": 0.09910076116216467,
+    "mean_gold_len": 28.29824561403509,
+    "mean_distractor_len": 27.829780201619567
+   },
+   "token": {
+    "unique_longest_count": 17,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.024853801169590642,
+    "unique_shortest_rate": 0.005847953216374269,
+    "longest_accuracy": 0.11713717163278567,
+    "shortest_accuracy": 0.1044370184721062,
+    "mean_gold_len": 5.7748538011695905,
+    "mean_distractor_len": 5.721533630804825
+   }
+  },
+  "Military Science|Military Science": {
+   "n_valid": 205,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 17,
+    "5": 2,
+    "6": 2,
+    "7": 4,
+    "8": 4,
+    "9": 5,
+    "10": 171
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8341463414634146,
+   "chance_accuracy": 0.1156600851722803,
+   "char": {
+    "unique_longest_count": 22,
+    "unique_shortest_count": 18,
+    "unique_longest_rate": 0.1073170731707317,
+    "unique_shortest_rate": 0.08780487804878048,
+    "longest_accuracy": 0.13980255516840884,
+    "shortest_accuracy": 0.11392179636082075,
+    "mean_gold_len": 33.64390243902439,
+    "mean_distractor_len": 31.674705882352942
+   },
+   "token": {
+    "unique_longest_count": 18,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.08780487804878048,
+    "unique_shortest_rate": 0.024390243902439025,
+    "longest_accuracy": 0.17037553232675184,
+    "shortest_accuracy": 0.1166260162601626,
+    "mean_gold_len": 4.897560975609756,
+    "mean_distractor_len": 4.528235294117647
+   }
+  },
+  "Science|Biology": {
+   "n_valid": 1120,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "5": 3,
+    "6": 6,
+    "7": 11,
+    "8": 13,
+    "9": 33,
+    "10": 1052
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9392857142857143,
+   "chance_accuracy": 0.10193133503401361,
+   "char": {
+    "unique_longest_count": 139,
+    "unique_shortest_count": 71,
+    "unique_longest_rate": 0.12410714285714286,
+    "unique_shortest_rate": 0.06339285714285714,
+    "longest_accuracy": 0.15642750850340137,
+    "shortest_accuracy": 0.10620252267573696,
+    "mean_gold_len": 37.72053571428572,
+    "mean_distractor_len": 35.32665794505384
+   },
+   "token": {
+    "unique_longest_count": 81,
+    "unique_shortest_count": 32,
+    "unique_longest_rate": 0.07232142857142858,
+    "unique_shortest_rate": 0.02857142857142857,
+    "longest_accuracy": 0.1501080640589569,
+    "shortest_accuracy": 0.10945578231292517,
+    "mean_gold_len": 5.689285714285714,
+    "mean_distractor_len": 5.242226023950891
+   }
+  },
+  "Management|Business Administration": {
+   "n_valid": 142,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 4,
+    "6": 3,
+    "7": 4,
+    "8": 8,
+    "9": 5,
+    "10": 117
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.823943661971831,
+   "chance_accuracy": 0.10828862061256428,
+   "char": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 17,
+    "unique_longest_rate": 0.09154929577464789,
+    "unique_shortest_rate": 0.11971830985915492,
+    "longest_accuracy": 0.12432372009836798,
+    "shortest_accuracy": 0.1645148669796557,
+    "mean_gold_len": 36.25352112676056,
+    "mean_distractor_len": 32.06545153272577
+   },
+   "token": {
+    "unique_longest_count": 14,
+    "unique_shortest_count": 7,
+    "unique_longest_rate": 0.09859154929577464,
+    "unique_shortest_rate": 0.04929577464788732,
+    "longest_accuracy": 0.1713642968924659,
+    "shortest_accuracy": 0.12427900737759892,
+    "mean_gold_len": 5.471830985915493,
+    "mean_distractor_len": 4.772990886495443
+   }
+  },
+  "Literature and Arts|Language and Literature": {
+   "n_valid": 440,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 56,
+    "5": 25,
+    "6": 11,
+    "7": 10,
+    "8": 9,
+    "9": 12,
+    "10": 317
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7204545454545455,
+   "chance_accuracy": 0.12822781385281384,
+   "char": {
+    "unique_longest_count": 63,
+    "unique_shortest_count": 46,
+    "unique_longest_rate": 0.1431818181818182,
+    "unique_shortest_rate": 0.10454545454545454,
+    "longest_accuracy": 0.17140782828282827,
+    "shortest_accuracy": 0.1480357142857143,
+    "mean_gold_len": 32.43863636363636,
+    "mean_distractor_len": 30.906921944035346
+   },
+   "token": {
+    "unique_longest_count": 42,
+    "unique_shortest_count": 20,
+    "unique_longest_rate": 0.09545454545454546,
+    "unique_shortest_rate": 0.045454545454545456,
+    "longest_accuracy": 0.18155122655122655,
+    "shortest_accuracy": 0.14963203463203464,
+    "mean_gold_len": 5.1,
+    "mean_distractor_len": 4.7378497790868925
+   }
+  },
+  "Medicine|Public Health and Preventive Medicine": {
+   "n_valid": 292,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 2,
+    "6": 2,
+    "7": 4,
+    "8": 2,
+    "9": 9,
+    "10": 273
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.934931506849315,
+   "chance_accuracy": 0.1022423352902805,
+   "char": {
+    "unique_longest_count": 23,
+    "unique_shortest_count": 24,
+    "unique_longest_rate": 0.07876712328767123,
+    "unique_shortest_rate": 0.0821917808219178,
+    "longest_accuracy": 0.10202489671667754,
+    "shortest_accuracy": 0.11200396825396826,
+    "mean_gold_len": 29.236301369863014,
+    "mean_distractor_len": 29.834429400386846
+   },
+   "token": {
+    "unique_longest_count": 16,
+    "unique_shortest_count": 10,
+    "unique_longest_rate": 0.0547945205479452,
+    "unique_shortest_rate": 0.03424657534246575,
+    "longest_accuracy": 0.1150807240704501,
+    "shortest_accuracy": 0.12153864970645793,
+    "mean_gold_len": 4.3938356164383565,
+    "mean_distractor_len": 4.420502901353966
+   }
+  },
+  "Law|Political Science": {
+   "n_valid": 65,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 3,
+    "6": 2,
+    "7": 3,
+    "8": 1,
+    "9": 3,
+    "10": 53
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8153846153846154,
+   "chance_accuracy": 0.11184981684981685,
+   "char": {
+    "unique_longest_count": 7,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.1076923076923077,
+    "unique_shortest_rate": 0.07692307692307693,
+    "longest_accuracy": 0.14256410256410257,
+    "shortest_accuracy": 0.11927350427350428,
+    "mean_gold_len": 30.476923076923075,
+    "mean_distractor_len": 29.877064220183485
+   },
+   "token": {
+    "unique_longest_count": 5,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.07692307692307693,
+    "unique_shortest_rate": 0.06153846153846154,
+    "longest_accuracy": 0.14014652014652015,
+    "shortest_accuracy": 0.13732600732600733,
+    "mean_gold_len": 4.861538461538461,
+    "mean_distractor_len": 4.64954128440367
+   }
+  },
+  "Science|Chemistry": {
+   "n_valid": 1769,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 17,
+    "5": 6,
+    "6": 23,
+    "7": 50,
+    "8": 96,
+    "9": 190,
+    "10": 1387
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7840587902769927,
+   "chance_accuracy": 0.10640887596794889,
+   "char": {
+    "unique_longest_count": 89,
+    "unique_shortest_count": 98,
+    "unique_longest_rate": 0.05031091011871114,
+    "unique_shortest_rate": 0.055398530243075186,
+    "longest_accuracy": 0.11902271931949716,
+    "shortest_accuracy": 0.12136867748795392,
+    "mean_gold_len": 30.670435274166195,
+    "mean_distractor_len": 30.568875700626442
+   },
+   "token": {
+    "unique_longest_count": 46,
+    "unique_shortest_count": 45,
+    "unique_longest_rate": 0.026003391746749576,
+    "unique_shortest_rate": 0.025438100621820236,
+    "longest_accuracy": 0.11184688686101914,
+    "shortest_accuracy": 0.12292434969088446,
+    "mean_gold_len": 5.565856416054268,
+    "mean_distractor_len": 5.612858555885262
+   }
+  },
+  "Engineering|Hydraulic Engineering": {
+   "n_valid": 218,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "7": 3,
+    "8": 2,
+    "9": 9,
+    "10": 204
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9357798165137615,
+   "chance_accuracy": 0.1012778505897772,
+   "char": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 13,
+    "unique_longest_rate": 0.05504587155963303,
+    "unique_shortest_rate": 0.05963302752293578,
+    "longest_accuracy": 0.10917977282656181,
+    "shortest_accuracy": 0.10712829474297364,
+    "mean_gold_len": 33.39908256880734,
+    "mean_distractor_len": 32.91340206185567
+   },
+   "token": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.05504587155963303,
+    "unique_shortest_rate": 0.027522935779816515,
+    "longest_accuracy": 0.13852846949177225,
+    "shortest_accuracy": 0.11469346148245231,
+    "mean_gold_len": 5.986238532110092,
+    "mean_distractor_len": 5.8278350515463915
+   }
+  },
+  "Engineering|Chemical Engineering and Technology": {
+   "n_valid": 410,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 1,
+    "6": 2,
+    "8": 8,
+    "9": 19,
+    "10": 379
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9243902439024391,
+   "chance_accuracy": 0.10193766937669377,
+   "char": {
+    "unique_longest_count": 16,
+    "unique_shortest_count": 11,
+    "unique_longest_rate": 0.03902439024390244,
+    "unique_shortest_rate": 0.026829268292682926,
+    "longest_accuracy": 0.11689508323654665,
+    "shortest_accuracy": 0.10326171118854045,
+    "mean_gold_len": 36.207317073170735,
+    "mean_distractor_len": 35.873487348734876
+   },
+   "token": {
+    "unique_longest_count": 8,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.01951219512195122,
+    "unique_shortest_rate": 0.02195121951219512,
+    "longest_accuracy": 0.11815911730545876,
+    "shortest_accuracy": 0.11687185443283005,
+    "mean_gold_len": 6.295121951219512,
+    "mean_distractor_len": 6.267876787678768
+   }
+  },
+  "Medicine|Pharmacy": {
+   "n_valid": 278,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 3,
+    "6": 7,
+    "7": 3,
+    "8": 10,
+    "9": 8,
+    "10": 246
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8848920863309353,
+   "chance_accuracy": 0.10497887404362224,
+   "char": {
+    "unique_longest_count": 20,
+    "unique_shortest_count": 29,
+    "unique_longest_rate": 0.07194244604316546,
+    "unique_shortest_rate": 0.10431654676258993,
+    "longest_accuracy": 0.09888517757222794,
+    "shortest_accuracy": 0.14401050588100947,
+    "mean_gold_len": 27.151079136690647,
+    "mean_distractor_len": 26.844370860927153
+   },
+   "token": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.0539568345323741,
+    "unique_shortest_rate": 0.02158273381294964,
+    "longest_accuracy": 0.13581135091926458,
+    "shortest_accuracy": 0.10651907045791938,
+    "mean_gold_len": 3.9748201438848922,
+    "mean_distractor_len": 3.7777317880794703
+   }
+  },
+  "Science|Geography": {
+   "n_valid": 133,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "7": 2,
+    "8": 2,
+    "9": 1,
+    "10": 119
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8947368421052632,
+   "chance_accuracy": 0.1076202410788877,
+   "char": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 17,
+    "unique_longest_rate": 0.09022556390977443,
+    "unique_shortest_rate": 0.12781954887218044,
+    "longest_accuracy": 0.10760233918128655,
+    "shortest_accuracy": 0.16776166606993675,
+    "mean_gold_len": 23.285714285714285,
+    "mean_distractor_len": 23.653543307086615
+   },
+   "token": {
+    "unique_longest_count": 8,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.06015037593984962,
+    "unique_shortest_rate": 0.045112781954887216,
+    "longest_accuracy": 0.13750745912400048,
+    "shortest_accuracy": 0.14904821577753907,
+    "mean_gold_len": 3.293233082706767,
+    "mean_distractor_len": 3.266841644794401
+   }
+  },
+  "Literature and Arts|Art Studies": {
+   "n_valid": 603,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 6,
+    "5": 14,
+    "6": 9,
+    "7": 10,
+    "8": 18,
+    "9": 13,
+    "10": 533
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8839137645107794,
+   "chance_accuracy": 0.10650583063518387,
+   "char": {
+    "unique_longest_count": 40,
+    "unique_shortest_count": 63,
+    "unique_longest_rate": 0.06633499170812604,
+    "unique_shortest_rate": 0.1044776119402985,
+    "longest_accuracy": 0.09841730500934481,
+    "shortest_accuracy": 0.15435520808655137,
+    "mean_gold_len": 17.674958540630183,
+    "mean_distractor_len": 18.69784863618901
+   },
+   "token": {
+    "unique_longest_count": 23,
+    "unique_shortest_count": 22,
+    "unique_longest_rate": 0.03814262023217247,
+    "unique_shortest_rate": 0.03648424543946932,
+    "longest_accuracy": 0.11618889678591171,
+    "shortest_accuracy": 0.14658782805548976,
+    "mean_gold_len": 2.9170812603648426,
+    "mean_distractor_len": 3.0351517479830963
+   }
+  },
+  "Engineering|Architecture": {
+   "n_valid": 162,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 3,
+    "5": 3,
+    "6": 2,
+    "7": 2,
+    "8": 4,
+    "9": 7,
+    "10": 141
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8703703703703703,
+   "chance_accuracy": 0.10707916911620616,
+   "char": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 17,
+    "unique_longest_rate": 0.07407407407407407,
+    "unique_shortest_rate": 0.10493827160493827,
+    "longest_accuracy": 0.10814471879286694,
+    "shortest_accuracy": 0.1521506956692142,
+    "mean_gold_len": 23.52469135802469,
+    "mean_distractor_len": 23.154727793696274
+   },
+   "token": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.06790123456790123,
+    "unique_shortest_rate": 0.05555555555555555,
+    "longest_accuracy": 0.14037575935724084,
+    "shortest_accuracy": 0.14003037428963355,
+    "mean_gold_len": 3.8703703703703702,
+    "mean_distractor_len": 3.6969914040114613
+   }
+  },
+  "Engineering|Forestry Engineering": {
+   "n_valid": 100,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 1,
+    "9": 4,
+    "10": 95
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.95,
+   "chance_accuracy": 0.10144444444444445,
+   "char": {
+    "unique_longest_count": 7,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.07,
+    "unique_shortest_rate": 0.04,
+    "longest_accuracy": 0.09677777777777778,
+    "shortest_accuracy": 0.07796825396825396,
+    "mean_gold_len": 26.75,
+    "mean_distractor_len": 26.696969696969695
+   },
+   "token": {
+    "unique_longest_count": 4,
+    "unique_shortest_count": 0,
+    "unique_longest_rate": 0.04,
+    "unique_shortest_rate": 0.0,
+    "longest_accuracy": 0.1055515873015873,
+    "shortest_accuracy": 0.11491666666666667,
+    "mean_gold_len": 4.11,
+    "mean_distractor_len": 4.052749719416386
+   }
+  },
+  "Management|Public Administration": {
+   "n_valid": 151,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 2,
+    "6": 3,
+    "7": 6,
+    "8": 4,
+    "9": 3,
+    "10": 133
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8807947019867549,
+   "chance_accuracy": 0.10523494165878272,
+   "char": {
+    "unique_longest_count": 21,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.1390728476821192,
+    "unique_shortest_rate": 0.09271523178807947,
+    "longest_accuracy": 0.1610007358351729,
+    "shortest_accuracy": 0.13294701986754967,
+    "mean_gold_len": 35.13907284768212,
+    "mean_distractor_len": 27.93195718654434
+   },
+   "token": {
+    "unique_longest_count": 4,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.026490066225165563,
+    "unique_shortest_rate": 0.026490066225165563,
+    "longest_accuracy": 0.11619362976978871,
+    "shortest_accuracy": 0.12959634184799748,
+    "mean_gold_len": 4.880794701986755,
+    "mean_distractor_len": 3.7515290519877675
+   }
+  },
+  "Science|Oceanography": {
+   "n_valid": 200,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 1,
+    "7": 1,
+    "8": 1,
+    "9": 5,
+    "10": 192
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.96,
+   "chance_accuracy": 0.1011170634920635,
+   "char": {
+    "unique_longest_count": 22,
+    "unique_shortest_count": 16,
+    "unique_longest_rate": 0.11,
+    "unique_shortest_rate": 0.08,
+    "longest_accuracy": 0.1474781746031746,
+    "shortest_accuracy": 0.13077579365079364,
+    "mean_gold_len": 34.7,
+    "mean_distractor_len": 33.75742296918767
+   },
+   "token": {
+    "unique_longest_count": 9,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.045,
+    "unique_shortest_rate": 0.02,
+    "longest_accuracy": 0.13371230158730157,
+    "shortest_accuracy": 0.11622619047619048,
+    "mean_gold_len": 5.03,
+    "mean_distractor_len": 4.859943977591036
+   }
+  },
+  "Literature and Arts|Journalism and Communication": {
+   "n_valid": 207,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 5,
+    "5": 3,
+    "6": 3,
+    "7": 4,
+    "8": 4,
+    "9": 3,
+    "10": 185
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.893719806763285,
+   "chance_accuracy": 0.10751092707614447,
+   "char": {
+    "unique_longest_count": 16,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.07729468599033816,
+    "unique_shortest_rate": 0.06763285024154589,
+    "longest_accuracy": 0.12634000460087416,
+    "shortest_accuracy": 0.1461467678858983,
+    "mean_gold_len": 16.72463768115942,
+    "mean_distractor_len": 17.73752103196859
+   },
+   "token": {
+    "unique_longest_count": 6,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.028985507246376812,
+    "unique_shortest_rate": 0.028985507246376812,
+    "longest_accuracy": 0.11118012422360249,
+    "shortest_accuracy": 0.1341097308488613,
+    "mean_gold_len": 2.7004830917874396,
+    "mean_distractor_len": 2.817722938867078
+   }
+  },
+  "Engineering|Nuclear Science and Technology": {
+   "n_valid": 107,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "9": 4,
+    "10": 102
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9532710280373832,
+   "chance_accuracy": 0.1018172377985462,
+   "char": {
+    "unique_longest_count": 5,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.04672897196261682,
+    "unique_shortest_rate": 0.037383177570093455,
+    "longest_accuracy": 0.10390520694259012,
+    "shortest_accuracy": 0.1069537160658656,
+    "mean_gold_len": 37.32710280373832,
+    "mean_distractor_len": 35.96222455403987
+   },
+   "token": {
+    "unique_longest_count": 3,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.028037383177570093,
+    "unique_shortest_rate": 0.009345794392523364,
+    "longest_accuracy": 0.11235350838154576,
+    "shortest_accuracy": 0.10630470256638481,
+    "mean_gold_len": 6.074766355140187,
+    "mean_distractor_len": 5.859391395592865
+   }
+  },
+  "Engineering|Weapon Science and Technology": {
+   "n_valid": 100,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "5": 3,
+    "6": 2,
+    "7": 3,
+    "8": 3,
+    "9": 5,
+    "10": 82
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.82,
+   "chance_accuracy": 0.10992460317460317,
+   "char": {
+    "unique_longest_count": 16,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.16,
+    "unique_shortest_rate": 0.05,
+    "longest_accuracy": 0.200484126984127,
+    "shortest_accuracy": 0.089,
+    "mean_gold_len": 47.3,
+    "mean_distractor_len": 43.65325443786982
+   },
+   "token": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.12,
+    "unique_shortest_rate": 0.01,
+    "longest_accuracy": 0.21846825396825398,
+    "shortest_accuracy": 0.09311904761904762,
+    "mean_gold_len": 8.52,
+    "mean_distractor_len": 7.689940828402367
+   }
+  },
+  "Engineering|Naval Architecture and Ocean Engineering": {
+   "n_valid": 138,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 43,
+    "5": 3,
+    "6": 2,
+    "7": 8,
+    "8": 3,
+    "9": 7,
+    "10": 72
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.5217391304347826,
+   "chance_accuracy": 0.15347078444904533,
+   "char": {
+    "unique_longest_count": 22,
+    "unique_shortest_count": 8,
+    "unique_longest_rate": 0.15942028985507245,
+    "unique_shortest_rate": 0.057971014492753624,
+    "longest_accuracy": 0.20005751092707613,
+    "shortest_accuracy": 0.13103577179664136,
+    "mean_gold_len": 22.456521739130434,
+    "mean_distractor_len": 21.51839826839827
+   },
+   "token": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.08695652173913043,
+    "unique_shortest_rate": 0.028985507246376812,
+    "longest_accuracy": 0.18764665286404417,
+    "shortest_accuracy": 0.15261387163561077,
+    "mean_gold_len": 3.6594202898550723,
+    "mean_distractor_len": 3.5735930735930737
+   }
+  },
+  "Engineering|Environmental Science and Engineering": {
+   "n_valid": 189,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "6": 4,
+    "7": 8,
+    "8": 5,
+    "9": 11,
+    "10": 160
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8465608465608465,
+   "chance_accuracy": 0.10532669858066683,
+   "char": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.06349206349206349,
+    "unique_shortest_rate": 0.07407407407407407,
+    "longest_accuracy": 0.11321071638531956,
+    "shortest_accuracy": 0.1414504073234232,
+    "mean_gold_len": 29.693121693121693,
+    "mean_distractor_len": 29.709302325581394
+   },
+   "token": {
+    "unique_longest_count": 10,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.05291005291005291,
+    "unique_shortest_rate": 0.021164021164021163,
+    "longest_accuracy": 0.12869110607205844,
+    "shortest_accuracy": 0.10389056857310826,
+    "mean_gold_len": 5.232804232804233,
+    "mean_distractor_len": 5.144430844553243
+   }
+  },
+  "Engineering|Transportation Engineering": {
+   "n_valid": 251,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 3,
+    "6": 5,
+    "7": 6,
+    "8": 5,
+    "9": 7,
+    "10": 225
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.896414342629482,
+   "chance_accuracy": 0.10495320306077278,
+   "char": {
+    "unique_longest_count": 22,
+    "unique_shortest_count": 16,
+    "unique_longest_rate": 0.08764940239043825,
+    "unique_shortest_rate": 0.06374501992031872,
+    "longest_accuracy": 0.1324242711692911,
+    "shortest_accuracy": 0.1046148738379814,
+    "mean_gold_len": 31.649402390438247,
+    "mean_distractor_len": 30.755718206770357
+   },
+   "token": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.043824701195219126,
+    "unique_shortest_rate": 0.00398406374501992,
+    "longest_accuracy": 0.13743122747106812,
+    "shortest_accuracy": 0.08295547966862708,
+    "mean_gold_len": 4.741035856573705,
+    "mean_distractor_len": 4.479414455626715
+   }
+  },
+  "Science|Geology": {
+   "n_valid": 341,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 1,
+    "6": 2,
+    "8": 5,
+    "9": 2,
+    "10": 330
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.967741935483871,
+   "chance_accuracy": 0.10155588139459107,
+   "char": {
+    "unique_longest_count": 31,
+    "unique_shortest_count": 37,
+    "unique_longest_rate": 0.09090909090909091,
+    "unique_shortest_rate": 0.10850439882697947,
+    "longest_accuracy": 0.12121793976632686,
+    "shortest_accuracy": 0.14859074617139134,
+    "mean_gold_len": 40.146627565982406,
+    "mean_distractor_len": 38.57867017774852
+   },
+   "token": {
+    "unique_longest_count": 30,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.08797653958944282,
+    "unique_shortest_rate": 0.026392961876832845,
+    "longest_accuracy": 0.17034632034632036,
+    "shortest_accuracy": 0.11508867476609412,
+    "mean_gold_len": 5.765395894428153,
+    "mean_distractor_len": 5.3650427913100724
+   }
+  },
+  "Science|Physical Oceanography": {
+   "n_valid": 50,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 1,
+    "9": 2,
+    "10": 47
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.94,
+   "chance_accuracy": 0.10177777777777777,
+   "char": {
+    "unique_longest_count": 1,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.02,
+    "unique_shortest_rate": 0.04,
+    "longest_accuracy": 0.09041269841269842,
+    "shortest_accuracy": 0.11274603174603175,
+    "mean_gold_len": 38.22,
+    "mean_distractor_len": 38.44144144144144
+   },
+   "token": {
+    "unique_longest_count": 1,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.02,
+    "unique_shortest_rate": 0.02,
+    "longest_accuracy": 0.10293650793650794,
+    "shortest_accuracy": 0.104,
+    "mean_gold_len": 6.56,
+    "mean_distractor_len": 6.504504504504505
+   }
+  },
+  "Literature and Arts|Musicology": {
+   "n_valid": 426,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 185,
+    "5": 3,
+    "6": 3,
+    "7": 6,
+    "8": 7,
+    "9": 3,
+    "10": 219
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.5140845070422535,
+   "chance_accuracy": 0.1674072211044042,
+   "char": {
+    "unique_longest_count": 48,
+    "unique_shortest_count": 52,
+    "unique_longest_rate": 0.11267605633802817,
+    "unique_shortest_rate": 0.12206572769953052,
+    "longest_accuracy": 0.16819528280795887,
+    "shortest_accuracy": 0.201900290632685,
+    "mean_gold_len": 25.715962441314552,
+    "mean_distractor_len": 24.269722013523666
+   },
+   "token": {
+    "unique_longest_count": 31,
+    "unique_shortest_count": 16,
+    "unique_longest_rate": 0.07276995305164319,
+    "unique_shortest_rate": 0.03755868544600939,
+    "longest_accuracy": 0.19697909680304046,
+    "shortest_accuracy": 0.17210112527013935,
+    "mean_gold_len": 4.511737089201878,
+    "mean_distractor_len": 4.032682193839219
+   }
+  },
+  "Medicine|Stomatology": {
+   "n_valid": 132,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 3,
+    "6": 1,
+    "7": 3,
+    "8": 4,
+    "9": 5,
+    "10": 116
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8787878787878788,
+   "chance_accuracy": 0.10493025493025493,
+   "char": {
+    "unique_longest_count": 21,
+    "unique_shortest_count": 8,
+    "unique_longest_rate": 0.1590909090909091,
+    "unique_shortest_rate": 0.06060606060606061,
+    "longest_accuracy": 0.19113756613756613,
+    "shortest_accuracy": 0.09666305916305916,
+    "mean_gold_len": 45.50757575757576,
+    "mean_distractor_len": 42.872711421098515
+   },
+   "token": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 3,
+    "unique_longest_rate": 0.09848484848484848,
+    "unique_shortest_rate": 0.022727272727272728,
+    "longest_accuracy": 0.1738876863876864,
+    "shortest_accuracy": 0.09437830687830688,
+    "mean_gold_len": 6.962121212121212,
+    "mean_distractor_len": 6.586748038360942
+   }
+  },
+  "Agronomy|Aquaculture": {
+   "n_valid": 56,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "8": 1,
+    "10": 54
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9642857142857143,
+   "chance_accuracy": 0.103125,
+   "char": {
+    "unique_longest_count": 2,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.03571428571428571,
+    "unique_shortest_rate": 0.07142857142857142,
+    "longest_accuracy": 0.07596371882086168,
+    "shortest_accuracy": 0.1307043650793651,
+    "mean_gold_len": 12.267857142857142,
+    "mean_distractor_len": 12.381048387096774
+   },
+   "token": {
+    "unique_longest_count": 1,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.017857142857142856,
+    "unique_shortest_rate": 0.03571428571428571,
+    "longest_accuracy": 0.09516014739229026,
+    "shortest_accuracy": 0.12938633786848072,
+    "mean_gold_len": 2.0535714285714284,
+    "mean_distractor_len": 2.0826612903225805
+   }
+  },
+  "Engineering|Mechanical Engineering": {
+   "n_valid": 176,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 3,
+    "6": 3,
+    "7": 1,
+    "8": 7,
+    "9": 8,
+    "10": 153
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8693181818181818,
+   "chance_accuracy": 0.105436056998557,
+   "char": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.08522727272727272,
+    "unique_shortest_rate": 0.07954545454545454,
+    "longest_accuracy": 0.13405708874458874,
+    "shortest_accuracy": 0.12747564935064934,
+    "mean_gold_len": 36.24431818181818,
+    "mean_distractor_len": 35.68414154652687
+   },
+   "token": {
+    "unique_longest_count": 6,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.03409090909090909,
+    "unique_shortest_rate": 0.03409090909090909,
+    "longest_accuracy": 0.12194940476190476,
+    "shortest_accuracy": 0.11399936868686869,
+    "mean_gold_len": 6.3522727272727275,
+    "mean_distractor_len": 6.190694626474443
+   }
+  },
+  "Engineering|Aeronautical and Astronautical Science and Technology": {
+   "n_valid": 119,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "8": 2,
+    "9": 4,
+    "10": 112
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9411764705882353,
+   "chance_accuracy": 0.10205415499533146,
+   "char": {
+    "unique_longest_count": 4,
+    "unique_shortest_count": 10,
+    "unique_longest_rate": 0.03361344537815126,
+    "unique_shortest_rate": 0.08403361344537816,
+    "longest_accuracy": 0.09787248232626383,
+    "shortest_accuracy": 0.15075030012004803,
+    "mean_gold_len": 26.016806722689076,
+    "mean_distractor_len": 26.5279091769158
+   },
+   "token": {
+    "unique_longest_count": 4,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.03361344537815126,
+    "unique_shortest_rate": 0.03361344537815126,
+    "longest_accuracy": 0.12367947178871548,
+    "shortest_accuracy": 0.12986194477791116,
+    "mean_gold_len": 5.260504201680672,
+    "mean_distractor_len": 5.257332071901608
+   }
+  },
+  "Engineering|Civil Engineering": {
+   "n_valid": 358,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "5": 2,
+    "6": 4,
+    "7": 5,
+    "8": 7,
+    "9": 13,
+    "10": 326
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9106145251396648,
+   "chance_accuracy": 0.10321339895362242,
+   "char": {
+    "unique_longest_count": 19,
+    "unique_shortest_count": 20,
+    "unique_longest_rate": 0.05307262569832402,
+    "unique_shortest_rate": 0.055865921787709494,
+    "longest_accuracy": 0.11276935355147645,
+    "shortest_accuracy": 0.12295269131861311,
+    "mean_gold_len": 25.5,
+    "mean_distractor_len": 24.913278271918678
+   },
+   "token": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 10,
+    "unique_longest_rate": 0.04189944134078212,
+    "unique_shortest_rate": 0.027932960893854747,
+    "longest_accuracy": 0.130276225946617,
+    "shortest_accuracy": 0.11460051432118472,
+    "mean_gold_len": 4.488826815642458,
+    "mean_distractor_len": 4.338945362134688
+   }
+  },
+  "Engineering|Mechanics": {
+   "n_valid": 908,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 3,
+    "5": 1,
+    "6": 9,
+    "7": 17,
+    "8": 56,
+    "9": 102,
+    "10": 720
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7929515418502202,
+   "chance_accuracy": 0.10485892594923432,
+   "char": {
+    "unique_longest_count": 51,
+    "unique_shortest_count": 53,
+    "unique_longest_rate": 0.05616740088105727,
+    "unique_shortest_rate": 0.05837004405286344,
+    "longest_accuracy": 0.12128959513320747,
+    "shortest_accuracy": 0.11775749947556115,
+    "mean_gold_len": 40.903083700440526,
+    "mean_distractor_len": 40.91717635066259
+   },
+   "token": {
+    "unique_longest_count": 30,
+    "unique_shortest_count": 28,
+    "unique_longest_rate": 0.03303964757709251,
+    "unique_shortest_rate": 0.030837004405286344,
+    "longest_accuracy": 0.12334495839451787,
+    "shortest_accuracy": 0.11036378574924831,
+    "mean_gold_len": 6.9493392070484585,
+    "mean_distractor_len": 6.915519877675841
+   }
+  },
+  "Engineering|Petroleum and Natural Gas Engineering": {
+   "n_valid": 112,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "7": 2,
+    "9": 1,
+    "10": 109
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9732142857142857,
+   "chance_accuracy": 0.10086451247165533,
+   "char": {
+    "unique_longest_count": 10,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.08928571428571429,
+    "unique_shortest_rate": 0.03571428571428571,
+    "longest_accuracy": 0.1396187641723356,
+    "shortest_accuracy": 0.07485119047619047,
+    "mean_gold_len": 30.901785714285715,
+    "mean_distractor_len": 30.022977022977024
+   },
+   "token": {
+    "unique_longest_count": 6,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.05357142857142857,
+    "unique_shortest_rate": 0.03571428571428571,
+    "longest_accuracy": 0.13536352040816327,
+    "shortest_accuracy": 0.12548185941043083,
+    "mean_gold_len": 4.571428571428571,
+    "mean_distractor_len": 4.356643356643357
+   }
+  },
+  "Sociology|Sociology": {
+   "n_valid": 143,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 1,
+    "6": 2,
+    "7": 1,
+    "9": 3,
+    "10": 136
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.951048951048951,
+   "chance_accuracy": 0.10216450216450217,
+   "char": {
+    "unique_longest_count": 8,
+    "unique_shortest_count": 13,
+    "unique_longest_rate": 0.055944055944055944,
+    "unique_shortest_rate": 0.09090909090909091,
+    "longest_accuracy": 0.09234654234654234,
+    "shortest_accuracy": 0.1343045843045843,
+    "mean_gold_len": 37.87412587412587,
+    "mean_distractor_len": 35.95583596214511
+   },
+   "token": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.07692307692307693,
+    "unique_shortest_rate": 0.013986013986013986,
+    "longest_accuracy": 0.14991952491952493,
+    "shortest_accuracy": 0.10622433122433123,
+    "mean_gold_len": 5.685314685314685,
+    "mean_distractor_len": 5.242113564668769
+   }
+  },
+  "Engineering|Food Science and Engineering": {
+   "n_valid": 109,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "9": 4,
+    "10": 105
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.963302752293578,
+   "chance_accuracy": 0.10040774719673802,
+   "char": {
+    "unique_longest_count": 10,
+    "unique_shortest_count": 7,
+    "unique_longest_rate": 0.09174311926605505,
+    "unique_shortest_rate": 0.06422018348623854,
+    "longest_accuracy": 0.12614678899082568,
+    "shortest_accuracy": 0.11035750691713994,
+    "mean_gold_len": 20.027522935779817,
+    "mean_distractor_len": 20.067553735926307
+   },
+   "token": {
+    "unique_longest_count": 4,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.03669724770642202,
+    "unique_shortest_rate": 0.01834862385321101,
+    "longest_accuracy": 0.11696519586427843,
+    "shortest_accuracy": 0.11907310324741517,
+    "mean_gold_len": 2.779816513761468,
+    "mean_distractor_len": 2.76560900716479
+   }
+  },
+  "Engineering|Agricultural Engineering": {
+   "n_valid": 104,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "8": 1,
+    "9": 3,
+    "10": 100
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9615384615384616,
+   "chance_accuracy": 0.10056089743589744,
+   "char": {
+    "unique_longest_count": 10,
+    "unique_shortest_count": 8,
+    "unique_longest_rate": 0.09615384615384616,
+    "unique_shortest_rate": 0.07692307692307693,
+    "longest_accuracy": 0.13706501831501833,
+    "shortest_accuracy": 0.12318376068376069,
+    "mean_gold_len": 19.41346153846154,
+    "mean_distractor_len": 18.762620837808807
+   },
+   "token": {
+    "unique_longest_count": 5,
+    "unique_shortest_count": 3,
+    "unique_longest_rate": 0.04807692307692308,
+    "unique_shortest_rate": 0.028846153846153848,
+    "longest_accuracy": 0.14960699023199023,
+    "shortest_accuracy": 0.09612713675213676,
+    "mean_gold_len": 3.5288461538461537,
+    "mean_distractor_len": 3.284640171858217
+   }
+  },
+  "Engineering|Surveying and Mapping Science and Technology": {
+   "n_valid": 168,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "7": 2,
+    "9": 6,
+    "10": 160
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9523809523809523,
+   "chance_accuracy": 0.10090702947845805,
+   "char": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 12,
+    "unique_longest_rate": 0.08928571428571429,
+    "unique_shortest_rate": 0.07142857142857142,
+    "longest_accuracy": 0.1342214663643235,
+    "shortest_accuracy": 0.12605583900226758,
+    "mean_gold_len": 28.81547619047619,
+    "mean_distractor_len": 28.053333333333335
+   },
+   "token": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 3,
+    "unique_longest_rate": 0.07738095238095238,
+    "unique_shortest_rate": 0.017857142857142856,
+    "longest_accuracy": 0.16905234315948603,
+    "shortest_accuracy": 0.10165107709750566,
+    "mean_gold_len": 4.083333333333333,
+    "mean_distractor_len": 3.8553333333333333
+   }
+  },
+  "Engineering|Metallurgical Engineering": {
+   "n_valid": 255,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 1,
+    "7": 5,
+    "8": 4,
+    "9": 17,
+    "10": 228
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8941176470588236,
+   "chance_accuracy": 0.10223467164643635,
+   "char": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.058823529411764705,
+    "unique_shortest_rate": 0.03529411764705882,
+    "longest_accuracy": 0.11815592903828198,
+    "shortest_accuracy": 0.10706971677559912,
+    "mean_gold_len": 34.5921568627451,
+    "mean_distractor_len": 33.42159040426477
+   },
+   "token": {
+    "unique_longest_count": 10,
+    "unique_shortest_count": 7,
+    "unique_longest_rate": 0.0392156862745098,
+    "unique_shortest_rate": 0.027450980392156862,
+    "longest_accuracy": 0.13172113289760348,
+    "shortest_accuracy": 0.11438530967942732,
+    "mean_gold_len": 6.023529411764706,
+    "mean_distractor_len": 5.880497556641493
+   }
+  },
+  "Management|Library, Information and Archival Management": {
+   "n_valid": 150,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "8": 1,
+    "9": 3,
+    "10": 146
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9733333333333334,
+   "chance_accuracy": 0.10038888888888889,
+   "char": {
+    "unique_longest_count": 39,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.26,
+    "unique_shortest_rate": 0.03333333333333333,
+    "longest_accuracy": 0.2820740740740741,
+    "shortest_accuracy": 0.06509259259259259,
+    "mean_gold_len": 38.46666666666667,
+    "mean_distractor_len": 30.394795539033456
+   },
+   "token": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.1,
+    "unique_shortest_rate": 0.013333333333333334,
+    "longest_accuracy": 0.18954232804232804,
+    "shortest_accuracy": 0.09381481481481481,
+    "mean_gold_len": 5.253333333333333,
+    "mean_distractor_len": 4.223048327137547
+   }
+  },
+  "Engineering|Mining Engineering": {
+   "n_valid": 100,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "8": 1,
+    "9": 3,
+    "10": 96
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.96,
+   "chance_accuracy": 0.10058333333333333,
+   "char": {
+    "unique_longest_count": 6,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.06,
+    "unique_shortest_rate": 0.04,
+    "longest_accuracy": 0.1061904761904762,
+    "shortest_accuracy": 0.09269047619047618,
+    "mean_gold_len": 41.06,
+    "mean_distractor_len": 40.24804469273743
+   },
+   "token": {
+    "unique_longest_count": 6,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.06,
+    "unique_shortest_rate": 0.01,
+    "longest_accuracy": 0.14769444444444443,
+    "shortest_accuracy": 0.08627380952380953,
+    "mean_gold_len": 6.43,
+    "mean_distractor_len": 6.156424581005586
+   }
+  },
+  "Science|Astronomy": {
+   "n_valid": 405,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 4,
+    "7": 1,
+    "8": 4,
+    "9": 8,
+    "10": 388
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9580246913580247,
+   "chance_accuracy": 0.10123064863805604,
+   "char": {
+    "unique_longest_count": 19,
+    "unique_shortest_count": 21,
+    "unique_longest_rate": 0.04691358024691358,
+    "unique_shortest_rate": 0.05185185185185185,
+    "longest_accuracy": 0.11571624534587498,
+    "shortest_accuracy": 0.12262688614540466,
+    "mean_gold_len": 32.17283950617284,
+    "mean_distractor_len": 31.98337950138504
+   },
+   "token": {
+    "unique_longest_count": 18,
+    "unique_shortest_count": 15,
+    "unique_longest_rate": 0.044444444444444446,
+    "unique_shortest_rate": 0.037037037037037035,
+    "longest_accuracy": 0.12818146188516558,
+    "shortest_accuracy": 0.11957280031354106,
+    "mean_gold_len": 6.9753086419753085,
+    "mean_distractor_len": 6.9404432132963985
+   }
+  },
+  "Engineering|Geological Resources and Geological Engineering": {
+   "n_valid": 50,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "7": 1,
+    "9": 1,
+    "10": 48
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.96,
+   "chance_accuracy": 0.10107936507936507,
+   "char": {
+    "unique_longest_count": 7,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.14,
+    "unique_shortest_rate": 0.12,
+    "longest_accuracy": 0.1510793650793651,
+    "shortest_accuracy": 0.14988888888888888,
+    "mean_gold_len": 34.82,
+    "mean_distractor_len": 31.63677130044843
+   },
+   "token": {
+    "unique_longest_count": 5,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.1,
+    "unique_shortest_rate": 0.04,
+    "longest_accuracy": 0.21726984126984128,
+    "shortest_accuracy": 0.1154047619047619,
+    "mean_gold_len": 5.66,
+    "mean_distractor_len": 4.811659192825112
+   }
+  },
+  "Science|Atmospheric Science": {
+   "n_valid": 203,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "7": 4,
+    "8": 3,
+    "9": 6,
+    "10": 189
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9310344827586207,
+   "chance_accuracy": 0.10228125733051842,
+   "char": {
+    "unique_longest_count": 11,
+    "unique_shortest_count": 18,
+    "unique_longest_rate": 0.054187192118226604,
+    "unique_shortest_rate": 0.08866995073891626,
+    "longest_accuracy": 0.1125361638908437,
+    "shortest_accuracy": 0.14823872077566658,
+    "mean_gold_len": 30.295566502463053,
+    "mean_distractor_len": 29.752365052865887
+   },
+   "token": {
+    "unique_longest_count": 5,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.024630541871921183,
+    "unique_shortest_rate": 0.019704433497536946,
+    "longest_accuracy": 0.11211197122527172,
+    "shortest_accuracy": 0.11668816952068184,
+    "mean_gold_len": 4.6600985221674875,
+    "mean_distractor_len": 4.543683917640512
+   }
+  },
+  "Engineering|Optical Engineering": {
+   "n_valid": 376,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 2,
+    "7": 7,
+    "8": 9,
+    "9": 26,
+    "10": 332
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8829787234042553,
+   "chance_accuracy": 0.10251920803782506,
+   "char": {
+    "unique_longest_count": 17,
+    "unique_shortest_count": 11,
+    "unique_longest_rate": 0.04521276595744681,
+    "unique_shortest_rate": 0.02925531914893617,
+    "longest_accuracy": 0.1311613475177305,
+    "shortest_accuracy": 0.08955061634582911,
+    "mean_gold_len": 25.29787234042553,
+    "mean_distractor_len": 24.736031410450014
+   },
+   "token": {
+    "unique_longest_count": 8,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.02127659574468085,
+    "unique_shortest_rate": 0.015957446808510637,
+    "longest_accuracy": 0.11843760553866937,
+    "shortest_accuracy": 0.1050806315433975,
+    "mean_gold_len": 4.824468085106383,
+    "mean_distractor_len": 4.752340682573241
+   }
+  },
+  "Agronomy|Animal Husbandry": {
+   "n_valid": 103,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "9": 1,
+    "10": 102
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9902912621359223,
+   "chance_accuracy": 0.10010787486515642,
+   "char": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 8,
+    "unique_longest_rate": 0.1262135922330097,
+    "unique_shortest_rate": 0.07766990291262135,
+    "longest_accuracy": 0.1483279395900755,
+    "shortest_accuracy": 0.12891046386192018,
+    "mean_gold_len": 21.019417475728154,
+    "mean_distractor_len": 21.100431965442766
+   },
+   "token": {
+    "unique_longest_count": 2,
+    "unique_shortest_count": 4,
+    "unique_longest_rate": 0.019417475728155338,
+    "unique_shortest_rate": 0.038834951456310676,
+    "longest_accuracy": 0.11435506241331483,
+    "shortest_accuracy": 0.12987748497457235,
+    "mean_gold_len": 3.029126213592233,
+    "mean_distractor_len": 3.0107991360691146
+   }
+  },
+  "Science|Geophysics": {
+   "n_valid": 100,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 4,
+    "7": 2,
+    "9": 5,
+    "10": 89
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.89,
+   "chance_accuracy": 0.10407936507936508,
+   "char": {
+    "unique_longest_count": 7,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.07,
+    "unique_shortest_rate": 0.06,
+    "longest_accuracy": 0.13020238095238096,
+    "shortest_accuracy": 0.13773015873015873,
+    "mean_gold_len": 45.68,
+    "mean_distractor_len": 45.710194730813285
+   },
+   "token": {
+    "unique_longest_count": 4,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.04,
+    "unique_shortest_rate": 0.01,
+    "longest_accuracy": 0.12392460317460317,
+    "shortest_accuracy": 0.12563095238095237,
+    "mean_gold_len": 6.9,
+    "mean_distractor_len": 6.900343642611684
+   }
+  },
+  "Agronomy|Crop Science": {
+   "n_valid": 145,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 1,
+    "7": 1,
+    "9": 5,
+    "10": 138
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9517241379310345,
+   "chance_accuracy": 0.10113847837985769,
+   "char": {
+    "unique_longest_count": 12,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.08275862068965517,
+    "unique_shortest_rate": 0.09655172413793103,
+    "longest_accuracy": 0.11008483853311439,
+    "shortest_accuracy": 0.1273262178434592,
+    "mean_gold_len": 26.50344827586207,
+    "mean_distractor_len": 26.286156225831398
+   },
+   "token": {
+    "unique_longest_count": 8,
+    "unique_shortest_count": 6,
+    "unique_longest_rate": 0.05517241379310345,
+    "unique_shortest_rate": 0.041379310344827586,
+    "longest_accuracy": 0.12107006020799124,
+    "shortest_accuracy": 0.139783798576902,
+    "mean_gold_len": 3.717241379310345,
+    "mean_distractor_len": 3.6713070378963653
+   }
+  },
+  "Management|Management Science and Engineering": {
+   "n_valid": 58,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 1,
+    "7": 1,
+    "8": 2,
+    "9": 2,
+    "10": 52
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.896551724137931,
+   "chance_accuracy": 0.10313355227148331,
+   "char": {
+    "unique_longest_count": 8,
+    "unique_shortest_count": 5,
+    "unique_longest_rate": 0.13793103448275862,
+    "unique_shortest_rate": 0.08620689655172414,
+    "longest_accuracy": 0.19339080459770114,
+    "shortest_accuracy": 0.11513409961685823,
+    "mean_gold_len": 32.275862068965516,
+    "mean_distractor_len": 33.53045186640472
+   },
+   "token": {
+    "unique_longest_count": 4,
+    "unique_shortest_count": 3,
+    "unique_longest_rate": 0.06896551724137931,
+    "unique_shortest_rate": 0.05172413793103448,
+    "longest_accuracy": 0.15593185550082103,
+    "shortest_accuracy": 0.13622058018609742,
+    "mean_gold_len": 4.931034482758621,
+    "mean_distractor_len": 5.023575638506876
+   }
+  },
+  "Education|Psychology": {
+   "n_valid": 87,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "7": 1,
+    "9": 1,
+    "10": 85
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9770114942528736,
+   "chance_accuracy": 0.10062032475825579,
+   "char": {
+    "unique_longest_count": 14,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.16091954022988506,
+    "unique_shortest_rate": 0.10344827586206896,
+    "longest_accuracy": 0.18457854406130267,
+    "shortest_accuracy": 0.1456257982120051,
+    "mean_gold_len": 28.655172413793103,
+    "mean_distractor_len": 27.150192554557126
+   },
+   "token": {
+    "unique_longest_count": 10,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.11494252873563218,
+    "unique_shortest_rate": 0.022988505747126436,
+    "longest_accuracy": 0.1783205619412516,
+    "shortest_accuracy": 0.11355135924101441,
+    "mean_gold_len": 4.241379310344827,
+    "mean_distractor_len": 3.8112965340179716
+   }
+  },
+  "Agronomy|Forestry": {
+   "n_valid": 131,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 1,
+    "6": 1,
+    "7": 1,
+    "8": 2,
+    "9": 2,
+    "10": 124
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9465648854961832,
+   "chance_accuracy": 0.10253241245607658,
+   "char": {
+    "unique_longest_count": 13,
+    "unique_shortest_count": 14,
+    "unique_longest_rate": 0.09923664122137404,
+    "unique_shortest_rate": 0.10687022900763359,
+    "longest_accuracy": 0.11583969465648855,
+    "shortest_accuracy": 0.13849509269356597,
+    "mean_gold_len": 24.221374045801525,
+    "mean_distractor_len": 23.76896551724138
+   },
+   "token": {
+    "unique_longest_count": 6,
+    "unique_shortest_count": 7,
+    "unique_longest_rate": 0.04580152671755725,
+    "unique_shortest_rate": 0.05343511450381679,
+    "longest_accuracy": 0.13054040954804313,
+    "shortest_accuracy": 0.1359808554465043,
+    "mean_gold_len": 3.7022900763358777,
+    "mean_distractor_len": 3.5551724137931036
+   }
+  },
+  "Engineering|Textile Science and Engineering": {
+   "n_valid": 100,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 2,
+    "7": 1,
+    "8": 1,
+    "9": 3,
+    "10": 93
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.93,
+   "chance_accuracy": 0.1023452380952381,
+   "char": {
+    "unique_longest_count": 6,
+    "unique_shortest_count": 9,
+    "unique_longest_rate": 0.06,
+    "unique_shortest_rate": 0.09,
+    "longest_accuracy": 0.09867857142857143,
+    "shortest_accuracy": 0.1523015873015873,
+    "mean_gold_len": 24.98,
+    "mean_distractor_len": 25.10972850678733
+   },
+   "token": {
+    "unique_longest_count": 2,
+    "unique_shortest_count": 0,
+    "unique_longest_rate": 0.02,
+    "unique_shortest_rate": 0.0,
+    "longest_accuracy": 0.10487301587301587,
+    "shortest_accuracy": 0.10396428571428572,
+    "mean_gold_len": 3.74,
+    "mean_distractor_len": 3.7002262443438916
+   }
+  },
+  "Agronomy|Veterinary Medicine": {
+   "n_valid": 50,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "6": 1,
+    "9": 2,
+    "10": 47
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.94,
+   "chance_accuracy": 0.10177777777777777,
+   "char": {
+    "unique_longest_count": 7,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.14,
+    "unique_shortest_rate": 0.04,
+    "longest_accuracy": 0.16422222222222221,
+    "shortest_accuracy": 0.09485714285714286,
+    "mean_gold_len": 19.5,
+    "mean_distractor_len": 19.0472972972973
+   },
+   "token": {
+    "unique_longest_count": 1,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.02,
+    "unique_shortest_rate": 0.04,
+    "longest_accuracy": 0.10107936507936507,
+    "shortest_accuracy": 0.1323015873015873,
+    "mean_gold_len": 2.36,
+    "mean_distractor_len": 2.4594594594594597
+   }
+  },
+  "Engineering|Instrument Science and Technology": {
+   "n_valid": 50,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "4": 2,
+    "6": 1,
+    "7": 1,
+    "8": 2,
+    "9": 3,
+    "10": 41
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.82,
+   "chance_accuracy": 0.10985714285714286,
+   "char": {
+    "unique_longest_count": 3,
+    "unique_shortest_count": 1,
+    "unique_longest_rate": 0.06,
+    "unique_shortest_rate": 0.02,
+    "longest_accuracy": 0.088,
+    "shortest_accuracy": 0.06724603174603175,
+    "mean_gold_len": 28.7,
+    "mean_distractor_len": 26.3938679245283
+   },
+   "token": {
+    "unique_longest_count": 1,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.02,
+    "unique_shortest_rate": 0.04,
+    "longest_accuracy": 0.13037301587301586,
+    "shortest_accuracy": 0.09985714285714285,
+    "mean_gold_len": 4.54,
+    "mean_distractor_len": 4.0825471698113205
+   }
+  },
+  "Education|Physical Education": {
+   "n_valid": 150,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "5": 1,
+    "6": 4,
+    "7": 2,
+    "8": 7,
+    "9": 9,
+    "10": 127
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.8466666666666667,
+   "chance_accuracy": 0.10484920634920634,
+   "char": {
+    "unique_longest_count": 18,
+    "unique_shortest_count": 12,
+    "unique_longest_rate": 0.12,
+    "unique_shortest_rate": 0.08,
+    "longest_accuracy": 0.15671164021164022,
+    "shortest_accuracy": 0.11921957671957673,
+    "mean_gold_len": 30.52,
+    "mean_distractor_len": 29.106153846153845
+   },
+   "token": {
+    "unique_longest_count": 15,
+    "unique_shortest_count": 2,
+    "unique_longest_rate": 0.1,
+    "unique_shortest_rate": 0.013333333333333334,
+    "longest_accuracy": 0.16236772486772486,
+    "shortest_accuracy": 0.09324603174603174,
+    "mean_gold_len": 4.433333333333334,
+    "mean_distractor_len": 4.242307692307692
+   }
+  }
+ },
+ "quality": {
+  "n_rows": 26529,
+  "letter_unparseable": 0,
+  "letter_out_of_range": 0,
+  "letter_text_mismatch": 0,
+  "gold_duplicated": 0,
+  "any_duplicate_options": 0
+ },
+ "quality_examples": {
+  "letter_text_mismatch": [],
+  "gold_duplicated": []
+ },
+ "position_10_options": {
+  "n": 23158,
+  "counts": [
+   2374,
+   2250,
+   2297,
+   2253,
+   2311,
+   2340,
+   2253,
+   2278,
+   2434,
+   2368
+  ],
+  "chi2": 14.98039554365662
+ },
+ "predictions": {
+  "P1_pooled_pick_longest_under_1_5x_chance": true,
+  "P1_detail": {
+   "ratio": 1.2292912737843604
+  },
+  "P2_pooled_lift_at_least_1pp": true,
+  "P2_detail": {
+   "lift": 0.024272808373226776
+  },
+  "P3_text_lift_exceeds_calculation_lift": true,
+  "P3_detail": {
+   "text": 0.026719913891482525,
+   "calculation": 0.020938520865050395
+  },
+  "P4_easy_lift_exceeds_hard_lift": true,
+  "P4_detail": {
+   "easy": 0.019606541793192933,
+   "hard": 0.01639440504334122
+  },
+  "P5_gold_longer_than_mean_distractor": true,
+  "P5_detail": {
+   "gold": 34.895887519318485,
+   "distractor": 34.23337348192661
+  },
+  "P6_unique_longest_exceeds_unique_shortest": true,
+  "P6_detail": {
+   "unique_longest": 2109,
+   "unique_shortest": 1814
+  },
+  "P7_ten_option_positions_uniform": true,
+  "P7_detail": {
+   "n": 23158,
+   "chi2": 14.98039554365662,
+   "critical_df9_p001": 27.877
+  },
+  "P8_lift_positive_in_majority_of_disciplines": true,
+  "P8_detail": {
+   "eligible": [
+    "Agronomy",
+    "Economics",
+    "Education",
+    "Engineering",
+    "History",
+    "Law",
+    "Literature and Arts",
+    "Management",
+    "Medicine",
+    "Military Science",
+    "Philosophy",
+    "Science",
+    "Sociology"
+   ],
+   "positive": [
+    "Agronomy",
+    "Economics",
+    "Education",
+    "Engineering",
+    "History",
+    "Law",
+    "Literature and Arts",
+    "Management",
+    "Medicine",
+    "Military Science",
+    "Philosophy",
+    "Science"
+   ]
+  },
+  "P9_answer_text_matches_letter_everywhere": true,
+  "P9_detail": {
+   "letter_text_mismatch": 0
+  }
+ },
+ "note": "P1: pooled pick-longest under 1.5x chance. P2: pooled pick-longest lift at least +1 point. P3: text questions' lift exceeds calculation questions'. P4: easy lift exceeds hard lift. P5: mean gold length exceeds mean distractor length (characters). P6: gold unique-longest more often than unique-shortest. P7: gold positions of 10-option questions uniform (chi-square df 9 below 27.877). P8: pick-longest beats chance in a strict majority of disciplines with n >= 100. P9: answer text equals the lettered option everywhere. Each is a finding either way. Measures agreement with a length heuristic, not correctness of any model."
+}

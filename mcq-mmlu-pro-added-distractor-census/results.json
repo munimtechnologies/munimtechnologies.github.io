@@ -1,0 +1,816 @@
+{
+ "dataset": "MMLU-Pro (TIGER-Lab/MMLU-Pro config 'default', test split) joined to MMLU (cais/mmlu config 'all', test+validation+dev), both read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Each MMLU-Pro question whose src starts with 'ori_mmlu' is matched to MMLU by whitespace-normalised question text with an unchanged gold text; each MMLU-Pro distractor is labelled ORIGINAL (its normalised text is one of MMLU's three distractors) or ADDED (anything else). Lengths are characters after str.strip(). This is a construction property of the benchmark, not a model's behaviour.",
+ "split_counts": {
+  "mmlu_pro": {
+   "test": 12032
+  },
+  "mmlu": {
+   "dev": 285,
+   "test": 14042,
+   "validation": 1531
+  }
+ },
+ "fixtures": {
+  "core_target_met": true,
+  "join_target_met": true
+ },
+ "structural_gate": {
+  "passed": true,
+  "detail": {
+   "n_valid": {
+    "got": 12032,
+    "expected": 12032,
+    "match": true
+   },
+   "pooled_unique_longest": {
+    "got": 1655,
+    "expected": 1655,
+    "match": true
+   },
+   "pooled_longest_accuracy": {
+    "got": 0.18376805370862884,
+    "expected": 0.18376805370862884,
+    "match": true
+   },
+   "provenance_counts": {
+    "got": {
+     "ori_mmlu": 6810,
+     "other": 5222
+    },
+    "expected": {
+     "ori_mmlu": 6810,
+     "other": 5222
+    },
+    "match": true
+   },
+   "clean_parse": {
+    "got": [
+     0,
+     0
+    ],
+    "expected": [
+     0,
+     0
+    ],
+    "match": true
+   }
+  }
+ },
+ "pooled_mmlu_pro": {
+  "n_valid": 12032,
+  "n_bad_key": 0,
+  "n_degenerate": 0,
+  "option_count_hist": {
+   "3": 21,
+   "4": 606,
+   "5": 52,
+   "6": 93,
+   "7": 158,
+   "8": 320,
+   "9": 801,
+   "10": 9981
+  },
+  "modal_option_count": 10,
+  "modal_coverage": 0.8295378989361702,
+  "chance_accuracy": 0.11087694718844984,
+  "char": {
+   "unique_longest_count": 1655,
+   "unique_shortest_count": 741,
+   "unique_longest_rate": 0.13754986702127658,
+   "unique_shortest_rate": 0.061585771276595744,
+   "longest_accuracy": 0.18376805370862884,
+   "shortest_accuracy": 0.10537838251435326,
+   "mean_gold_len": 43.23761635638298,
+   "mean_distractor_len": 36.09704976558975
+  },
+  "token": {
+   "unique_longest_count": 1163,
+   "unique_shortest_count": 400,
+   "unique_longest_rate": 0.09665890957446809,
+   "unique_shortest_rate": 0.03324468085106383,
+   "longest_accuracy": 0.16758155500675448,
+   "shortest_accuracy": 0.1152137289978048,
+   "mean_gold_len": 7.058095079787234,
+   "mean_distractor_len": 5.987553698581769
+  }
+ },
+ "by_provenance": {
+  "ori_mmlu": {
+   "n_valid": 6810,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 19,
+    "4": 478,
+    "5": 44,
+    "6": 82,
+    "7": 141,
+    "8": 287,
+    "9": 712,
+    "10": 5047
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.7411160058737152,
+   "chance_accuracy": 0.11573112602848286,
+   "char": {
+    "unique_longest_count": 708,
+    "unique_shortest_count": 659,
+    "unique_longest_rate": 0.10396475770925111,
+    "unique_shortest_rate": 0.09676945668135095,
+    "longest_accuracy": 0.13011671677971237,
+    "shortest_accuracy": 0.12984307624175465,
+    "mean_gold_len": 43.96534508076358,
+    "mean_distractor_len": 40.23832809822958
+   },
+   "token": {
+    "unique_longest_count": 512,
+    "unique_shortest_count": 325,
+    "unique_longest_rate": 0.07518355359765051,
+    "unique_shortest_rate": 0.04772393538913363,
+    "longest_accuracy": 0.13640840966832157,
+    "shortest_accuracy": 0.12747861454909912,
+    "mean_gold_len": 7.112187958883994,
+    "mean_distractor_len": 6.527876927470017
+   }
+  },
+  "other": {
+   "n_valid": 5222,
+   "n_bad_key": 0,
+   "n_degenerate": 0,
+   "option_count_hist": {
+    "3": 2,
+    "4": 128,
+    "5": 8,
+    "6": 11,
+    "7": 17,
+    "8": 33,
+    "9": 89,
+    "10": 4934
+   },
+   "modal_option_count": 10,
+   "modal_coverage": 0.9448487169666794,
+   "chance_accuracy": 0.10454662204470706,
+   "char": {
+    "unique_longest_count": 947,
+    "unique_shortest_count": 82,
+    "unique_longest_rate": 0.18134814247414785,
+    "unique_shortest_rate": 0.015702795863653772,
+    "longest_accuracy": 0.2537346574018347,
+    "shortest_accuracy": 0.07347402321071414,
+    "mean_gold_len": 42.28858674837227,
+    "mean_distractor_len": 31.04448460566999
+   },
+   "token": {
+    "unique_longest_count": 651,
+    "unique_shortest_count": 75,
+    "unique_longest_rate": 0.12466487935656836,
+    "unique_shortest_rate": 0.014362313289927231,
+    "longest_accuracy": 0.20823439295289162,
+    "shortest_accuracy": 0.09921911570705136,
+    "mean_gold_len": 6.987552661815396,
+    "mean_distractor_len": 5.328332534947524
+   }
+  }
+ },
+ "join_status": {
+  "matched": 6743,
+  "no_question": 2,
+  "no_gold": 44,
+  "ambiguous": 21,
+  "bad_key": 0
+ },
+ "join_by_category": {
+  "ALL": {
+   "n_questions": 6743,
+   "retained_hist": {
+    "0": 11,
+    "1": 68,
+    "2": 374,
+    "3": 6289,
+    "4": 1
+   },
+   "n_with_added": 6271,
+   "mean_gold_len": 44.025656236096694,
+   "n_original_distractors": 19687,
+   "mean_original_len": 42.44105247117387,
+   "n_added_distractors": 35786,
+   "mean_added_len": 39.15148382048846,
+   "gold_longer_vs_original": 0.5135622491999797,
+   "gold_longer_vs_added": 0.48591628010954,
+   "n_intact": 6289,
+   "intact_pick_longest_full": 0.12406923653544738,
+   "intact_chance_full": 0.11396681532633193,
+   "intact_pick_longest_original4": 0.25484973763714425,
+   "intact_chance_original4": 0.25
+  },
+  "business": {
+   "n_questions": 155,
+   "retained_hist": {
+    "0": 2,
+    "1": 2,
+    "2": 8,
+    "3": 143
+   },
+   "n_with_added": 154,
+   "mean_gold_len": 27.761290322580646,
+   "n_original_distractors": 447,
+   "mean_original_len": 28.03131991051454,
+   "n_added_distractors": 896,
+   "mean_added_len": 29.681919642857142,
+   "gold_longer_vs_original": 0.4798657718120805,
+   "gold_longer_vs_added": 0.421875,
+   "n_intact": 143,
+   "intact_pick_longest_full": 0.0930846930846931,
+   "intact_chance_full": 0.1027084027084027,
+   "intact_pick_longest_original4": 0.25524475524475526,
+   "intact_chance_original4": 0.25
+  },
+  "law": {
+   "n_questions": 1100,
+   "retained_hist": {
+    "1": 6,
+    "2": 123,
+    "3": 971
+   },
+   "n_with_added": 1032,
+   "mean_gold_len": 89.25181818181818,
+   "n_original_distractors": 3165,
+   "mean_original_len": 87.37630331753554,
+   "n_added_distractors": 5863,
+   "mean_added_len": 77.98413781340611,
+   "gold_longer_vs_original": 0.5218009478672986,
+   "gold_longer_vs_added": 0.5690772641992154,
+   "n_intact": 971,
+   "intact_pick_longest_full": 0.18582217645039478,
+   "intact_chance_full": 0.11370621025615876,
+   "intact_pick_longest_original4": 0.2822691383453484,
+   "intact_chance_original4": 0.25
+  },
+  "psychology": {
+   "n_questions": 491,
+   "retained_hist": {
+    "0": 1,
+    "1": 9,
+    "2": 41,
+    "3": 440
+   },
+   "n_with_added": 480,
+   "mean_gold_len": 41.69653767820774,
+   "n_original_distractors": 1411,
+   "mean_original_len": 41.632884479092844,
+   "n_added_distractors": 2723,
+   "mean_added_len": 40.089239809034154,
+   "gold_longer_vs_original": 0.4684620836286322,
+   "gold_longer_vs_added": 0.4676827029012119,
+   "n_intact": 440,
+   "intact_pick_longest_full": 0.10104797979797979,
+   "intact_chance_full": 0.10664411976911976,
+   "intact_pick_longest_original4": 0.18901515151515152,
+   "intact_chance_original4": 0.25
+  },
+  "biology": {
+   "n_questions": 218,
+   "retained_hist": {
+    "2": 6,
+    "3": 212
+   },
+   "n_with_added": 178,
+   "mean_gold_len": 45.518348623853214,
+   "n_original_distractors": 648,
+   "mean_original_len": 44.03703703703704,
+   "n_added_distractors": 1034,
+   "mean_added_len": 41.317214700193425,
+   "gold_longer_vs_original": 0.5146604938271605,
+   "gold_longer_vs_added": 0.5585106382978723,
+   "n_intact": 212,
+   "intact_pick_longest_full": 0.1745020964360587,
+   "intact_chance_full": 0.12932951482479785,
+   "intact_pick_longest_original4": 0.26690251572327045,
+   "intact_chance_original4": 0.25
+  },
+  "chemistry": {
+   "n_questions": 175,
+   "retained_hist": {
+    "1": 3,
+    "2": 10,
+    "3": 162
+   },
+   "n_with_added": 172,
+   "mean_gold_len": 23.411428571428573,
+   "n_original_distractors": 509,
+   "mean_original_len": 22.18467583497053,
+   "n_added_distractors": 984,
+   "mean_added_len": 23.177845528455286,
+   "gold_longer_vs_original": 0.5088408644400786,
+   "gold_longer_vs_added": 0.510670731707317,
+   "n_intact": 162,
+   "intact_pick_longest_full": 0.10929110327258475,
+   "intact_chance_full": 0.10693464628649814,
+   "intact_pick_longest_original4": 0.24845679012345678,
+   "intact_chance_original4": 0.25
+  },
+  "history": {
+   "n_questions": 381,
+   "retained_hist": {
+    "0": 1,
+    "1": 5,
+    "2": 19,
+    "3": 356
+   },
+   "n_with_added": 348,
+   "mean_gold_len": 51.04724409448819,
+   "n_original_distractors": 1111,
+   "mean_original_len": 50.372637263726375,
+   "n_added_distractors": 1970,
+   "mean_added_len": 46.56395939086294,
+   "gold_longer_vs_original": 0.5157515751575158,
+   "gold_longer_vs_added": 0.5233502538071066,
+   "n_intact": 356,
+   "intact_pick_longest_full": 0.14441657749242018,
+   "intact_chance_full": 0.11729200107009095,
+   "intact_pick_longest_original4": 0.2577247191011236,
+   "intact_chance_original4": 0.25
+  },
+  "other": {
+   "n_questions": 924,
+   "retained_hist": {
+    "0": 4,
+    "1": 20,
+    "2": 47,
+    "3": 853
+   },
+   "n_with_added": 863,
+   "mean_gold_len": 46.51190476190476,
+   "n_original_distractors": 2673,
+   "mean_original_len": 42.387953610175835,
+   "n_added_distractors": 4855,
+   "mean_added_len": 30.105252317198765,
+   "gold_longer_vs_original": 0.5164609053497943,
+   "gold_longer_vs_added": 0.5035015447991761,
+   "n_intact": 853,
+   "intact_pick_longest_full": 0.11964774186345113,
+   "intact_chance_full": 0.1138153854742366,
+   "intact_pick_longest_original4": 0.25664322000781553,
+   "intact_chance_original4": 0.25
+  },
+  "health": {
+   "n_questions": 796,
+   "retained_hist": {
+    "0": 3,
+    "1": 14,
+    "2": 53,
+    "3": 726
+   },
+   "n_with_added": 724,
+   "mean_gold_len": 32.22738693467337,
+   "n_original_distractors": 2298,
+   "mean_original_len": 31.618363794604004,
+   "n_added_distractors": 4137,
+   "mean_added_len": 31.02030456852792,
+   "gold_longer_vs_original": 0.5145778938207136,
+   "gold_longer_vs_added": 0.4757070340826686,
+   "n_intact": 726,
+   "intact_pick_longest_full": 0.11560409287682015,
+   "intact_chance_full": 0.11683774979229525,
+   "intact_pick_longest_original4": 0.255050505050505,
+   "intact_chance_original4": 0.25
+  },
+  "economics": {
+   "n_questions": 443,
+   "retained_hist": {
+    "1": 1,
+    "2": 16,
+    "3": 426
+   },
+   "n_with_added": 396,
+   "mean_gold_len": 45.855530474040634,
+   "n_original_distractors": 1311,
+   "mean_original_len": 45.44622425629291,
+   "n_added_distractors": 2238,
+   "mean_added_len": 44.548257372654156,
+   "gold_longer_vs_original": 0.5045766590389016,
+   "gold_longer_vs_added": 0.45933869526362825,
+   "n_intact": 426,
+   "intact_pick_longest_full": 0.10947723377300841,
+   "intact_chance_full": 0.11992976376779192,
+   "intact_pick_longest_original4": 0.23395931142410017,
+   "intact_chance_original4": 0.25
+  },
+  "math": {
+   "n_questions": 823,
+   "retained_hist": {
+    "1": 1,
+    "2": 11,
+    "3": 810,
+    "4": 1
+   },
+   "n_with_added": 807,
+   "mean_gold_len": 15.205346294046173,
+   "n_original_distractors": 2457,
+   "mean_original_len": 14.68131868131868,
+   "n_added_distractors": 4663,
+   "mean_added_len": 16.3491314604332,
+   "gold_longer_vs_original": 0.5221815221815221,
+   "gold_longer_vs_added": 0.4443491314604332,
+   "n_intact": 810,
+   "intact_pick_longest_full": 0.08855477170291985,
+   "intact_chance_full": 0.10574368018812463,
+   "intact_pick_longest_original4": 0.2595679012345679,
+   "intact_chance_original4": 0.25
+  },
+  "physics": {
+   "n_questions": 399,
+   "retained_hist": {
+    "2": 6,
+    "3": 393
+   },
+   "n_with_added": 395,
+   "mean_gold_len": 28.19047619047619,
+   "n_original_distractors": 1191,
+   "mean_original_len": 27.7968094038623,
+   "n_added_distractors": 2297,
+   "mean_added_len": 28.779712668698302,
+   "gold_longer_vs_original": 0.515952980688497,
+   "gold_longer_vs_added": 0.44035698737483675,
+   "n_intact": 393,
+   "intact_pick_longest_full": 0.08520235066036592,
+   "intact_chance_full": 0.1038289106991397,
+   "intact_pick_longest_original4": 0.23939779474130618,
+   "intact_chance_original4": 0.25
+  },
+  "computer science": {
+   "n_questions": 273,
+   "retained_hist": {
+    "1": 2,
+    "2": 9,
+    "3": 262
+   },
+   "n_with_added": 242,
+   "mean_gold_len": 28.446886446886445,
+   "n_original_distractors": 806,
+   "mean_original_len": 27.11166253101737,
+   "n_added_distractors": 1341,
+   "mean_added_len": 29.097688292319166,
+   "gold_longer_vs_original": 0.5124069478908189,
+   "gold_longer_vs_added": 0.34265473527218493,
+   "n_intact": 262,
+   "intact_pick_longest_full": 0.08788622319156669,
+   "intact_chance_full": 0.12201320731855084,
+   "intact_pick_longest_original4": 0.26399491094147587,
+   "intact_chance_original4": 0.25
+  },
+  "philosophy": {
+   "n_questions": 499,
+   "retained_hist": {
+    "1": 5,
+    "2": 21,
+    "3": 473
+   },
+   "n_with_added": 422,
+   "mean_gold_len": 38.44689378757515,
+   "n_original_distractors": 1466,
+   "mean_original_len": 36.217598908594816,
+   "n_added_distractors": 2448,
+   "mean_added_len": 37.014297385620914,
+   "gold_longer_vs_original": 0.5296725784447476,
+   "gold_longer_vs_added": 0.4665032679738562,
+   "n_intact": 473,
+   "intact_pick_longest_full": 0.14249723145071982,
+   "intact_chance_full": 0.12577519379844962,
+   "intact_pick_longest_original4": 0.26744186046511625,
+   "intact_chance_original4": 0.25
+  },
+  "engineering": {
+   "n_questions": 66,
+   "retained_hist": {
+    "2": 4,
+    "3": 62
+   },
+   "n_with_added": 58,
+   "mean_gold_len": 11.909090909090908,
+   "n_original_distractors": 194,
+   "mean_original_len": 11.639175257731958,
+   "n_added_distractors": 337,
+   "mean_added_len": 13.86053412462908,
+   "gold_longer_vs_original": 0.5489690721649485,
+   "gold_longer_vs_added": 0.48813056379821956,
+   "n_intact": 62,
+   "intact_pick_longest_full": 0.12398873527905786,
+   "intact_chance_full": 0.117831541218638,
+   "intact_pick_longest_original4": 0.2688172043010753,
+   "intact_chance_original4": 0.25
+  }
+ },
+ "examples": {
+  "biology": [
+   {
+    "question_id": 2804,
+    "src": "ori_mmlu-high_school_biology",
+    "gold": [
+     "longitudinal section of a shoot tip",
+     35
+    ],
+    "original": [
+     [
+      "cross section of muscle tissue",
+      30
+     ],
+     [
+      "cross section of a leaf",
+      23
+     ],
+     [
+      "cross section of an anther (site of pollen production in a flower)",
+      66
+     ]
+    ],
+    "added": [
+     [
+      "longitudinal section of a leaf vein",
+      35
+     ],
+     [
+      "cross section of a fruit",
+      24
+     ],
+     [
+      "longitudinal section of a petal",
+      31
+     ],
+     [
+      "longitudinal section of a seed",
+      30
+     ]
+    ]
+   },
+   {
+    "question_id": 2805,
+    "src": "ori_mmlu-high_school_biology",
+    "gold": [
+     "ATP and NADPH provide the power and raw materials for the Calvin cycle.",
+     71
+    ],
+    "original": [
+     [
+      "CO2 released by the light-dependent reactions provides the raw material for the Calvin cycle.",
+      93
+     ],
+     [
+      "The light reactions provide oxygen for the light-independent reactions.",
+      71
+     ],
+     [
+      "Water entering the plant through the roots provides hydrogen directly to the Calvin cycle.",
+      90
+     ]
+    ],
+    "added": [
+     [
+      "The light reactions provide nitrogen to the Calvin cycle for protein synthesis.",
+      79
+     ],
+     [
+      "Glucose and fructose are supplied to the Calvin cycle by the light reactions.",
+      77
+     ],
+     [
+      "The light reactions supply the Calvin cycle with sunlight directly.",
+      67
+     ],
+     [
+      "ATP and NADPH are broken down in the light reactions to supply the Calvin cycle with energy.",
+      92
+     ],
+     [
+      "The light reactions provide carbon dioxide for the light-independent reactions.",
+      79
+     ],
+     [
+      "The light reactions supply the Calvin cycle with water and oxygen.",
+      66
+     ]
+    ]
+   },
+   {
+    "question_id": 2806,
+    "src": "ori_mmlu-high_school_biology",
+    "gold": [
+     "Bb Bb",
+     5
+    ],
+    "original": [
+     [
+      "Bb bb",
+      5
+     ],
+     [
+      "BB Bb",
+      5
+     ],
+     [
+      "BB BB",
+      5
+     ]
+    ],
+    "added": [
+     [
+      "bb bb",
+      5
+     ],
+     [
+      "Bb BB",
+      5
+     ],
+     [
+      "bb Bb",
+      5
+     ],
+     [
+      "Bb Bb Bb",
+      8
+     ],
+     [
+      "BB bb",
+      5
+     ]
+    ]
+   }
+  ],
+  "psychology": [
+   {
+    "question_id": 1986,
+    "src": "ori_mmlu-professional_psychology",
+    "gold": [
+     "is confused and incoherent, may exhibit bizarre behavior, and is unable to care for him/herself.",
+     96
+    ],
+    "original": [
+     [
+      "is functioning at an intellectual level that is superior for his/her age, education, and demographic background.",
+      112
+     ],
+     [
+      "is nonresponsive to visual or auditory stimuli and seems to be in a state of deep sleep.",
+      88
+     ],
+     [
+      "is alert and oriented and can remember and integrate remote and recent events but may have some impairment in judgment, planning, and abstract reasoning.",
+      153
+     ]
+    ],
+    "added": [
+     [
+      "is unresponsive to all stimuli but shows signs of basic physiological functioning such as breathing and heartbeat.",
+      114
+     ],
+     [
+      "is highly responsive and coherent, but cannot remember or integrate past and recent events.",
+      91
+     ],
+     [
+      "is functioning at an intellectual level that is average for his/her age, education, and demographic background.",
+      111
+     ],
+     [
+      "is responsive to stimuli but cannot remember or integrate past and recent events, and exhibits impaired judgment.",
+      113
+     ]
+    ]
+   },
+   {
+    "question_id": 1987,
+    "src": "ori_mmlu-professional_psychology",
+    "gold": [
+     "provide Hermann with appropriate referrals.",
+     43
+    ],
+    "original": [
+     [
+      "discuss the difference in political views with Hermann only if they become relevant to the psychotherapy process.",
+      113
+     ],
+     [
+      "see Hermann in therapy until his current crisis is over and then make a referral if necessary.",
+      94
+     ]
+    ],
+    "added": [
+     [
+      "Discuss your discomfort with Hermann's political views in the first session.",
+      76
+     ],
+     [
+      "Ignore your personal feelings and continue therapy without discussing the difference in political views.",
+      104
+     ],
+     [
+      "Suggest Hermann to find a psychologist who shares his political views.",
+      70
+     ],
+     [
+      "Decline Hermann's request for therapy because of the difference in political views.",
+      83
+     ],
+     [
+      "Tell Hermann outright that his political views are repugnant and continue the therapy.",
+      86
+     ],
+     [
+      "Offer to treat Hermann only if he changes his political views.",
+      62
+     ]
+    ]
+   },
+   {
+    "question_id": 1988,
+    "src": "ori_mmlu-professional_psychology",
+    "gold": [
+     "doing so helps them satisfy their personal needs.",
+     49
+    ],
+    "original": [
+     [
+      "they feel they have a personal duty to uphold rules and laws.",
+      61
+     ],
+     [
+      "doing so helps them avoid punishment.",
+      37
+     ],
+     [
+      "\"\"\"everyone else is doing it.\"\"\"",
+      32
+     ]
+    ],
+    "added": [
+     [
+      "they are taught that rules are unbreakable.",
+      43
+     ],
+     [
+      "they enjoy following the rules.",
+      31
+     ],
+     [
+      "they are rewarded for following rules.",
+      38
+     ],
+     [
+      "they understand the concept of fairness and justice.",
+      52
+     ],
+     [
+      "they believe in the inherent goodness of rules.",
+      47
+     ],
+     [
+      "they fear societal disapproval.",
+      31
+     ]
+    ]
+   }
+  ]
+ },
+ "predictions": {
+  "P1_join_coverage_at_least_90pct": true,
+  "P1_detail": {
+   "status_counts": {
+    "matched": 6743,
+    "no_question": 2,
+    "no_gold": 44,
+    "ambiguous": 21,
+    "bad_key": 0
+   },
+   "coverage": 0.9901615271659324
+  },
+  "P2_added_distractors_shorter_than_original": true,
+  "P2_detail": {
+   "mean_added_len": 39.15148382048846,
+   "mean_original_len": 42.44105247117387,
+   "mean_gold_len": 44.025656236096694
+  },
+  "P3_gold_longer_vs_added_exceeds_vs_original": false,
+  "P3_detail": {
+   "gold_longer_vs_added": 0.48591628010954,
+   "gold_longer_vs_original": 0.5135622491999797,
+   "gap": -0.027645969090439704
+  },
+  "P4_expansion_amplifies_pick_longest_on_intact": true,
+  "P4_detail": {
+   "n_intact": 6289,
+   "full_over_chance": 1.0886435334723379,
+   "original4_over_chance": 1.019398950548577
+  },
+  "P5_gap_at_least_0p10_in_biology_and_psychology": false,
+  "P5_detail": {
+   "biology": 0.04385014447071178,
+   "psychology": -0.0007793807274202869
+  },
+  "P6_ori_mmlu_lift_exceeds_other": false,
+  "P6_detail": {
+   "lift_ori_mmlu": 0.014385590751229513,
+   "lift_other": 0.14918803535712766
+  }
+ },
+ "note": "P1: >=90% of ori_mmlu questions join with unchanged gold. P2 (headline): added distractors are shorter on average than original ones. P3: the gold is longer than an added distractor more often than an original one (pairwise; ties count 1/2). P4: on intact questions (all three MMLU distractors kept) pick-longest relative to chance is higher on the full list than on the original 4 options. P5: the P3 gap is at least 0.10 in both biology and psychology. P6: the pick-longest lift over chance is larger on ori_mmlu questions than on the rest. Each is a finding either way. Measures agreement with a length heuristic, not correctness of any model."
+}

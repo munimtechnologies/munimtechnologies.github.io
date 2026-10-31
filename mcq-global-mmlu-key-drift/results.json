@@ -1,0 +1,1852 @@
+{
+ "audit": 71,
+ "slug": "mcq-global-mmlu-key-drift",
+ "dataset": "Global-MMLU (CohereLabs/Global-MMLU, Apache-2.0; Singh et al. 2024, arXiv 2412.03304), every language config, split test; MMLU-Redux 2.0 (edinburgh-dawg/mmlu-redux-2.0, CC BY 4.0), 57 configs, split test; both read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Options are matched across languages only by identical text (NFKC, stripped) or an identical non-empty number sequence. Only aggregates are written: no question or option text.",
+ "fixture_target_met": true,
+ "redux": {
+  "rows": 5700,
+  "labels": {
+   "bad_options_clarity": 25,
+   "bad_question_clarity": 132,
+   "expert": 32,
+   "multiple_correct_answers": 39,
+   "no_correct_answer": 36,
+   "ok": 5330,
+   "wrong_groundtruth": 106
+  },
+  "matches_audit69": true,
+  "shards": [
+   {
+    "config": "abstract_algebra",
+    "sha256": "c7c70e1b329867220f57a40182aedc808e12dd94e0974315a6c1607b9cadb52b",
+    "bytes": 23062
+   },
+   {
+    "config": "anatomy",
+    "sha256": "0c4a5ecfdda3982794ef319686b7fd4c61398eeaf741fe787f37613c3442997c",
+    "bytes": 18031
+   },
+   {
+    "config": "astronomy",
+    "sha256": "c6b5a0f329383181ffcef35f1582ea1924eac4eb750a310e7be2e55923b5a0b2",
+    "bytes": 26144
+   },
+   {
+    "config": "business_ethics",
+    "sha256": "2f221168b41c503e29042dbfb401caa69b454f89b45d919c54e34db3b41a590b",
+    "bytes": 25448
+   },
+   {
+    "config": "clinical_knowledge",
+    "sha256": "543c2e08337580baa0e76d68d7391920daca6f7ba7d0d5f6ec2ae93df4c93e22",
+    "bytes": 21789
+   },
+   {
+    "config": "college_biology",
+    "sha256": "b121c16f5147af55f087c1d5185a9cc455cd882bc11b85c443f3d90322e8866e",
+    "bytes": 27111
+   },
+   {
+    "config": "college_chemistry",
+    "sha256": "45b80702c8bb75f96a8aeb7d712cc49ba8b846b0636d24351b7deab29122d341",
+    "bytes": 19967
+   },
+   {
+    "config": "college_computer_science",
+    "sha256": "3c2d8f1cab8112e4f5db6e5d1240db591d870cab7076bdc5734397f2cc6e7b08",
+    "bytes": 32061
+   },
+   {
+    "config": "college_mathematics",
+    "sha256": "8e578811d92355dde403e1f2ae2bd9dc303dcfacb3c95215773a3438a32cc92b",
+    "bytes": 18932
+   },
+   {
+    "config": "college_medicine",
+    "sha256": "28fc2a6906a782949e81b8cde81da1742ba8946a037e29cb4ab203a30374e3dc",
+    "bytes": 31099
+   },
+   {
+    "config": "college_physics",
+    "sha256": "26ccf8d65edab187d0662f0d146f4d8c7cb82e5417582f86e8dbd3122489ec23",
+    "bytes": 20838
+   },
+   {
+    "config": "computer_security",
+    "sha256": "e326e550f94fb4be0a78acc67b3e4aaf3308181445841763d65cd2f509f39398",
+    "bytes": 25601
+   },
+   {
+    "config": "conceptual_physics",
+    "sha256": "8403c3b66a1c1a2dcd6ddee7ebacee130c6d1d3b118451f56594776ef4256357",
+    "bytes": 22743
+   },
+   {
+    "config": "econometrics",
+    "sha256": "182f00b6760d275a2c3c727de6cf520f48e528c3d0970604f2bba1d109c0c81e",
+    "bytes": 24471
+   },
+   {
+    "config": "electrical_engineering",
+    "sha256": "9dd0875fa221dc11a87515962911234700e241b0df4ee19d5a596f1966cfff03",
+    "bytes": 14836
+   },
+   {
+    "config": "elementary_mathematics",
+    "sha256": "b08992be69d9e2ddb6d4fa60a1f9e565bd9acd48699f5ddb5f94fa38c1cfbd2c",
+    "bytes": 16433
+   },
+   {
+    "config": "formal_logic",
+    "sha256": "82e7b1b7f7b52708975d5a42c577b9ffd1c1f0a27521993d71d83a837194b0fe",
+    "bytes": 22433
+   },
+   {
+    "config": "global_facts",
+    "sha256": "52e16f7ccc93fa9ef7d51425716f88bf88a3dce17d5e2217b5ac18ac3e3de7ef",
+    "bytes": 21242
+   },
+   {
+    "config": "high_school_biology",
+    "sha256": "fada7b1a8b0d0d06ecba1e9f9f9860c3dce3868c4cb3832584c12b04f43d7284",
+    "bytes": 29476
+   },
+   {
+    "config": "high_school_chemistry",
+    "sha256": "39fe0c467520ce9ff1cbda1b985eb3567090263d749349e9d609e5a81faf3472",
+    "bytes": 22941
+   },
+   {
+    "config": "high_school_computer_science",
+    "sha256": "fc6e68a4a3e3aad304fe9b33f22965c7aa4f96b8bf0d893d78de6e4984a8dcf1",
+    "bytes": 29356
+   },
+   {
+    "config": "high_school_european_history",
+    "sha256": "7e9854b9fc59ef11a0c4c34f0edee291f5c09302f0fd984db7de2f74d90002ac",
+    "bytes": 93674
+   },
+   {
+    "config": "high_school_geography",
+    "sha256": "b06374835d612de1f9bcefc74751d780a8fdd3b31ff6e7815dcc2b3cf713ca45",
+    "bytes": 19320
+   },
+   {
+    "config": "high_school_government_and_politics",
+    "sha256": "731a9c6c594303149da3137fbda77f75f9dcdbc809d2cd24ab06da0e55578a2a",
+    "bytes": 27438
+   },
+   {
+    "config": "high_school_macroeconomics",
+    "sha256": "1ff2414dd8b34d60a026d55ecb80c7282f681cb5e8b92d8932615411bf40d2eb",
+    "bytes": 24770
+   },
+   {
+    "config": "high_school_mathematics",
+    "sha256": "338faf69095250683a7f843036a9d3ce53d359fe1457ce9cd4f908d8e5c8bb4c",
+    "bytes": 17683
+   },
+   {
+    "config": "high_school_microeconomics",
+    "sha256": "6986aecd3c6868062b8a774922cad6b747f187b742d84b1f1ae0692ae74a444c",
+    "bytes": 21687
+   },
+   {
+    "config": "high_school_physics",
+    "sha256": "a3841f7ce74176c5406e0b360ffc8c0d252d1118d85bb9e88179d571538bec36",
+    "bytes": 27986
+   },
+   {
+    "config": "high_school_psychology",
+    "sha256": "0000e63efe6182863a2781b7f39052ff6fae70df89d0493500aff0ac169edcc7",
+    "bytes": 23887
+   },
+   {
+    "config": "high_school_statistics",
+    "sha256": "d3c54e7783d9b1e88e35181e07e4499fd5ffaad786fbe06957752d9b27d1d75b",
+    "bytes": 32386
+   },
+   {
+    "config": "high_school_us_history",
+    "sha256": "5d4022d20a5a715131f9572236a432c5a4ac238fddc63acab8c38068e09f2eb1",
+    "bytes": 86249
+   },
+   {
+    "config": "high_school_world_history",
+    "sha256": "c6b8e0fba28b2cc3377fbbd99a20274a26a99f2040d1a37727827662d1833be4",
+    "bytes": 94559
+   },
+   {
+    "config": "human_aging",
+    "sha256": "340a13d235bc74efec63924a8dd5c395c1b7a4439c0d6b2175581066182a4097",
+    "bytes": 20067
+   },
+   {
+    "config": "human_sexuality",
+    "sha256": "ee7fb92ad17b759e9759d2bdc74cdf0fc5ac66807fffe6eba60cff97b9641cfd",
+    "bytes": 22570
+   },
+   {
+    "config": "international_law",
+    "sha256": "94e515fe3846a0d7eba90dd61d0003188c472b4c1623d7bec9ed1984e1601f6d",
+    "bytes": 26377
+   },
+   {
+    "config": "jurisprudence",
+    "sha256": "934f738e393f56e399c3f820468576b14aab7fcd7e16b8704ded52bcbe794963",
+    "bytes": 23919
+   },
+   {
+    "config": "logical_fallacies",
+    "sha256": "ef1a39b4d2e40a2170e105dc2924ec785725a9e77e1606a911e94eb7836815b6",
+    "bytes": 22077
+   },
+   {
+    "config": "machine_learning",
+    "sha256": "f10f39e6a6b51354de7350bdabff673d82c4ced72a113b9d3cb9a2a928415308",
+    "bytes": 23864
+   },
+   {
+    "config": "management",
+    "sha256": "cd9e4b2908ddf1a1eb589d2f63de444852b9f58a3604397c1d44053ce2856bba",
+    "bytes": 17534
+   },
+   {
+    "config": "marketing",
+    "sha256": "ca9c3b9997f5b4e9b792f8f89ba58050a1ea621b80dd462400b7517b63d7ef53",
+    "bytes": 23832
+   },
+   {
+    "config": "medical_genetics",
+    "sha256": "f2e94def739f452ee4ac055c49763f7c20bc68f77d813a89776443a9d3caf7ff",
+    "bytes": 18322
+   },
+   {
+    "config": "miscellaneous",
+    "sha256": "78b23fd0707d45957374fb07a4adca80df8007e362aba5dc164a581210f5829c",
+    "bytes": 18070
+   },
+   {
+    "config": "moral_disputes",
+    "sha256": "8b75330ce9ac0bb5c9b3c182b207f14909ac1b83cd7af25df3275373497f7343",
+    "bytes": 24702
+   },
+   {
+    "config": "moral_scenarios",
+    "sha256": "27e5ddb7abcf49ce39c1cbc5e58f7f582ff99cbf64c4ef1bc71cb9ae0ba7eb44",
+    "bytes": 15657
+   },
+   {
+    "config": "nutrition",
+    "sha256": "26d8c92fc117fe5d5ca22a52c0bf41eb5be41f04f92e18586204d749d3755fa5",
+    "bytes": 23599
+   },
+   {
+    "config": "philosophy",
+    "sha256": "98371d132776c7578de57e436202aa8a46e1c4cdddaafd45b77be4830a2a4def",
+    "bytes": 22261
+   },
+   {
+    "config": "prehistory",
+    "sha256": "c71bcef91e0125d749bbc7a3f148c15388770177a64cef90bf26d4c84f72c4dc",
+    "bytes": 21449
+   },
+   {
+    "config": "professional_accounting",
+    "sha256": "25ad9ab1c1fd9908f9f9724eb5f80e87b143cfd590ddacd9452d6241da17067c",
+    "bytes": 37718
+   },
+   {
+    "config": "professional_law",
+    "sha256": "e316652d5a98e5aed3e06f1bfe749503756af53e5b1a97d0b7881325c1cd74d3",
+    "bytes": 76370
+   },
+   {
+    "config": "professional_medicine",
+    "sha256": "e9ab676b69cfa943bb94e2389158c47bd53cfbff1081ef76336b09df33a0dc07",
+    "bytes": 52795
+   },
+   {
+    "config": "professional_psychology",
+    "sha256": "0054172f48f3444f46819135a844cf28446f487a54ae4cf811656dd3fe4f203e",
+    "bytes": 31070
+   },
+   {
+    "config": "public_relations",
+    "sha256": "c513bf252e36bb0febc030576f26b797f4dba31fe15e46bc688b9a906151132d",
+    "bytes": 24306
+   },
+   {
+    "config": "security_studies",
+    "sha256": "47ded194ba7fb8fcfc0e9a2edafcc49fe654eca51ceadcca8a95e36165741e9d",
+    "bytes": 52789
+   },
+   {
+    "config": "sociology",
+    "sha256": "694551686df4484cd517add4a7001a83f791219dd37e60868679889e52b53e30",
+    "bytes": 26979
+   },
+   {
+    "config": "us_foreign_policy",
+    "sha256": "bc3c385cc0fc24f48730c90b0e176378fefba05d2c73f7dcc356e5b2969591d4",
+    "bytes": 22230
+   },
+   {
+    "config": "virology",
+    "sha256": "764b0b8f46e8c1aa20fba1dd6c93a8b383dfc0098e794fb1758ffed90b124a8b",
+    "bytes": 22224
+   },
+   {
+    "config": "world_religions",
+    "sha256": "ec1fc658f7a1965559a235912061799da11e52833634ec334e40846a1f21a4d9",
+    "bytes": 15462
+   }
+  ]
+ },
+ "join_redux": {
+  "n_redux": 5700,
+  "joined": 5257,
+  "not_found": 2,
+  "ambiguous": 441,
+  "question_equal": 5244,
+  "key_equal": 5257
+ },
+ "redux_base_profile": {
+  "n": 5257,
+  "joined": 5257,
+  "classes": {
+   "ok": 4914,
+   "error": 313,
+   "unsure": 30
+  },
+  "labels": {
+   "ok": 4914,
+   "no_correct_answer": 34,
+   "bad_question_clarity": 123,
+   "wrong_groundtruth": 95,
+   "bad_options_clarity": 23,
+   "expert": 30,
+   "multiple_correct_answers": 38
+  }
+ },
+ "languages": {
+  "en": {
+   "tally": {
+    "n_rows": 14042,
+    "reference": true
+   }
+  },
+  "am": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 7,
+    "compared": 14035,
+    "key_mismatch_all": 0,
+    "key_equal": 14035,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1514,
+     "letter_same|unresolved|answer_unknown": 12521
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ar": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 4,
+    "compared": 14038,
+    "key_mismatch_all": 0,
+    "key_equal": 14038,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1218,
+     "letter_same|unresolved|answer_unknown": 12820
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "bn": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1600,
+     "letter_same|unresolved|answer_unknown": 12442
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "cs": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1670,
+     "letter_same|unresolved|answer_unknown": 12372
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "de": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 2,
+    "compared": 14040,
+    "key_mismatch_all": 5,
+    "key_equal": 14035,
+    "key_mismatch": 5,
+    "cells": {
+     "letter_same|same_order|answer_same": 1584,
+     "letter_same|unresolved|answer_unknown": 12451,
+     "letter_differs|unresolved|answer_unknown": 5
+    },
+    "kinds": {
+     "unresolved": 5
+    }
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   },
+   "by_subject": {
+    "human_aging": 3,
+    "jurisprudence": 2
+   },
+   "by_kind_subject": {
+    "unresolved|human_aging": 3,
+    "unresolved|jurisprudence": 2
+   },
+   "cs_ca_labels": {
+    "-": 5
+   },
+   "annotated_disagreements": {
+    "not_annotated": 5
+   },
+   "annotated_all_rows": {
+    "annotated": 2850,
+    "not_annotated": 11192
+   },
+   "redux_profile": {
+    "n": 5,
+    "joined": 3,
+    "classes": {
+     "ok": 3
+    },
+    "labels": {
+     "ok": 3
+    }
+   },
+   "correction_disagreements": {
+    "n": 0,
+    "equals_correction": 0,
+    "equals_published": 0,
+    "other": 0
+   },
+   "pick_longest_moved_keys": {
+    "n": 0,
+    "translated_key": null,
+    "english_key": null
+   }
+  },
+  "el": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1561,
+     "letter_same|unresolved|answer_unknown": 12481
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "es": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 2,
+    "compared": 14040,
+    "key_mismatch_all": 0,
+    "key_equal": 14040,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1537,
+     "letter_same|unresolved|answer_unknown": 12503
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "fa": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1371,
+     "letter_same|unresolved|answer_unknown": 12671
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "fil": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 2174,
+     "letter_same|unresolved|answer_unknown": 11868
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "fr": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1403,
+     "letter_same|unresolved|answer_unknown": 12639
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ha": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1926,
+     "letter_same|unresolved|answer_unknown": 12116
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "he": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1543,
+     "letter_same|unresolved|answer_unknown": 12499
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "hi": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 7,
+    "compared": 14035,
+    "key_mismatch_all": 0,
+    "key_equal": 14035,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1564,
+     "letter_same|unresolved|answer_unknown": 12471
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "id": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1925,
+     "letter_same|unresolved|answer_unknown": 12117
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ig": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 1,
+    "compared": 14041,
+    "key_mismatch_all": 0,
+    "key_equal": 14041,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1970,
+     "letter_same|unresolved|answer_unknown": 12071
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "it": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 3,
+    "key_equal": 14039,
+    "key_mismatch": 3,
+    "cells": {
+     "letter_same|same_order|answer_same": 1812,
+     "letter_same|unresolved|answer_unknown": 12227,
+     "letter_differs|unresolved|answer_unknown": 3
+    },
+    "kinds": {
+     "unresolved": 3
+    }
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   },
+   "by_subject": {
+    "jurisprudence": 2,
+    "public_relations": 1
+   },
+   "by_kind_subject": {
+    "unresolved|jurisprudence": 2,
+    "unresolved|public_relations": 1
+   },
+   "cs_ca_labels": {
+    "-": 1,
+    "CA": 2
+   },
+   "annotated_disagreements": {
+    "annotated": 2,
+    "not_annotated": 1
+   },
+   "annotated_all_rows": {
+    "annotated": 2850,
+    "not_annotated": 11192
+   },
+   "redux_profile": {
+    "n": 3,
+    "joined": 2,
+    "classes": {
+     "ok": 1,
+     "error": 1
+    },
+    "labels": {
+     "ok": 1,
+     "multiple_correct_answers": 1
+    }
+   },
+   "correction_disagreements": {
+    "n": 0,
+    "equals_correction": 0,
+    "equals_published": 0,
+    "other": 0
+   },
+   "pick_longest_moved_keys": {
+    "n": 0,
+    "translated_key": null,
+    "english_key": null
+   }
+  },
+  "ja": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 1,
+    "compared": 14041,
+    "key_mismatch_all": 1,
+    "key_equal": 14040,
+    "key_mismatch": 1,
+    "cells": {
+     "letter_same|same_order|answer_same": 1585,
+     "letter_same|unresolved|answer_unknown": 12455,
+     "letter_differs|unresolved|answer_unknown": 1
+    },
+    "kinds": {
+     "unresolved": 1
+    }
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   },
+   "by_subject": {
+    "professional_law": 1
+   },
+   "by_kind_subject": {
+    "unresolved|professional_law": 1
+   },
+   "cs_ca_labels": {
+    "-": 1
+   },
+   "annotated_disagreements": {
+    "not_annotated": 1
+   },
+   "annotated_all_rows": {
+    "annotated": 2850,
+    "not_annotated": 11192
+   },
+   "redux_profile": {
+    "n": 1,
+    "joined": 0,
+    "classes": {},
+    "labels": {}
+   },
+   "correction_disagreements": {
+    "n": 0,
+    "equals_correction": 0,
+    "equals_published": 0,
+    "other": 0
+   },
+   "pick_longest_moved_keys": {
+    "n": 0,
+    "translated_key": null,
+    "english_key": null
+   }
+  },
+  "ko": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 116,
+    "key_equal": 13926,
+    "key_mismatch": 116,
+    "cells": {
+     "letter_same|same_order|answer_same": 1524,
+     "letter_same|unresolved|answer_unknown": 12402,
+     "letter_differs|unresolved|answer_unknown": 116
+    },
+    "kinds": {
+     "unresolved": 116
+    }
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   },
+   "by_subject": {
+    "high_school_world_history": 116
+   },
+   "by_kind_subject": {
+    "unresolved|high_school_world_history": 116
+   },
+   "cs_ca_labels": {
+    "-": 90,
+    "CA": 8,
+    "CS": 18
+   },
+   "annotated_disagreements": {
+    "annotated": 26,
+    "not_annotated": 90
+   },
+   "annotated_all_rows": {
+    "annotated": 2850,
+    "not_annotated": 11192
+   },
+   "redux_profile": {
+    "n": 116,
+    "joined": 51,
+    "classes": {
+     "ok": 51
+    },
+    "labels": {
+     "ok": 51
+    }
+   },
+   "correction_disagreements": {
+    "n": 0,
+    "equals_correction": 0,
+    "equals_published": 0,
+    "other": 0
+   },
+   "pick_longest_moved_keys": {
+    "n": 0,
+    "translated_key": null,
+    "english_key": null
+   }
+  },
+  "ky": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1502,
+     "letter_same|unresolved|answer_unknown": 12539,
+     "letter_same|reordered|answer_different": 1
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "lt": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1515,
+     "letter_same|unresolved|answer_unknown": 12527
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "mg": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1936,
+     "letter_same|unresolved|answer_unknown": 12106
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ms": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1856,
+     "letter_same|unresolved|answer_unknown": 12186
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ne": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1565,
+     "letter_same|unresolved|answer_unknown": 12477
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "nl": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1685,
+     "letter_same|unresolved|answer_unknown": 12357
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ny": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 2000,
+     "letter_same|unresolved|answer_unknown": 12042
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "pl": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1558,
+     "letter_same|unresolved|answer_unknown": 12484
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "pt": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1389,
+     "letter_same|unresolved|answer_unknown": 12653
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ro": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1793,
+     "letter_same|unresolved|answer_unknown": 12249
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "ru": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 1,
+    "compared": 14041,
+    "key_mismatch_all": 0,
+    "key_equal": 14041,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1586,
+     "letter_same|unresolved|answer_unknown": 12455
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "si": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 3,
+    "compared": 14039,
+    "key_mismatch_all": 0,
+    "key_equal": 14039,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1569,
+     "letter_same|unresolved|answer_unknown": 12470
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "sn": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 2345,
+     "letter_same|unresolved|answer_unknown": 11697
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "so": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1925,
+     "letter_same|unresolved|answer_unknown": 12117
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "sr": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1465,
+     "letter_same|unresolved|answer_unknown": 12577
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "sv": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1813,
+     "letter_same|unresolved|answer_unknown": 12229
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "sw": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 2080,
+     "letter_same|unresolved|answer_unknown": 11962
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "te": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 2,
+    "compared": 14040,
+    "key_mismatch_all": 0,
+    "key_equal": 14040,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1556,
+     "letter_same|unresolved|answer_unknown": 12484
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "tr": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 0,
+    "key_equal": 14042,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1677,
+     "letter_same|unresolved|answer_unknown": 12365
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "uk": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 1,
+    "compared": 14041,
+    "key_mismatch_all": 0,
+    "key_equal": 14041,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1518,
+     "letter_same|unresolved|answer_unknown": 12523
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "vi": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 6,
+    "compared": 14036,
+    "key_mismatch_all": 0,
+    "key_equal": 14036,
+    "key_mismatch": 0,
+    "cells": {
+     "letter_same|same_order|answer_same": 1778,
+     "letter_same|unresolved|answer_unknown": 12258
+    },
+    "kinds": {}
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   }
+  },
+  "yo": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 0,
+    "compared": 14042,
+    "key_mismatch_all": 2,
+    "key_equal": 14040,
+    "key_mismatch": 2,
+    "cells": {
+     "letter_same|same_order|answer_same": 2157,
+     "letter_same|unresolved|answer_unknown": 11883,
+     "letter_differs|unresolved|answer_unknown": 2
+    },
+    "kinds": {
+     "unresolved": 2
+    }
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   },
+   "by_subject": {
+    "business_ethics": 1,
+    "human_aging": 1
+   },
+   "by_kind_subject": {
+    "unresolved|business_ethics": 1,
+    "unresolved|human_aging": 1
+   },
+   "cs_ca_labels": {
+    "-": 2
+   },
+   "annotated_disagreements": {
+    "not_annotated": 2
+   },
+   "annotated_all_rows": {
+    "annotated": 2850,
+    "not_annotated": 11192
+   },
+   "redux_profile": {
+    "n": 2,
+    "joined": 1,
+    "classes": {
+     "ok": 1
+    },
+    "labels": {
+     "ok": 1
+    }
+   },
+   "correction_disagreements": {
+    "n": 0,
+    "equals_correction": 0,
+    "equals_published": 0,
+    "other": 0
+   },
+   "pick_longest_moved_keys": {
+    "n": 0,
+    "translated_key": null,
+    "english_key": null
+   }
+  },
+  "zh": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "invalid": 2,
+    "compared": 14040,
+    "key_mismatch_all": 176,
+    "key_equal": 13864,
+    "key_mismatch": 176,
+    "cells": {
+     "letter_same|same_order|answer_same": 1584,
+     "letter_same|unresolved|answer_unknown": 12280,
+     "letter_differs|unresolved|answer_unknown": 176
+    },
+    "kinds": {
+     "unresolved": 176
+    }
+   },
+   "correction_all_miskeyed": {
+    "n": 52,
+    "equals_correction": 0,
+    "equals_published": 52,
+    "other": 0
+   },
+   "by_subject": {
+    "high_school_world_history": 176
+   },
+   "by_kind_subject": {
+    "unresolved|high_school_world_history": 176
+   },
+   "cs_ca_labels": {
+    "-": 139,
+    "CA": 11,
+    "CS": 26
+   },
+   "annotated_disagreements": {
+    "annotated": 37,
+    "not_annotated": 139
+   },
+   "annotated_all_rows": {
+    "annotated": 2850,
+    "not_annotated": 11192
+   },
+   "redux_profile": {
+    "n": 176,
+    "joined": 71,
+    "classes": {
+     "ok": 71
+    },
+    "labels": {
+     "ok": 71
+    }
+   },
+   "correction_disagreements": {
+    "n": 0,
+    "equals_correction": 0,
+    "equals_published": 0,
+    "other": 0
+   },
+   "pick_longest_moved_keys": {
+    "n": 0,
+    "translated_key": null,
+    "english_key": null
+   }
+  }
+ },
+ "pairwise_overlap": {
+  "de|it": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "de|ja": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "de|ko": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "de|yo": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "de|zh": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "it|ja": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "it|ko": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "it|yo": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "it|zh": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "ja|ko": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "ja|yo": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "ja|zh": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "ko|yo": {
+   "shared": 0,
+   "same_key": 0
+  },
+  "ko|zh": {
+   "shared": 103,
+   "same_key": 70
+  },
+  "yo|zh": {
+   "shared": 0,
+   "same_key": 0
+  }
+ },
+ "parquet_shards": {
+  "en": [
+   {
+    "sha256": "5baec81ba97243728cc9557b2cba2f03aaeedf8232473db9f20cf995c6b0a1a9",
+    "bytes": 3910925
+   }
+  ],
+  "am": [
+   {
+    "sha256": "ccef9ac613fc1dad87da6c6f5fd06cb46f80d8a907835527b84b52c242383c68",
+    "bytes": 5075206
+   }
+  ],
+  "ar": [
+   {
+    "sha256": "e969c186f001c7548d54b420b2ddf7ae1d4abfce5720680eadcc4e8a48d0f61b",
+    "bytes": 4854848
+   }
+  ],
+  "bn": [
+   {
+    "sha256": "49b6d5ee0df9b5a706f7e104469ff787440b12011de330059b3f2c0100c50285",
+    "bytes": 6200091
+   }
+  ],
+  "cs": [
+   {
+    "sha256": "a41725cff0f27fe136f6870778e62d90de2b8966bc96bbe5328f88f3e5d1e67c",
+    "bytes": 4271546
+   }
+  ],
+  "de": [
+   {
+    "sha256": "b58a0d5994e756dabef96eb804693be153953052276d3e0b7d57bb2f2798854a",
+    "bytes": 4543635
+   }
+  ],
+  "el": [
+   {
+    "sha256": "942d3e75bf1f57680f4ca36bfd49f8526568e0dceded8aaeb17b02a9cb444542",
+    "bytes": 6080292
+   }
+  ],
+  "es": [
+   {
+    "sha256": "efbcc4ce1cf14f2f43f7b05be49a9a1153b2893c59d2f660c3bb58679801dccb",
+    "bytes": 4327396
+   }
+  ],
+  "fa": [
+   {
+    "sha256": "f55882f742aeab60b88693f2199c244bf8ab42632202b6283adebebf60531686",
+    "bytes": 4730118
+   }
+  ],
+  "fil": [
+   {
+    "sha256": "255a9a594af8b58c82da995ad4e380797640642cb7953019a57230d37aec7962",
+    "bytes": 4234358
+   }
+  ],
+  "fr": [
+   {
+    "sha256": "e602201459c29c5dbacf9a3d80cfe2524496f8e0c0b51b6326ef4205bad3405e",
+    "bytes": 4550854
+   }
+  ],
+  "ha": [
+   {
+    "sha256": "b17d14b2fe9bf848935145ad49db494850930f23627880ce14d0f88e09e84766",
+    "bytes": 3789111
+   }
+  ],
+  "he": [
+   {
+    "sha256": "e615cdc1abe5b7951c9c1d38bac93ef39e8f1c3e4ceeb90da072a2384f7d9e7f",
+    "bytes": 4361466
+   }
+  ],
+  "hi": [
+   {
+    "sha256": "f0d82c7650ef47968a22058d9a83d22834d12c4f28e23738594d903ab52bcee5",
+    "bytes": 6140551
+   }
+  ],
+  "id": [
+   {
+    "sha256": "d3ff9bca8d3b56ef60d9c4a34b3a4b76f3905f8b786cda5cb966136547722271",
+    "bytes": 3851684
+   }
+  ],
+  "ig": [
+   {
+    "sha256": "21e5352d4a823b033d217be65d698d6552bf4dd3dfb53140c8cc29ebb80f803b",
+    "bytes": 3778871
+   }
+  ],
+  "it": [
+   {
+    "sha256": "ddc373d35da750cdd629625e2d9e133cbd510cbf3518f82c85cfb8f7aac27478",
+    "bytes": 4388049
+   }
+  ],
+  "ja": [
+   {
+    "sha256": "b56ad153180d4368757891796dfad0e1a76ebeb3f7b2500b1ac63789d4e4dfe7",
+    "bytes": 4363616
+   }
+  ],
+  "ko": [
+   {
+    "sha256": "aa896380f066e8e905604bbda8c2c57818a22a7d02ab99a48edc1ad078affb27",
+    "bytes": 4273255
+   }
+  ],
+  "ky": [
+   {
+    "sha256": "bcbf3a5fc0ed9cc6cf6ced77d2950cb7f2ef21246ffdee7d40ae9183ae36d450",
+    "bytes": 5514897
+   }
+  ],
+  "lt": [
+   {
+    "sha256": "1d0cc1459fc28294cf69a3e4c7a305f3a4802425cea472b65d465cc9028355a6",
+    "bytes": 4160608
+   }
+  ],
+  "mg": [
+   {
+    "sha256": "cb557b08bf9a62990bdf382597a3b42625299287e967fd09feb9d543dafa072d",
+    "bytes": 3960785
+   }
+  ],
+  "ms": [
+   {
+    "sha256": "9dd7ceb35bfba72ef2944bcb20711863e058ebbff7b2f7234bd10957b3f03b8f",
+    "bytes": 3847371
+   }
+  ],
+  "ne": [
+   {
+    "sha256": "8591e7f6b0e436054cbe1b2861402a2b226d455e29061f8c2c73cad457f8b03f",
+    "bytes": 5885311
+   }
+  ],
+  "nl": [
+   {
+    "sha256": "d177e050c31cf86c169bcf434aa6caf90d7e25ede9157ab1b08b36d9f7621d1f",
+    "bytes": 4235027
+   }
+  ],
+  "ny": [
+   {
+    "sha256": "8826cd53bb4d93698e662652fb51a3b0cd533d9486cdf697026488cf4bfdbac0",
+    "bytes": 3867093
+   }
+  ],
+  "pl": [
+   {
+    "sha256": "b7d3670fc9f0dc98661fd817c33b26b2a5a38010417fc4509c7e7d199253b3a9",
+    "bytes": 4438005
+   }
+  ],
+  "pt": [
+   {
+    "sha256": "15dda0dd7dbd8eebbe66b6f8ce6087c1f0d29b18e48b7e3b225b6dba375c1048",
+    "bytes": 4211041
+   }
+  ],
+  "ro": [
+   {
+    "sha256": "25f62205ac578a041ad013ef143bcd22fea7e6b1f0b51dd743c77a48bb20ffe8",
+    "bytes": 4337643
+   }
+  ],
+  "ru": [
+   {
+    "sha256": "9037e1aaca6aed1856fe1e427e5b3d4e3bb6563861b760a3360ef077df301bd6",
+    "bytes": 5884449
+   }
+  ],
+  "si": [
+   {
+    "sha256": "7e6e2f17675e74843baaf5f5147f4683afe7a9ba089d651e45568c10acd96e40",
+    "bytes": 6329471
+   }
+  ],
+  "sn": [
+   {
+    "sha256": "de9ad77687616ec7fdb66abe15ddc7e3efe6d849242bae4d30e6ae5d2c0b1b28",
+    "bytes": 3936373
+   }
+  ],
+  "so": [
+   {
+    "sha256": "7f32af4d583f71432b00ef9f02dd6a5da064092c805aa56afedb6dfe0f6fae61",
+    "bytes": 4305289
+   }
+  ],
+  "sr": [
+   {
+    "sha256": "0bd5411932421031909994f3805bb9496e40fc13d4327f92387a23b4ed049af9",
+    "bytes": 5317727
+   }
+  ],
+  "sv": [
+   {
+    "sha256": "8eb44757946f69d4d5e6b6db87c7d7b9c67f404bb5185c17eb562b74beaf1624",
+    "bytes": 4044989
+   }
+  ],
+  "sw": [
+   {
+    "sha256": "de7bfff464f5bbc09a04a31acc4a5a89f66efdb61f6f337abd6081156c4572b5",
+    "bytes": 3922823
+   }
+  ],
+  "te": [
+   {
+    "sha256": "6d38ab096e31396c5a77483f67df881df0df702a17f708dc75adce1c9c40c5c8",
+    "bytes": 6250157
+   }
+  ],
+  "tr": [
+   {
+    "sha256": "b1db36634296b99dea6138c4a6f930e95e968df91549a82378a8d320d6df2def",
+    "bytes": 4128502
+   }
+  ],
+  "uk": [
+   {
+    "sha256": "fc6ebf99e1a6486619af54276b2e2d4dba3fef446b5391bf38e6263369543653",
+    "bytes": 5614319
+   }
+  ],
+  "vi": [
+   {
+    "sha256": "5cd0840972e32c99d86cf287c7f9b1a8f594dd24fc2800169cce1ec0724abfba",
+    "bytes": 4435419
+   }
+  ],
+  "yo": [
+   {
+    "sha256": "eed6dede392f2fd44c00fe21666145029b309d3c2ebc41129b5d129b7b4f2f46",
+    "bytes": 4608095
+   }
+  ],
+  "zh": [
+   {
+    "sha256": "e1ba0c287b650043b8686fa5c506d1f2718b098a7f88f724ade55a76f0062ae7",
+    "bytes": 3618771
+   }
+  ]
+ },
+ "predictions": {
+  "P1_structural": true,
+  "P2_agreeing_rows_keep_option_order": true,
+  "P2_share": 0.9999855770617591,
+  "P2_resolvable": 69334,
+  "P3_disagreements_are_moved_keys": false,
+  "P3_vacuous": true,
+  "P3_kinds_zh_ko": {
+   "unresolved": 292
+  },
+  "P4_zh_ko_share_disagreements": false,
+  "P4_overlap": {
+   "shared": 103,
+   "same_key": 70
+  },
+  "P5_disagreements_enriched_for_expert_errors": false,
+  "P5_vacuous": false,
+  "P5_profile_zh_ko_union": {
+   "n": 189,
+   "joined": 77,
+   "classes": {
+    "ok": 77
+   },
+   "labels": {
+    "ok": 77
+   }
+  },
+  "P5_error_share_disagreements": 0.0,
+  "P5_error_share_base": 0.059539661403842495,
+  "P6_disagreeing_key_equals_correction": false,
+  "P6_vacuous": true,
+  "P6_counts": {
+   "n": 0,
+   "equals_correction": 0,
+   "equals_published": 0,
+   "other": 0
+  },
+  "P7_redux_join": false,
+  "P7_share": 0.9222807017543859
+ },
+ "note": "P1 structural (42 x 14,042; disagreement counts = audit 70; Redux = audit 69). P2 control: >= 99% of resolvable key-agreeing rows keep option order. P3 HEADLINE: > half of resolvable zh+ko disagreements are a moved key with options in place. P4 zh and ko share >= 10 disagreements and give the same key on >= 80% of them. P5 zh/ko disagreements joined to MMLU-Redux carry an error label > 2x as often as all joined rows. P6 on letter-corrected Redux miskeys the zh/ko disagreeing key equals the correction in > half. P7 >= 95% of Redux rows join. Observational: unresolved rows (options that need translation to match) are counted, not guessed."
+}

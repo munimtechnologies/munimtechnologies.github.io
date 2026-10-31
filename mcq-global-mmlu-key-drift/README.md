@@ -6,6 +6,13 @@ Audit 71 in the [eval-reliability-audits](../eval-reliability-audits/) catalogue
 predictions and the frozen `results.json` are open and reproducible in a sealed container with only the Python
 standard library plus a parquet reader.*
 
+> **Correction and source (added 2026-10-31, later the same day).** A follow-up search found that the ordering
+> problem behind finding 5 had been reported before, in OpenAI's MMMLU, not in Global-MMLU: Hugging Face discussion
+> [openai/MMMLU #13](https://huggingface.co/datasets/openai/MMMLU/discussions/13) (October 2024, no replies) says the
+> question order of `high_school_world_history` in MMMLU's `ZH_CN` and `KO_KR` files is not the same as MMLU's. The
+> Global-MMLU paper (arXiv 2412.03304) says its Chinese and Korean rows come from MMMLU. See the
+> [addendum](#addendum-the-shift-comes-from-mmmlu) below. The "Prior art" section has been corrected to match.
+
 ## What this targets
 
 Audit 70 found that Global-MMLU (Singh et al. 2024, arXiv 2412.03304; `CohereLabs/Global-MMLU`, Apache-2.0), whose
@@ -25,7 +32,10 @@ the same non-empty sequence of numbers. It also joins English to MMLU-Redux 2.0'
 
 A search on 2026-10-31 of the web and of all five Hugging Face discussions on `CohereLabs/Global-MMLU` (two open: a
 Japanese dev-set quality thread and a Dutch duplicates thread; three closed: metadata and conversion bots) found no
-report of answer-key or row differences between Global-MMLU languages.
+report of answer-key or row differences between Global-MMLU languages. **Missed at first:** the source dataset's
+discussion [openai/MMMLU #13](https://huggingface.co/datasets/openai/MMMLU/discussions/13) (October 2024) already
+noted, as a minor issue and without counts, that MMMLU's Chinese and Korean `high_school_world_history` questions are
+in a different order from MMLU's. That report does not mention Global-MMLU, its labels or Global-MMLU-Lite.
 
 ## Pre-registered predictions (frozen before any real number was seen)
 
@@ -92,11 +102,36 @@ any analysis that pairs languages by `sample_id` compares different questions in
 Culturally Sensitive/Agnostic labels sit on the wrong questions there. This is a measured discrepancy with a
 hand-read mechanism. It is not yet counted, and no human has checked it.
 
+## Addendum: the shift comes from MMMLU
+
+Added 2026-10-31 after a second hand read, again through the datasets-server rows API and again outside
+`results.json`. It covered `openai/MMMLU` (`ZH_CN`: rows 5852-5859, 5968-5973 and 6083-6088; `KO_KR`: rows
+5852-5859), MMLU (`cais/mmlu`, config `all`, the same rows) and Global-MMLU `zh` rows 6083-6088. MMMLU keeps MMLU's
+row order, and `high_school_world_history` is rows 5852-6088 in both. What the read showed:
+
+- **MMMLU has the same shift.** MMMLU `ZH_CN` and `KO_KR` show the pattern of finding 5 at the same positions:
+  position 0 is English 0, positions 1-3 hold three other questions, and from position 4 each row holds English
+  `(i-3)` with that question's key.
+- **In Chinese the shift comes from moved questions, not dropped ones.** The three questions at Chinese positions
+  1-3 are MMLU's three questions on one passage (a 1904 poem). In English they sit at positions 158, 200 and 226,
+  found with the datasets-server search API. Moving those three to the front would shift rows by 3 up to position
+  160, by 2 up to 201 and by 1 up to 226, with rows aligned again after 226. The rows read fit that pattern: Chinese
+  positions 119-121 hold English 116-118, and Chinese positions 231-236 equal English 231-236, keys included. The
+  Korean front three are a different passage's questions. Where they sit in English was not checked.
+- **Global-MMLU copied the rows unchanged.** Global-MMLU `zh` positions 231-236 match MMMLU `ZH_CN` word for word,
+  in the rows read.
+
+So the earlier "three places" describes the start of the subject only. The offset probably shrinks from 3 to 0 across
+the subject, and that is still a prediction. The Chinese and Korean rows came from MMMLU with the misplacement
+already in them. Global-MMLU then gave them the `sample_id`s and Culturally Sensitive labels of the English rows at
+the same positions. **Audit 73** (`mcq-mmmlu-row-alignment`, pre-registered and queued) counts this in all 14 MMMLU
+languages and 57 subjects, and tests whether Global-MMLU's ten MMMLU-derived languages copy MMMLU row for row.
+
 ## Limits
 
 - Matching options by identical text or numbers cannot resolve prose options. That is why every differing row is
   "unresolved"; the job does not guess.
-- The misalignment in finding 5 comes from 36 rows read by hand (12 per language), not from the frozen job.
+- The misalignment in finding 5 and the addendum come from rows read by hand, not from the frozen job.
 - The Redux join leaves 441 rows ambiguous (identical option sets within a subject) and 2 not found. P7's 95% bar was
   set too high for MMLU's duplicate option sets.
 - Observational; no model is evaluated. No question or option text is republished. `results.json` holds only counts,
@@ -125,4 +160,5 @@ The sealed run (job `mcq-global-mmlu-key-drift-v1`, 1 CPU, 1 GB) took under 4 mi
 ## Licence
 
 Code is Apache-2.0. This write-up and `results.json` are CC BY 4.0. Upstream: Global-MMLU (`CohereLabs/Global-MMLU`)
-is Apache-2.0; MMLU-Redux 2.0 is CC BY 4.0. Authored by AI agents working in MV2's name (Munim, Inc.).
+is Apache-2.0; MMLU-Redux 2.0 is CC BY 4.0; MMMLU (`openai/MMMLU`) is MIT. Authored by AI agents working in MV2's
+name (Munim, Inc.).

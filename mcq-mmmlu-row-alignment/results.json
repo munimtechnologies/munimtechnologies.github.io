@@ -1,0 +1,1710 @@
+{
+ "audit": 73,
+ "slug": "mcq-mmmlu-row-alignment",
+ "dataset": "MMMLU (openai/MMMLU, MIT; 14 language configs, split test), MMLU (cais/mmlu, config all, split test, MIT) and Global-MMLU (CohereLabs/Global-MMLU, Apache-2.0; its ten MMMLU-derived languages), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. MMMLU rows take MMLU's positional ids 'subject/test/k'; rows are matched to MMLU only by digit runs (3+ digits) in question and options, order-preserving within a fingerprint. Only aggregates are written: no question or option text.",
+ "fixture_target_met": true,
+ "english": {
+  "n": 14042,
+  "subjects": 57,
+  "focus_start": 5852,
+  "focus_n": 237,
+  "with_fingerprint": 3372,
+  "focus_with_fingerprint": 205
+ },
+ "mmmlu": {
+  "AR_XY": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10780,
+    "count_differs": 590,
+    "mapped": 2672,
+    "aligned": 2669,
+    "misaligned": 3,
+    "same_id_fp_both": 3261,
+    "same_id_fp_agree": 2895,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 3,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1091,
+     "count_differs": 279,
+     "mapped": 164,
+     "aligned": 161,
+     "misaligned": 3,
+     "same_id_fp_both": 442,
+     "same_id_fp_agree": 318,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 3,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "46": 1,
+      "-68": 1,
+      "-93": 1
+     }
+    }
+   },
+   "flagged": [],
+   "fp_agreement_pooled": 0.8877644894204232,
+   "key_agreement_by_position": 1.0
+  },
+  "BN_BD": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10671,
+    "count_differs": 221,
+    "mapped": 3150,
+    "aligned": 3150,
+    "misaligned": 0,
+    "same_id_fp_both": 3369,
+    "same_id_fp_agree": 3326,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {},
+   "flagged": [],
+   "fp_agreement_pooled": 0.9872365687147522,
+   "key_agreement_by_position": 1.0
+  },
+  "DE_DE": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10684,
+    "count_differs": 1291,
+    "mapped": 2067,
+    "aligned": 2067,
+    "misaligned": 0,
+    "same_id_fp_both": 3352,
+    "same_id_fp_agree": 3183,
+    "key_differs_same_id": 5,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 5,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "human_aging": {
+     "n": 223,
+     "no_fingerprint": 220,
+     "count_differs": 0,
+     "mapped": 3,
+     "aligned": 3,
+     "misaligned": 0,
+     "same_id_fp_both": 3,
+     "same_id_fp_agree": 3,
+     "key_differs_same_id": 3,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 3,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "jurisprudence": {
+     "n": 108,
+     "no_fingerprint": 105,
+     "count_differs": 0,
+     "mapped": 3,
+     "aligned": 3,
+     "misaligned": 0,
+     "same_id_fp_both": 3,
+     "same_id_fp_agree": 3,
+     "key_differs_same_id": 2,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 2,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    }
+   },
+   "flagged": [],
+   "fp_agreement_pooled": 0.9495823389021479,
+   "key_agreement_by_position": 0.9996439253667568
+  },
+  "ES_LA": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10658,
+    "count_differs": 647,
+    "mapped": 2737,
+    "aligned": 2737,
+    "misaligned": 0,
+    "same_id_fp_both": 3362,
+    "same_id_fp_agree": 2962,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {},
+   "flagged": [],
+   "fp_agreement_pooled": 0.8810232004759072,
+   "key_agreement_by_position": 1.0
+  },
+  "FR_FR": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10694,
+    "count_differs": 1507,
+    "mapped": 1841,
+    "aligned": 1836,
+    "misaligned": 5,
+    "same_id_fp_both": 3335,
+    "same_id_fp_agree": 3063,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 5,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "high_school_statistics": {
+     "n": 216,
+     "no_fingerprint": 145,
+     "count_differs": 15,
+     "mapped": 56,
+     "aligned": 55,
+     "misaligned": 1,
+     "same_id_fp_both": 71,
+     "same_id_fp_agree": 57,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-43": 1
+     }
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1071,
+     "count_differs": 268,
+     "mapped": 195,
+     "aligned": 191,
+     "misaligned": 4,
+     "same_id_fp_both": 457,
+     "same_id_fp_agree": 431,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 4,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "70": 1,
+      "243": 1,
+      "242": 1,
+      "276": 1
+     }
+    }
+   },
+   "flagged": [],
+   "fp_agreement_pooled": 0.9184407796101949,
+   "key_agreement_by_position": 1.0
+  },
+  "HI_IN": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10670,
+    "count_differs": 136,
+    "mapped": 3236,
+    "aligned": 3236,
+    "misaligned": 0,
+    "same_id_fp_both": 3370,
+    "same_id_fp_agree": 3362,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {},
+   "flagged": [],
+   "fp_agreement_pooled": 0.997626112759644,
+   "key_agreement_by_position": 1.0
+  },
+  "ID_ID": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10667,
+    "count_differs": 1256,
+    "mapped": 2119,
+    "aligned": 2119,
+    "misaligned": 0,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3242,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {},
+   "flagged": [],
+   "fp_agreement_pooled": 0.9617324236131711,
+   "key_agreement_by_position": 1.0
+  },
+  "IT_IT": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10711,
+    "count_differs": 439,
+    "mapped": 2892,
+    "aligned": 2874,
+    "misaligned": 18,
+    "same_id_fp_both": 3324,
+    "same_id_fp_agree": 3120,
+    "key_differs_same_id": 3,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 3,
+    "mis_key_equals_content": 7,
+    "mis_key_equals_id": 18,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "jurisprudence": {
+     "n": 108,
+     "no_fingerprint": 106,
+     "count_differs": 1,
+     "mapped": 1,
+     "aligned": 1,
+     "misaligned": 0,
+     "same_id_fp_both": 2,
+     "same_id_fp_agree": 2,
+     "key_differs_same_id": 2,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 2,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1070,
+     "count_differs": 162,
+     "mapped": 302,
+     "aligned": 284,
+     "misaligned": 18,
+     "same_id_fp_both": 462,
+     "same_id_fp_agree": 445,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 7,
+     "mis_key_equals_id": 18,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "14": 1,
+      "10": 1,
+      "101": 1,
+      "59": 1,
+      "35": 1,
+      "45": 1,
+      "16": 1,
+      "51": 1,
+      "4": 1,
+      "27": 1,
+      "169": 1,
+      "73": 1,
+      "139": 1,
+      "12": 1,
+      "2": 1,
+      "115": 1,
+      "93": 1,
+      "147": 1
+     }
+    },
+    "public_relations": {
+     "n": 110,
+     "no_fingerprint": 90,
+     "count_differs": 0,
+     "mapped": 20,
+     "aligned": 20,
+     "misaligned": 0,
+     "same_id_fp_both": 20,
+     "same_id_fp_agree": 20,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    }
+   },
+   "flagged": [
+    "professional_law"
+   ],
+   "fp_agreement_pooled": 0.9386281588447654,
+   "key_agreement_by_position": 0.9997863552200541
+  },
+  "JA_JP": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10690,
+    "count_differs": 435,
+    "mapped": 2917,
+    "aligned": 2456,
+    "misaligned": 461,
+    "same_id_fp_both": 3324,
+    "same_id_fp_agree": 3105,
+    "key_differs_same_id": 1,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 1,
+    "mis_key_equals_content": 142,
+    "mis_key_equals_id": 461,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "moral_scenarios": {
+     "n": 895,
+     "no_fingerprint": 0,
+     "count_differs": 3,
+     "mapped": 892,
+     "aligned": 539,
+     "misaligned": 353,
+     "same_id_fp_both": 895,
+     "same_id_fp_agree": 890,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 110,
+     "mis_key_equals_id": 353,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-1": 208,
+      "1": 145
+     }
+    },
+    "prehistory": {
+     "n": 324,
+     "no_fingerprint": 264,
+     "count_differs": 41,
+     "mapped": 19,
+     "aligned": 17,
+     "misaligned": 2,
+     "same_id_fp_both": 53,
+     "same_id_fp_agree": 28,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 2,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "65": 1,
+      "205": 1
+     }
+    },
+    "professional_accounting": {
+     "n": 282,
+     "no_fingerprint": 169,
+     "count_differs": 71,
+     "mapped": 42,
+     "aligned": 41,
+     "misaligned": 1,
+     "same_id_fp_both": 111,
+     "same_id_fp_agree": 56,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-3": 1
+     }
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1088,
+     "count_differs": 145,
+     "mapped": 301,
+     "aligned": 196,
+     "misaligned": 105,
+     "same_id_fp_both": 441,
+     "same_id_fp_agree": 414,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 30,
+     "mis_key_equals_id": 105,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-6": 3,
+      "-9": 5,
+      "-20": 2,
+      "-81": 1,
+      "-83": 1,
+      "-102": 1,
+      "-38": 1,
+      "-30": 3,
+      "-28": 1,
+      "-44": 1,
+      "-26": 4,
+      "-36": 2,
+      "-14": 3,
+      "-39": 1,
+      "-21": 2,
+      "-23": 2,
+      "-60": 1,
+      "-58": 1,
+      "-35": 1,
+      "-17": 3,
+      "-34": 1,
+      "-40": 1,
+      "-13": 1,
+      "-31": 2,
+      "-4": 3,
+      "-16": 1,
+      "-2": 5,
+      "-5": 2,
+      "-18": 3,
+      "-8": 3,
+      "-3": 5,
+      "-1": 3,
+      "-15": 2,
+      "-45": 1,
+      "-12": 3,
+      "-54": 1,
+      "-7": 2,
+      "-25": 1,
+      "-10": 1,
+      "74": 1,
+      "3": 3,
+      "9": 2,
+      "7": 1,
+      "14": 1,
+      "6": 3,
+      "44": 1,
+      "8": 2,
+      "35": 1,
+      "5": 2,
+      "2": 2,
+      "4": 1,
+      "1": 1,
+      "15": 1,
+      "17": 1,
+      "26": 1,
+      "22": 1
+     }
+    }
+   },
+   "flagged": [
+    "moral_scenarios",
+    "professional_law"
+   ],
+   "fp_agreement_pooled": 0.9341155234657039,
+   "key_agreement_by_position": 0.9999287850733514
+  },
+  "KO_KR": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10710,
+    "count_differs": 1386,
+    "mapped": 1946,
+    "aligned": 1832,
+    "misaligned": 114,
+    "same_id_fp_both": 3304,
+    "same_id_fp_agree": 3001,
+    "key_differs_same_id": 116,
+    "key_differs_misaligned": 89,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 27,
+    "mis_key_equals_content": 114,
+    "mis_key_equals_id": 25,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "high_school_world_history": {
+     "n": 237,
+     "no_fingerprint": 32,
+     "count_differs": 26,
+     "mapped": 179,
+     "aligned": 66,
+     "misaligned": 113,
+     "same_id_fp_both": 192,
+     "same_id_fp_agree": 67,
+     "key_differs_same_id": 116,
+     "key_differs_misaligned": 89,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 27,
+     "mis_key_equals_content": 113,
+     "mis_key_equals_id": 24,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "66": 1,
+      "121": 1,
+      "147": 1,
+      "-3": 50,
+      "-2": 37,
+      "-1": 23
+     }
+    },
+    "professional_accounting": {
+     "n": 282,
+     "no_fingerprint": 169,
+     "count_differs": 74,
+     "mapped": 39,
+     "aligned": 38,
+     "misaligned": 1,
+     "same_id_fp_both": 111,
+     "same_id_fp_agree": 53,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-3": 1
+     }
+    }
+   },
+   "flagged": [
+    "high_school_world_history"
+   ],
+   "fp_agreement_pooled": 0.9082929782082324,
+   "key_agreement_by_position": 0.9917390685087595
+  },
+  "PT_BR": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10720,
+    "count_differs": 1321,
+    "mapped": 2001,
+    "aligned": 1997,
+    "misaligned": 4,
+    "same_id_fp_both": 3315,
+    "same_id_fp_agree": 3119,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 4,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "high_school_statistics": {
+     "n": 216,
+     "no_fingerprint": 143,
+     "count_differs": 15,
+     "mapped": 58,
+     "aligned": 57,
+     "misaligned": 1,
+     "same_id_fp_both": 71,
+     "same_id_fp_agree": 58,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-43": 1
+     }
+    },
+    "prehistory": {
+     "n": 324,
+     "no_fingerprint": 259,
+     "count_differs": 5,
+     "mapped": 60,
+     "aligned": 57,
+     "misaligned": 3,
+     "same_id_fp_both": 65,
+     "same_id_fp_agree": 61,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 3,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-10": 1,
+      "-11": 1,
+      "-15": 1
+     }
+    }
+   },
+   "flagged": [],
+   "fp_agreement_pooled": 0.9408748114630467,
+   "key_agreement_by_position": 1.0
+  },
+  "SW_KE": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 345
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10670,
+    "count_differs": 205,
+    "mapped": 3167,
+    "aligned": 3167,
+    "misaligned": 0,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3322,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {},
+   "flagged": [],
+   "fp_agreement_pooled": 0.9854642539305843,
+   "key_agreement_by_position": 1.0
+  },
+  "YO_NG": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 100
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10684,
+    "count_differs": 266,
+    "mapped": 3092,
+    "aligned": 3087,
+    "misaligned": 5,
+    "same_id_fp_both": 3357,
+    "same_id_fp_agree": 3309,
+    "key_differs_same_id": 2,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 2,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 5,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "business_ethics": {
+     "n": 100,
+     "no_fingerprint": 90,
+     "count_differs": 0,
+     "mapped": 10,
+     "aligned": 10,
+     "misaligned": 0,
+     "same_id_fp_both": 10,
+     "same_id_fp_agree": 10,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "human_aging": {
+     "n": 223,
+     "no_fingerprint": 221,
+     "count_differs": 1,
+     "mapped": 1,
+     "aligned": 1,
+     "misaligned": 0,
+     "same_id_fp_both": 2,
+     "same_id_fp_agree": 2,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "miscellaneous": {
+     "n": 783,
+     "no_fingerprint": 699,
+     "count_differs": 13,
+     "mapped": 71,
+     "aligned": 70,
+     "misaligned": 1,
+     "same_id_fp_both": 83,
+     "same_id_fp_agree": 78,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-11": 1
+     }
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1079,
+     "count_differs": 225,
+     "mapped": 230,
+     "aligned": 226,
+     "misaligned": 4,
+     "same_id_fp_both": 455,
+     "same_id_fp_agree": 434,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 4,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "41": 1,
+      "117": 1,
+      "27": 1,
+      "60": 1
+     }
+    }
+   },
+   "flagged": [],
+   "fp_agreement_pooled": 0.9857015192135835,
+   "key_agreement_by_position": 0.9998575701467027
+  },
+  "ZH_CN": {
+   "tally": {
+    "n": 14042,
+    "subject_agree": 14042,
+    "subject_malformed": 0
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10696,
+    "count_differs": 1368,
+    "mapped": 1978,
+    "aligned": 1795,
+    "misaligned": 183,
+    "same_id_fp_both": 3302,
+    "same_id_fp_agree": 2986,
+    "key_differs_same_id": 176,
+    "key_differs_misaligned": 138,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 38,
+    "mis_key_equals_content": 181,
+    "mis_key_equals_id": 45,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "high_school_world_history": {
+     "n": 237,
+     "no_fingerprint": 34,
+     "count_differs": 15,
+     "mapped": 188,
+     "aligned": 8,
+     "misaligned": 180,
+     "same_id_fp_both": 180,
+     "same_id_fp_agree": 9,
+     "key_differs_same_id": 176,
+     "key_differs_misaligned": 138,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 38,
+     "mis_key_equals_content": 180,
+     "mis_key_equals_id": 42,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "157": 1,
+      "198": 1,
+      "223": 1,
+      "-3": 125,
+      "-2": 30,
+      "-1": 22
+     }
+    },
+    "medical_genetics": {
+     "n": 100,
+     "no_fingerprint": 91,
+     "count_differs": 1,
+     "mapped": 8,
+     "aligned": 7,
+     "misaligned": 1,
+     "same_id_fp_both": 9,
+     "same_id_fp_agree": 7,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "12": 1
+     }
+    },
+    "professional_accounting": {
+     "n": 282,
+     "no_fingerprint": 172,
+     "count_differs": 62,
+     "mapped": 48,
+     "aligned": 46,
+     "misaligned": 2,
+     "same_id_fp_both": 108,
+     "same_id_fp_agree": 60,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 2,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-3": 1,
+      "43": 1
+     }
+    }
+   },
+   "flagged": [
+    "high_school_world_history"
+   ],
+   "fp_agreement_pooled": 0.9043004239854634,
+   "key_agreement_by_position": 0.987466172909842
+  }
+ },
+ "focus_handread_check": {
+  "ZH_CN": {
+   "1": "high_school_world_history/test/158",
+   "2": "high_school_world_history/test/200",
+   "3": "high_school_world_history/test/226"
+  },
+  "KO_KR": {
+   "1": "high_school_world_history/test/67",
+   "2": "high_school_world_history/test/123",
+   "3": "high_school_world_history/test/150"
+  }
+ },
+ "zh_ko_focus_content_agreement": {
+  "both_mapped": 149,
+  "same_content": 53,
+  "both_misaligned": 98,
+  "both_misaligned_same_content": 45
+ },
+ "global_mmlu_vs_mmmlu": {
+  "bn": {
+   "mmmlu_config": "BN_BD",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 0,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "de": {
+   "mmmlu_config": "DE_DE",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 5,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "id": {
+   "mmmlu_config": "ID_ID",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 0,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "it": {
+   "mmmlu_config": "IT_IT",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 18,
+    "on_misaligned_identical": 18,
+    "on_misaligned_fp_key_equal": 18
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 3,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "ja": {
+   "mmmlu_config": "JA_JP",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 461,
+    "on_misaligned_identical": 461,
+    "on_misaligned_fp_key_equal": 461
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 1,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "ko": {
+   "mmmlu_config": "KO_KR",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 114,
+    "on_misaligned_identical": 114,
+    "on_misaligned_fp_key_equal": 114
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 113,
+    "on_misaligned_identical": 113,
+    "on_misaligned_fp_key_equal": 113
+   },
+   "key_differs_vs_mmlu_en": 116,
+   "focus_key_differs_vs_mmlu_en": 116,
+   "ids_not_in_mmlu": 0
+  },
+  "pt": {
+   "mmmlu_config": "PT_BR",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 4,
+    "on_misaligned_identical": 4,
+    "on_misaligned_fp_key_equal": 4
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 0,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "sw": {
+   "mmmlu_config": "SW_KE",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 0,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "yo": {
+   "mmmlu_config": "YO_NG",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 5,
+    "on_misaligned_identical": 5,
+    "on_misaligned_fp_key_equal": 5
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 0,
+    "on_misaligned_identical": 0,
+    "on_misaligned_fp_key_equal": 0
+   },
+   "key_differs_vs_mmlu_en": 2,
+   "focus_key_differs_vs_mmlu_en": 0,
+   "ids_not_in_mmlu": 0
+  },
+  "zh": {
+   "mmmlu_config": "ZH_CN",
+   "all": {
+    "n": 14042,
+    "not_in_mmmlu": 0,
+    "identical": 14042,
+    "fp_key_equal": 14042,
+    "on_misaligned": 183,
+    "on_misaligned_identical": 183,
+    "on_misaligned_fp_key_equal": 183
+   },
+   "focus": {
+    "n": 237,
+    "not_in_mmmlu": 0,
+    "identical": 237,
+    "fp_key_equal": 237,
+    "on_misaligned": 180,
+    "on_misaligned_identical": 180,
+    "on_misaligned_fp_key_equal": 180
+   },
+   "key_differs_vs_mmlu_en": 176,
+   "focus_key_differs_vs_mmlu_en": 176,
+   "ids_not_in_mmlu": 0
+  }
+ },
+ "audit71_focus_key_diffs": {
+  "zh": 176,
+  "ko": 116
+ },
+ "parquet_shards": {
+  "mmlu_all": [
+   {
+    "sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7",
+    "bytes": 3504718
+   }
+  ],
+  "AR_XY": [
+   {
+    "sha256": "4faafe5c58e31d393ffdb44f755dff8b1e77009e24736a0d7884a5057651551d",
+    "bytes": 4702991
+   }
+  ],
+  "BN_BD": [
+   {
+    "sha256": "73880bced15d3c7696df14ed9ee5144ed6fde6bdcbc38999496c340138bb785d",
+    "bytes": 6082770
+   }
+  ],
+  "DE_DE": [
+   {
+    "sha256": "3eb21fb57a161850d1519f7b411c7abcb7f0a6499c8faa95f30997fb4ad8f22b",
+    "bytes": 4417805
+   }
+  ],
+  "ES_LA": [
+   {
+    "sha256": "cca6b69e63da29fc3bc8b41eaeed63a093e4b2f9f4abe5da63f2dcdf31b9fb7f",
+    "bytes": 4182785
+   }
+  ],
+  "FR_FR": [
+   {
+    "sha256": "3a58fc2c39a3e3fe5633c57f4256becf16c18319832d72307286027a66e7cb9a",
+    "bytes": 4400892
+   }
+  ],
+  "HI_IN": [
+   {
+    "sha256": "0f06d1e40543f1a3bf9144c531081b9afd506929b04163020e49472e21410d4b",
+    "bytes": 5996294
+   }
+  ],
+  "ID_ID": [
+   {
+    "sha256": "a5995b372ddd6def42c76ce0ecdb02ce82c407ae5b9e919071747ecf28834cc2",
+    "bytes": 3722959
+   }
+  ],
+  "IT_IT": [
+   {
+    "sha256": "110c88a5fc77cb24d22c65f2ba7e9512b6cbfaee6feb3ec63f773bb0b61d16e7",
+    "bytes": 4260913
+   }
+  ],
+  "JA_JP": [
+   {
+    "sha256": "0820bfe36fa020cc073855c8b3d9c97737905bb10d3e6df57172db789381f415",
+    "bytes": 4236035
+   }
+  ],
+  "KO_KR": [
+   {
+    "sha256": "2c828be3927b6aff570b7ae71401157ff42d45af27580c78280ba340acdb8527",
+    "bytes": 4147208
+   }
+  ],
+  "PT_BR": [
+   {
+    "sha256": "0d83b6051e34a3167a998e9f221503a4ac48db956bd48f3062563e3843ae401d",
+    "bytes": 4081636
+   }
+  ],
+  "SW_KE": [
+   {
+    "sha256": "4ea72a21aad518e02005dfe0428308e4ff16cf9e276dc031f378758b62da0878",
+    "bytes": 3790496
+   }
+  ],
+  "YO_NG": [
+   {
+    "sha256": "7be4937af8bd7fa0c8a0611634a0177a66e2d910608a0fdb2dc934bb8dd965d5",
+    "bytes": 4486481
+   }
+  ],
+  "ZH_CN": [
+   {
+    "sha256": "315d17659c41433b560fd2477a723f1fa824339a4eac0b84b413dfebf755b480",
+    "bytes": 3488025
+   }
+  ],
+  "gmmlu_bn": [
+   {
+    "sha256": "49b6d5ee0df9b5a706f7e104469ff787440b12011de330059b3f2c0100c50285",
+    "bytes": 6200091
+   }
+  ],
+  "gmmlu_de": [
+   {
+    "sha256": "b58a0d5994e756dabef96eb804693be153953052276d3e0b7d57bb2f2798854a",
+    "bytes": 4543635
+   }
+  ],
+  "gmmlu_id": [
+   {
+    "sha256": "d3ff9bca8d3b56ef60d9c4a34b3a4b76f3905f8b786cda5cb966136547722271",
+    "bytes": 3851684
+   }
+  ],
+  "gmmlu_it": [
+   {
+    "sha256": "ddc373d35da750cdd629625e2d9e133cbd510cbf3518f82c85cfb8f7aac27478",
+    "bytes": 4388049
+   }
+  ],
+  "gmmlu_ja": [
+   {
+    "sha256": "b56ad153180d4368757891796dfad0e1a76ebeb3f7b2500b1ac63789d4e4dfe7",
+    "bytes": 4363616
+   }
+  ],
+  "gmmlu_ko": [
+   {
+    "sha256": "aa896380f066e8e905604bbda8c2c57818a22a7d02ab99a48edc1ad078affb27",
+    "bytes": 4273255
+   }
+  ],
+  "gmmlu_pt": [
+   {
+    "sha256": "15dda0dd7dbd8eebbe66b6f8ce6087c1f0d29b18e48b7e3b225b6dba375c1048",
+    "bytes": 4211041
+   }
+  ],
+  "gmmlu_sw": [
+   {
+    "sha256": "de7bfff464f5bbc09a04a31acc4a5a89f66efdb61f6f337abd6081156c4572b5",
+    "bytes": 3922823
+   }
+  ],
+  "gmmlu_yo": [
+   {
+    "sha256": "eed6dede392f2fd44c00fe21666145029b309d3c2ebc41129b5d129b7b4f2f46",
+    "bytes": 4608095
+   }
+  ],
+  "gmmlu_zh": [
+   {
+    "sha256": "e1ba0c287b650043b8686fa5c506d1f2718b098a7f88f724ade55a76f0062ae7",
+    "bytes": 3618771
+   }
+  ]
+ },
+ "predictions": {
+  "P1_structural": true,
+  "P2_mmmlu_focus_misaligned": true,
+  "P2_counts": {
+   "ZH_CN": 180,
+   "KO_KR": 113
+  },
+  "P3_mmmlu_keys_follow_content": true,
+  "P3_vacuous": false,
+  "P3_misaligned": 293,
+  "P3_key_equals_content": 293,
+  "P4_global_mmlu_inherits": true,
+  "P4_vacuous": false,
+  "P4_on_misaligned": 293,
+  "P4_fp_key_equal": 293,
+  "P5_confined_to_zh_ko_world_history": false,
+  "P5_flagged_cells": [
+   "IT_IT|professional_law",
+   "JA_JP|moral_scenarios",
+   "JA_JP|professional_law",
+   "KO_KR|high_school_world_history",
+   "ZH_CN|high_school_world_history"
+  ],
+  "P6_global_mmlu_copies_mmmlu": true,
+  "P6_identical_shares": {
+   "bn": 1.0,
+   "de": 1.0,
+   "id": 1.0,
+   "it": 1.0,
+   "ja": 1.0,
+   "ko": 1.0,
+   "pt": 1.0,
+   "sw": 1.0,
+   "yo": 1.0,
+   "zh": 1.0
+  },
+  "P7_small_offsets": true,
+  "P7_shares": {
+   "ZH_CN": 0.9833333333333333,
+   "KO_KR": 0.9734513274336283
+  }
+ },
+ "note": "P1 structural (MMLU 14,042 rows, subject at 5852..6088; 14 MMMLU configs x 14,042; own Subject = MMLU's at the same position on >= 99%). P2 HEADLINE: >= 25% of the 237 rows misaligned in each of MMMLU ZH_CN and KO_KR high_school_world_history. P3 misaligned MMMLU rows there carry their content's key on >= 95%. P4 Global-MMLU zh+ko rows on those positions have MMMLU's fingerprint and key on >= 95%. P5 the only MMMLU cells with >= 5 misaligned rows are those two. P6 each of the ten MMMLU-derived Global-MMLU languages is >= 95% identical to MMMLU by position. P7 >= 90% of misaligned rows in each of the two have offset -1, -2 or -3 (shape suggested by a hand read)."
+}

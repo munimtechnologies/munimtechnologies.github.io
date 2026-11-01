@@ -95,3 +95,49 @@ python job.py --out-dir out   # downloads MMLU, 14 MMMLU configs and 10 Global-M
 Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: MMMLU (`openai/MMMLU`) and MMLU
 (`cais/mmlu`) are MIT; Global-MMLU (`CohereLabs/Global-MMLU`) is Apache-2.0. Only aggregates and sha256s are
 published, never question or option text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-01, after the sealed run (started 06:21 UTC, 203 s; fixture gate and unit tests passed). Everything
+above this heading is unchanged from the pre-registration. Frozen output: `results.json`.*
+
+**Status: results in. 6 of 7 predictions held; P5 failed because of the matcher, not because of the data (see
+below).**
+
+| # | Result |
+| --- | --- |
+| P1 | **HELD.** MMLU has 14,042 rows with the subject at 5852-6088. All 14 MMMLU configs have 14,042 rows, and each config's `Subject` matches MMLU's at the same position on 14,042 of 14,042 rows (345 malformed names in `SW_KE` and 100 in `YO_NG` read correctly up to `_test`) |
+| P2 | **HELD.** Rows matched to a different MMLU question: `ZH_CN` **180 of 237 (75.9%)**, `KO_KR` **113 of 237 (47.7%)**. These are the same counts audit 72 found in Global-MMLU |
+| P3 | **HELD.** 293 of 293 misaligned rows carry the key of the question they hold (100%). Only 42 of 180 (zh) and 24 of 113 (ko) carry the key of the MMLU question at their own position |
+| P4 | **HELD.** Global-MMLU `zh` and `ko` rows on those 293 positions have the same fingerprint and key as MMMLU on 293 of 293, and are identical in normalised text and key on 293 of 293 |
+| P5 | **FAILED.** Three more cells were flagged: `JA_JP moral_scenarios` (353), `JA_JP professional_law` (105) and `IT_IT professional_law` (18). None of the four languages Global-MMLU did not use was flagged (`AR_XY` 3 misaligned rows in total, `FR_FR` 5 spread over two subjects, `ES_LA` 0, `HI_IN` 0) |
+| P6 | **HELD.** All ten MMMLU-derived Global-MMLU languages are identical to MMMLU on 14,042 of 14,042 rows (100%) |
+| P7 | **HELD.** Offsets of −3 / −2 / −1: `ZH_CN` 125 / 30 / 22 = 177 of 180 (98.3%); `KO_KR` 50 / 37 / 23 = 110 of 113 (97.3%). The other three in each language are positions 1-3 |
+
+**Positions 1-3** hold MMLU positions 158, 200 and 226 in `ZH_CN`, as in the hand read, and 67, 123 and 150 in
+`KO_KR` (these Korean positions are new). Chinese and Korean are shifted differently: of the 98 positions misaligned in
+both, 45 hold the same MMLU question.
+
+**MMMLU's own key differences from MMLU** at the same position are `ZH_CN` 176, `KO_KR` 116, `DE_DE` 5, `IT_IT` 3,
+`YO_NG` 2, `JA_JP` 1 and 0 in the other eight configs. These match audit 70's Global-MMLU counts language for
+language, so every answer-key difference audit 70 found between Global-MMLU and English is already present in MMMLU.
+In `ZH_CN`, 138 of the 176 key differences fall on misaligned rows and 38 on rows the fingerprint could not match
+(`KO_KR`: 89 and 27). None falls on an aligned row. The handful in German, Italian, Yoruba and Japanese all sit on
+unmatched rows, and this audit does not test their cause.
+
+**Why P5 failed (post-hoc reading, not pre-registered).** In each of the three extra cells, every "misaligned" row
+carries the key of the MMLU question at its own position (18 of 18, 353 of 353, 105 of 105). Only 39%, 31% and 29%
+carry the key of the question the matcher paired them with. In Chinese and Korean world history it is the other way
+round (100% versus 23% and 21%). Same-position fingerprints agree on 94-99% of rows in the extra cells, against 5%
+(zh) and 35% (ko) in world history. MMLU's moral-scenarios questions share a template sentence containing "as of
+2020", so almost all of them share one fingerprint. Inside such a group, order-preserving matching shifts by one place
+wherever a translation adds or drops a number (`JA_JP` offsets are only −1 and +1). Law questions that share amounts
+behave the same way. So these rows look like artifacts of the matcher, not misplaced rows. Audit 74 (pre-registered,
+queued) tests that reading with a matcher that leaves very large fingerprint groups unmatched.
+
+**What it means.** The prior report in MMMLU discussion #13 is right, and it can now be quantified: 180 Chinese and
+113 Korean rows of `high_school_world_history` hold a different MMLU question from the one at their position (lower
+bounds; 49 and 58 rows could not be matched). Each keeps its own question's key, so MMMLU and Global-MMLU accuracy are
+unaffected. Question-by-question pairing across languages is affected in both datasets, and so are Global-MMLU's
+cultural-sensitivity labels on those rows (audit 72: 98 rows carry another question's label). Global-MMLU copied all
+ten MMMLU languages unchanged, including this misplacement.

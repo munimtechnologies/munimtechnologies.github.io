@@ -91,3 +91,75 @@ python job.py --out-dir out   # downloads Global-MMLU (42 configs) and Global-MM
 Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: Global-MMLU and Global-MMLU-Lite are
 Apache-2.0. Only aggregates, `sample_id` positions and sha256s are published, never question or option text.
 Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-01, after the sealed run (started 13:02 UTC, 247 s; unit tests and both fixture gates passed).
+Everything above this heading is unchanged from the pre-registration. Frozen output: `results.json` and
+`alignment_map.json`.*
+
+**Status: results in. 6 of 7 predictions held. The headline P2 failed: one extra cell, Shona `professional_law`,
+still shows 8 misaligned rows under the capped matcher.**
+
+| # | Result |
+| --- | --- |
+| P1 | **HELD.** 42 configs × 14,042 rows; English world-history positions are exactly 0-236; same-id key differences equal audit 70 in every language (zh 176, ko 116, de 5, it 3, yo 2, ja 1, the other 35 languages 0); the original matcher again gives zh 180 and ko 113 misaligned world-history rows and the same 10 flagged cells |
+| P2 | **FAILED.** Capped flagged cells: `zh` and `ko` `high_school_world_history`, plus `sn professional_law` (8 misaligned rows). The other seven extra cells drop to 0 (see below) |
+| P3 | **HELD.** The capped matcher keeps zh **172** of 180 (95.6%) and ko **106** of 113 (93.8%); 9 rows in each language sit in fingerprint groups above the cap |
+| P4 | **HELD.** 278 of 278 capped misaligned zh+ko world-history rows carry the key of the question they hold (100%) |
+| P5 | **HELD.** Neighbour inference resolves **101 of 107** rows the fingerprint left unmatched (94.4%): zh 44 of 49, ko 57 of 58 |
+| P6 | **HELD.** Leave-one-out made an inference for 343 of 367 fingerprint-matched rows, and all **343 of 343** equal the fingerprint match (100%) |
+| P7 | **HELD.** **79 of 79** rows that inference places on another question carry that question's key (zh 42, ko 37) |
+
+**The extra flags.** Under the capped matcher, six of the seven `professional_law` cells flagged in audit 72 (`ig
+it ja ny so tr`) map 178 to 227 rows each, and every mapped row holds its own position's question (0 misaligned).
+Japanese `moral_scenarios` drops to 0 for a different reason: 892 of its 895 rows share fingerprint groups above the
+cap, so the capped matcher leaves them unmatched rather than proving them aligned. Shona `professional_law` is the
+exception. Its groups are all within the cap (0 rows over it), and the same count of 8 misaligned rows remains.
+
+**Why P2 failed (post-hoc reading, not pre-registered).** All 8 Shona rows carry the key of the English question at
+their own position. Only 2 of 8 carry the key of the question the matcher paired them with, about what chance
+agreement between 4-option keys gives. Across every capped "misaligned" row outside Chinese and Korean world history
+(26 rows in 12 cells, none of the others with more than 4), 26 of 26 carry their own position's key and 8 of 26 the
+paired question's. In Chinese and Korean world history it is the other way round: 278 of 278 carry the paired
+question's key and 61 of 278 their own. So the Shona rows look like matcher errors on small groups, not misplaced rows.
+This audit does not test why the matcher slips there; a translation that drops or reorders numbers inside a small
+group of law questions would do it.
+
+**The map** (`alignment_map.json`, 474 records):
+
+| | Chinese (`zh`) | Korean (`ko`) |
+| --- | --- | --- |
+| Rows placed by fingerprint | 188 | 179 |
+| Rows placed by neighbours | 44 | 57 |
+| Unresolved | 5 | 1 |
+| Rows holding a different English question | **222 of 237 (93.7%)** | **150 of 237 (63.3%)** |
+| ... of which carry that question's key | 222 of 222 | 150 of 150 |
+| ... of which carry a different cultural-sensitivity label (CS, CA or unannotated `-`) from the question they hold | 76 | 47 |
+| Global-MMLU-Lite world-history rows holding a different question | 10 of 10 | 7 of 10 |
+
+The map uses audit 72's original matcher for the fingerprint step, because in this subject its matches are the
+ones the key test confirms (293 of 293 misaligned rows carry their held question's key). The capped matcher was used
+only for P2-P4. A neighbour-placed row's key never feeds into its placement, and all 101 fit the question they were
+placed on (P7 covers the 79 that moved; the other 22 were placed on their own position). Counted over the whole
+map (post-hoc, from `alignment_map.json`), all 468 placed rows, 367 by fingerprint and 101 by neighbours, carry the
+key of the question they are placed on.
+
+**Every answer-key difference is accounted for (post-hoc arithmetic from the frozen outputs).** Audit 70 found 176
+Chinese and 116 Korean rows whose key differs from English at the same `sample_id`. The map explains them: in
+Chinese, 138 fingerprint-placed and 34 neighbour-placed rows hold another question with a different key, and the
+remaining 4 are unresolved rows (positions 4, 5, 200 and 201); in Korean, 89 + 27 = 116, with none left over. No row
+the map places on its own position has a different key.
+
+Global-MMLU-Lite ids holding another question in `zh`: `high_school_world_history/test/` 33, 58, 67, 87, 93, 115,
+145, 157, 187, 225; in `ko`: 33, 58, 67, 87, 93, 115, 145.
+
+**What it means.** The misplacement audits 71-73 found is real and confined, as far as these instruments can see, to
+Chinese and Korean `high_school_world_history`; the Japanese, Igbo, Italian, Chichewa, Somali, Turkish and Shona flags
+come from the matcher, judged by their keys. Scoring is unaffected because every moved row keeps its own question's
+key. What the map changes is coverage: audits 72/73 could place 180 Chinese and 113 Korean rows, and the map places
+222 and 150, with only 6 rows unresolved. `alignment_map.json` can serve as a repair table: for each position it gives
+the English position whose question the row holds, so cross-language pairs and the CS/CA labels can be moved to the
+right rows. It applies equally to MMMLU `ZH_CN` and `KO_KR`, which audit 73 found identical on these rows. Limits: the
+map is checked by answer keys and leave-one-out, not by reading translations, and a 4-option key matches by chance
+about a quarter of the time, so a single row's placement is strongest where the fingerprint made it.

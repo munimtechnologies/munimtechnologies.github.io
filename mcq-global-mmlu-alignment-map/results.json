@@ -1,0 +1,1031 @@
+{
+ "audit": 74,
+ "slug": "mcq-global-mmlu-alignment-map",
+ "dataset": "Global-MMLU (CohereLabs/Global-MMLU, Apache-2.0; Singh et al. 2024, arXiv 2412.03304), every language config, split test, and the zh / ko configs of Global-MMLU-Lite (Apache-2.0), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Rows are matched to English only by digit runs (3+ digits) in question and options. Only aggregates and sample_id positions are written: no question or option text.",
+ "cap": 8,
+ "fixtures_met": true,
+ "n_rows": {
+  "am": 14042,
+  "ar": 14042,
+  "bn": 14042,
+  "cs": 14042,
+  "de": 14042,
+  "el": 14042,
+  "es": 14042,
+  "fa": 14042,
+  "fil": 14042,
+  "fr": 14042,
+  "ha": 14042,
+  "he": 14042,
+  "hi": 14042,
+  "id": 14042,
+  "ig": 14042,
+  "it": 14042,
+  "ja": 14042,
+  "ko": 14042,
+  "ky": 14042,
+  "lt": 14042,
+  "mg": 14042,
+  "ms": 14042,
+  "ne": 14042,
+  "nl": 14042,
+  "ny": 14042,
+  "pl": 14042,
+  "pt": 14042,
+  "ro": 14042,
+  "ru": 14042,
+  "si": 14042,
+  "sn": 14042,
+  "so": 14042,
+  "sr": 14042,
+  "sv": 14042,
+  "sw": 14042,
+  "te": 14042,
+  "tr": 14042,
+  "uk": 14042,
+  "vi": 14042,
+  "yo": 14042,
+  "zh": 14042
+ },
+ "key_differs_same_id": {
+  "am": 0,
+  "ar": 0,
+  "bn": 0,
+  "cs": 0,
+  "de": 5,
+  "el": 0,
+  "es": 0,
+  "fa": 0,
+  "fil": 0,
+  "fr": 0,
+  "ha": 0,
+  "he": 0,
+  "hi": 0,
+  "id": 0,
+  "ig": 0,
+  "it": 3,
+  "ja": 1,
+  "ko": 116,
+  "ky": 0,
+  "lt": 0,
+  "mg": 0,
+  "ms": 0,
+  "ne": 0,
+  "nl": 0,
+  "ny": 0,
+  "pl": 0,
+  "pt": 0,
+  "ro": 0,
+  "ru": 0,
+  "si": 0,
+  "sn": 0,
+  "so": 0,
+  "sr": 0,
+  "sv": 0,
+  "sw": 0,
+  "te": 0,
+  "tr": 0,
+  "uk": 0,
+  "vi": 0,
+  "yo": 2,
+  "zh": 176
+ },
+ "original_flagged": [
+  "ig|professional_law",
+  "it|professional_law",
+  "ja|moral_scenarios",
+  "ja|professional_law",
+  "ko|high_school_world_history",
+  "ny|professional_law",
+  "sn|professional_law",
+  "so|professional_law",
+  "tr|professional_law",
+  "zh|high_school_world_history"
+ ],
+ "capped_flagged": [
+  "ko|high_school_world_history",
+  "sn|professional_law",
+  "zh|high_school_world_history"
+ ],
+ "cells": {
+  "ar|prehistory": {
+   "original": {
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1,
+    "same_id_fp_both": 54,
+    "same_id_fp_agree": 20
+   },
+   "capped": {
+    "n": 324,
+    "no_fingerprint": 270,
+    "count_differs": 38,
+    "over_cap": 0,
+    "mapped": 16,
+    "aligned": 15,
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1
+   }
+  },
+  "ar|professional_law": {
+   "original": {
+    "misaligned": 3,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 3,
+    "same_id_fp_both": 442,
+    "same_id_fp_agree": 318
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1091,
+    "count_differs": 280,
+    "over_cap": 16,
+    "mapped": 147,
+    "aligned": 147,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "fa|professional_law": {
+   "original": {
+    "misaligned": 3,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 3,
+    "same_id_fp_both": 460,
+    "same_id_fp_agree": 153
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1073,
+    "count_differs": 332,
+    "over_cap": 29,
+    "mapped": 100,
+    "aligned": 97,
+    "misaligned": 3,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 3
+   }
+  },
+  "fr|high_school_statistics": {
+   "original": {
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1,
+    "same_id_fp_both": 71,
+    "same_id_fp_agree": 58
+   },
+   "capped": {
+    "n": 216,
+    "no_fingerprint": 145,
+    "count_differs": 13,
+    "over_cap": 0,
+    "mapped": 58,
+    "aligned": 57,
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1
+   }
+  },
+  "fr|professional_law": {
+   "original": {
+    "misaligned": 4,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 4,
+    "same_id_fp_both": 457,
+    "same_id_fp_agree": 431
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1071,
+    "count_differs": 268,
+    "over_cap": 0,
+    "mapped": 195,
+    "aligned": 191,
+    "misaligned": 4,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 4
+   }
+  },
+  "ig|professional_law": {
+   "original": {
+    "misaligned": 19,
+    "mis_key_equals_content": 6,
+    "mis_key_equals_id": 19,
+    "same_id_fp_both": 462,
+    "same_id_fp_agree": 453
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1072,
+    "count_differs": 163,
+    "over_cap": 74,
+    "mapped": 225,
+    "aligned": 225,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "it|professional_law": {
+   "original": {
+    "misaligned": 18,
+    "mis_key_equals_content": 7,
+    "mis_key_equals_id": 18,
+    "same_id_fp_both": 462,
+    "same_id_fp_agree": 445
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1070,
+    "count_differs": 162,
+    "over_cap": 106,
+    "mapped": 196,
+    "aligned": 196,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "ja|moral_scenarios": {
+   "original": {
+    "misaligned": 353,
+    "mis_key_equals_content": 110,
+    "mis_key_equals_id": 353,
+    "same_id_fp_both": 895,
+    "same_id_fp_agree": 890
+   },
+   "capped": {
+    "n": 895,
+    "no_fingerprint": 0,
+    "count_differs": 3,
+    "over_cap": 892,
+    "mapped": 0,
+    "aligned": 0,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "ja|prehistory": {
+   "original": {
+    "misaligned": 2,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 2,
+    "same_id_fp_both": 53,
+    "same_id_fp_agree": 28
+   },
+   "capped": {
+    "n": 324,
+    "no_fingerprint": 264,
+    "count_differs": 41,
+    "over_cap": 0,
+    "mapped": 19,
+    "aligned": 17,
+    "misaligned": 2,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 2
+   }
+  },
+  "ja|professional_accounting": {
+   "original": {
+    "misaligned": 1,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 1,
+    "same_id_fp_both": 111,
+    "same_id_fp_agree": 56
+   },
+   "capped": {
+    "n": 282,
+    "no_fingerprint": 169,
+    "count_differs": 71,
+    "over_cap": 0,
+    "mapped": 42,
+    "aligned": 41,
+    "misaligned": 1,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 1
+   }
+  },
+  "ja|professional_law": {
+   "original": {
+    "misaligned": 105,
+    "mis_key_equals_content": 30,
+    "mis_key_equals_id": 105,
+    "same_id_fp_both": 441,
+    "same_id_fp_agree": 414
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1088,
+    "count_differs": 145,
+    "over_cap": 123,
+    "mapped": 178,
+    "aligned": 178,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "ko|high_school_world_history": {
+   "original": {
+    "misaligned": 113,
+    "mis_key_equals_content": 113,
+    "mis_key_equals_id": 24,
+    "same_id_fp_both": 192,
+    "same_id_fp_agree": 67
+   },
+   "capped": {
+    "n": 237,
+    "no_fingerprint": 32,
+    "count_differs": 26,
+    "over_cap": 9,
+    "mapped": 170,
+    "aligned": 64,
+    "misaligned": 106,
+    "mis_key_equals_content": 106,
+    "mis_key_equals_id": 23
+   }
+  },
+  "ko|professional_accounting": {
+   "original": {
+    "misaligned": 1,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 1,
+    "same_id_fp_both": 111,
+    "same_id_fp_agree": 53
+   },
+   "capped": {
+    "n": 282,
+    "no_fingerprint": 169,
+    "count_differs": 74,
+    "over_cap": 0,
+    "mapped": 39,
+    "aligned": 38,
+    "misaligned": 1,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 1
+   }
+  },
+  "ne|professional_law": {
+   "original": {
+    "misaligned": 2,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 2,
+    "same_id_fp_both": 458,
+    "same_id_fp_agree": 445
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1076,
+    "count_differs": 212,
+    "over_cap": 32,
+    "mapped": 214,
+    "aligned": 214,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "ny|professional_law": {
+   "original": {
+    "misaligned": 47,
+    "mis_key_equals_content": 5,
+    "mis_key_equals_id": 47,
+    "same_id_fp_both": 463,
+    "same_id_fp_agree": 452
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1069,
+    "count_differs": 104,
+    "over_cap": 139,
+    "mapped": 222,
+    "aligned": 222,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "pt|high_school_statistics": {
+   "original": {
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1,
+    "same_id_fp_both": 71,
+    "same_id_fp_agree": 58
+   },
+   "capped": {
+    "n": 216,
+    "no_fingerprint": 143,
+    "count_differs": 15,
+    "over_cap": 0,
+    "mapped": 58,
+    "aligned": 57,
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1
+   }
+  },
+  "pt|prehistory": {
+   "original": {
+    "misaligned": 3,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 3,
+    "same_id_fp_both": 65,
+    "same_id_fp_agree": 61
+   },
+   "capped": {
+    "n": 324,
+    "no_fingerprint": 259,
+    "count_differs": 5,
+    "over_cap": 20,
+    "mapped": 40,
+    "aligned": 40,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "sn|professional_law": {
+   "original": {
+    "misaligned": 8,
+    "mis_key_equals_content": 2,
+    "mis_key_equals_id": 8,
+    "same_id_fp_both": 417,
+    "same_id_fp_agree": 355
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1117,
+    "count_differs": 272,
+    "over_cap": 0,
+    "mapped": 145,
+    "aligned": 137,
+    "misaligned": 8,
+    "mis_key_equals_content": 2,
+    "mis_key_equals_id": 8
+   }
+  },
+  "so|professional_law": {
+   "original": {
+    "misaligned": 42,
+    "mis_key_equals_content": 15,
+    "mis_key_equals_id": 42,
+    "same_id_fp_both": 461,
+    "same_id_fp_agree": 449
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1073,
+    "count_differs": 53,
+    "over_cap": 184,
+    "mapped": 224,
+    "aligned": 224,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "te|professional_law": {
+   "original": {
+    "misaligned": 2,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 2,
+    "same_id_fp_both": 461,
+    "same_id_fp_agree": 456
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1073,
+    "count_differs": 50,
+    "over_cap": 181,
+    "mapped": 230,
+    "aligned": 230,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "tr|professional_law": {
+   "original": {
+    "misaligned": 45,
+    "mis_key_equals_content": 13,
+    "mis_key_equals_id": 45,
+    "same_id_fp_both": 463,
+    "same_id_fp_agree": 456
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1071,
+    "count_differs": 7,
+    "over_cap": 229,
+    "mapped": 227,
+    "aligned": 227,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "yo|miscellaneous": {
+   "original": {
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1,
+    "same_id_fp_both": 83,
+    "same_id_fp_agree": 78
+   },
+   "capped": {
+    "n": 783,
+    "no_fingerprint": 699,
+    "count_differs": 13,
+    "over_cap": 0,
+    "mapped": 71,
+    "aligned": 70,
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1
+   }
+  },
+  "yo|professional_law": {
+   "original": {
+    "misaligned": 4,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 4,
+    "same_id_fp_both": 455,
+    "same_id_fp_agree": 434
+   },
+   "capped": {
+    "n": 1534,
+    "no_fingerprint": 1079,
+    "count_differs": 225,
+    "over_cap": 29,
+    "mapped": 201,
+    "aligned": 201,
+    "misaligned": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0
+   }
+  },
+  "zh|high_school_world_history": {
+   "original": {
+    "misaligned": 180,
+    "mis_key_equals_content": 180,
+    "mis_key_equals_id": 42,
+    "same_id_fp_both": 180,
+    "same_id_fp_agree": 9
+   },
+   "capped": {
+    "n": 237,
+    "no_fingerprint": 34,
+    "count_differs": 15,
+    "over_cap": 9,
+    "mapped": 179,
+    "aligned": 7,
+    "misaligned": 172,
+    "mis_key_equals_content": 172,
+    "mis_key_equals_id": 38
+   }
+  },
+  "zh|medical_genetics": {
+   "original": {
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1,
+    "same_id_fp_both": 9,
+    "same_id_fp_agree": 7
+   },
+   "capped": {
+    "n": 100,
+    "no_fingerprint": 91,
+    "count_differs": 1,
+    "over_cap": 0,
+    "mapped": 8,
+    "aligned": 7,
+    "misaligned": 1,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 1
+   }
+  },
+  "zh|professional_accounting": {
+   "original": {
+    "misaligned": 2,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 2,
+    "same_id_fp_both": 108,
+    "same_id_fp_agree": 60
+   },
+   "capped": {
+    "n": 282,
+    "no_fingerprint": 172,
+    "count_differs": 62,
+    "over_cap": 0,
+    "mapped": 48,
+    "aligned": 46,
+    "misaligned": 2,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 2
+   }
+  }
+ },
+ "focus": {
+  "ko": {
+   "original_misaligned": 113,
+   "unmatched": 58,
+   "inferred": 57,
+   "loo": {
+    "tested": 179,
+    "made": 167,
+    "agree": 167
+   },
+   "summary": {
+    "n": 237,
+    "fingerprint": 179,
+    "neighbours": 57,
+    "unresolved": 1,
+    "holds_other": 150,
+    "holds_other_fingerprint": 113,
+    "holds_other_neighbours": 37,
+    "holds_other_key_fits_held": 150,
+    "neighbours_other_key_fits_held": 37,
+    "neighbours_other_key_fits_own": 10,
+    "label_wrong": 47
+   },
+   "capped": {
+    "n": 237,
+    "no_fingerprint": 32,
+    "count_differs": 26,
+    "over_cap": 9,
+    "mapped": 170,
+    "aligned": 64,
+    "misaligned": 106,
+    "mis_key_equals_content": 106,
+    "mis_key_equals_id": 23
+   },
+   "lite_rows_in_subject": 10,
+   "lite_ids_holding_other": [
+    "high_school_world_history/test/33",
+    "high_school_world_history/test/58",
+    "high_school_world_history/test/67",
+    "high_school_world_history/test/87",
+    "high_school_world_history/test/93",
+    "high_school_world_history/test/115",
+    "high_school_world_history/test/145"
+   ]
+  },
+  "zh": {
+   "original_misaligned": 180,
+   "unmatched": 49,
+   "inferred": 44,
+   "loo": {
+    "tested": 188,
+    "made": 176,
+    "agree": 176
+   },
+   "summary": {
+    "n": 237,
+    "fingerprint": 188,
+    "neighbours": 44,
+    "unresolved": 5,
+    "holds_other": 222,
+    "holds_other_fingerprint": 180,
+    "holds_other_neighbours": 42,
+    "holds_other_key_fits_held": 222,
+    "neighbours_other_key_fits_held": 42,
+    "neighbours_other_key_fits_own": 8,
+    "label_wrong": 76
+   },
+   "capped": {
+    "n": 237,
+    "no_fingerprint": 34,
+    "count_differs": 15,
+    "over_cap": 9,
+    "mapped": 179,
+    "aligned": 7,
+    "misaligned": 172,
+    "mis_key_equals_content": 172,
+    "mis_key_equals_id": 38
+   },
+   "lite_rows_in_subject": 10,
+   "lite_ids_holding_other": [
+    "high_school_world_history/test/33",
+    "high_school_world_history/test/58",
+    "high_school_world_history/test/67",
+    "high_school_world_history/test/87",
+    "high_school_world_history/test/93",
+    "high_school_world_history/test/115",
+    "high_school_world_history/test/145",
+    "high_school_world_history/test/157",
+    "high_school_world_history/test/187",
+    "high_school_world_history/test/225"
+   ]
+  }
+ },
+ "parquet_shards": {
+  "en": [
+   {
+    "sha256": "5baec81ba97243728cc9557b2cba2f03aaeedf8232473db9f20cf995c6b0a1a9",
+    "bytes": 3910925
+   }
+  ],
+  "am": [
+   {
+    "sha256": "ccef9ac613fc1dad87da6c6f5fd06cb46f80d8a907835527b84b52c242383c68",
+    "bytes": 5075206
+   }
+  ],
+  "ar": [
+   {
+    "sha256": "e969c186f001c7548d54b420b2ddf7ae1d4abfce5720680eadcc4e8a48d0f61b",
+    "bytes": 4854848
+   }
+  ],
+  "bn": [
+   {
+    "sha256": "49b6d5ee0df9b5a706f7e104469ff787440b12011de330059b3f2c0100c50285",
+    "bytes": 6200091
+   }
+  ],
+  "cs": [
+   {
+    "sha256": "a41725cff0f27fe136f6870778e62d90de2b8966bc96bbe5328f88f3e5d1e67c",
+    "bytes": 4271546
+   }
+  ],
+  "de": [
+   {
+    "sha256": "b58a0d5994e756dabef96eb804693be153953052276d3e0b7d57bb2f2798854a",
+    "bytes": 4543635
+   }
+  ],
+  "el": [
+   {
+    "sha256": "942d3e75bf1f57680f4ca36bfd49f8526568e0dceded8aaeb17b02a9cb444542",
+    "bytes": 6080292
+   }
+  ],
+  "es": [
+   {
+    "sha256": "efbcc4ce1cf14f2f43f7b05be49a9a1153b2893c59d2f660c3bb58679801dccb",
+    "bytes": 4327396
+   }
+  ],
+  "fa": [
+   {
+    "sha256": "f55882f742aeab60b88693f2199c244bf8ab42632202b6283adebebf60531686",
+    "bytes": 4730118
+   }
+  ],
+  "fil": [
+   {
+    "sha256": "255a9a594af8b58c82da995ad4e380797640642cb7953019a57230d37aec7962",
+    "bytes": 4234358
+   }
+  ],
+  "fr": [
+   {
+    "sha256": "e602201459c29c5dbacf9a3d80cfe2524496f8e0c0b51b6326ef4205bad3405e",
+    "bytes": 4550854
+   }
+  ],
+  "ha": [
+   {
+    "sha256": "b17d14b2fe9bf848935145ad49db494850930f23627880ce14d0f88e09e84766",
+    "bytes": 3789111
+   }
+  ],
+  "he": [
+   {
+    "sha256": "e615cdc1abe5b7951c9c1d38bac93ef39e8f1c3e4ceeb90da072a2384f7d9e7f",
+    "bytes": 4361466
+   }
+  ],
+  "hi": [
+   {
+    "sha256": "f0d82c7650ef47968a22058d9a83d22834d12c4f28e23738594d903ab52bcee5",
+    "bytes": 6140551
+   }
+  ],
+  "id": [
+   {
+    "sha256": "d3ff9bca8d3b56ef60d9c4a34b3a4b76f3905f8b786cda5cb966136547722271",
+    "bytes": 3851684
+   }
+  ],
+  "ig": [
+   {
+    "sha256": "21e5352d4a823b033d217be65d698d6552bf4dd3dfb53140c8cc29ebb80f803b",
+    "bytes": 3778871
+   }
+  ],
+  "it": [
+   {
+    "sha256": "ddc373d35da750cdd629625e2d9e133cbd510cbf3518f82c85cfb8f7aac27478",
+    "bytes": 4388049
+   }
+  ],
+  "ja": [
+   {
+    "sha256": "b56ad153180d4368757891796dfad0e1a76ebeb3f7b2500b1ac63789d4e4dfe7",
+    "bytes": 4363616
+   }
+  ],
+  "ko": [
+   {
+    "sha256": "aa896380f066e8e905604bbda8c2c57818a22a7d02ab99a48edc1ad078affb27",
+    "bytes": 4273255
+   }
+  ],
+  "ky": [
+   {
+    "sha256": "bcbf3a5fc0ed9cc6cf6ced77d2950cb7f2ef21246ffdee7d40ae9183ae36d450",
+    "bytes": 5514897
+   }
+  ],
+  "lt": [
+   {
+    "sha256": "1d0cc1459fc28294cf69a3e4c7a305f3a4802425cea472b65d465cc9028355a6",
+    "bytes": 4160608
+   }
+  ],
+  "mg": [
+   {
+    "sha256": "cb557b08bf9a62990bdf382597a3b42625299287e967fd09feb9d543dafa072d",
+    "bytes": 3960785
+   }
+  ],
+  "ms": [
+   {
+    "sha256": "9dd7ceb35bfba72ef2944bcb20711863e058ebbff7b2f7234bd10957b3f03b8f",
+    "bytes": 3847371
+   }
+  ],
+  "ne": [
+   {
+    "sha256": "8591e7f6b0e436054cbe1b2861402a2b226d455e29061f8c2c73cad457f8b03f",
+    "bytes": 5885311
+   }
+  ],
+  "nl": [
+   {
+    "sha256": "d177e050c31cf86c169bcf434aa6caf90d7e25ede9157ab1b08b36d9f7621d1f",
+    "bytes": 4235027
+   }
+  ],
+  "ny": [
+   {
+    "sha256": "8826cd53bb4d93698e662652fb51a3b0cd533d9486cdf697026488cf4bfdbac0",
+    "bytes": 3867093
+   }
+  ],
+  "pl": [
+   {
+    "sha256": "b7d3670fc9f0dc98661fd817c33b26b2a5a38010417fc4509c7e7d199253b3a9",
+    "bytes": 4438005
+   }
+  ],
+  "pt": [
+   {
+    "sha256": "15dda0dd7dbd8eebbe66b6f8ce6087c1f0d29b18e48b7e3b225b6dba375c1048",
+    "bytes": 4211041
+   }
+  ],
+  "ro": [
+   {
+    "sha256": "25f62205ac578a041ad013ef143bcd22fea7e6b1f0b51dd743c77a48bb20ffe8",
+    "bytes": 4337643
+   }
+  ],
+  "ru": [
+   {
+    "sha256": "9037e1aaca6aed1856fe1e427e5b3d4e3bb6563861b760a3360ef077df301bd6",
+    "bytes": 5884449
+   }
+  ],
+  "si": [
+   {
+    "sha256": "7e6e2f17675e74843baaf5f5147f4683afe7a9ba089d651e45568c10acd96e40",
+    "bytes": 6329471
+   }
+  ],
+  "sn": [
+   {
+    "sha256": "de9ad77687616ec7fdb66abe15ddc7e3efe6d849242bae4d30e6ae5d2c0b1b28",
+    "bytes": 3936373
+   }
+  ],
+  "so": [
+   {
+    "sha256": "7f32af4d583f71432b00ef9f02dd6a5da064092c805aa56afedb6dfe0f6fae61",
+    "bytes": 4305289
+   }
+  ],
+  "sr": [
+   {
+    "sha256": "0bd5411932421031909994f3805bb9496e40fc13d4327f92387a23b4ed049af9",
+    "bytes": 5317727
+   }
+  ],
+  "sv": [
+   {
+    "sha256": "8eb44757946f69d4d5e6b6db87c7d7b9c67f404bb5185c17eb562b74beaf1624",
+    "bytes": 4044989
+   }
+  ],
+  "sw": [
+   {
+    "sha256": "de7bfff464f5bbc09a04a31acc4a5a89f66efdb61f6f337abd6081156c4572b5",
+    "bytes": 3922823
+   }
+  ],
+  "te": [
+   {
+    "sha256": "6d38ab096e31396c5a77483f67df881df0df702a17f708dc75adce1c9c40c5c8",
+    "bytes": 6250157
+   }
+  ],
+  "tr": [
+   {
+    "sha256": "b1db36634296b99dea6138c4a6f930e95e968df91549a82378a8d320d6df2def",
+    "bytes": 4128502
+   }
+  ],
+  "uk": [
+   {
+    "sha256": "fc6ebf99e1a6486619af54276b2e2d4dba3fef446b5391bf38e6263369543653",
+    "bytes": 5614319
+   }
+  ],
+  "vi": [
+   {
+    "sha256": "5cd0840972e32c99d86cf287c7f9b1a8f594dd24fc2800169cce1ec0724abfba",
+    "bytes": 4435419
+   }
+  ],
+  "yo": [
+   {
+    "sha256": "eed6dede392f2fd44c00fe21666145029b309d3c2ebc41129b5d129b7b4f2f46",
+    "bytes": 4608095
+   }
+  ],
+  "zh": [
+   {
+    "sha256": "e1ba0c287b650043b8686fa5c506d1f2718b098a7f88f724ade55a76f0062ae7",
+    "bytes": 3618771
+   }
+  ]
+ },
+ "lite_parquet_shards": {
+  "zh": [
+   {
+    "sha256": "87e148156e95948db761c5759e33ca5e1a81ffa8c9163edf58a4c42c86c28299",
+    "bytes": 125222
+   }
+  ],
+  "ko": [
+   {
+    "sha256": "4b8ee37baee8e7fb18cdecc7f39e766d5894948dabc33b54e7f99907e5ea05f3",
+    "bytes": 141904
+   }
+  ]
+ },
+ "predictions": {
+  "P1_structural_reproduces_audit72": true,
+  "P2_capped_only_zh_ko_world_history": false,
+  "P2_capped_flagged": [
+   "ko|high_school_world_history",
+   "sn|professional_law",
+   "zh|high_school_world_history"
+  ],
+  "P3_capped_keeps_focus": true,
+  "P3_capped_misaligned": {
+   "zh": 172,
+   "ko": 106
+  },
+  "P4_capped_keys_follow_content": true,
+  "P4_vacuous": false,
+  "P4_counts": [
+   278,
+   278
+  ],
+  "P5_inference_fills_half": true,
+  "P5_counts": [
+   101,
+   107
+  ],
+  "P6_loo_agrees": true,
+  "P6_vacuous": false,
+  "P6_counts": [
+   343,
+   343
+  ],
+  "P7_inferred_keys_follow_content": true,
+  "P7_vacuous": false,
+  "P7_counts": [
+   79,
+   79
+  ]
+ },
+ "note": "P1 reproduces audit 72 (42 x 14,042; key differences = audit 70; zh 180 / ko 113 misaligned; the same 10 flagged cells). P2 with groups > CAP rows unmatched, only zh and ko world history keep >= 5 misaligned rows. P3 capped keeps >= 90% of 180 / 113. P4 capped misaligned zh+ko rows carry the held key >= 95%. P5 neighbour inference fills >= 50% of unmatched zh+ko rows. P6 leave-one-out agrees >= 90% (>= 50 made). P7 inferred rows holding another question carry its key >= 90% (>= 20)."
+}

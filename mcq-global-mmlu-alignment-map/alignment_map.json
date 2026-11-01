@@ -1,0 +1,4750 @@
+{
+ "subject": "high_school_world_history",
+ "languages": {
+  "ko": [
+   {
+    "sample_id": "high_school_world_history/test/0",
+    "position": 0,
+    "holds_position": 0,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/1",
+    "position": 1,
+    "holds_position": 67,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/2",
+    "position": 2,
+    "holds_position": 123,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/3",
+    "position": 3,
+    "holds_position": 150,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/4",
+    "position": 4,
+    "holds_position": 1,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/5",
+    "position": 5,
+    "holds_position": 2,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/6",
+    "position": 6,
+    "holds_position": 3,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/7",
+    "position": 7,
+    "holds_position": 4,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/8",
+    "position": 8,
+    "holds_position": 5,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/9",
+    "position": 9,
+    "holds_position": 6,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/10",
+    "position": 10,
+    "holds_position": 7,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/11",
+    "position": 11,
+    "holds_position": 8,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/12",
+    "position": 12,
+    "holds_position": 9,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/13",
+    "position": 13,
+    "holds_position": 10,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/14",
+    "position": 14,
+    "holds_position": 11,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/15",
+    "position": 15,
+    "holds_position": 12,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/16",
+    "position": 16,
+    "holds_position": 13,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/17",
+    "position": 17,
+    "holds_position": 14,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/18",
+    "position": 18,
+    "holds_position": 15,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/19",
+    "position": 19,
+    "holds_position": 16,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/20",
+    "position": 20,
+    "holds_position": 17,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/21",
+    "position": 21,
+    "holds_position": 18,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/22",
+    "position": 22,
+    "holds_position": 19,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/23",
+    "position": 23,
+    "holds_position": 20,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/24",
+    "position": 24,
+    "holds_position": 21,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/25",
+    "position": 25,
+    "holds_position": 22,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/26",
+    "position": 26,
+    "holds_position": 23,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/27",
+    "position": 27,
+    "holds_position": 24,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/28",
+    "position": 28,
+    "holds_position": 25,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/29",
+    "position": 29,
+    "holds_position": 26,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/30",
+    "position": 30,
+    "holds_position": 27,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/31",
+    "position": 31,
+    "holds_position": 28,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/32",
+    "position": 32,
+    "holds_position": 29,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/33",
+    "position": 33,
+    "holds_position": 30,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/34",
+    "position": 34,
+    "holds_position": 31,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/35",
+    "position": 35,
+    "holds_position": 32,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/36",
+    "position": 36,
+    "holds_position": 33,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/37",
+    "position": 37,
+    "holds_position": 34,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/38",
+    "position": 38,
+    "holds_position": 35,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/39",
+    "position": 39,
+    "holds_position": 36,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/40",
+    "position": 40,
+    "holds_position": 37,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/41",
+    "position": 41,
+    "holds_position": 38,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/42",
+    "position": 42,
+    "holds_position": 39,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/43",
+    "position": 43,
+    "holds_position": 40,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/44",
+    "position": 44,
+    "holds_position": 41,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/45",
+    "position": 45,
+    "holds_position": 42,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/46",
+    "position": 46,
+    "holds_position": 43,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/47",
+    "position": 47,
+    "holds_position": 44,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/48",
+    "position": 48,
+    "holds_position": 45,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/49",
+    "position": 49,
+    "holds_position": 46,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/50",
+    "position": 50,
+    "holds_position": 47,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/51",
+    "position": 51,
+    "holds_position": 48,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/52",
+    "position": 52,
+    "holds_position": 49,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/53",
+    "position": 53,
+    "holds_position": 50,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/54",
+    "position": 54,
+    "holds_position": 51,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/55",
+    "position": 55,
+    "holds_position": 52,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/56",
+    "position": 56,
+    "holds_position": 53,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/57",
+    "position": 57,
+    "holds_position": 54,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/58",
+    "position": 58,
+    "holds_position": 55,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/59",
+    "position": 59,
+    "holds_position": 56,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/60",
+    "position": 60,
+    "holds_position": 57,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/61",
+    "position": 61,
+    "holds_position": 58,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/62",
+    "position": 62,
+    "holds_position": 59,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/63",
+    "position": 63,
+    "holds_position": 60,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/64",
+    "position": 64,
+    "holds_position": 61,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/65",
+    "position": 65,
+    "holds_position": 62,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/66",
+    "position": 66,
+    "holds_position": 63,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/67",
+    "position": 67,
+    "holds_position": 64,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/68",
+    "position": 68,
+    "holds_position": 65,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/69",
+    "position": 69,
+    "holds_position": 66,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/70",
+    "position": 70,
+    "holds_position": 68,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/71",
+    "position": 71,
+    "holds_position": 69,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/72",
+    "position": 72,
+    "holds_position": 70,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/73",
+    "position": 73,
+    "holds_position": 71,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/74",
+    "position": 74,
+    "holds_position": 72,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/75",
+    "position": 75,
+    "holds_position": 73,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/76",
+    "position": 76,
+    "holds_position": 74,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/77",
+    "position": 77,
+    "holds_position": 75,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/78",
+    "position": 78,
+    "holds_position": 76,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/79",
+    "position": 79,
+    "holds_position": 77,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/80",
+    "position": 80,
+    "holds_position": 78,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/81",
+    "position": 81,
+    "holds_position": 79,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/82",
+    "position": 82,
+    "holds_position": 80,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/83",
+    "position": 83,
+    "holds_position": 81,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/84",
+    "position": 84,
+    "holds_position": 82,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/85",
+    "position": 85,
+    "holds_position": 83,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/86",
+    "position": 86,
+    "holds_position": 84,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/87",
+    "position": 87,
+    "holds_position": 85,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/88",
+    "position": 88,
+    "holds_position": 86,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/89",
+    "position": 89,
+    "holds_position": 87,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/90",
+    "position": 90,
+    "holds_position": 88,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/91",
+    "position": 91,
+    "holds_position": 89,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/92",
+    "position": 92,
+    "holds_position": 90,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/93",
+    "position": 93,
+    "holds_position": 91,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/94",
+    "position": 94,
+    "holds_position": 92,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/95",
+    "position": 95,
+    "holds_position": 93,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/96",
+    "position": 96,
+    "holds_position": 94,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/97",
+    "position": 97,
+    "holds_position": 95,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/98",
+    "position": 98,
+    "holds_position": 96,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/99",
+    "position": 99,
+    "holds_position": 97,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/100",
+    "position": 100,
+    "holds_position": 98,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/101",
+    "position": 101,
+    "holds_position": 99,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/102",
+    "position": 102,
+    "holds_position": 100,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/103",
+    "position": 103,
+    "holds_position": 101,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/104",
+    "position": 104,
+    "holds_position": 102,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/105",
+    "position": 105,
+    "holds_position": 103,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/106",
+    "position": 106,
+    "holds_position": 104,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/107",
+    "position": 107,
+    "holds_position": 105,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/108",
+    "position": 108,
+    "holds_position": 106,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/109",
+    "position": 109,
+    "holds_position": 107,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/110",
+    "position": 110,
+    "holds_position": 108,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/111",
+    "position": 111,
+    "holds_position": 109,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/112",
+    "position": 112,
+    "holds_position": 110,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/113",
+    "position": 113,
+    "holds_position": 111,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/114",
+    "position": 114,
+    "holds_position": 112,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/115",
+    "position": 115,
+    "holds_position": 113,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/116",
+    "position": 116,
+    "holds_position": 114,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/117",
+    "position": 117,
+    "holds_position": 115,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/118",
+    "position": 118,
+    "holds_position": 116,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/119",
+    "position": 119,
+    "holds_position": 117,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/120",
+    "position": 120,
+    "holds_position": 118,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/121",
+    "position": 121,
+    "holds_position": 119,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/122",
+    "position": 122,
+    "holds_position": 120,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/123",
+    "position": 123,
+    "holds_position": 121,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/124",
+    "position": 124,
+    "holds_position": 122,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/125",
+    "position": 125,
+    "holds_position": 124,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/126",
+    "position": 126,
+    "holds_position": 125,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/127",
+    "position": 127,
+    "holds_position": 126,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/128",
+    "position": 128,
+    "holds_position": 127,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/129",
+    "position": 129,
+    "holds_position": 128,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/130",
+    "position": 130,
+    "holds_position": 129,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/131",
+    "position": 131,
+    "holds_position": 130,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/132",
+    "position": 132,
+    "holds_position": 131,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/133",
+    "position": 133,
+    "holds_position": 132,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/134",
+    "position": 134,
+    "holds_position": 133,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/135",
+    "position": 135,
+    "holds_position": 134,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/136",
+    "position": 136,
+    "holds_position": 135,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/137",
+    "position": 137,
+    "holds_position": 136,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/138",
+    "position": 138,
+    "holds_position": 137,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/139",
+    "position": 139,
+    "holds_position": 138,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/140",
+    "position": 140,
+    "holds_position": 139,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/141",
+    "position": 141,
+    "holds_position": 140,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/142",
+    "position": 142,
+    "holds_position": 141,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/143",
+    "position": 143,
+    "holds_position": 142,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/144",
+    "position": 144,
+    "holds_position": 143,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/145",
+    "position": 145,
+    "holds_position": 144,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/146",
+    "position": 146,
+    "holds_position": 145,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/147",
+    "position": 147,
+    "holds_position": 146,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/148",
+    "position": 148,
+    "holds_position": 147,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/149",
+    "position": 149,
+    "holds_position": 148,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/150",
+    "position": 150,
+    "holds_position": 149,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/151",
+    "position": 151,
+    "holds_position": 151,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/152",
+    "position": 152,
+    "holds_position": 152,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/153",
+    "position": 153,
+    "holds_position": 153,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/154",
+    "position": 154,
+    "holds_position": 154,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/155",
+    "position": 155,
+    "holds_position": 155,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/156",
+    "position": 156,
+    "holds_position": 156,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/157",
+    "position": 157,
+    "holds_position": 157,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/158",
+    "position": 158,
+    "holds_position": 158,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/159",
+    "position": 159,
+    "holds_position": 159,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/160",
+    "position": 160,
+    "holds_position": 160,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/161",
+    "position": 161,
+    "holds_position": 161,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/162",
+    "position": 162,
+    "holds_position": 162,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/163",
+    "position": 163,
+    "holds_position": 163,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/164",
+    "position": 164,
+    "holds_position": 164,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/165",
+    "position": 165,
+    "holds_position": 165,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/166",
+    "position": 166,
+    "holds_position": 166,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/167",
+    "position": 167,
+    "holds_position": 167,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/168",
+    "position": 168,
+    "holds_position": 168,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/169",
+    "position": 169,
+    "holds_position": 169,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/170",
+    "position": 170,
+    "holds_position": 170,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/171",
+    "position": 171,
+    "holds_position": 171,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/172",
+    "position": 172,
+    "holds_position": 172,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/173",
+    "position": 173,
+    "holds_position": 173,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/174",
+    "position": 174,
+    "holds_position": 174,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/175",
+    "position": 175,
+    "holds_position": 175,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/176",
+    "position": 176,
+    "holds_position": 176,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/177",
+    "position": 177,
+    "holds_position": 177,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/178",
+    "position": 178,
+    "holds_position": 178,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/179",
+    "position": 179,
+    "holds_position": 179,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/180",
+    "position": 180,
+    "holds_position": 180,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/181",
+    "position": 181,
+    "holds_position": 181,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/182",
+    "position": 182,
+    "holds_position": 182,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/183",
+    "position": 183,
+    "holds_position": 183,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/184",
+    "position": 184,
+    "holds_position": 184,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/185",
+    "position": 185,
+    "holds_position": 185,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/186",
+    "position": 186,
+    "holds_position": 186,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/187",
+    "position": 187,
+    "holds_position": 187,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/188",
+    "position": 188,
+    "holds_position": 188,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/189",
+    "position": 189,
+    "holds_position": 189,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/190",
+    "position": 190,
+    "holds_position": 190,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/191",
+    "position": 191,
+    "holds_position": 191,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/192",
+    "position": 192,
+    "holds_position": 192,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/193",
+    "position": 193,
+    "holds_position": 193,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/194",
+    "position": 194,
+    "holds_position": 194,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/195",
+    "position": 195,
+    "holds_position": 195,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/196",
+    "position": 196,
+    "holds_position": 196,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/197",
+    "position": 197,
+    "holds_position": 197,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/198",
+    "position": 198,
+    "holds_position": 198,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/199",
+    "position": 199,
+    "holds_position": 199,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/200",
+    "position": 200,
+    "holds_position": 200,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/201",
+    "position": 201,
+    "holds_position": 201,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/202",
+    "position": 202,
+    "holds_position": 202,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/203",
+    "position": 203,
+    "holds_position": 203,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/204",
+    "position": 204,
+    "holds_position": 204,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/205",
+    "position": 205,
+    "holds_position": 205,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/206",
+    "position": 206,
+    "holds_position": 206,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/207",
+    "position": 207,
+    "holds_position": 207,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/208",
+    "position": 208,
+    "holds_position": 208,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/209",
+    "position": 209,
+    "holds_position": 209,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/210",
+    "position": 210,
+    "holds_position": 210,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/211",
+    "position": 211,
+    "holds_position": 211,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/212",
+    "position": 212,
+    "holds_position": 212,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/213",
+    "position": 213,
+    "holds_position": 213,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/214",
+    "position": 214,
+    "holds_position": 214,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/215",
+    "position": 215,
+    "holds_position": 215,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/216",
+    "position": 216,
+    "holds_position": 216,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/217",
+    "position": 217,
+    "holds_position": 217,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/218",
+    "position": 218,
+    "holds_position": 218,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/219",
+    "position": 219,
+    "holds_position": 219,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/220",
+    "position": 220,
+    "holds_position": 220,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/221",
+    "position": 221,
+    "holds_position": 221,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/222",
+    "position": 222,
+    "holds_position": 222,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/223",
+    "position": 223,
+    "holds_position": 223,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/224",
+    "position": 224,
+    "holds_position": 224,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/225",
+    "position": 225,
+    "holds_position": 225,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/226",
+    "position": 226,
+    "holds_position": 226,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/227",
+    "position": 227,
+    "holds_position": 227,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/228",
+    "position": 228,
+    "holds_position": 228,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/229",
+    "position": 229,
+    "holds_position": 229,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/230",
+    "position": 230,
+    "holds_position": 230,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/231",
+    "position": 231,
+    "holds_position": 231,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/232",
+    "position": 232,
+    "holds_position": 232,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/233",
+    "position": 233,
+    "holds_position": 233,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/234",
+    "position": 234,
+    "holds_position": 234,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/235",
+    "position": 235,
+    "holds_position": 235,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/236",
+    "position": 236,
+    "holds_position": null,
+    "how": "unresolved",
+    "key_fits_held": null,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": null
+   }
+  ],
+  "zh": [
+   {
+    "sample_id": "high_school_world_history/test/0",
+    "position": 0,
+    "holds_position": 0,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/1",
+    "position": 1,
+    "holds_position": 158,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/2",
+    "position": 2,
+    "holds_position": 200,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/3",
+    "position": 3,
+    "holds_position": 226,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/4",
+    "position": 4,
+    "holds_position": null,
+    "how": "unresolved",
+    "key_fits_held": null,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": null
+   },
+   {
+    "sample_id": "high_school_world_history/test/5",
+    "position": 5,
+    "holds_position": null,
+    "how": "unresolved",
+    "key_fits_held": null,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": null
+   },
+   {
+    "sample_id": "high_school_world_history/test/6",
+    "position": 6,
+    "holds_position": 3,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/7",
+    "position": 7,
+    "holds_position": 4,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/8",
+    "position": 8,
+    "holds_position": 5,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/9",
+    "position": 9,
+    "holds_position": 6,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/10",
+    "position": 10,
+    "holds_position": 7,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/11",
+    "position": 11,
+    "holds_position": 8,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/12",
+    "position": 12,
+    "holds_position": 9,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/13",
+    "position": 13,
+    "holds_position": 10,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/14",
+    "position": 14,
+    "holds_position": 11,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/15",
+    "position": 15,
+    "holds_position": 12,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/16",
+    "position": 16,
+    "holds_position": 13,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/17",
+    "position": 17,
+    "holds_position": 14,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/18",
+    "position": 18,
+    "holds_position": 15,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/19",
+    "position": 19,
+    "holds_position": 16,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/20",
+    "position": 20,
+    "holds_position": 17,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/21",
+    "position": 21,
+    "holds_position": 18,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/22",
+    "position": 22,
+    "holds_position": 19,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/23",
+    "position": 23,
+    "holds_position": 20,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/24",
+    "position": 24,
+    "holds_position": 21,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/25",
+    "position": 25,
+    "holds_position": 22,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/26",
+    "position": 26,
+    "holds_position": 23,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/27",
+    "position": 27,
+    "holds_position": 24,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/28",
+    "position": 28,
+    "holds_position": 25,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/29",
+    "position": 29,
+    "holds_position": 26,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/30",
+    "position": 30,
+    "holds_position": 27,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/31",
+    "position": 31,
+    "holds_position": 28,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/32",
+    "position": 32,
+    "holds_position": 29,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/33",
+    "position": 33,
+    "holds_position": 30,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/34",
+    "position": 34,
+    "holds_position": 31,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/35",
+    "position": 35,
+    "holds_position": 32,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/36",
+    "position": 36,
+    "holds_position": 33,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/37",
+    "position": 37,
+    "holds_position": 34,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/38",
+    "position": 38,
+    "holds_position": 35,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/39",
+    "position": 39,
+    "holds_position": 36,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/40",
+    "position": 40,
+    "holds_position": 37,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/41",
+    "position": 41,
+    "holds_position": 38,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/42",
+    "position": 42,
+    "holds_position": 39,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/43",
+    "position": 43,
+    "holds_position": 40,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/44",
+    "position": 44,
+    "holds_position": 41,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/45",
+    "position": 45,
+    "holds_position": 42,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/46",
+    "position": 46,
+    "holds_position": 43,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/47",
+    "position": 47,
+    "holds_position": 44,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/48",
+    "position": 48,
+    "holds_position": 45,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/49",
+    "position": 49,
+    "holds_position": 46,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/50",
+    "position": 50,
+    "holds_position": 47,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/51",
+    "position": 51,
+    "holds_position": 48,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/52",
+    "position": 52,
+    "holds_position": 49,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/53",
+    "position": 53,
+    "holds_position": 50,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/54",
+    "position": 54,
+    "holds_position": 51,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/55",
+    "position": 55,
+    "holds_position": 52,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/56",
+    "position": 56,
+    "holds_position": 53,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/57",
+    "position": 57,
+    "holds_position": 54,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/58",
+    "position": 58,
+    "holds_position": 55,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/59",
+    "position": 59,
+    "holds_position": 56,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/60",
+    "position": 60,
+    "holds_position": 57,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/61",
+    "position": 61,
+    "holds_position": 58,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/62",
+    "position": 62,
+    "holds_position": 59,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/63",
+    "position": 63,
+    "holds_position": 60,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/64",
+    "position": 64,
+    "holds_position": 61,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/65",
+    "position": 65,
+    "holds_position": 62,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/66",
+    "position": 66,
+    "holds_position": 63,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/67",
+    "position": 67,
+    "holds_position": 64,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/68",
+    "position": 68,
+    "holds_position": 65,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/69",
+    "position": 69,
+    "holds_position": 66,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/70",
+    "position": 70,
+    "holds_position": 67,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/71",
+    "position": 71,
+    "holds_position": 68,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/72",
+    "position": 72,
+    "holds_position": 69,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/73",
+    "position": 73,
+    "holds_position": 70,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/74",
+    "position": 74,
+    "holds_position": 71,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/75",
+    "position": 75,
+    "holds_position": 72,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/76",
+    "position": 76,
+    "holds_position": 73,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/77",
+    "position": 77,
+    "holds_position": 74,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/78",
+    "position": 78,
+    "holds_position": 75,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/79",
+    "position": 79,
+    "holds_position": 76,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/80",
+    "position": 80,
+    "holds_position": 77,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/81",
+    "position": 81,
+    "holds_position": 78,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/82",
+    "position": 82,
+    "holds_position": 79,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/83",
+    "position": 83,
+    "holds_position": 80,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/84",
+    "position": 84,
+    "holds_position": 81,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/85",
+    "position": 85,
+    "holds_position": 82,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/86",
+    "position": 86,
+    "holds_position": 83,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/87",
+    "position": 87,
+    "holds_position": 84,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/88",
+    "position": 88,
+    "holds_position": 85,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/89",
+    "position": 89,
+    "holds_position": 86,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/90",
+    "position": 90,
+    "holds_position": 87,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/91",
+    "position": 91,
+    "holds_position": 88,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/92",
+    "position": 92,
+    "holds_position": 89,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/93",
+    "position": 93,
+    "holds_position": 90,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/94",
+    "position": 94,
+    "holds_position": 91,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/95",
+    "position": 95,
+    "holds_position": 92,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/96",
+    "position": 96,
+    "holds_position": 93,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/97",
+    "position": 97,
+    "holds_position": 94,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/98",
+    "position": 98,
+    "holds_position": 95,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/99",
+    "position": 99,
+    "holds_position": 96,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/100",
+    "position": 100,
+    "holds_position": 97,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/101",
+    "position": 101,
+    "holds_position": 98,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/102",
+    "position": 102,
+    "holds_position": 99,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/103",
+    "position": 103,
+    "holds_position": 100,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/104",
+    "position": 104,
+    "holds_position": 101,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/105",
+    "position": 105,
+    "holds_position": 102,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/106",
+    "position": 106,
+    "holds_position": 103,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/107",
+    "position": 107,
+    "holds_position": 104,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/108",
+    "position": 108,
+    "holds_position": 105,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/109",
+    "position": 109,
+    "holds_position": 106,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/110",
+    "position": 110,
+    "holds_position": 107,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/111",
+    "position": 111,
+    "holds_position": 108,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/112",
+    "position": 112,
+    "holds_position": 109,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/113",
+    "position": 113,
+    "holds_position": 110,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/114",
+    "position": 114,
+    "holds_position": 111,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/115",
+    "position": 115,
+    "holds_position": 112,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/116",
+    "position": 116,
+    "holds_position": 113,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/117",
+    "position": 117,
+    "holds_position": 114,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/118",
+    "position": 118,
+    "holds_position": 115,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/119",
+    "position": 119,
+    "holds_position": 116,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/120",
+    "position": 120,
+    "holds_position": 117,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/121",
+    "position": 121,
+    "holds_position": 118,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/122",
+    "position": 122,
+    "holds_position": 119,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/123",
+    "position": 123,
+    "holds_position": 120,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/124",
+    "position": 124,
+    "holds_position": 121,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/125",
+    "position": 125,
+    "holds_position": 122,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/126",
+    "position": 126,
+    "holds_position": 123,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/127",
+    "position": 127,
+    "holds_position": 124,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/128",
+    "position": 128,
+    "holds_position": 125,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/129",
+    "position": 129,
+    "holds_position": 126,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/130",
+    "position": 130,
+    "holds_position": 127,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/131",
+    "position": 131,
+    "holds_position": 128,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/132",
+    "position": 132,
+    "holds_position": 129,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/133",
+    "position": 133,
+    "holds_position": 130,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/134",
+    "position": 134,
+    "holds_position": 131,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/135",
+    "position": 135,
+    "holds_position": 132,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/136",
+    "position": 136,
+    "holds_position": 133,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/137",
+    "position": 137,
+    "holds_position": 134,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/138",
+    "position": 138,
+    "holds_position": 135,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/139",
+    "position": 139,
+    "holds_position": 136,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/140",
+    "position": 140,
+    "holds_position": 137,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/141",
+    "position": 141,
+    "holds_position": 138,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/142",
+    "position": 142,
+    "holds_position": 139,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/143",
+    "position": 143,
+    "holds_position": 140,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/144",
+    "position": 144,
+    "holds_position": 141,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/145",
+    "position": 145,
+    "holds_position": 142,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/146",
+    "position": 146,
+    "holds_position": 143,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/147",
+    "position": 147,
+    "holds_position": 144,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/148",
+    "position": 148,
+    "holds_position": 145,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/149",
+    "position": 149,
+    "holds_position": 146,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/150",
+    "position": 150,
+    "holds_position": 147,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/151",
+    "position": 151,
+    "holds_position": 148,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/152",
+    "position": 152,
+    "holds_position": 149,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/153",
+    "position": 153,
+    "holds_position": 150,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/154",
+    "position": 154,
+    "holds_position": 151,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/155",
+    "position": 155,
+    "holds_position": 152,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/156",
+    "position": 156,
+    "holds_position": 153,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/157",
+    "position": 157,
+    "holds_position": 154,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/158",
+    "position": 158,
+    "holds_position": 155,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/159",
+    "position": 159,
+    "holds_position": 156,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/160",
+    "position": 160,
+    "holds_position": 157,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/161",
+    "position": 161,
+    "holds_position": 159,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/162",
+    "position": 162,
+    "holds_position": 160,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/163",
+    "position": 163,
+    "holds_position": 161,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/164",
+    "position": 164,
+    "holds_position": 162,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/165",
+    "position": 165,
+    "holds_position": 163,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/166",
+    "position": 166,
+    "holds_position": 164,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/167",
+    "position": 167,
+    "holds_position": 165,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/168",
+    "position": 168,
+    "holds_position": 166,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/169",
+    "position": 169,
+    "holds_position": 167,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/170",
+    "position": 170,
+    "holds_position": 168,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/171",
+    "position": 171,
+    "holds_position": 169,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/172",
+    "position": 172,
+    "holds_position": 170,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/173",
+    "position": 173,
+    "holds_position": 171,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/174",
+    "position": 174,
+    "holds_position": 172,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/175",
+    "position": 175,
+    "holds_position": 173,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/176",
+    "position": 176,
+    "holds_position": 174,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/177",
+    "position": 177,
+    "holds_position": 175,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/178",
+    "position": 178,
+    "holds_position": 176,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/179",
+    "position": 179,
+    "holds_position": 177,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/180",
+    "position": 180,
+    "holds_position": 178,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/181",
+    "position": 181,
+    "holds_position": 179,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/182",
+    "position": 182,
+    "holds_position": 180,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/183",
+    "position": 183,
+    "holds_position": 181,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/184",
+    "position": 184,
+    "holds_position": 182,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/185",
+    "position": 185,
+    "holds_position": 183,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/186",
+    "position": 186,
+    "holds_position": 184,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/187",
+    "position": 187,
+    "holds_position": 185,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/188",
+    "position": 188,
+    "holds_position": 186,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/189",
+    "position": 189,
+    "holds_position": 187,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/190",
+    "position": 190,
+    "holds_position": 188,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/191",
+    "position": 191,
+    "holds_position": 189,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/192",
+    "position": 192,
+    "holds_position": 190,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/193",
+    "position": 193,
+    "holds_position": 191,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/194",
+    "position": 194,
+    "holds_position": 192,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/195",
+    "position": 195,
+    "holds_position": 193,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/196",
+    "position": 196,
+    "holds_position": 194,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/197",
+    "position": 197,
+    "holds_position": 195,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/198",
+    "position": 198,
+    "holds_position": 196,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/199",
+    "position": 199,
+    "holds_position": 197,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/200",
+    "position": 200,
+    "holds_position": null,
+    "how": "unresolved",
+    "key_fits_held": null,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": null
+   },
+   {
+    "sample_id": "high_school_world_history/test/201",
+    "position": 201,
+    "holds_position": null,
+    "how": "unresolved",
+    "key_fits_held": null,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": null
+   },
+   {
+    "sample_id": "high_school_world_history/test/202",
+    "position": 202,
+    "holds_position": 201,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/203",
+    "position": 203,
+    "holds_position": 202,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/204",
+    "position": 204,
+    "holds_position": 203,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/205",
+    "position": 205,
+    "holds_position": 204,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/206",
+    "position": 206,
+    "holds_position": 205,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/207",
+    "position": 207,
+    "holds_position": 206,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/208",
+    "position": 208,
+    "holds_position": 207,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/209",
+    "position": 209,
+    "holds_position": 208,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/210",
+    "position": 210,
+    "holds_position": 209,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/211",
+    "position": 211,
+    "holds_position": 210,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/212",
+    "position": 212,
+    "holds_position": 211,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/213",
+    "position": 213,
+    "holds_position": 212,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/214",
+    "position": 214,
+    "holds_position": 213,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/215",
+    "position": 215,
+    "holds_position": 214,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/216",
+    "position": 216,
+    "holds_position": 215,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/217",
+    "position": 217,
+    "holds_position": 216,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/218",
+    "position": 218,
+    "holds_position": 217,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/219",
+    "position": 219,
+    "holds_position": 218,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/220",
+    "position": 220,
+    "holds_position": 219,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/221",
+    "position": 221,
+    "holds_position": 220,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "CA",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/222",
+    "position": 222,
+    "holds_position": 221,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CA"
+   },
+   {
+    "sample_id": "high_school_world_history/test/223",
+    "position": 223,
+    "holds_position": 222,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/224",
+    "position": 224,
+    "holds_position": 223,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": false,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/225",
+    "position": 225,
+    "holds_position": 224,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/226",
+    "position": 226,
+    "holds_position": 225,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/227",
+    "position": 227,
+    "holds_position": 227,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "CS",
+    "label_of_held": "CS"
+   },
+   {
+    "sample_id": "high_school_world_history/test/228",
+    "position": 228,
+    "holds_position": 228,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/229",
+    "position": 229,
+    "holds_position": 229,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/230",
+    "position": 230,
+    "holds_position": 230,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/231",
+    "position": 231,
+    "holds_position": 231,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/232",
+    "position": 232,
+    "holds_position": 232,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/233",
+    "position": 233,
+    "holds_position": 233,
+    "how": "neighbours",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/234",
+    "position": 234,
+    "holds_position": 234,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/235",
+    "position": 235,
+    "holds_position": 235,
+    "how": "fingerprint",
+    "key_fits_held": true,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": "-"
+   },
+   {
+    "sample_id": "high_school_world_history/test/236",
+    "position": 236,
+    "holds_position": null,
+    "how": "unresolved",
+    "key_fits_held": null,
+    "key_fits_own_position": true,
+    "label_on_row": "-",
+    "label_of_held": null
+   }
+  ]
+ },
+ "fields": "position = the row's sample_id index; holds_position = index of the English question the row holds (null = unresolved); how = fingerprint | neighbours | unresolved"
+}

@@ -1,0 +1,3852 @@
+{
+ "audit": 72,
+ "slug": "mcq-global-mmlu-row-alignment",
+ "dataset": "Global-MMLU (CohereLabs/Global-MMLU, Apache-2.0; Singh et al. 2024, arXiv 2412.03304) and Global-MMLU-Lite (CohereLabs/Global-MMLU-Lite, Apache-2.0), every language config, split test, read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Rows are matched to English only by the digit runs (3+ digits) in question and options, order-preserving within a fingerprint. Only aggregates are written: no question or option text.",
+ "fixture_target_met": true,
+ "english_fingerprints": {
+  "rows": 14042,
+  "with_fingerprint": 3372,
+  "focus_subject_rows": 237,
+  "focus_subject_with_fingerprint": 205
+ },
+ "languages": {
+  "en": {
+   "tally": {
+    "n_rows": 14042,
+    "reference": true
+   }
+  },
+  "am": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9913869913869914,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "medical_genetics",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.9333333333333333,
+      "pairs": 15
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.9459459459459459,
+      "pairs": 111
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10675,
+    "count_differs": 230,
+    "mapped": 3137,
+    "aligned": 3137,
+    "misaligned": 0,
+    "same_id_fp_both": 3367,
+    "same_id_fp_agree": 3338,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "ar": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.8846979454155167,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "prehistory",
+      "agreement": 0.37037037037037035,
+      "pairs": 54
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.44036697247706424,
+      "pairs": 109
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.6,
+      "pairs": 15
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10780,
+    "count_differs": 607,
+    "mapped": 2655,
+    "aligned": 2651,
+    "misaligned": 4,
+    "same_id_fp_both": 3261,
+    "same_id_fp_agree": 2885,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 4,
+    "mis_label_wrong_for_content": 1,
+    "mis_label_differs": 1,
+    "mis_label_follows_id": 1,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 1,
+    "mis_annot_follows_id": 1,
+    "mis_knowledge_differs": 1,
+    "mis_knowledge_follows_id": 1
+   },
+   "cells": {
+    "prehistory": {
+     "n": 324,
+     "no_fingerprint": 270,
+     "count_differs": 38,
+     "mapped": 16,
+     "aligned": 15,
+     "misaligned": 1,
+     "same_id_fp_both": 54,
+     "same_id_fp_agree": 20,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 1,
+     "mis_label_differs": 1,
+     "mis_label_follows_id": 1,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 1,
+     "mis_annot_follows_id": 1,
+     "mis_knowledge_differs": 1,
+     "mis_knowledge_follows_id": 1,
+     "label_wrong_detail": {
+      "CA|-": 1
+     },
+     "offsets": {
+      "-8": 1
+     }
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1091,
+     "count_differs": 280,
+     "mapped": 163,
+     "aligned": 160,
+     "misaligned": 3,
+     "same_id_fp_both": 442,
+     "same_id_fp_agree": 318,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 3,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "46": 1,
+      "-68": 1,
+      "-93": 1
+     }
+    }
+   }
+  },
+  "bn": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9872365687147522,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "college_physics",
+      "agreement": 0.9032258064516129,
+      "pairs": 31
+     },
+     {
+      "subject": "medical_genetics",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     },
+     {
+      "subject": "high_school_psychology",
+      "agreement": 0.9285714285714286,
+      "pairs": 14
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10671,
+    "count_differs": 221,
+    "mapped": 3150,
+    "aligned": 3150,
+    "misaligned": 0,
+    "same_id_fp_both": 3369,
+    "same_id_fp_agree": 3326,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "cs": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9399698340874811,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5495495495495496,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.75,
+      "pairs": 32
+     },
+     {
+      "subject": "astronomy",
+      "agreement": 0.8333333333333334,
+      "pairs": 24
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10724,
+    "count_differs": 472,
+    "mapped": 2846,
+    "aligned": 2846,
+    "misaligned": 0,
+    "same_id_fp_both": 3315,
+    "same_id_fp_agree": 3116,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "de": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9495823389021479,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5135135135135135,
+      "pairs": 111
+     },
+     {
+      "subject": "college_medicine",
+      "agreement": 0.5625,
+      "pairs": 16
+     },
+     {
+      "subject": "professional_medicine",
+      "agreement": 0.6511627906976745,
+      "pairs": 129
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10684,
+    "count_differs": 1291,
+    "mapped": 2067,
+    "aligned": 2067,
+    "misaligned": 0,
+    "same_id_fp_both": 3352,
+    "same_id_fp_agree": 3183,
+    "key_differs_same_id": 5,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 5,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "human_aging": {
+     "n": 223,
+     "no_fingerprint": 220,
+     "count_differs": 0,
+     "mapped": 3,
+     "aligned": 3,
+     "misaligned": 0,
+     "same_id_fp_both": 3,
+     "same_id_fp_agree": 3,
+     "key_differs_same_id": 3,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 3,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "jurisprudence": {
+     "n": 108,
+     "no_fingerprint": 105,
+     "count_differs": 0,
+     "mapped": 3,
+     "aligned": 3,
+     "misaligned": 0,
+     "same_id_fp_both": 3,
+     "same_id_fp_agree": 3,
+     "key_differs_same_id": 2,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 2,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    }
+   }
+  },
+  "el": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9913895486935868,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.8828828828828829,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.90625,
+      "pairs": 32
+     },
+     {
+      "subject": "astronomy",
+      "agreement": 0.96,
+      "pairs": 25
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10674,
+    "count_differs": 243,
+    "mapped": 3125,
+    "aligned": 3125,
+    "misaligned": 0,
+    "same_id_fp_both": 3368,
+    "same_id_fp_agree": 3339,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "es": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.8863771564544913,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.38738738738738737,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.4375,
+      "pairs": 32
+     },
+     {
+      "subject": "prehistory",
+      "agreement": 0.696969696969697,
+      "pairs": 66
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10660,
+    "count_differs": 632,
+    "mapped": 2750,
+    "aligned": 2750,
+    "misaligned": 0,
+    "same_id_fp_both": 3362,
+    "same_id_fp_agree": 2980,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "fa": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.8209088209088209,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "prehistory",
+      "agreement": 0.21212121212121213,
+      "pairs": 66
+     },
+     {
+      "subject": "professional_law",
+      "agreement": 0.33260869565217394,
+      "pairs": 460
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.38738738738738737,
+      "pairs": 111
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10674,
+    "count_differs": 632,
+    "mapped": 2736,
+    "aligned": 2733,
+    "misaligned": 3,
+    "same_id_fp_both": 3367,
+    "same_id_fp_agree": 2764,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 3,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1073,
+     "count_differs": 332,
+     "mapped": 129,
+     "aligned": 126,
+     "misaligned": 3,
+     "same_id_fp_both": 460,
+     "same_id_fp_agree": 153,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 3,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "148": 1,
+      "230": 1,
+      "20": 1
+     }
+    }
+   }
+  },
+  "fil": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9979234648472264,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_european_history",
+      "agreement": 0.9878787878787879,
+      "pairs": 165
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.990990990990991,
+      "pairs": 111
+     },
+     {
+      "subject": "professional_law",
+      "agreement": 0.9913606911447084,
+      "pairs": 463
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10671,
+    "count_differs": 161,
+    "mapped": 3210,
+    "aligned": 3210,
+    "misaligned": 0,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3364,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "fr": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9245508982035928,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5135135135135135,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.53125,
+      "pairs": 32
+     },
+     {
+      "subject": "professional_medicine",
+      "agreement": 0.664179104477612,
+      "pairs": 134
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10690,
+    "count_differs": 1492,
+    "mapped": 1860,
+    "aligned": 1855,
+    "misaligned": 5,
+    "same_id_fp_both": 3340,
+    "same_id_fp_agree": 3088,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 5,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "high_school_statistics": {
+     "n": 216,
+     "no_fingerprint": 145,
+     "count_differs": 13,
+     "mapped": 58,
+     "aligned": 57,
+     "misaligned": 1,
+     "same_id_fp_both": 71,
+     "same_id_fp_agree": 58,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-43": 1
+     }
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1071,
+     "count_differs": 268,
+     "mapped": 195,
+     "aligned": 191,
+     "misaligned": 4,
+     "same_id_fp_both": 457,
+     "same_id_fp_agree": 431,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 4,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "70": 1,
+      "243": 1,
+      "242": 1,
+      "276": 1
+     }
+    }
+   }
+  },
+  "ha": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9875407890833581,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_statistics",
+      "agreement": 0.9014084507042254,
+      "pairs": 71
+     },
+     {
+      "subject": "high_school_computer_science",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     },
+     {
+      "subject": "medical_genetics",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10653,
+    "count_differs": 294,
+    "mapped": 3095,
+    "aligned": 3095,
+    "misaligned": 0,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3329,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "he": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9741119807344973,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.7657657657657657,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.8125,
+      "pairs": 32
+     },
+     {
+      "subject": "marketing",
+      "agreement": 0.8181818181818182,
+      "pairs": 11
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10720,
+    "count_differs": 309,
+    "mapped": 3013,
+    "aligned": 3013,
+    "misaligned": 0,
+    "same_id_fp_both": 3322,
+    "same_id_fp_agree": 3236,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "hi": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9964391691394658,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "public_relations",
+      "agreement": 0.9047619047619048,
+      "pairs": 21
+     },
+     {
+      "subject": "college_chemistry",
+      "agreement": 0.9411764705882353,
+      "pairs": 34
+     },
+     {
+      "subject": "college_physics",
+      "agreement": 0.967741935483871,
+      "pairs": 31
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10669,
+    "count_differs": 142,
+    "mapped": 3231,
+    "aligned": 3231,
+    "misaligned": 0,
+    "same_id_fp_both": 3370,
+    "same_id_fp_agree": 3358,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "id": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9617324236131711,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5225225225225225,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.53125,
+      "pairs": 32
+     },
+     {
+      "subject": "astronomy",
+      "agreement": 0.76,
+      "pairs": 25
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10667,
+    "count_differs": 1256,
+    "mapped": 2119,
+    "aligned": 2119,
+    "misaligned": 0,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3242,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "ig": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.993766696349065,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "medical_genetics",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.9333333333333333,
+      "pairs": 15
+     },
+     {
+      "subject": "astronomy",
+      "agreement": 0.96,
+      "pairs": 25
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10672,
+    "count_differs": 179,
+    "mapped": 3191,
+    "aligned": 3172,
+    "misaligned": 19,
+    "same_id_fp_both": 3369,
+    "same_id_fp_agree": 3348,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 6,
+    "mis_key_equals_id": 19,
+    "mis_label_wrong_for_content": 2,
+    "mis_label_differs": 2,
+    "mis_label_follows_id": 2,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 2,
+    "mis_annot_follows_id": 2,
+    "mis_knowledge_differs": 2,
+    "mis_knowledge_follows_id": 2
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1072,
+     "count_differs": 163,
+     "mapped": 299,
+     "aligned": 280,
+     "misaligned": 19,
+     "same_id_fp_both": 462,
+     "same_id_fp_agree": 453,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 6,
+     "mis_key_equals_id": 19,
+     "mis_label_wrong_for_content": 2,
+     "mis_label_differs": 2,
+     "mis_label_follows_id": 2,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 2,
+     "mis_annot_follows_id": 2,
+     "mis_knowledge_differs": 2,
+     "mis_knowledge_follows_id": 2,
+     "label_wrong_detail": {
+      "-|CA": 1,
+      "CA|-": 1
+     },
+     "offsets": {
+      "98": 1,
+      "42": 1,
+      "30": 1,
+      "10": 1,
+      "62": 1,
+      "86": 1,
+      "24": 1,
+      "79": 1,
+      "29": 1,
+      "17": 1,
+      "54": 1,
+      "220": 1,
+      "33": 1,
+      "65": 1,
+      "101": 1,
+      "15": 2,
+      "18": 1,
+      "3": 1
+     }
+    }
+   }
+  },
+  "it": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9386281588447654,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5405405405405406,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.5625,
+      "pairs": 32
+     },
+     {
+      "subject": "conceptual_physics",
+      "agreement": 0.7333333333333333,
+      "pairs": 15
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10711,
+    "count_differs": 439,
+    "mapped": 2892,
+    "aligned": 2874,
+    "misaligned": 18,
+    "same_id_fp_both": 3324,
+    "same_id_fp_agree": 3120,
+    "key_differs_same_id": 3,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 3,
+    "mis_key_equals_content": 7,
+    "mis_key_equals_id": 18,
+    "mis_label_wrong_for_content": 4,
+    "mis_label_differs": 4,
+    "mis_label_follows_id": 4,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 4,
+    "mis_annot_follows_id": 4,
+    "mis_knowledge_differs": 4,
+    "mis_knowledge_follows_id": 4
+   },
+   "cells": {
+    "jurisprudence": {
+     "n": 108,
+     "no_fingerprint": 106,
+     "count_differs": 1,
+     "mapped": 1,
+     "aligned": 1,
+     "misaligned": 0,
+     "same_id_fp_both": 2,
+     "same_id_fp_agree": 2,
+     "key_differs_same_id": 2,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 2,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1070,
+     "count_differs": 162,
+     "mapped": 302,
+     "aligned": 284,
+     "misaligned": 18,
+     "same_id_fp_both": 462,
+     "same_id_fp_agree": 445,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 7,
+     "mis_key_equals_id": 18,
+     "mis_label_wrong_for_content": 4,
+     "mis_label_differs": 4,
+     "mis_label_follows_id": 4,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 4,
+     "mis_annot_follows_id": 4,
+     "mis_knowledge_differs": 4,
+     "mis_knowledge_follows_id": 4,
+     "label_wrong_detail": {
+      "-|CS": 2,
+      "CS|-": 2
+     },
+     "offsets": {
+      "14": 1,
+      "10": 1,
+      "101": 1,
+      "59": 1,
+      "35": 1,
+      "45": 1,
+      "16": 1,
+      "51": 1,
+      "4": 1,
+      "27": 1,
+      "169": 1,
+      "73": 1,
+      "139": 1,
+      "12": 1,
+      "2": 1,
+      "115": 1,
+      "93": 1,
+      "147": 1
+     }
+    },
+    "public_relations": {
+     "n": 110,
+     "no_fingerprint": 90,
+     "count_differs": 0,
+     "mapped": 20,
+     "aligned": 20,
+     "misaligned": 0,
+     "same_id_fp_both": 20,
+     "same_id_fp_agree": 20,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    }
+   }
+  },
+  "ja": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9341155234657039,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5045045045045045,
+      "pairs": 111
+     },
+     {
+      "subject": "prehistory",
+      "agreement": 0.5283018867924528,
+      "pairs": 53
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.6774193548387096,
+      "pairs": 31
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10690,
+    "count_differs": 435,
+    "mapped": 2917,
+    "aligned": 2456,
+    "misaligned": 461,
+    "same_id_fp_both": 3324,
+    "same_id_fp_agree": 3105,
+    "key_differs_same_id": 1,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 1,
+    "mis_key_equals_content": 142,
+    "mis_key_equals_id": 461,
+    "mis_label_wrong_for_content": 58,
+    "mis_label_differs": 58,
+    "mis_label_follows_id": 58,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 57,
+    "mis_annot_follows_id": 57,
+    "mis_knowledge_differs": 60,
+    "mis_knowledge_follows_id": 60
+   },
+   "cells": {
+    "moral_scenarios": {
+     "n": 895,
+     "no_fingerprint": 0,
+     "count_differs": 3,
+     "mapped": 892,
+     "aligned": 539,
+     "misaligned": 353,
+     "same_id_fp_both": 895,
+     "same_id_fp_agree": 890,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 110,
+     "mis_key_equals_id": 353,
+     "mis_label_wrong_for_content": 46,
+     "mis_label_differs": 46,
+     "mis_label_follows_id": 46,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 46,
+     "mis_annot_follows_id": 46,
+     "mis_knowledge_differs": 48,
+     "mis_knowledge_follows_id": 48,
+     "label_wrong_detail": {
+      "CS|-": 23,
+      "-|CS": 23
+     },
+     "offsets": {
+      "-1": 208,
+      "1": 145
+     }
+    },
+    "prehistory": {
+     "n": 324,
+     "no_fingerprint": 264,
+     "count_differs": 41,
+     "mapped": 19,
+     "aligned": 17,
+     "misaligned": 2,
+     "same_id_fp_both": 53,
+     "same_id_fp_agree": 28,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 2,
+     "mis_label_wrong_for_content": 1,
+     "mis_label_differs": 1,
+     "mis_label_follows_id": 1,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 1,
+     "mis_annot_follows_id": 1,
+     "mis_knowledge_differs": 1,
+     "mis_knowledge_follows_id": 1,
+     "label_wrong_detail": {
+      "CS|-": 1
+     },
+     "offsets": {
+      "65": 1,
+      "205": 1
+     }
+    },
+    "professional_accounting": {
+     "n": 282,
+     "no_fingerprint": 169,
+     "count_differs": 71,
+     "mapped": 42,
+     "aligned": 41,
+     "misaligned": 1,
+     "same_id_fp_both": 111,
+     "same_id_fp_agree": 56,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 1,
+     "mis_label_differs": 1,
+     "mis_label_follows_id": 1,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 1,
+     "mis_annot_follows_id": 1,
+     "mis_knowledge_differs": 1,
+     "mis_knowledge_follows_id": 1,
+     "label_wrong_detail": {
+      "CS|-": 1
+     },
+     "offsets": {
+      "-3": 1
+     }
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1088,
+     "count_differs": 145,
+     "mapped": 301,
+     "aligned": 196,
+     "misaligned": 105,
+     "same_id_fp_both": 441,
+     "same_id_fp_agree": 414,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 30,
+     "mis_key_equals_id": 105,
+     "mis_label_wrong_for_content": 10,
+     "mis_label_differs": 10,
+     "mis_label_follows_id": 10,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 9,
+     "mis_annot_follows_id": 9,
+     "mis_knowledge_differs": 10,
+     "mis_knowledge_follows_id": 10,
+     "label_wrong_detail": {
+      "CA|-": 1,
+      "-|CA": 2,
+      "CS|-": 4,
+      "-|CS": 2,
+      "CA|CS": 1
+     },
+     "offsets": {
+      "-6": 3,
+      "-9": 5,
+      "-20": 2,
+      "-81": 1,
+      "-83": 1,
+      "-102": 1,
+      "-38": 1,
+      "-30": 3,
+      "-28": 1,
+      "-44": 1,
+      "-26": 4,
+      "-36": 2,
+      "-14": 3,
+      "-39": 1,
+      "-21": 2,
+      "-23": 2,
+      "-60": 1,
+      "-58": 1,
+      "-35": 1,
+      "-17": 3,
+      "-34": 1,
+      "-40": 1,
+      "-13": 1,
+      "-31": 2,
+      "-4": 3,
+      "-16": 1,
+      "-2": 5,
+      "-5": 2,
+      "-18": 3,
+      "-8": 3,
+      "-3": 5,
+      "-1": 3,
+      "-15": 2,
+      "-45": 1,
+      "-12": 3,
+      "-54": 1,
+      "-7": 2,
+      "-25": 1,
+      "-10": 1,
+      "74": 1,
+      "3": 3,
+      "9": 2,
+      "7": 1,
+      "14": 1,
+      "6": 3,
+      "44": 1,
+      "8": 2,
+      "35": 1,
+      "5": 2,
+      "2": 2,
+      "4": 1,
+      "1": 1,
+      "15": 1,
+      "17": 1,
+      "26": 1,
+      "22": 1
+     }
+    }
+   }
+  },
+  "ko": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9082929782082324,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_world_history",
+      "agreement": 0.3489583333333333,
+      "pairs": 192
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.4774774774774775,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.71875,
+      "pairs": 32
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10710,
+    "count_differs": 1386,
+    "mapped": 1946,
+    "aligned": 1832,
+    "misaligned": 114,
+    "same_id_fp_both": 3304,
+    "same_id_fp_agree": 3001,
+    "key_differs_same_id": 116,
+    "key_differs_misaligned": 89,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 27,
+    "mis_key_equals_content": 114,
+    "mis_key_equals_id": 25,
+    "mis_label_wrong_for_content": 37,
+    "mis_label_differs": 37,
+    "mis_label_follows_id": 37,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 35,
+    "mis_annot_follows_id": 35,
+    "mis_knowledge_differs": 40,
+    "mis_knowledge_follows_id": 40
+   },
+   "cells": {
+    "high_school_world_history": {
+     "n": 237,
+     "no_fingerprint": 32,
+     "count_differs": 26,
+     "mapped": 179,
+     "aligned": 66,
+     "misaligned": 113,
+     "same_id_fp_both": 192,
+     "same_id_fp_agree": 67,
+     "key_differs_same_id": 116,
+     "key_differs_misaligned": 89,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 27,
+     "mis_key_equals_content": 113,
+     "mis_key_equals_id": 24,
+     "mis_label_wrong_for_content": 36,
+     "mis_label_differs": 36,
+     "mis_label_follows_id": 36,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 34,
+     "mis_annot_follows_id": 34,
+     "mis_knowledge_differs": 39,
+     "mis_knowledge_follows_id": 39,
+     "label_wrong_detail": {
+      "-|CA": 7,
+      "CS|-": 11,
+      "-|CS": 9,
+      "CA|-": 7,
+      "CS|CA": 1,
+      "CA|CS": 1
+     },
+     "offsets": {
+      "66": 1,
+      "121": 1,
+      "147": 1,
+      "-3": 50,
+      "-2": 37,
+      "-1": 23
+     }
+    },
+    "professional_accounting": {
+     "n": 282,
+     "no_fingerprint": 169,
+     "count_differs": 74,
+     "mapped": 39,
+     "aligned": 38,
+     "misaligned": 1,
+     "same_id_fp_both": 111,
+     "same_id_fp_agree": 53,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 1,
+     "mis_label_differs": 1,
+     "mis_label_follows_id": 1,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 1,
+     "mis_annot_follows_id": 1,
+     "mis_knowledge_differs": 1,
+     "mis_knowledge_follows_id": 1,
+     "label_wrong_detail": {
+      "CS|-": 1
+     },
+     "offsets": {
+      "-3": 1
+     }
+    }
+   }
+  },
+  "ky": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9146087473966081,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.6666666666666666,
+      "pairs": 111
+     },
+     {
+      "subject": "professional_law",
+      "agreement": 0.6843267108167771,
+      "pairs": 453
+     },
+     {
+      "subject": "prehistory",
+      "agreement": 0.696969696969697,
+      "pairs": 66
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10680,
+    "count_differs": 477,
+    "mapped": 2885,
+    "aligned": 2885,
+    "misaligned": 0,
+    "same_id_fp_both": 3361,
+    "same_id_fp_agree": 3074,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "lt": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.8971205758848231,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.44144144144144143,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.53125,
+      "pairs": 32
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.6666666666666666,
+      "pairs": 15
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10707,
+    "count_differs": 543,
+    "mapped": 2792,
+    "aligned": 2792,
+    "misaligned": 0,
+    "same_id_fp_both": 3334,
+    "same_id_fp_agree": 2991,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "mg": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9821799821799821,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.8,
+      "pairs": 15
+     },
+     {
+      "subject": "medical_genetics",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     },
+     {
+      "subject": "college_physics",
+      "agreement": 0.9354838709677419,
+      "pairs": 31
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10673,
+    "count_differs": 285,
+    "mapped": 3084,
+    "aligned": 3084,
+    "misaligned": 0,
+    "same_id_fp_both": 3367,
+    "same_id_fp_agree": 3307,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "ms": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.999110056363097,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.990990990990991,
+      "pairs": 111
+     },
+     {
+      "subject": "professional_law",
+      "agreement": 0.9956803455723542,
+      "pairs": 463
+     },
+     {
+      "subject": "astronomy",
+      "agreement": 1.0,
+      "pairs": 25
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10671,
+    "count_differs": 157,
+    "mapped": 3214,
+    "aligned": 3214,
+    "misaligned": 0,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3368,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "ne": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9913767469521261,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "conceptual_physics",
+      "agreement": 0.8666666666666667,
+      "pairs": 15
+     },
+     {
+      "subject": "medical_genetics",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     },
+     {
+      "subject": "virology",
+      "agreement": 0.9230769230769231,
+      "pairs": 13
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10678,
+    "count_differs": 232,
+    "mapped": 3132,
+    "aligned": 3130,
+    "misaligned": 2,
+    "same_id_fp_both": 3363,
+    "same_id_fp_agree": 3334,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 2,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1076,
+     "count_differs": 212,
+     "mapped": 246,
+     "aligned": 244,
+     "misaligned": 2,
+     "same_id_fp_both": 458,
+     "same_id_fp_agree": 445,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 2,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-10": 1,
+      "-82": 1
+     }
+    }
+   }
+  },
+  "nl": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9659945832079446,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.7297297297297297,
+      "pairs": 111
+     },
+     {
+      "subject": "prehistory",
+      "agreement": 0.8333333333333334,
+      "pairs": 66
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.84375,
+      "pairs": 32
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10718,
+    "count_differs": 319,
+    "mapped": 3005,
+    "aligned": 3005,
+    "misaligned": 0,
+    "same_id_fp_both": 3323,
+    "same_id_fp_agree": 3210,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "ny": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9869436201780415,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_computer_science",
+      "agreement": 0.9166666666666666,
+      "pairs": 12
+     },
+     {
+      "subject": "security_studies",
+      "agreement": 0.92,
+      "pairs": 25
+     },
+     {
+      "subject": "nutrition",
+      "agreement": 0.9230769230769231,
+      "pairs": 13
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10652,
+    "count_differs": 212,
+    "mapped": 3178,
+    "aligned": 3131,
+    "misaligned": 47,
+    "same_id_fp_both": 3370,
+    "same_id_fp_agree": 3326,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 5,
+    "mis_key_equals_id": 47,
+    "mis_label_wrong_for_content": 5,
+    "mis_label_differs": 5,
+    "mis_label_follows_id": 5,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 4,
+    "mis_annot_follows_id": 4,
+    "mis_knowledge_differs": 5,
+    "mis_knowledge_follows_id": 5
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1069,
+     "count_differs": 104,
+     "mapped": 361,
+     "aligned": 314,
+     "misaligned": 47,
+     "same_id_fp_both": 463,
+     "same_id_fp_agree": 452,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 5,
+     "mis_key_equals_id": 47,
+     "mis_label_wrong_for_content": 5,
+     "mis_label_differs": 5,
+     "mis_label_follows_id": 5,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 4,
+     "mis_annot_follows_id": 4,
+     "mis_knowledge_differs": 5,
+     "mis_knowledge_follows_id": 5,
+     "label_wrong_detail": {
+      "-|CA": 1,
+      "CA|CS": 1,
+      "CS|-": 2,
+      "-|CS": 1
+     },
+     "offsets": {
+      "7": 4,
+      "35": 2,
+      "4": 6,
+      "22": 1,
+      "8": 5,
+      "20": 1,
+      "23": 1,
+      "12": 1,
+      "89": 1,
+      "3": 4,
+      "9": 2,
+      "14": 1,
+      "6": 1,
+      "44": 1,
+      "5": 3,
+      "2": 2,
+      "1": 5,
+      "27": 1,
+      "18": 3,
+      "15": 1,
+      "10": 1
+     }
+    }
+   }
+  },
+  "pl": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.8918022905364678,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5675675675675675,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.65625,
+      "pairs": 32
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.6666666666666666,
+      "pairs": 15
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10723,
+    "count_differs": 572,
+    "mapped": 2747,
+    "aligned": 2747,
+    "misaligned": 0,
+    "same_id_fp_both": 3318,
+    "same_id_fp_agree": 2959,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "pt": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9408748114630467,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.59375,
+      "pairs": 32
+     },
+     {
+      "subject": "conceptual_physics",
+      "agreement": 0.6,
+      "pairs": 15
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.7297297297297297,
+      "pairs": 111
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10720,
+    "count_differs": 1321,
+    "mapped": 2001,
+    "aligned": 1997,
+    "misaligned": 4,
+    "same_id_fp_both": 3315,
+    "same_id_fp_agree": 3119,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 4,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "high_school_statistics": {
+     "n": 216,
+     "no_fingerprint": 143,
+     "count_differs": 15,
+     "mapped": 58,
+     "aligned": 57,
+     "misaligned": 1,
+     "same_id_fp_both": 71,
+     "same_id_fp_agree": 58,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-43": 1
+     }
+    },
+    "prehistory": {
+     "n": 324,
+     "no_fingerprint": 259,
+     "count_differs": 5,
+     "mapped": 60,
+     "aligned": 57,
+     "misaligned": 3,
+     "same_id_fp_both": 65,
+     "same_id_fp_agree": 61,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 3,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-10": 1,
+      "-11": 1,
+      "-15": 1
+     }
+    }
+   }
+  },
+  "ro": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9827995255041518,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.6666666666666666,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.8125,
+      "pairs": 32
+     },
+     {
+      "subject": "virology",
+      "agreement": 0.9230769230769231,
+      "pairs": 13
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10670,
+    "count_differs": 244,
+    "mapped": 3128,
+    "aligned": 3128,
+    "misaligned": 0,
+    "same_id_fp_both": 3372,
+    "same_id_fp_agree": 3314,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "ru": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9165924606708222,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.6576576576576577,
+      "pairs": 111
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.6666666666666666,
+      "pairs": 15
+     },
+     {
+      "subject": "college_medicine",
+      "agreement": 0.6875,
+      "pairs": 16
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10673,
+    "count_differs": 448,
+    "mapped": 2921,
+    "aligned": 2921,
+    "misaligned": 0,
+    "same_id_fp_both": 3369,
+    "same_id_fp_agree": 3088,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "si": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9904988123515439,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_psychology",
+      "agreement": 0.9285714285714286,
+      "pairs": 14
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.9333333333333333,
+      "pairs": 15
+     },
+     {
+      "subject": "professional_law",
+      "agreement": 0.9521739130434783,
+      "pairs": 460
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10673,
+    "count_differs": 224,
+    "mapped": 3145,
+    "aligned": 3145,
+    "misaligned": 0,
+    "same_id_fp_both": 3368,
+    "same_id_fp_agree": 3336,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "sn": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9611060467942875,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.7096774193548387,
+      "pairs": 31
+     },
+     {
+      "subject": "college_medicine",
+      "agreement": 0.75,
+      "pairs": 16
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.7747747747747747,
+      "pairs": 111
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10746,
+    "count_differs": 387,
+    "mapped": 2909,
+    "aligned": 2901,
+    "misaligned": 8,
+    "same_id_fp_both": 3291,
+    "same_id_fp_agree": 3163,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 2,
+    "mis_key_equals_id": 8,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1117,
+     "count_differs": 272,
+     "mapped": 145,
+     "aligned": 137,
+     "misaligned": 8,
+     "same_id_fp_both": 417,
+     "same_id_fp_agree": 355,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 2,
+     "mis_key_equals_id": 8,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-230": 1,
+      "-20": 1,
+      "-112": 1,
+      "-137": 1,
+      "-655": 1,
+      "-243": 1,
+      "-53": 1,
+      "-400": 1
+     }
+    }
+   }
+  },
+  "so": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9928762243989314,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.9333333333333333,
+      "pairs": 15
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.9459459459459459,
+      "pairs": 111
+     },
+     {
+      "subject": "astronomy",
+      "agreement": 0.96,
+      "pairs": 25
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10672,
+    "count_differs": 69,
+    "mapped": 3301,
+    "aligned": 3259,
+    "misaligned": 42,
+    "same_id_fp_both": 3369,
+    "same_id_fp_agree": 3345,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 15,
+    "mis_key_equals_id": 42,
+    "mis_label_wrong_for_content": 2,
+    "mis_label_differs": 2,
+    "mis_label_follows_id": 2,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 2,
+    "mis_annot_follows_id": 2,
+    "mis_knowledge_differs": 2,
+    "mis_knowledge_follows_id": 2
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1073,
+     "count_differs": 53,
+     "mapped": 408,
+     "aligned": 366,
+     "misaligned": 42,
+     "same_id_fp_both": 461,
+     "same_id_fp_agree": 449,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 15,
+     "mis_key_equals_id": 42,
+     "mis_label_wrong_for_content": 2,
+     "mis_label_differs": 2,
+     "mis_label_follows_id": 2,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 2,
+     "mis_annot_follows_id": 2,
+     "mis_knowledge_differs": 2,
+     "mis_knowledge_follows_id": 2,
+     "label_wrong_detail": {
+      "CS|-": 1,
+      "-|CS": 1
+     },
+     "offsets": {
+      "-2": 6,
+      "-12": 3,
+      "-15": 3,
+      "-1": 5,
+      "-4": 1,
+      "-5": 4,
+      "-18": 2,
+      "-8": 2,
+      "-3": 3,
+      "-45": 2,
+      "-26": 2,
+      "-7": 1,
+      "-17": 1,
+      "-25": 1,
+      "-9": 1,
+      "-31": 1,
+      "-19": 1,
+      "-10": 2,
+      "-82": 1
+     }
+    }
+   }
+  },
+  "sr": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9818883610451307,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.7477477477477478,
+      "pairs": 111
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.8666666666666667,
+      "pairs": 15
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.875,
+      "pairs": 32
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10673,
+    "count_differs": 1176,
+    "mapped": 2193,
+    "aligned": 2193,
+    "misaligned": 0,
+    "same_id_fp_both": 3368,
+    "same_id_fp_agree": 3307,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "sv": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9647093712930012,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5855855855855856,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.78125,
+      "pairs": 32
+     },
+     {
+      "subject": "high_school_european_history",
+      "agreement": 0.8727272727272727,
+      "pairs": 165
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10631,
+    "count_differs": 399,
+    "mapped": 3012,
+    "aligned": 3012,
+    "misaligned": 0,
+    "same_id_fp_both": 3372,
+    "same_id_fp_agree": 3253,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "sw": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9854642539305843,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.7387387387387387,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_statistics",
+      "agreement": 0.9436619718309859,
+      "pairs": 71
+     },
+     {
+      "subject": "astronomy",
+      "agreement": 0.96,
+      "pairs": 25
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10670,
+    "count_differs": 205,
+    "mapped": 3167,
+    "aligned": 3167,
+    "misaligned": 0,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3322,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "te": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9967349361828436,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.954954954954955,
+      "pairs": 111
+     },
+     {
+      "subject": "electrical_engineering",
+      "agreement": 0.9565217391304348,
+      "pairs": 23
+     },
+     {
+      "subject": "professional_law",
+      "agreement": 0.9891540130151844,
+      "pairs": 461
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10673,
+    "count_differs": 56,
+    "mapped": 3313,
+    "aligned": 3311,
+    "misaligned": 2,
+    "same_id_fp_both": 3369,
+    "same_id_fp_agree": 3358,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 2,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1073,
+     "count_differs": 50,
+     "mapped": 411,
+     "aligned": 409,
+     "misaligned": 2,
+     "same_id_fp_both": 461,
+     "same_id_fp_agree": 456,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 2,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "7": 1,
+      "35": 1
+     }
+    }
+   }
+  },
+  "tr": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9824977751409077,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.6756756756756757,
+      "pairs": 111
+     },
+     {
+      "subject": "medical_genetics",
+      "agreement": 0.8333333333333334,
+      "pairs": 12
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.875,
+      "pairs": 32
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10671,
+    "count_differs": 83,
+    "mapped": 3288,
+    "aligned": 3243,
+    "misaligned": 45,
+    "same_id_fp_both": 3371,
+    "same_id_fp_agree": 3312,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 13,
+    "mis_key_equals_id": 45,
+    "mis_label_wrong_for_content": 2,
+    "mis_label_differs": 2,
+    "mis_label_follows_id": 2,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 2,
+    "mis_annot_follows_id": 2,
+    "mis_knowledge_differs": 2,
+    "mis_knowledge_follows_id": 2
+   },
+   "cells": {
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1071,
+     "count_differs": 7,
+     "mapped": 456,
+     "aligned": 411,
+     "misaligned": 45,
+     "same_id_fp_both": 463,
+     "same_id_fp_agree": 456,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 13,
+     "mis_key_equals_id": 45,
+     "mis_label_wrong_for_content": 2,
+     "mis_label_differs": 2,
+     "mis_label_follows_id": 2,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 2,
+     "mis_annot_follows_id": 2,
+     "mis_knowledge_differs": 2,
+     "mis_knowledge_follows_id": 2,
+     "label_wrong_detail": {
+      "CS|-": 1,
+      "-|CS": 1
+     },
+     "offsets": {
+      "-1": 4,
+      "-4": 2,
+      "-5": 4,
+      "-18": 2,
+      "-8": 4,
+      "-3": 3,
+      "-15": 2,
+      "-45": 2,
+      "-2": 4,
+      "-26": 2,
+      "-12": 3,
+      "-7": 2,
+      "-17": 2,
+      "-25": 1,
+      "-9": 2,
+      "-31": 1,
+      "-19": 1,
+      "-35": 1,
+      "-22": 1,
+      "-20": 1,
+      "-23": 1
+     }
+    }
+   }
+  },
+  "uk": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9017804154302671,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.4864864864864865,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.59375,
+      "pairs": 32
+     },
+     {
+      "subject": "college_computer_science",
+      "agreement": 0.6666666666666666,
+      "pairs": 15
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10672,
+    "count_differs": 522,
+    "mapped": 2848,
+    "aligned": 2848,
+    "misaligned": 0,
+    "same_id_fp_both": 3370,
+    "same_id_fp_agree": 3039,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "vi": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9863501483679525,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.6756756756756757,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_macroeconomics",
+      "agreement": 0.84375,
+      "pairs": 32
+     },
+     {
+      "subject": "college_physics",
+      "agreement": 0.967741935483871,
+      "pairs": 31
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10669,
+    "count_differs": 186,
+    "mapped": 3187,
+    "aligned": 3187,
+    "misaligned": 0,
+    "same_id_fp_both": 3370,
+    "same_id_fp_agree": 3324,
+    "key_differs_same_id": 0,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 0,
+    "mis_key_equals_content": 0,
+    "mis_key_equals_id": 0,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {}
+  },
+  "yo": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9857015192135835,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.9279279279279279,
+      "pairs": 111
+     },
+     {
+      "subject": "high_school_statistics",
+      "agreement": 0.9285714285714286,
+      "pairs": 70
+     },
+     {
+      "subject": "miscellaneous",
+      "agreement": 0.9397590361445783,
+      "pairs": 83
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10684,
+    "count_differs": 266,
+    "mapped": 3092,
+    "aligned": 3087,
+    "misaligned": 5,
+    "same_id_fp_both": 3357,
+    "same_id_fp_agree": 3309,
+    "key_differs_same_id": 2,
+    "key_differs_misaligned": 0,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 2,
+    "mis_key_equals_content": 1,
+    "mis_key_equals_id": 5,
+    "mis_label_wrong_for_content": 0,
+    "mis_label_differs": 0,
+    "mis_label_follows_id": 0,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 0,
+    "mis_annot_follows_id": 0,
+    "mis_knowledge_differs": 0,
+    "mis_knowledge_follows_id": 0
+   },
+   "cells": {
+    "business_ethics": {
+     "n": 100,
+     "no_fingerprint": 90,
+     "count_differs": 0,
+     "mapped": 10,
+     "aligned": 10,
+     "misaligned": 0,
+     "same_id_fp_both": 10,
+     "same_id_fp_agree": 10,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "human_aging": {
+     "n": 223,
+     "no_fingerprint": 221,
+     "count_differs": 1,
+     "mapped": 1,
+     "aligned": 1,
+     "misaligned": 0,
+     "same_id_fp_both": 2,
+     "same_id_fp_agree": 2,
+     "key_differs_same_id": 1,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 1,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 0,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {}
+    },
+    "miscellaneous": {
+     "n": 783,
+     "no_fingerprint": 699,
+     "count_differs": 13,
+     "mapped": 71,
+     "aligned": 70,
+     "misaligned": 1,
+     "same_id_fp_both": 83,
+     "same_id_fp_agree": 78,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "-11": 1
+     }
+    },
+    "professional_law": {
+     "n": 1534,
+     "no_fingerprint": 1079,
+     "count_differs": 225,
+     "mapped": 230,
+     "aligned": 226,
+     "misaligned": 4,
+     "same_id_fp_both": 455,
+     "same_id_fp_agree": 434,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 4,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "41": 1,
+      "117": 1,
+      "27": 1,
+      "60": 1
+     }
+    }
+   }
+  },
+  "zh": {
+   "tally": {
+    "n_rows": 14042,
+    "missing_in_reference": 0,
+    "duplicate_ids": 0,
+    "fp_agreement_pooled": 0.9043004239854634,
+    "fp_agreement_lowest_cells": [
+     {
+      "subject": "high_school_world_history",
+      "agreement": 0.05,
+      "pairs": 180
+     },
+     {
+      "subject": "professional_accounting",
+      "agreement": 0.5555555555555556,
+      "pairs": 108
+     },
+     {
+      "subject": "college_medicine",
+      "agreement": 0.625,
+      "pairs": 16
+     }
+    ]
+   },
+   "total": {
+    "n": 14042,
+    "no_fingerprint": 10696,
+    "count_differs": 1368,
+    "mapped": 1978,
+    "aligned": 1795,
+    "misaligned": 183,
+    "same_id_fp_both": 3302,
+    "same_id_fp_agree": 2986,
+    "key_differs_same_id": 176,
+    "key_differs_misaligned": 138,
+    "key_differs_aligned": 0,
+    "key_differs_unmapped": 38,
+    "mis_key_equals_content": 181,
+    "mis_key_equals_id": 45,
+    "mis_label_wrong_for_content": 63,
+    "mis_label_differs": 63,
+    "mis_label_follows_id": 63,
+    "mis_label_follows_content": 0,
+    "mis_annot_differs": 56,
+    "mis_annot_follows_id": 56,
+    "mis_knowledge_differs": 66,
+    "mis_knowledge_follows_id": 66
+   },
+   "cells": {
+    "high_school_world_history": {
+     "n": 237,
+     "no_fingerprint": 34,
+     "count_differs": 15,
+     "mapped": 188,
+     "aligned": 8,
+     "misaligned": 180,
+     "same_id_fp_both": 180,
+     "same_id_fp_agree": 9,
+     "key_differs_same_id": 176,
+     "key_differs_misaligned": 138,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 38,
+     "mis_key_equals_content": 180,
+     "mis_key_equals_id": 42,
+     "mis_label_wrong_for_content": 62,
+     "mis_label_differs": 62,
+     "mis_label_follows_id": 62,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 55,
+     "mis_annot_follows_id": 55,
+     "mis_knowledge_differs": 65,
+     "mis_knowledge_follows_id": 65,
+     "label_wrong_detail": {
+      "-|CS": 20,
+      "CS|-": 18,
+      "CA|-": 9,
+      "-|CA": 8,
+      "CS|CA": 4,
+      "CA|CS": 3
+     },
+     "offsets": {
+      "157": 1,
+      "198": 1,
+      "223": 1,
+      "-3": 125,
+      "-2": 30,
+      "-1": 22
+     }
+    },
+    "medical_genetics": {
+     "n": 100,
+     "no_fingerprint": 91,
+     "count_differs": 1,
+     "mapped": 8,
+     "aligned": 7,
+     "misaligned": 1,
+     "same_id_fp_both": 9,
+     "same_id_fp_agree": 7,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 0,
+     "mis_key_equals_id": 1,
+     "mis_label_wrong_for_content": 0,
+     "mis_label_differs": 0,
+     "mis_label_follows_id": 0,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 0,
+     "mis_annot_follows_id": 0,
+     "mis_knowledge_differs": 0,
+     "mis_knowledge_follows_id": 0,
+     "label_wrong_detail": {},
+     "offsets": {
+      "12": 1
+     }
+    },
+    "professional_accounting": {
+     "n": 282,
+     "no_fingerprint": 172,
+     "count_differs": 62,
+     "mapped": 48,
+     "aligned": 46,
+     "misaligned": 2,
+     "same_id_fp_both": 108,
+     "same_id_fp_agree": 60,
+     "key_differs_same_id": 0,
+     "key_differs_misaligned": 0,
+     "key_differs_aligned": 0,
+     "key_differs_unmapped": 0,
+     "mis_key_equals_content": 1,
+     "mis_key_equals_id": 2,
+     "mis_label_wrong_for_content": 1,
+     "mis_label_differs": 1,
+     "mis_label_follows_id": 1,
+     "mis_label_follows_content": 0,
+     "mis_annot_differs": 1,
+     "mis_annot_follows_id": 1,
+     "mis_knowledge_differs": 1,
+     "mis_knowledge_follows_id": 1,
+     "label_wrong_detail": {
+      "CS|-": 1
+     },
+     "offsets": {
+      "-3": 1,
+      "43": 1
+     }
+    }
+   }
+  }
+ },
+ "flagged_cells": [
+  "ig|professional_law",
+  "it|professional_law",
+  "ja|moral_scenarios",
+  "ja|professional_law",
+  "ko|high_school_world_history",
+  "ny|professional_law",
+  "sn|professional_law",
+  "so|professional_law",
+  "tr|professional_law",
+  "zh|high_school_world_history"
+ ],
+ "zh_ko_focus_content_agreement": {
+  "both_mapped": 149,
+  "same_content": 53,
+  "both_misaligned": 98,
+  "both_misaligned_same_content": 45
+ },
+ "lite": {
+  "en": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "ar": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "bn": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "cs": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "de": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "es": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "fr": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "hi": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "id": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "it": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 387,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 1,
+   "on_misaligned_identical_to_full": 1,
+   "on_misaligned_key_equals_en_same_id": 1,
+   "on_misaligned_fp_equals_en_same_id": 1
+  },
+  "ja": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 2,
+   "on_misaligned_identical_to_full": 2,
+   "on_misaligned_key_equals_en_same_id": 2,
+   "on_misaligned_fp_equals_en_same_id": 2
+  },
+  "ko": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 4,
+   "on_misaligned_identical_to_full": 4,
+   "on_misaligned_key_equals_en_same_id": 2,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "pt": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "sw": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "yo": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 0,
+   "on_misaligned_identical_to_full": 0,
+   "on_misaligned_key_equals_en_same_id": 0,
+   "on_misaligned_fp_equals_en_same_id": 0
+  },
+  "zh": {
+   "n": 400,
+   "not_in_full": 0,
+   "identical_to_full": 400,
+   "key_equal_full": 400,
+   "label_equal_full": 400,
+   "on_misaligned_ids": 8,
+   "on_misaligned_identical_to_full": 8,
+   "on_misaligned_key_equals_en_same_id": 3,
+   "on_misaligned_fp_equals_en_same_id": 0
+  }
+ },
+ "parquet_shards": {
+  "en": [
+   {
+    "sha256": "5baec81ba97243728cc9557b2cba2f03aaeedf8232473db9f20cf995c6b0a1a9",
+    "bytes": 3910925
+   }
+  ],
+  "am": [
+   {
+    "sha256": "ccef9ac613fc1dad87da6c6f5fd06cb46f80d8a907835527b84b52c242383c68",
+    "bytes": 5075206
+   }
+  ],
+  "ar": [
+   {
+    "sha256": "e969c186f001c7548d54b420b2ddf7ae1d4abfce5720680eadcc4e8a48d0f61b",
+    "bytes": 4854848
+   }
+  ],
+  "bn": [
+   {
+    "sha256": "49b6d5ee0df9b5a706f7e104469ff787440b12011de330059b3f2c0100c50285",
+    "bytes": 6200091
+   }
+  ],
+  "cs": [
+   {
+    "sha256": "a41725cff0f27fe136f6870778e62d90de2b8966bc96bbe5328f88f3e5d1e67c",
+    "bytes": 4271546
+   }
+  ],
+  "de": [
+   {
+    "sha256": "b58a0d5994e756dabef96eb804693be153953052276d3e0b7d57bb2f2798854a",
+    "bytes": 4543635
+   }
+  ],
+  "el": [
+   {
+    "sha256": "942d3e75bf1f57680f4ca36bfd49f8526568e0dceded8aaeb17b02a9cb444542",
+    "bytes": 6080292
+   }
+  ],
+  "es": [
+   {
+    "sha256": "efbcc4ce1cf14f2f43f7b05be49a9a1153b2893c59d2f660c3bb58679801dccb",
+    "bytes": 4327396
+   }
+  ],
+  "fa": [
+   {
+    "sha256": "f55882f742aeab60b88693f2199c244bf8ab42632202b6283adebebf60531686",
+    "bytes": 4730118
+   }
+  ],
+  "fil": [
+   {
+    "sha256": "255a9a594af8b58c82da995ad4e380797640642cb7953019a57230d37aec7962",
+    "bytes": 4234358
+   }
+  ],
+  "fr": [
+   {
+    "sha256": "e602201459c29c5dbacf9a3d80cfe2524496f8e0c0b51b6326ef4205bad3405e",
+    "bytes": 4550854
+   }
+  ],
+  "ha": [
+   {
+    "sha256": "b17d14b2fe9bf848935145ad49db494850930f23627880ce14d0f88e09e84766",
+    "bytes": 3789111
+   }
+  ],
+  "he": [
+   {
+    "sha256": "e615cdc1abe5b7951c9c1d38bac93ef39e8f1c3e4ceeb90da072a2384f7d9e7f",
+    "bytes": 4361466
+   }
+  ],
+  "hi": [
+   {
+    "sha256": "f0d82c7650ef47968a22058d9a83d22834d12c4f28e23738594d903ab52bcee5",
+    "bytes": 6140551
+   }
+  ],
+  "id": [
+   {
+    "sha256": "d3ff9bca8d3b56ef60d9c4a34b3a4b76f3905f8b786cda5cb966136547722271",
+    "bytes": 3851684
+   }
+  ],
+  "ig": [
+   {
+    "sha256": "21e5352d4a823b033d217be65d698d6552bf4dd3dfb53140c8cc29ebb80f803b",
+    "bytes": 3778871
+   }
+  ],
+  "it": [
+   {
+    "sha256": "ddc373d35da750cdd629625e2d9e133cbd510cbf3518f82c85cfb8f7aac27478",
+    "bytes": 4388049
+   }
+  ],
+  "ja": [
+   {
+    "sha256": "b56ad153180d4368757891796dfad0e1a76ebeb3f7b2500b1ac63789d4e4dfe7",
+    "bytes": 4363616
+   }
+  ],
+  "ko": [
+   {
+    "sha256": "aa896380f066e8e905604bbda8c2c57818a22a7d02ab99a48edc1ad078affb27",
+    "bytes": 4273255
+   }
+  ],
+  "ky": [
+   {
+    "sha256": "bcbf3a5fc0ed9cc6cf6ced77d2950cb7f2ef21246ffdee7d40ae9183ae36d450",
+    "bytes": 5514897
+   }
+  ],
+  "lt": [
+   {
+    "sha256": "1d0cc1459fc28294cf69a3e4c7a305f3a4802425cea472b65d465cc9028355a6",
+    "bytes": 4160608
+   }
+  ],
+  "mg": [
+   {
+    "sha256": "cb557b08bf9a62990bdf382597a3b42625299287e967fd09feb9d543dafa072d",
+    "bytes": 3960785
+   }
+  ],
+  "ms": [
+   {
+    "sha256": "9dd7ceb35bfba72ef2944bcb20711863e058ebbff7b2f7234bd10957b3f03b8f",
+    "bytes": 3847371
+   }
+  ],
+  "ne": [
+   {
+    "sha256": "8591e7f6b0e436054cbe1b2861402a2b226d455e29061f8c2c73cad457f8b03f",
+    "bytes": 5885311
+   }
+  ],
+  "nl": [
+   {
+    "sha256": "d177e050c31cf86c169bcf434aa6caf90d7e25ede9157ab1b08b36d9f7621d1f",
+    "bytes": 4235027
+   }
+  ],
+  "ny": [
+   {
+    "sha256": "8826cd53bb4d93698e662652fb51a3b0cd533d9486cdf697026488cf4bfdbac0",
+    "bytes": 3867093
+   }
+  ],
+  "pl": [
+   {
+    "sha256": "b7d3670fc9f0dc98661fd817c33b26b2a5a38010417fc4509c7e7d199253b3a9",
+    "bytes": 4438005
+   }
+  ],
+  "pt": [
+   {
+    "sha256": "15dda0dd7dbd8eebbe66b6f8ce6087c1f0d29b18e48b7e3b225b6dba375c1048",
+    "bytes": 4211041
+   }
+  ],
+  "ro": [
+   {
+    "sha256": "25f62205ac578a041ad013ef143bcd22fea7e6b1f0b51dd743c77a48bb20ffe8",
+    "bytes": 4337643
+   }
+  ],
+  "ru": [
+   {
+    "sha256": "9037e1aaca6aed1856fe1e427e5b3d4e3bb6563861b760a3360ef077df301bd6",
+    "bytes": 5884449
+   }
+  ],
+  "si": [
+   {
+    "sha256": "7e6e2f17675e74843baaf5f5147f4683afe7a9ba089d651e45568c10acd96e40",
+    "bytes": 6329471
+   }
+  ],
+  "sn": [
+   {
+    "sha256": "de9ad77687616ec7fdb66abe15ddc7e3efe6d849242bae4d30e6ae5d2c0b1b28",
+    "bytes": 3936373
+   }
+  ],
+  "so": [
+   {
+    "sha256": "7f32af4d583f71432b00ef9f02dd6a5da064092c805aa56afedb6dfe0f6fae61",
+    "bytes": 4305289
+   }
+  ],
+  "sr": [
+   {
+    "sha256": "0bd5411932421031909994f3805bb9496e40fc13d4327f92387a23b4ed049af9",
+    "bytes": 5317727
+   }
+  ],
+  "sv": [
+   {
+    "sha256": "8eb44757946f69d4d5e6b6db87c7d7b9c67f404bb5185c17eb562b74beaf1624",
+    "bytes": 4044989
+   }
+  ],
+  "sw": [
+   {
+    "sha256": "de7bfff464f5bbc09a04a31acc4a5a89f66efdb61f6f337abd6081156c4572b5",
+    "bytes": 3922823
+   }
+  ],
+  "te": [
+   {
+    "sha256": "6d38ab096e31396c5a77483f67df881df0df702a17f708dc75adce1c9c40c5c8",
+    "bytes": 6250157
+   }
+  ],
+  "tr": [
+   {
+    "sha256": "b1db36634296b99dea6138c4a6f930e95e968df91549a82378a8d320d6df2def",
+    "bytes": 4128502
+   }
+  ],
+  "uk": [
+   {
+    "sha256": "fc6ebf99e1a6486619af54276b2e2d4dba3fef446b5391bf38e6263369543653",
+    "bytes": 5614319
+   }
+  ],
+  "vi": [
+   {
+    "sha256": "5cd0840972e32c99d86cf287c7f9b1a8f594dd24fc2800169cce1ec0724abfba",
+    "bytes": 4435419
+   }
+  ],
+  "yo": [
+   {
+    "sha256": "eed6dede392f2fd44c00fe21666145029b309d3c2ebc41129b5d129b7b4f2f46",
+    "bytes": 4608095
+   }
+  ],
+  "zh": [
+   {
+    "sha256": "e1ba0c287b650043b8686fa5c506d1f2718b098a7f88f724ade55a76f0062ae7",
+    "bytes": 3618771
+   }
+  ]
+ },
+ "lite_parquet_shards": {
+  "ar": [
+   {
+    "sha256": "9ac2cc4d3a4a58372d95c13b160c721a0dc787a1efe988545f99cba62675ed55",
+    "bytes": 155582
+   }
+  ],
+  "bn": [
+   {
+    "sha256": "fe5e348c5f405f0f4a3b714ed114ff0f4d320629a5c5b3076ef31a61723d845b",
+    "bytes": 189489
+   }
+  ],
+  "cs": [
+   {
+    "sha256": "48b013852048e48cb202de1b3643048295b83158fb0c6a446189bb09e87dbd87",
+    "bytes": 143519
+   }
+  ],
+  "cy": [
+   {
+    "sha256": "bfcafd936903603653c95a7eabbab04c1bff60a940a923bc4272c7f5aad76e11",
+    "bytes": 133937
+   }
+  ],
+  "de": [
+   {
+    "sha256": "cb4f9e8cabca1e9aa4709f5e703f3374f25fc131ac6b69a40f34b9c5b3cd45e5",
+    "bytes": 148519
+   }
+  ],
+  "en": [
+   {
+    "sha256": "0a29e91730a7c018080780b7f4b6a08bd0cd0441b33b9a57d7583277ac91eab2",
+    "bytes": 131986
+   }
+  ],
+  "es": [
+   {
+    "sha256": "3df60f7c52e5356026aaed2adb54a02b00f36547024ea31583db9941c2c618cb",
+    "bytes": 141945
+   }
+  ],
+  "fr": [
+   {
+    "sha256": "7659e0c1d9b1340a99ea1b54ebcdd3ce1491cc4849123c02394f5ed7de8cc347",
+    "bytes": 148792
+   }
+  ],
+  "hi": [
+   {
+    "sha256": "3d9a7f59b40d7cfb57dc36eaf221518530b38efed8eb9a43b498573f55aac321",
+    "bytes": 185784
+   }
+  ],
+  "hu": [
+   {
+    "sha256": "466f0fe5d47c6079b79b09016d3af99c63b7103fae2ef9d6f1ffaea03b1f4e15",
+    "bytes": 150523
+   }
+  ],
+  "id": [
+   {
+    "sha256": "e1bcb956b375a2efd71ca21809fb898b90547d2d84dc9b14569fa5da667c602a",
+    "bytes": 129649
+   }
+  ],
+  "it": [
+   {
+    "sha256": "6c181014e2a455c0df0009cc39c7f66f68e85e64eeb63667d0bbb87237e563e0",
+    "bytes": 146931
+   }
+  ],
+  "ja": [
+   {
+    "sha256": "c0ee81f1be54c64c780796f6aba428b8ce4edd70a711d62647bf3a506c52c627",
+    "bytes": 146325
+   }
+  ],
+  "ko": [
+   {
+    "sha256": "4b8ee37baee8e7fb18cdecc7f39e766d5894948dabc33b54e7f99907e5ea05f3",
+    "bytes": 141904
+   }
+  ],
+  "my": [
+   {
+    "sha256": "502ddded33d5d2cafebd0c4ad6957a739cb31984774a274967dc812f9a79398c",
+    "bytes": 211658
+   }
+  ],
+  "or": [
+   {
+    "sha256": "d1f5733e0d10cfb9dac46e57ff42f96bb4eba2ba026c52a10891305e735ed4f1",
+    "bytes": 184660
+   }
+  ],
+  "pt": [
+   {
+    "sha256": "f3602207983285624be83f184db9aff81c1cc46a8744b53b2327b52ad9df6bf9",
+    "bytes": 140404
+   }
+  ],
+  "sk": [
+   {
+    "sha256": "c800d5a7e0a14b65505dd2d442ed3ea23bb3aafeafeb574988710ae980bab20c",
+    "bytes": 146551
+   }
+  ],
+  "sq": [
+   {
+    "sha256": "21d590bf599b9341c8482bf4da0a0488e1bdd24140c7746c6ea0539c45c50a98",
+    "bytes": 142440
+   }
+  ],
+  "sw": [
+   {
+    "sha256": "1f252c4f04a0078a09a7f1203bcd54c28757016071d115d769aa492ab27e0f11",
+    "bytes": 130627
+   }
+  ],
+  "tg": [
+   {
+    "sha256": "9e6c2a60b4194329d16bc63003c9aa5b1303d131742a43de4b3a9592e22d3848",
+    "bytes": 181228
+   }
+  ],
+  "yo": [
+   {
+    "sha256": "22ee4d0bfe99802d763d9707193d9fff286ec1684e2f967839a66eeafd4fffe5",
+    "bytes": 154746
+   }
+  ],
+  "zh": [
+   {
+    "sha256": "87e148156e95948db761c5759e33ca5e1a81ffa8c9163edf58a4c42c86c28299",
+    "bytes": 125222
+   }
+  ]
+ },
+ "predictions": {
+  "P1_structural": true,
+  "P2_fingerprint_coverage": true,
+  "P2_mapped_shares": {
+   "zh": 0.7932489451476793,
+   "ko": 0.7552742616033755
+  },
+  "P3_key_differences_are_misaligned_rows": true,
+  "P3_vacuous": false,
+  "P3_matched": 227,
+  "P4_keys_follow_content": true,
+  "P4_vacuous": false,
+  "P4_misaligned": 293,
+  "P5_labels_follow_sample_id": true,
+  "P5_vacuous": false,
+  "P5_label_differs": 98,
+  "P6_confined_to_zh_ko_world_history": false,
+  "P6_flagged_cells": [
+   "ig|professional_law",
+   "it|professional_law",
+   "ja|moral_scenarios",
+   "ja|professional_law",
+   "ko|high_school_world_history",
+   "ny|professional_law",
+   "sn|professional_law",
+   "so|professional_law",
+   "tr|professional_law",
+   "zh|high_school_world_history"
+  ],
+  "P7_lite_inherits_full_rows": true,
+  "P7_identical_shares": {
+   "zh": 1.0,
+   "ko": 1.0
+  },
+  "pooled_zh_ko_world_history": {
+   "n": 474,
+   "no_fingerprint": 66,
+   "count_differs": 41,
+   "mapped": 367,
+   "aligned": 74,
+   "misaligned": 293,
+   "same_id_fp_both": 372,
+   "same_id_fp_agree": 76,
+   "key_differs_same_id": 292,
+   "key_differs_misaligned": 227,
+   "key_differs_aligned": 0,
+   "key_differs_unmapped": 65,
+   "mis_key_equals_content": 293,
+   "mis_key_equals_id": 66,
+   "mis_label_wrong_for_content": 98,
+   "mis_label_differs": 98,
+   "mis_label_follows_id": 98,
+   "mis_label_follows_content": 0,
+   "mis_annot_differs": 89,
+   "mis_annot_follows_id": 89,
+   "mis_knowledge_differs": 104,
+   "mis_knowledge_follows_id": 104
+  }
+ },
+ "note": "P1 structural (42 x 14,042; unique ids; same-id key differences = audits 70/71). P2 >= 60% of zh and ko high_school_world_history rows matched. P3 HEADLINE: >= 90% of matched zh+ko key differences there are misaligned rows. P4 misaligned rows carry their content's English key on >= 95%. P5 where the two English labels differ, the translation carries its sample_id's label on >= 95%. P6 the only cells with >= 5 misaligned rows are zh and ko high_school_world_history. P7 >= 99% of Lite zh and ko rows identical to the full-set row with the same id. P3-P5 test a hypothesis suggested by reading 12 rows per language before this job was written."
+}

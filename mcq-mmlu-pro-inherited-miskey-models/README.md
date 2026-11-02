@@ -81,3 +81,57 @@ python job.py --out-dir out   # downloads MMLU-Pro (test) and TIGER-AI-Lab's pre
 Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: MMLU-Pro is MIT, TIGER-AI-Lab's published
 evaluation outputs keep their own licence, and MMLU-Redux 2.0 is CC BY 4.0. Only ids, letters, counts and sha256s are published, never
 question, option or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-02, after the sealed run (started 2026-11-02 04:00 UTC, 174 s; unit tests, the fixture gate, the
+frozen-list check and the structural gate passed). Everything above this heading is unchanged from the
+pre-registration. Frozen output: `results.json`.*
+
+**Status: results in. All 7 predictions held. 45 published models side with MMLU-Redux's experts against MMLU-Pro's
+key on these questions: pooled, they pick the experts' answer 1,041 times and the key 283 times.**
+
+| # | Result |
+| --- | --- |
+| P1 | **HELD.** Fixture, frozen list (46 targets, 24 primary, 55 miskey ids) and MMLU-Pro parse (12,032 rows: `ori_mmlu` 6,810, `stemez` 4,083, `theoremQA` 598, `scibench` 541) all match; **46 of 46** targets still carry audit 75's key; **45 of 48** archives included. Excluded by the join rule: DeepSeek-Coder-V2 (covers 84.3% of the test set), Meta-Llama-3-70B-Instruct (run on an earlier dataset version, 0% join) and `sonnet_0shots_12_01_18` (covers 94.8%) |
+| P2 | **HELD.** Pooled over 45 models × 46 targets (2,070 predictions): experts' answer **1,041 (50.3%)**, published key **283 (13.7%)**, another option 601 (29.0%), no valid answer 145 (7.0%) |
+| P3 | **HELD, 45 of 45 models.** Every included model picks the experts' answer more often than the key: from 11 vs 6 (Llama-2-13B) and 11 vs 2 (Llama-2-7B) to **36 vs 8 (Gemini 3.1 Pro)**; per model the key is picked 1 (Phi-3-mini) to 10 times (Claude 3.5 Haiku, Gemini 1.5 Flash) |
+| P4 | **HELD.** Pooled, the experts' answer is picked **11.8 times** as often as an average other distractor (1,041 vs 88.1) |
+| P5 | **HELD, 45 of 45.** Every model's key-pick rate on the targets (2.2% to 21.7%) is below its accuracy on the 6,755 control questions (17.9% to 90.0%) |
+| P6 | **HELD.** On **37 of 46** questions (80.4%) pooled expert picks exceed key picks; key picks lead on 9; no ties |
+| P7 | **HELD.** On the 24 primary (letter or exact-text) targets alone: experts' answer 464, key 127 (of 1,080 predictions); 8.7 times an average other distractor |
+
+**By correction format.** Primary targets: experts' answer 464 vs key 127, and expert picks lead on 19 of 24
+questions. Digit targets read 0-based: experts' answer 577 vs key 156 (of 990 predictions), and expert picks lead on 18
+of 22. So the result does not rest on the 0-based reading of Redux's digit corrections. Most NONE answers (127 of
+145) fall on the primary targets, nearly all of them college chemistry. Per model on the primary targets alone (not
+pre-registered), 43 of 45 models pick the experts' answer more often than the key; Yi-6B ties (4 vs 4) and Llama-2-13B
+picks the key more often (4 vs 1).
+
+**Where the models agree with the experts.** All 45 models pick the experts' answer on ids 6224 (anatomy), 9547
+(conceptual physics) and 10458 (computer security); 44 on 5726 (public relations); 43 on 7306 (microeconomics) and
+10533 (computer security); 42 on 6278 (virology); 41 on 4084 (college chemistry). The per-question counts for all 46
+are in `results.json` (`per_question`).
+
+**Where the models side with the key.** Key picks lead on 9 questions: 3725, 3990, 4341, 4438 (college chemistry),
+6639 (virology), 7791, 8972 (abstract algebra), 9677 (astronomy) and 9947 (conceptual physics). Two are lopsided:
+**9677** (40 of 45 pick the key, 1 the experts' answer) and **6639** (34 vs 3). On 7791 (20 vs 19) and 9947 (22 vs 21)
+the models split almost evenly. As pre-registered, this audit does not decide whether these mark a disputed expert
+label or memorisation of MMLU's key; 9677 and 6639 are the first questions a human reviewer should re-check.
+
+**Exploratory (not predicted).** (a) *Score impact.* If the 46 keys followed the experts, every model's accuracy on
+its joined questions would rise, by +0.04 points (Llama-2-13B) to +0.23 points (Gemini 3.1 Pro). Stronger models gain
+most (Gemini 3.1 Pro +0.23, both `arx` runs +0.23, iAsk Pro +0.22, Claude 3.5 Sonnet +0.22), so these keys penalise
+the best models slightly more. Whether any leaderboard order changes was not computed. (b) *Memorisation hint.*
+Pooled, the published key is still picked about 3.2 times as often as an average other distractor (283 vs 88.1), and
+more so for strong models (Gemini 3.1 Pro: 8 key picks against 0.25 per average other distractor). That fits either
+memorisation of MMLU's key or a key that is a near-miss answer, and these data cannot tell the two apart.
+
+**What it means.** On the MMLU questions that MMLU-Redux's experts judged miskeyed and that MMLU-Pro still keys the
+old way, 45 published models, from Llama-2-7B to Gemini 3.1 Pro, which never saw Redux's labels, choose the experts'
+answer about 3.7 times as often as MMLU-Pro's key, and every one of them does so on its own. That is independent
+support for correcting most of these keys. The two clear exceptions (9677, 6639) are where the expert label itself
+deserves a second look. Limits: models agreeing with experts is evidence, not proof, of the right answer (models can
+share a misconception), the models are correlated (several share a family or are versions of one model), the archives
+are the ones TIGER-AI-Lab published (5-shot chain-of-thought, mostly 2024 models), and the score effect is small
+because 46 questions are 0.38% of MMLU-Pro.

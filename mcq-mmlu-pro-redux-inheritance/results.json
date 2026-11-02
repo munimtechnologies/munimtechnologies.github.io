@@ -1,0 +1,843 @@
+{
+ "audit": 75,
+ "slug": "mcq-mmlu-pro-redux-inheritance",
+ "datasets": "MMLU-Redux 2.0 (edinburgh-dawg/mmlu-redux-2.0, CC BY 4.0; 57 configs, test), MMLU (cais/mmlu 'all', test; MIT) and MMLU-Pro (TIGER-Lab/MMLU-Pro 'default', test; MIT), read from the HuggingFace auto-converted parquet via the datasets-server parquet API. Only ids, labels and counts are written: no question, option or suggested-answer text.",
+ "fixture_target_met": true,
+ "structural": {
+  "pro": 12032,
+  "pro_ori": 6810,
+  "mmlu": 14042,
+  "redux": 5700,
+  "subjects": 57,
+  "labels": {
+   "bad_options_clarity": 25,
+   "bad_question_clarity": 132,
+   "expert": 32,
+   "multiple_correct_answers": 39,
+   "no_correct_answer": 36,
+   "ok": 5330,
+   "wrong_groundtruth": 106
+  }
+ },
+ "summary": {
+  "redux_mmlu": {
+   "joined": 5690,
+   "no_match": 10,
+   "ambiguous": 0
+  },
+  "redux_answer_equals_mmlu_key": 5690,
+  "pro_join": {
+   "in_pro": 2758,
+   "ambiguous_pro": 71,
+   "not_in_pro": 2861,
+   "stem_only": 45,
+   "cross_subject": 6
+  },
+  "by_label": {
+   "bad_question_clarity": {
+    "n": 131,
+    "in_pro": 62,
+    "kept": 61,
+    "moved": 0,
+    "new": 1
+   },
+   "wrong_groundtruth": {
+    "n": 106,
+    "in_pro": 56,
+    "kept": 52,
+    "moved": 3,
+    "new": 0
+   },
+   "ok": {
+    "n": 5321,
+    "in_pro": 2640,
+    "kept": 2561,
+    "moved": 3,
+    "new": 7
+   },
+   "no_correct_answer": {
+    "n": 36,
+    "in_pro": 17,
+    "kept": 17,
+    "moved": 0,
+    "new": 0
+   },
+   "expert": {
+    "n": 32,
+    "in_pro": 15,
+    "kept": 15,
+    "moved": 0,
+    "new": 0
+   },
+   "bad_options_clarity": {
+    "n": 25,
+    "in_pro": 16,
+    "kept": 15,
+    "moved": 0,
+    "new": 0
+   },
+   "multiple_correct_answers": {
+    "n": 39,
+    "in_pro": 23,
+    "kept": 23,
+    "moved": 0,
+    "new": 0
+   }
+  },
+  "moved_labels": {
+   "wrong_groundtruth": 3,
+   "ok": 3
+  },
+  "new_labels": {
+   "ok": 7,
+   "bad_question_clarity": 1
+  },
+  "miskey": {
+   "in_pro_unique": 55,
+   "kept": 52,
+   "moved": 3,
+   "new": 0,
+   "corrections": {
+    "primary": {
+     "resolved": 26,
+     "resolved_kept": 26,
+     "kept_present": 24,
+     "pro_key_is_correction": 0
+    },
+    "digits_0_based": {
+     "resolved": 52,
+     "resolved_kept": 49,
+     "kept_present": 46,
+     "pro_key_is_correction": 3
+    },
+    "digits_1_based": {
+     "resolved": 36,
+     "resolved_kept": 35,
+     "kept_present": 33,
+     "pro_key_is_correction": 0
+    }
+   }
+  },
+  "inclusion": {
+   "pooled": {
+    "table": [
+     [
+      174,
+      163
+     ],
+     [
+      2640,
+      2681
+     ]
+    ],
+    "rate_1": 0.516320474777448,
+    "rate_2": 0.49614734072542754,
+    "risk_ratio": 1.0406595629889397,
+    "chi_square_stat": 0.5159162018265486,
+    "df": 1,
+    "rejected_0.05": false,
+    "rejected_0.001": false
+   },
+   "by_subject_cmh": {
+    "n_strata": 57,
+    "n_informative_strata": 46,
+    "sum_observed_minus_expected": 15.768604014419553,
+    "cmh_stat": 4.280636460990241,
+    "df": 1,
+    "mh_odds_ratio": 1.2922123454680823,
+    "rejected_0.05": true,
+    "rejected_0.001": false
+   },
+   "strata": {
+    "abstract_algebra": [
+     7,
+     3,
+     75,
+     14
+    ],
+    "anatomy": [
+     1,
+     0,
+     58,
+     41
+    ],
+    "astronomy": [
+     5,
+     1,
+     51,
+     43
+    ],
+    "business_ethics": [
+     0,
+     14,
+     42,
+     43
+    ],
+    "clinical_knowledge": [
+     0,
+     1,
+     36,
+     63
+    ],
+    "college_biology": [
+     1,
+     1,
+     50,
+     48
+    ],
+    "college_chemistry": [
+     22,
+     3,
+     40,
+     35
+    ],
+    "college_computer_science": [
+     2,
+     1,
+     74,
+     23
+    ],
+    "college_mathematics": [
+     1,
+     0,
+     73,
+     26
+    ],
+    "college_medicine": [
+     1,
+     3,
+     30,
+     57
+    ],
+    "college_physics": [
+     0,
+     0,
+     79,
+     21
+    ],
+    "computer_security": [
+     2,
+     1,
+     43,
+     54
+    ],
+    "conceptual_physics": [
+     4,
+     1,
+     57,
+     35
+    ],
+    "econometrics": [
+     3,
+     0,
+     70,
+     27
+    ],
+    "electrical_engineering": [
+     1,
+     1,
+     44,
+     54
+    ],
+    "elementary_mathematics": [
+     1,
+     2,
+     81,
+     16
+    ],
+    "formal_logic": [
+     9,
+     4,
+     67,
+     20
+    ],
+    "global_facts": [
+     5,
+     6,
+     76,
+     9
+    ],
+    "high_school_biology": [
+     2,
+     3,
+     47,
+     48
+    ],
+    "high_school_chemistry": [
+     0,
+     1,
+     52,
+     47
+    ],
+    "high_school_computer_science": [
+     0,
+     0,
+     62,
+     38
+    ],
+    "high_school_european_history": [
+     6,
+     3,
+     33,
+     58
+    ],
+    "high_school_geography": [
+     0,
+     0,
+     32,
+     68
+    ],
+    "high_school_government_and_politics": [
+     0,
+     0,
+     32,
+     68
+    ],
+    "high_school_macroeconomics": [
+     2,
+     1,
+     59,
+     38
+    ],
+    "high_school_mathematics": [
+     0,
+     0,
+     91,
+     9
+    ],
+    "high_school_microeconomics": [
+     2,
+     0,
+     56,
+     41
+    ],
+    "high_school_physics": [
+     2,
+     1,
+     80,
+     17
+    ],
+    "high_school_psychology": [
+     0,
+     4,
+     29,
+     67
+    ],
+    "high_school_statistics": [
+     2,
+     0,
+     65,
+     32
+    ],
+    "high_school_us_history": [
+     0,
+     0,
+     38,
+     62
+    ],
+    "high_school_world_history": [
+     1,
+     0,
+     33,
+     66
+    ],
+    "human_aging": [
+     5,
+     7,
+     31,
+     56
+    ],
+    "human_sexuality": [
+     8,
+     9,
+     31,
+     50
+    ],
+    "international_law": [
+     3,
+     2,
+     32,
+     63
+    ],
+    "jurisprudence": [
+     0,
+     1,
+     36,
+     63
+    ],
+    "logical_fallacies": [
+     17,
+     9,
+     24,
+     50
+    ],
+    "machine_learning": [
+     9,
+     2,
+     70,
+     19
+    ],
+    "management": [
+     0,
+     0,
+     34,
+     65
+    ],
+    "marketing": [
+     1,
+     3,
+     24,
+     72
+    ],
+    "medical_genetics": [
+     0,
+     0,
+     53,
+     47
+    ],
+    "miscellaneous": [
+     7,
+     3,
+     26,
+     64
+    ],
+    "moral_disputes": [
+     2,
+     2,
+     31,
+     65
+    ],
+    "moral_scenarios": [
+     0,
+     3,
+     0,
+     96
+    ],
+    "nutrition": [
+     2,
+     0,
+     39,
+     58
+    ],
+    "philosophy": [
+     0,
+     0,
+     41,
+     48
+    ],
+    "prehistory": [
+     0,
+     0,
+     50,
+     50
+    ],
+    "professional_accounting": [
+     3,
+     3,
+     55,
+     37
+    ],
+    "professional_law": [
+     10,
+     8,
+     44,
+     36
+    ],
+    "professional_medicine": [
+     0,
+     1,
+     60,
+     39
+    ],
+    "professional_psychology": [
+     2,
+     2,
+     51,
+     45
+    ],
+    "public_relations": [
+     4,
+     5,
+     39,
+     51
+    ],
+    "security_studies": [
+     1,
+     5,
+     34,
+     60
+    ],
+    "sociology": [
+     1,
+     1,
+     25,
+     73
+    ],
+    "us_foreign_policy": [
+     1,
+     0,
+     18,
+     81
+    ],
+    "virology": [
+     15,
+     42,
+     7,
+     36
+    ],
+    "world_religions": [
+     1,
+     0,
+     30,
+     69
+    ]
+   }
+  }
+ },
+ "inherited_miskeys_by_category": {
+  "law": 1,
+  "psychology": 2,
+  "biology": 1,
+  "chemistry": 18,
+  "history": 1,
+  "other": 4,
+  "health": 9,
+  "economics": 1,
+  "math": 4,
+  "physics": 5,
+  "computer science": 4,
+  "philosophy": 1,
+  "engineering": 1
+ },
+ "predictions": {
+  "P1_structural": true,
+  "P2_at_least_30pct_in_mmlu_pro": true,
+  "P2_counts": [
+   2829,
+   5700
+  ],
+  "P3_mmlu_pro_keeps_disputed_keys": true,
+  "P3_vacuous": false,
+  "P3_counts": [
+   52,
+   55
+  ],
+  "P4_flagged_included_more_than_ok": true,
+  "P5_expert_answer_still_an_option": true,
+  "P5_vacuous": false,
+  "P5_counts": [
+   24,
+   26
+  ],
+  "P6_moved_keys_mostly_flagged": true,
+  "P6_vacuous": false,
+  "P6_counts": [
+   3,
+   6
+  ]
+ },
+ "shards": {
+  "mmlu_pro": [
+   {
+    "split": "test",
+    "sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8",
+    "bytes": 4144185
+   }
+  ],
+  "mmlu": [
+   {
+    "split": "test",
+    "sha256": "74a41822ce7d3def56e1682f958469c04642a5336a5ce912fa375fdb90fb25d7",
+    "bytes": 3504718
+   }
+  ],
+  "mmlu_redux": [
+   {
+    "config": "abstract_algebra",
+    "sha256": "c7c70e1b329867220f57a40182aedc808e12dd94e0974315a6c1607b9cadb52b",
+    "bytes": 23062
+   },
+   {
+    "config": "anatomy",
+    "sha256": "0c4a5ecfdda3982794ef319686b7fd4c61398eeaf741fe787f37613c3442997c",
+    "bytes": 18031
+   },
+   {
+    "config": "astronomy",
+    "sha256": "c6b5a0f329383181ffcef35f1582ea1924eac4eb750a310e7be2e55923b5a0b2",
+    "bytes": 26144
+   },
+   {
+    "config": "business_ethics",
+    "sha256": "2f221168b41c503e29042dbfb401caa69b454f89b45d919c54e34db3b41a590b",
+    "bytes": 25448
+   },
+   {
+    "config": "clinical_knowledge",
+    "sha256": "543c2e08337580baa0e76d68d7391920daca6f7ba7d0d5f6ec2ae93df4c93e22",
+    "bytes": 21789
+   },
+   {
+    "config": "college_biology",
+    "sha256": "b121c16f5147af55f087c1d5185a9cc455cd882bc11b85c443f3d90322e8866e",
+    "bytes": 27111
+   },
+   {
+    "config": "college_chemistry",
+    "sha256": "45b80702c8bb75f96a8aeb7d712cc49ba8b846b0636d24351b7deab29122d341",
+    "bytes": 19967
+   },
+   {
+    "config": "college_computer_science",
+    "sha256": "3c2d8f1cab8112e4f5db6e5d1240db591d870cab7076bdc5734397f2cc6e7b08",
+    "bytes": 32061
+   },
+   {
+    "config": "college_mathematics",
+    "sha256": "8e578811d92355dde403e1f2ae2bd9dc303dcfacb3c95215773a3438a32cc92b",
+    "bytes": 18932
+   },
+   {
+    "config": "college_medicine",
+    "sha256": "28fc2a6906a782949e81b8cde81da1742ba8946a037e29cb4ab203a30374e3dc",
+    "bytes": 31099
+   },
+   {
+    "config": "college_physics",
+    "sha256": "26ccf8d65edab187d0662f0d146f4d8c7cb82e5417582f86e8dbd3122489ec23",
+    "bytes": 20838
+   },
+   {
+    "config": "computer_security",
+    "sha256": "e326e550f94fb4be0a78acc67b3e4aaf3308181445841763d65cd2f509f39398",
+    "bytes": 25601
+   },
+   {
+    "config": "conceptual_physics",
+    "sha256": "8403c3b66a1c1a2dcd6ddee7ebacee130c6d1d3b118451f56594776ef4256357",
+    "bytes": 22743
+   },
+   {
+    "config": "econometrics",
+    "sha256": "182f00b6760d275a2c3c727de6cf520f48e528c3d0970604f2bba1d109c0c81e",
+    "bytes": 24471
+   },
+   {
+    "config": "electrical_engineering",
+    "sha256": "9dd0875fa221dc11a87515962911234700e241b0df4ee19d5a596f1966cfff03",
+    "bytes": 14836
+   },
+   {
+    "config": "elementary_mathematics",
+    "sha256": "b08992be69d9e2ddb6d4fa60a1f9e565bd9acd48699f5ddb5f94fa38c1cfbd2c",
+    "bytes": 16433
+   },
+   {
+    "config": "formal_logic",
+    "sha256": "82e7b1b7f7b52708975d5a42c577b9ffd1c1f0a27521993d71d83a837194b0fe",
+    "bytes": 22433
+   },
+   {
+    "config": "global_facts",
+    "sha256": "52e16f7ccc93fa9ef7d51425716f88bf88a3dce17d5e2217b5ac18ac3e3de7ef",
+    "bytes": 21242
+   },
+   {
+    "config": "high_school_biology",
+    "sha256": "fada7b1a8b0d0d06ecba1e9f9f9860c3dce3868c4cb3832584c12b04f43d7284",
+    "bytes": 29476
+   },
+   {
+    "config": "high_school_chemistry",
+    "sha256": "39fe0c467520ce9ff1cbda1b985eb3567090263d749349e9d609e5a81faf3472",
+    "bytes": 22941
+   },
+   {
+    "config": "high_school_computer_science",
+    "sha256": "fc6e68a4a3e3aad304fe9b33f22965c7aa4f96b8bf0d893d78de6e4984a8dcf1",
+    "bytes": 29356
+   },
+   {
+    "config": "high_school_european_history",
+    "sha256": "7e9854b9fc59ef11a0c4c34f0edee291f5c09302f0fd984db7de2f74d90002ac",
+    "bytes": 93674
+   },
+   {
+    "config": "high_school_geography",
+    "sha256": "b06374835d612de1f9bcefc74751d780a8fdd3b31ff6e7815dcc2b3cf713ca45",
+    "bytes": 19320
+   },
+   {
+    "config": "high_school_government_and_politics",
+    "sha256": "731a9c6c594303149da3137fbda77f75f9dcdbc809d2cd24ab06da0e55578a2a",
+    "bytes": 27438
+   },
+   {
+    "config": "high_school_macroeconomics",
+    "sha256": "1ff2414dd8b34d60a026d55ecb80c7282f681cb5e8b92d8932615411bf40d2eb",
+    "bytes": 24770
+   },
+   {
+    "config": "high_school_mathematics",
+    "sha256": "338faf69095250683a7f843036a9d3ce53d359fe1457ce9cd4f908d8e5c8bb4c",
+    "bytes": 17683
+   },
+   {
+    "config": "high_school_microeconomics",
+    "sha256": "6986aecd3c6868062b8a774922cad6b747f187b742d84b1f1ae0692ae74a444c",
+    "bytes": 21687
+   },
+   {
+    "config": "high_school_physics",
+    "sha256": "a3841f7ce74176c5406e0b360ffc8c0d252d1118d85bb9e88179d571538bec36",
+    "bytes": 27986
+   },
+   {
+    "config": "high_school_psychology",
+    "sha256": "0000e63efe6182863a2781b7f39052ff6fae70df89d0493500aff0ac169edcc7",
+    "bytes": 23887
+   },
+   {
+    "config": "high_school_statistics",
+    "sha256": "d3c54e7783d9b1e88e35181e07e4499fd5ffaad786fbe06957752d9b27d1d75b",
+    "bytes": 32386
+   },
+   {
+    "config": "high_school_us_history",
+    "sha256": "5d4022d20a5a715131f9572236a432c5a4ac238fddc63acab8c38068e09f2eb1",
+    "bytes": 86249
+   },
+   {
+    "config": "high_school_world_history",
+    "sha256": "c6b8e0fba28b2cc3377fbbd99a20274a26a99f2040d1a37727827662d1833be4",
+    "bytes": 94559
+   },
+   {
+    "config": "human_aging",
+    "sha256": "340a13d235bc74efec63924a8dd5c395c1b7a4439c0d6b2175581066182a4097",
+    "bytes": 20067
+   },
+   {
+    "config": "human_sexuality",
+    "sha256": "ee7fb92ad17b759e9759d2bdc74cdf0fc5ac66807fffe6eba60cff97b9641cfd",
+    "bytes": 22570
+   },
+   {
+    "config": "international_law",
+    "sha256": "94e515fe3846a0d7eba90dd61d0003188c472b4c1623d7bec9ed1984e1601f6d",
+    "bytes": 26377
+   },
+   {
+    "config": "jurisprudence",
+    "sha256": "934f738e393f56e399c3f820468576b14aab7fcd7e16b8704ded52bcbe794963",
+    "bytes": 23919
+   },
+   {
+    "config": "logical_fallacies",
+    "sha256": "ef1a39b4d2e40a2170e105dc2924ec785725a9e77e1606a911e94eb7836815b6",
+    "bytes": 22077
+   },
+   {
+    "config": "machine_learning",
+    "sha256": "f10f39e6a6b51354de7350bdabff673d82c4ced72a113b9d3cb9a2a928415308",
+    "bytes": 23864
+   },
+   {
+    "config": "management",
+    "sha256": "cd9e4b2908ddf1a1eb589d2f63de444852b9f58a3604397c1d44053ce2856bba",
+    "bytes": 17534
+   },
+   {
+    "config": "marketing",
+    "sha256": "ca9c3b9997f5b4e9b792f8f89ba58050a1ea621b80dd462400b7517b63d7ef53",
+    "bytes": 23832
+   },
+   {
+    "config": "medical_genetics",
+    "sha256": "f2e94def739f452ee4ac055c49763f7c20bc68f77d813a89776443a9d3caf7ff",
+    "bytes": 18322
+   },
+   {
+    "config": "miscellaneous",
+    "sha256": "78b23fd0707d45957374fb07a4adca80df8007e362aba5dc164a581210f5829c",
+    "bytes": 18070
+   },
+   {
+    "config": "moral_disputes",
+    "sha256": "8b75330ce9ac0bb5c9b3c182b207f14909ac1b83cd7af25df3275373497f7343",
+    "bytes": 24702
+   },
+   {
+    "config": "moral_scenarios",
+    "sha256": "27e5ddb7abcf49ce39c1cbc5e58f7f582ff99cbf64c4ef1bc71cb9ae0ba7eb44",
+    "bytes": 15657
+   },
+   {
+    "config": "nutrition",
+    "sha256": "26d8c92fc117fe5d5ca22a52c0bf41eb5be41f04f92e18586204d749d3755fa5",
+    "bytes": 23599
+   },
+   {
+    "config": "philosophy",
+    "sha256": "98371d132776c7578de57e436202aa8a46e1c4cdddaafd45b77be4830a2a4def",
+    "bytes": 22261
+   },
+   {
+    "config": "prehistory",
+    "sha256": "c71bcef91e0125d749bbc7a3f148c15388770177a64cef90bf26d4c84f72c4dc",
+    "bytes": 21449
+   },
+   {
+    "config": "professional_accounting",
+    "sha256": "25ad9ab1c1fd9908f9f9724eb5f80e87b143cfd590ddacd9452d6241da17067c",
+    "bytes": 37718
+   },
+   {
+    "config": "professional_law",
+    "sha256": "e316652d5a98e5aed3e06f1bfe749503756af53e5b1a97d0b7881325c1cd74d3",
+    "bytes": 76370
+   },
+   {
+    "config": "professional_medicine",
+    "sha256": "e9ab676b69cfa943bb94e2389158c47bd53cfbff1081ef76336b09df33a0dc07",
+    "bytes": 52795
+   },
+   {
+    "config": "professional_psychology",
+    "sha256": "0054172f48f3444f46819135a844cf28446f487a54ae4cf811656dd3fe4f203e",
+    "bytes": 31070
+   },
+   {
+    "config": "public_relations",
+    "sha256": "c513bf252e36bb0febc030576f26b797f4dba31fe15e46bc688b9a906151132d",
+    "bytes": 24306
+   },
+   {
+    "config": "security_studies",
+    "sha256": "47ded194ba7fb8fcfc0e9a2edafcc49fe654eca51ceadcca8a95e36165741e9d",
+    "bytes": 52789
+   },
+   {
+    "config": "sociology",
+    "sha256": "694551686df4484cd517add4a7001a83f791219dd37e60868679889e52b53e30",
+    "bytes": 26979
+   },
+   {
+    "config": "us_foreign_policy",
+    "sha256": "bc3c385cc0fc24f48730c90b0e176378fefba05d2c73f7dcc356e5b2969591d4",
+    "bytes": 22230
+   },
+   {
+    "config": "virology",
+    "sha256": "764b0b8f46e8c1aa20fba1dd6c93a8b383dfc0098e794fb1758ffed90b124a8b",
+    "bytes": 22224
+   },
+   {
+    "config": "world_religions",
+    "sha256": "ec1fc658f7a1965559a235912061799da11e52833634ec334e40846a1f21a4d9",
+    "bytes": 15462
+   }
+  ]
+ },
+ "note": "P1 structural (MMLU-Pro 12,032 / 6,810 ori_mmlu; MMLU test 14,042; Redux 5,700 rows, 57 subjects, labels = audit 58/69; >= 99% of Redux rows join MMLU test). P2 >= 30% of Redux rows are in MMLU-Pro. P3 HEADLINE: MMLU-Pro keeps MMLU's key on >= 75% of Redux-miskeyed questions it contains (vacuous below 10). P4 flagged questions are in MMLU-Pro more often than expert-OK ones (pooled RR > 1 and Mantel-Haenszel OR > 1 by subject). P5 on inherited miskeys, the experts' answer (letters or exact text) is still an MMLU-Pro option on >= 80% (vacuous below 10). P6 where MMLU-Pro moved the key to another MMLU option, Redux had flagged the question on >= 50% (vacuous below 5)."
+}

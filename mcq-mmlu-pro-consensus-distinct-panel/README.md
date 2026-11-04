@@ -106,3 +106,91 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: MMLU-
 is CC BY 4.0, and TIGER-AI-Lab's published evaluation outputs keep their own licence. Only ids, letters, counts and
 sha256s are published, never question, option or model text. Authored by AI agents working in MV2's name (Munim,
 Inc.).
+
+## Results
+
+*Added 2026-11-04 from the sealed job `mcq-mmlu-pro-consensus-distinct-panel-v1` (run 2026-11-03, 231 s; unit tests
+passed first). Everything above this heading is unchanged. Full numbers: [`results.json`](results.json); the 892
+questions both panels flag with the same option: [`robust_candidates.json`](robust_candidates.json).*
+
+**All six predictions held, but the headline (P3) held by less than one percentage point.** Removing duplicate
+archives barely changes the flag's precision: 60 of 315 (19.0%) against 65 of 359 (18.1%). The two panels flag
+mostly the same questions (896 of the distinct panel's 1,033 flags are also audit 77's, 892 of them with the same
+option). Archives of one model do share wrong answers more than the typical pair of different models (P5), but some
+pairs of differently named archives share them even more, so name-based de-duplication removes only part of the
+dependence (see the post-hoc reading below).
+
+| # | Verdict | Counts |
+| --- | --- | --- |
+| P1 | HELD | fixtures 5/5; 12,032 rows; Redux join 5,690 joined, 2,758 in Pro, 55 miskey ids; audit 77 reproduced (1,210 flags, 36 miskeys, 294 OK, 65/359); distinct panel = frozen list (10 archives, 10 lines); 45 archives included; 14 in the union |
+| P2 | HELD | distinct panel flags 34/55 Redux miskeys (61.8%) vs 255/2,553 Redux-OK (10.0%): 6.2× (audit 77's panel: 5.7×) |
+| P3 | HELD (weakly) | precision 60/315 = 19.0% vs audit 77's 65/359 = 18.1% (+0.9 points) |
+| P4 | HELD | 34 of 55 miskeys flagged (threshold 30; audit 77's panel: 36) |
+| P5 | HELD | lowest within-line rate 1,317/2,044 = 64.4% vs median cross-line pair 55.3% (5 within-line, 86 cross-line pairs) |
+| P6 | HELD | STEM-website 206/4,083 = 5.0% vs MMLU-derived 787/6,810 = 11.6% |
+
+**Flags by group** (count flagged; share of the group in brackets):
+
+| Group | n | Audit 77's panel | Distinct panel | Both, same option |
+| --- | --- | --- | --- | --- |
+| All questions | 12,032 | 1,210 (10.1%) | 1,033 (8.6%) | 892 |
+| Redux miskey | 55 | 36 (65.5%) | 34 (61.8%) | 33 |
+| Redux OK | 2,553 | 294 (11.5%) | 255 (10.0%) | 222 |
+| Redux other error label | 117 | 29 (24.8%) | 26 (22.2%) | 24 |
+| Redux unsure or conflicting | 15 | 2 | 2 | 2 |
+| Unreviewed MMLU-derived | 3,928 | 501 (12.8%) | 460 (11.7%) | 387 |
+| MMLU-derived (all) | 6,810 | 874 (12.8%) | 787 (11.6%) | 678 |
+| STEM website | 4,083 | 271 (6.6%) | 206 (5.0%) | 180 |
+| TheoremQA | 598 | 40 (6.7%) | 26 (4.3%) | 22 |
+| SciBench | 541 | 25 (4.6%) | 14 (2.6%) | 12 |
+
+**Precision** (error-labelled share of flagged, expert-judged questions): audit 77's panel 65/359 = 18.1%; distinct
+panel 60/315 = 19.0%; flagged by both with the same option 57/279 = 20.4% (exploratory).
+
+**Agreement threshold matters far more than de-duplication** (exploratory curve for the distinct panel):
+
+| At least m of 10 agree | Flagged | Redux miskeys | Redux OK | Precision (error-labelled / judged) |
+| --- | --- | --- | --- | --- |
+| 4 | 1,631 | 41 | 359 | 74/433 = 17.1% |
+| 5 | 1,382 | 39 | 323 | 69/392 = 17.6% |
+| 6 (frozen) | 1,033 | 34 | 255 | 60/315 = 19.0% |
+| 7 | 736 | 28 | 185 | 49/234 = 20.9% |
+| 8 | 517 | 26 | 134 | 39/173 = 22.5% |
+| 9 | 322 | 24 | 82 | 31/113 = 27.4% |
+| 10 | 150 | 17 | 38 | 20/58 = 34.5% |
+
+**Shared wrong answers, within a model line** (share of questions where both archives give the same wrong answer,
+among those where both give a valid wrong answer):
+
+| Pair | Same wrong / both wrong | Rate | Accuracies |
+| --- | --- | --- | --- |
+| GPT-4o 2024-08-06 / GPT-4o 2024-05-13 | 1,485 / 2,106 | 70.5% | 74.8% / 72.5% |
+| Claude 3.5 Sonnet 2024-10-22 / Claude 3.5 Sonnet (5-shot) | 1,418 / 2,024 | 70.1% | 77.7% / 76.4% |
+| `arx_0314` / `arx_3` | 1,077 / 1,541 | 69.9% | 83.0% / 78.4% |
+| Claude 3.5 Sonnet (5-shot) / Sonnet 3.5 (0-shot) | 1,505 / 2,219 | 67.8% | 76.4% / 73.2% |
+| Claude 3.5 Sonnet 2024-10-22 / Sonnet 3.5 (0-shot) | 1,317 / 2,044 | 64.4% | 77.7% / 73.2% |
+
+The 86 cross-line pairs range from 47.7% (Gemini 1.5 Pro 002 / GPT-4o mini) to 81.5%, with a median of 55.3%.
+
+**Post-hoc reading (not predicted; treat as a lead).** The names do not capture all the dependence. 11 of the 86
+cross-line pairs share wrong answers more often than the lowest within-line pair (64.4%), and 4 exceed the highest
+(70.5%): `arx_3` with Claude 3.5 Sonnet (5-shot) at 1,837/2,255 = 81.5%, `arx_0314` with iAsk Pro at 1,173/1,535 =
+76.4%, `arx_3` with Claude 3.5 Sonnet 2024-10-22 at 71.3%, and `arx_3` with Sonnet 3.5 (0-shot) at 70.7%. All 11
+involve an `arx` archive or iAsk Pro. `arx_3` shares more wrong answers with every Claude 3.5 Sonnet archive than with
+`arx_0314`, its own line by name. Accuracy is a confounder (more accurate pairs share more errors, as Kim et al.
+report), and these rates say nothing about how any system was built. They do mean that "one archive per name" is not
+"one independent opinion per slot": the distinct panel still holds `arx_0314`, iAsk Pro and a Claude 3.5 Sonnet
+archive. A panel chosen from measured error agreement, not from names, is the obvious next test.
+
+**What this means.** For finding miskeys with model consensus on MMLU-Pro, removing duplicate archives by name is
+nearly free (recall 34 vs 36 of 55, separation 6.2× vs 5.7×) but buys under one point of precision. Raising the
+agreement threshold buys much more: at 10 of 10, 34.5% of the expert-judged flags carry an error label, at the cost of
+recall (17 of 55). Even at 10 of 10, most flagged questions that experts judged were cleared, so model consensus stays
+a way to rank questions for expert review, not a verdict. `robust_candidates.json` is model-flagged and has not been
+checked by experts.
+
+**Limits.** Precision is measured only on the 2,758 MMLU-Redux-judged questions MMLU-Pro holds; Redux labels are
+expert judgments, not verified facts. Model lines were assigned by archive name before the run; the archives' own
+labels are the only provenance used. The P3 margin (+0.9 points, 5 fewer error-labelled flags on 44 fewer judged
+flags) is far inside sampling noise, so "held" here means only that the frozen comparison came out in the predicted
+direction.

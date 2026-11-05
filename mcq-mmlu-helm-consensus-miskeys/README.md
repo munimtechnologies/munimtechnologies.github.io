@@ -104,3 +104,101 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: HELM 
 published run outputs keep their own terms; MMLU is MIT; MMLU-Redux 2.0 is CC BY 4.0. Only ids, letters, counts and
 16-hex sha256 prefixes of normalised question text are published, never question, option or model text. Authored by
 AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-05 from the sealed job `mcq-mmlu-helm-consensus-miskeys-v1` (run 2026-11-04, 261 s; unit tests passed
+first). Everything above this heading is unchanged. Full numbers: [`results.json`](results.json); every flagged
+question: [`candidates.json`](candidates.json).*
+
+**Five of six predictions held, and the structural check P1 failed on one part.** The question universe holds
+13,984 questions, not the pre-registered "at least 14,000": MMLU's test set has 14,042, and 54 copies of questions
+that occur more than once in a subject plus 4 questions without exactly one correct option were dropped by rule
+(Method 2). Every other P1 part held, so the other verdicts stand. On HELM's MMLU outputs the consensus flag
+replicates and is more precise than on MMLU-Pro: **130 of 484 flagged, expert-judged questions (26.9%) carry an
+expert error label, against 18.1% in audit 77 and a 6.0% base rate among all judged questions** (336 of 5,621).
+Most of the gain comes from one subject, virology (see the post-hoc reading below).
+
+| # | Verdict | Counts |
+| --- | --- | --- |
+| P1 | FAILED (one part) | fixtures 6/6; 57 subjects; universe **13,984** (< 14,000; 14,042 minus 54 duplicate copies and 4 without one gold); Redux 5,700 rows, 106 miskeys; 5,653 joined (47 not matched); HELM's key equals Redux's published answer on 5,653 of 5,653; 78 of 79 models included |
+| P2 | HELD | flags 80/106 Redux miskeys (75.5%) vs 354/5,285 Redux-OK (6.7%): 11.3× (audit 77: 5.7×) |
+| P3 | HELD | 80 of 106 miskeys flagged (75.5%; audit 77: 36 of 55) |
+| P4 | HELD | precision 130/484 = 26.9% vs audit 77's 65/359 = 18.1% |
+| P5 | HELD | other error labels 50/230 (21.7%) vs Redux-OK 6.7%: 3.2× |
+| P6 | HELD | 10 of 10 agree: 67/132 = 50.8% vs 6 of 10: 26.9% |
+
+**The panel** (the 10 most accurate of the 78 included models, by accuracy on the 13,984 questions): HELM's
+`anthropic_claude-3-5-sonnet-20241022` 87.65%, `anthropic_claude-3-5-sonnet-20240620` 87.19%,
+`deepseek-ai_deepseek-v3` 86.73%, `google_gemini-1.5-pro-002` 86.36%, `anthropic_claude-3-opus-20240229` 85.05%,
+`openai_gpt-4o-2024-08-06` 84.93%, `meta_llama-3.1-405b-instruct-turbo` 84.93%, `openai_gpt-4o-2024-05-13` 84.82%,
+`openai_gpt-4-0613` 84.01%, `qwen_qwen2.5-72b-instruct-turbo` 83.31%. Four slots are two dated versions each of
+Claude 3.5 Sonnet and GPT-4o, so this panel has eight distinct model lines (audit 79 found that de-duplicating by line
+barely changes precision on MMLU-Pro). The one excluded model, `ai21_jamba-1.5-mini`, has no `miscellaneous` run in
+this release. Every included model's accuracy matches HELM's own `exact_match` on the same items.
+
+**Flags by group** (count flagged; share of the group in brackets):
+
+| Group | n | Flagged |
+| --- | --- | --- |
+| All questions | 13,984 | 1,207 (8.6%) |
+| Redux miskey | 106 | 80 (75.5%) |
+| Redux OK | 5,285 | 354 (6.7%) |
+| Redux other error label | 230 | 50 (21.7%) |
+| Redux unsure (`expert`) or conflicting | 32 | 8 (25.0%) |
+| Not in Redux's sample | 8,331 | 715 (8.6%) |
+
+**Agreement threshold** (exploratory curve, same panel):
+
+| At least m of 10 agree | Flagged | Redux miskeys | Redux OK | Precision (error-labelled / judged) | Not in Redux's sample |
+| --- | --- | --- | --- | --- | --- |
+| 4 | 1,431 | 84 | 444 | 140/584 = 24.0% | 838 |
+| 5 | 1,372 | 84 | 419 | 139/558 = 24.9% | 805 |
+| 6 (frozen) | 1,207 | 80 | 354 | 130/484 = 26.9% | 715 |
+| 7 | 885 | 69 | 244 | 103/347 = 29.7% | 533 |
+| 8 | 666 | 64 | 177 | 87/264 = 33.0% | 398 |
+| 9 | 486 | 59 | 125 | 77/202 = 38.1% | 282 |
+| 10 | 304 | 52 | 65 | 67/132 = 50.8% | 171 |
+
+**By subject** (exploratory; `by_subject_exploratory` in `results.json` has all 57):
+
+- **Virology** holds 33 of the 106 Redux miskeys and 30 of the 80 flagged ones. 65 of its 166 questions are flagged
+  (39.2%). Of the 42 flagged questions Redux judged, 39 carry an error label (30 miskeys, 5 unclear questions, 2 with
+  several correct answers, 2 with no correct answer) and 3 were cleared.
+- **College chemistry** holds 21 miskeys, 12 of them flagged; all 22 of its flags fall on Redux's sample.
+- **Professional law** has the most flags, 294 of 1,534 questions (19.2%), and 276 of the 715 flags outside Redux's
+  sample (38.6%). Of its 18 flagged, judged questions, 4 carry an error label (1 miskey, 3 others).
+- Moral scenarios (61 flags, 57 outside the sample), professional psychology (38) and high-school mathematics (38)
+  follow. The flag missed every miskey in logical fallacies (0 of 3), international law (0 of 2) and astronomy (0 of 1).
+
+**Post-hoc reading (not predicted; treat as a lead).**
+
+1. *The headline rests mostly on virology.* Leaving virology out, precision is 91 of 442 (20.6%): still above audit
+   77's 18.1%, but by 2.5 points, not 8.8. Recall without virology is 50 of 73 miskeys (68.5%). So the replication of
+   P2, P3 and P5 does not depend on virology; the size of the P4 gain mostly does.
+2. *Virology's unreviewed questions.* Among virology questions Redux judged, all 10 panel models picked the same
+   non-key option on 32, and 31 of those carry an error label (one was cleared). Outside Redux's sample, all 10 agree
+   on 16 more virology questions, none of them picking the key: HELM instance ids 52, 59, 65, 91, 103, 114, 128, 147,
+   149, 151, 155, 158, 160, 164, 171 and 185 (`id` prefix; positions and letters in `candidates.json`). They are the
+   first MMLU questions this audit would send to an expert. MMLU-Redux suggests many of virology's errors stem from
+   problems parsing the original source material; we have not checked these 16 by hand.
+
+**What this means.** A consensus of answers from the strongest models, taken from a different harness and model set,
+finds MMLU's expert-flagged miskeys again: three in four of them, at 11 times the rate on cleared questions. As a
+detector it is still mostly a way to rank questions for review: at the frozen 6 of 10, about three in four flagged,
+judged questions were cleared by the experts; at 10 of 10 it is one in two, and it is higher in a subject whose key is
+known to be badly damaged. `candidates.json` lists 1,207 questions, 715 of them outside Redux's sample (171 at 10 of
+10). They are model-flagged and have not been checked by experts. Each may hold a wrong key, a second defensible
+answer or a mistake the models share.
+
+**Limits.** One harness (HELM's joint multiple-choice prompt), one release (v1.13.0) and models up to late 2024.
+Redux labels are expert judgments, not verified facts, and cover 100 questions per subject, so subjects with many
+questions (professional law, moral scenarios) are judged on a small share. The P1 threshold was set before checking
+how many MMLU questions are duplicated within a subject; the failure is in the gate, not in the data or the code.
+
+**Related work found after the pre-registration.** Land and Bikel ("Auditing LLM Benchmarks with Item Response
+Theory", arXiv 2605.30504, EMNLP 2026) fit an item-response model to 114 models' answers on seven preference and
+multiple-choice benchmarks (GPQA Diamond, MATH and GSM8K among the multiple-choice ones; MMLU is not among them) and
+flag items where ability predicts a non-reference answer better than the reference. They report 95% precision in
+their top 200 against an LLM reviewer's labels and release the flagged items as `Writer/IRT-mislabeled-items`. Their
+signal uses every model's ability; ours counts the top 10 models' votes and is scored against human experts.

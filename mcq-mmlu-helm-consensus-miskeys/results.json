@@ -1,0 +1,2158 @@
+{
+ "audit": 80,
+ "slug": "mcq-mmlu-helm-consensus-miskeys",
+ "dataset": "HELM MMLU release v1.13.0 (Stanford CRFM, public GCS bucket crfm-helm-public/mmlu): runs_to_run_suites.json, per-run instances.json and display_predictions.json; MMLU-Redux 2.0 via the HF datasets-server parquet API. Only ids, letters, counts and hashes.",
+ "fixture": {
+  "panel_flags": true,
+  "runs": true,
+  "universe": true,
+  "predictions": true,
+  "redux_join": true,
+  "verdicts": true
+ },
+ "release": {
+  "url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/releases/v1.13.0/runs_to_run_suites.json",
+  "sha256": "921755ccfa38513d9eed082d497cf4328a87149842128a7e1794efcb79eba8a1",
+  "entries": 4503,
+  "chosen_runs": 4503,
+  "duplicates_dropped": 0,
+  "models": 79,
+  "subjects": 57
+ },
+ "instances": {
+  "files": 798,
+  "failed": [],
+  "base_suites": {
+   "abstract_algebra": "v1.0.0",
+   "anatomy": "v1.0.0",
+   "astronomy": "v1.0.0",
+   "business_ethics": "v1.0.0",
+   "clinical_knowledge": "v1.0.0",
+   "college_biology": "v1.0.0",
+   "college_chemistry": "v1.0.0",
+   "college_computer_science": "v1.0.0",
+   "college_mathematics": "v1.0.0",
+   "college_medicine": "v1.0.0",
+   "college_physics": "v1.0.0",
+   "computer_security": "v1.0.0",
+   "conceptual_physics": "v1.0.0",
+   "econometrics": "v1.0.0",
+   "electrical_engineering": "v1.0.0",
+   "elementary_mathematics": "v1.0.0",
+   "formal_logic": "v1.0.0",
+   "global_facts": "v1.0.0",
+   "high_school_biology": "v1.0.0",
+   "high_school_chemistry": "v1.0.0",
+   "high_school_computer_science": "v1.0.0",
+   "high_school_european_history": "v1.0.0",
+   "high_school_geography": "v1.0.0",
+   "high_school_government_and_politics": "v1.0.0",
+   "high_school_macroeconomics": "v1.0.0",
+   "high_school_mathematics": "v1.0.0",
+   "high_school_microeconomics": "v1.0.0",
+   "high_school_physics": "v1.0.0",
+   "high_school_psychology": "v1.0.0",
+   "high_school_statistics": "v1.0.0",
+   "high_school_us_history": "v1.0.0",
+   "high_school_world_history": "v1.0.0",
+   "human_aging": "v1.0.0",
+   "human_sexuality": "v1.0.0",
+   "international_law": "v1.0.0",
+   "jurisprudence": "v1.0.0",
+   "logical_fallacies": "v1.0.0",
+   "machine_learning": "v1.0.0",
+   "management": "v1.0.0",
+   "marketing": "v1.0.0",
+   "medical_genetics": "v1.0.0",
+   "miscellaneous": "v1.0.0",
+   "moral_disputes": "v1.0.0",
+   "moral_scenarios": "v1.0.0",
+   "nutrition": "v1.0.0",
+   "philosophy": "v1.0.0",
+   "prehistory": "v1.0.0",
+   "professional_accounting": "v1.0.0",
+   "professional_law": "v1.0.0",
+   "professional_medicine": "v1.0.0",
+   "professional_psychology": "v1.0.0",
+   "public_relations": "v1.0.0",
+   "security_studies": "v1.0.0",
+   "sociology": "v1.0.0",
+   "us_foreign_policy": "v1.0.0",
+   "virology": "v1.0.0",
+   "world_religions": "v1.0.0"
+  },
+  "universe": 13984,
+  "universe_counts": {
+   "dup_dropped": 54,
+   "no_gold": 4
+  }
+ },
+ "redux": {
+  "rows": 5700,
+  "miskey_rows": 106,
+  "join": {
+   "joined": 5653,
+   "no_match": 47,
+   "conflict": 0
+  },
+  "key_agree": 5653,
+  "shards": [
+   {
+    "config": "abstract_algebra",
+    "sha256": "c7c70e1b329867220f57a40182aedc808e12dd94e0974315a6c1607b9cadb52b",
+    "bytes": 23062
+   },
+   {
+    "config": "anatomy",
+    "sha256": "0c4a5ecfdda3982794ef319686b7fd4c61398eeaf741fe787f37613c3442997c",
+    "bytes": 18031
+   },
+   {
+    "config": "astronomy",
+    "sha256": "c6b5a0f329383181ffcef35f1582ea1924eac4eb750a310e7be2e55923b5a0b2",
+    "bytes": 26144
+   },
+   {
+    "config": "business_ethics",
+    "sha256": "2f221168b41c503e29042dbfb401caa69b454f89b45d919c54e34db3b41a590b",
+    "bytes": 25448
+   },
+   {
+    "config": "clinical_knowledge",
+    "sha256": "543c2e08337580baa0e76d68d7391920daca6f7ba7d0d5f6ec2ae93df4c93e22",
+    "bytes": 21789
+   },
+   {
+    "config": "college_biology",
+    "sha256": "b121c16f5147af55f087c1d5185a9cc455cd882bc11b85c443f3d90322e8866e",
+    "bytes": 27111
+   },
+   {
+    "config": "college_chemistry",
+    "sha256": "45b80702c8bb75f96a8aeb7d712cc49ba8b846b0636d24351b7deab29122d341",
+    "bytes": 19967
+   },
+   {
+    "config": "college_computer_science",
+    "sha256": "3c2d8f1cab8112e4f5db6e5d1240db591d870cab7076bdc5734397f2cc6e7b08",
+    "bytes": 32061
+   },
+   {
+    "config": "college_mathematics",
+    "sha256": "8e578811d92355dde403e1f2ae2bd9dc303dcfacb3c95215773a3438a32cc92b",
+    "bytes": 18932
+   },
+   {
+    "config": "college_medicine",
+    "sha256": "28fc2a6906a782949e81b8cde81da1742ba8946a037e29cb4ab203a30374e3dc",
+    "bytes": 31099
+   },
+   {
+    "config": "college_physics",
+    "sha256": "26ccf8d65edab187d0662f0d146f4d8c7cb82e5417582f86e8dbd3122489ec23",
+    "bytes": 20838
+   },
+   {
+    "config": "computer_security",
+    "sha256": "e326e550f94fb4be0a78acc67b3e4aaf3308181445841763d65cd2f509f39398",
+    "bytes": 25601
+   },
+   {
+    "config": "conceptual_physics",
+    "sha256": "8403c3b66a1c1a2dcd6ddee7ebacee130c6d1d3b118451f56594776ef4256357",
+    "bytes": 22743
+   },
+   {
+    "config": "econometrics",
+    "sha256": "182f00b6760d275a2c3c727de6cf520f48e528c3d0970604f2bba1d109c0c81e",
+    "bytes": 24471
+   },
+   {
+    "config": "electrical_engineering",
+    "sha256": "9dd0875fa221dc11a87515962911234700e241b0df4ee19d5a596f1966cfff03",
+    "bytes": 14836
+   },
+   {
+    "config": "elementary_mathematics",
+    "sha256": "b08992be69d9e2ddb6d4fa60a1f9e565bd9acd48699f5ddb5f94fa38c1cfbd2c",
+    "bytes": 16433
+   },
+   {
+    "config": "formal_logic",
+    "sha256": "82e7b1b7f7b52708975d5a42c577b9ffd1c1f0a27521993d71d83a837194b0fe",
+    "bytes": 22433
+   },
+   {
+    "config": "global_facts",
+    "sha256": "52e16f7ccc93fa9ef7d51425716f88bf88a3dce17d5e2217b5ac18ac3e3de7ef",
+    "bytes": 21242
+   },
+   {
+    "config": "high_school_biology",
+    "sha256": "fada7b1a8b0d0d06ecba1e9f9f9860c3dce3868c4cb3832584c12b04f43d7284",
+    "bytes": 29476
+   },
+   {
+    "config": "high_school_chemistry",
+    "sha256": "39fe0c467520ce9ff1cbda1b985eb3567090263d749349e9d609e5a81faf3472",
+    "bytes": 22941
+   },
+   {
+    "config": "high_school_computer_science",
+    "sha256": "fc6e68a4a3e3aad304fe9b33f22965c7aa4f96b8bf0d893d78de6e4984a8dcf1",
+    "bytes": 29356
+   },
+   {
+    "config": "high_school_european_history",
+    "sha256": "7e9854b9fc59ef11a0c4c34f0edee291f5c09302f0fd984db7de2f74d90002ac",
+    "bytes": 93674
+   },
+   {
+    "config": "high_school_geography",
+    "sha256": "b06374835d612de1f9bcefc74751d780a8fdd3b31ff6e7815dcc2b3cf713ca45",
+    "bytes": 19320
+   },
+   {
+    "config": "high_school_government_and_politics",
+    "sha256": "731a9c6c594303149da3137fbda77f75f9dcdbc809d2cd24ab06da0e55578a2a",
+    "bytes": 27438
+   },
+   {
+    "config": "high_school_macroeconomics",
+    "sha256": "1ff2414dd8b34d60a026d55ecb80c7282f681cb5e8b92d8932615411bf40d2eb",
+    "bytes": 24770
+   },
+   {
+    "config": "high_school_mathematics",
+    "sha256": "338faf69095250683a7f843036a9d3ce53d359fe1457ce9cd4f908d8e5c8bb4c",
+    "bytes": 17683
+   },
+   {
+    "config": "high_school_microeconomics",
+    "sha256": "6986aecd3c6868062b8a774922cad6b747f187b742d84b1f1ae0692ae74a444c",
+    "bytes": 21687
+   },
+   {
+    "config": "high_school_physics",
+    "sha256": "a3841f7ce74176c5406e0b360ffc8c0d252d1118d85bb9e88179d571538bec36",
+    "bytes": 27986
+   },
+   {
+    "config": "high_school_psychology",
+    "sha256": "0000e63efe6182863a2781b7f39052ff6fae70df89d0493500aff0ac169edcc7",
+    "bytes": 23887
+   },
+   {
+    "config": "high_school_statistics",
+    "sha256": "d3c54e7783d9b1e88e35181e07e4499fd5ffaad786fbe06957752d9b27d1d75b",
+    "bytes": 32386
+   },
+   {
+    "config": "high_school_us_history",
+    "sha256": "5d4022d20a5a715131f9572236a432c5a4ac238fddc63acab8c38068e09f2eb1",
+    "bytes": 86249
+   },
+   {
+    "config": "high_school_world_history",
+    "sha256": "c6b8e0fba28b2cc3377fbbd99a20274a26a99f2040d1a37727827662d1833be4",
+    "bytes": 94559
+   },
+   {
+    "config": "human_aging",
+    "sha256": "340a13d235bc74efec63924a8dd5c395c1b7a4439c0d6b2175581066182a4097",
+    "bytes": 20067
+   },
+   {
+    "config": "human_sexuality",
+    "sha256": "ee7fb92ad17b759e9759d2bdc74cdf0fc5ac66807fffe6eba60cff97b9641cfd",
+    "bytes": 22570
+   },
+   {
+    "config": "international_law",
+    "sha256": "94e515fe3846a0d7eba90dd61d0003188c472b4c1623d7bec9ed1984e1601f6d",
+    "bytes": 26377
+   },
+   {
+    "config": "jurisprudence",
+    "sha256": "934f738e393f56e399c3f820468576b14aab7fcd7e16b8704ded52bcbe794963",
+    "bytes": 23919
+   },
+   {
+    "config": "logical_fallacies",
+    "sha256": "ef1a39b4d2e40a2170e105dc2924ec785725a9e77e1606a911e94eb7836815b6",
+    "bytes": 22077
+   },
+   {
+    "config": "machine_learning",
+    "sha256": "f10f39e6a6b51354de7350bdabff673d82c4ced72a113b9d3cb9a2a928415308",
+    "bytes": 23864
+   },
+   {
+    "config": "management",
+    "sha256": "cd9e4b2908ddf1a1eb589d2f63de444852b9f58a3604397c1d44053ce2856bba",
+    "bytes": 17534
+   },
+   {
+    "config": "marketing",
+    "sha256": "ca9c3b9997f5b4e9b792f8f89ba58050a1ea621b80dd462400b7517b63d7ef53",
+    "bytes": 23832
+   },
+   {
+    "config": "medical_genetics",
+    "sha256": "f2e94def739f452ee4ac055c49763f7c20bc68f77d813a89776443a9d3caf7ff",
+    "bytes": 18322
+   },
+   {
+    "config": "miscellaneous",
+    "sha256": "78b23fd0707d45957374fb07a4adca80df8007e362aba5dc164a581210f5829c",
+    "bytes": 18070
+   },
+   {
+    "config": "moral_disputes",
+    "sha256": "8b75330ce9ac0bb5c9b3c182b207f14909ac1b83cd7af25df3275373497f7343",
+    "bytes": 24702
+   },
+   {
+    "config": "moral_scenarios",
+    "sha256": "27e5ddb7abcf49ce39c1cbc5e58f7f582ff99cbf64c4ef1bc71cb9ae0ba7eb44",
+    "bytes": 15657
+   },
+   {
+    "config": "nutrition",
+    "sha256": "26d8c92fc117fe5d5ca22a52c0bf41eb5be41f04f92e18586204d749d3755fa5",
+    "bytes": 23599
+   },
+   {
+    "config": "philosophy",
+    "sha256": "98371d132776c7578de57e436202aa8a46e1c4cdddaafd45b77be4830a2a4def",
+    "bytes": 22261
+   },
+   {
+    "config": "prehistory",
+    "sha256": "c71bcef91e0125d749bbc7a3f148c15388770177a64cef90bf26d4c84f72c4dc",
+    "bytes": 21449
+   },
+   {
+    "config": "professional_accounting",
+    "sha256": "25ad9ab1c1fd9908f9f9724eb5f80e87b143cfd590ddacd9452d6241da17067c",
+    "bytes": 37718
+   },
+   {
+    "config": "professional_law",
+    "sha256": "e316652d5a98e5aed3e06f1bfe749503756af53e5b1a97d0b7881325c1cd74d3",
+    "bytes": 76370
+   },
+   {
+    "config": "professional_medicine",
+    "sha256": "e9ab676b69cfa943bb94e2389158c47bd53cfbff1081ef76336b09df33a0dc07",
+    "bytes": 52795
+   },
+   {
+    "config": "professional_psychology",
+    "sha256": "0054172f48f3444f46819135a844cf28446f487a54ae4cf811656dd3fe4f203e",
+    "bytes": 31070
+   },
+   {
+    "config": "public_relations",
+    "sha256": "c513bf252e36bb0febc030576f26b797f4dba31fe15e46bc688b9a906151132d",
+    "bytes": 24306
+   },
+   {
+    "config": "security_studies",
+    "sha256": "47ded194ba7fb8fcfc0e9a2edafcc49fe654eca51ceadcca8a95e36165741e9d",
+    "bytes": 52789
+   },
+   {
+    "config": "sociology",
+    "sha256": "694551686df4484cd517add4a7001a83f791219dd37e60868679889e52b53e30",
+    "bytes": 26979
+   },
+   {
+    "config": "us_foreign_policy",
+    "sha256": "bc3c385cc0fc24f48730c90b0e176378fefba05d2c73f7dcc356e5b2969591d4",
+    "bytes": 22230
+   },
+   {
+    "config": "virology",
+    "sha256": "764b0b8f46e8c1aa20fba1dd6c93a8b383dfc0098e794fb1758ffed90b124a8b",
+    "bytes": 22224
+   },
+   {
+    "config": "world_religions",
+    "sha256": "ec1fc658f7a1965559a235912061799da11e52833634ec334e40846a1f21a4d9",
+    "bytes": 15462
+   }
+  ]
+ },
+ "inclusion": {
+  "01-ai_yi-34b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10648,
+   "accuracy": 0.761441647597254,
+   "helm_em_correct": 10648,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "01-ai_yi-6b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 8800,
+   "accuracy": 0.6292906178489702,
+   "helm_em_correct": 8800,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "01-ai_yi-large-preview": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11194,
+   "accuracy": 0.8004862700228833,
+   "helm_em_correct": 11194,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 2,
+   "errors": [],
+   "included": true
+  },
+  "ai21_jamba-1.5-large": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10943,
+   "accuracy": 0.7825371853546911,
+   "helm_em_correct": 10943,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 12,
+   "errors": [],
+   "included": true
+  },
+  "ai21_jamba-1.5-mini": {
+   "subjects": 56,
+   "covered": 13201,
+   "correct": 8876,
+   "accuracy": 0.6723733050526475,
+   "helm_em_correct": 8876,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 2,
+   "errors": [
+    "miscellaneous"
+   ],
+   "included": false
+  },
+  "ai21_jamba-instruct": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9206,
+   "accuracy": 0.6583237986270023,
+   "helm_em_correct": 9206,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 57,
+   "errors": [],
+   "included": true
+  },
+  "allenai_olmo-1.7-7b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 7389,
+   "accuracy": 0.5283895881006865,
+   "helm_em_correct": 7389,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "allenai_olmo-7b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 4009,
+   "accuracy": 0.2866847826086957,
+   "helm_em_correct": 4009,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "amazon_nova-lite-v1:0": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10683,
+   "accuracy": 0.7639445080091534,
+   "helm_em_correct": 10683,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "amazon_nova-micro-v1:0": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9693,
+   "accuracy": 0.6931493135011442,
+   "helm_em_correct": 9693,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 5,
+   "errors": [],
+   "included": true
+  },
+  "amazon_nova-pro-v1:0": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11379,
+   "accuracy": 0.8137156750572082,
+   "helm_em_correct": 11378,
+   "em_gap": 7.151029748283753e-05,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-2.1": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10227,
+   "accuracy": 0.7313358123569794,
+   "helm_em_correct": 10227,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 8,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-3-5-haiku-20241022": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10295,
+   "accuracy": 0.7361985125858124,
+   "helm_em_correct": 10295,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 8,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-3-5-sonnet-20240620": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 12193,
+   "accuracy": 0.871925057208238,
+   "helm_em_correct": 12193,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-3-5-sonnet-20241022": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 12257,
+   "accuracy": 0.8765017162471396,
+   "helm_em_correct": 12257,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-3-haiku-20240307": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10210,
+   "accuracy": 0.7301201372997712,
+   "helm_em_correct": 10210,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 5,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-3-opus-20240229": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11894,
+   "accuracy": 0.8505434782608695,
+   "helm_em_correct": 11894,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-3-sonnet-20240229": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10658,
+   "accuracy": 0.7621567505720824,
+   "helm_em_correct": 10658,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 2,
+   "errors": [],
+   "included": true
+  },
+  "anthropic_claude-instant-1.2": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9558,
+   "accuracy": 0.6834954233409611,
+   "helm_em_correct": 9558,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 31,
+   "errors": [],
+   "included": true
+  },
+  "cohere_command-r": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9074,
+   "accuracy": 0.6488844393592678,
+   "helm_em_correct": 9074,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 29,
+   "errors": [],
+   "included": true
+  },
+  "cohere_command-r-plus": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9678,
+   "accuracy": 0.6920766590389016,
+   "helm_em_correct": 9678,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 47,
+   "errors": [],
+   "included": true
+  },
+  "databricks_dbrx-instruct": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10255,
+   "accuracy": 0.7333381006864989,
+   "helm_em_correct": 10255,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "deepseek-ai_deepseek-llm-67b-chat": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10176,
+   "accuracy": 0.7276887871853547,
+   "helm_em_correct": 10176,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "deepseek-ai_deepseek-v3": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 12129,
+   "accuracy": 0.8673483981693364,
+   "helm_em_correct": 12129,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-1.0-pro-001": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9725,
+   "accuracy": 0.695437643020595,
+   "helm_em_correct": 9725,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 48,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-1.5-flash-001": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10842,
+   "accuracy": 0.7753146453089245,
+   "helm_em_correct": 10842,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 91,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-1.5-flash-002": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10346,
+   "accuracy": 0.7398455377574371,
+   "helm_em_correct": 10346,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-1.5-flash-preview-0514": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10829,
+   "accuracy": 0.7743850114416476,
+   "helm_em_correct": 10829,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 91,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-1.5-pro-001": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11567,
+   "accuracy": 0.8271596109839817,
+   "helm_em_correct": 11567,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 93,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-1.5-pro-002": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 12076,
+   "accuracy": 0.863558352402746,
+   "helm_em_correct": 12076,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-1.5-pro-preview-0409": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11301,
+   "accuracy": 0.8081378718535469,
+   "helm_em_correct": 11301,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 91,
+   "errors": [],
+   "included": true
+  },
+  "google_gemini-2.0-flash-exp": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11304,
+   "accuracy": 0.8083524027459954,
+   "helm_em_correct": 11304,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_gemma-2-27b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10460,
+   "accuracy": 0.7479977116704806,
+   "helm_em_correct": 10460,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_gemma-2-9b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9847,
+   "accuracy": 0.7041618993135011,
+   "helm_em_correct": 9847,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_gemma-7b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9113,
+   "accuracy": 0.6516733409610984,
+   "helm_em_correct": 9113,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_text-bison@001": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9483,
+   "accuracy": 0.6781321510297483,
+   "helm_em_correct": 9483,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "google_text-unicorn@001": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10910,
+   "accuracy": 0.7801773455377574,
+   "helm_em_correct": 10910,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-2-13b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 7749,
+   "accuracy": 0.554133295194508,
+   "helm_em_correct": 7749,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 3,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-2-70b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9659,
+   "accuracy": 0.6907179633867276,
+   "helm_em_correct": 9659,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 2,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-2-7b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 6341,
+   "accuracy": 0.45344679633867274,
+   "helm_em_correct": 6341,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 4,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3-70b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11000,
+   "accuracy": 0.7866132723112128,
+   "helm_em_correct": 11000,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3-8b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9140,
+   "accuracy": 0.653604118993135,
+   "helm_em_correct": 9140,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 3,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3.1-405b-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11876,
+   "accuracy": 0.8492562929061785,
+   "helm_em_correct": 11876,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 31,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3.1-70b-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11314,
+   "accuracy": 0.8090675057208238,
+   "helm_em_correct": 11314,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 7,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3.1-8b-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 7579,
+   "accuracy": 0.5419765446224256,
+   "helm_em_correct": 7579,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 51,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3.2-11b-vision-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 7614,
+   "accuracy": 0.5444794050343249,
+   "helm_em_correct": 7614,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 95,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3.2-90b-vision-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11339,
+   "accuracy": 0.8108552631578947,
+   "helm_em_correct": 11339,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 6,
+   "errors": [],
+   "included": true
+  },
+  "meta_llama-3.3-70b-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11116,
+   "accuracy": 0.794908466819222,
+   "helm_em_correct": 11116,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 4,
+   "errors": [],
+   "included": true
+  },
+  "microsoft_phi-2": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 7909,
+   "accuracy": 0.565574942791762,
+   "helm_em_correct": 7909,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "microsoft_phi-3-medium-4k-instruct": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10822,
+   "accuracy": 0.7738844393592678,
+   "helm_em_correct": 10822,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 226,
+   "errors": [],
+   "included": true
+  },
+  "microsoft_phi-3-small-8k-instruct": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10645,
+   "accuracy": 0.7612271167048055,
+   "helm_em_correct": 10645,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_mistral-7b-instruct-v0.3": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 8241,
+   "accuracy": 0.589316361556064,
+   "helm_em_correct": 8241,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 30,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_mistral-7b-v0.1": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 7816,
+   "accuracy": 0.5589244851258581,
+   "helm_em_correct": 7816,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 788,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_mistral-large-2402": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9436,
+   "accuracy": 0.674771167048055,
+   "helm_em_correct": 9436,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 2781,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_mistral-large-2407": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11280,
+   "accuracy": 0.8066361556064073,
+   "helm_em_correct": 11280,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_mistral-small-2402": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9601,
+   "accuracy": 0.6865703661327232,
+   "helm_em_correct": 9601,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 662,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_mixtral-8x22b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10807,
+   "accuracy": 0.7728117848970252,
+   "helm_em_correct": 10807,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_mixtral-8x7b-32kseqlen": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9885,
+   "accuracy": 0.7068792906178489,
+   "helm_em_correct": 9885,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "mistralai_open-mistral-nemo-2407": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9037,
+   "accuracy": 0.6462385583524027,
+   "helm_em_correct": 9037,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-3.5-turbo-0125": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9250,
+   "accuracy": 0.6614702517162472,
+   "helm_em_correct": 9250,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-3.5-turbo-0613": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9544,
+   "accuracy": 0.6824942791762014,
+   "helm_em_correct": 9544,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 9,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-4-0613": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11748,
+   "accuracy": 0.8401029748283753,
+   "helm_em_correct": 11748,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 26,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-4-1106-preview": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11334,
+   "accuracy": 0.8104977116704806,
+   "helm_em_correct": 11334,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 739,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-4-turbo-2024-04-09": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11464,
+   "accuracy": 0.8197940503432495,
+   "helm_em_correct": 11464,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-4o-2024-05-13": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11861,
+   "accuracy": 0.848183638443936,
+   "helm_em_correct": 11861,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-4o-2024-08-06": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11877,
+   "accuracy": 0.8493278032036613,
+   "helm_em_correct": 11877,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "openai_gpt-4o-mini-2024-07-18": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10589,
+   "accuracy": 0.7572225400457666,
+   "helm_em_correct": 10589,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen1.5-110b-chat": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10827,
+   "accuracy": 0.7742419908466819,
+   "helm_em_correct": 10827,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 17,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen1.5-14b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9363,
+   "accuracy": 0.6695509153318078,
+   "helm_em_correct": 9363,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen1.5-32b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10342,
+   "accuracy": 0.7395594965675057,
+   "helm_em_correct": 10342,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen1.5-72b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10824,
+   "accuracy": 0.7740274599542334,
+   "helm_em_correct": 10824,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen1.5-7b": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 8554,
+   "accuracy": 0.6116990846681922,
+   "helm_em_correct": 8554,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen2-72b-instruct": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11575,
+   "accuracy": 0.8277316933638444,
+   "helm_em_correct": 11575,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 5,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen2.5-72b-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11650,
+   "accuracy": 0.8330949656750573,
+   "helm_em_correct": 11650,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  },
+  "qwen_qwen2.5-7b-instruct-turbo": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9989,
+   "accuracy": 0.714316361556064,
+   "helm_em_correct": 9989,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 47,
+   "errors": [],
+   "included": true
+  },
+  "snowflake_snowflake-arctic-instruct": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 9273,
+   "accuracy": 0.6631149885583524,
+   "helm_em_correct": 9273,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 0,
+   "errors": [],
+   "included": true
+  },
+  "upstage_solar-pro-241126": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10949,
+   "accuracy": 0.7829662471395881,
+   "helm_em_correct": 10949,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 2,
+   "errors": [],
+   "included": true
+  },
+  "writer_palmyra-x-004": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 11435,
+   "accuracy": 0.8177202517162472,
+   "helm_em_correct": 11435,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 115,
+   "errors": [],
+   "included": true
+  },
+  "writer_palmyra-x-v3": {
+   "subjects": 57,
+   "covered": 13984,
+   "correct": 10909,
+   "accuracy": 0.7801058352402745,
+   "helm_em_correct": 10909,
+   "em_gap": 0.0,
+   "consistent_share": 1.0,
+   "from_mapped": 0,
+   "invalid": 1,
+   "errors": [],
+   "included": true
+  }
+ },
+ "panel": [
+  {
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "accuracy": 0.8765017162471396,
+   "correct": 12257,
+   "covered": 13984
+  },
+  {
+   "model": "anthropic_claude-3-5-sonnet-20240620",
+   "accuracy": 0.871925057208238,
+   "correct": 12193,
+   "covered": 13984
+  },
+  {
+   "model": "deepseek-ai_deepseek-v3",
+   "accuracy": 0.8673483981693364,
+   "correct": 12129,
+   "covered": 13984
+  },
+  {
+   "model": "google_gemini-1.5-pro-002",
+   "accuracy": 0.863558352402746,
+   "correct": 12076,
+   "covered": 13984
+  },
+  {
+   "model": "anthropic_claude-3-opus-20240229",
+   "accuracy": 0.8505434782608695,
+   "correct": 11894,
+   "covered": 13984
+  },
+  {
+   "model": "openai_gpt-4o-2024-08-06",
+   "accuracy": 0.8493278032036613,
+   "correct": 11877,
+   "covered": 13984
+  },
+  {
+   "model": "meta_llama-3.1-405b-instruct-turbo",
+   "accuracy": 0.8492562929061785,
+   "correct": 11876,
+   "covered": 13984
+  },
+  {
+   "model": "openai_gpt-4o-2024-05-13",
+   "accuracy": 0.848183638443936,
+   "correct": 11861,
+   "covered": 13984
+  },
+  {
+   "model": "openai_gpt-4-0613",
+   "accuracy": 0.8401029748283753,
+   "correct": 11748,
+   "covered": 13984
+  },
+  {
+   "model": "qwen_qwen2.5-72b-instruct-turbo",
+   "accuracy": 0.8330949656750573,
+   "correct": 11650,
+   "covered": 13984
+  }
+ ],
+ "p1_parts": {
+  "fixtures": true,
+  "subjects": true,
+  "universe": false,
+  "redux_rows": true,
+  "redux_joined": true,
+  "key_agree": true,
+  "models": true
+ },
+ "predictions": {
+  "P2_miskey_ratio": true,
+  "P2_counts": [
+   80,
+   106,
+   354,
+   5285
+  ],
+  "P3_recall": true,
+  "P3_counts": [
+   80,
+   106
+  ],
+  "P4_precision_above_77": true,
+  "P4_counts": [
+   130,
+   484
+  ],
+  "P5_other_error_ratio": true,
+  "P5_counts": [
+   50,
+   230,
+   354,
+   5285
+  ],
+  "P6_unanimous_more_precise": true,
+  "P6_counts": [
+   67,
+   132,
+   130,
+   484
+  ],
+  "P1_structural": false,
+  "P1_counts": [
+   57,
+   13984,
+   5700,
+   106,
+   5653,
+   5653,
+   78
+  ]
+ },
+ "by_group": {
+  "all": {
+   "n": 13984,
+   "flagged": 1207,
+   "rate": 0.0863129290617849
+  },
+  "miskey": {
+   "n": 106,
+   "flagged": 80,
+   "rate": 0.7547169811320755
+  },
+  "ok": {
+   "n": 5285,
+   "flagged": 354,
+   "rate": 0.06698202459791863
+  },
+  "other_error": {
+   "n": 230,
+   "flagged": 50,
+   "rate": 0.21739130434782608
+  },
+  "unsure_or_conflict": {
+   "n": 32,
+   "flagged": 8,
+   "rate": 0.25
+  },
+  "unreviewed": {
+   "n": 8331,
+   "flagged": 715,
+   "rate": 0.085824030728604
+  }
+ },
+ "precision": {
+  "error_labelled": 130,
+  "judged": 484,
+  "share": 0.26859504132231404
+ },
+ "curve_exploratory": [
+  {
+   "min_agree": 4,
+   "flagged": 1431,
+   "miskey": 84,
+   "ok": 444,
+   "other_error": 56,
+   "error_labelled": 140,
+   "judged": 584,
+   "unreviewed": 838
+  },
+  {
+   "min_agree": 5,
+   "flagged": 1372,
+   "miskey": 84,
+   "ok": 419,
+   "other_error": 55,
+   "error_labelled": 139,
+   "judged": 558,
+   "unreviewed": 805
+  },
+  {
+   "min_agree": 6,
+   "flagged": 1207,
+   "miskey": 80,
+   "ok": 354,
+   "other_error": 50,
+   "error_labelled": 130,
+   "judged": 484,
+   "unreviewed": 715
+  },
+  {
+   "min_agree": 7,
+   "flagged": 885,
+   "miskey": 69,
+   "ok": 244,
+   "other_error": 34,
+   "error_labelled": 103,
+   "judged": 347,
+   "unreviewed": 533
+  },
+  {
+   "min_agree": 8,
+   "flagged": 666,
+   "miskey": 64,
+   "ok": 177,
+   "other_error": 23,
+   "error_labelled": 87,
+   "judged": 264,
+   "unreviewed": 398
+  },
+  {
+   "min_agree": 9,
+   "flagged": 486,
+   "miskey": 59,
+   "ok": 125,
+   "other_error": 18,
+   "error_labelled": 77,
+   "judged": 202,
+   "unreviewed": 282
+  },
+  {
+   "min_agree": 10,
+   "flagged": 304,
+   "miskey": 52,
+   "ok": 65,
+   "other_error": 15,
+   "error_labelled": 67,
+   "judged": 132,
+   "unreviewed": 171
+  }
+ ],
+ "by_subject_exploratory": {
+  "abstract_algebra": {
+   "n": 100,
+   "flagged": 11,
+   "redux_joined": 100,
+   "redux_flagged": 11,
+   "miskey": 6,
+   "miskey_flagged": 3,
+   "unreviewed_flagged": 0
+  },
+  "anatomy": {
+   "n": 135,
+   "flagged": 12,
+   "redux_joined": 100,
+   "redux_flagged": 8,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 4
+  },
+  "astronomy": {
+   "n": 152,
+   "flagged": 4,
+   "redux_joined": 100,
+   "redux_flagged": 2,
+   "miskey": 1,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 2
+  },
+  "business_ethics": {
+   "n": 100,
+   "flagged": 8,
+   "redux_joined": 100,
+   "redux_flagged": 8,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 0
+  },
+  "clinical_knowledge": {
+   "n": 265,
+   "flagged": 20,
+   "redux_joined": 100,
+   "redux_flagged": 10,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 10
+  },
+  "college_biology": {
+   "n": 144,
+   "flagged": 4,
+   "redux_joined": 100,
+   "redux_flagged": 4,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 0
+  },
+  "college_chemistry": {
+   "n": 100,
+   "flagged": 22,
+   "redux_joined": 100,
+   "redux_flagged": 22,
+   "miskey": 21,
+   "miskey_flagged": 12,
+   "unreviewed_flagged": 0
+  },
+  "college_computer_science": {
+   "n": 100,
+   "flagged": 8,
+   "redux_joined": 100,
+   "redux_flagged": 8,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 0
+  },
+  "college_mathematics": {
+   "n": 100,
+   "flagged": 15,
+   "redux_joined": 100,
+   "redux_flagged": 15,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 0
+  },
+  "college_medicine": {
+   "n": 173,
+   "flagged": 22,
+   "redux_joined": 100,
+   "redux_flagged": 14,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 8
+  },
+  "college_physics": {
+   "n": 80,
+   "flagged": 18,
+   "redux_joined": 78,
+   "redux_flagged": 17,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 1
+  },
+  "computer_security": {
+   "n": 100,
+   "flagged": 11,
+   "redux_joined": 100,
+   "redux_flagged": 11,
+   "miskey": 3,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 0
+  },
+  "conceptual_physics": {
+   "n": 235,
+   "flagged": 11,
+   "redux_joined": 100,
+   "redux_flagged": 6,
+   "miskey": 4,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 5
+  },
+  "econometrics": {
+   "n": 114,
+   "flagged": 18,
+   "redux_joined": 100,
+   "redux_flagged": 15,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 3
+  },
+  "electrical_engineering": {
+   "n": 145,
+   "flagged": 12,
+   "redux_joined": 100,
+   "redux_flagged": 10,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 2
+  },
+  "elementary_mathematics": {
+   "n": 375,
+   "flagged": 15,
+   "redux_joined": 99,
+   "redux_flagged": 3,
+   "miskey": 2,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 12
+  },
+  "formal_logic": {
+   "n": 126,
+   "flagged": 15,
+   "redux_joined": 100,
+   "redux_flagged": 11,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 4
+  },
+  "global_facts": {
+   "n": 100,
+   "flagged": 18,
+   "redux_joined": 96,
+   "redux_flagged": 18,
+   "miskey": 5,
+   "miskey_flagged": 4,
+   "unreviewed_flagged": 0
+  },
+  "high_school_biology": {
+   "n": 310,
+   "flagged": 10,
+   "redux_joined": 100,
+   "redux_flagged": 4,
+   "miskey": 2,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 6
+  },
+  "high_school_chemistry": {
+   "n": 203,
+   "flagged": 25,
+   "redux_joined": 100,
+   "redux_flagged": 12,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 13
+  },
+  "high_school_computer_science": {
+   "n": 100,
+   "flagged": 2,
+   "redux_joined": 100,
+   "redux_flagged": 2,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 0
+  },
+  "high_school_european_history": {
+   "n": 165,
+   "flagged": 15,
+   "redux_joined": 100,
+   "redux_flagged": 7,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 8
+  },
+  "high_school_geography": {
+   "n": 198,
+   "flagged": 8,
+   "redux_joined": 100,
+   "redux_flagged": 6,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 2
+  },
+  "high_school_government_and_politics": {
+   "n": 193,
+   "flagged": 2,
+   "redux_joined": 100,
+   "redux_flagged": 1,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 1
+  },
+  "high_school_macroeconomics": {
+   "n": 389,
+   "flagged": 28,
+   "redux_joined": 99,
+   "redux_flagged": 10,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 18
+  },
+  "high_school_mathematics": {
+   "n": 270,
+   "flagged": 38,
+   "redux_joined": 100,
+   "redux_flagged": 12,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 26
+  },
+  "high_school_microeconomics": {
+   "n": 238,
+   "flagged": 7,
+   "redux_joined": 99,
+   "redux_flagged": 2,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 5
+  },
+  "high_school_physics": {
+   "n": 151,
+   "flagged": 22,
+   "redux_joined": 100,
+   "redux_flagged": 16,
+   "miskey": 2,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 6
+  },
+  "high_school_psychology": {
+   "n": 523,
+   "flagged": 15,
+   "redux_joined": 95,
+   "redux_flagged": 2,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 13
+  },
+  "high_school_statistics": {
+   "n": 216,
+   "flagged": 20,
+   "redux_joined": 99,
+   "redux_flagged": 8,
+   "miskey": 2,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 12
+  },
+  "high_school_us_history": {
+   "n": 204,
+   "flagged": 7,
+   "redux_joined": 100,
+   "redux_flagged": 3,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 4
+  },
+  "high_school_world_history": {
+   "n": 237,
+   "flagged": 10,
+   "redux_joined": 100,
+   "redux_flagged": 3,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 7
+  },
+  "human_aging": {
+   "n": 223,
+   "flagged": 27,
+   "redux_joined": 100,
+   "redux_flagged": 14,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 13
+  },
+  "human_sexuality": {
+   "n": 131,
+   "flagged": 6,
+   "redux_joined": 100,
+   "redux_flagged": 4,
+   "miskey": 2,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 2
+  },
+  "international_law": {
+   "n": 120,
+   "flagged": 5,
+   "redux_joined": 99,
+   "redux_flagged": 3,
+   "miskey": 2,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 2
+  },
+  "jurisprudence": {
+   "n": 108,
+   "flagged": 9,
+   "redux_joined": 100,
+   "redux_flagged": 8,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 1
+  },
+  "logical_fallacies": {
+   "n": 163,
+   "flagged": 12,
+   "redux_joined": 100,
+   "redux_flagged": 7,
+   "miskey": 3,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 5
+  },
+  "machine_learning": {
+   "n": 112,
+   "flagged": 19,
+   "redux_joined": 100,
+   "redux_flagged": 16,
+   "miskey": 2,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 3
+  },
+  "management": {
+   "n": 103,
+   "flagged": 6,
+   "redux_joined": 100,
+   "redux_flagged": 6,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 0
+  },
+  "marketing": {
+   "n": 234,
+   "flagged": 8,
+   "redux_joined": 100,
+   "redux_flagged": 2,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 6
+  },
+  "medical_genetics": {
+   "n": 100,
+   "flagged": 1,
+   "redux_joined": 100,
+   "redux_flagged": 1,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 0
+  },
+  "miscellaneous": {
+   "n": 783,
+   "flagged": 19,
+   "redux_joined": 100,
+   "redux_flagged": 2,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 17
+  },
+  "moral_disputes": {
+   "n": 346,
+   "flagged": 31,
+   "redux_joined": 100,
+   "redux_flagged": 7,
+   "miskey": 1,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 24
+  },
+  "moral_scenarios": {
+   "n": 895,
+   "flagged": 61,
+   "redux_joined": 99,
+   "redux_flagged": 4,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 57
+  },
+  "nutrition": {
+   "n": 306,
+   "flagged": 20,
+   "redux_joined": 100,
+   "redux_flagged": 8,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 12
+  },
+  "philosophy": {
+   "n": 311,
+   "flagged": 23,
+   "redux_joined": 100,
+   "redux_flagged": 8,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 15
+  },
+  "prehistory": {
+   "n": 324,
+   "flagged": 12,
+   "redux_joined": 100,
+   "redux_flagged": 6,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 6
+  },
+  "professional_accounting": {
+   "n": 282,
+   "flagged": 29,
+   "redux_joined": 100,
+   "redux_flagged": 8,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 21
+  },
+  "professional_law": {
+   "n": 1534,
+   "flagged": 294,
+   "redux_joined": 98,
+   "redux_flagged": 18,
+   "miskey": 2,
+   "miskey_flagged": 1,
+   "unreviewed_flagged": 276
+  },
+  "professional_medicine": {
+   "n": 272,
+   "flagged": 5,
+   "redux_joined": 100,
+   "redux_flagged": 1,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 4
+  },
+  "professional_psychology": {
+   "n": 610,
+   "flagged": 38,
+   "redux_joined": 99,
+   "redux_flagged": 5,
+   "miskey": 2,
+   "miskey_flagged": 2,
+   "unreviewed_flagged": 33
+  },
+  "public_relations": {
+   "n": 106,
+   "flagged": 17,
+   "redux_joined": 96,
+   "redux_flagged": 14,
+   "miskey": 3,
+   "miskey_flagged": 3,
+   "unreviewed_flagged": 3
+  },
+  "security_studies": {
+   "n": 245,
+   "flagged": 21,
+   "redux_joined": 100,
+   "redux_flagged": 12,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 9
+  },
+  "sociology": {
+   "n": 200,
+   "flagged": 8,
+   "redux_joined": 99,
+   "redux_flagged": 6,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 2
+  },
+  "us_foreign_policy": {
+   "n": 98,
+   "flagged": 3,
+   "redux_joined": 98,
+   "redux_flagged": 3,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 0
+  },
+  "virology": {
+   "n": 166,
+   "flagged": 65,
+   "redux_joined": 100,
+   "redux_flagged": 42,
+   "miskey": 33,
+   "miskey_flagged": 30,
+   "unreviewed_flagged": 23
+  },
+  "world_religions": {
+   "n": 171,
+   "flagged": 15,
+   "redux_joined": 100,
+   "redux_flagged": 6,
+   "miskey": 0,
+   "miskey_flagged": 0,
+   "unreviewed_flagged": 9
+  }
+ },
+ "n_candidates": 1207,
+ "note": "Flag (audit 77's rule): at least 6 of the 10 most accurate included HELM models pick one non-key option and more of them pick it than the key. Precision = share of flagged Redux-judged questions (wrong key, OK or another error label) that carry an error label. P1 structural; P2 miskey flag rate >= 5x OK rate; P3 >= half the joined miskeys flagged; P4 HEADLINE precision > 65/359; P5 other-error flag rate >= 2x OK rate; P6 precision at 10 of 10 > at 6 of 10."
+}

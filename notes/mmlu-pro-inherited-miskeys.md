@@ -101,7 +101,10 @@ virology and college chemistry (24.2% vs 15.5%). With both panels unanimous, 16 
 error label. Taking either panel's flag is the least precise choice (16.7%). The 113 agreement flags outside Redux's
 sample lean on professional law (43) and moral disputes (11), where the judged agreement flags were mostly cleared,
 so that list is likely less precise than 33.6%. Audit 82, pre-registered on 6 November 2026, tests whether classical
-item discrimination across all 78 HELM models beats the top-10 consensus at the same number of flags.
+item discrimination across all 78 HELM models beats the top-10 consensus at the same number of flags. Audit 83,
+pre-registered the same day, asks how strong a panel has to be: it cuts HELM's models into seven disjoint panels of 10
+by accuracy (ranks 1-10 down to 61-70) and scores each one's flag against the same expert labels at an equal review
+budget.
 
 ## 9. Recommendations
 
@@ -136,9 +139,10 @@ Probability Landscapes" (arXiv 2608.30372) ranks MMLU items for review from mode
 models' answers on seven benchmarks (not MMLU or MMLU-Pro) and score them against an LLM reviewer. Hofmann et al.,
 "Fluid Language Model Benchmarking" (COLM 2025, arXiv 2509.11106) note that low-discrimination items are often
 mislabeled and count MMLU-Redux mislabels in the items they select. Jiang et al. (arXiv 2604.03244) compute item-rest
-correlations on 567 MMLU items. "Are LLMs Better than Reported?" (arXiv 2410.18889) re-labels data with an LLM
-ensemble. We found no earlier count of the Redux miskeys MMLU-Pro inherited, or test of answer consensus, within or
-across harnesses, against Redux's expert labels on MMLU-Pro or MMLU.
+correlations on 567 MMLU items. Nahum et al., "Are LLMs Better than Reported?" (EMNLP 2025, arXiv 2410.18889)
+re-label data with an LLM ensemble and report that error detection improves as the ensemble grows. We found no earlier
+count of the Redux miskeys MMLU-Pro inherited, or test of answer consensus, within or across harnesses, against Redux's
+expert labels on MMLU-Pro or MMLU.
 
 ## Code and data
 
@@ -146,6 +150,7 @@ Repository: github.com/munimtechnologies/munimtechnologies.github.io. Folders (A
 results): mcq-mmlu-pro-redux-inheritance (75), mcq-mmlu-pro-inherited-miskey-models (76),
 mcq-mmlu-pro-model-consensus-miskeys (77), mcq-mmlu-pro-consensus-added-options (78),
 mcq-mmlu-pro-consensus-distinct-panel (79), mcq-mmlu-helm-consensus-miskeys (80),
-mcq-mmlu-cross-harness-consensus (81), mcq-mmlu-helm-discrimination-miskeys (82, pre-registered). Catalogue:
-eval-reliability-audits. Only ids, letters, counts and hashes are published, never question or option text. MMLU and
-MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0; HELM is Apache-2.0.
+mcq-mmlu-cross-harness-consensus (81), mcq-mmlu-helm-discrimination-miskeys (82, pre-registered),
+mcq-mmlu-helm-panel-strength (83, pre-registered). Catalogue: eval-reliability-audits. Only ids, letters, counts and
+hashes are published, never question or option text. MMLU and MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0;
+HELM is Apache-2.0.

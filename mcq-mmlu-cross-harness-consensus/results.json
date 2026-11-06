@@ -1,0 +1,1863 @@
+{
+ "audit": 81,
+ "slug": "mcq-mmlu-cross-harness-consensus",
+ "dataset": "HELM MMLU release v1.13.0 (Stanford CRFM, public GCS bucket crfm-helm-public/mmlu); MMLU-Pro (TIGER-Lab/MMLU-Pro 'default' test) and MMLU-Redux 2.0 via the HF datasets-server parquet API; per-question MMLU-Pro predictions from github.com/TIGER-AI-Lab/MMLU-Pro eval_results. Only ids, letters, counts and hashes.",
+ "fixture": {
+  "panel_flags": true,
+  "runs": true,
+  "universe": true,
+  "predictions": true,
+  "redux_join": true,
+  "pro_helm_join": true,
+  "agree": true,
+  "verdicts": true
+ },
+ "helm": {
+  "release_sha256": "921755ccfa38513d9eed082d497cf4328a87149842128a7e1794efcb79eba8a1",
+  "universe": 13984,
+  "universe_counts": {
+   "dup_dropped": 54,
+   "no_gold": 4
+  },
+  "instances_failed": [],
+  "models": 79,
+  "included": 78,
+  "panel": [
+   {
+    "model": "anthropic_claude-3-5-sonnet-20241022",
+    "accuracy": 0.8765017162471396
+   },
+   {
+    "model": "anthropic_claude-3-5-sonnet-20240620",
+    "accuracy": 0.871925057208238
+   },
+   {
+    "model": "deepseek-ai_deepseek-v3",
+    "accuracy": 0.8673483981693364
+   },
+   {
+    "model": "google_gemini-1.5-pro-002",
+    "accuracy": 0.863558352402746
+   },
+   {
+    "model": "anthropic_claude-3-opus-20240229",
+    "accuracy": 0.8505434782608695
+   },
+   {
+    "model": "openai_gpt-4o-2024-08-06",
+    "accuracy": 0.8493278032036613
+   },
+   {
+    "model": "meta_llama-3.1-405b-instruct-turbo",
+    "accuracy": 0.8492562929061785
+   },
+   {
+    "model": "openai_gpt-4o-2024-05-13",
+    "accuracy": 0.848183638443936
+   },
+   {
+    "model": "openai_gpt-4-0613",
+    "accuracy": 0.8401029748283753
+   },
+   {
+    "model": "qwen_qwen2.5-72b-instruct-turbo",
+    "accuracy": 0.8330949656750573
+   }
+  ],
+  "flagged": {
+   "all": 1207,
+   "miskey": 80,
+   "ok": 354,
+   "other_error": 50,
+   "unsure_or_conflict": 8,
+   "unreviewed": 715
+  },
+  "precision": [
+   130,
+   484
+  ],
+  "reproduces_80": true
+ },
+ "redux": {
+  "rows": 5700,
+  "join": {
+   "joined": 5653,
+   "no_match": 47,
+   "conflict": 0
+  },
+  "key_agree": 5653,
+  "shards": [
+   {
+    "config": "abstract_algebra",
+    "sha256": "c7c70e1b329867220f57a40182aedc808e12dd94e0974315a6c1607b9cadb52b",
+    "bytes": 23062
+   },
+   {
+    "config": "anatomy",
+    "sha256": "0c4a5ecfdda3982794ef319686b7fd4c61398eeaf741fe787f37613c3442997c",
+    "bytes": 18031
+   },
+   {
+    "config": "astronomy",
+    "sha256": "c6b5a0f329383181ffcef35f1582ea1924eac4eb750a310e7be2e55923b5a0b2",
+    "bytes": 26144
+   },
+   {
+    "config": "business_ethics",
+    "sha256": "2f221168b41c503e29042dbfb401caa69b454f89b45d919c54e34db3b41a590b",
+    "bytes": 25448
+   },
+   {
+    "config": "clinical_knowledge",
+    "sha256": "543c2e08337580baa0e76d68d7391920daca6f7ba7d0d5f6ec2ae93df4c93e22",
+    "bytes": 21789
+   },
+   {
+    "config": "college_biology",
+    "sha256": "b121c16f5147af55f087c1d5185a9cc455cd882bc11b85c443f3d90322e8866e",
+    "bytes": 27111
+   },
+   {
+    "config": "college_chemistry",
+    "sha256": "45b80702c8bb75f96a8aeb7d712cc49ba8b846b0636d24351b7deab29122d341",
+    "bytes": 19967
+   },
+   {
+    "config": "college_computer_science",
+    "sha256": "3c2d8f1cab8112e4f5db6e5d1240db591d870cab7076bdc5734397f2cc6e7b08",
+    "bytes": 32061
+   },
+   {
+    "config": "college_mathematics",
+    "sha256": "8e578811d92355dde403e1f2ae2bd9dc303dcfacb3c95215773a3438a32cc92b",
+    "bytes": 18932
+   },
+   {
+    "config": "college_medicine",
+    "sha256": "28fc2a6906a782949e81b8cde81da1742ba8946a037e29cb4ab203a30374e3dc",
+    "bytes": 31099
+   },
+   {
+    "config": "college_physics",
+    "sha256": "26ccf8d65edab187d0662f0d146f4d8c7cb82e5417582f86e8dbd3122489ec23",
+    "bytes": 20838
+   },
+   {
+    "config": "computer_security",
+    "sha256": "e326e550f94fb4be0a78acc67b3e4aaf3308181445841763d65cd2f509f39398",
+    "bytes": 25601
+   },
+   {
+    "config": "conceptual_physics",
+    "sha256": "8403c3b66a1c1a2dcd6ddee7ebacee130c6d1d3b118451f56594776ef4256357",
+    "bytes": 22743
+   },
+   {
+    "config": "econometrics",
+    "sha256": "182f00b6760d275a2c3c727de6cf520f48e528c3d0970604f2bba1d109c0c81e",
+    "bytes": 24471
+   },
+   {
+    "config": "electrical_engineering",
+    "sha256": "9dd0875fa221dc11a87515962911234700e241b0df4ee19d5a596f1966cfff03",
+    "bytes": 14836
+   },
+   {
+    "config": "elementary_mathematics",
+    "sha256": "b08992be69d9e2ddb6d4fa60a1f9e565bd9acd48699f5ddb5f94fa38c1cfbd2c",
+    "bytes": 16433
+   },
+   {
+    "config": "formal_logic",
+    "sha256": "82e7b1b7f7b52708975d5a42c577b9ffd1c1f0a27521993d71d83a837194b0fe",
+    "bytes": 22433
+   },
+   {
+    "config": "global_facts",
+    "sha256": "52e16f7ccc93fa9ef7d51425716f88bf88a3dce17d5e2217b5ac18ac3e3de7ef",
+    "bytes": 21242
+   },
+   {
+    "config": "high_school_biology",
+    "sha256": "fada7b1a8b0d0d06ecba1e9f9f9860c3dce3868c4cb3832584c12b04f43d7284",
+    "bytes": 29476
+   },
+   {
+    "config": "high_school_chemistry",
+    "sha256": "39fe0c467520ce9ff1cbda1b985eb3567090263d749349e9d609e5a81faf3472",
+    "bytes": 22941
+   },
+   {
+    "config": "high_school_computer_science",
+    "sha256": "fc6e68a4a3e3aad304fe9b33f22965c7aa4f96b8bf0d893d78de6e4984a8dcf1",
+    "bytes": 29356
+   },
+   {
+    "config": "high_school_european_history",
+    "sha256": "7e9854b9fc59ef11a0c4c34f0edee291f5c09302f0fd984db7de2f74d90002ac",
+    "bytes": 93674
+   },
+   {
+    "config": "high_school_geography",
+    "sha256": "b06374835d612de1f9bcefc74751d780a8fdd3b31ff6e7815dcc2b3cf713ca45",
+    "bytes": 19320
+   },
+   {
+    "config": "high_school_government_and_politics",
+    "sha256": "731a9c6c594303149da3137fbda77f75f9dcdbc809d2cd24ab06da0e55578a2a",
+    "bytes": 27438
+   },
+   {
+    "config": "high_school_macroeconomics",
+    "sha256": "1ff2414dd8b34d60a026d55ecb80c7282f681cb5e8b92d8932615411bf40d2eb",
+    "bytes": 24770
+   },
+   {
+    "config": "high_school_mathematics",
+    "sha256": "338faf69095250683a7f843036a9d3ce53d359fe1457ce9cd4f908d8e5c8bb4c",
+    "bytes": 17683
+   },
+   {
+    "config": "high_school_microeconomics",
+    "sha256": "6986aecd3c6868062b8a774922cad6b747f187b742d84b1f1ae0692ae74a444c",
+    "bytes": 21687
+   },
+   {
+    "config": "high_school_physics",
+    "sha256": "a3841f7ce74176c5406e0b360ffc8c0d252d1118d85bb9e88179d571538bec36",
+    "bytes": 27986
+   },
+   {
+    "config": "high_school_psychology",
+    "sha256": "0000e63efe6182863a2781b7f39052ff6fae70df89d0493500aff0ac169edcc7",
+    "bytes": 23887
+   },
+   {
+    "config": "high_school_statistics",
+    "sha256": "d3c54e7783d9b1e88e35181e07e4499fd5ffaad786fbe06957752d9b27d1d75b",
+    "bytes": 32386
+   },
+   {
+    "config": "high_school_us_history",
+    "sha256": "5d4022d20a5a715131f9572236a432c5a4ac238fddc63acab8c38068e09f2eb1",
+    "bytes": 86249
+   },
+   {
+    "config": "high_school_world_history",
+    "sha256": "c6b8e0fba28b2cc3377fbbd99a20274a26a99f2040d1a37727827662d1833be4",
+    "bytes": 94559
+   },
+   {
+    "config": "human_aging",
+    "sha256": "340a13d235bc74efec63924a8dd5c395c1b7a4439c0d6b2175581066182a4097",
+    "bytes": 20067
+   },
+   {
+    "config": "human_sexuality",
+    "sha256": "ee7fb92ad17b759e9759d2bdc74cdf0fc5ac66807fffe6eba60cff97b9641cfd",
+    "bytes": 22570
+   },
+   {
+    "config": "international_law",
+    "sha256": "94e515fe3846a0d7eba90dd61d0003188c472b4c1623d7bec9ed1984e1601f6d",
+    "bytes": 26377
+   },
+   {
+    "config": "jurisprudence",
+    "sha256": "934f738e393f56e399c3f820468576b14aab7fcd7e16b8704ded52bcbe794963",
+    "bytes": 23919
+   },
+   {
+    "config": "logical_fallacies",
+    "sha256": "ef1a39b4d2e40a2170e105dc2924ec785725a9e77e1606a911e94eb7836815b6",
+    "bytes": 22077
+   },
+   {
+    "config": "machine_learning",
+    "sha256": "f10f39e6a6b51354de7350bdabff673d82c4ced72a113b9d3cb9a2a928415308",
+    "bytes": 23864
+   },
+   {
+    "config": "management",
+    "sha256": "cd9e4b2908ddf1a1eb589d2f63de444852b9f58a3604397c1d44053ce2856bba",
+    "bytes": 17534
+   },
+   {
+    "config": "marketing",
+    "sha256": "ca9c3b9997f5b4e9b792f8f89ba58050a1ea621b80dd462400b7517b63d7ef53",
+    "bytes": 23832
+   },
+   {
+    "config": "medical_genetics",
+    "sha256": "f2e94def739f452ee4ac055c49763f7c20bc68f77d813a89776443a9d3caf7ff",
+    "bytes": 18322
+   },
+   {
+    "config": "miscellaneous",
+    "sha256": "78b23fd0707d45957374fb07a4adca80df8007e362aba5dc164a581210f5829c",
+    "bytes": 18070
+   },
+   {
+    "config": "moral_disputes",
+    "sha256": "8b75330ce9ac0bb5c9b3c182b207f14909ac1b83cd7af25df3275373497f7343",
+    "bytes": 24702
+   },
+   {
+    "config": "moral_scenarios",
+    "sha256": "27e5ddb7abcf49ce39c1cbc5e58f7f582ff99cbf64c4ef1bc71cb9ae0ba7eb44",
+    "bytes": 15657
+   },
+   {
+    "config": "nutrition",
+    "sha256": "26d8c92fc117fe5d5ca22a52c0bf41eb5be41f04f92e18586204d749d3755fa5",
+    "bytes": 23599
+   },
+   {
+    "config": "philosophy",
+    "sha256": "98371d132776c7578de57e436202aa8a46e1c4cdddaafd45b77be4830a2a4def",
+    "bytes": 22261
+   },
+   {
+    "config": "prehistory",
+    "sha256": "c71bcef91e0125d749bbc7a3f148c15388770177a64cef90bf26d4c84f72c4dc",
+    "bytes": 21449
+   },
+   {
+    "config": "professional_accounting",
+    "sha256": "25ad9ab1c1fd9908f9f9724eb5f80e87b143cfd590ddacd9452d6241da17067c",
+    "bytes": 37718
+   },
+   {
+    "config": "professional_law",
+    "sha256": "e316652d5a98e5aed3e06f1bfe749503756af53e5b1a97d0b7881325c1cd74d3",
+    "bytes": 76370
+   },
+   {
+    "config": "professional_medicine",
+    "sha256": "e9ab676b69cfa943bb94e2389158c47bd53cfbff1081ef76336b09df33a0dc07",
+    "bytes": 52795
+   },
+   {
+    "config": "professional_psychology",
+    "sha256": "0054172f48f3444f46819135a844cf28446f487a54ae4cf811656dd3fe4f203e",
+    "bytes": 31070
+   },
+   {
+    "config": "public_relations",
+    "sha256": "c513bf252e36bb0febc030576f26b797f4dba31fe15e46bc688b9a906151132d",
+    "bytes": 24306
+   },
+   {
+    "config": "security_studies",
+    "sha256": "47ded194ba7fb8fcfc0e9a2edafcc49fe654eca51ceadcca8a95e36165741e9d",
+    "bytes": 52789
+   },
+   {
+    "config": "sociology",
+    "sha256": "694551686df4484cd517add4a7001a83f791219dd37e60868679889e52b53e30",
+    "bytes": 26979
+   },
+   {
+    "config": "us_foreign_policy",
+    "sha256": "bc3c385cc0fc24f48730c90b0e176378fefba05d2c73f7dcc356e5b2969591d4",
+    "bytes": 22230
+   },
+   {
+    "config": "virology",
+    "sha256": "764b0b8f46e8c1aa20fba1dd6c93a8b383dfc0098e794fb1758ffed90b124a8b",
+    "bytes": 22224
+   },
+   {
+    "config": "world_religions",
+    "sha256": "ec1fc658f7a1965559a235912061799da11e52833634ec334e40846a1f21a4d9",
+    "bytes": 15462
+   }
+  ]
+ },
+ "mmlu_pro": {
+  "n": 12032,
+  "family_n": {
+   "ori_mmlu": 6810,
+   "theoremQA": 598,
+   "stemez": 4083,
+   "scibench": 541
+  },
+  "shards": [
+   {
+    "split": "test",
+    "sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8",
+    "bytes": 4144185
+   }
+  ],
+  "archives": {
+   "DeepSeek-Coder-V2_5shots": {
+    "sha256": "7a1cb6f4f2dbb89c98d42c339f1b4008e8c33c5d48370822beef6826016a13d0",
+    "n_records": 10351,
+    "join_share": 0.9796154960873346,
+    "coverage": 0.8427526595744681,
+    "status": "excluded_join"
+   },
+   "Llama-2-13b-hf_5shots": {
+    "sha256": "248fbe602862506158edc8e74bff78f1c66b889226a1f98750c207843dccebbf",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.2357572166257513
+   },
+   "Llama-2-70b-hf_5shots": {
+    "sha256": "1e3e50201339dfc25a4f2a009afecee6bc1d188f51c5fb4bd04b0b2bb683b9ce",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.3634131888597308
+   },
+   "Llama-2-7b-hf_5shots": {
+    "sha256": "57c47f6e70da9d5edf44a4803f75550c553feaadd94340dd9fef09afdeb82e09",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.18335731820875306
+   },
+   "Meta-Llama-3-70B-Instruct_5shots": {
+    "sha256": "9356d537b38b993e11c505683905a7f32adb3666b101560b54a0aa9aeff91ac8",
+    "n_records": 12187,
+    "join_share": 0.0,
+    "coverage": 0.0,
+    "status": "excluded_join"
+   },
+   "Meta-Llama-3-70B_5shots": {
+    "sha256": "d38e3397a932d2fd120afe7ce1a91d77c9d47a2edafc0dcf47e088301167a39b",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.521544061627021
+   },
+   "Meta-Llama-3-8B-Instruct_5shots": {
+    "sha256": "981b7216dd9075d86a832ac6900e2a0e6a6c9d16b278f03949fd149e0f9e7db8",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.40243799204266484
+   },
+   "Meta-Llama-3-8B_5shots": {
+    "sha256": "e295f4844082081e8721d9c45bfff17ef1324e92ff0ae05d2c3057e3928a6b0e",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.3420807584864133
+   },
+   "Meta-Llama-3_1-70B-Instruct_5shots": {
+    "sha256": "26573565138fcd27358a0945c9f525a7d9a75a756689058a0d5bfcbc64fa55cb",
+    "n_records": 12032,
+    "join_share": 0.9824634308510638,
+    "coverage": 0.9824634308510638,
+    "status": "included",
+    "accuracy": 0.6307419000084595
+   },
+   "Meta-Llama-3_1-70B_5shots": {
+    "sha256": "adad31c9ca629cd3143d0770fec98ca5763297cb349570eba4cf59a41d704476",
+    "n_records": 12032,
+    "join_share": 0.9824634308510638,
+    "coverage": 0.9824634308510638,
+    "status": "included",
+    "accuracy": 0.5264360037221893
+   },
+   "Meta-Llama-3_1-8B-Instruct_5shots": {
+    "sha256": "d5e76b2564b5baad90892c3664287a51f562a3be792a130acaec458b8560a1cf",
+    "n_records": 12032,
+    "join_share": 0.9824634308510638,
+    "coverage": 0.9824634308510638,
+    "status": "included",
+    "accuracy": 0.4437864816851366
+   },
+   "Meta-Llama-3_1-8B_5shots": {
+    "sha256": "ea8fe2417ec5bece1ebbd11d6bef2c9a23b13d56dcf1f7314aa1e492e528908f",
+    "n_records": 12032,
+    "join_share": 0.9824634308510638,
+    "coverage": 0.9824634308510638,
+    "status": "included",
+    "accuracy": 0.36638186278656626
+   },
+   "Mistral-7B-Instruct-v0.1_5shots": {
+    "sha256": "8cda305359ec6f510451ea8baa659225b40b9919919096cd703624c4f8a35eb5",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.24219080673833912
+   },
+   "Mistral-7B-Instruct-v0.2_5shots": {
+    "sha256": "ff1c5ae8a0f6412cca52537746f192476398c24590a3fb79e8f10c300ffa8248",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.28790315753830525
+   },
+   "Mistral-7B-v0.1_5shots": {
+    "sha256": "d7fc5b95fe29f2e62fdf6ab7aad5da424f16a0ad204713db9f8f1fc7f25bbd72",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.29840006772200117
+   },
+   "Mistral-7B-v0.2-hf_5shots": {
+    "sha256": "5d3436b0cba3e371bf53aea1b8e24a9e35e6959ae68f70d3e297feedf989fe8f",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.2920511301108948
+   },
+   "Mixtral-8x7B-Instruct-v0.1_5shots": {
+    "sha256": "4716478ca233a86baa39b1c99452589191d8db3df3b398c871ff2832959408aa",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.41945314484043006
+   },
+   "Mixtral-8x7B-v0.1_5shots": {
+    "sha256": "c31198ca658a59b734f54b9c676fd481465def1e2a66900511cc1c81fc641163",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.39972911199525946
+   },
+   "Phi-3-mini-4k-instruct_5shots": {
+    "sha256": "7f45083108479ef586cc6c855325294c1220a9fcb614066abf22234a26d7037e",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.4165749597900618
+   },
+   "Qwen1.5-110B_5shots": {
+    "sha256": "37a0859dc3bbd2617fd2c612a8d1d28854c097651aceadb7b61f875828905c76",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.49335477863370863
+   },
+   "Qwen1.5-14B-Chat_5shots": {
+    "sha256": "b3ac706bd10856d7c265e9de9e310a942ecb27e01e052dd1a37d0aa57bb81ba0",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.3633285363582494
+   },
+   "Qwen1.5-72B-Chat_5shots": {
+    "sha256": "a87935dfe3c349c06115a3b82e299dea30929a3b25ababc879394b58cc93c0b9",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.4724456107677982
+   },
+   "Qwen1.5-7B-Chat_5shots": {
+    "sha256": "e1819661f16044ee97734d292c9a7e40f38f9be0aae274642f07943ab69a37b5",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.2660628121560992
+   },
+   "Yi-34B_5shots": {
+    "sha256": "17e44df39275a324a250fee8b98f96d8cddcdc00e68f171f07996db9012c5f27",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.4212308473715398
+   },
+   "Yi-6B_5shots": {
+    "sha256": "2a85c02303f8e9b98ebd689f239c9fa7bf329014ec911c589f2a91fa47bc377d",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.25006348937611106
+   },
+   "Yi-6b-Chat_5shots": {
+    "sha256": "b79d5074c3685ee9be86d1ecc9c4eef93f234c9fa84db7ae3c1fbec250fa10bf",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.26843308219757894
+   },
+   "arx_0314_5shots": {
+    "sha256": "72f1078e3fb80a409905d9722243db101d85911ef21f204ec6762cb10318f18a",
+    "n_records": 12005,
+    "join_share": 0.9851728446480633,
+    "coverage": 0.9829621010638298,
+    "status": "included",
+    "accuracy": 0.830472647332375
+   },
+   "arx_3_5shots": {
+    "sha256": "fa6ca425672f134dc2cc37625c20d6cb40ca3342af50b9a434f730305194055d",
+    "n_records": 12031,
+    "join_share": 0.9847061757127421,
+    "coverage": 0.984624335106383,
+    "status": "included",
+    "accuracy": 0.7838271292310289
+   },
+   "c4ai-command-r-v01_5shots": {
+    "sha256": "246e2da80791811b1f5a283b40b4f7d62dafc5128d2653edcfe9b81557762e52",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.3661220689071362
+   },
+   "claude-3-5-haiku-20241022_5shots": {
+    "sha256": "35691b87e241a159894feb754a6ff6102d9c21c6dc99d2fbd3b34a371daf0e29",
+    "n_records": 12032,
+    "join_share": 0.9852061170212766,
+    "coverage": 0.9852061170212766,
+    "status": "included",
+    "accuracy": 0.6218997806647545
+   },
+   "claude-3-5-sonnet-20241022_5shots": {
+    "sha256": "22c6e8b47fe76212bec6c1e96c52d9a447e90a15874d76f1e3e20c4404a39867",
+    "n_records": 12032,
+    "join_share": 0.9852061170212766,
+    "coverage": 0.9852061170212766,
+    "status": "included",
+    "accuracy": 0.7774590855407457
+   },
+   "claude-3.5-sonnet_5shots": {
+    "sha256": "75694e83610ffa500531a34d28a82fa93062eaa284b134427ea69055e816ca60",
+    "n_records": 12030,
+    "join_share": 0.9824605153782211,
+    "coverage": 0.9822972074468085,
+    "status": "included",
+    "accuracy": 0.7643624672138083
+   },
+   "deepseek-chat-v2_5_5shots": {
+    "sha256": "c6e4ba2d70ac49d3cada47f953ef0202500fac78580a0b51921da0f2eea64ce4",
+    "n_records": 12032,
+    "join_share": 0.9852061170212766,
+    "coverage": 0.9852061170212766,
+    "status": "included",
+    "accuracy": 0.6608739665935549
+   },
+   "deepseek_5shots": {
+    "sha256": "2b70b258c6ba05dcfe973f6d2152d1bd0ebb0ea9ceaec5c2ba3ecf6884e76ece",
+    "n_records": 11997,
+    "join_share": 0.9819121447028424,
+    "coverage": 0.9790558510638298,
+    "status": "included",
+    "accuracy": 0.5273344651952462
+   },
+   "flash_0shots_00_35_03": {
+    "sha256": "b13cfc48279c285f0ebb6dbb48816c056c2e81acbf07799f8dbf4bcf7e50c905",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.5941759078980784
+   },
+   "gemini-1.5-flash-002_5shots": {
+    "sha256": "fed3caed9a9c1bfc7da74e5116f70ffdb9023794d1677eb2f7d48a2a4adec2e7",
+    "n_records": 12012,
+    "join_share": 0.9851814851814852,
+    "coverage": 0.9835438829787234,
+    "status": "included",
+    "accuracy": 0.6428088558391076
+   },
+   "gemini-1.5-pro-002_5shots": {
+    "sha256": "7d95c116e999dc15012d753e871bbbc8fd4e74b9feb49b992ea55247576af370",
+    "n_records": 12020,
+    "join_share": 0.9851913477537437,
+    "coverage": 0.9842087765957447,
+    "status": "included",
+    "accuracy": 0.7030906941395034
+   },
+   "gemini-3.1-pro_5-shots": {
+    "sha256": "e396a355dbff60c2dce377d2f7f6b6c21421ce5abe88ea4b5286a7c712517ed5",
+    "n_records": 12020,
+    "join_share": 1.0,
+    "coverage": 0.9990026595744681,
+    "status": "included",
+    "accuracy": 0.9114808652246256
+   },
+   "gemma-7b_5shots": {
+    "sha256": "479a85f9f3598c5db75279e95452dd972a719f09eda983925be3595cb60767d9",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.3248116481842038
+   },
+   "gpt-4o-2024-08-06_5shots": {
+    "sha256": "dd48813a4bc40286a2d1c7aa42d288dac9a2b576bbb7b98bd8901f2556b1e9cf",
+    "n_records": 12032,
+    "join_share": 0.9852061170212766,
+    "coverage": 0.9852061170212766,
+    "status": "included",
+    "accuracy": 0.7475957482706259
+   },
+   "gpt-4o-mini_5shots": {
+    "sha256": "a7f1cee97f5fda4a0b16bd3798d1225d9cfc48d96c4d656401ff59d34fd74b0f",
+    "n_records": 12032,
+    "join_share": 0.9824634308510638,
+    "coverage": 0.9824634308510638,
+    "status": "included",
+    "accuracy": 0.6336181372134337
+   },
+   "gpt4o(2024-05-13)_5shots": {
+    "sha256": "5f5309a3bcdd2abe6d9af3f6925497d6660149c12690154baac3562fc04d9d73",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.7249640226868704
+   },
+   "iask_pro_5shots": {
+    "sha256": "c555a072183484958095afa871101b65baaa16c2420a1fd304c84b396baac41a",
+    "n_records": 11939,
+    "join_share": 0.9850908786330513,
+    "coverage": 0.9774767287234043,
+    "status": "included",
+    "accuracy": 0.8131111300059519
+   },
+   "jamba-1.5-large_5shots": {
+    "sha256": "c4685b28a9b56fcb1270d9d2674f4989f5fc45129f3f635207d3543d67da1a15",
+    "n_records": 12032,
+    "join_share": 0.9852061170212766,
+    "coverage": 0.9852061170212766,
+    "status": "included",
+    "accuracy": 0.4935886620550025
+   },
+   "mathstral-7B_5shots": {
+    "sha256": "c5613c4778e8dfe18d53015aa5f163fd86141cde22cdb7667f235d496e025f9a",
+    "n_records": 12032,
+    "join_share": 0.9824634308510638,
+    "coverage": 0.9824634308510638,
+    "status": "included",
+    "accuracy": 0.42255308349547416
+   },
+   "opus_2shots_00_37_14": {
+    "sha256": "07ba65e98946cfab691cb78d569932654610554677fe6fddeeb2d1333fce1bb7",
+    "n_records": 12032,
+    "join_share": 0.9817985372340425,
+    "coverage": 0.9817985372340425,
+    "status": "included",
+    "accuracy": 0.6876322695335647
+   },
+   "sonnet-3.5_0shots_09_34_29": {
+    "sha256": "b890e47cfe2dab7bce447bdfe2141453dc0c2e33adff8edc9c168d2e1dec9add",
+    "n_records": 12032,
+    "join_share": 0.9822972074468085,
+    "coverage": 0.9822972074468085,
+    "status": "included",
+    "accuracy": 0.7320416278873001
+   },
+   "sonnet_0shots_12_01_18": {
+    "sha256": "b60c4542304de0e56652aff12ef2eeb4f0b5ca22b744db181b0a7d84df3fd09a",
+    "n_records": 12031,
+    "join_share": 0.9817139057434959,
+    "coverage": 0.948470744680851,
+    "status": "excluded_join"
+   }
+  },
+  "included": 45,
+  "panel": [
+   {
+    "model": "gemini-3.1-pro_5-shots",
+    "accuracy": 0.9114808652246256
+   },
+   {
+    "model": "arx_0314_5shots",
+    "accuracy": 0.830472647332375
+   },
+   {
+    "model": "iask_pro_5shots",
+    "accuracy": 0.8131111300059519
+   },
+   {
+    "model": "arx_3_5shots",
+    "accuracy": 0.7838271292310289
+   },
+   {
+    "model": "claude-3-5-sonnet-20241022_5shots",
+    "accuracy": 0.7774590855407457
+   },
+   {
+    "model": "claude-3.5-sonnet_5shots",
+    "accuracy": 0.7643624672138083
+   },
+   {
+    "model": "gpt-4o-2024-08-06_5shots",
+    "accuracy": 0.7475957482706259
+   },
+   {
+    "model": "sonnet-3.5_0shots_09_34_29",
+    "accuracy": 0.7320416278873001
+   },
+   {
+    "model": "gpt4o(2024-05-13)_5shots",
+    "accuracy": 0.7249640226868704
+   },
+   {
+    "model": "gemini-1.5-pro-002_5shots",
+    "accuracy": 0.7030906941395034
+   }
+  ],
+  "flagged": {
+   "all": 1210,
+   "ori_mmlu": 874,
+   "stemez": 271
+  },
+  "reproduces_77": true
+ },
+ "join": {
+  "counts": {
+   "pro_mmlu_rows": 6810,
+   "no_stem": 18,
+   "stem_only": 80,
+   "ambiguous_helm": 19,
+   "pro_dup": 538,
+   "joined": 6155
+  },
+  "same_key": 6127,
+  "different_key": 28,
+  "same_key_no_virology": 6086
+ },
+ "p1_parts": {
+  "fixtures": true,
+  "reproduce_80": true,
+  "reproduce_77": true,
+  "pairs_same_key": true,
+  "same_key_share": true
+ },
+ "predictions": {
+  "P2_agree_beats_helm": true,
+  "P2_counts": [
+   38,
+   113,
+   64,
+   309
+  ],
+  "P3_agree_beats_pro": true,
+  "P3_counts": [
+   38,
+   113,
+   65,
+   358
+  ],
+  "P4_miskey_retention": true,
+  "P4_counts": [
+   29,
+   39
+  ],
+  "P5_ok_retention_low": true,
+  "P5_counts": [
+   75,
+   245,
+   29,
+   39
+  ],
+  "P6_agree_beats_helm_no_virology": true,
+  "P6_counts": [
+   31,
+   106,
+   55,
+   300
+  ],
+  "P1_structural": true,
+  "P1_counts": [
+   13984,
+   78,
+   45,
+   6155,
+   6127
+  ]
+ },
+ "by_group": {
+  "all": {
+   "n": 6127,
+   "helm": 715,
+   "pro": 807,
+   "agree": 227,
+   "helm_flag_outcomes": {
+    "pro_no_flag": 374,
+    "agree": 227,
+    "pro_added_option": 96,
+    "pro_other_mmlu_option": 18
+   }
+  },
+  "miskey": {
+   "n": 52,
+   "helm": 39,
+   "pro": 36,
+   "agree": 29,
+   "helm_flag_outcomes": {
+    "pro_no_flag": 7,
+    "agree": 29,
+    "pro_other_mmlu_option": 3
+   }
+  },
+  "ok": {
+   "n": 2517,
+   "helm": 245,
+   "pro": 293,
+   "agree": 75,
+   "helm_flag_outcomes": {
+    "pro_no_flag": 135,
+    "agree": 75,
+    "pro_added_option": 32,
+    "pro_other_mmlu_option": 3
+   }
+  },
+  "other_error": {
+   "n": 115,
+   "helm": 25,
+   "pro": 29,
+   "agree": 9,
+   "helm_flag_outcomes": {
+    "agree": 9,
+    "pro_added_option": 2,
+    "pro_no_flag": 14
+   }
+  },
+  "unsure_or_conflict": {
+   "n": 15,
+   "helm": 5,
+   "pro": 2,
+   "agree": 1,
+   "helm_flag_outcomes": {
+    "agree": 1,
+    "pro_added_option": 1,
+    "pro_no_flag": 3
+   }
+  },
+  "unreviewed": {
+   "n": 3428,
+   "helm": 401,
+   "pro": 447,
+   "agree": 113,
+   "helm_flag_outcomes": {
+    "pro_added_option": 61,
+    "agree": 113,
+    "pro_no_flag": 215,
+    "pro_other_mmlu_option": 12
+   }
+  }
+ },
+ "precision": {
+  "helm": {
+   "error_labelled": 64,
+   "judged": 309,
+   "share": 0.20711974110032363
+  },
+  "pro": {
+   "error_labelled": 65,
+   "judged": 358,
+   "share": 0.18156424581005587
+  },
+  "agree": {
+   "error_labelled": 38,
+   "judged": 113,
+   "share": 0.336283185840708
+  },
+  "either": {
+   "error_labelled": 86,
+   "judged": 514,
+   "share": 0.16731517509727625
+  },
+  "helm_10_of_10": {
+   "error_labelled": 29,
+   "judged": 73,
+   "share": 0.3972602739726027
+  },
+  "pro_10_of_10": {
+   "error_labelled": 28,
+   "judged": 77,
+   "share": 0.36363636363636365
+  },
+  "agree_both_10_of_10": {
+   "error_labelled": 16,
+   "judged": 27,
+   "share": 0.5925925925925926
+  },
+  "no_virology": {
+   "helm": {
+    "error_labelled": 55,
+    "judged": 300,
+    "share": 0.18333333333333332
+   },
+   "pro": {
+    "error_labelled": 58,
+    "judged": 351,
+    "share": 0.16524216524216523
+   },
+   "agree": {
+    "error_labelled": 31,
+    "judged": 106,
+    "share": 0.29245283018867924
+   }
+  }
+ },
+ "flagged": {
+  "agree": 227,
+  "agree_both_10_of_10": 54,
+  "agree_unreviewed": 113,
+  "agree_both_10_of_10_unreviewed": 27
+ },
+ "by_subject_exploratory": {
+  "abstract_algebra": {
+   "n": 83,
+   "helm": 7,
+   "pro": 6,
+   "agree": 3,
+   "agree_precision": [
+    1,
+    2
+   ],
+   "helm_precision": [
+    2,
+    6
+   ],
+   "agree_unreviewed": 0
+  },
+  "anatomy": {
+   "n": 76,
+   "helm": 6,
+   "pro": 11,
+   "agree": 3,
+   "agree_precision": [
+    1,
+    2
+   ],
+   "helm_precision": [
+    1,
+    3
+   ],
+   "agree_unreviewed": 1
+  },
+  "astronomy": {
+   "n": 74,
+   "helm": 3,
+   "pro": 12,
+   "agree": 1,
+   "agree_precision": [
+    1,
+    1
+   ],
+   "helm_precision": [
+    1,
+    1
+   ],
+   "agree_unreviewed": 0
+  },
+  "business_ethics": {
+   "n": 43,
+   "helm": 3,
+   "pro": 5,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    2
+   ],
+   "agree_unreviewed": 0
+  },
+  "clinical_knowledge": {
+   "n": 70,
+   "helm": 9,
+   "pro": 9,
+   "agree": 3,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    6
+   ],
+   "agree_unreviewed": 2
+  },
+  "college_biology": {
+   "n": 79,
+   "helm": 4,
+   "pro": 12,
+   "agree": 3,
+   "agree_precision": [
+    1,
+    3
+   ],
+   "helm_precision": [
+    1,
+    4
+   ],
+   "agree_unreviewed": 0
+  },
+  "college_chemistry": {
+   "n": 62,
+   "helm": 17,
+   "pro": 17,
+   "agree": 7,
+   "agree_precision": [
+    7,
+    7
+   ],
+   "helm_precision": [
+    11,
+    17
+   ],
+   "agree_unreviewed": 0
+  },
+  "college_computer_science": {
+   "n": 76,
+   "helm": 7,
+   "pro": 6,
+   "agree": 3,
+   "agree_precision": [
+    0,
+    3
+   ],
+   "helm_precision": [
+    0,
+    7
+   ],
+   "agree_unreviewed": 0
+  },
+  "college_mathematics": {
+   "n": 74,
+   "helm": 12,
+   "pro": 7,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    12
+   ],
+   "agree_unreviewed": 0
+  },
+  "college_medicine": {
+   "n": 48,
+   "helm": 2,
+   "pro": 5,
+   "agree": 0,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    2
+   ],
+   "agree_unreviewed": 0
+  },
+  "college_physics": {
+   "n": 54,
+   "helm": 14,
+   "pro": 4,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    13
+   ],
+   "agree_unreviewed": 0
+  },
+  "computer_security": {
+   "n": 45,
+   "helm": 10,
+   "pro": 12,
+   "agree": 6,
+   "agree_precision": [
+    2,
+    6
+   ],
+   "helm_precision": [
+    2,
+    10
+   ],
+   "agree_unreviewed": 0
+  },
+  "conceptual_physics": {
+   "n": 136,
+   "helm": 7,
+   "pro": 10,
+   "agree": 3,
+   "agree_precision": [
+    3,
+    3
+   ],
+   "helm_precision": [
+    3,
+    4
+   ],
+   "agree_unreviewed": 0
+  },
+  "econometrics": {
+   "n": 84,
+   "helm": 16,
+   "pro": 11,
+   "agree": 4,
+   "agree_precision": [
+    0,
+    4
+   ],
+   "helm_precision": [
+    0,
+    14
+   ],
+   "agree_unreviewed": 0
+  },
+  "electrical_engineering": {
+   "n": 66,
+   "helm": 8,
+   "pro": 13,
+   "agree": 6,
+   "agree_precision": [
+    1,
+    6
+   ],
+   "helm_precision": [
+    1,
+    7
+   ],
+   "agree_unreviewed": 0
+  },
+  "elementary_mathematics": {
+   "n": 295,
+   "helm": 7,
+   "pro": 6,
+   "agree": 0,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    1
+   ],
+   "agree_unreviewed": 0
+  },
+  "formal_logic": {
+   "n": 96,
+   "helm": 14,
+   "pro": 6,
+   "agree": 0,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    2,
+    10
+   ],
+   "agree_unreviewed": 0
+  },
+  "global_facts": {
+   "n": 84,
+   "helm": 15,
+   "pro": 9,
+   "agree": 2,
+   "agree_precision": [
+    0,
+    2
+   ],
+   "helm_precision": [
+    4,
+    15
+   ],
+   "agree_unreviewed": 0
+  },
+  "high_school_biology": {
+   "n": 139,
+   "helm": 7,
+   "pro": 14,
+   "agree": 5,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    1
+   ],
+   "agree_unreviewed": 4
+  },
+  "high_school_chemistry": {
+   "n": 111,
+   "helm": 15,
+   "pro": 6,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    7
+   ],
+   "agree_unreviewed": 1
+  },
+  "high_school_computer_science": {
+   "n": 62,
+   "helm": 2,
+   "pro": 4,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    2
+   ],
+   "agree_unreviewed": 0
+  },
+  "high_school_european_history": {
+   "n": 68,
+   "helm": 12,
+   "pro": 21,
+   "agree": 6,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    2,
+    5
+   ],
+   "agree_unreviewed": 5
+  },
+  "high_school_geography": {
+   "n": 63,
+   "helm": 5,
+   "pro": 7,
+   "agree": 2,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    3
+   ],
+   "agree_unreviewed": 1
+  },
+  "high_school_government_and_politics": {
+   "n": 50,
+   "helm": 1,
+   "pro": 3,
+   "agree": 0,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    0
+   ],
+   "agree_unreviewed": 0
+  },
+  "high_school_macroeconomics": {
+   "n": 214,
+   "helm": 18,
+   "pro": 25,
+   "agree": 5,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    6
+   ],
+   "agree_unreviewed": 4
+  },
+  "high_school_mathematics": {
+   "n": 239,
+   "helm": 33,
+   "pro": 2,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    11
+   ],
+   "agree_unreviewed": 0
+  },
+  "high_school_microeconomics": {
+   "n": 143,
+   "helm": 7,
+   "pro": 19,
+   "agree": 1,
+   "agree_precision": [
+    1,
+    1
+   ],
+   "helm_precision": [
+    1,
+    2
+   ],
+   "agree_unreviewed": 0
+  },
+  "high_school_physics": {
+   "n": 126,
+   "helm": 18,
+   "pro": 15,
+   "agree": 4,
+   "agree_precision": [
+    1,
+    3
+   ],
+   "helm_precision": [
+    1,
+    12
+   ],
+   "agree_unreviewed": 1
+  },
+  "high_school_psychology": {
+   "n": 163,
+   "helm": 9,
+   "pro": 24,
+   "agree": 4,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    1
+   ],
+   "agree_unreviewed": 4
+  },
+  "high_school_statistics": {
+   "n": 134,
+   "helm": 10,
+   "pro": 10,
+   "agree": 4,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    3
+   ],
+   "agree_unreviewed": 3
+  },
+  "high_school_us_history": {
+   "n": 83,
+   "helm": 7,
+   "pro": 24,
+   "agree": 5,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    3
+   ],
+   "agree_unreviewed": 4
+  },
+  "high_school_world_history": {
+   "n": 83,
+   "helm": 8,
+   "pro": 9,
+   "agree": 4,
+   "agree_precision": [
+    1,
+    1
+   ],
+   "helm_precision": [
+    1,
+    3
+   ],
+   "agree_unreviewed": 3
+  },
+  "human_aging": {
+   "n": 83,
+   "helm": 17,
+   "pro": 23,
+   "agree": 2,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    1,
+    8
+   ],
+   "agree_unreviewed": 1
+  },
+  "human_sexuality": {
+   "n": 52,
+   "helm": 4,
+   "pro": 10,
+   "agree": 1,
+   "agree_precision": [
+    1,
+    1
+   ],
+   "helm_precision": [
+    3,
+    3
+   ],
+   "agree_unreviewed": 0
+  },
+  "international_law": {
+   "n": 26,
+   "helm": 4,
+   "pro": 6,
+   "agree": 2,
+   "agree_precision": [
+    0,
+    2
+   ],
+   "helm_precision": [
+    0,
+    2
+   ],
+   "agree_unreviewed": 0
+  },
+  "jurisprudence": {
+   "n": 28,
+   "helm": 4,
+   "pro": 9,
+   "agree": 3,
+   "agree_precision": [
+    0,
+    3
+   ],
+   "helm_precision": [
+    0,
+    4
+   ],
+   "agree_unreviewed": 0
+  },
+  "logical_fallacies": {
+   "n": 73,
+   "helm": 10,
+   "pro": 6,
+   "agree": 2,
+   "agree_precision": [
+    1,
+    1
+   ],
+   "helm_precision": [
+    5,
+    6
+   ],
+   "agree_unreviewed": 1
+  },
+  "machine_learning": {
+   "n": 88,
+   "helm": 15,
+   "pro": 12,
+   "agree": 9,
+   "agree_precision": [
+    3,
+    9
+   ],
+   "helm_precision": [
+    4,
+    13
+   ],
+   "agree_unreviewed": 0
+  },
+  "management": {
+   "n": 35,
+   "helm": 5,
+   "pro": 5,
+   "agree": 2,
+   "agree_precision": [
+    0,
+    2
+   ],
+   "helm_precision": [
+    0,
+    5
+   ],
+   "agree_unreviewed": 0
+  },
+  "marketing": {
+   "n": 73,
+   "helm": 5,
+   "pro": 11,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    1
+   ],
+   "agree_unreviewed": 0
+  },
+  "medical_genetics": {
+   "n": 53,
+   "helm": 1,
+   "pro": 6,
+   "agree": 0,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    1
+   ],
+   "agree_unreviewed": 0
+  },
+  "miscellaneous": {
+   "n": 264,
+   "helm": 15,
+   "pro": 25,
+   "agree": 5,
+   "agree_precision": [
+    1,
+    1
+   ],
+   "helm_precision": [
+    1,
+    2
+   ],
+   "agree_unreviewed": 4
+  },
+  "moral_disputes": {
+   "n": 138,
+   "helm": 24,
+   "pro": 30,
+   "agree": 15,
+   "agree_precision": [
+    0,
+    4
+   ],
+   "helm_precision": [
+    0,
+    5
+   ],
+   "agree_unreviewed": 11
+  },
+  "nutrition": {
+   "n": 95,
+   "helm": 10,
+   "pro": 17,
+   "agree": 3,
+   "agree_precision": [
+    0,
+    2
+   ],
+   "helm_precision": [
+    0,
+    4
+   ],
+   "agree_unreviewed": 1
+  },
+  "philosophy": {
+   "n": 129,
+   "helm": 14,
+   "pro": 15,
+   "agree": 4,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    4
+   ],
+   "agree_unreviewed": 3
+  },
+  "prehistory": {
+   "n": 141,
+   "helm": 8,
+   "pro": 12,
+   "agree": 2,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    3
+   ],
+   "agree_unreviewed": 2
+  },
+  "professional_accounting": {
+   "n": 191,
+   "helm": 22,
+   "pro": 9,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    4
+   ],
+   "agree_unreviewed": 0
+  },
+  "professional_law": {
+   "n": 759,
+   "helm": 164,
+   "pro": 149,
+   "agree": 49,
+   "agree_precision": [
+    2,
+    6
+   ],
+   "helm_precision": [
+    2,
+    11
+   ],
+   "agree_unreviewed": 43
+  },
+  "professional_medicine": {
+   "n": 70,
+   "helm": 0,
+   "pro": 4,
+   "agree": 0,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    0
+   ],
+   "agree_unreviewed": 0
+  },
+  "professional_psychology": {
+   "n": 312,
+   "helm": 26,
+   "pro": 43,
+   "agree": 7,
+   "agree_precision": [
+    1,
+    2
+   ],
+   "helm_precision": [
+    2,
+    5
+   ],
+   "agree_unreviewed": 5
+  },
+  "public_relations": {
+   "n": 48,
+   "helm": 12,
+   "pro": 11,
+   "agree": 3,
+   "agree_precision": [
+    1,
+    3
+   ],
+   "helm_precision": [
+    3,
+    10
+   ],
+   "agree_unreviewed": 0
+  },
+  "security_studies": {
+   "n": 78,
+   "helm": 12,
+   "pro": 22,
+   "agree": 10,
+   "agree_precision": [
+    1,
+    6
+   ],
+   "helm_precision": [
+    1,
+    7
+   ],
+   "agree_unreviewed": 4
+  },
+  "sociology": {
+   "n": 50,
+   "helm": 3,
+   "pro": 13,
+   "agree": 1,
+   "agree_precision": [
+    0,
+    1
+   ],
+   "helm_precision": [
+    0,
+    2
+   ],
+   "agree_unreviewed": 0
+  },
+  "us_foreign_policy": {
+   "n": 19,
+   "helm": 1,
+   "pro": 2,
+   "agree": 0,
+   "agree_precision": [
+    0,
+    0
+   ],
+   "helm_precision": [
+    0,
+    1
+   ],
+   "agree_unreviewed": 0
+  },
+  "virology": {
+   "n": 41,
+   "helm": 14,
+   "pro": 12,
+   "agree": 9,
+   "agree_precision": [
+    7,
+    7
+   ],
+   "helm_precision": [
+    9,
+    9
+   ],
+   "agree_unreviewed": 2
+  },
+  "world_religions": {
+   "n": 58,
+   "helm": 12,
+   "pro": 11,
+   "agree": 6,
+   "agree_precision": [
+    0,
+    3
+   ],
+   "helm_precision": [
+    0,
+    6
+   ],
+   "agree_unreviewed": 3
+  }
+ },
+ "n_candidates": 227,
+ "note": "J = MMLU-derived MMLU-Pro questions joined one-to-one to a HELM MMLU question (same subject and normalised question text, at least 3 shared option texts) whose two keys have the same option text. HELM flag = audit 80's; Pro flag = audit 77's; agree = both flag and their consensus options have the same text. Precision = share of flagged Redux-judged questions (wrong key, OK or another error label) that carry an error label. P1 structural; P2 HEADLINE agree precision > HELM's on J; P3 agree precision > Pro's on J; P4 agree keeps >= half of HELM-flagged Redux miskeys in J; P5 Redux-OK retention <= half of miskey retention; P6 P2 without virology."
+}

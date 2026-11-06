@@ -1,0 +1,5454 @@
+{
+ "audit": 81,
+ "note": "Model-flagged, NOT expert-checked: MMLU questions where HELM's 10 most accurate models (at least 6 of 10) and TIGER-AI-Lab's 10 most accurate MMLU-Pro archives (at least 6 of 10) both pick the same answer text other than the key. *_votes = [consensus, key, no valid answer] out of 10. Each may hold a wrong key, a second defensible answer or a mistake the models share.",
+ "candidates": [
+  {
+   "subject": "abstract_algebra",
+   "helm_instance_id": "id61",
+   "helm_test_position": 45,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 7892,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "50d24fc15ff45de1"
+  },
+  {
+   "subject": "abstract_algebra",
+   "helm_instance_id": "id69",
+   "helm_test_position": 53,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 8436,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "expert",
+   "question_sha256_16": "768cb0ce06c14812"
+  },
+  {
+   "subject": "abstract_algebra",
+   "helm_instance_id": "id78",
+   "helm_test_position": 62,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 8876,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "5e657f9b866685a1"
+  },
+  {
+   "subject": "anatomy",
+   "helm_instance_id": "id27",
+   "helm_test_position": 8,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6351,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "2addc5095a694b78"
+  },
+  {
+   "subject": "anatomy",
+   "helm_instance_id": "id52",
+   "helm_test_position": 33,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6224,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "a2978d8c654664bc"
+  },
+  {
+   "subject": "anatomy",
+   "helm_instance_id": "id126",
+   "helm_test_position": 107,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6171,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "9016987d8a9cf373"
+  },
+  {
+   "subject": "astronomy",
+   "helm_instance_id": "id98",
+   "helm_test_position": 77,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10209,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "no_correct_answer",
+   "question_sha256_16": "a938a4181db1ec02"
+  },
+  {
+   "subject": "business_ethics",
+   "helm_instance_id": "id102",
+   "helm_test_position": 86,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 125,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "c0d51ff25666c426"
+  },
+  {
+   "subject": "clinical_knowledge",
+   "helm_instance_id": "id187",
+   "helm_test_position": 153,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 6012,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "9072d2e784cdce6d"
+  },
+  {
+   "subject": "clinical_knowledge",
+   "helm_instance_id": "id189",
+   "helm_test_position": 155,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 6466,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "84bc19604a92e70f"
+  },
+  {
+   "subject": "clinical_knowledge",
+   "helm_instance_id": "id241",
+   "helm_test_position": 207,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6286,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "7bb7ee0684815a47"
+  },
+  {
+   "subject": "college_biology",
+   "helm_instance_id": "id60",
+   "helm_test_position": 39,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2933,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "814cc01c06be47e9"
+  },
+  {
+   "subject": "college_biology",
+   "helm_instance_id": "id74",
+   "helm_test_position": 53,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    6,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 2820,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "20f8ce54635fa417"
+  },
+  {
+   "subject": "college_biology",
+   "helm_instance_id": "id77",
+   "helm_test_position": 56,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 2870,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "77c8f87e31cd720d"
+  },
+  {
+   "subject": "college_chemistry",
+   "helm_instance_id": "id26",
+   "helm_test_position": 13,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4511,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "f682da5090d5806e"
+  },
+  {
+   "subject": "college_chemistry",
+   "helm_instance_id": "id27",
+   "helm_test_position": 14,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4084,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "25e4446fe0c7bfb9"
+  },
+  {
+   "subject": "college_chemistry",
+   "helm_instance_id": "id44",
+   "helm_test_position": 31,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    6,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4437,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "1ccb1fae226782a9"
+  },
+  {
+   "subject": "college_chemistry",
+   "helm_instance_id": "id94",
+   "helm_test_position": 81,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    6,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 3636,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "3fa8b9f988fb1e9d"
+  },
+  {
+   "subject": "college_chemistry",
+   "helm_instance_id": "id95",
+   "helm_test_position": 82,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4088,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "6d9d61955bc8f696"
+  },
+  {
+   "subject": "college_chemistry",
+   "helm_instance_id": "id98",
+   "helm_test_position": 85,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4089,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "214fd44a4fe44928"
+  },
+  {
+   "subject": "college_chemistry",
+   "helm_instance_id": "id111",
+   "helm_test_position": 98,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 3814,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    7,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "9db2a80a66c96d12"
+  },
+  {
+   "subject": "college_computer_science",
+   "helm_instance_id": "id35",
+   "helm_test_position": 19,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 10654,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "a8eff911fb72c907"
+  },
+  {
+   "subject": "college_computer_science",
+   "helm_instance_id": "id64",
+   "helm_test_position": 48,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10592,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "58029d0aa33972a9"
+  },
+  {
+   "subject": "college_computer_science",
+   "helm_instance_id": "id85",
+   "helm_test_position": 69,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 10448,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "4e5bc94e3230c9a5"
+  },
+  {
+   "subject": "college_mathematics",
+   "helm_instance_id": "id29",
+   "helm_test_position": 13,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 7832,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    6,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "db55bc7c49db49ce"
+  },
+  {
+   "subject": "college_physics",
+   "helm_instance_id": "id57",
+   "helm_test_position": 41,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 9170,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "d6fbae63201c5f1a"
+  },
+  {
+   "subject": "computer_security",
+   "helm_instance_id": "id20",
+   "helm_test_position": 4,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10427,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "a0591e32c5f0e8fc"
+  },
+  {
+   "subject": "computer_security",
+   "helm_instance_id": "id26",
+   "helm_test_position": 10,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10458,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "4decad1b0f7bedfe"
+  },
+  {
+   "subject": "computer_security",
+   "helm_instance_id": "id27",
+   "helm_test_position": 11,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10637,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "de17c5492c9f6cab"
+  },
+  {
+   "subject": "computer_security",
+   "helm_instance_id": "id69",
+   "helm_test_position": 53,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10606,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "683f4ea8eb94b07d"
+  },
+  {
+   "subject": "computer_security",
+   "helm_instance_id": "id78",
+   "helm_test_position": 62,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10567,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "ea9d47e3fd742043"
+  },
+  {
+   "subject": "computer_security",
+   "helm_instance_id": "id115",
+   "helm_test_position": 99,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10533,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "625b81091973efaa"
+  },
+  {
+   "subject": "conceptual_physics",
+   "helm_instance_id": "id159",
+   "helm_test_position": 128,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 9547,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "60b40b47e9fe83b1"
+  },
+  {
+   "subject": "conceptual_physics",
+   "helm_instance_id": "id183",
+   "helm_test_position": 152,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 9733,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "f2ef3745021aaf2b"
+  },
+  {
+   "subject": "conceptual_physics",
+   "helm_instance_id": "id227",
+   "helm_test_position": 196,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 9124,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "multiple_correct_answers",
+   "question_sha256_16": "78efac7778d0bd34"
+  },
+  {
+   "subject": "econometrics",
+   "helm_instance_id": "id40",
+   "helm_test_position": 23,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 7249,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "5ca6ef42c0fa366b"
+  },
+  {
+   "subject": "econometrics",
+   "helm_instance_id": "id60",
+   "helm_test_position": 43,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 7653,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "5f7bdd849029cbe6"
+  },
+  {
+   "subject": "econometrics",
+   "helm_instance_id": "id75",
+   "helm_test_position": 58,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 7066,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "f5b9b5a2e8a92a5c"
+  },
+  {
+   "subject": "econometrics",
+   "helm_instance_id": "id88",
+   "helm_test_position": 71,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 7315,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    7,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "81c8b014b494c30b"
+  },
+  {
+   "subject": "electrical_engineering",
+   "helm_instance_id": "id71",
+   "helm_test_position": 50,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11578,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "50ba7d1955eb4669"
+  },
+  {
+   "subject": "electrical_engineering",
+   "helm_instance_id": "id80",
+   "helm_test_position": 59,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 11966,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    6,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "4171ac54d67f0e45"
+  },
+  {
+   "subject": "electrical_engineering",
+   "helm_instance_id": "id92",
+   "helm_test_position": 71,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 12050,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "e46c225e4e22d6ae"
+  },
+  {
+   "subject": "electrical_engineering",
+   "helm_instance_id": "id106",
+   "helm_test_position": 85,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11579,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "adf6b546c73ef532"
+  },
+  {
+   "subject": "electrical_engineering",
+   "helm_instance_id": "id126",
+   "helm_test_position": 105,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11892,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "5b9521e0ce35fb9b"
+  },
+  {
+   "subject": "electrical_engineering",
+   "helm_instance_id": "id162",
+   "helm_test_position": 141,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 11505,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "16c9f86da4671b99"
+  },
+  {
+   "subject": "global_facts",
+   "helm_instance_id": "id62",
+   "helm_test_position": 47,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 5086,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "a19ccd1c5bcc764e"
+  },
+  {
+   "subject": "global_facts",
+   "helm_instance_id": "id108",
+   "helm_test_position": 93,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 5964,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "4eb4e0beda0b4d8d"
+  },
+  {
+   "subject": "high_school_biology",
+   "helm_instance_id": "id86",
+   "helm_test_position": 49,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 3199,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "422a7c8044da9bf4"
+  },
+  {
+   "subject": "high_school_biology",
+   "helm_instance_id": "id93",
+   "helm_test_position": 56,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 3265,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "f3eb852479a249fb"
+  },
+  {
+   "subject": "high_school_biology",
+   "helm_instance_id": "id100",
+   "helm_test_position": 63,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 3200,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "22097ef6ad82d5eb"
+  },
+  {
+   "subject": "high_school_biology",
+   "helm_instance_id": "id202",
+   "helm_test_position": 165,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    7,
+    2,
+    1
+   ],
+   "mmlu_pro_question_id": 3158,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "7f17f9af407bb856"
+  },
+  {
+   "subject": "high_school_biology",
+   "helm_instance_id": "id319",
+   "helm_test_position": 282,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2862,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "2dad7fb91c3a4657"
+  },
+  {
+   "subject": "high_school_chemistry",
+   "helm_instance_id": "id162",
+   "helm_test_position": 135,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 3986,
+   "mmlu_pro_k": 6,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "c5ac736f9d3b53ff"
+  },
+  {
+   "subject": "high_school_computer_science",
+   "helm_instance_id": "id80",
+   "helm_test_position": 66,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10682,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "7d5dfc88b2ca6112"
+  },
+  {
+   "subject": "high_school_european_history",
+   "helm_instance_id": "id40",
+   "helm_test_position": 17,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4826,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "4f4ba969ad466434"
+  },
+  {
+   "subject": "high_school_european_history",
+   "helm_instance_id": "id41",
+   "helm_test_position": 18,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4827,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "274e257f29ef0fb2"
+  },
+  {
+   "subject": "high_school_european_history",
+   "helm_instance_id": "id95",
+   "helm_test_position": 72,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5022,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "7107d055ab7a35e8"
+  },
+  {
+   "subject": "high_school_european_history",
+   "helm_instance_id": "id175",
+   "helm_test_position": 152,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4800,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "e99b2f39efbcab4c"
+  },
+  {
+   "subject": "high_school_european_history",
+   "helm_instance_id": "id181",
+   "helm_test_position": 158,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4950,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a147efb296bb9c15"
+  },
+  {
+   "subject": "high_school_european_history",
+   "helm_instance_id": "id187",
+   "helm_test_position": 164,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 4892,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "fe2017fd69e10ffb"
+  },
+  {
+   "subject": "high_school_geography",
+   "helm_instance_id": "id82",
+   "helm_test_position": 55,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 5787,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "4fdf133794cb5259"
+  },
+  {
+   "subject": "high_school_geography",
+   "helm_instance_id": "id107",
+   "helm_test_position": 80,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 5578,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    7,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "ec40e8c15e6d21f7"
+  },
+  {
+   "subject": "high_school_macroeconomics",
+   "helm_instance_id": "id61",
+   "helm_test_position": 13,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 7680,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "5b8ae92c41f74b0d"
+  },
+  {
+   "subject": "high_school_macroeconomics",
+   "helm_instance_id": "id246",
+   "helm_test_position": 198,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 7154,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "b3cc4abdde0260e1"
+  },
+  {
+   "subject": "high_school_macroeconomics",
+   "helm_instance_id": "id316",
+   "helm_test_position": 268,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 7562,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "83efe990d653936c"
+  },
+  {
+   "subject": "high_school_macroeconomics",
+   "helm_instance_id": "id336",
+   "helm_test_position": 288,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 7159,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3869ca7155c34444"
+  },
+  {
+   "subject": "high_school_macroeconomics",
+   "helm_instance_id": "id397",
+   "helm_test_position": 349,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 7167,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "5dd68a3ed4ef479e"
+  },
+  {
+   "subject": "high_school_mathematics",
+   "helm_instance_id": "id247",
+   "helm_test_position": 213,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 8288,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "392efae7f09f1a06"
+  },
+  {
+   "subject": "high_school_microeconomics",
+   "helm_instance_id": "id232",
+   "helm_test_position": 201,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 7306,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "8f152f81b177c802"
+  },
+  {
+   "subject": "high_school_physics",
+   "helm_instance_id": "id32",
+   "helm_test_position": 10,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 9811,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "48170dad0deb48ff"
+  },
+  {
+   "subject": "high_school_physics",
+   "helm_instance_id": "id56",
+   "helm_test_position": 34,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    6,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 9814,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "b34cfc527f989c43"
+  },
+  {
+   "subject": "high_school_physics",
+   "helm_instance_id": "id65",
+   "helm_test_position": 43,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 9417,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    6,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "76271f85022e186b"
+  },
+  {
+   "subject": "high_school_physics",
+   "helm_instance_id": "id135",
+   "helm_test_position": 113,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10053,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "217c645428cd79ba"
+  },
+  {
+   "subject": "high_school_psychology",
+   "helm_instance_id": "id305",
+   "helm_test_position": 240,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2463,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "2c30de35b6c8c22f"
+  },
+  {
+   "subject": "high_school_psychology",
+   "helm_instance_id": "id427",
+   "helm_test_position": 362,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2660,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3de17c621204dcbd"
+  },
+  {
+   "subject": "high_school_psychology",
+   "helm_instance_id": "id591",
+   "helm_test_position": 526,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2537,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "ce8050d807c54dc8"
+  },
+  {
+   "subject": "high_school_psychology",
+   "helm_instance_id": "id598",
+   "helm_test_position": 533,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2031,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "228c1d648279a79e"
+  },
+  {
+   "subject": "high_school_statistics",
+   "helm_instance_id": "id115",
+   "helm_test_position": 87,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 7902,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "acbaeb9d1ec20b6f"
+  },
+  {
+   "subject": "high_school_statistics",
+   "helm_instance_id": "id158",
+   "helm_test_position": 130,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 8343,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    6,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "1c5b71f59b723ad1"
+  },
+  {
+   "subject": "high_school_statistics",
+   "helm_instance_id": "id206",
+   "helm_test_position": 178,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 7806,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "c3cbcfd284c4f84b"
+  },
+  {
+   "subject": "high_school_statistics",
+   "helm_instance_id": "id232",
+   "helm_test_position": 204,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 7914,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a6cfa48750169413"
+  },
+  {
+   "subject": "high_school_us_history",
+   "helm_instance_id": "id33",
+   "helm_test_position": 6,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4714,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "5c22cc25e3421eec"
+  },
+  {
+   "subject": "high_school_us_history",
+   "helm_instance_id": "id130",
+   "helm_test_position": 103,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 4790,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "f6cf8d5ef0ccbbd1"
+  },
+  {
+   "subject": "high_school_us_history",
+   "helm_instance_id": "id162",
+   "helm_test_position": 135,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    8,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 5019,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    7,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "b3d35e69ddb77a1e"
+  },
+  {
+   "subject": "high_school_us_history",
+   "helm_instance_id": "id196",
+   "helm_test_position": 169,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4824,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "573516550f803169"
+  },
+  {
+   "subject": "high_school_us_history",
+   "helm_instance_id": "id218",
+   "helm_test_position": 191,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4886,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "4d4c687acaf902ea"
+  },
+  {
+   "subject": "high_school_world_history",
+   "helm_instance_id": "id55",
+   "helm_test_position": 24,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 4858,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    7,
+    1,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "7c738256a8460096"
+  },
+  {
+   "subject": "high_school_world_history",
+   "helm_instance_id": "id67",
+   "helm_test_position": 36,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    9,
+    0,
+    1
+   ],
+   "mmlu_pro_question_id": 4893,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "d2ac34690545f7fa"
+  },
+  {
+   "subject": "high_school_world_history",
+   "helm_instance_id": "id110",
+   "helm_test_position": 79,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 4806,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a59c71f96670016f"
+  },
+  {
+   "subject": "high_school_world_history",
+   "helm_instance_id": "id244",
+   "helm_test_position": 213,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4752,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "3d870b7842ead961"
+  },
+  {
+   "subject": "human_aging",
+   "helm_instance_id": "id40",
+   "helm_test_position": 12,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6402,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "238842b5d1d0b1e4"
+  },
+  {
+   "subject": "human_aging",
+   "helm_instance_id": "id210",
+   "helm_test_position": 182,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6154,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "e858c42112650699"
+  },
+  {
+   "subject": "human_sexuality",
+   "helm_instance_id": "id35",
+   "helm_test_position": 18,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5949,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "c7979dff3bf4dd41"
+  },
+  {
+   "subject": "international_law",
+   "helm_instance_id": "id49",
+   "helm_test_position": 31,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1051,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "b21be75c93dc1677"
+  },
+  {
+   "subject": "international_law",
+   "helm_instance_id": "id89",
+   "helm_test_position": 71,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 1762,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "55760310464c1318"
+  },
+  {
+   "subject": "jurisprudence",
+   "helm_instance_id": "id20",
+   "helm_test_position": 4,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 970,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "b81ad4a0249500ed"
+  },
+  {
+   "subject": "jurisprudence",
+   "helm_instance_id": "id78",
+   "helm_test_position": 62,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1928,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    8,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "0a020b5be359e928"
+  },
+  {
+   "subject": "jurisprudence",
+   "helm_instance_id": "id95",
+   "helm_test_position": 79,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1574,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "056ddcdf55517ffa"
+  },
+  {
+   "subject": "logical_fallacies",
+   "helm_instance_id": "id106",
+   "helm_test_position": 83,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10930,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "multiple_correct_answers",
+   "question_sha256_16": "f59d7639b2cf9f22"
+  },
+  {
+   "subject": "logical_fallacies",
+   "helm_instance_id": "id127",
+   "helm_test_position": 104,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 11174,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a1261720f7094bde"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id21",
+   "helm_test_position": 5,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10628,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "025657c410d54252"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id32",
+   "helm_test_position": 16,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 10556,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "bad_options_clarity",
+   "question_sha256_16": "1e3d63db7a18b6c4"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id41",
+   "helm_test_position": 25,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10691,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "8430d26862521fd4"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id48",
+   "helm_test_position": 32,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10390,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    8,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "3100a19a62242f03"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id68",
+   "helm_test_position": 52,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10365,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "fc8cc13d658b1c4c"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id75",
+   "helm_test_position": 59,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 10730,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "e57939cd6d8ffb34"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id91",
+   "helm_test_position": 75,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 10632,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "d98dfed4fc9be54b"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id95",
+   "helm_test_position": 79,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10666,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "947c9f4b9c424140"
+  },
+  {
+   "subject": "machine_learning",
+   "helm_instance_id": "id100",
+   "helm_test_position": 84,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 10667,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "08e4870e6a86a793"
+  },
+  {
+   "subject": "management",
+   "helm_instance_id": "id29",
+   "helm_test_position": 13,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 763,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "ac4f5fc52b6e44b4"
+  },
+  {
+   "subject": "management",
+   "helm_instance_id": "id103",
+   "helm_test_position": 87,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 693,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    6,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "64392f648859138c"
+  },
+  {
+   "subject": "marketing",
+   "helm_instance_id": "id211",
+   "helm_test_position": 181,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 313,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "5f66513d5d34bda8"
+  },
+  {
+   "subject": "miscellaneous",
+   "helm_instance_id": "id98",
+   "helm_test_position": 7,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 5536,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "no_correct_answer",
+   "question_sha256_16": "a5e4cdb155b50ae5"
+  },
+  {
+   "subject": "miscellaneous",
+   "helm_instance_id": "id150",
+   "helm_test_position": 59,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5166,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "c50b670380b7c029"
+  },
+  {
+   "subject": "miscellaneous",
+   "helm_instance_id": "id174",
+   "helm_test_position": 83,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5888,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "9674f97bd9afb873"
+  },
+  {
+   "subject": "miscellaneous",
+   "helm_instance_id": "id574",
+   "helm_test_position": 483,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 5393,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "525c86d1656b1fd8"
+  },
+  {
+   "subject": "miscellaneous",
+   "helm_instance_id": "id797",
+   "helm_test_position": 706,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5462,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "b819dd1cb02adffc"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id53",
+   "helm_test_position": 10,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 11082,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "656b739e709a0b5b"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id67",
+   "helm_test_position": 24,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11229,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "86f727cee66b3f9f"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id81",
+   "helm_test_position": 38,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11231,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a3af4feb23faf88e"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id97",
+   "helm_test_position": 54,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10910,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "12e9ce04ec2fb3b1"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id111",
+   "helm_test_position": 68,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10822,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "71a76fdd87818cd5"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id121",
+   "helm_test_position": 78,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11195,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3f0f7675c0b400f6"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id156",
+   "helm_test_position": 113,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10911,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    7,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "8001bcaf15b22b0a"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id176",
+   "helm_test_position": 133,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    8,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 10912,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "4a21394b885ef25b"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id218",
+   "helm_test_position": 175,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11269,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "15a890e2fd4bb13e"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id255",
+   "helm_test_position": 212,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    8,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11001,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    6,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3d58552e88f73610"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id264",
+   "helm_test_position": 221,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11200,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "819b7a565b3011a6"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id336",
+   "helm_test_position": 293,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11092,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "1824c62589a5f6ff"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id362",
+   "helm_test_position": 319,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11238,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    8,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "4f130a77d410598f"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id366",
+   "helm_test_position": 323,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11005,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "965b985d0039b6db"
+  },
+  {
+   "subject": "moral_disputes",
+   "helm_instance_id": "id377",
+   "helm_test_position": 334,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11051,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a6c26924ed3ab171"
+  },
+  {
+   "subject": "nutrition",
+   "helm_instance_id": "id151",
+   "helm_test_position": 113,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 6127,
+   "mmlu_pro_k": 5,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    7,
+    0,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "beab6e01d6289e85"
+  },
+  {
+   "subject": "nutrition",
+   "helm_instance_id": "id245",
+   "helm_test_position": 207,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6059,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    8,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "a1204ea263b3ff5f"
+  },
+  {
+   "subject": "nutrition",
+   "helm_instance_id": "id260",
+   "helm_test_position": 222,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 6272,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "403cb990fc439af7"
+  },
+  {
+   "subject": "philosophy",
+   "helm_instance_id": "id73",
+   "helm_test_position": 34,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 11063,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "6616eeb3ad17b6eb"
+  },
+  {
+   "subject": "philosophy",
+   "helm_instance_id": "id135",
+   "helm_test_position": 96,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 10808,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "6acfab315c1887e1"
+  },
+  {
+   "subject": "philosophy",
+   "helm_instance_id": "id242",
+   "helm_test_position": 203,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11185,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "809b5322eebeab44"
+  },
+  {
+   "subject": "philosophy",
+   "helm_instance_id": "id283",
+   "helm_test_position": 244,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 10852,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "613354567a14160e"
+  },
+  {
+   "subject": "prehistory",
+   "helm_instance_id": "id40",
+   "helm_test_position": 0,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 4701,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "439c594bbab14319"
+  },
+  {
+   "subject": "prehistory",
+   "helm_instance_id": "id273",
+   "helm_test_position": 233,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 4910,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "d52906881b4490df"
+  },
+  {
+   "subject": "professional_accounting",
+   "helm_instance_id": "id249",
+   "helm_test_position": 213,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5920,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "8c09f7f43fdeaa6c"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id199",
+   "helm_test_position": 24,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1297,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "cab0de2d70996281"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id211",
+   "helm_test_position": 36,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    6,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1298,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "37d2be66bc01f7c3"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id216",
+   "helm_test_position": 41,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1939,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "0b0f8a2266717a43"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id220",
+   "helm_test_position": 45,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1584,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "e56d6b9293a101d2"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id233",
+   "helm_test_position": 58,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1130,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "b4a6ec2f8b530eed"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id236",
+   "helm_test_position": 61,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 1586,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3399d61fd42a0ba5"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id280",
+   "helm_test_position": 105,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 983,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "f740f841a0703fac"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id360",
+   "helm_test_position": 185,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 1401,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    7,
+    2,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a4e0385a4fd987a6"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id397",
+   "helm_test_position": 222,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 988,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "13927e1529de297c"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id439",
+   "helm_test_position": 264,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    8,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1606,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    7,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "2d2588dd613f62ed"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id445",
+   "helm_test_position": 270,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1154,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "7ac49bd3e30122db"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id460",
+   "helm_test_position": 285,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1219,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "fc1c323e8035516f"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id481",
+   "helm_test_position": 306,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1222,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "9a6eaafe8dd0d5dd"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id512",
+   "helm_test_position": 337,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1702,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "ffe235f6cb9356ac"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id521",
+   "helm_test_position": 346,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 995,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "35a58be04d0a2ebe"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id524",
+   "helm_test_position": 349,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1418,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    7,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "62a349628d56b643"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id536",
+   "helm_test_position": 361,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1084,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "66ce47c9c39af2dd"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id598",
+   "helm_test_position": 423,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1085,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "574d7e2817d8bf21"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id609",
+   "helm_test_position": 434,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    6,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 1086,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    8,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "990ee819b20695fd"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id627",
+   "helm_test_position": 452,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 1008,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "c3257b96bc00ee22"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id690",
+   "helm_test_position": 515,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    8,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1955,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "ab7534a4c32ac7ad"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id727",
+   "helm_test_position": 552,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 1434,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    6,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "43e50f81cf3d90bf"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id777",
+   "helm_test_position": 602,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 1532,
+   "mmlu_pro_k": 7,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "b410e83ed0cdca43"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id817",
+   "helm_test_position": 642,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1238,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "6c877143821d1c2b"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id822",
+   "helm_test_position": 647,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1014,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    6,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "780315dce66a86d5"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id905",
+   "helm_test_position": 730,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1338,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "G",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "58875b6ab6288e86"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id969",
+   "helm_test_position": 794,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1721,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "db84d2cc1c3972e9"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id977",
+   "helm_test_position": 802,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1966,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    7,
+    1,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "bad_question_clarity",
+   "question_sha256_16": "1e2a2fe6cc3bd785"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1036",
+   "helm_test_position": 861,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1971,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    7,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "9aa168a60416ad70"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1063",
+   "helm_test_position": 888,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    6,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1341,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "0f7830ca69bb785b"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1088",
+   "helm_test_position": 913,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1102,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "48fff43267751062"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1134",
+   "helm_test_position": 959,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1543,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "d9c4aa07cbff5e7c"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1227",
+   "helm_test_position": 1052,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1460,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "69f5e6021d6e7e15"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1265",
+   "helm_test_position": 1090,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    7,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 1258,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "711fc65c62514455"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1274",
+   "helm_test_position": 1099,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1259,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "d90256a46d5e2ea3"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1328",
+   "helm_test_position": 1153,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1830,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "80878a92ac798f81"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1389",
+   "helm_test_position": 1214,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1833,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "abfcfeed78307c93"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1424",
+   "helm_test_position": 1249,
+   "helm_key": "D",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1037,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "9fcf8cbb2b25a7f3"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1466",
+   "helm_test_position": 1291,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 1191,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "6ff2c38d62691143"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1468",
+   "helm_test_position": 1293,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1040,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "bf7e359caccfff71"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1486",
+   "helm_test_position": 1311,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 1267,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "ca269def67ef5778"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1519",
+   "helm_test_position": 1344,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 1364,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    8,
+    1,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "0ab6a5a015a2e964"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1524",
+   "helm_test_position": 1349,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 875,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "f67e6d272e3c02d9"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1535",
+   "helm_test_position": 1360,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 1648,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "338b2e923c816b12"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1538",
+   "helm_test_position": 1363,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1749,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "E",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "6e390edfcb05e1c7"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1550",
+   "helm_test_position": 1375,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 876,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "89d29e1d0db9c968"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1608",
+   "helm_test_position": 1433,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 1925,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    7,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "abcbda3d6e30135d"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1633",
+   "helm_test_position": 1458,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1656,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    6,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "df5ce9e0841aa4a4"
+  },
+  {
+   "subject": "professional_law",
+   "helm_instance_id": "id1648",
+   "helm_test_position": 1473,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 1195,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "1f8ef4dbb77f5eb4"
+  },
+  {
+   "subject": "professional_psychology",
+   "helm_instance_id": "id99",
+   "helm_test_position": 25,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 2563,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "7d84f9eb5798b955"
+  },
+  {
+   "subject": "professional_psychology",
+   "helm_instance_id": "id137",
+   "helm_test_position": 63,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 2069,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    8,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "d5ccbd418facbbe3"
+  },
+  {
+   "subject": "professional_psychology",
+   "helm_instance_id": "id381",
+   "helm_test_position": 307,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2703,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "F",
+   "mmlu_pro_votes": [
+    7,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3bc03001b88d8050"
+  },
+  {
+   "subject": "professional_psychology",
+   "helm_instance_id": "id397",
+   "helm_test_position": 323,
+   "helm_key": "D",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 2268,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3058db122ab92bcf"
+  },
+  {
+   "subject": "professional_psychology",
+   "helm_instance_id": "id520",
+   "helm_test_position": 446,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 2344,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "7c88d39a7aaf6dd7"
+  },
+  {
+   "subject": "professional_psychology",
+   "helm_instance_id": "id591",
+   "helm_test_position": 517,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 2346,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    7,
+    2,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "a7923a0cfbe93858"
+  },
+  {
+   "subject": "professional_psychology",
+   "helm_instance_id": "id636",
+   "helm_test_position": 562,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 2454,
+   "mmlu_pro_k": 8,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "d7911f47fe81a201"
+  },
+  {
+   "subject": "public_relations",
+   "helm_instance_id": "id23",
+   "helm_test_position": 6,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5726,
+   "mmlu_pro_k": 9,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "052ea9a1f36f7c2f"
+  },
+  {
+   "subject": "public_relations",
+   "helm_instance_id": "id57",
+   "helm_test_position": 40,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5284,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "f0c0aaee3186a214"
+  },
+  {
+   "subject": "public_relations",
+   "helm_instance_id": "id103",
+   "helm_test_position": 86,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    9,
+    1,
+    0
+   ],
+   "mmlu_pro_question_id": 5139,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "8ea6e1ddab369cb9"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id58",
+   "helm_test_position": 26,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5290,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "bad_question_clarity",
+   "question_sha256_16": "beb4d397a462b530"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id71",
+   "helm_test_position": 39,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 5144,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "9137d289cb69b2d9"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id74",
+   "helm_test_position": 42,
+   "helm_key": "B",
+   "helm_consensus": "C",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 5291,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "c3d00868ed6a1717"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id75",
+   "helm_test_position": 43,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5658,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "d32fe4d20113b6a7"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id91",
+   "helm_test_position": 59,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    7,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5147,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3d01ef2af206df44"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id99",
+   "helm_test_position": 67,
+   "helm_key": "D",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5073,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "D",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "470c19ffdd6c78c4"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id126",
+   "helm_test_position": 94,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    8,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5864,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "94b8eb23be19de45"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id181",
+   "helm_test_position": 149,
+   "helm_key": "B",
+   "helm_consensus": "D",
+   "helm_votes": [
+    7,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 5739,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "07262a0ed984d682"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id209",
+   "helm_test_position": 177,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5509,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "J",
+   "mmlu_pro_consensus": "D",
+   "mmlu_pro_votes": [
+    6,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "b432dca6881fb4c9"
+  },
+  {
+   "subject": "security_studies",
+   "helm_instance_id": "id275",
+   "helm_test_position": 243,
+   "helm_key": "A",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 5152,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "E",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "bae64deb82398f7b"
+  },
+  {
+   "subject": "sociology",
+   "helm_instance_id": "id190",
+   "helm_test_position": 163,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 5297,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    9,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "38f1789faf5b3231"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id28",
+   "helm_test_position": 5,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 6770,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    8,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "bad_question_clarity",
+   "question_sha256_16": "0b6a890cde053c37"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id43",
+   "helm_test_position": 20,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 6391,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    6,
+    4,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "fce97aa2d3ffdc6c"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id50",
+   "helm_test_position": 27,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6277,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "G",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "056cc33e3af7726b"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id52",
+   "helm_test_position": 29,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6519,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "6562aeca5292082c"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id58",
+   "helm_test_position": 35,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6278,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "486cf29aab9e46ad"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id69",
+   "helm_test_position": 46,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6640,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "B",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "9b7e328e17a3ea72"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id72",
+   "helm_test_position": 49,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6067,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "f4315bd24e601003"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id74",
+   "helm_test_position": 51,
+   "helm_key": "A",
+   "helm_consensus": "C",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6641,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "A",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    8,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "bad_question_clarity",
+   "question_sha256_16": "9b629b47ad86734e"
+  },
+  {
+   "subject": "virology",
+   "helm_instance_id": "id86",
+   "helm_test_position": 63,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 6068,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "C",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "wrong_groundtruth",
+   "question_sha256_16": "de8174c55c0a7493"
+  },
+  {
+   "subject": "world_religions",
+   "helm_instance_id": "id25",
+   "helm_test_position": 1,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    6,
+    4,
+    0
+   ],
+   "mmlu_pro_question_id": 11137,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "J",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "3e276f683524a88e"
+  },
+  {
+   "subject": "world_religions",
+   "helm_instance_id": "id29",
+   "helm_test_position": 5,
+   "helm_key": "A",
+   "helm_consensus": "B",
+   "helm_votes": [
+    7,
+    3,
+    0
+   ],
+   "mmlu_pro_question_id": 10875,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "I",
+   "mmlu_pro_consensus": "H",
+   "mmlu_pro_votes": [
+    9,
+    0,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "63207ca17d0b98a0"
+  },
+  {
+   "subject": "world_religions",
+   "helm_instance_id": "id45",
+   "helm_test_position": 21,
+   "helm_key": "C",
+   "helm_consensus": "D",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11055,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "H",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    6,
+    3,
+    1
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "4efe76996e439287"
+  },
+  {
+   "subject": "world_religions",
+   "helm_instance_id": "id85",
+   "helm_test_position": 61,
+   "helm_key": "B",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11240,
+   "mmlu_pro_k": 4,
+   "mmlu_pro_key": "B",
+   "mmlu_pro_consensus": "A",
+   "mmlu_pro_votes": [
+    7,
+    1,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "not_in_redux_sample",
+   "question_sha256_16": "3de2cbd124d9be52"
+  },
+  {
+   "subject": "world_religions",
+   "helm_instance_id": "id108",
+   "helm_test_position": 84,
+   "helm_key": "C",
+   "helm_consensus": "A",
+   "helm_votes": [
+    10,
+    0,
+    0
+   ],
+   "mmlu_pro_question_id": 11169,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "C",
+   "mmlu_pro_votes": [
+    10,
+    0,
+    0
+   ],
+   "both_10_of_10": true,
+   "redux": "ok",
+   "question_sha256_16": "70274467a08a8753"
+  },
+  {
+   "subject": "world_religions",
+   "helm_instance_id": "id146",
+   "helm_test_position": 122,
+   "helm_key": "C",
+   "helm_consensus": "B",
+   "helm_votes": [
+    8,
+    2,
+    0
+   ],
+   "mmlu_pro_question_id": 11242,
+   "mmlu_pro_k": 10,
+   "mmlu_pro_key": "F",
+   "mmlu_pro_consensus": "I",
+   "mmlu_pro_votes": [
+    7,
+    3,
+    0
+   ],
+   "both_10_of_10": false,
+   "redux": "ok",
+   "question_sha256_16": "99b1679187c0ece0"
+  }
+ ]
+}

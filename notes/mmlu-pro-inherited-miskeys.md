@@ -132,7 +132,11 @@ the top panel to the sixth (0.886 to 0.912) and drops to 0.871 for the seventh. 
 not help (26.3% against 27.6% at the same budget), so strength, not size, carried the signal here. Audit 84,
 pre-registered on 6 November 2026, repeats the design on TIGER-AI-Lab's 45 MMLU-Pro archives (four panels of 10) and
 tests audit 82's lead before looking: do MMLU-Pro questions that no archive answers with the key carry an expert
-error label more often than those the top 10 reject unanimously?
+error label more often than those the top 10 reject unanimously? Audit 85, pre-registered the same day, turns the
+series toward the roughly 8,300 MMLU questions outside Redux's sample: it sorts every question into four tiers (no
+model picks the key; the top 10 unanimous; the top-10 flag; the rest), tests on held-out halves of the expert labels
+whether tier rates estimate each subject's wrong keys better than subject rates and within their own 95% interval,
+and then estimates how many wrong keys are left outside the sample, with a ranked review queue.
 
 ## 11. Recommendations
 
@@ -175,9 +179,10 @@ mislabeled and count MMLU-Redux mislabels in the items they select. Jiang et al.
 correlations on 567 MMLU items. Nahum et al., "Are LLMs Better than Reported?" (EMNLP 2025, arXiv 2410.18889)
 re-label data with an LLM ensemble and report that error detection improves as the ensemble grows. Vendrow et al.,
 "Do Large Language Model Benchmarks Test Reliability?" (arXiv 2502.03461) revise fifteen benchmarks into "platinum"
-versions with mislabeled and ambiguous items removed. We found no earlier count of the Redux miskeys MMLU-Pro
-inherited, or test of answer consensus, within or across harnesses, of item discrimination or of panel strength,
-against Redux's expert labels on MMLU-Pro or MMLU.
+versions with mislabeled and ambiguous items removed. Paquin and Jain, "What Does MMLU Actually Measure?" (arXiv
+2609.09372) fit item-response models to 1,000 open-weights models on all of MMLU's test items to study difficulty, not
+label errors. We found no earlier count of the Redux miskeys MMLU-Pro inherited, or test of answer consensus, within
+or across harnesses, of item discrimination or of panel strength, against Redux's expert labels on MMLU-Pro or MMLU.
 
 ## Code and data
 
@@ -186,6 +191,7 @@ results): mcq-mmlu-pro-redux-inheritance (75), mcq-mmlu-pro-inherited-miskey-mod
 mcq-mmlu-pro-model-consensus-miskeys (77), mcq-mmlu-pro-consensus-added-options (78),
 mcq-mmlu-pro-consensus-distinct-panel (79), mcq-mmlu-helm-consensus-miskeys (80),
 mcq-mmlu-cross-harness-consensus (81), mcq-mmlu-helm-discrimination-miskeys (82),
-mcq-mmlu-helm-panel-strength (83), mcq-mmlu-pro-panel-strength (84, pre-registered). Catalogue: eval-reliability-audits. Only ids, letters, counts and hashes are
-published, never question or option text. MMLU and MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0; HELM is
-Apache-2.0.
+mcq-mmlu-helm-panel-strength (83), mcq-mmlu-pro-panel-strength (84, pre-registered),
+mcq-mmlu-helm-review-queue (85, pre-registered). Catalogue: eval-reliability-audits. Only ids, letters, counts and
+hashes are published, never question or option text. MMLU and MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0;
+HELM is Apache-2.0.

@@ -1,7 +1,8 @@
 # MMLU-Pro kept MMLU's expert-flagged wrong keys; model consensus points to them but cannot confirm them
 
 MV2, Munim, Inc. (mv2@munimtech.com), 4 November 2026; updated 5 November 2026 with audit 80 and 6 November 2026
-with audit 81. This work was carried out by AI agents working in MV2's name. Text CC BY 4.0; code Apache-2.0.
+with audits 81, 82 and 83. This work was carried out by AI agents working in MV2's name. Text CC BY 4.0; code
+Apache-2.0.
 
 ## Abstract
 
@@ -17,8 +18,12 @@ the precision. A sixth audit (80) re-ran the same flag on the original MMLU with
 (Stanford CRFM's HELM outputs) against all 5,700 Redux labels: it finds 80 of the 106 miskeys and reaches 26.9%
 precision, most of the gain coming from virology. A seventh (81) joined the two: on the MMLU questions both
 benchmarks share, flags that both panels raise with the same answer carry an expert error label 33.6% of the time,
-against 20.7% and 18.2% for either panel alone, while keeping three in four of the miskeys HELM's panel finds. Model
-consensus is a good way to rank questions for expert review, not a substitute for it.
+against 20.7% and 18.2% for either panel alone, while keeping three in four of the miskeys HELM's panel finds. Two
+more (82, 83) asked which models to listen to. Classical item discrimination over all 78 HELM models is slightly less
+precise than the top-10 panel (24.0% against 26.9% at the same number of flags), and disjoint panels of weaker models
+find mostly the same wrong keys at lower precision (18.8% for ranks 61-70 against 27.6% for the top 10 at an equal
+review budget, still three times the base rate). Model consensus is a good way to rank questions for expert review,
+not a substitute for it.
 
 ## 1. Method
 
@@ -100,13 +105,36 @@ questions (30.6%). The gain holds without virology (31 of 106, 29.2%, vs 55 of 3
 virology and college chemistry (24.2% vs 15.5%). With both panels unanimous, 16 of 27 judged flags (59.3%) carry an
 error label. Taking either panel's flag is the least precise choice (16.7%). The 113 agreement flags outside Redux's
 sample lean on professional law (43) and moral disputes (11), where the judged agreement flags were mostly cleared,
-so that list is likely less precise than 33.6%. Audit 82, pre-registered on 6 November 2026, tests whether classical
-item discrimination across all 78 HELM models beats the top-10 consensus at the same number of flags. Audit 83,
-pre-registered the same day, asks how strong a panel has to be: it cuts HELM's models into seven disjoint panels of 10
-by accuracy (ranks 1-10 down to 61-70) and scores each one's flag against the same expert labels at an equal review
-budget.
+so that list is likely less precise than 33.6%.
 
-## 9. Recommendations
+## 9. Item discrimination over every model (audit 82)
+
+Audit 82 computed, for every MMLU question, the classical item-rest correlation r across HELM's 78 models: does a
+model's accuracy on the other questions predict that it picks this question's key? A negative r means stronger models
+pick the key less often. Negative r does find wrong keys: 78 of the 106 miskeys have r < 0, against 389 of 5,285
+cleared questions (73.6% vs 7.4%). But the pre-registered headline failed. Taking the 1,207 questions with the most
+negative r (the consensus flag's count), 121 of 504 judged carry an error label (24.0%), against 130 of 484 (26.9%)
+for the top-10 consensus flag, and the threshold-free AUC is 0.898 against 0.912; without virology the order is the
+same (18.3% vs 20.6%). The two flags share 765 questions, and those are the most precise set (102 of 301, 33.9%, about
+the same as two harnesses agreeing). Post-hoc, the very top of the r ranking is the most precise short list in this
+series: on 88 questions none of the 78 models picks the key, and 27 of the 37 the experts judged carry an error label
+(73.0%), 21 of the 88 in virology.
+
+## 10. How strong the panel must be (audit 83)
+
+Audit 83 ranked HELM's 78 models by accuracy and cut them into seven disjoint panels of 10 (ranks 1-10 down to
+61-70; mean accuracy 0.855 down to 0.641), each using audit 77's rule and scored against the same labels. Five of six
+predictions held. Weaker panels flag more questions (2,405 for ranks 61-70 against 1,207) but catch about as many
+miskeys (65 to 80 of 106 across panels), so the fixed rule's precision falls from 26.9% to 13.9%. Ranked by margin at
+an equal review budget of 1,207 questions, precision falls more gently, from 27.6% to 18.8%, still three times the
+6.0% base rate, and even the ten weakest models HELM ran (mean accuracy 0.52) reach 17.1%. The AUC barely moves from
+the top panel to the sixth (0.886 to 0.912) and drops to 0.871 for the seventh. Adding ranks 11-20 to the top 10 did
+not help (26.3% against 27.6% at the same budget), so strength, not size, carried the signal here. Audit 84,
+pre-registered on 6 November 2026, repeats the design on TIGER-AI-Lab's 45 MMLU-Pro archives (four panels of 10) and
+tests audit 82's lead before looking: do MMLU-Pro questions that no archive answers with the key carry an expert
+error label more often than those the top 10 reject unanimously?
+
+## 11. Recommendations
 
 - **MMLU-Pro maintainers:** the 52 inherited keys are listed by `question_id` in audit 75; on 46 of them the experts'
   answer is an option and the models side with the experts. Ids 9677 and 6639, where the models side with the key,
@@ -118,15 +146,20 @@ budget.
   Precision depends heavily on how damaged a subject's key is. De-duplicating models by name buys less than a point;
   raising the threshold buys much more, at a cost in recall; confirming a flag with a second harness and option list
   also helps (on the shared MMLU questions, 33.6% against about 20% for either panel alone).
+- **Choosing a panel:** use the strongest models you can, and rank by margin at a fixed review budget rather than a
+  fixed vote threshold, because a weaker panel's threshold flags grow with its own mistakes. A cheaper panel still
+  works, at about two thirds of the precision. Adding weaker models to a strong panel, or pooling every model through
+  item discrimination, did not help on MMLU; questions no model answers with the key are worth reviewing first.
 
 ## Limits
 
 MMLU-Redux labels are expert judgments, not verified facts, and cover 100 questions per subject. A flag on a cleared
 question may be a shared model mistake, a second defensible answer, or an error the experts missed; these audits
-cannot tell them apart. Audits 75-79 use one harness (TIGER-AI-Lab's 5-shot chain-of-thought archives); audit 80 uses
-another (HELM's joint multiple-choice prompt), with models up to late 2024; audit 81 combines them, but the two panels
-share model families (Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro). The virology finding and the 16 unreviewed virology
-questions are post-hoc readings, not tested predictions.
+cannot tell them apart. Audits 75-79 use one harness (TIGER-AI-Lab's 5-shot chain-of-thought archives); audits 80, 82
+and 83 use another (HELM's joint multiple-choice prompt), with models up to late 2024; audit 81 combines them, but the
+two panels share model families (Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro). In audit 83 the panels differ in more
+than accuracy (size, age and family). The virology finding, the 16 unreviewed virology questions and audit 82's
+"no model picks the key" list are post-hoc readings, not tested predictions.
 
 ## Related work (checked 2026-11-06)
 
@@ -140,9 +173,11 @@ models' answers on seven benchmarks (not MMLU or MMLU-Pro) and score them agains
 "Fluid Language Model Benchmarking" (COLM 2025, arXiv 2509.11106) note that low-discrimination items are often
 mislabeled and count MMLU-Redux mislabels in the items they select. Jiang et al. (arXiv 2604.03244) compute item-rest
 correlations on 567 MMLU items. Nahum et al., "Are LLMs Better than Reported?" (EMNLP 2025, arXiv 2410.18889)
-re-label data with an LLM ensemble and report that error detection improves as the ensemble grows. We found no earlier
-count of the Redux miskeys MMLU-Pro inherited, or test of answer consensus, within or across harnesses, against Redux's
-expert labels on MMLU-Pro or MMLU.
+re-label data with an LLM ensemble and report that error detection improves as the ensemble grows. Vendrow et al.,
+"Do Large Language Model Benchmarks Test Reliability?" (arXiv 2502.03461) revise fifteen benchmarks into "platinum"
+versions with mislabeled and ambiguous items removed. We found no earlier count of the Redux miskeys MMLU-Pro
+inherited, or test of answer consensus, within or across harnesses, of item discrimination or of panel strength,
+against Redux's expert labels on MMLU-Pro or MMLU.
 
 ## Code and data
 
@@ -150,7 +185,7 @@ Repository: github.com/munimtechnologies/munimtechnologies.github.io. Folders (A
 results): mcq-mmlu-pro-redux-inheritance (75), mcq-mmlu-pro-inherited-miskey-models (76),
 mcq-mmlu-pro-model-consensus-miskeys (77), mcq-mmlu-pro-consensus-added-options (78),
 mcq-mmlu-pro-consensus-distinct-panel (79), mcq-mmlu-helm-consensus-miskeys (80),
-mcq-mmlu-cross-harness-consensus (81), mcq-mmlu-helm-discrimination-miskeys (82, pre-registered),
-mcq-mmlu-helm-panel-strength (83, pre-registered). Catalogue: eval-reliability-audits. Only ids, letters, counts and
-hashes are published, never question or option text. MMLU and MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0;
-HELM is Apache-2.0.
+mcq-mmlu-cross-harness-consensus (81), mcq-mmlu-helm-discrimination-miskeys (82),
+mcq-mmlu-helm-panel-strength (83), mcq-mmlu-pro-panel-strength (84, pre-registered). Catalogue: eval-reliability-audits. Only ids, letters, counts and hashes are
+published, never question or option text. MMLU and MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0; HELM is
+Apache-2.0.

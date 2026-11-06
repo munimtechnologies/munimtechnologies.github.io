@@ -1,0 +1,1593 @@
+{
+ "audit": 82,
+ "slug": "mcq-mmlu-helm-discrimination-miskeys",
+ "dataset": "HELM MMLU release v1.13.0 (Stanford CRFM, public GCS bucket crfm-helm-public/mmlu) and MMLU-Redux 2.0 via the HF datasets-server parquet API. Only ids, letters, counts and hashes.",
+ "fixture": {
+  "panel_flags": true,
+  "runs": true,
+  "universe": true,
+  "predictions": true,
+  "redux_join": true,
+  "discrimination": true,
+  "margin_auc": true,
+  "verdicts": true
+ },
+ "helm": {
+  "release_sha256": "921755ccfa38513d9eed082d497cf4328a87149842128a7e1794efcb79eba8a1",
+  "universe": 13984,
+  "universe_counts": {
+   "dup_dropped": 54,
+   "no_gold": 4
+  },
+  "instances_failed": [],
+  "models": 79,
+  "included": 78,
+  "panel": [
+   {
+    "model": "anthropic_claude-3-5-sonnet-20241022",
+    "accuracy": 0.8765017162471396
+   },
+   {
+    "model": "anthropic_claude-3-5-sonnet-20240620",
+    "accuracy": 0.871925057208238
+   },
+   {
+    "model": "deepseek-ai_deepseek-v3",
+    "accuracy": 0.8673483981693364
+   },
+   {
+    "model": "google_gemini-1.5-pro-002",
+    "accuracy": 0.863558352402746
+   },
+   {
+    "model": "anthropic_claude-3-opus-20240229",
+    "accuracy": 0.8505434782608695
+   },
+   {
+    "model": "openai_gpt-4o-2024-08-06",
+    "accuracy": 0.8493278032036613
+   },
+   {
+    "model": "meta_llama-3.1-405b-instruct-turbo",
+    "accuracy": 0.8492562929061785
+   },
+   {
+    "model": "openai_gpt-4o-2024-05-13",
+    "accuracy": 0.848183638443936
+   },
+   {
+    "model": "openai_gpt-4-0613",
+    "accuracy": 0.8401029748283753
+   },
+   {
+    "model": "qwen_qwen2.5-72b-instruct-turbo",
+    "accuracy": 0.8330949656750573
+   }
+  ],
+  "flagged": {
+   "all": 1207,
+   "miskey": 80,
+   "ok": 354,
+   "other_error": 50,
+   "unsure_or_conflict": 8,
+   "unreviewed": 715
+  },
+  "precision": [
+   130,
+   484
+  ],
+  "reproduces_80": true
+ },
+ "redux": {
+  "rows": 5700,
+  "join": {
+   "joined": 5653,
+   "no_match": 47,
+   "conflict": 0
+  },
+  "key_agree": 5653,
+  "shards": [
+   {
+    "config": "abstract_algebra",
+    "sha256": "c7c70e1b329867220f57a40182aedc808e12dd94e0974315a6c1607b9cadb52b",
+    "bytes": 23062
+   },
+   {
+    "config": "anatomy",
+    "sha256": "0c4a5ecfdda3982794ef319686b7fd4c61398eeaf741fe787f37613c3442997c",
+    "bytes": 18031
+   },
+   {
+    "config": "astronomy",
+    "sha256": "c6b5a0f329383181ffcef35f1582ea1924eac4eb750a310e7be2e55923b5a0b2",
+    "bytes": 26144
+   },
+   {
+    "config": "business_ethics",
+    "sha256": "2f221168b41c503e29042dbfb401caa69b454f89b45d919c54e34db3b41a590b",
+    "bytes": 25448
+   },
+   {
+    "config": "clinical_knowledge",
+    "sha256": "543c2e08337580baa0e76d68d7391920daca6f7ba7d0d5f6ec2ae93df4c93e22",
+    "bytes": 21789
+   },
+   {
+    "config": "college_biology",
+    "sha256": "b121c16f5147af55f087c1d5185a9cc455cd882bc11b85c443f3d90322e8866e",
+    "bytes": 27111
+   },
+   {
+    "config": "college_chemistry",
+    "sha256": "45b80702c8bb75f96a8aeb7d712cc49ba8b846b0636d24351b7deab29122d341",
+    "bytes": 19967
+   },
+   {
+    "config": "college_computer_science",
+    "sha256": "3c2d8f1cab8112e4f5db6e5d1240db591d870cab7076bdc5734397f2cc6e7b08",
+    "bytes": 32061
+   },
+   {
+    "config": "college_mathematics",
+    "sha256": "8e578811d92355dde403e1f2ae2bd9dc303dcfacb3c95215773a3438a32cc92b",
+    "bytes": 18932
+   },
+   {
+    "config": "college_medicine",
+    "sha256": "28fc2a6906a782949e81b8cde81da1742ba8946a037e29cb4ab203a30374e3dc",
+    "bytes": 31099
+   },
+   {
+    "config": "college_physics",
+    "sha256": "26ccf8d65edab187d0662f0d146f4d8c7cb82e5417582f86e8dbd3122489ec23",
+    "bytes": 20838
+   },
+   {
+    "config": "computer_security",
+    "sha256": "e326e550f94fb4be0a78acc67b3e4aaf3308181445841763d65cd2f509f39398",
+    "bytes": 25601
+   },
+   {
+    "config": "conceptual_physics",
+    "sha256": "8403c3b66a1c1a2dcd6ddee7ebacee130c6d1d3b118451f56594776ef4256357",
+    "bytes": 22743
+   },
+   {
+    "config": "econometrics",
+    "sha256": "182f00b6760d275a2c3c727de6cf520f48e528c3d0970604f2bba1d109c0c81e",
+    "bytes": 24471
+   },
+   {
+    "config": "electrical_engineering",
+    "sha256": "9dd0875fa221dc11a87515962911234700e241b0df4ee19d5a596f1966cfff03",
+    "bytes": 14836
+   },
+   {
+    "config": "elementary_mathematics",
+    "sha256": "b08992be69d9e2ddb6d4fa60a1f9e565bd9acd48699f5ddb5f94fa38c1cfbd2c",
+    "bytes": 16433
+   },
+   {
+    "config": "formal_logic",
+    "sha256": "82e7b1b7f7b52708975d5a42c577b9ffd1c1f0a27521993d71d83a837194b0fe",
+    "bytes": 22433
+   },
+   {
+    "config": "global_facts",
+    "sha256": "52e16f7ccc93fa9ef7d51425716f88bf88a3dce17d5e2217b5ac18ac3e3de7ef",
+    "bytes": 21242
+   },
+   {
+    "config": "high_school_biology",
+    "sha256": "fada7b1a8b0d0d06ecba1e9f9f9860c3dce3868c4cb3832584c12b04f43d7284",
+    "bytes": 29476
+   },
+   {
+    "config": "high_school_chemistry",
+    "sha256": "39fe0c467520ce9ff1cbda1b985eb3567090263d749349e9d609e5a81faf3472",
+    "bytes": 22941
+   },
+   {
+    "config": "high_school_computer_science",
+    "sha256": "fc6e68a4a3e3aad304fe9b33f22965c7aa4f96b8bf0d893d78de6e4984a8dcf1",
+    "bytes": 29356
+   },
+   {
+    "config": "high_school_european_history",
+    "sha256": "7e9854b9fc59ef11a0c4c34f0edee291f5c09302f0fd984db7de2f74d90002ac",
+    "bytes": 93674
+   },
+   {
+    "config": "high_school_geography",
+    "sha256": "b06374835d612de1f9bcefc74751d780a8fdd3b31ff6e7815dcc2b3cf713ca45",
+    "bytes": 19320
+   },
+   {
+    "config": "high_school_government_and_politics",
+    "sha256": "731a9c6c594303149da3137fbda77f75f9dcdbc809d2cd24ab06da0e55578a2a",
+    "bytes": 27438
+   },
+   {
+    "config": "high_school_macroeconomics",
+    "sha256": "1ff2414dd8b34d60a026d55ecb80c7282f681cb5e8b92d8932615411bf40d2eb",
+    "bytes": 24770
+   },
+   {
+    "config": "high_school_mathematics",
+    "sha256": "338faf69095250683a7f843036a9d3ce53d359fe1457ce9cd4f908d8e5c8bb4c",
+    "bytes": 17683
+   },
+   {
+    "config": "high_school_microeconomics",
+    "sha256": "6986aecd3c6868062b8a774922cad6b747f187b742d84b1f1ae0692ae74a444c",
+    "bytes": 21687
+   },
+   {
+    "config": "high_school_physics",
+    "sha256": "a3841f7ce74176c5406e0b360ffc8c0d252d1118d85bb9e88179d571538bec36",
+    "bytes": 27986
+   },
+   {
+    "config": "high_school_psychology",
+    "sha256": "0000e63efe6182863a2781b7f39052ff6fae70df89d0493500aff0ac169edcc7",
+    "bytes": 23887
+   },
+   {
+    "config": "high_school_statistics",
+    "sha256": "d3c54e7783d9b1e88e35181e07e4499fd5ffaad786fbe06957752d9b27d1d75b",
+    "bytes": 32386
+   },
+   {
+    "config": "high_school_us_history",
+    "sha256": "5d4022d20a5a715131f9572236a432c5a4ac238fddc63acab8c38068e09f2eb1",
+    "bytes": 86249
+   },
+   {
+    "config": "high_school_world_history",
+    "sha256": "c6b8e0fba28b2cc3377fbbd99a20274a26a99f2040d1a37727827662d1833be4",
+    "bytes": 94559
+   },
+   {
+    "config": "human_aging",
+    "sha256": "340a13d235bc74efec63924a8dd5c395c1b7a4439c0d6b2175581066182a4097",
+    "bytes": 20067
+   },
+   {
+    "config": "human_sexuality",
+    "sha256": "ee7fb92ad17b759e9759d2bdc74cdf0fc5ac66807fffe6eba60cff97b9641cfd",
+    "bytes": 22570
+   },
+   {
+    "config": "international_law",
+    "sha256": "94e515fe3846a0d7eba90dd61d0003188c472b4c1623d7bec9ed1984e1601f6d",
+    "bytes": 26377
+   },
+   {
+    "config": "jurisprudence",
+    "sha256": "934f738e393f56e399c3f820468576b14aab7fcd7e16b8704ded52bcbe794963",
+    "bytes": 23919
+   },
+   {
+    "config": "logical_fallacies",
+    "sha256": "ef1a39b4d2e40a2170e105dc2924ec785725a9e77e1606a911e94eb7836815b6",
+    "bytes": 22077
+   },
+   {
+    "config": "machine_learning",
+    "sha256": "f10f39e6a6b51354de7350bdabff673d82c4ced72a113b9d3cb9a2a928415308",
+    "bytes": 23864
+   },
+   {
+    "config": "management",
+    "sha256": "cd9e4b2908ddf1a1eb589d2f63de444852b9f58a3604397c1d44053ce2856bba",
+    "bytes": 17534
+   },
+   {
+    "config": "marketing",
+    "sha256": "ca9c3b9997f5b4e9b792f8f89ba58050a1ea621b80dd462400b7517b63d7ef53",
+    "bytes": 23832
+   },
+   {
+    "config": "medical_genetics",
+    "sha256": "f2e94def739f452ee4ac055c49763f7c20bc68f77d813a89776443a9d3caf7ff",
+    "bytes": 18322
+   },
+   {
+    "config": "miscellaneous",
+    "sha256": "78b23fd0707d45957374fb07a4adca80df8007e362aba5dc164a581210f5829c",
+    "bytes": 18070
+   },
+   {
+    "config": "moral_disputes",
+    "sha256": "8b75330ce9ac0bb5c9b3c182b207f14909ac1b83cd7af25df3275373497f7343",
+    "bytes": 24702
+   },
+   {
+    "config": "moral_scenarios",
+    "sha256": "27e5ddb7abcf49ce39c1cbc5e58f7f582ff99cbf64c4ef1bc71cb9ae0ba7eb44",
+    "bytes": 15657
+   },
+   {
+    "config": "nutrition",
+    "sha256": "26d8c92fc117fe5d5ca22a52c0bf41eb5be41f04f92e18586204d749d3755fa5",
+    "bytes": 23599
+   },
+   {
+    "config": "philosophy",
+    "sha256": "98371d132776c7578de57e436202aa8a46e1c4cdddaafd45b77be4830a2a4def",
+    "bytes": 22261
+   },
+   {
+    "config": "prehistory",
+    "sha256": "c71bcef91e0125d749bbc7a3f148c15388770177a64cef90bf26d4c84f72c4dc",
+    "bytes": 21449
+   },
+   {
+    "config": "professional_accounting",
+    "sha256": "25ad9ab1c1fd9908f9f9724eb5f80e87b143cfd590ddacd9452d6241da17067c",
+    "bytes": 37718
+   },
+   {
+    "config": "professional_law",
+    "sha256": "e316652d5a98e5aed3e06f1bfe749503756af53e5b1a97d0b7881325c1cd74d3",
+    "bytes": 76370
+   },
+   {
+    "config": "professional_medicine",
+    "sha256": "e9ab676b69cfa943bb94e2389158c47bd53cfbff1081ef76336b09df33a0dc07",
+    "bytes": 52795
+   },
+   {
+    "config": "professional_psychology",
+    "sha256": "0054172f48f3444f46819135a844cf28446f487a54ae4cf811656dd3fe4f203e",
+    "bytes": 31070
+   },
+   {
+    "config": "public_relations",
+    "sha256": "c513bf252e36bb0febc030576f26b797f4dba31fe15e46bc688b9a906151132d",
+    "bytes": 24306
+   },
+   {
+    "config": "security_studies",
+    "sha256": "47ded194ba7fb8fcfc0e9a2edafcc49fe654eca51ceadcca8a95e36165741e9d",
+    "bytes": 52789
+   },
+   {
+    "config": "sociology",
+    "sha256": "694551686df4484cd517add4a7001a83f791219dd37e60868679889e52b53e30",
+    "bytes": 26979
+   },
+   {
+    "config": "us_foreign_policy",
+    "sha256": "bc3c385cc0fc24f48730c90b0e176378fefba05d2c73f7dcc356e5b2969591d4",
+    "bytes": 22230
+   },
+   {
+    "config": "virology",
+    "sha256": "764b0b8f46e8c1aa20fba1dd6c93a8b383dfc0098e794fb1758ffed90b124a8b",
+    "bytes": 22224
+   },
+   {
+    "config": "world_religions",
+    "sha256": "ec1fc658f7a1965559a235912061799da11e52833634ec334e40846a1f21a4d9",
+    "bytes": 15462
+   }
+  ]
+ },
+ "discrimination": {
+  "models": 78,
+  "counts": {
+   "defined": 13330,
+   "all_correct": 566,
+   "all_wrong": 88,
+   "too_few": 0,
+   "flat": 0
+  },
+  "budget_K": 1207,
+  "r_at_budget": -0.002948
+ },
+ "p1_parts": {
+  "fixtures": true,
+  "reproduce_80": true
+ },
+ "predictions": {
+  "P2_negative_discriminates": true,
+  "P2_counts": [
+   78,
+   106,
+   389,
+   5285
+  ],
+  "P3_budget_beats_consensus": false,
+  "P3_counts": [
+   121,
+   504,
+   130,
+   484
+  ],
+  "P4_auc_beats_consensus": false,
+  "P4_auc": [
+   0.8975982220952857,
+   0.9123007443637208
+  ],
+  "P5_both_beats_each": true,
+  "P5_counts": [
+   102,
+   301
+  ],
+  "P6_budget_beats_consensus_no_virology": false,
+  "P6_counts": [
+   85,
+   464,
+   91,
+   442
+  ],
+  "P1_structural": true,
+  "P1_counts": [
+   13984,
+   78,
+   1207
+  ]
+ },
+ "by_group": {
+  "all": {
+   "n": 13984,
+   "consensus": 1207,
+   "budget": 1207,
+   "neg": 1224,
+   "both": 765,
+   "all_wrong": 88
+  },
+  "miskey": {
+   "n": 106,
+   "consensus": 80,
+   "budget": 77,
+   "neg": 78,
+   "both": 71,
+   "all_wrong": 23
+  },
+  "ok": {
+   "n": 5285,
+   "consensus": 354,
+   "budget": 383,
+   "neg": 389,
+   "both": 199,
+   "all_wrong": 10
+  },
+  "other_error": {
+   "n": 230,
+   "consensus": 50,
+   "budget": 44,
+   "neg": 44,
+   "both": 31,
+   "all_wrong": 4
+  },
+  "unsure_or_conflict": {
+   "n": 32,
+   "consensus": 8,
+   "budget": 6,
+   "neg": 6,
+   "both": 5,
+   "all_wrong": 0
+  },
+  "unreviewed": {
+   "n": 8331,
+   "consensus": 715,
+   "budget": 697,
+   "neg": 707,
+   "both": 459,
+   "all_wrong": 51
+  }
+ },
+ "auc": {
+  "miskey_vs_ok": {
+   "discrimination": 0.8975982220952857,
+   "consensus_margin": 0.9123007443637208
+  },
+  "any_error_vs_ok": {
+   "discrimination": 0.7335045276388701,
+   "consensus_margin": 0.7339175902148939
+  },
+  "miskey_vs_ok_no_virology": {
+   "discrimination": 0.8738455990341446,
+   "consensus_margin": 0.8897759403762028
+  }
+ },
+ "precision": {
+  "consensus": {
+   "error_labelled": 130,
+   "judged": 484,
+   "share": 0.26859504132231404
+  },
+  "budget": {
+   "error_labelled": 121,
+   "judged": 504,
+   "share": 0.2400793650793651
+  },
+  "neg": {
+   "error_labelled": 122,
+   "judged": 511,
+   "share": 0.23874755381604695
+  },
+  "both": {
+   "error_labelled": 102,
+   "judged": 301,
+   "share": 0.3388704318936877
+  },
+  "consensus_only": {
+   "error_labelled": 28,
+   "judged": 183,
+   "share": 0.15300546448087432
+  },
+  "budget_only": {
+   "error_labelled": 19,
+   "judged": 203,
+   "share": 0.09359605911330049
+  },
+  "no_virology": {
+   "consensus": {
+    "error_labelled": 91,
+    "judged": 442,
+    "share": 0.20588235294117646
+   },
+   "budget": {
+    "error_labelled": 85,
+    "judged": 464,
+    "share": 0.18318965517241378
+   }
+  }
+ },
+ "curve": [
+  {
+   "budget": 100,
+   "discrimination": {
+    "error_labelled": 27,
+    "judged": 43,
+    "share": 0.627906976744186
+   },
+   "discrimination_miskeys": 23,
+   "consensus_margin": {
+    "error_labelled": 25,
+    "judged": 59,
+    "share": 0.423728813559322
+   },
+   "consensus_margin_miskeys": 20
+  },
+  {
+   "budget": 200,
+   "discrimination": {
+    "error_labelled": 42,
+    "judged": 82,
+    "share": 0.5121951219512195
+   },
+   "discrimination_miskeys": 38,
+   "consensus_margin": {
+    "error_labelled": 31,
+    "judged": 86,
+    "share": 0.36046511627906974
+   },
+   "consensus_margin_miskeys": 24
+  },
+  {
+   "budget": 300,
+   "discrimination": {
+    "error_labelled": 52,
+    "judged": 120,
+    "share": 0.43333333333333335
+   },
+   "discrimination_miskeys": 44,
+   "consensus_margin": {
+    "error_labelled": 67,
+    "judged": 130,
+    "share": 0.5153846153846153
+   },
+   "consensus_margin_miskeys": 52
+  },
+  {
+   "budget": 500,
+   "discrimination": {
+    "error_labelled": 70,
+    "judged": 197,
+    "share": 0.3553299492385787
+   },
+   "discrimination_miskeys": 56,
+   "consensus_margin": {
+    "error_labelled": 79,
+    "judged": 206,
+    "share": 0.38349514563106796
+   },
+   "consensus_margin_miskeys": 60
+  },
+  {
+   "budget": 750,
+   "discrimination": {
+    "error_labelled": 93,
+    "judged": 297,
+    "share": 0.31313131313131315
+   },
+   "discrimination_miskeys": 66,
+   "consensus_margin": {
+    "error_labelled": 103,
+    "judged": 310,
+    "share": 0.33225806451612905
+   },
+   "consensus_margin_miskeys": 73
+  },
+  {
+   "budget": 1000,
+   "discrimination": {
+    "error_labelled": 108,
+    "judged": 413,
+    "share": 0.26150121065375304
+   },
+   "discrimination_miskeys": 73,
+   "consensus_margin": {
+    "error_labelled": 128,
+    "judged": 421,
+    "share": 0.30403800475059384
+   },
+   "consensus_margin_miskeys": 81
+  },
+  {
+   "budget": 1207,
+   "discrimination": {
+    "error_labelled": 121,
+    "judged": 504,
+    "share": 0.2400793650793651
+   },
+   "discrimination_miskeys": 77,
+   "consensus_margin": {
+    "error_labelled": 138,
+    "judged": 516,
+    "share": 0.26744186046511625
+   },
+   "consensus_margin_miskeys": 86
+  },
+  {
+   "budget": 1500,
+   "discrimination": {
+    "error_labelled": 135,
+    "judged": 637,
+    "share": 0.2119309262166405
+   },
+   "discrimination_miskeys": 80,
+   "consensus_margin": {
+    "error_labelled": 147,
+    "judged": 637,
+    "share": 0.23076923076923078
+   },
+   "consensus_margin_miskeys": 87
+  },
+  {
+   "budget": 2000,
+   "discrimination": {
+    "error_labelled": 165,
+    "judged": 862,
+    "share": 0.191415313225058
+   },
+   "discrimination_miskeys": 87,
+   "consensus_margin": {
+    "error_labelled": 167,
+    "judged": 855,
+    "share": 0.1953216374269006
+   },
+   "consensus_margin_miskeys": 90
+  }
+ ],
+ "by_subject_exploratory": {
+  "abstract_algebra": {
+   "n": 100,
+   "consensus": 11,
+   "budget": 11,
+   "neg": 11,
+   "miskeys": 6,
+   "consensus_precision": [
+    4,
+    10
+   ],
+   "budget_precision": [
+    5,
+    11
+   ],
+   "budget_unreviewed": 0
+  },
+  "anatomy": {
+   "n": 135,
+   "consensus": 12,
+   "budget": 10,
+   "neg": 10,
+   "miskeys": 1,
+   "consensus_precision": [
+    1,
+    8
+   ],
+   "budget_precision": [
+    1,
+    7
+   ],
+   "budget_unreviewed": 3
+  },
+  "astronomy": {
+   "n": 152,
+   "consensus": 4,
+   "budget": 5,
+   "neg": 5,
+   "miskeys": 1,
+   "consensus_precision": [
+    1,
+    2
+   ],
+   "budget_precision": [
+    1,
+    3
+   ],
+   "budget_unreviewed": 2
+  },
+  "business_ethics": {
+   "n": 100,
+   "consensus": 8,
+   "budget": 12,
+   "neg": 13,
+   "miskeys": 0,
+   "consensus_precision": [
+    5,
+    7
+   ],
+   "budget_precision": [
+    2,
+    11
+   ],
+   "budget_unreviewed": 0
+  },
+  "clinical_knowledge": {
+   "n": 265,
+   "consensus": 20,
+   "budget": 17,
+   "neg": 17,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    10
+   ],
+   "budget_precision": [
+    0,
+    7
+   ],
+   "budget_unreviewed": 10
+  },
+  "college_biology": {
+   "n": 144,
+   "consensus": 4,
+   "budget": 4,
+   "neg": 4,
+   "miskeys": 1,
+   "consensus_precision": [
+    1,
+    4
+   ],
+   "budget_precision": [
+    1,
+    4
+   ],
+   "budget_unreviewed": 0
+  },
+  "college_chemistry": {
+   "n": 100,
+   "consensus": 22,
+   "budget": 23,
+   "neg": 25,
+   "miskeys": 21,
+   "consensus_precision": [
+    13,
+    22
+   ],
+   "budget_precision": [
+    14,
+    23
+   ],
+   "budget_unreviewed": 0
+  },
+  "college_computer_science": {
+   "n": 100,
+   "consensus": 8,
+   "budget": 10,
+   "neg": 11,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    8
+   ],
+   "budget_precision": [
+    0,
+    10
+   ],
+   "budget_unreviewed": 0
+  },
+  "college_mathematics": {
+   "n": 100,
+   "consensus": 15,
+   "budget": 19,
+   "neg": 19,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    15
+   ],
+   "budget_precision": [
+    0,
+    19
+   ],
+   "budget_unreviewed": 0
+  },
+  "college_medicine": {
+   "n": 173,
+   "consensus": 22,
+   "budget": 18,
+   "neg": 18,
+   "miskeys": 1,
+   "consensus_precision": [
+    3,
+    13
+   ],
+   "budget_precision": [
+    3,
+    10
+   ],
+   "budget_unreviewed": 7
+  },
+  "college_physics": {
+   "n": 80,
+   "consensus": 18,
+   "budget": 10,
+   "neg": 10,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    17
+   ],
+   "budget_precision": [
+    0,
+    10
+   ],
+   "budget_unreviewed": 0
+  },
+  "computer_security": {
+   "n": 100,
+   "consensus": 11,
+   "budget": 8,
+   "neg": 8,
+   "miskeys": 3,
+   "consensus_precision": [
+    2,
+    11
+   ],
+   "budget_precision": [
+    2,
+    8
+   ],
+   "budget_unreviewed": 0
+  },
+  "conceptual_physics": {
+   "n": 235,
+   "consensus": 11,
+   "budget": 11,
+   "neg": 11,
+   "miskeys": 4,
+   "consensus_precision": [
+    3,
+    6
+   ],
+   "budget_precision": [
+    2,
+    6
+   ],
+   "budget_unreviewed": 5
+  },
+  "econometrics": {
+   "n": 114,
+   "consensus": 18,
+   "budget": 17,
+   "neg": 17,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    15
+   ],
+   "budget_precision": [
+    1,
+    14
+   ],
+   "budget_unreviewed": 3
+  },
+  "electrical_engineering": {
+   "n": 145,
+   "consensus": 12,
+   "budget": 15,
+   "neg": 16,
+   "miskeys": 1,
+   "consensus_precision": [
+    1,
+    10
+   ],
+   "budget_precision": [
+    1,
+    13
+   ],
+   "budget_unreviewed": 2
+  },
+  "elementary_mathematics": {
+   "n": 375,
+   "consensus": 15,
+   "budget": 14,
+   "neg": 14,
+   "miskeys": 2,
+   "consensus_precision": [
+    2,
+    3
+   ],
+   "budget_precision": [
+    2,
+    2
+   ],
+   "budget_unreviewed": 12
+  },
+  "formal_logic": {
+   "n": 126,
+   "consensus": 15,
+   "budget": 19,
+   "neg": 19,
+   "miskeys": 1,
+   "consensus_precision": [
+    2,
+    11
+   ],
+   "budget_precision": [
+    4,
+    17
+   ],
+   "budget_unreviewed": 2
+  },
+  "global_facts": {
+   "n": 100,
+   "consensus": 18,
+   "budget": 16,
+   "neg": 16,
+   "miskeys": 5,
+   "consensus_precision": [
+    6,
+    18
+   ],
+   "budget_precision": [
+    6,
+    16
+   ],
+   "budget_unreviewed": 0
+  },
+  "high_school_biology": {
+   "n": 310,
+   "consensus": 10,
+   "budget": 15,
+   "neg": 15,
+   "miskeys": 2,
+   "consensus_precision": [
+    3,
+    4
+   ],
+   "budget_precision": [
+    2,
+    5
+   ],
+   "budget_unreviewed": 10
+  },
+  "high_school_chemistry": {
+   "n": 203,
+   "consensus": 25,
+   "budget": 17,
+   "neg": 17,
+   "miskeys": 0,
+   "consensus_precision": [
+    1,
+    12
+   ],
+   "budget_precision": [
+    1,
+    9
+   ],
+   "budget_unreviewed": 8
+  },
+  "high_school_computer_science": {
+   "n": 100,
+   "consensus": 2,
+   "budget": 3,
+   "neg": 4,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    2
+   ],
+   "budget_precision": [
+    0,
+    3
+   ],
+   "budget_unreviewed": 0
+  },
+  "high_school_european_history": {
+   "n": 165,
+   "consensus": 15,
+   "budget": 14,
+   "neg": 14,
+   "miskeys": 1,
+   "consensus_precision": [
+    3,
+    7
+   ],
+   "budget_precision": [
+    3,
+    5
+   ],
+   "budget_unreviewed": 9
+  },
+  "high_school_geography": {
+   "n": 198,
+   "consensus": 8,
+   "budget": 8,
+   "neg": 8,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    6
+   ],
+   "budget_precision": [
+    0,
+    4
+   ],
+   "budget_unreviewed": 4
+  },
+  "high_school_government_and_politics": {
+   "n": 193,
+   "consensus": 2,
+   "budget": 3,
+   "neg": 3,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    1
+   ],
+   "budget_precision": [
+    0,
+    2
+   ],
+   "budget_unreviewed": 1
+  },
+  "high_school_macroeconomics": {
+   "n": 389,
+   "consensus": 28,
+   "budget": 27,
+   "neg": 27,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    10
+   ],
+   "budget_precision": [
+    0,
+    10
+   ],
+   "budget_unreviewed": 17
+  },
+  "high_school_mathematics": {
+   "n": 270,
+   "consensus": 38,
+   "budget": 47,
+   "neg": 49,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    12
+   ],
+   "budget_precision": [
+    0,
+    14
+   ],
+   "budget_unreviewed": 33
+  },
+  "high_school_microeconomics": {
+   "n": 238,
+   "consensus": 7,
+   "budget": 9,
+   "neg": 10,
+   "miskeys": 1,
+   "consensus_precision": [
+    1,
+    2
+   ],
+   "budget_precision": [
+    1,
+    4
+   ],
+   "budget_unreviewed": 5
+  },
+  "high_school_physics": {
+   "n": 151,
+   "consensus": 22,
+   "budget": 25,
+   "neg": 25,
+   "miskeys": 2,
+   "consensus_precision": [
+    2,
+    16
+   ],
+   "budget_precision": [
+    2,
+    19
+   ],
+   "budget_unreviewed": 6
+  },
+  "high_school_psychology": {
+   "n": 523,
+   "consensus": 15,
+   "budget": 24,
+   "neg": 24,
+   "miskeys": 0,
+   "consensus_precision": [
+    1,
+    2
+   ],
+   "budget_precision": [
+    2,
+    7
+   ],
+   "budget_unreviewed": 17
+  },
+  "high_school_statistics": {
+   "n": 216,
+   "consensus": 20,
+   "budget": 22,
+   "neg": 22,
+   "miskeys": 2,
+   "consensus_precision": [
+    2,
+    8
+   ],
+   "budget_precision": [
+    2,
+    9
+   ],
+   "budget_unreviewed": 13
+  },
+  "high_school_us_history": {
+   "n": 204,
+   "consensus": 7,
+   "budget": 8,
+   "neg": 8,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    3
+   ],
+   "budget_precision": [
+    0,
+    4
+   ],
+   "budget_unreviewed": 4
+  },
+  "high_school_world_history": {
+   "n": 237,
+   "consensus": 10,
+   "budget": 7,
+   "neg": 7,
+   "miskeys": 1,
+   "consensus_precision": [
+    1,
+    3
+   ],
+   "budget_precision": [
+    1,
+    3
+   ],
+   "budget_unreviewed": 4
+  },
+  "human_aging": {
+   "n": 223,
+   "consensus": 27,
+   "budget": 21,
+   "neg": 22,
+   "miskeys": 0,
+   "consensus_precision": [
+    4,
+    13
+   ],
+   "budget_precision": [
+    4,
+    9
+   ],
+   "budget_unreviewed": 11
+  },
+  "human_sexuality": {
+   "n": 131,
+   "consensus": 6,
+   "budget": 19,
+   "neg": 19,
+   "miskeys": 2,
+   "consensus_precision": [
+    4,
+    4
+   ],
+   "budget_precision": [
+    6,
+    13
+   ],
+   "budget_unreviewed": 6
+  },
+  "international_law": {
+   "n": 120,
+   "consensus": 5,
+   "budget": 7,
+   "neg": 7,
+   "miskeys": 2,
+   "consensus_precision": [
+    0,
+    3
+   ],
+   "budget_precision": [
+    0,
+    5
+   ],
+   "budget_unreviewed": 2
+  },
+  "jurisprudence": {
+   "n": 108,
+   "consensus": 9,
+   "budget": 8,
+   "neg": 8,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    8
+   ],
+   "budget_precision": [
+    0,
+    6
+   ],
+   "budget_unreviewed": 2
+  },
+  "logical_fallacies": {
+   "n": 163,
+   "consensus": 12,
+   "budget": 6,
+   "neg": 6,
+   "miskeys": 3,
+   "consensus_precision": [
+    6,
+    7
+   ],
+   "budget_precision": [
+    1,
+    4
+   ],
+   "budget_unreviewed": 2
+  },
+  "machine_learning": {
+   "n": 112,
+   "consensus": 19,
+   "budget": 17,
+   "neg": 17,
+   "miskeys": 2,
+   "consensus_precision": [
+    4,
+    16
+   ],
+   "budget_precision": [
+    3,
+    15
+   ],
+   "budget_unreviewed": 2
+  },
+  "management": {
+   "n": 103,
+   "consensus": 6,
+   "budget": 8,
+   "neg": 8,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    6
+   ],
+   "budget_precision": [
+    0,
+    8
+   ],
+   "budget_unreviewed": 0
+  },
+  "marketing": {
+   "n": 234,
+   "consensus": 8,
+   "budget": 9,
+   "neg": 9,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    2
+   ],
+   "budget_precision": [
+    0,
+    2
+   ],
+   "budget_unreviewed": 7
+  },
+  "medical_genetics": {
+   "n": 100,
+   "consensus": 1,
+   "budget": 2,
+   "neg": 2,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    1
+   ],
+   "budget_precision": [
+    0,
+    2
+   ],
+   "budget_unreviewed": 0
+  },
+  "miscellaneous": {
+   "n": 783,
+   "consensus": 19,
+   "budget": 24,
+   "neg": 24,
+   "miskeys": 0,
+   "consensus_precision": [
+    1,
+    2
+   ],
+   "budget_precision": [
+    1,
+    2
+   ],
+   "budget_unreviewed": 22
+  },
+  "moral_disputes": {
+   "n": 346,
+   "consensus": 31,
+   "budget": 35,
+   "neg": 35,
+   "miskeys": 1,
+   "consensus_precision": [
+    1,
+    7
+   ],
+   "budget_precision": [
+    1,
+    11
+   ],
+   "budget_unreviewed": 24
+  },
+  "moral_scenarios": {
+   "n": 895,
+   "consensus": 61,
+   "budget": 56,
+   "neg": 57,
+   "miskeys": 0,
+   "consensus_precision": [
+    1,
+    4
+   ],
+   "budget_precision": [
+    0,
+    4
+   ],
+   "budget_unreviewed": 52
+  },
+  "nutrition": {
+   "n": 306,
+   "consensus": 20,
+   "budget": 23,
+   "neg": 23,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    8
+   ],
+   "budget_precision": [
+    0,
+    9
+   ],
+   "budget_unreviewed": 14
+  },
+  "philosophy": {
+   "n": 311,
+   "consensus": 23,
+   "budget": 25,
+   "neg": 25,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    5
+   ],
+   "budget_precision": [
+    0,
+    5
+   ],
+   "budget_unreviewed": 18
+  },
+  "prehistory": {
+   "n": 324,
+   "consensus": 12,
+   "budget": 18,
+   "neg": 18,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    6
+   ],
+   "budget_precision": [
+    0,
+    5
+   ],
+   "budget_unreviewed": 13
+  },
+  "professional_accounting": {
+   "n": 282,
+   "consensus": 29,
+   "budget": 31,
+   "neg": 32,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    7
+   ],
+   "budget_precision": [
+    1,
+    7
+   ],
+   "budget_unreviewed": 23
+  },
+  "professional_law": {
+   "n": 1534,
+   "consensus": 294,
+   "budget": 255,
+   "neg": 259,
+   "miskeys": 2,
+   "consensus_precision": [
+    4,
+    18
+   ],
+   "budget_precision": [
+    4,
+    17
+   ],
+   "budget_unreviewed": 238
+  },
+  "professional_medicine": {
+   "n": 272,
+   "consensus": 5,
+   "budget": 10,
+   "neg": 10,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    1
+   ],
+   "budget_precision": [
+    0,
+    4
+   ],
+   "budget_unreviewed": 6
+  },
+  "professional_psychology": {
+   "n": 610,
+   "consensus": 38,
+   "budget": 35,
+   "neg": 36,
+   "miskeys": 2,
+   "consensus_precision": [
+    2,
+    5
+   ],
+   "budget_precision": [
+    1,
+    3
+   ],
+   "budget_unreviewed": 32
+  },
+  "public_relations": {
+   "n": 106,
+   "consensus": 17,
+   "budget": 14,
+   "neg": 14,
+   "miskeys": 3,
+   "consensus_precision": [
+    5,
+    14
+   ],
+   "budget_precision": [
+    3,
+    11
+   ],
+   "budget_unreviewed": 3
+  },
+  "security_studies": {
+   "n": 245,
+   "consensus": 21,
+   "budget": 21,
+   "neg": 21,
+   "miskeys": 0,
+   "consensus_precision": [
+    1,
+    12
+   ],
+   "budget_precision": [
+    1,
+    9
+   ],
+   "budget_unreviewed": 12
+  },
+  "sociology": {
+   "n": 200,
+   "consensus": 8,
+   "budget": 14,
+   "neg": 14,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    6
+   ],
+   "budget_precision": [
+    0,
+    10
+   ],
+   "budget_unreviewed": 4
+  },
+  "us_foreign_policy": {
+   "n": 98,
+   "consensus": 3,
+   "budget": 5,
+   "neg": 5,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    3
+   ],
+   "budget_precision": [
+    0,
+    5
+   ],
+   "budget_unreviewed": 0
+  },
+  "virology": {
+   "n": 166,
+   "consensus": 65,
+   "budget": 59,
+   "neg": 59,
+   "miskeys": 33,
+   "consensus_precision": [
+    39,
+    42
+   ],
+   "budget_precision": [
+    36,
+    40
+   ],
+   "budget_unreviewed": 19
+  },
+  "world_religions": {
+   "n": 171,
+   "consensus": 15,
+   "budget": 17,
+   "neg": 17,
+   "miskeys": 0,
+   "consensus_precision": [
+    0,
+    6
+   ],
+   "budget_precision": [
+    0,
+    9
+   ],
+   "budget_unreviewed": 8
+  }
+ },
+ "n_candidates": 1207,
+ "note": "r = item-rest correlation across HELM's included models (picked the key 0/1 vs accuracy on the model's other questions); every model right -> +1, none -> -1. consensus = audit 80's flag (>= 6 of the 10 most accurate models on one non-key option, more than on the key); budget = the K questions with the most negative r, K = the consensus flag's count; neg = r < 0. Precision = share of flagged Redux-judged questions (wrong key, OK or another error label) with an error label. AUC: Redux miskeys vs Redux-OK, scores -r and the consensus margin (top non-key votes minus key votes). P1 structural; P2 r < 0 rate on miskeys >= 5x on OK; P3 HEADLINE budget precision > consensus; P4 AUC -r > AUC margin; P5 both flags together more precise than each; P6 P3 without virology."
+}

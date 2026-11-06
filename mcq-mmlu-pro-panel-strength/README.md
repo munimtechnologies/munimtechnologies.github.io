@@ -111,3 +111,84 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: MMLU-
 is CC BY 4.0; TIGER-AI-Lab's published model outputs keep their own terms. Only question ids, letters, counts, AUCs
 and public model names and accuracies are published, never question, option or model text. Authored by AI agents
 working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added on 2026-11-06 after the sealed job `mcq-mmlu-pro-panel-strength-v1` ran (unit tests passed, then 69 s of
+analysis). Nothing above was changed. Every number below is in [`results.json`](results.json). Equal-budget counts are
+exact expected values with ties at the cut shared evenly, so they can be fractional.*
+
+**6 of 7 predictions held. The design of audit 83 replicates on MMLU-Pro, with a steeper fall: weaker panels still
+find wrong keys, at lower precision per question reviewed. P7 failed: MMLU-Pro questions that no archive answers with
+the key are not more often wrong than those the top 10 unanimously reject (35.5% vs 36.4% of judged ones carry an
+expert error label), so audit 82's post-hoc 73% on MMLU did not carry over.**
+
+**Gates.** All eight fixtures matched. MMLU-Pro parsed to 12,032 questions (6,810 MMLU-derived, 4,083 STEM website,
+598 TheoremQA, 541 SciBench). The Redux join reproduced audit 75 (5,690 rows joined, 2,758 on one MMLU-Pro question,
+55 miskeys). 45 of 48 archives were included; as in audits 77-79, `DeepSeek-Coder-V2_5shots`,
+`Meta-Llama-3-70B-Instruct_5shots` and `sonnet_0shots_12_01_18` failed the join. S1 is audit 77's panel and
+reproduced its 1,210 flags and 65 of 359. **Base rate:** 172 of 2,725 Redux-judged questions (6.3%) carry an error
+label (55 wrong keys, 117 other errors, 2,553 OK).
+
+| # | Prediction | Verdict | Numbers |
+| --- | --- | --- | --- |
+| P1 | Structural gates | HELD | 12,032 questions, 45 archives, budget K = 1,210 |
+| P2 | S4 flags more than S1 | HELD | 1,434 vs 1,210 |
+| P3 | HEADLINE: equal-budget precision S1 > S2 > S4 | HELD | 20.2% > 15.6% > 12.8% |
+| P4 | Margin AUC S1 > S4 | HELD | 0.863 vs 0.710 |
+| P5 | S4 at least 2 times the base rate at equal budget | HELD, weakly | 12.8% = 2.03 times 6.3% (46.8 of 364.8 expected judged) |
+| P6 | Ranks 1-20 not more precise than S1 at equal budget | HELD, by one point | 19.2% vs 20.2% |
+| P7 | No-key flag more precise than S1 at 10 of 10, at least 10 judged | FAILED | 22 of 62 (35.5%) vs 28 of 77 (36.4%) |
+
+### The four panels
+
+| Panel | Ranks | Mean accuracy | Flags (rule) | Precision (rule) | Miskeys caught (of 55) | Margin AUC | Precision at K = 1,210 | Expected miskeys at K |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| S1 | 1-10 | 0.779 | 1,210 | 65 of 359 (18.1%) | 36 | 0.863 | 20.2% | 39.1 |
+| S2 | 11-20 | 0.605 | 1,389 | 61 of 411 (14.8%) | 33 | 0.817 | 15.6% | 31.3 |
+| S3 | 21-30 | 0.439 | 1,336 | 49 of 401 (12.2%) | 23 | 0.783 | 13.9% | 26.3 |
+| S4 | 31-40 | 0.327 | 1,434 | 54 of 447 (12.1%) | 22 | 0.710 | 12.8% | 19.4 |
+| Ranks 1-20 (at least 12 of 20) | 1-20 | 0.692 | 961 | 59 of 302 (19.5%) | 34 | 0.851 | 19.2% | 39.0 |
+
+Precision is the share of flagged Redux-judged questions that carry any expert error label (a wrong key or another
+error). Each panel's member archives and accuracies are in `results.json` (`strata[].models`).
+
+### What it shows
+
+- **The shape replicates, the slope is steeper.** On HELM's MMLU ([audit 83](../mcq-mmlu-helm-panel-strength/)) the
+  margin AUC hardly moved (0.912 for the top 10, 0.871 for the weakest 10) and the weakest panel kept 3.1 times the
+  base rate. On MMLU-Pro the AUC falls at every step (0.863, 0.817, 0.783, 0.710), and the weakest scored panel is
+  only just over 2 times the base rate. The two settings do not span the same strength: HELM's panels ran from 0.855
+  to 0.641 mean accuracy, these from 0.779 to 0.327, so this is a comparison of two curves, not of equal panels.
+- **Strength, not size, again.** Pooling ranks 1-20 into one panel does not beat the top 10 at the same budget (19.2%
+  vs 20.2%), as on HELM (26.3% vs 27.6%). The margin of one point is small; the direction is the same twice.
+- **The no-key flag did not replicate (P7).** 194 questions are answered with the key by none of the 45 archives
+  (162 MMLU-derived, 28 STEM website, 3 TheoremQA, 1 SciBench). 62 of them are Redux-judged: 15 wrong keys, 7 other
+  errors, 40 OK, so 35.5% carry an error label, 5.6 times the base rate. S1's 10-of-10 flag is about as precise (28
+  of 77, 36.4%; 21 wrong keys) and catches more of the 55 miskeys (21 vs 15). On HELM's MMLU, found post-hoc, the
+  same filter reached 27 of 37 (73.0%). Tested before looking, on a second harness and benchmark, it is about half
+  that. One possible reason, not tested here: [audit 78](../mcq-mmlu-pro-consensus-added-options/) found that
+  MMLU-Pro's added options draw many consensus flags on expert-cleared questions, and an added option that is also
+  defensible would make every model avoid a correct key.
+
+### Exploratory (not predicted)
+
+- **Sliding windows of 10 ranks** (start at rank 1, 6, ..., 36; mean accuracy 0.779 to 0.265): equal-budget precision
+  20.2%, 18.1%, 15.6%, 15.1%, 13.9%, 11.8%, 12.8%, 11.1%; margin AUC 0.863 down to 0.656.
+- **Overlap with S1.** S2 shares 746 of its 1,389 flags with S1, S3 499 of 1,336, S4 440 of 1,434. Of S1's 36 flagged
+  miskeys, S2 keeps 30, S3 and S4 19 each; each weaker panel adds 3-4 miskeys S1 misses.
+- **AUC on any error label** (all error labels vs OK, margin score): 0.721, 0.697, 0.668, 0.642 for S1-S4.
+- **Share of all 45 archives picking the key** as a score: AUC 0.808 (miskeys vs OK), equal-budget precision 18.5%,
+  below S1's 20.2%.
+- **Flags by source family** (S1 to S4): MMLU-derived 874, 1,062, 1,029, 1,143; STEM website 271, 263, 273, 268;
+  TheoremQA 40, 39, 21, 14; SciBench 25, 25, 13, 9.
+
+**Limits.** MMLU-Redux judged only a sample of the MMLU-derived questions (2,725 here), so precision is measured on
+that sample and says nothing directly about the STEM website, TheoremQA or SciBench questions. "Error label" counts
+other expert error types as well as wrong keys, as in audits 77-83. TIGER-AI-Lab's archives are what it published,
+not a designed panel, and its top ranks hold repeated archives of the same models (audit 79). Model agreement is
+evidence, not proof: `nokey_candidates.json` lists all 194 no-key questions (ids, source, category, letters, counts,
+Redux status; 97 are MMLU-derived questions outside Redux's sample), model-flagged and not expert-checked.
+
+**Files added with the results:** `results.json` (gates, archives with sha256, every panel, the verdicts and the
+exploratory tables) and `nokey_candidates.json`.

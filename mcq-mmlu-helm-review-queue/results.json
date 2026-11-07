@@ -1,0 +1,1212 @@
+{
+ "audit": 85,
+ "slug": "mcq-mmlu-helm-review-queue",
+ "dataset": "HELM MMLU release v1.13.0 (Stanford CRFM, public GCS bucket crfm-helm-public/mmlu) and MMLU-Redux 2.0 via the HF datasets-server parquet API. Only model names, counts, rates and hashes.",
+ "fixture": {
+  "panel_flags": true,
+  "runs": true,
+  "universe": true,
+  "predictions": true,
+  "redux_join": true,
+  "tiers": true,
+  "queue": true,
+  "cross_fold": true,
+  "estimate": true,
+  "transport": true,
+  "verdicts": true
+ },
+ "helm": {
+  "release_sha256": "921755ccfa38513d9eed082d497cf4328a87149842128a7e1794efcb79eba8a1",
+  "universe": 13984,
+  "universe_counts": {
+   "dup_dropped": 54,
+   "no_gold": 4
+  },
+  "instances_failed": [],
+  "models": 79,
+  "included": 78,
+  "panel": [
+   "anthropic_claude-3-5-sonnet-20241022",
+   "anthropic_claude-3-5-sonnet-20240620",
+   "deepseek-ai_deepseek-v3",
+   "google_gemini-1.5-pro-002",
+   "anthropic_claude-3-opus-20240229",
+   "openai_gpt-4o-2024-08-06",
+   "meta_llama-3.1-405b-instruct-turbo",
+   "openai_gpt-4o-2024-05-13",
+   "openai_gpt-4-0613",
+   "qwen_qwen2.5-72b-instruct-turbo"
+  ],
+  "flagged": {
+   "all": 1207,
+   "miskey": 80,
+   "ok": 354,
+   "other_error": 50,
+   "unsure_or_conflict": 8,
+   "unreviewed": 715
+  },
+  "precision": [
+   130,
+   484
+  ],
+  "reproduces_80": true,
+  "nokey_by_group": {
+   "all": 88,
+   "miskey": 23,
+   "ok": 10,
+   "other_error": 4,
+   "unsure_or_conflict": 0,
+   "unreviewed": 51
+  },
+  "reproduces_82_nokey": true
+ },
+ "redux": {
+  "rows": 5700,
+  "join": {
+   "joined": 5653,
+   "no_match": 47,
+   "conflict": 0
+  },
+  "key_agree": 5653,
+  "shards": [
+   {
+    "config": "abstract_algebra",
+    "sha256": "c7c70e1b329867220f57a40182aedc808e12dd94e0974315a6c1607b9cadb52b",
+    "bytes": 23062
+   },
+   {
+    "config": "anatomy",
+    "sha256": "0c4a5ecfdda3982794ef319686b7fd4c61398eeaf741fe787f37613c3442997c",
+    "bytes": 18031
+   },
+   {
+    "config": "astronomy",
+    "sha256": "c6b5a0f329383181ffcef35f1582ea1924eac4eb750a310e7be2e55923b5a0b2",
+    "bytes": 26144
+   },
+   {
+    "config": "business_ethics",
+    "sha256": "2f221168b41c503e29042dbfb401caa69b454f89b45d919c54e34db3b41a590b",
+    "bytes": 25448
+   },
+   {
+    "config": "clinical_knowledge",
+    "sha256": "543c2e08337580baa0e76d68d7391920daca6f7ba7d0d5f6ec2ae93df4c93e22",
+    "bytes": 21789
+   },
+   {
+    "config": "college_biology",
+    "sha256": "b121c16f5147af55f087c1d5185a9cc455cd882bc11b85c443f3d90322e8866e",
+    "bytes": 27111
+   },
+   {
+    "config": "college_chemistry",
+    "sha256": "45b80702c8bb75f96a8aeb7d712cc49ba8b846b0636d24351b7deab29122d341",
+    "bytes": 19967
+   },
+   {
+    "config": "college_computer_science",
+    "sha256": "3c2d8f1cab8112e4f5db6e5d1240db591d870cab7076bdc5734397f2cc6e7b08",
+    "bytes": 32061
+   },
+   {
+    "config": "college_mathematics",
+    "sha256": "8e578811d92355dde403e1f2ae2bd9dc303dcfacb3c95215773a3438a32cc92b",
+    "bytes": 18932
+   },
+   {
+    "config": "college_medicine",
+    "sha256": "28fc2a6906a782949e81b8cde81da1742ba8946a037e29cb4ab203a30374e3dc",
+    "bytes": 31099
+   },
+   {
+    "config": "college_physics",
+    "sha256": "26ccf8d65edab187d0662f0d146f4d8c7cb82e5417582f86e8dbd3122489ec23",
+    "bytes": 20838
+   },
+   {
+    "config": "computer_security",
+    "sha256": "e326e550f94fb4be0a78acc67b3e4aaf3308181445841763d65cd2f509f39398",
+    "bytes": 25601
+   },
+   {
+    "config": "conceptual_physics",
+    "sha256": "8403c3b66a1c1a2dcd6ddee7ebacee130c6d1d3b118451f56594776ef4256357",
+    "bytes": 22743
+   },
+   {
+    "config": "econometrics",
+    "sha256": "182f00b6760d275a2c3c727de6cf520f48e528c3d0970604f2bba1d109c0c81e",
+    "bytes": 24471
+   },
+   {
+    "config": "electrical_engineering",
+    "sha256": "9dd0875fa221dc11a87515962911234700e241b0df4ee19d5a596f1966cfff03",
+    "bytes": 14836
+   },
+   {
+    "config": "elementary_mathematics",
+    "sha256": "b08992be69d9e2ddb6d4fa60a1f9e565bd9acd48699f5ddb5f94fa38c1cfbd2c",
+    "bytes": 16433
+   },
+   {
+    "config": "formal_logic",
+    "sha256": "82e7b1b7f7b52708975d5a42c577b9ffd1c1f0a27521993d71d83a837194b0fe",
+    "bytes": 22433
+   },
+   {
+    "config": "global_facts",
+    "sha256": "52e16f7ccc93fa9ef7d51425716f88bf88a3dce17d5e2217b5ac18ac3e3de7ef",
+    "bytes": 21242
+   },
+   {
+    "config": "high_school_biology",
+    "sha256": "fada7b1a8b0d0d06ecba1e9f9f9860c3dce3868c4cb3832584c12b04f43d7284",
+    "bytes": 29476
+   },
+   {
+    "config": "high_school_chemistry",
+    "sha256": "39fe0c467520ce9ff1cbda1b985eb3567090263d749349e9d609e5a81faf3472",
+    "bytes": 22941
+   },
+   {
+    "config": "high_school_computer_science",
+    "sha256": "fc6e68a4a3e3aad304fe9b33f22965c7aa4f96b8bf0d893d78de6e4984a8dcf1",
+    "bytes": 29356
+   },
+   {
+    "config": "high_school_european_history",
+    "sha256": "7e9854b9fc59ef11a0c4c34f0edee291f5c09302f0fd984db7de2f74d90002ac",
+    "bytes": 93674
+   },
+   {
+    "config": "high_school_geography",
+    "sha256": "b06374835d612de1f9bcefc74751d780a8fdd3b31ff6e7815dcc2b3cf713ca45",
+    "bytes": 19320
+   },
+   {
+    "config": "high_school_government_and_politics",
+    "sha256": "731a9c6c594303149da3137fbda77f75f9dcdbc809d2cd24ab06da0e55578a2a",
+    "bytes": 27438
+   },
+   {
+    "config": "high_school_macroeconomics",
+    "sha256": "1ff2414dd8b34d60a026d55ecb80c7282f681cb5e8b92d8932615411bf40d2eb",
+    "bytes": 24770
+   },
+   {
+    "config": "high_school_mathematics",
+    "sha256": "338faf69095250683a7f843036a9d3ce53d359fe1457ce9cd4f908d8e5c8bb4c",
+    "bytes": 17683
+   },
+   {
+    "config": "high_school_microeconomics",
+    "sha256": "6986aecd3c6868062b8a774922cad6b747f187b742d84b1f1ae0692ae74a444c",
+    "bytes": 21687
+   },
+   {
+    "config": "high_school_physics",
+    "sha256": "a3841f7ce74176c5406e0b360ffc8c0d252d1118d85bb9e88179d571538bec36",
+    "bytes": 27986
+   },
+   {
+    "config": "high_school_psychology",
+    "sha256": "0000e63efe6182863a2781b7f39052ff6fae70df89d0493500aff0ac169edcc7",
+    "bytes": 23887
+   },
+   {
+    "config": "high_school_statistics",
+    "sha256": "d3c54e7783d9b1e88e35181e07e4499fd5ffaad786fbe06957752d9b27d1d75b",
+    "bytes": 32386
+   },
+   {
+    "config": "high_school_us_history",
+    "sha256": "5d4022d20a5a715131f9572236a432c5a4ac238fddc63acab8c38068e09f2eb1",
+    "bytes": 86249
+   },
+   {
+    "config": "high_school_world_history",
+    "sha256": "c6b8e0fba28b2cc3377fbbd99a20274a26a99f2040d1a37727827662d1833be4",
+    "bytes": 94559
+   },
+   {
+    "config": "human_aging",
+    "sha256": "340a13d235bc74efec63924a8dd5c395c1b7a4439c0d6b2175581066182a4097",
+    "bytes": 20067
+   },
+   {
+    "config": "human_sexuality",
+    "sha256": "ee7fb92ad17b759e9759d2bdc74cdf0fc5ac66807fffe6eba60cff97b9641cfd",
+    "bytes": 22570
+   },
+   {
+    "config": "international_law",
+    "sha256": "94e515fe3846a0d7eba90dd61d0003188c472b4c1623d7bec9ed1984e1601f6d",
+    "bytes": 26377
+   },
+   {
+    "config": "jurisprudence",
+    "sha256": "934f738e393f56e399c3f820468576b14aab7fcd7e16b8704ded52bcbe794963",
+    "bytes": 23919
+   },
+   {
+    "config": "logical_fallacies",
+    "sha256": "ef1a39b4d2e40a2170e105dc2924ec785725a9e77e1606a911e94eb7836815b6",
+    "bytes": 22077
+   },
+   {
+    "config": "machine_learning",
+    "sha256": "f10f39e6a6b51354de7350bdabff673d82c4ced72a113b9d3cb9a2a928415308",
+    "bytes": 23864
+   },
+   {
+    "config": "management",
+    "sha256": "cd9e4b2908ddf1a1eb589d2f63de444852b9f58a3604397c1d44053ce2856bba",
+    "bytes": 17534
+   },
+   {
+    "config": "marketing",
+    "sha256": "ca9c3b9997f5b4e9b792f8f89ba58050a1ea621b80dd462400b7517b63d7ef53",
+    "bytes": 23832
+   },
+   {
+    "config": "medical_genetics",
+    "sha256": "f2e94def739f452ee4ac055c49763f7c20bc68f77d813a89776443a9d3caf7ff",
+    "bytes": 18322
+   },
+   {
+    "config": "miscellaneous",
+    "sha256": "78b23fd0707d45957374fb07a4adca80df8007e362aba5dc164a581210f5829c",
+    "bytes": 18070
+   },
+   {
+    "config": "moral_disputes",
+    "sha256": "8b75330ce9ac0bb5c9b3c182b207f14909ac1b83cd7af25df3275373497f7343",
+    "bytes": 24702
+   },
+   {
+    "config": "moral_scenarios",
+    "sha256": "27e5ddb7abcf49ce39c1cbc5e58f7f582ff99cbf64c4ef1bc71cb9ae0ba7eb44",
+    "bytes": 15657
+   },
+   {
+    "config": "nutrition",
+    "sha256": "26d8c92fc117fe5d5ca22a52c0bf41eb5be41f04f92e18586204d749d3755fa5",
+    "bytes": 23599
+   },
+   {
+    "config": "philosophy",
+    "sha256": "98371d132776c7578de57e436202aa8a46e1c4cdddaafd45b77be4830a2a4def",
+    "bytes": 22261
+   },
+   {
+    "config": "prehistory",
+    "sha256": "c71bcef91e0125d749bbc7a3f148c15388770177a64cef90bf26d4c84f72c4dc",
+    "bytes": 21449
+   },
+   {
+    "config": "professional_accounting",
+    "sha256": "25ad9ab1c1fd9908f9f9724eb5f80e87b143cfd590ddacd9452d6241da17067c",
+    "bytes": 37718
+   },
+   {
+    "config": "professional_law",
+    "sha256": "e316652d5a98e5aed3e06f1bfe749503756af53e5b1a97d0b7881325c1cd74d3",
+    "bytes": 76370
+   },
+   {
+    "config": "professional_medicine",
+    "sha256": "e9ab676b69cfa943bb94e2389158c47bd53cfbff1081ef76336b09df33a0dc07",
+    "bytes": 52795
+   },
+   {
+    "config": "professional_psychology",
+    "sha256": "0054172f48f3444f46819135a844cf28446f487a54ae4cf811656dd3fe4f203e",
+    "bytes": 31070
+   },
+   {
+    "config": "public_relations",
+    "sha256": "c513bf252e36bb0febc030576f26b797f4dba31fe15e46bc688b9a906151132d",
+    "bytes": 24306
+   },
+   {
+    "config": "security_studies",
+    "sha256": "47ded194ba7fb8fcfc0e9a2edafcc49fe654eca51ceadcca8a95e36165741e9d",
+    "bytes": 52789
+   },
+   {
+    "config": "sociology",
+    "sha256": "694551686df4484cd517add4a7001a83f791219dd37e60868679889e52b53e30",
+    "bytes": 26979
+   },
+   {
+    "config": "us_foreign_policy",
+    "sha256": "bc3c385cc0fc24f48730c90b0e176378fefba05d2c73f7dcc356e5b2969591d4",
+    "bytes": 22230
+   },
+   {
+    "config": "virology",
+    "sha256": "764b0b8f46e8c1aa20fba1dd6c93a8b383dfc0098e794fb1758ffed90b124a8b",
+    "bytes": 22224
+   },
+   {
+    "config": "world_religions",
+    "sha256": "ec1fc658f7a1965559a235912061799da11e52833634ec334e40846a1f21a4d9",
+    "bytes": 15462
+   }
+  ],
+  "groups": {
+   "all": 13984,
+   "miskey": 106,
+   "ok": 5285,
+   "other_error": 230,
+   "unsure_or_conflict": 32,
+   "unreviewed": 8331
+  }
+ },
+ "p1_parts": {
+  "fixtures": true,
+  "reproduce_80": true,
+  "reproduce_82_nokey": true
+ },
+ "predictions": {
+  "P2_tier_beats_subject": false,
+  "P2_mae": [
+   115.48990282726561,
+   91.30043333984246
+  ],
+  "P3_tier_calibrated": true,
+  "P3_folds": [
+   [
+    57,
+    53.89874273970864,
+    85.02418003447288
+   ],
+   [
+    49,
+    51.77388829706252,
+    73.59255443742836
+   ]
+  ],
+  "P4_transport": true,
+  "P4_counts": [
+   716,
+   679.4763237723013,
+   4714.906090427269
+  ],
+  "P5_tiers_ordered": true,
+  "P5_rates": [
+   0.6216216216216216,
+   0.3333333333333333,
+   0.06936416184971098,
+   0.004867601246105919
+  ],
+  "P1_structural": true,
+  "P1_counts": [
+   13984,
+   78,
+   1207,
+   88
+  ]
+ },
+ "tiers": [
+  {
+   "tier": 1,
+   "questions": 88,
+   "by_redux_group": {
+    "all": 88,
+    "miskey": 23,
+    "ok": 10,
+    "other_error": 4,
+    "unsure_or_conflict": 0,
+    "unreviewed": 51
+   },
+   "judged": 37,
+   "miskeys": 23,
+   "miskey_rate": 0.6216216216216216,
+   "miskey_wilson95": [
+    0.4610014255281996,
+    0.7593621253610898
+   ],
+   "error_labelled": 27,
+   "error_rate": 0.7297297297297297,
+   "error_wilson95": [
+    0.5702152452607867,
+    0.8460270175300932
+   ],
+   "unreviewed": 51,
+   "expected_miskeys_unreviewed": 31.7027027027027,
+   "expected_errors_unreviewed": 37.21621621621622
+  },
+  {
+   "tier": 2,
+   "questions": 239,
+   "by_redux_group": {
+    "all": 239,
+    "miskey": 34,
+    "ok": 57,
+    "other_error": 11,
+    "unsure_or_conflict": 1,
+    "unreviewed": 136
+   },
+   "judged": 102,
+   "miskeys": 34,
+   "miskey_rate": 0.3333333333333333,
+   "miskey_wilson95": [
+    0.2493697609902782,
+    0.4293954882123038
+   ],
+   "error_labelled": 45,
+   "error_rate": 0.4411764705882353,
+   "error_wilson95": [
+    0.3486917254481499,
+    0.5379313036821732
+   ],
+   "unreviewed": 136,
+   "expected_miskeys_unreviewed": 45.333333333333336,
+   "expected_errors_unreviewed": 60.0
+  },
+  {
+   "tier": 3,
+   "questions": 882,
+   "by_redux_group": {
+    "all": 882,
+    "miskey": 24,
+    "ok": 287,
+    "other_error": 35,
+    "unsure_or_conflict": 7,
+    "unreviewed": 529
+   },
+   "judged": 346,
+   "miskeys": 24,
+   "miskey_rate": 0.06936416184971098,
+   "miskey_wilson95": [
+    0.047051999329049736,
+    0.10113392252815645
+   ],
+   "error_labelled": 59,
+   "error_rate": 0.17052023121387283,
+   "error_wilson95": [
+    0.13456208196998137,
+    0.21371439515566631
+   ],
+   "unreviewed": 529,
+   "expected_miskeys_unreviewed": 36.69364161849711,
+   "expected_errors_unreviewed": 90.20520231213872
+  },
+  {
+   "tier": 0,
+   "questions": 12775,
+   "by_redux_group": {
+    "all": 12775,
+    "miskey": 25,
+    "ok": 4931,
+    "other_error": 180,
+    "unsure_or_conflict": 24,
+    "unreviewed": 7615
+   },
+   "judged": 5136,
+   "miskeys": 25,
+   "miskey_rate": 0.004867601246105919,
+   "miskey_wilson95": [
+    0.0032992785077757677,
+    0.007176063767363606
+   ],
+   "error_labelled": 205,
+   "error_rate": 0.03991433021806853,
+   "error_wilson95": [
+    0.034895360123785815,
+    0.04562105112126111
+   ],
+   "unreviewed": 7615,
+   "expected_miskeys_unreviewed": 37.06678348909657,
+   "expected_errors_unreviewed": 303.9476246105919
+  }
+ ],
+ "cross_fold_miskeys": [
+  {
+   "fold": 0,
+   "n_test": 2816,
+   "actual": 57,
+   "tier": {
+    "expected": 53.89874273970864,
+    "sd": 9.220855710533208,
+    "low95": 35.82586554706355,
+    "high95": 71.97161993235372
+   },
+   "subject_expected": 56.2528589181213,
+   "per_subject_abs_error_tier": 61.17530033008538,
+   "per_subject_abs_error_subject": 48.03228863872749
+  },
+  {
+   "fold": 1,
+   "n_test": 2805,
+   "actual": 49,
+   "tier": {
+    "expected": 51.77388829706252,
+    "sd": 8.57861028590461,
+    "low95": 34.959812136689486,
+    "high95": 68.58796445743556
+   },
+   "subject_expected": 46.786048596972826,
+   "per_subject_abs_error_tier": 54.31460249718023,
+   "per_subject_abs_error_subject": 43.26814470111497
+  }
+ ],
+ "cross_fold_errors_exploratory": [
+  {
+   "fold": 0,
+   "n_test": 2816,
+   "actual": 178,
+   "tier": {
+    "expected": 164.4694135430222,
+    "sd": 16.67488223257079,
+    "low95": 131.78664436718344,
+    "high95": 197.15218271886096
+   },
+   "subject_expected": 167.81647911766353,
+   "per_subject_abs_error_tier": 159.46690219633732,
+   "per_subject_abs_error_subject": 97.67608843877991
+  },
+  {
+   "fold": 1,
+   "n_test": 2805,
+   "actual": 158,
+   "tier": {
+    "expected": 170.9328519105209,
+    "sd": 16.710685828876457,
+    "low95": 138.17990768592304,
+    "high95": 203.68579613511875
+   },
+   "subject_expected": 167.0147613291347,
+   "per_subject_abs_error_tier": 141.6904069257655,
+   "per_subject_abs_error_subject": 97.8598199404517
+  }
+ ],
+ "fold_sizes": {
+  "judged_fold0": 2816,
+  "judged_fold1": 2805
+ },
+ "transport": {
+  "observed": 716,
+  "expected": 679.4763237723013,
+  "sd": 68.66517378138111,
+  "skipped_subjects": []
+ },
+ "estimate_unreviewed": {
+  "miskeys": {
+   "tier_based": {
+    "expected": 150.79646114362973,
+    "sd": 16.642816175651948,
+    "low95": 118.17654143935191,
+    "high95": 183.41638084790753
+   },
+   "subject_based": {
+    "expected": 92.54972604592265,
+    "sd": 24.781634951572077,
+    "low95": 43.97772154084139,
+    "high95": 141.1217305510039
+   },
+   "tier_rows": [
+    {
+     "tier": 0,
+     "unreviewed": 7615,
+     "rate": 0.004867601246105919,
+     "expected": 37.06678348909657
+    },
+    {
+     "tier": 1,
+     "unreviewed": 51,
+     "rate": 0.6216216216216216,
+     "expected": 31.7027027027027
+    },
+    {
+     "tier": 2,
+     "unreviewed": 136,
+     "rate": 0.3333333333333333,
+     "expected": 45.333333333333336
+    },
+    {
+     "tier": 3,
+     "unreviewed": 529,
+     "rate": 0.06936416184971098,
+     "expected": 36.69364161849711
+    }
+   ],
+   "observed_in_redux_sample": 106
+  },
+  "errors": {
+   "tier_based": {
+    "expected": 491.36904313894684,
+    "sd": 31.872585164587406,
+    "low95": 428.89877621635554,
+    "high95": 553.8393100615382
+   },
+   "subject_based": {
+    "expected": 577.2032835977164,
+    "sd": 68.06234454605975,
+    "low95": 443.80108828743937,
+    "high95": 710.6054789079935
+   },
+   "tier_rows": [
+    {
+     "tier": 0,
+     "unreviewed": 7615,
+     "rate": 0.03991433021806853,
+     "expected": 303.9476246105919
+    },
+    {
+     "tier": 1,
+     "unreviewed": 51,
+     "rate": 0.7297297297297297,
+     "expected": 37.21621621621622
+    },
+    {
+     "tier": 2,
+     "unreviewed": 136,
+     "rate": 0.4411764705882353,
+     "expected": 60.0
+    },
+    {
+     "tier": 3,
+     "unreviewed": 529,
+     "rate": 0.17052023121387283,
+     "expected": 90.20520231213872
+    }
+   ],
+   "observed_in_redux_sample": 336
+  }
+ },
+ "per_subject_exploratory": [
+  {
+   "subject": "anatomy",
+   "unreviewed": 35,
+   "tier1": 1,
+   "tier2": 1,
+   "tier3": 2,
+   "expected_miskeys_tier": 1.2445789172836603,
+   "expected_miskeys_subject": 0.35,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "astronomy",
+   "unreviewed": 52,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 2,
+   "expected_miskeys_tier": 0.3821083860047179,
+   "expected_miskeys_subject": 0.52,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "clinical_knowledge",
+   "unreviewed": 165,
+   "tier1": 0,
+   "tier2": 1,
+   "tier3": 9,
+   "expected_miskeys_tier": 1.7120889831271495,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "college_biology",
+   "unreviewed": 44,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 0,
+   "expected_miskeys_tier": 0.21417445482866043,
+   "expected_miskeys_subject": 0.44,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "college_medicine",
+   "unreviewed": 73,
+   "tier1": 2,
+   "tier2": 1,
+   "tier3": 5,
+   "expected_miskeys_tier": 2.239791466822016,
+   "expected_miskeys_subject": 0.8021978021978022,
+   "redux_judged": 91,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "college_physics",
+   "unreviewed": 2,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 1,
+   "expected_miskeys_tier": 0.0742317630958169,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 78,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "conceptual_physics",
+   "unreviewed": 135,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 5,
+   "expected_miskeys_tier": 0.9796089712423244,
+   "expected_miskeys_subject": 5.56701030927835,
+   "redux_judged": 97,
+   "redux_miskeys": 4
+  },
+  {
+   "subject": "econometrics",
+   "unreviewed": 14,
+   "tier1": 1,
+   "tier2": 0,
+   "tier3": 2,
+   "expected_miskeys_tier": 0.8138935590282087,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "electrical_engineering",
+   "unreviewed": 45,
+   "tier1": 0,
+   "tier2": 1,
+   "tier3": 1,
+   "expected_miskeys_tier": 0.6120043487655988,
+   "expected_miskeys_subject": 0.45,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "elementary_mathematics",
+   "unreviewed": 276,
+   "tier1": 0,
+   "tier2": 2,
+   "tier3": 10,
+   "expected_miskeys_tier": 2.645355014135739,
+   "expected_miskeys_subject": 5.575757575757576,
+   "redux_judged": 99,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "formal_logic",
+   "unreviewed": 26,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 4,
+   "expected_miskeys_tier": 0.38454387481317415,
+   "expected_miskeys_subject": 0.26,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "global_facts",
+   "unreviewed": 4,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 0,
+   "expected_miskeys_tier": 0.019470404984423675,
+   "expected_miskeys_subject": 0.20833333333333334,
+   "redux_judged": 96,
+   "redux_miskeys": 5
+  },
+  {
+   "subject": "high_school_biology",
+   "unreviewed": 210,
+   "tier1": 2,
+   "tier2": 1,
+   "tier3": 3,
+   "expected_miskeys_tier": 2.777659716331317,
+   "expected_miskeys_subject": 4.2,
+   "redux_judged": 100,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "high_school_chemistry",
+   "unreviewed": 103,
+   "tier1": 0,
+   "tier2": 2,
+   "tier3": 11,
+   "expected_miskeys_tier": 1.86775655916302,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "high_school_european_history",
+   "unreviewed": 65,
+   "tier1": 0,
+   "tier2": 4,
+   "tier3": 4,
+   "expected_miskeys_tier": 1.8882432517602146,
+   "expected_miskeys_subject": 0.65,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "high_school_geography",
+   "unreviewed": 98,
+   "tier1": 1,
+   "tier2": 0,
+   "tier3": 1,
+   "expected_miskeys_tier": 1.158275503097501,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "high_school_government_and_politics",
+   "unreviewed": 93,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 1,
+   "expected_miskeys_tier": 0.5171834764914556,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "high_school_macroeconomics",
+   "unreviewed": 290,
+   "tier1": 0,
+   "tier2": 1,
+   "tier3": 17,
+   "expected_miskeys_tier": 2.83651162371923,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 99,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "high_school_mathematics",
+   "unreviewed": 170,
+   "tier1": 0,
+   "tier2": 4,
+   "tier3": 22,
+   "expected_miskeys_tier": 3.560279473466227,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "high_school_microeconomics",
+   "unreviewed": 139,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 5,
+   "expected_miskeys_tier": 0.999079376226748,
+   "expected_miskeys_subject": 1.404040404040404,
+   "redux_judged": 99,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "high_school_physics",
+   "unreviewed": 51,
+   "tier1": 0,
+   "tier2": 2,
+   "tier3": 4,
+   "expected_miskeys_tier": 1.1631653701402769,
+   "expected_miskeys_subject": 1.02,
+   "redux_judged": 100,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "high_school_psychology",
+   "unreviewed": 428,
+   "tier1": 3,
+   "tier2": 4,
+   "tier3": 6,
+   "expected_miskeys_tier": 5.63443768643042,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 95,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "high_school_statistics",
+   "unreviewed": 117,
+   "tier1": 0,
+   "tier2": 2,
+   "tier3": 10,
+   "expected_miskeys_tier": 1.871406416004898,
+   "expected_miskeys_subject": 2.3636363636363638,
+   "redux_judged": 99,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "high_school_us_history",
+   "unreviewed": 104,
+   "tier1": 1,
+   "tier2": 2,
+   "tier3": 1,
+   "expected_miskeys_tier": 1.844412574748591,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "high_school_world_history",
+   "unreviewed": 137,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 7,
+   "expected_miskeys_tier": 1.1183372949417463,
+   "expected_miskeys_subject": 1.37,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "human_aging",
+   "unreviewed": 123,
+   "tier1": 2,
+   "tier2": 2,
+   "tier3": 9,
+   "expected_miskeys_tier": 3.06962350362896,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 99,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "human_sexuality",
+   "unreviewed": 31,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 2,
+   "expected_miskeys_tier": 0.27988875983649364,
+   "expected_miskeys_subject": 0.6326530612244898,
+   "redux_judged": 98,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "international_law",
+   "unreviewed": 21,
+   "tier1": 0,
+   "tier2": 1,
+   "tier3": 1,
+   "expected_miskeys_tier": 0.49518191885905677,
+   "expected_miskeys_subject": 0.42424242424242425,
+   "redux_judged": 99,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "jurisprudence",
+   "unreviewed": 8,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 1,
+   "expected_miskeys_tier": 0.10343737057245242,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "logical_fallacies",
+   "unreviewed": 63,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 5,
+   "expected_miskeys_tier": 0.6291416815226982,
+   "expected_miskeys_subject": 1.89,
+   "redux_judged": 100,
+   "redux_miskeys": 3
+  },
+  {
+   "subject": "machine_learning",
+   "unreviewed": 12,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 3,
+   "expected_miskeys_tier": 0.2519008967640862,
+   "expected_miskeys_subject": 0.24,
+   "redux_judged": 100,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "management",
+   "unreviewed": 3,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 0,
+   "expected_miskeys_tier": 0.014602803738317757,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 99,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "marketing",
+   "unreviewed": 134,
+   "tier1": 0,
+   "tier2": 2,
+   "tier3": 4,
+   "expected_miskeys_tier": 1.5671762735670682,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "miscellaneous",
+   "unreviewed": 683,
+   "tier1": 2,
+   "tier2": 3,
+   "tier3": 12,
+   "expected_miskeys_tier": 6.317435615346317,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "moral_disputes",
+   "unreviewed": 246,
+   "tier1": 5,
+   "tier2": 8,
+   "tier3": 11,
+   "expected_miskeys_tier": 7.618388031757109,
+   "expected_miskeys_subject": 2.46,
+   "redux_judged": 100,
+   "redux_miskeys": 1
+  },
+  {
+   "subject": "moral_scenarios",
+   "unreviewed": 796,
+   "tier1": 0,
+   "tier2": 9,
+   "tier3": 48,
+   "expected_miskeys_tier": 9.926637089658401,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 99,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "nutrition",
+   "unreviewed": 206,
+   "tier1": 0,
+   "tier2": 1,
+   "tier3": 11,
+   "expected_miskeys_tier": 2.0406537554247026,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 99,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "philosophy",
+   "unreviewed": 211,
+   "tier1": 0,
+   "tier2": 5,
+   "tier3": 10,
+   "expected_miskeys_tier": 3.3143581294005364,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 89,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "prehistory",
+   "unreviewed": 224,
+   "tier1": 1,
+   "tier2": 3,
+   "tier3": 2,
+   "expected_miskeys_tier": 2.8214870169721338,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "professional_accounting",
+   "unreviewed": 182,
+   "tier1": 0,
+   "tier2": 1,
+   "tier3": 20,
+   "expected_miskeys_tier": 2.504300370950606,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 98,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "professional_law",
+   "unreviewed": 1436,
+   "tier1": 15,
+   "tier2": 48,
+   "tier3": 213,
+   "expected_miskeys_tier": 45.74530824379563,
+   "expected_miskeys_subject": 29.306122448979593,
+   "redux_judged": 98,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "professional_medicine",
+   "unreviewed": 172,
+   "tier1": 1,
+   "tier2": 2,
+   "tier3": 1,
+   "expected_miskeys_tier": 2.175409459483794,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "professional_psychology",
+   "unreviewed": 511,
+   "tier1": 4,
+   "tier2": 8,
+   "tier3": 22,
+   "expected_miskeys_tier": 9.001010508239318,
+   "expected_miskeys_subject": 10.323232323232324,
+   "redux_judged": 99,
+   "redux_miskeys": 2
+  },
+  {
+   "subject": "public_relations",
+   "unreviewed": 10,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 3,
+   "expected_miskeys_tier": 0.24216569427187437,
+   "expected_miskeys_subject": 0.3125,
+   "redux_judged": 96,
+   "redux_miskeys": 3
+  },
+  {
+   "subject": "security_studies",
+   "unreviewed": 145,
+   "tier1": 1,
+   "tier2": 3,
+   "tier3": 5,
+   "expected_miskeys_tier": 2.6304362003405815,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "sociology",
+   "unreviewed": 101,
+   "tier1": 0,
+   "tier2": 0,
+   "tier3": 2,
+   "expected_miskeys_tier": 0.620620847063908,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 99,
+   "redux_miskeys": 0
+  },
+  {
+   "subject": "virology",
+   "unreviewed": 66,
+   "tier1": 9,
+   "tier2": 8,
+   "tier3": 6,
+   "expected_miskeys_tier": 8.886753085942082,
+   "expected_miskeys_subject": 21.78,
+   "redux_judged": 100,
+   "redux_miskeys": 33
+  },
+  {
+   "subject": "world_religions",
+   "unreviewed": 71,
+   "tier1": 0,
+   "tier2": 4,
+   "tier3": 5,
+   "expected_miskeys_tier": 1.9819454198404551,
+   "expected_miskeys_subject": 0.0,
+   "redux_judged": 100,
+   "redux_miskeys": 0
+  }
+ ],
+ "queue_size": 716,
+ "note": "Tiers (exclusive, in order): T1 none of the included HELM models picks the key; T2 all 10 most accurate models pick the same non-key option; T3 audit 77's flag (>= 6 of 10 on one non-key option, more than on the key); T0 the rest. Rates are shares of Redux-judged questions (wrong key, OK or another error label). Folds: sha256('subject|instance id') parity. Intervals: expected +- 1.96 sd, sd from each question's own spread plus the rate's sampling spread. P2 HEADLINE tier rates predict each held-out half's wrong keys per subject with a smaller summed absolute error than subject rates; P3 the held-out total falls inside the tier estimate's 95% interval in both halves; P4 unreviewed questions land in tiers 1-3 as often as reviewed ones of the same subject (95%); P5 wrong-key rates fall T1 > T2 > T3 > T0."
+}

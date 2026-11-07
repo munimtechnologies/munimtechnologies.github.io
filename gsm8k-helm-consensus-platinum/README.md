@@ -117,3 +117,101 @@ write-up and any results are CC BY 4.0, except Platinum's per-question statuses,
 GSM8K-Platinum's annotations are. Upstream: GSM8K is MIT; HELM's outputs are published by Stanford CRFM. Only GSM8K
 test positions, final numbers, labels, counts and public model names and accuracies are published, never question or
 model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added on 2026-11-07 after the sealed job `gsm8k-helm-consensus-platinum-v1` ran on 2026-11-07 (unit tests passed,
+then 13 s of analysis). Nothing above was changed. Every number below is in [`results.json`](results.json); the
+per-question list is [`candidates.json`](candidates.json). Percentages are shares of the 1,000-question universe's
+labelled questions unless stated otherwise.*
+
+**Five of seven predictions held, including the headline.** When at least 6 of HELM's 10 most accurate models agree
+on the same wrong number, GSM8K-Platinum marks the question as flawed or miskeyed 19 times out of 22 (86.4%), against
+a 9.0% base rate. On MMLU the same rule reached 26.9% ([audit 80](../mcq-mmlu-helm-consensus-miskeys/)) and on
+MMLU-Pro 18.1%. The flag is precise but narrow: it catches 19 of the 90 error-labelled questions (P5 failed), because
+it finds wrong keys far better than ambiguous questions.
+
+| # | Verdict | Number |
+| --- | --- | --- |
+| P1 | HELD | fixtures match; Platinum 1,209 rows, all joined: 1,100 consensus, 99 verified, 10 revised, 110 rejected; universe 1,000 questions, HELM's key equals GSM8K's on all 1,000; 90 of 90 models included, each with 100% scorer agreement |
+| P2 | HELD | S1 consensus flags 22, error-labelled 19 (86.4%) |
+| P3 | HELD | 86.4% against S1's any-wrong filter, 68 of 204 (33.3%) |
+| P4 | HELD | S1 margin AUC 0.832 |
+| P5 | FAILED | recall 19 of 90 (21.1%), below a quarter |
+| P6 | FAILED (undecidable) | the no-key flag fires on only 3 questions (2 error-labelled), fewer than the 10 required |
+| P7 | HELD | equal budget of 22: S1 20 of 22 (90.9%) against S5 9.5 of 22 (43.2%) |
+
+### The universe
+
+HELM Lite scores a fixed 1,000 of GSM8K's 1,319 test questions. Their Platinum labels: 833 consensus, 77 verified,
+84 rejected and 6 revised, so 90 are error-labelled (9.0%). All 90 HELM Lite models with a GSM8K run pass the
+inclusion gates; our transcription of HELM's scorer agrees with HELM's recorded score on every one of their 90,000
+predictions.
+
+### Panels of 10, strongest to weakest
+
+| Panel (HELM ranks) | Mean accuracy | Consensus flags | Error-labelled | Among Platinum-reviewed flags | Equal budget (22) | Margin AUC |
+| --- | --- | --- | --- | --- | --- | --- |
+| S1 (1-10) | 0.941 | 22 | 19 (86.4%) | 19 of 22 (86.4%) | 90.9% | 0.832 |
+| S2 (11-20) | 0.898 | 31 | 18 (58.1%) | 18 of 20 (90.0%) | 66.2% | 0.824 |
+| S3 (21-30) | 0.831 | 23 | 15 (65.2%) | 15 of 19 (78.9%) | 77.3% | 0.812 |
+| S4 (31-40) | 0.805 | 21 | 10 (47.6%) | 10 of 17 (58.8%) | 63.6% | 0.774 |
+| S5 (41-50) | 0.758 | 20 | 8 (40.0%) | 8 of 15 (53.3%) | 43.2% | 0.758 |
+
+Every S1 flag falls on a question Platinum reviewed, so S1's precision does not depend on treating Platinum's
+unreviewed "consensus" questions as clean. Weaker panels flag unreviewed questions too (11 of S2's 31 flags, 4 or 5
+for S3-S5): these are questions where every model Platinum ran gave the key but 6 or more HELM models of ranks 11-50
+agree on another number, almost certainly shared mistakes. Exploratory: requiring 10 of 10 in S1 flags 8 questions,
+7 error-labelled (87.5%); a 20-model panel (ranks 1-20, at least 12 of 20) flags 15, 13 error-labelled (86.7%), AUC
+0.857, and the same 90.9% at the equal budget; the share of all 90 models giving the key, used as a score, has AUC
+0.778 and 77.3% at the equal budget, below S1's margin.
+
+### Wrong keys versus ambiguous questions
+
+The flag behaves very differently on the two kinds of error. Of Platinum's 6 revised questions in the universe (a
+wrong key with a corrected answer), S1 flags 5 (83%); of its 84 rejected questions (mostly ambiguous or flawed), S1
+flags 14 (16.7%). On all 5 flagged revised questions the number S1's models agree on **equals Platinum's corrected
+answer** (positions 403, 454, 649, 823, 1309; 9 or 10 of 10 votes each), and on the sixth (288) the one model that
+leaves the key also gives Platinum's answer (exploratory). Platinum's own filter, any of the panel getting it wrong,
+catches far more (68 of 90, 75.6%) at a third of the precision (33.3%; 59.6% among the questions Platinum reviewed).
+So on GSM8K the consensus flag is close to a wrong-key detector that also proposes the fix, while ambiguity needs the
+broad filter and a human.
+
+### The three flags Platinum kept (post-hoc reading)
+
+S1 flags 3 questions that Platinum reviewed and kept. We read all three after the run; none was checked by a human
+expert here. At position 590 all 10 S1 models, and none of the 90 models, give the key: the key counts the host's own
+seat, which the worked solution states and the models leave out. At 1016 nine of ten give the key plus one: the
+question says the price rises by a fixed percentage *of the original price* each year, and the models compound it. At
+901 six of ten give 2 where the key gives 1: the question asks how many times *each* child can eat, and the models
+answer with the total. All three look like the same careless reading shared by strong models, not label errors, and
+two are off by one. Even a 9-of-10 or 10-of-10 vote on GSM8K can be a shared misreading.
+
+### The no-key flag
+
+Only 3 questions are answered with the key by none of the 90 models: two revised (454, 823) and the kept question at
+590. Fewer than the pre-registered 10, so P6 is FAILED as undecidable. With free answers almost no question is missed
+by every model, so this flag is too narrow to be a short list on GSM8K.
+
+### A correction to the prior-art statement above
+
+After the run we found closely related earlier work that the pre-registration missed. Truong et al., "Fantastic Bugs
+and Where to Find Them in AI Benchmarks" (NeurIPS 2025 Datasets and Benchmarks, arXiv 2511.16842) flag suspect items in nine benchmarks,
+GSM8K among them, from HELM's right-or-wrong response matrix (90 models on GSM8K) using tetrachoric correlation,
+Mokken scalability and item-total correlation, with expert review of the top 50 items per benchmark, and in a
+sensitivity analysis they compare their flags with GSM8K-Platinum's labels (88 of 997 items invalid there). So the
+statement above that nobody has scored HELM's GSM8K outputs against Platinum's labels is wrong, and we correct it here
+rather than edit the frozen text. What this audit adds is narrower: it uses *which* wrong number the models give, not
+only whether they are wrong; it tests panels of different strength at an equal budget; it separates corrected keys
+from removed questions; and it checks whether the agreed number equals Platinum's correction. Their paper also notes
+that Platinum's labels are a biased subset of all invalid questions (their expert found 16 more invalid GSM8K items),
+which supports the recall caveat below.
+
+### What this means
+
+On a free-response benchmark with complete labels, consensus over archived outputs is a far stronger first filter
+than on multiple-choice MMLU: about 6 in 7 flags are real problems, and on wrong keys the agreed number is the
+correction. Strength still matters, more steeply than on MMLU (90.9% to 43.2% at an equal budget, P7). The limits:
+the flag sees few of the ambiguous questions that make up most of Platinum's removals, its 22 flags are a small
+sample (19 of 22 has a Wilson 95% interval of about 67% to 95%, computed by hand from the counts), and recall is measured only against the errors Platinum found, which it looked
+for among questions its own models missed.

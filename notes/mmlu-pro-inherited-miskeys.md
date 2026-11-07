@@ -1,8 +1,8 @@
 # MMLU-Pro kept MMLU's expert-flagged wrong keys; model consensus points to them but cannot confirm them
 
 MV2, Munim, Inc. (mv2@munimtech.com), 4 November 2026; updated 5 November 2026 with audit 80, 6 November 2026
-with audits 81, 82, 83 and 84, and 7 November 2026 with audit 85. This work was carried out by AI agents working in
-MV2's name. Text CC BY 4.0; code Apache-2.0.
+with audits 81, 82, 83 and 84, and 7 November 2026 with audits 85, 86 and 87. This work was carried out by AI agents
+working in MV2's name. Text CC BY 4.0; code Apache-2.0.
 
 ## Abstract
 
@@ -24,15 +24,20 @@ precise than the top-10 panel (24.0% against 26.9% at the same number of flags),
 find mostly the same wrong keys at lower precision (18.8% for ranks 61-70 against 27.6% for the top 10 at an equal
 review budget on MMLU; 12.8% for ranks 31-40 against 20.2% on MMLU-Pro). A post-hoc lead that questions no model
 answers with the key are mostly wrong (73% on MMLU) did not hold up when tested on MMLU-Pro (35.5%, no better than the
-top 10 voting unanimously). Audit 85 turned to the roughly 8,300 MMLU questions outside Redux's sample. Model-vote
-tiers rank them well (wrong-key rates of 62%, 33%, 7% and 0.5% from the top tier down), but on held-out expert labels
-Redux's own subject rates predicted *where* wrong keys are better than the tiers did. By subject rates, about 93
-(44 to 141) wrong keys are left outside the sample, about 199 in all of HELM's MMLU (1.4%). Model consensus is a good
-way to rank questions for expert review, not a substitute for it, and not the best way to count what is left.
+top 10 voting unanimously). Audits 85 and 87 turned to the roughly 8,300 MMLU questions outside Redux's sample.
+Model-vote tiers rank them well (wrong-key rates of 62%, 33%, 7% and 0.5% from the top tier down), but on held-out
+expert labels Redux's own subject rates predicted *where* wrong keys are better than the tiers did (audit 85); tiers
+scaled by each subject's observed-over-expected ratio did slightly better again (audit 87), and estimate about 112
+(79 to 159) wrong keys left outside the sample, about 218 in all of HELM's MMLU (1.56%). Audit 86 took the same flag
+to a free-response benchmark with complete labels, GSM8K against GSM8K-Platinum: there 19 of 22 flags by HELM's top
+10 models are real problems (86.4%), and on wrong keys the number the models agree on is the correction, but the flag
+catches only about a fifth of the flawed questions. Model consensus is a good way to rank questions for expert review,
+not a substitute for it, and not the best way to count what is left; it is far sharper when answers are free numbers
+than when they are letters.
 
 ## 1. Method
 
-Every audit joins MMLU-Redux 2.0 (`edinburgh-dawg/mmlu-redux-2.0`, 57 subjects x 100 questions) to MMLU test by
+Every MMLU audit joins MMLU-Redux 2.0 (`edinburgh-dawg/mmlu-redux-2.0`, 57 subjects x 100 questions) to MMLU test by
 question text and options, then to MMLU-Pro's 6,810 MMLU-derived questions by question text plus at least 3 of MMLU's
 4 options (audit 75's rule). 5,690 of 5,700 Redux rows join MMLU, and 2,829 (49.6%) are in MMLU-Pro. Model answers
 come from TIGER-AI-Lab's published per-question archives on GitHub (45 of 48 archives pass the join). Each audit
@@ -163,11 +168,12 @@ subject's wrong keys better than the tier rates (summed per-subject absolute err
 half's total about right, and the tier estimate's 95% interval held in both halves; the tiers lose on *where*,
 because rates pooled over subjects cannot follow how damaged each subject's keys are: they expect far fewer wrong
 keys in virology than Redux found there, and more in subjects where strong models often miss questions with sound
-keys (on the unreviewed questions, the two estimates differ most in professional law, virology and moral scenarios). Among the 8,331 unreviewed questions the subject
-rates estimate 92.5 wrong keys (95% interval 44 to 141) and the tier rates 150.8 (118 to 183); with Redux's 106 that
-is about 199 (1.42%) or 257 (1.84%) in HELM's 13,984 MMLU questions. These are estimates, not counts, and a subject
-with no wrong key in its sample gets an estimate of 0 with no spread, so the subject interval is too narrow there.
-For any error label, the subject-rate figure for all of MMLU is 6.53%, close to Redux's own 6.49% (post-hoc check).
+keys (on the unreviewed questions, the two estimates differ most in professional law, virology and moral scenarios).
+Among the 8,331 unreviewed questions the subject rates estimate 92.5 wrong keys (95% interval 44 to 141) and the tier
+rates 150.8 (118 to 183); with Redux's 106 that is about 199 (1.42%) or 257 (1.84%) in HELM's 13,984 MMLU questions.
+These are estimates, not counts, and a subject with no wrong key in its sample gets an estimate of 0 with no spread,
+so the subject interval is too narrow there. For any error label, the subject-rate figure for all of MMLU is 6.53%,
+close to Redux's own 6.49% (post-hoc check).
 
 One outside check, read after the fact: PlatinumBench (Vendrow et al.) hand-checked every MMLU high-school-mathematics
 question that any of its models got wrong and relabelled none. For that subject's 170 unreviewed questions the tier
@@ -176,7 +182,46 @@ the held-out test did. Audit 85 also published a ranked review queue: the 716 un
 136 and 529), each with its tier's measured rates. Professional law fills 276 of the 716 rows, and those are the
 rows most likely to overstate a wrong key.
 
-## 13. Recommendations
+## 13. Tiers scaled by subject, a narrow win (audit 87)
+
+Audit 87 tested the repair suggested by audit 85's failure, designed after seeing it: keep the tier rates, but scale
+them in each subject by k = (observed + 1) / (expected + 1) wrong keys among that subject's training questions, so a
+subject with no wrong key in its sample is shrunk rather than set to 0, and virology is raised. On the same two
+held-out halves, four of five predictions held. The summed per-subject error was 88.0, against 91.3 for subject rates
+and 115.5 for tier rates, and the adjusted model won in both halves, but only by 1.7 and 1.6. The win depends on the
+frozen prior: with a prior of 2 the error would have been 92.1, a loss; with 1/2 it is 84.3. Each half's actual count
+fell inside the bootstrap 95% interval built on the other half (57 in 43-78; 49 in 37-65). For any error label the
+adjusted model lost (199.0 against 195.5), so audit 85's subject-rate figure stays the reference there.
+
+The adjusted model expects 112.3 wrong keys among the 8,331 unreviewed questions (95% interval 79 to 159), between
+audit 85's two figures; with Redux's 106 that is about 218 in HELM's MMLU, 1.56% (computed from the reported
+figures). Professional law contributes 30.4 of the 112, virology 15.7 and professional psychology 11.5. In the 716-row
+queue, re-ranked by the adjusted probability, it expects 85.7 wrong keys, 62.2 of them in the first 200 rows. This is
+the best-supported count in this series, with thin evidence that it beats plain subject rates.
+
+## 14. A free-response benchmark with complete labels (audit 86)
+
+Audit 86 asked whether the flag works better when answers are numbers rather than letters. It scored HELM Lite's
+per-question GSM8K outputs (90 models, release v1.13.0; HELM scores a fixed 1,000 of GSM8K's 1,319 test questions)
+against GSM8K-Platinum (Vendrow et al.), which labels every test question: in HELM's 1,000, 84 removed as flawed, 6
+with a corrected answer, 77 reviewed and kept and 833 kept without review, a 9.0% error base rate. Five of seven
+predictions held. The top-10 panel (mean accuracy 0.941) flags 22 questions with at least 6 of 10 on one wrong number,
+and 19 are error-labelled (86.4%, Wilson 95% interval about 67% to 95%), against 26.9% for the same rule on MMLU and
+18.1% on MMLU-Pro. Platinum's own filter, any panel model wrong, flags 204 at 33.3%. The margin AUC is 0.832. At an
+equal budget of 22, precision falls from 90.9% for ranks 1-10 to 43.2% for ranks 41-50, a steeper fall than on MMLU.
+
+The flag is a wrong-key detector more than an ambiguity detector: it catches 5 of the 6 corrected keys, and on all 5
+the agreed number equals Platinum's correction, but only 14 of the 84 removed questions, so recall is 21.1% and the
+pre-registered quarter failed. The no-key flag fires on only 3 questions (2 errors), too few to test. The 3 flags
+Platinum kept, read after the run, are shared misreadings rather than label errors: leaving out the host's own seat,
+compounding a rise stated as a share of the original price, and answering a total where the question asks per child.
+
+A correction: audit 86's pre-registration said no one had scored HELM's GSM8K outputs against Platinum's labels.
+Truong et al. (arXiv 2511.16842) had, from HELM's right-or-wrong matrix for the same 90 models, in a sensitivity
+analysis of their item-statistics flags. Audit 86's addition is the answer-level consensus (which wrong number), the
+panel-strength comparison, and the split between corrected keys and removed questions.
+
+## 15. Recommendations
 
 - **MMLU-Pro maintainers:** the 52 inherited keys are listed by `question_id` in audit 75; on 46 of them the experts'
   answer is an option and the models side with the experts. Ids 9677 and 6639, where the models side with the key,
@@ -185,34 +230,41 @@ rows most likely to overstate a wrong key.
   move; it is still a correctness fix.
 - **Anyone using model consensus to find label errors:** treat a flag as a priority for review. At 6 of 10, about 1 in
   5 flags on MMLU-Pro and about 1 in 4 on MMLU carries an expert error label; at 10 of 10, about 1 in 3 and 1 in 2.
+  On a free-response benchmark like GSM8K it is about 6 in 7, and the agreed answer is often the correction.
   Precision depends heavily on how damaged a subject's key is. De-duplicating models by name buys less than a point;
   raising the threshold buys much more, at a cost in recall; confirming a flag with a second harness and option list
   also helps (on the shared MMLU questions, 33.6% against about 20% for either panel alone).
+- **Free-response benchmarks:** consensus finds wrong keys but few ambiguous questions (14 of 84 on GSM8K); pair it
+  with a broad "any strong model wrong" filter and a human read for ambiguity. Even 9 or 10 of 10 strong models can
+  share one misreading, so read the question before changing a key.
 - **Choosing a panel:** use the strongest models you can, and rank by margin at a fixed review budget rather than a
   fixed vote threshold, because a weaker panel's threshold flags grow with its own mistakes. A cheaper panel still
   works, at about two thirds of the precision on MMLU (ranks 61-70) and between about three quarters (ranks 11-20)
-  and under two thirds (ranks 31-40) on MMLU-Pro. Adding weaker models to
-  a strong panel, or pooling every model through item discrimination, did not help on either benchmark. Questions no
-  model answers with the key are worth reviewing, but on MMLU-Pro they were no better a first pick than questions the
-  top 10 reject unanimously (an earlier version of this note recommended them first, from the post-hoc MMLU reading).
+  and under two thirds (ranks 31-40) on MMLU-Pro; on GSM8K the fall was steeper (ranks 41-50 at under half). Adding
+  weaker models to a strong panel, or pooling every model through item discrimination, did not help on either
+  multiple-choice benchmark. Questions no model answers with the key are worth reviewing, but on MMLU-Pro they were
+  no better a first pick than questions the top 10 reject unanimously (an earlier version of this note recommended
+  them first, from the post-hoc MMLU reading), and on GSM8K there are almost none.
 - **Counting what is left:** use model votes to decide *which* questions an expert reads, and a random expert sample
   stratified by subject to estimate *how many* are wrong. In audit 85, rates pooled over subjects from model-vote
-  tiers misplaced wrong keys across subjects, even though their total held up on held-out halves.
-- **Re-reviewing MMLU:** audit 85's queue puts T1 and T2 first (187 rows; 41.0% of the judged questions in those
-  tiers were miskeyed). In T3, start with subjects whose Redux sample already showed wrong keys; treat law and moral
-  scenarios rows with more doubt.
+  tiers misplaced wrong keys across subjects; in audit 87, scaling the tiers by each subject's sample helped only a
+  little, so the votes add at most a small correction to a stratified sample.
+- **Re-reviewing MMLU:** read audit 87's re-ranked queue (`review_queue_adjusted.json`) from the top; the model
+  expects about 62 of its 86 wrong keys in the first 200 rows. Treat law and moral scenarios rows with more doubt.
 
 ## Limits
 
 MMLU-Redux labels are expert judgments, not verified facts, and cover 100 questions per subject. A flag on a cleared
 question may be a shared model mistake, a second defensible answer, or an error the experts missed; these audits
 cannot tell them apart. Audits 75-79 and 84 use one harness (TIGER-AI-Lab's 5-shot chain-of-thought archives); audits
-80, 82, 83 and 85 use another (HELM's joint multiple-choice prompt), with models up to late 2024; audit 81 combines
-them, but the two panels share model families (Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro). In audits 83 and 84 the
-panels differ in more than accuracy (size, age and family). The virology finding and the 16 unreviewed virology
+80, 82, 83, 85 and 87 use another (HELM's joint multiple-choice prompt), with models up to late 2024; audit 81 combines
+them, but the two panels share model families (Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro). In audits 83, 84 and 86
+the panels differ in more than accuracy (size, age and family). The virology finding and the 16 unreviewed virology
 questions are post-hoc readings, not tested predictions; audit 82's "no model picks the key" reading was tested in
-audit 84 and did not hold on MMLU-Pro. Audit 85's estimates rest on Redux's random sample of 100 per subject; the
-PlatinumBench comparison covers one subject and was not joined question by question.
+audit 84 and did not hold on MMLU-Pro. Audits 85 and 87 rest on Redux's random sample of 100 per subject, and audit 87
+was designed after seeing audit 85 and scored on the same halves. In audit 86, GSM8K-Platinum reviewed only questions
+its own models missed, so recall is measured against the errors it found; its 22 top-panel flags are a small sample.
+The PlatinumBench MMLU comparison covers one subject and was not joined question by question.
 
 ## Related work (checked 2026-11-07)
 
@@ -229,12 +281,20 @@ mislabeled and count MMLU-Redux mislabels in the items they select. Jiang et al.
 correlations on 567 MMLU items. Nahum et al., "Are LLMs Better than Reported?" (EMNLP 2025, arXiv 2410.18889)
 re-label data with an LLM ensemble and report that error detection improves as the ensemble grows. Vendrow et al.,
 "Do Large Language Model Benchmarks Test Reliability?" (arXiv 2502.03461) revise fifteen benchmarks into "platinum"
-versions with mislabeled and ambiguous items removed; their MMLU high-school-mathematics review relabels no key and
-agrees with MMLU-Redux on 99 of the 100 questions both reviewed. Paquin and Jain, "What Does MMLU Actually Measure?"
+versions with mislabeled and ambiguous items removed, choosing questions for review when any of their models errs;
+their MMLU high-school-mathematics review relabels no key and agrees with MMLU-Redux on 99 of the 100 questions both
+reviewed. Zhang, Cai and Chen, "Beyond the Singular" (arXiv 2502.08943) read questions one model answers consistently
+but is scored wrong on as likely GSM8K label errors. Truong et al., "Fantastic Bugs and Where to Find Them in AI
+Benchmarks" (NeurIPS 2025 Datasets and Benchmarks, arXiv 2511.16842) flag invalid items in nine benchmarks (GSM8K, MedQA, OpenBookQA and MMLU subsets among
+them) from HELM's right-or-wrong response matrices with tetrachoric correlation, Mokken scalability and item-total
+correlation, report up to 84% precision in expert review of their top 50 items, and compare their GSM8K flags with
+GSM8K-Platinum's labels; they do not use which wrong answer models give or MMLU-Redux's labels. Paquin and Jain, "What Does MMLU Actually Measure?"
 (arXiv 2609.09372) fit item-response models to 1,000 open-weights models on all of MMLU's test items to study
 difficulty, not label errors. We found no earlier count of the Redux miskeys MMLU-Pro inherited, or test of answer
 consensus, within or across harnesses, of item discrimination or of panel strength, against Redux's expert labels on
-MMLU-Pro or MMLU, and no held-out test of a model-based estimate of MMLU's remaining wrong keys.
+MMLU-Pro or MMLU, no held-out test of a model-based estimate of MMLU's remaining wrong keys, and no test of an
+answer-level consensus flag (agreement on the same wrong number) from HELM's GSM8K outputs against GSM8K-Platinum's
+labels.
 
 ## Code and data
 
@@ -244,5 +304,7 @@ mcq-mmlu-pro-model-consensus-miskeys (77), mcq-mmlu-pro-consensus-added-options 
 mcq-mmlu-pro-consensus-distinct-panel (79), mcq-mmlu-helm-consensus-miskeys (80),
 mcq-mmlu-cross-harness-consensus (81), mcq-mmlu-helm-discrimination-miskeys (82),
 mcq-mmlu-helm-panel-strength (83), mcq-mmlu-pro-panel-strength (84), mcq-mmlu-helm-review-queue (85, with the review
-queue). Catalogue: eval-reliability-audits. Only ids, letters, counts and hashes are published, never question or
-option text. MMLU and MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0; HELM is Apache-2.0.
+queue), gsm8k-helm-consensus-platinum (86, with the candidate list), mcq-mmlu-subject-adjusted-tiers (87, with the
+re-ranked queue). Catalogue: eval-reliability-audits. Only ids, positions, letters, numbers, counts and hashes are
+published, never question or option text. MMLU and MMLU-Pro are MIT-licensed; MMLU-Redux 2.0 is CC BY 4.0; GSM8K is
+MIT; GSM8K-Platinum's labels are CC BY-SA 4.0; HELM is Apache-2.0.

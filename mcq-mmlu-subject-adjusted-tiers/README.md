@@ -113,3 +113,77 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: HELM 
 published run outputs keep their own terms; MMLU is MIT; MMLU-Redux 2.0 is CC BY 4.0. Only ids, letters, counts,
 rates and probabilities are published, never question, option or model text. Authored by AI agents working in MV2's
 name (Munim, Inc.).
+
+## Results
+
+*Added on 2026-11-07 after the sealed job `mcq-mmlu-subject-adjusted-tiers-v1` ran on 2026-11-07 (unit tests passed,
+then 108 s of analysis). Nothing above was changed. Every number below is in [`results.json`](results.json); the
+re-ranked queue is [`review_queue_adjusted.json`](review_queue_adjusted.json). Errors are summed absolute differences
+between predicted and actual wrong keys per subject; estimates are expected counts, not observed ones.*
+
+**Four of five predictions held, including the headline, but only narrowly.** Scaling the tiers by each subject's
+observed-over-expected ratio predicted held-out wrong keys slightly better than Redux's subject rates (summed error
+88.0 against 91.3), and its interval covered both halves. The margin is 3.3 (about 4%), and it depends on the frozen
+prior: with a prior of 2 instead of 1 the adjusted model would have lost (92.1), so this is a weak win, not a decisive
+one. For any error label the adjusted model lost (P5).
+
+| # | Verdict | Number |
+| --- | --- | --- |
+| P1 | HELD | fixtures match; audits 80, 82 and 85 reproduce (tiers 88 / 239 / 882 / 12,775; queue 716; errors 115.49 and 91.30; estimates 150.80 and 92.55) |
+| P2 | HELD | adjusted 88.01 against subject rates 91.30 (tier rates 115.49) |
+| P3 | HELD | half 0: 57 actual, 60.3 predicted, interval 43-78; half 1: 49 actual, 50.0 predicted, interval 37-65 |
+| P4 | HELD | adjusted estimate 112.3, between 92.5 and 150.8 |
+| P5 | FAILED | any error label: adjusted 199.03 against subject rates 195.54 |
+
+### The held-out test, half by half
+
+| Half | Judged questions | Actual wrong keys | Adjusted: predicted / error | Subject rates: predicted / error | Tier rates: predicted / error |
+| --- | --- | --- | --- | --- | --- |
+| 0 | 2,816 | 57 | 60.3 / 46.3 | 56.3 / 48.0 | 53.9 / 61.2 |
+| 1 | 2,805 | 49 | 50.0 / 41.7 | 46.8 / 43.3 | 51.8 / 54.3 |
+
+The adjusted model wins in both halves, by 1.7 and 1.6. All three methods get each half's total roughly right; they
+differ in where the wrong keys fall. Exploratory priors: 1/2 gives a summed error of 84.3 (estimate 101.8), 2 gives
+92.1 (123.8) and 5 gives 98.6 (137.5), so a weaker prior helps and a stronger one, which pulls subjects toward the
+pooled tier rates of audit 85, hurts.
+
+### How many wrong keys are left
+
+Fitted on all 5,621 judged questions, the adjusted model expects **112.3 wrong keys among the 8,331 unreviewed
+questions** (bootstrap 95% interval 79 to 159, median 111), between audit 85's subject-rate (92.5) and tier-rate
+(150.8) figures. Adding Redux's 106 gives about 218 wrong keys in HELM's 13,984 MMLU questions, 1.56% (about 185 to
+265, 1.32% to 1.90%; these totals are computed here from the reported figures). For any error label the three
+methods give 550 (adjusted), 491 (tiers) and 577 (subject rates) beyond Redux's 336; since P5 failed, the
+subject-rate figure stays the reference there.
+
+Where the methods differ most (unreviewed questions; expected wrong keys by adjusted / tier / subject rates; the
+subject factor k):
+
+| Subject | Unreviewed | Adjusted | Tier | Subject | k |
+| --- | --- | --- | --- | --- | --- |
+| professional law | 1,436 | 30.4 | 45.7 | 29.3 | 0.67 |
+| virology | 66 | 15.7 | 8.9 | 21.8 | 2.04 |
+| professional psychology | 511 | 11.5 | 9.0 | 10.3 | 1.27 |
+| moral scenarios | 796 | 5.7 | 9.9 | 0 | 0.57 |
+| miscellaneous | 683 | 3.9 | 6.3 | 0 | 0.62 |
+| high school mathematics | 170 | 1.6 | 3.6 | 0 | 0.44 |
+| professional accounting | 182 | 1.3 | 2.5 | 0 | 0.52 |
+
+Professional law alone holds 27% of the adjusted estimate. Post-hoc context, not a test: PlatinumBench relabelled none
+of the MMLU high-school-mathematics questions it reviewed; the adjusted model's 1.6 for that subject's 170
+unreviewed questions sits between the tier method's 3.6 and the subject method's 0, and the review was not joined
+question by question.
+
+### The re-ranked queue
+
+The adjusted model expects 85.7 wrong keys among audit 85's 716 queue rows: 30.4 in its top 50, 44.3 in the top 100
+and 62.2 in the top 200. These are the model's expectations, not checked answers. Reading the queue in this order
+should find most of the expected wrong keys in the first 200 rows.
+
+### What this means
+
+Subject-adjusted tiers are the best-supported count in this series so far, about 112 wrong keys left outside Redux's
+sample, but the evidence for preferring them over plain subject rates is thin: a 4% smaller error on the same halves
+audit 85 used, sensitive to the prior, and designed after seeing audit 85 fail. The practical reading is unchanged:
+rank with model votes, count with a stratified expert sample, and use the votes to sharpen the count only where a
+subject's sample found no wrong key at all.

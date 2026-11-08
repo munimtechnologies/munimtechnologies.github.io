@@ -114,3 +114,45 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: HELM 
 published run outputs keep their own terms; Fantastic Bugs' data is MIT; MedQA is MIT; OpenBookQA is Apache-2.0. Only
 split names, row numbers, ids, positions, letters, our categories, votes and counts are published, never question,
 option, review or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+The sealed job ran on 2026-11-08 (15:50-15:53 UTC; unit tests passed, fixtures matched). Outputs: `results.json`
+and `rows.json` in this folder.
+
+**P1 failed, and the MedQA half of the question was not tested.** The cause was two mistakes in our own code, found
+after the run:
+
+- **All 91 MedQA runs failed the inclusion gate** (`exact_match_gap`). HELM Lite records `med_qa` under
+  `quasi_exact_match`, not `exact_match`, so our count of HELM-correct items was 0 for every model. With no included
+  model there was no MedQA panel, so no flag could fire. Coverage and letter consistency passed for every run.
+- **Only 27 of 49 MedQA rows were placed** (P1 needed 45). HELM Lite's `med_qa` runs evaluate questions from both
+  MedQA's valid and test splits, and our parser kept test only (503 questions). The 27 placed rows (15 reviewed
+  invalid, 12 valid) all have Fantastic Bugs' key equal to HELM's gold.
+
+| # | Verdict | Numbers | Reading |
+| --- | --- | --- | --- |
+| P1 | FAILED | MedQA: 0 of 91 models included, 27 of 49 rows placed. OpenBookQA: 91 of 91 included, 50 of 50 placed, key = HELM gold on 50 of 50 | Our code; see above |
+| P2 | FAILED | 0 of 15 invalid vs 0 of 12 valid | Not a test: no MedQA panel existed |
+| P3 | FAILED | AUC 0.50 (15 vs 12) | Not a test: every margin was 0 |
+| P4 | HELD | 0 of 12 valid | Holds only because no flag could fire |
+| P5 | HELD | 4 of 48 valid OpenBookQA rows flagged (8.3%) | A real test; at most 25% was predicted |
+| P6 | FAILED | 0 of 15 invalid | Not a test |
+
+These verdicts stand as frozen. The MedQA test runs again as a declared amendment that changes only the two causes
+above: [medqa-openbookqa-fantastic-bugs-consensus-v2](../medqa-openbookqa-fantastic-bugs-consensus-v2/), with the
+same predictions, frozen before it ran.
+
+**OpenBookQA (a real result).** The panel is the 10 most accurate of 91 HELM Lite models (accuracy 95.4% to 97.2%).
+Over all 500 test questions the flag fires on 6 (1.2%), one of them unanimous.
+
+- **All 6 flagged questions are among the 50 that Fantastic Bugs reviewed**, so their item statistic had already
+  picked out every question this flag finds on OpenBookQA.
+- Reviewers judged 2 of the 6 keys incorrect and 4 correct. Seen this way, the flag's precision is 2 of 6 on this
+  benchmark.
+- **Both questions with an incorrect key are flagged, and in both the panel's consensus is the option the reviewer
+  names as the right answer.** One is unanimous (10 of 10), and in the other 9 of 10 agree.
+- Exploratory, read after the run, two items only: the two questions with an incorrect key are the two with the
+  widest margins (10 and 8, against 2 to 6 for the four flagged questions with a correct key). They are also the two
+  with the fewest models among all 91 picking the key (2 and 4, against 8 to 32). The mean number of top-10 votes for
+  the key is 0.5 on the two questions with an incorrect key and 7.6 on the 48 with a correct key.

@@ -127,3 +127,112 @@ published run outputs keep their own terms; MMLU is MIT; MMLU-Redux 2.0 is CC BY
 GSM8K is MIT; GSM8K-Platinum is CC BY-SA 4.0. Only split names, row numbers, ids, positions, letters, our categories,
 labels and counts are published, never question, option, review or model text. Authored by AI agents working in
 MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-08, after the sealed run (job `mcq-mmlu-fantastic-bugs-redux-v1`, 2026-11-07, 230 seconds; 12 of 12
+unit tests passed first). Nothing above was changed. Every number below is from `results.json` and `rows.json` in
+this folder; percentages are computed from the counts beside them. Readings marked post-hoc were not predicted.*
+
+**All seven predictions held.**
+
+| # | Result | Verdict |
+| --- | --- | --- |
+| P1 | Fixtures matched; the splits have 50 / 57 / 74 / 8 / 16 rows; audit 80 reproduced exactly (1,207 flags, 130 of 484 judged flags error-labelled); 171 of 189 MMLU rows placed (168 exact, 3 after the mojibake repair, 0 by question text alone; 14 ambiguous and 4 not found are left out); Fantastic Bugs' key equals HELM's gold on 171 of 171 | HELD |
+| P2 | Among *key* questions Redux judged, 31 of 38 (81.6%) carry a Redux error label | HELD |
+| P3 | Redux's wrong-key label: 27 of 38 *key* questions (71.1%) against 1 of 37 *other* questions (2.7%) | HELD |
+| P4 | 0 of 32 judged *valid* questions carry a Redux error label | HELD |
+| P5 | The flag fires on 26 of 43 *key* questions (60.5%) against 3 of 82 *valid* questions (3.7%) | HELD |
+| P6 | 26 of 43 *key* questions (60.5%), above half | HELD |
+| P7 | 1 of audit 86's 3 Platinum-kept S1 flags (GSM8K test position 1016) is among the 16 GSM8K rows | HELD |
+
+The 171 placed questions split into 43 *key*, 46 *other* and 82 *valid*. Redux judged 107 of them (28 wrong key,
+67 OK, 12 other error label) and left 64 outside its sample.
+
+### What the holds rest on
+
+- **The panels agree in one split.** All 38 judged *key* questions are from the five-subject split (college
+  chemistry, econometrics, computer security, abstract algebra, US foreign policy). The paper says these were
+  checked against public resources such as Wikipedia, not by subject experts. Its text names MMLU-Redux only in
+  related work, so we treat the two reviews as independent, but we cannot rule out that a reviewer saw Redux. Within
+  that split, 31 of 38 judged *key* questions carry a Redux error label against 8 of 30 judged *other* questions
+  (26.7%).
+- **P4 says little on its own.** The *valid* category exists only in the two medical splits, where Redux judged 36
+  placed questions and labelled exactly 1 as an error (a professional-medicine question Fantastic Bugs also called a
+  problem). Both panels finding these questions sound is the expected outcome.
+- **P5 compares across splits,** because *valid* is medical-only and *key* is mostly five-subject. Post-hoc, the
+  separation also holds inside each split: five-subject *key* 24 of 40 (60.0%) against *other* 6 of 30 (20.0%);
+  medical *valid* 3 of 82 (3.7%) against a medical problem of either kind 5 of 11 (45.5%).
+- **This is a selected sample.** Every row was chosen by Fantastic Bugs' item statistic, so 40 of the 107 judged
+  questions (37.4%) carry a Redux error label, against 6.0% across Redux's random sample.
+
+### Exploratory
+
+- Cohen's kappa for "Fantastic Bugs problem" against "Redux error": 0.41 on the 107 judged questions; 0.37 on the 36
+  judged medical questions, where it rests on a single Redux error and is unstable.
+- Margin AUC for problem against *valid* in the medical splits: 0.711 (11 problems, 82 valid).
+- Across all 107 judged questions, Redux labels an error on 18 of the 30 the flag fires on (60.0%) and on 22 of the
+  77 it does not (28.6%). The flag fires on 11 of the 46 *other* questions (23.9%).
+- **Three disputes:** *valid* questions the flag fires on. Redux judged one (OK) and has not reviewed the other two.
+  Read after the run, paraphrased:
+  - Clinical knowledge, HELM test position 234 (Redux OK): 9 of the 10 top models pick an option about which tuning
+    fork to use for vibration sense; only 4 of 78 models pick the key. The fork frequency in that option is not the
+    one usually recommended, so on our reading both panels are right and the models share a misconception.
+  - Professional medicine, position 233 (unreviewed): an athlete with heat illness, a temperature just under the
+    usual heat-stroke cut-off and low blood pressure. All 10 top models choose rapid cooling by cold-water
+    immersion; the key is intravenous fluids, which the reviewer accepts because of the signs of shock; 47 of 78
+    models pick the key. This is a disagreement between two treatments, not a clear wrong key, and it is the
+    pattern an item statistic ranks highly: the strongest models leave the key that weaker models pick.
+  - Professional medicine, position 259 (unreviewed): a medical-ethics question on which principle overrides
+    patient autonomy when urging disclosure to a spouse; 6 of 10 top models pick one principle and 4 pick the key,
+    a closely related one. Two principles are defensible.
+
+  So of the three, one looks like a shared model mistake and two are defensible disagreements that a vote cannot
+  settle. None is a clear case of a wrong key that both expert panels missed.
+
+### GSM8K (exploratory)
+
+All 16 rows join GSM8K's test set and HELM Lite's 1,000-question sample, and Fantastic Bugs' answer equals GSM8K's
+on all 16. Their GSM8K-Platinum statuses, by the first words of Fantastic Bugs' review (post-hoc, read on
+2026-11-08):
+
+| Review type | Rows | Removed by Platinum | Revised | Kept (verified or consensus) |
+| --- | --- | --- | --- | --- |
+| Incorrect answer key | 6 | 4 | 2 | 0 |
+| Ambiguous question | 3 | 3 | 0 | 0 |
+| Construct issue | 3 | 2 | 0 | 1 (position 1016, verified) |
+| HELM grades incorrectly | 4 | 1 | 0 | 3 (consensus) |
+
+So Platinum's current release had already removed or revised 11 of the 12 rows that name a problem in the question
+itself; the 3 kept "HELM grades incorrectly" rows describe a scorer problem, not a label error. The paper says its
+expert "uncovered 16 additional invalid questions" that Platinum's revision had not detected. The published `gsm`
+split is therefore either not that set of 16, or it was compared against different Platinum labels; neither the
+paper nor the dataset card says which (checked 2026-11-08). We have not raised this with the authors.
+
+Audit 86's S1 flag fires on 10 of the 16 rows (4 of the 6 answer-key rows, 6 of the 10 others). Position 1016 is
+the P7 overlap: Fantastic Bugs calls it a construct issue, Platinum verified it, and audit 86 read it as a shared
+misreading. Two of three views see a problem in the wording, and none sees a wrong key.
+
+### What this means
+
+Two independently built reviews of the same anomalous MMLU questions agree on answer-key problems (81.6%) and on the
+kind of problem (71.1% against 2.7%). So this catalogue's precision figures, scored against MMLU-Redux alone, do not
+look like an artefact of one panel, with the caveat that the agreement rests on five subjects reviewed against
+public sources. Inside a sample already chosen by an item statistic, answer-level consensus still separates
+answer-key problems from everything else, so the two signals are complementary, as predicted. Its few hits on
+*valid* questions look like shared mistakes or defensible alternatives, not missed wrong keys.
+
+### Limits
+
+The groups are small (38, 37 and 32 judged questions). The categories are our reading of the reviews' first words
+(`fb88.fb_category`), not Fantastic Bugs' own labels. Redux labels and Fantastic Bugs reviews are judgments, not
+verified facts. The 18 unplaced MMLU rows (14 matching more than one HELM question, 4 matching none) are left out.
+HELM's models date from up to late 2024. The dispute and GSM8K readings are post-hoc.
+
+### Output files
+
+- `results.json`: gates, placement counts, predictions and their numbers, tables by split, the GSM8K join and the
+  exploratory figures, with sha256 hashes of every downloaded file.
+- `rows.json`: one row per Fantastic Bugs row (split, row number, our category, HELM id and position, keys, Redux
+  label, flag votes; for GSM8K, test position, Platinum status and audit 86's votes). No question, option, review or
+  model text. Platinum statuses are CC BY-SA 4.0; Redux labels CC BY 4.0.

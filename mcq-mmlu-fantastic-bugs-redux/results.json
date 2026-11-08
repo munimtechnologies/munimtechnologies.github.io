@@ -1,0 +1,696 @@
+{
+ "audit": 88,
+ "slug": "mcq-mmlu-fantastic-bugs-redux",
+ "dataset": "Fantastic Bugs (stair-lab/fantastic-bugs, MIT; viewer splits only), HELM MMLU release v1.13.0 and HELM Lite release v1.13.0 (Stanford CRFM), MMLU-Redux 2.0, GSM8K test and GSM8K-Platinum via the HF datasets-server parquet API, and audit 86's published candidates.json. Only split names, row numbers, ids, positions, letters, categories, labels and counts.",
+ "fixture": {
+  "categories": true,
+  "mojibake": true,
+  "answer_keys": true,
+  "place": true,
+  "redux_group": true,
+  "first_per_qid": true,
+  "kappa": true,
+  "verdicts": true
+ },
+ "fb_shards": [
+  {
+   "split": "mmlu_clinical_knowledge",
+   "url": "https://huggingface.co/datasets/stair-lab/fantastic-bugs/resolve/refs%2Fconvert%2Fparquet/default/mmlu_clinical_knowledge/0000.parquet",
+   "sha256": "af117e9ea2c106652df0d7f7bd63b1941b9d8b349db0c3992602f3c1aae025d9",
+   "bytes": 13559
+  },
+  {
+   "split": "mmlu_professional_medicine",
+   "url": "https://huggingface.co/datasets/stair-lab/fantastic-bugs/resolve/refs%2Fconvert%2Fparquet/default/mmlu_professional_medicine/0000.parquet",
+   "sha256": "115101ecb17641966cde27dcbf286321aa623c5a3c6deec2f3863bb7f9f0b7b0",
+   "bytes": 41468
+  },
+  {
+   "split": "mmlu_5subject",
+   "url": "https://huggingface.co/datasets/stair-lab/fantastic-bugs/resolve/refs%2Fconvert%2Fparquet/default/mmlu_5subject/0000.parquet",
+   "sha256": "7a7913909cabb4047ff33b432e1eb140c9a9a74e80083e07d208ffa332c122c1",
+   "bytes": 19401
+  },
+  {
+   "split": "mmlu_math",
+   "url": "https://huggingface.co/datasets/stair-lab/fantastic-bugs/resolve/refs%2Fconvert%2Fparquet/default/mmlu_math/0000.parquet",
+   "sha256": "d111f7b9e7081e0c9107dd6849ec2f525386988a0181a02fa5ceb9c02f507180",
+   "bytes": 5833
+  },
+  {
+   "split": "gsm",
+   "url": "https://huggingface.co/datasets/stair-lab/fantastic-bugs/resolve/refs%2Fconvert%2Fparquet/default/gsm/0000.parquet",
+   "sha256": "23af6c8930a85ed7bc4e671e6251061fa854be28999417c2e81430b7132fb617",
+   "bytes": 14708
+  }
+ ],
+ "fb_counts": {
+  "mmlu_clinical_knowledge": 50,
+  "mmlu_professional_medicine": 57,
+  "mmlu_5subject": 74,
+  "mmlu_math": 8,
+  "gsm": 16
+ },
+ "helm": {
+  "release_sha256": "921755ccfa38513d9eed082d497cf4328a87149842128a7e1794efcb79eba8a1",
+  "universe": 13984,
+  "universe_counts": {
+   "dup_dropped": 54,
+   "no_gold": 4
+  },
+  "instances_failed": [],
+  "models": 79,
+  "included": 78,
+  "panel": [
+   "anthropic_claude-3-5-sonnet-20241022",
+   "anthropic_claude-3-5-sonnet-20240620",
+   "deepseek-ai_deepseek-v3",
+   "google_gemini-1.5-pro-002",
+   "anthropic_claude-3-opus-20240229",
+   "openai_gpt-4o-2024-08-06",
+   "meta_llama-3.1-405b-instruct-turbo",
+   "openai_gpt-4o-2024-05-13",
+   "openai_gpt-4-0613",
+   "qwen_qwen2.5-72b-instruct-turbo"
+  ],
+  "flagged": {
+   "all": 1207,
+   "miskey": 80,
+   "ok": 354,
+   "other_error": 50,
+   "unsure_or_conflict": 8,
+   "unreviewed": 715
+  },
+  "precision": [
+   130,
+   484
+  ]
+ },
+ "redux": {
+  "rows": 5700,
+  "join": {
+   "joined": 5653,
+   "no_match": 47,
+   "conflict": 0
+  },
+  "key_agree": 5653,
+  "shards": [
+   {
+    "config": "abstract_algebra",
+    "sha256": "c7c70e1b329867220f57a40182aedc808e12dd94e0974315a6c1607b9cadb52b",
+    "bytes": 23062
+   },
+   {
+    "config": "anatomy",
+    "sha256": "0c4a5ecfdda3982794ef319686b7fd4c61398eeaf741fe787f37613c3442997c",
+    "bytes": 18031
+   },
+   {
+    "config": "astronomy",
+    "sha256": "c6b5a0f329383181ffcef35f1582ea1924eac4eb750a310e7be2e55923b5a0b2",
+    "bytes": 26144
+   },
+   {
+    "config": "business_ethics",
+    "sha256": "2f221168b41c503e29042dbfb401caa69b454f89b45d919c54e34db3b41a590b",
+    "bytes": 25448
+   },
+   {
+    "config": "clinical_knowledge",
+    "sha256": "543c2e08337580baa0e76d68d7391920daca6f7ba7d0d5f6ec2ae93df4c93e22",
+    "bytes": 21789
+   },
+   {
+    "config": "college_biology",
+    "sha256": "b121c16f5147af55f087c1d5185a9cc455cd882bc11b85c443f3d90322e8866e",
+    "bytes": 27111
+   },
+   {
+    "config": "college_chemistry",
+    "sha256": "45b80702c8bb75f96a8aeb7d712cc49ba8b846b0636d24351b7deab29122d341",
+    "bytes": 19967
+   },
+   {
+    "config": "college_computer_science",
+    "sha256": "3c2d8f1cab8112e4f5db6e5d1240db591d870cab7076bdc5734397f2cc6e7b08",
+    "bytes": 32061
+   },
+   {
+    "config": "college_mathematics",
+    "sha256": "8e578811d92355dde403e1f2ae2bd9dc303dcfacb3c95215773a3438a32cc92b",
+    "bytes": 18932
+   },
+   {
+    "config": "college_medicine",
+    "sha256": "28fc2a6906a782949e81b8cde81da1742ba8946a037e29cb4ab203a30374e3dc",
+    "bytes": 31099
+   },
+   {
+    "config": "college_physics",
+    "sha256": "26ccf8d65edab187d0662f0d146f4d8c7cb82e5417582f86e8dbd3122489ec23",
+    "bytes": 20838
+   },
+   {
+    "config": "computer_security",
+    "sha256": "e326e550f94fb4be0a78acc67b3e4aaf3308181445841763d65cd2f509f39398",
+    "bytes": 25601
+   },
+   {
+    "config": "conceptual_physics",
+    "sha256": "8403c3b66a1c1a2dcd6ddee7ebacee130c6d1d3b118451f56594776ef4256357",
+    "bytes": 22743
+   },
+   {
+    "config": "econometrics",
+    "sha256": "182f00b6760d275a2c3c727de6cf520f48e528c3d0970604f2bba1d109c0c81e",
+    "bytes": 24471
+   },
+   {
+    "config": "electrical_engineering",
+    "sha256": "9dd0875fa221dc11a87515962911234700e241b0df4ee19d5a596f1966cfff03",
+    "bytes": 14836
+   },
+   {
+    "config": "elementary_mathematics",
+    "sha256": "b08992be69d9e2ddb6d4fa60a1f9e565bd9acd48699f5ddb5f94fa38c1cfbd2c",
+    "bytes": 16433
+   },
+   {
+    "config": "formal_logic",
+    "sha256": "82e7b1b7f7b52708975d5a42c577b9ffd1c1f0a27521993d71d83a837194b0fe",
+    "bytes": 22433
+   },
+   {
+    "config": "global_facts",
+    "sha256": "52e16f7ccc93fa9ef7d51425716f88bf88a3dce17d5e2217b5ac18ac3e3de7ef",
+    "bytes": 21242
+   },
+   {
+    "config": "high_school_biology",
+    "sha256": "fada7b1a8b0d0d06ecba1e9f9f9860c3dce3868c4cb3832584c12b04f43d7284",
+    "bytes": 29476
+   },
+   {
+    "config": "high_school_chemistry",
+    "sha256": "39fe0c467520ce9ff1cbda1b985eb3567090263d749349e9d609e5a81faf3472",
+    "bytes": 22941
+   },
+   {
+    "config": "high_school_computer_science",
+    "sha256": "fc6e68a4a3e3aad304fe9b33f22965c7aa4f96b8bf0d893d78de6e4984a8dcf1",
+    "bytes": 29356
+   },
+   {
+    "config": "high_school_european_history",
+    "sha256": "7e9854b9fc59ef11a0c4c34f0edee291f5c09302f0fd984db7de2f74d90002ac",
+    "bytes": 93674
+   },
+   {
+    "config": "high_school_geography",
+    "sha256": "b06374835d612de1f9bcefc74751d780a8fdd3b31ff6e7815dcc2b3cf713ca45",
+    "bytes": 19320
+   },
+   {
+    "config": "high_school_government_and_politics",
+    "sha256": "731a9c6c594303149da3137fbda77f75f9dcdbc809d2cd24ab06da0e55578a2a",
+    "bytes": 27438
+   },
+   {
+    "config": "high_school_macroeconomics",
+    "sha256": "1ff2414dd8b34d60a026d55ecb80c7282f681cb5e8b92d8932615411bf40d2eb",
+    "bytes": 24770
+   },
+   {
+    "config": "high_school_mathematics",
+    "sha256": "338faf69095250683a7f843036a9d3ce53d359fe1457ce9cd4f908d8e5c8bb4c",
+    "bytes": 17683
+   },
+   {
+    "config": "high_school_microeconomics",
+    "sha256": "6986aecd3c6868062b8a774922cad6b747f187b742d84b1f1ae0692ae74a444c",
+    "bytes": 21687
+   },
+   {
+    "config": "high_school_physics",
+    "sha256": "a3841f7ce74176c5406e0b360ffc8c0d252d1118d85bb9e88179d571538bec36",
+    "bytes": 27986
+   },
+   {
+    "config": "high_school_psychology",
+    "sha256": "0000e63efe6182863a2781b7f39052ff6fae70df89d0493500aff0ac169edcc7",
+    "bytes": 23887
+   },
+   {
+    "config": "high_school_statistics",
+    "sha256": "d3c54e7783d9b1e88e35181e07e4499fd5ffaad786fbe06957752d9b27d1d75b",
+    "bytes": 32386
+   },
+   {
+    "config": "high_school_us_history",
+    "sha256": "5d4022d20a5a715131f9572236a432c5a4ac238fddc63acab8c38068e09f2eb1",
+    "bytes": 86249
+   },
+   {
+    "config": "high_school_world_history",
+    "sha256": "c6b8e0fba28b2cc3377fbbd99a20274a26a99f2040d1a37727827662d1833be4",
+    "bytes": 94559
+   },
+   {
+    "config": "human_aging",
+    "sha256": "340a13d235bc74efec63924a8dd5c395c1b7a4439c0d6b2175581066182a4097",
+    "bytes": 20067
+   },
+   {
+    "config": "human_sexuality",
+    "sha256": "ee7fb92ad17b759e9759d2bdc74cdf0fc5ac66807fffe6eba60cff97b9641cfd",
+    "bytes": 22570
+   },
+   {
+    "config": "international_law",
+    "sha256": "94e515fe3846a0d7eba90dd61d0003188c472b4c1623d7bec9ed1984e1601f6d",
+    "bytes": 26377
+   },
+   {
+    "config": "jurisprudence",
+    "sha256": "934f738e393f56e399c3f820468576b14aab7fcd7e16b8704ded52bcbe794963",
+    "bytes": 23919
+   },
+   {
+    "config": "logical_fallacies",
+    "sha256": "ef1a39b4d2e40a2170e105dc2924ec785725a9e77e1606a911e94eb7836815b6",
+    "bytes": 22077
+   },
+   {
+    "config": "machine_learning",
+    "sha256": "f10f39e6a6b51354de7350bdabff673d82c4ced72a113b9d3cb9a2a928415308",
+    "bytes": 23864
+   },
+   {
+    "config": "management",
+    "sha256": "cd9e4b2908ddf1a1eb589d2f63de444852b9f58a3604397c1d44053ce2856bba",
+    "bytes": 17534
+   },
+   {
+    "config": "marketing",
+    "sha256": "ca9c3b9997f5b4e9b792f8f89ba58050a1ea621b80dd462400b7517b63d7ef53",
+    "bytes": 23832
+   },
+   {
+    "config": "medical_genetics",
+    "sha256": "f2e94def739f452ee4ac055c49763f7c20bc68f77d813a89776443a9d3caf7ff",
+    "bytes": 18322
+   },
+   {
+    "config": "miscellaneous",
+    "sha256": "78b23fd0707d45957374fb07a4adca80df8007e362aba5dc164a581210f5829c",
+    "bytes": 18070
+   },
+   {
+    "config": "moral_disputes",
+    "sha256": "8b75330ce9ac0bb5c9b3c182b207f14909ac1b83cd7af25df3275373497f7343",
+    "bytes": 24702
+   },
+   {
+    "config": "moral_scenarios",
+    "sha256": "27e5ddb7abcf49ce39c1cbc5e58f7f582ff99cbf64c4ef1bc71cb9ae0ba7eb44",
+    "bytes": 15657
+   },
+   {
+    "config": "nutrition",
+    "sha256": "26d8c92fc117fe5d5ca22a52c0bf41eb5be41f04f92e18586204d749d3755fa5",
+    "bytes": 23599
+   },
+   {
+    "config": "philosophy",
+    "sha256": "98371d132776c7578de57e436202aa8a46e1c4cdddaafd45b77be4830a2a4def",
+    "bytes": 22261
+   },
+   {
+    "config": "prehistory",
+    "sha256": "c71bcef91e0125d749bbc7a3f148c15388770177a64cef90bf26d4c84f72c4dc",
+    "bytes": 21449
+   },
+   {
+    "config": "professional_accounting",
+    "sha256": "25ad9ab1c1fd9908f9f9724eb5f80e87b143cfd590ddacd9452d6241da17067c",
+    "bytes": 37718
+   },
+   {
+    "config": "professional_law",
+    "sha256": "e316652d5a98e5aed3e06f1bfe749503756af53e5b1a97d0b7881325c1cd74d3",
+    "bytes": 76370
+   },
+   {
+    "config": "professional_medicine",
+    "sha256": "e9ab676b69cfa943bb94e2389158c47bd53cfbff1081ef76336b09df33a0dc07",
+    "bytes": 52795
+   },
+   {
+    "config": "professional_psychology",
+    "sha256": "0054172f48f3444f46819135a844cf28446f487a54ae4cf811656dd3fe4f203e",
+    "bytes": 31070
+   },
+   {
+    "config": "public_relations",
+    "sha256": "c513bf252e36bb0febc030576f26b797f4dba31fe15e46bc688b9a906151132d",
+    "bytes": 24306
+   },
+   {
+    "config": "security_studies",
+    "sha256": "47ded194ba7fb8fcfc0e9a2edafcc49fe654eca51ceadcca8a95e36165741e9d",
+    "bytes": 52789
+   },
+   {
+    "config": "sociology",
+    "sha256": "694551686df4484cd517add4a7001a83f791219dd37e60868679889e52b53e30",
+    "bytes": 26979
+   },
+   {
+    "config": "us_foreign_policy",
+    "sha256": "bc3c385cc0fc24f48730c90b0e176378fefba05d2c73f7dcc356e5b2969591d4",
+    "bytes": 22230
+   },
+   {
+    "config": "virology",
+    "sha256": "764b0b8f46e8c1aa20fba1dd6c93a8b383dfc0098e794fb1758ffed90b124a8b",
+    "bytes": 22224
+   },
+   {
+    "config": "world_religions",
+    "sha256": "ec1fc658f7a1965559a235912061799da11e52833634ec334e40846a1f21a4d9",
+    "bytes": 15462
+   }
+  ],
+  "groups": {
+   "all": 13984,
+   "miskey": 106,
+   "ok": 5285,
+   "other_error": 230,
+   "unsure_or_conflict": 32,
+   "unreviewed": 8331
+  }
+ },
+ "placement": {
+  "methods": {
+   "exact": 168,
+   "repaired": 3,
+   "question_only": 0,
+   "ambiguous": 14,
+   "none": 4
+  },
+  "placed_rows": 171,
+  "distinct_questions": 171,
+  "placed_twice": 0,
+  "fb_key_equals_helm": 171
+ },
+ "p1_parts": {
+  "fixtures": true,
+  "fb_row_counts": true,
+  "reproduce_80": true,
+  "placed_at_least_170": true,
+  "fb_key_equals_helm_95pct": true
+ },
+ "predictions": {
+  "P2_redux_confirms_fb_keys": true,
+  "P3_key_type_agrees": true,
+  "P4_redux_clears_fb_valid": true,
+  "P5_consensus_separates": true,
+  "P6_consensus_catches_fb_keys": true,
+  "P7_gsm_kept_flag_confirmed": true,
+  "undecidable": [],
+  "P1_structural": true
+ },
+ "prediction_numbers": {
+  "P2_key_redux_error": [
+   31,
+   38,
+   0.8157894736842105
+  ],
+  "P3_key_redux_miskey": [
+   27,
+   38,
+   0.7105263157894737
+  ],
+  "P3_other_redux_miskey": [
+   1,
+   37,
+   0.02702702702702703
+  ],
+  "P4_valid_redux_error": [
+   0,
+   32,
+   0.0
+  ],
+  "P5_P6_flag_key": [
+   26,
+   43,
+   0.6046511627906976
+  ],
+  "P5_flag_valid": [
+   3,
+   82,
+   0.036585365853658534
+  ],
+  "P7_gsm_overlap": [
+   1,
+   3
+  ],
+  "undecidable": []
+ },
+ "overall": {
+  "categories": {
+   "key": 43,
+   "other": 46,
+   "valid": 82
+  },
+  "redux": {
+   "miskey": 28,
+   "ok": 67,
+   "other_error": 12,
+   "unreviewed": 64
+  },
+  "category_x_redux": {
+   "key|miskey": 27,
+   "key|ok": 7,
+   "key|other_error": 4,
+   "key|unreviewed": 5,
+   "other|miskey": 1,
+   "other|ok": 28,
+   "other|other_error": 8,
+   "other|unreviewed": 9,
+   "valid|ok": 32,
+   "valid|unreviewed": 50
+  },
+  "category_x_s1_flag": {
+   "key|False": 17,
+   "key|True": 26,
+   "other|False": 35,
+   "other|True": 11,
+   "valid|False": 79,
+   "valid|True": 3
+  },
+  "judged_category_x_redux": {
+   "key|miskey": 27,
+   "key|ok": 7,
+   "key|other_error": 4,
+   "other|miskey": 1,
+   "other|ok": 28,
+   "other|other_error": 8,
+   "valid|ok": 32
+  }
+ },
+ "by_split": {
+  "mmlu_clinical_knowledge": {
+   "placed_distinct": 36,
+   "categories": {
+    "key": 1,
+    "other": 4,
+    "valid": 31
+   },
+   "redux": {
+    "ok": 16,
+    "unreviewed": 20
+   },
+   "category_x_redux": {
+    "key|unreviewed": 1,
+    "other|ok": 2,
+    "other|unreviewed": 2,
+    "valid|ok": 14,
+    "valid|unreviewed": 17
+   },
+   "category_x_s1_flag": {
+    "key|True": 1,
+    "other|False": 1,
+    "other|True": 3,
+    "valid|False": 30,
+    "valid|True": 1
+   },
+   "no_key": 0
+  },
+  "mmlu_professional_medicine": {
+   "placed_distinct": 57,
+   "categories": {
+    "other": 6,
+    "valid": 51
+   },
+   "redux": {
+    "ok": 19,
+    "other_error": 1,
+    "unreviewed": 37
+   },
+   "category_x_redux": {
+    "other|ok": 1,
+    "other|other_error": 1,
+    "other|unreviewed": 4,
+    "valid|ok": 18,
+    "valid|unreviewed": 33
+   },
+   "category_x_s1_flag": {
+    "other|False": 5,
+    "other|True": 1,
+    "valid|False": 49,
+    "valid|True": 2
+   },
+   "no_key": 0
+  },
+  "mmlu_5subject": {
+   "placed_distinct": 70,
+   "categories": {
+    "key": 40,
+    "other": 30
+   },
+   "redux": {
+    "miskey": 28,
+    "ok": 29,
+    "other_error": 11,
+    "unreviewed": 2
+   },
+   "category_x_redux": {
+    "key|miskey": 27,
+    "key|ok": 7,
+    "key|other_error": 4,
+    "key|unreviewed": 2,
+    "other|miskey": 1,
+    "other|ok": 22,
+    "other|other_error": 7
+   },
+   "category_x_s1_flag": {
+    "key|False": 16,
+    "key|True": 24,
+    "other|False": 24,
+    "other|True": 6
+   },
+   "no_key": 5
+  },
+  "mmlu_math": {
+   "placed_distinct": 8,
+   "categories": {
+    "key": 2,
+    "other": 6
+   },
+   "redux": {
+    "ok": 3,
+    "unreviewed": 5
+   },
+   "category_x_redux": {
+    "key|unreviewed": 2,
+    "other|ok": 3,
+    "other|unreviewed": 3
+   },
+   "category_x_s1_flag": {
+    "key|False": 1,
+    "key|True": 1,
+    "other|False": 5,
+    "other|True": 1
+   },
+   "no_key": 0
+  }
+ },
+ "gsm": {
+  "gsm8k_shards": [
+   {
+    "split": "test",
+    "url": "https://huggingface.co/datasets/openai/gsm8k/resolve/refs%2Fconvert%2Fparquet/main/test/0000.parquet",
+    "sha256": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59",
+    "bytes": 419088
+   }
+  ],
+  "platinum_shards": [
+   {
+    "split": "test",
+    "url": "https://huggingface.co/datasets/madrylab/gsm8k-platinum/resolve/refs%2Fconvert%2Fparquet/main/test/0000.parquet",
+    "sha256": "0c466762794c61ef364b7f72c3cb7e8bf9e5d8feca2c62e1bfce81eae7c7a1ea",
+    "bytes": 380973
+   }
+  ],
+  "platinum": {
+   "gsm_rows": 1319,
+   "plat_rows": 1209,
+   "matched": 1209,
+   "to_duplicate": 0,
+   "unmatched": 0,
+   "matched_twice": 0,
+   "labels": {
+    "consensus": 1100,
+    "rejected": 110,
+    "revised": 10,
+    "verified": 99
+   }
+  },
+  "audit86_candidates_sha256": "f3bfa2dbeb9414a456ba68abbff4f51359cb1da2a01ac59c0c28b2bdaf24e32d",
+  "audit86_candidates": 93,
+  "audit86_kept_s1_flags": [
+   590,
+   901,
+   1016
+  ],
+  "helm_lite_universe_model": "01-ai_yi-34b",
+  "helm_lite_universe_size": 1000,
+  "fb_rows": 16,
+  "fb_placed": 16,
+  "fb_platinum": {
+   "consensus": 3,
+   "rejected": 10,
+   "revised": 2,
+   "verified": 1
+  },
+  "fb_s1_flagged": 10,
+  "fb_s1_flagged_by_category": {
+   "key|False": 2,
+   "key|True": 4,
+   "other|False": 4,
+   "other|True": 6
+  },
+  "overlap_kept_flags": [
+   1016
+  ]
+ },
+ "exploratory": {
+  "kappa_invalid_vs_redux_error_all_judged": 0.40602696272799366,
+  "kappa_n_all": 107,
+  "kappa_clinical_and_pro_medicine": 0.37209302325581395,
+  "kappa_n_both": 36,
+  "auc_margin_invalid_vs_valid_clinical_and_pro_medicine": 0.7111973392461197,
+  "flag_other": [
+   11,
+   46,
+   0.2391304347826087
+  ],
+  "redux_error_when_flagged": [
+   18,
+   30,
+   0.6
+  ],
+  "redux_error_when_not_flagged": [
+   22,
+   77,
+   0.2857142857142857
+  ],
+  "disputes_valid_but_flagged": 3,
+  "disputes_redux": {
+   "ok": 1,
+   "unreviewed": 2
+  }
+ },
+ "note": "Fantastic Bugs categories (fb88.fb_category): valid; key = the review points at the answer key; other = any other problem. Units = distinct HELM questions (a second Fantastic Bugs row on the same question is dropped). Redux judged = wrong_groundtruth, ok or one of the four other error labels; error = any of the five. Flag = audit 77's rule on audit 80's top-10 panel. P2 Redux error share among judged key rows >= 1/2; P3 Redux wrong_groundtruth share key > other; P4 Redux error share among judged valid rows <= 1/4 (>= 10 rows); P5 flag rate key > valid; P6 flag rate key >= 1/2; P7 at least one of audit 86's S1-flagged, Platinum-kept GSM8K questions is among Fantastic Bugs' 16 published GSM8K issues. Groups under 5 rows (10 for P4) are undecidable."
+}

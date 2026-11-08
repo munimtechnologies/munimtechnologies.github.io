@@ -1,0 +1,525 @@
+{
+ "audit": 89,
+ "version": 2,
+ "slug": "medqa-openbookqa-fantastic-bugs-consensus-v2",
+ "dataset": "Fantastic Bugs (stair-lab/fantastic-bugs, MIT; viewer splits med_qa and openbookqa only) via the HF datasets-server parquet API, and HELM Lite release v1.13.0 (Stanford CRFM) per-question outputs for med_qa and openbookqa. Only split names, row numbers, ids, positions, letters, categories, votes and counts.",
+ "amendment": "v2: med_qa universe = HELM Lite's evaluated MedQA valid + test questions (v1: test only); inclusion gate reads quasi_exact_match where an item has no exact_match. Nothing else changed.",
+ "fixture": {
+  "categories": true,
+  "suggested": true,
+  "answer_keys": true,
+  "place": true,
+  "universe": true,
+  "mapping": true,
+  "verdicts": true,
+  "v2_splits": true,
+  "v2_quasi": true
+ },
+ "fb_shards": [
+  {
+   "split": "med_qa",
+   "url": "https://huggingface.co/datasets/stair-lab/fantastic-bugs/resolve/refs%2Fconvert%2Fparquet/default/med_qa/0000.parquet",
+   "sha256": "22228f77184d753091e0fc3ad09506bf6b9b2e01a26056799331b507717bdabd",
+   "bytes": 42274
+  },
+  {
+   "split": "openbookqa",
+   "url": "https://huggingface.co/datasets/stair-lab/fantastic-bugs/resolve/refs%2Fconvert%2Fparquet/default/openbookqa/0000.parquet",
+   "sha256": "34916a335eb84561e79496bfee58d08a6245ed780315cbaaa445804e5aa4526f",
+   "bytes": 9779
+  }
+ ],
+ "fb_counts": {
+  "med_qa": 49,
+  "openbookqa": 50
+ },
+ "helm_release_sha256": "37b60376a0e7b1427965d0b71d6a4704693f14a5179552dddd9d5ec96de66ed6",
+ "helm": {
+  "med_qa": {
+   "splits": [
+    "valid",
+    "test"
+   ],
+   "runs": 91,
+   "runs_dropped_as_duplicates": 0,
+   "suites": [
+    "v1.0.0",
+    "v1.1.0",
+    "v1.10.0",
+    "v1.11.0",
+    "v1.12.0",
+    "v1.13.0",
+    "v1.2.0",
+    "v1.3.0",
+    "v1.4.0",
+    "v1.5.0",
+    "v1.6.0",
+    "v1.7.0",
+    "v1.8.0",
+    "v1.9.0"
+   ],
+   "base_suite": "v1.0.0",
+   "instances_failed": [],
+   "universe": 1000,
+   "universe_counts": {
+    "dup_dropped": 0,
+    "no_gold": 0
+   },
+   "universe_by_split": {
+    "test": 503,
+    "other": 497
+   },
+   "models": 91,
+   "included": 91,
+   "excluded": {},
+   "em_from_quasi_items": [
+    91000,
+    91000
+   ],
+   "em_gap_by_model": {
+    "01-ai_yi-34b": 0.0,
+    "01-ai_yi-6b": 0.001,
+    "01-ai_yi-large-preview": 0.0,
+    "AlephAlpha_luminous-base": 0.0,
+    "AlephAlpha_luminous-extended": 0.0,
+    "AlephAlpha_luminous-supreme": 0.0,
+    "ai21_j2-grande": 0.0,
+    "ai21_j2-jumbo": 0.0,
+    "ai21_jamba-1.5-large": 0.0,
+    "ai21_jamba-1.5-mini": 0.0,
+    "ai21_jamba-instruct": 0.0,
+    "allenai_olmo-7b": 0.001,
+    "amazon_nova-lite-v1:0": 0.0,
+    "amazon_nova-micro-v1:0": 0.0,
+    "amazon_nova-pro-v1:0": 0.0,
+    "anthropic_claude-2.0": 0.001,
+    "anthropic_claude-2.1": 0.001,
+    "anthropic_claude-3-5-haiku-20241022": 0.0,
+    "anthropic_claude-3-5-sonnet-20240620": 0.0,
+    "anthropic_claude-3-5-sonnet-20241022": 0.0,
+    "anthropic_claude-3-haiku-20240307": 0.0,
+    "anthropic_claude-3-opus-20240229": 0.0,
+    "anthropic_claude-3-sonnet-20240229": 0.001,
+    "anthropic_claude-instant-1.2": 0.001,
+    "anthropic_claude-v1.3": 0.0,
+    "cohere_command": 0.001,
+    "cohere_command-light": 0.0,
+    "cohere_command-r": 0.0,
+    "cohere_command-r-plus": 0.001,
+    "databricks_dbrx-instruct": 0.0,
+    "deepseek-ai_deepseek-llm-67b-chat": 0.001,
+    "deepseek-ai_deepseek-v3": 0.0,
+    "google_gemini-1.0-pro-002": 0.001,
+    "google_gemini-1.5-flash-001": 0.0,
+    "google_gemini-1.5-flash-002": 0.0,
+    "google_gemini-1.5-pro-001": 0.001,
+    "google_gemini-1.5-pro-002": 0.0,
+    "google_gemini-2.0-flash-exp": 0.0,
+    "google_gemma-2-27b-it": 0.0,
+    "google_gemma-2-9b-it": 0.0,
+    "google_gemma-7b": 0.0,
+    "google_text-bison@001": 0.001,
+    "google_text-unicorn@001": 0.001,
+    "meta_llama-2-13b": 0.0,
+    "meta_llama-2-70b": 0.0,
+    "meta_llama-2-7b": 0.0,
+    "meta_llama-3-70b": 0.0,
+    "meta_llama-3-8b": 0.0,
+    "meta_llama-3.1-405b-instruct-turbo": 0.0,
+    "meta_llama-3.1-70b-instruct-turbo": 0.0,
+    "meta_llama-3.1-8b-instruct-turbo": 0.0,
+    "meta_llama-3.2-11b-vision-instruct-turbo": 0.0,
+    "meta_llama-3.2-90b-vision-instruct-turbo": 0.0,
+    "meta_llama-3.3-70b-instruct-turbo": 0.0,
+    "meta_llama-65b": 0.0,
+    "microsoft_phi-2": 0.0,
+    "microsoft_phi-3-medium-4k-instruct": 0.0,
+    "microsoft_phi-3-small-8k-instruct": 0.001,
+    "mistralai_mistral-7b-instruct-v0.3": 0.0,
+    "mistralai_mistral-7b-v0.1": 0.001,
+    "mistralai_mistral-large-2402": 0.0,
+    "mistralai_mistral-large-2407": 0.0,
+    "mistralai_mistral-medium-2312": 0.0,
+    "mistralai_mistral-small-2402": 0.0,
+    "mistralai_mixtral-8x22b": 0.0,
+    "mistralai_mixtral-8x7b-32kseqlen": 0.0,
+    "mistralai_open-mistral-nemo-2407": 0.0,
+    "openai_gpt-3.5-turbo-0613": 0.0,
+    "openai_gpt-4-0613": 0.0,
+    "openai_gpt-4-1106-preview": 0.0,
+    "openai_gpt-4-turbo-2024-04-09": 0.0,
+    "openai_gpt-4o-2024-05-13": 0.0,
+    "openai_gpt-4o-2024-08-06": 0.0,
+    "openai_gpt-4o-mini-2024-07-18": 0.0,
+    "openai_text-davinci-002": 0.0,
+    "openai_text-davinci-003": 0.0,
+    "qwen_qwen1.5-110b-chat": 0.0,
+    "qwen_qwen1.5-14b": 0.001,
+    "qwen_qwen1.5-32b": 0.0,
+    "qwen_qwen1.5-72b": 0.0,
+    "qwen_qwen1.5-7b": 0.001,
+    "qwen_qwen2-72b-instruct": 0.0,
+    "qwen_qwen2.5-72b-instruct-turbo": 0.0,
+    "qwen_qwen2.5-7b-instruct-turbo": 0.0,
+    "snowflake_snowflake-arctic-instruct": 0.0,
+    "tiiuae_falcon-40b": 0.001,
+    "tiiuae_falcon-7b": 0.0,
+    "upstage_solar-pro-241126": 0.001,
+    "writer_palmyra-x-004": 0.0,
+    "writer_palmyra-x-v2": 0.0,
+    "writer_palmyra-x-v3": 0.001
+   },
+   "panel": [
+    "openai_gpt-4o-2024-08-06",
+    "openai_gpt-4o-2024-05-13",
+    "anthropic_claude-3-5-sonnet-20241022",
+    "meta_llama-3.1-405b-instruct-turbo",
+    "anthropic_claude-3-5-sonnet-20240620",
+    "meta_llama-3.2-90b-vision-instruct-turbo",
+    "meta_llama-3.1-70b-instruct-turbo",
+    "openai_gpt-4-0613",
+    "openai_gpt-4-1106-preview",
+    "deepseek-ai_deepseek-v3"
+   ],
+   "panel_accuracy": [
+    0.869,
+    0.861,
+    0.853,
+    0.853,
+    0.831,
+    0.824,
+    0.82,
+    0.817,
+    0.817,
+    0.811
+   ],
+   "flagged_in_universe": [
+    85,
+    1000,
+    0.085
+   ],
+   "unanimous_flags_in_universe": 11,
+   "no_key_in_universe": 2
+  },
+  "openbookqa": {
+   "splits": [
+    "test"
+   ],
+   "runs": 91,
+   "runs_dropped_as_duplicates": 0,
+   "suites": [
+    "v1.0.0",
+    "v1.1.0",
+    "v1.10.0",
+    "v1.11.0",
+    "v1.12.0",
+    "v1.13.0",
+    "v1.2.0",
+    "v1.3.0",
+    "v1.4.0",
+    "v1.5.0",
+    "v1.6.0",
+    "v1.7.0",
+    "v1.8.0",
+    "v1.9.0"
+   ],
+   "base_suite": "v1.0.0",
+   "instances_failed": [],
+   "universe": 500,
+   "universe_counts": {
+    "dup_dropped": 0,
+    "no_gold": 0
+   },
+   "universe_by_split": {
+    "test": 500,
+    "other": 0
+   },
+   "models": 91,
+   "included": 91,
+   "excluded": {},
+   "em_from_quasi_items": [
+    0,
+    45500
+   ],
+   "em_gap_by_model": {
+    "01-ai_yi-34b": 0.0,
+    "01-ai_yi-6b": 0.0,
+    "01-ai_yi-large-preview": 0.0,
+    "AlephAlpha_luminous-base": 0.0,
+    "AlephAlpha_luminous-extended": 0.0,
+    "AlephAlpha_luminous-supreme": 0.0,
+    "ai21_j2-grande": 0.0,
+    "ai21_j2-jumbo": 0.0,
+    "ai21_jamba-1.5-large": 0.0,
+    "ai21_jamba-1.5-mini": 0.0,
+    "ai21_jamba-instruct": 0.0,
+    "allenai_olmo-7b": 0.0,
+    "amazon_nova-lite-v1:0": 0.0,
+    "amazon_nova-micro-v1:0": 0.0,
+    "amazon_nova-pro-v1:0": 0.0,
+    "anthropic_claude-2.0": 0.0,
+    "anthropic_claude-2.1": 0.0,
+    "anthropic_claude-3-5-haiku-20241022": 0.0,
+    "anthropic_claude-3-5-sonnet-20240620": 0.0,
+    "anthropic_claude-3-5-sonnet-20241022": 0.0,
+    "anthropic_claude-3-haiku-20240307": 0.0,
+    "anthropic_claude-3-opus-20240229": 0.0,
+    "anthropic_claude-3-sonnet-20240229": 0.0,
+    "anthropic_claude-instant-1.2": 0.0,
+    "anthropic_claude-v1.3": 0.0,
+    "cohere_command": 0.0,
+    "cohere_command-light": 0.0,
+    "cohere_command-r": 0.0,
+    "cohere_command-r-plus": 0.0,
+    "databricks_dbrx-instruct": 0.0,
+    "deepseek-ai_deepseek-llm-67b-chat": 0.0,
+    "deepseek-ai_deepseek-v3": 0.0,
+    "google_gemini-1.0-pro-002": 0.0,
+    "google_gemini-1.5-flash-001": 0.0,
+    "google_gemini-1.5-flash-002": 0.0,
+    "google_gemini-1.5-pro-001": 0.0,
+    "google_gemini-1.5-pro-002": 0.0,
+    "google_gemini-2.0-flash-exp": 0.0,
+    "google_gemma-2-27b-it": 0.0,
+    "google_gemma-2-9b-it": 0.0,
+    "google_gemma-7b": 0.0,
+    "google_text-bison@001": 0.0,
+    "google_text-unicorn@001": 0.0,
+    "meta_llama-2-13b": 0.0,
+    "meta_llama-2-70b": 0.0,
+    "meta_llama-2-7b": 0.0,
+    "meta_llama-3-70b": 0.0,
+    "meta_llama-3-8b": 0.0,
+    "meta_llama-3.1-405b-instruct-turbo": 0.0,
+    "meta_llama-3.1-70b-instruct-turbo": 0.0,
+    "meta_llama-3.1-8b-instruct-turbo": 0.0,
+    "meta_llama-3.2-11b-vision-instruct-turbo": 0.0,
+    "meta_llama-3.2-90b-vision-instruct-turbo": 0.0,
+    "meta_llama-3.3-70b-instruct-turbo": 0.0,
+    "meta_llama-65b": 0.0,
+    "microsoft_phi-2": 0.0,
+    "microsoft_phi-3-medium-4k-instruct": 0.0,
+    "microsoft_phi-3-small-8k-instruct": 0.0,
+    "mistralai_mistral-7b-instruct-v0.3": 0.0,
+    "mistralai_mistral-7b-v0.1": 0.0,
+    "mistralai_mistral-large-2402": 0.0,
+    "mistralai_mistral-large-2407": 0.0,
+    "mistralai_mistral-medium-2312": 0.0,
+    "mistralai_mistral-small-2402": 0.0,
+    "mistralai_mixtral-8x22b": 0.0,
+    "mistralai_mixtral-8x7b-32kseqlen": 0.0,
+    "mistralai_open-mistral-nemo-2407": 0.0,
+    "openai_gpt-3.5-turbo-0613": 0.0,
+    "openai_gpt-4-0613": 0.0,
+    "openai_gpt-4-1106-preview": 0.0,
+    "openai_gpt-4-turbo-2024-04-09": 0.0,
+    "openai_gpt-4o-2024-05-13": 0.0,
+    "openai_gpt-4o-2024-08-06": 0.0,
+    "openai_gpt-4o-mini-2024-07-18": 0.0,
+    "openai_text-davinci-002": 0.0,
+    "openai_text-davinci-003": 0.0,
+    "qwen_qwen1.5-110b-chat": 0.0,
+    "qwen_qwen1.5-14b": 0.0,
+    "qwen_qwen1.5-32b": 0.0,
+    "qwen_qwen1.5-72b": 0.0,
+    "qwen_qwen1.5-7b": 0.0,
+    "qwen_qwen2-72b-instruct": 0.0,
+    "qwen_qwen2.5-72b-instruct-turbo": 0.0,
+    "qwen_qwen2.5-7b-instruct-turbo": 0.0,
+    "snowflake_snowflake-arctic-instruct": 0.0,
+    "tiiuae_falcon-40b": 0.0,
+    "tiiuae_falcon-7b": 0.0,
+    "upstage_solar-pro-241126": 0.0,
+    "writer_palmyra-x-004": 0.0,
+    "writer_palmyra-x-v2": 0.0,
+    "writer_palmyra-x-v3": 0.0
+   },
+   "panel": [
+    "anthropic_claude-3-5-sonnet-20240620",
+    "openai_gpt-4-turbo-2024-04-09",
+    "openai_gpt-4o-2024-08-06",
+    "anthropic_claude-3-5-sonnet-20241022",
+    "openai_gpt-4o-2024-05-13",
+    "qwen_qwen2.5-72b-instruct-turbo",
+    "amazon_nova-pro-v1:0",
+    "openai_gpt-4-0613",
+    "anthropic_claude-3-opus-20240229",
+    "deepseek-ai_deepseek-v3"
+   ],
+   "panel_accuracy": [
+    0.972,
+    0.97,
+    0.968,
+    0.966,
+    0.966,
+    0.962,
+    0.96,
+    0.96,
+    0.956,
+    0.954
+   ],
+   "flagged_in_universe": [
+    6,
+    500,
+    0.012
+   ],
+   "unanimous_flags_in_universe": 1,
+   "no_key_in_universe": 0
+  }
+ },
+ "placement": {
+  "med_qa": {
+   "methods": {
+    "exact": 21,
+    "repaired": 28,
+    "question_only": 0,
+    "ambiguous": 0,
+    "none": 0
+   },
+   "placed_rows": 49,
+   "distinct_questions": 49,
+   "placed_twice": 0,
+   "fb_key_equals_helm": 49,
+   "placed_by_helm_split": {
+    "other": 22,
+    "test": 27
+   }
+  },
+  "openbookqa": {
+   "methods": {
+    "exact": 50,
+    "repaired": 0,
+    "question_only": 0,
+    "ambiguous": 0,
+    "none": 0
+   },
+   "placed_rows": 50,
+   "distinct_questions": 50,
+   "placed_twice": 0,
+   "fb_key_equals_helm": 50,
+   "placed_by_helm_split": {
+    "test": 50
+   }
+  }
+ },
+ "p1_parts": {
+  "fixtures": true,
+  "fb_row_counts": true,
+  "included_at_least_50_med_qa": true,
+  "placed_at_least_45_med_qa": true,
+  "fb_key_equals_helm_95pct_med_qa": true,
+  "included_at_least_50_openbookqa": true,
+  "placed_at_least_45_openbookqa": true,
+  "fb_key_equals_helm_95pct_openbookqa": true
+ },
+ "predictions": {
+  "P2_consensus_separates_medqa": false,
+  "P3_margin_auc_medqa": false,
+  "P4_medqa_valid_quiet": false,
+  "P5_openbookqa_valid_quiet": true,
+  "P6_medqa_invalid_caught": true,
+  "undecidable": [],
+  "P1_structural": true
+ },
+ "prediction_numbers": {
+  "P2_P6_medqa_flag_invalid": [
+   18,
+   23,
+   0.782608695652174
+  ],
+  "P2_P4_medqa_flag_valid": [
+   23,
+   26,
+   0.8846153846153846
+  ],
+  "P3_medqa_margin_auc": [
+   0.5066889632107023,
+   23,
+   26
+  ],
+  "P5_openbookqa_flag_valid": [
+   4,
+   48,
+   0.08333333333333333
+  ],
+  "undecidable": []
+ },
+ "v1_reproduction_openbookqa": {
+  "universe": true,
+  "included": true,
+  "flagged_in_universe": true,
+  "flag_valid": true,
+  "flag_invalid": true
+ },
+ "exploratory": {
+  "med_qa": {
+   "categories": {
+    "invalid": 23,
+    "valid": 26
+   },
+   "category_x_s1_flag": {
+    "invalid|False": 5,
+    "invalid|True": 18,
+    "valid|False": 3,
+    "valid|True": 23
+   },
+   "category_x_unanimous": {
+    "invalid|False": 19,
+    "invalid|True": 4,
+    "valid|False": 20,
+    "valid|True": 6
+   },
+   "category_x_no_key": {
+    "invalid|False": 23,
+    "valid|False": 26
+   },
+   "category_x_helm_split": {
+    "invalid|other": 8,
+    "invalid|test": 15,
+    "valid|other": 14,
+    "valid|test": 12
+   },
+   "margin_auc_invalid_vs_valid": 0.5066889632107023,
+   "mean_top10_key_votes": {
+    "invalid": 0.9130434782608695,
+    "unclear": null,
+    "valid": 1.3076923076923077
+   },
+   "flagged_invalid_with_suggestion": 0,
+   "consensus_equals_suggested": 0
+  },
+  "openbookqa": {
+   "categories": {
+    "invalid": 2,
+    "valid": 48
+   },
+   "category_x_s1_flag": {
+    "invalid|True": 2,
+    "valid|False": 44,
+    "valid|True": 4
+   },
+   "category_x_unanimous": {
+    "invalid|False": 1,
+    "invalid|True": 1,
+    "valid|False": 48
+   },
+   "category_x_no_key": {
+    "invalid|False": 2,
+    "valid|False": 48
+   },
+   "category_x_helm_split": {
+    "invalid|test": 2,
+    "valid|test": 48
+   },
+   "margin_auc_invalid_vs_valid": 1.0,
+   "mean_top10_key_votes": {
+    "invalid": 0.5,
+    "unclear": null,
+    "valid": 7.645833333333333
+   },
+   "flagged_invalid_with_suggestion": 2,
+   "consensus_equals_suggested": 2
+  }
+ },
+ "note": "Fantastic Bugs categories (fb89.fb_category): MedQA first word valid / invalid; OpenBookQA first word correct -> valid, incorrect -> invalid; anything else unclear (left out). Units = distinct HELM questions. Flag = audit 77's rule on each benchmark's 10 most accurate included HELM Lite models. P2 MedQA flag rate invalid > valid; P3 MedQA margin AUC invalid vs valid >= 3/5; P4 MedQA flag rate on valid <= 1/4 (>= 10 rows); P5 OpenBookQA flag rate on valid <= 1/4 (>= 10 rows); P6 MedQA flag rate on invalid >= 1/3. Groups under 5 rows (10 for P4, P5) are undecidable. helm_split 'other' = a HELM split other than test (for med_qa: valid)."
+}

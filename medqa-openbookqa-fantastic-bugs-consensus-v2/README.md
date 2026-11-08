@@ -113,3 +113,47 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. Upstream: HELM 
 published run outputs keep their own terms; Fantastic Bugs' data is MIT; MedQA is MIT; OpenBookQA is Apache-2.0. Only
 split names, row numbers, ids, positions, letters, our categories, votes and counts are published, never question,
 option, review or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+The sealed v2 job ran on 2026-11-08 (20:19-20:22 UTC; unit tests passed, all nine fixtures matched, including the
+two v2 fixtures). Outputs: `results.json` and `rows.json` in this folder.
+
+**The amendment worked.** The MedQA universe is 1,000 questions (503 from MedQA's test split, 497 from its valid
+split). All 91 MedQA runs were included; every one of their 91,000 items was scored through `quasi_exact_match`, and
+our correct count is within 0.1% of HELM's for every run. The MedQA panel's accuracy runs from 81.1% to 86.9%. All 49
+MedQA rows were placed (21 exactly, 28 after the Mac Roman repair; 27 in the test split, 22 in the valid split), and
+Fantastic Bugs' key equals HELM's gold on all 49. OpenBookQA reproduced v1 exactly on all five checks.
+
+| # | Verdict | Numbers | Reading |
+| --- | --- | --- | --- |
+| P1 | HELD | MedQA: 91 of 91 models included, 49 of 49 rows placed, key = HELM gold on 49. OpenBookQA: 91 of 91, 50 of 50, 50 | The amendment fixed both causes |
+| P2 | **FAILED** | Flag on 18 of 23 *invalid* (78.3%) vs 23 of 26 *valid* (88.5%) | The headline: no separation, slightly the wrong way |
+| P3 | FAILED | Margin AUC 0.507 (23 invalid vs 26 valid) | Chance level |
+| P4 | FAILED | Flag on 23 of 26 *valid* (88.5%); at most 25% was predicted | |
+| P5 | HELD | OpenBookQA: flag on 4 of 48 *valid* (8.3%) | Same as v1 |
+| P6 | HELD | Flag on 18 of 23 *invalid* (78.3%); at least a third was predicted | |
+
+**What this says.** On MedQA the flag fires on almost every row Fantastic Bugs reviewed: 41 of the 49 (84%),
+against 85 of all 1,000 questions HELM evaluates (8.5%). Fantastic Bugs chose its rows with an item statistic that
+picks questions strong models answer worse than weak ones, and on MedQA that selection and our flag pick out very
+nearly the same questions. Within that pool the flag does not tell the items physicians faulted from those they
+accepted: its precision there is 18 of 41 (43.9%), no better than the share of *invalid* rows among all 49 reviewed
+(23 of 49, 46.9%). On average only 0.9 of the 10 strongest models pick the key on the *invalid* rows and 1.3 on the
+*valid* rows; all ten agree on one other option on 4 *invalid* and 6 *valid* rows.
+
+This is the first benchmark in the series where agreement of the strongest models against the key carries no
+information about expert review. On GSM8K (audit 86) 19 of 22 such flags were confirmed errors; on MMLU with
+Fantastic Bugs' reviews (audit 88) the flag fired on 60.5% of key questions and 3.7% of valid ones; on OpenBookQA here
+both incorrect keys were flagged with the reviewer's answer as the consensus. On these 49 MedQA items, the strongest
+models agree with each other against the key as often when physicians call the key valid as when they call the item
+invalid.
+
+**Limits.** 49 rows, all chosen by Fantastic Bugs' own statistic, so this says nothing about the flag's precision on
+the 951 MedQA questions they did not review (44 of the 85 flagged questions are among those). Fantastic Bugs'
+*invalid* covers missing information and ambiguity as well as wrong keys, and none of the 23 *invalid* MedQA rows
+names a replacement answer (`flagged_invalid_with_suggestion` 0), so we cannot check, as on OpenBookQA, whether the
+consensus is the reviewers' answer. Possible readings, not tested: the models share errors on clinical vignettes, or
+a *valid* verdict means the key is defensible rather than the only good answer.
+
+Split detail (exploratory): *invalid* rows 15 test, 8 valid split; *valid* rows 12 test, 14 valid split.

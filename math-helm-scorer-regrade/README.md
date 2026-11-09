@@ -133,3 +133,78 @@ Apache-2.0, which takes them from hendrycks/math, MIT). This write-up and any re
 MIT; HELM's outputs are published by Stanford CRFM. Only subjects, HELM instance ids, classes, routes, grades, counts
 and public model names are published, never problem, answer or model text. Authored by AI agents working in MV2's
 name (Munim, Inc.).
+
+## Results
+
+The sealed job ran on 2026-11-09 (02:53-02:57 UTC; the 7 unit tests passed and all fixtures matched). Outputs in this
+folder: `results.json` (totals, routes, flip classes, flips by subject, verdicts, every model's accuracy and rank
+under H and A, every run's inclusion status, and the ids of the hand-read sample) and `flips.json` (all 1,508
+predictions whose grade changes, by model, subject and HELM instance id; no text).
+
+**Structure.** 637 `math:` runs from 91 models (7 subjects each; no duplicate runs dropped), 39,767 predictions on 437
+level-1 questions. All 91 models were included. Our transcription of HELM's scorer equals HELM's recorded score on
+**39,767 of 39,767** predictions, and no question has two different references.
+
+**Correct predictions out of 39,767:**
+
+| Grader | Correct | Share | Mean of model scores (7-subject macro) |
+| --- | --- | --- | --- |
+| H (HELM as published) | 23,567 | 59.26% | 55.74% |
+| A (corrected grade) | 25,075 | 63.05% | 59.25% |
+
+| # | Verdict | Numbers |
+| --- | --- | --- |
+| P1 | HELD | 91 of 91 models included; scorer agreement 100%; 0 reference conflicts |
+| P2 | HELD | Net A - H = **+1,508** (1,508 up-flips, 0 down-flips) = **3.79%** of all predictions |
+| P3 | HELD | **1,309** up-flips of class `unboxed` |
+| P4 | HELD | **199** up-flips of class `value_format` (but see the hand-read sample: some are unreduced fractions) |
+| P5 | **FAILED** | **0 of 437** reference solutions lack an answer HELM can extract |
+| P6 | HELD | **29 models** change rank by 3 or more places |
+| P7 | HELD | 0 down-flips vs 1,508 up-flips |
+| P8 | HELD | **28 of 30** sampled up-flips are genuine (read below) |
+
+**Where the outputs put their answers.** 33,031 outputs (83.1%) have a boxed answer; 6,736 (16.9%) have none. Of
+those, A took an answer from a last `$...$` segment in 4,757 and from an "answer is" line in 287; it found nothing in
+1,690 (scored 0 by both graders); 2 used the `\fbox`/brace-less fallback.
+
+**Up-flips by subject:** prealgebra 500, algebra 418, intermediate algebra 215, geometry 143, counting and probability
+125, precalculus 79, number theory 28. No up-flip fell in the `gold_fallback`, `pred_fallback` or `other` classes.
+
+**Issue #4374 (P5 failed).** HELM's extractor finds a braced `\boxed{}` answer in every one of the 437 level-1
+reference solutions HELM Lite v1.13.0 uses, so the "both None scores 1.0" path is never reached in these published
+grades: there are no `both_none` credits and no down-flips at all. The hazard is real in the code (our fixtures
+reproduce it) but did not change any HELM Lite MATH score in this release. Levels 2-5 and other HELM suites were not
+checked.
+
+**The ranking.** Kendall's tau-b between the H and A macro accuracies is 0.925. One model enters the top 10 under A
+(qwen2-72b-instruct) and one leaves (qwen2.5-7b-instruct-turbo). The four largest gains are in models that often skip
+the box: qwen1.5-110b-chat 56.8% to 77.2% (rank 53 to 25; 30.0% of its outputs unboxed), phi-3-medium-4k-instruct
+61.1% to 73.0% (50 to 38), solar-pro-241126 56.7% to 69.0% (54 to 47) and jamba-1.5-mini 31.8% to 52.2% (71 to 63;
+53.3% unboxed). The 10 models with the most up-flips hold 38.1% of them. Per-model numbers for all 91 are in
+`results.json` (`per_model`).
+
+**The hand-read sample (P8).** Read on 2026-11-09 by AI agents working in MV2's name, by Method 5's rule (not by a
+human grader). By class:
+- *unboxed*, 26 of 26 genuine: the output ends on its own final answer without a box ("So, the simplified fraction
+  is $\frac{4}{5}$.", "The answer is: 7", a final displayed vector or expansion) and it equals the reference. In 4
+  of them (samples 1, 15, 16 and 23) the working shown before that answer contains a visible slip (for example an
+  arithmetic line whose two sides differ), yet the final answer is right. The frozen rule judges the final answer
+  only, as HELM's boxed grader does, so they count as genuine.
+- *value_format*, 2 of 4 genuine: `25000` against `25,\!000` and `\frac{15}{2}` against `7.5`. The other two are
+  boxed fractions that equal the reference but were never reduced (`\frac{8}{22}` for `\frac{4}{11}`, and
+  `\frac{93}{31}` for `3` in an output that says the fraction "cannot be simplified further"). A careful grader
+  would not accept these, and our `value` rule does.
+
+**What it means.** HELM Lite's published MATH grades under-credit correct answers on about 3.8% of its 39,767
+predictions (about three times audit 90's GSM8K rate), almost all because the output gives its final answer without
+`\boxed{}`. This never goes the other way in this release: no grade would fall. The gap is uneven (20.4 points for
+qwen1.5-110b-chat, 0.3 for gemini-1.5-pro-002), enough to move 29 models 3 or more places. The over-credit in #4374
+does not occur in HELM Lite v1.13.0's MATH set.
+
+**Post-hoc, not pre-registered.** The `unboxed` class alone (1,309, 3.29% of predictions) would clear P2's 0.5%
+threshold, so the headline does not depend on the `value_format` class. Half of the sampled `value_format` flips were
+unreduced fractions, so 199 is an upper bound for that class; a rule that accepts equal values only in lowest terms
+was not run. A grader who also required valid working would accept 24 of the 30 sampled up-flips.
+
+**Limits.** One HELM release (v1.13.0), level 1 only, first trial only; A's unboxed extractor is a heuristic; the
+sample is 30 of 1,508 flips and was read by AI agents, not a human; ranks are among HELM's 91 models only.

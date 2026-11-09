@@ -1,0 +1,30 @@
+{
+ "audit": 94,
+ "note": "Every tie record (old_tie or frac) in the included runs, by run name, instance id and perturbation, with HELM's recorded exact_match and predicted_index and the correct option indices; no text.",
+ "ties": [
+  {
+   "run": "commonsense:dataset=openbookqa,method=multiple_choice_separate_calibrated,model=together_gpt-neox-20b,data_augmentation=canonical",
+   "instance_id": "id5209",
+   "perturbation": "mild_mix",
+   "class": "old_tie",
+   "exact_match": 1.0,
+   "predicted_index": 0,
+   "correct": [
+    2
+   ],
+   "duplicate_option": false
+  },
+  {
+   "run": "commonsense:dataset=openbookqa,method=multiple_choice_separate_original,model=together_gpt-neox-20b,groups=ablation_multiple_choice",
+   "instance_id": "id5440",
+   "perturbation": null,
+   "class": "old_tie",
+   "exact_match": 1.0,
+   "predicted_index": 0,
+   "correct": [
+    1
+   ],
+   "duplicate_option": false
+  }
+ ]
+}

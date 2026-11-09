@@ -111,3 +111,53 @@ python job.py --out-dir out   # downloads about 300 HELM Classic runs (about 8 M
 Code is Apache-2.0. This write-up and any results are CC BY 4.0. HELM's outputs are published by Stanford CRFM (HELM
 is Apache-2.0). Only run names, instance ids, option indices, classes, counts and public model names are published,
 never question, option or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+The sealed job ran on 2026-11-09 (14:45-14:50 UTC; the unit tests passed and all fixtures matched). Outputs in this
+folder: `results.json` (inclusion of every run with its reason, class counts by scenario and model, ranks by group, the
+largest moves, verdicts) and `ties.json` (every tie record in the included runs by run, instance id and perturbation,
+with HELM's `exact_match`, `predicted_index` and the correct option indices; no text).
+
+**Structure.** The v0.4.0 index lists 8,526 runs; 360 use a `multiple_choice_separate_*` method (116 calibrated, 244
+original). **276 of 360 were included (76.7%)**: for every one of them our unperturbed mean equals HELM's published
+`exact_match`. Across their 343,000 records (all trials and perturbations) there are 0 `inconsistent`, 0 `unmatched`
+and 0 `missing` records.
+
+| # | Verdict | Numbers |
+| --- | --- | --- |
+| P1 | **FAILED** | 276 of 360 runs included (76.7%, frozen threshold 95%); fixtures, runs listed and `inconsistent` (0) passed |
+| P2 | HELD | 2 tie records |
+| P3 | HELD | 2 `old_tie`, 0 `frac`: HELM Classic's published numbers use the old rule |
+| P4 | HELD | 2 of 343,000 records (0.0006%) |
+| P5 | HELD | both ties are in one model, GPT-NeoX (20B) |
+| P6 | **FAILED** | largest move 0.002 (0.2 points) |
+| P7 | **FAILED** | 0 of 2 ties are in instances with a duplicate option |
+
+**Why P1 failed: our code, not HELM.** The 84 excluded runs are all of HELM Classic's v0.3.0 "vary multiple-choice
+strategy" ablation runs in three scenarios. In the 60 MMLU runs (5 subjects x 6 models x 2 methods), our `stats.json`
+lookup took the `valid` split's entry (11 instances in abstract algebra) while the records hold the test and valid
+splits together (111), so the means could not match. In the 12 BBQ and 12 LSAT-QA runs, the records carry no
+`exact_match` or `predicted_index` our code could read (all `missing`). The included 276 runs are BLiMP (4 phenomena),
+HellaSwag, OpenBookQA and TruthfulQA, every one reproduced exactly. We did not re-run with a fixed split filter.
+
+**Answer to #4363 for HELM Classic.** The fractional rule #4363 objects to produced no HELM Classic v0.4.0 number in
+these runs: there is no fractional `exact_match` anywhere. The older rule, which credits any tie that includes a correct
+option in full, did score two records, both from GPT-NeoX (20B) on OpenBookQA (one unperturbed, in the multiple-choice
+ablation with the original method: 0.420 published, 0.418 with first-argmax, which changes its rank inside that
+six-model ablation group; one in a perturbed copy of the calibrated canonical run, which does not enter the headline).
+Exact log-probability ties are about one in 170,000 records here.
+
+**The hand-read sample (both ties).** Read on 2026-11-09 by AI agents working in MV2's name. Neither tie involves
+duplicate options: in both, the four options are different words or short phrases, and the tied options include the
+first option (which HELM records as the prediction) and the correct one. We cannot tell from the archive why two different
+options received exactly the same score; both ties come from one model served through one API.
+
+**Post-hoc, not pre-registered.** Among the excluded runs, the classes were still counted: one MMLU (college chemistry)
+ablation run of GPT-NeoX (20B) with the original method holds 2 more `old_tie` records, and none of the 60 MMLU runs
+holds a `frac` record (the 24 BBQ and LSAT-QA runs could not be classified). This does not change any verdict.
+
+**Limits.** HELM Classic v0.4.0 only; 84 of 360 runs (MMLU, BBQ and LSAT-QA ablations) excluded by our own code; ties
+whose first top-scoring option is correct are invisible by design, and they grade the same under both rules; we read
+the archive's recorded `exact_match` and `predicted_index`, not raw log-probabilities. The current HELM rule (#4363)
+may still matter for newer suites run with current code; they were not checked here.

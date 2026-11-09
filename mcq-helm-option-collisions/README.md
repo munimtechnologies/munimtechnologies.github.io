@@ -126,3 +126,76 @@ HELM takes `normalize_text` from the QuAC scorer). This write-up and any results
 MedQA are MIT; OpenBookQA is Apache-2.0; HELM's outputs are published by Stanford CRFM. Only benchmarks, subjects,
 HELM instance ids, option letters, classes, counts and public model names are published, never question, option or
 model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+The sealed job ran on 2026-11-09 (10:21-10:25 UTC; the unit tests passed and all fixtures matched). Outputs in this
+folder: `results.json` (census, totals, unmapped kinds, ranks, verdicts, and every model's accuracy, rank, unmapped
+count and over-credits under H and I per benchmark) and `flips.json` (every prediction whose H and I differ, and every
+collision question, by benchmark, subject, HELM instance id and option letter; no text).
+
+**Structure.** 455 MMLU runs (91 models x 5 subjects), 91 MedQA runs and 91 OpenBookQA runs; no duplicate runs
+dropped; all 91 models included in every benchmark. 188,097 predictions in all (MMLU 51,597; MedQA 91,000; OpenBookQA
+45,500). Our transcription of HELM's scoring equals HELM's recorded main metric on **188,097 of 188,097**, and HELM's
+`mapped_output` equals our letter-to-text mapping on **187,031 of 187,031** mapped predictions.
+
+| # | Verdict | Numbers |
+| --- | --- | --- |
+| P1 | HELD | 91 of 91 models included in each benchmark; scorer agreement 100%; mapping agreement 100% |
+| P2 | HELD | **1** MedQA question (`id10954`) has a `quasi_only` collision (wrong option D normalises to gold C) |
+| P3 | HELD | **20** MedQA over-credits of 91,000 predictions = **0.022%** (threshold 0.2%) |
+| P4 | HELD | 0 models move 3 or more MedQA places; the largest move is 2 places; Kendall's tau-b(H, I) = 0.9996 |
+| P5 | **FAILED** | 10 questions with a `prefix_only` collision vs 7 with a `quasi_only` one: at least 5 held, at least twice as many did not |
+| P6 | **FAILED** | **0** evaluated questions repeat the gold option's text as a wrong option |
+| P7 | HELD | exactly **3** models have at least 1% of MedQA outputs unmapped (mistral-large-2402 41.5%, mistral-medium-2312 5.1%, mistral-small-2402 2.7%) |
+
+**Question census** (distinct evaluated questions; a question can be in two classes):
+
+| Benchmark | Questions | `identical` | `quasi_only` | `prefix_only` | Any collision |
+| --- | --- | --- | --- | --- | --- |
+| MMLU (5 subjects) | 566 | 0 | 6 | 7 | 11 |
+| MedQA | 1,000 | 0 | 1 | 3 | 4 |
+| OpenBookQA | 500 | 0 | 0 | 0 | 0 |
+
+MMLU has 567 evaluated instances per model but 566 distinct questions by stem, options and gold (one question occurs
+twice); no instance id is reused for different content in any benchmark.
+
+**Where it reaches a headline.** Only MedQA scores by `quasi_exact_match`, so only MedQA's one collision changes a
+published grade: 20 of 91 models chose the colliding wrong option D on `id10954` and HELM credited each of them in
+full (MedQA H 55,089 correct vs I 55,069). Each of those 20 models is over-credited by exactly 0.1 point of MedQA
+accuracy. The six MMLU `quasi_only` collisions change no MMLU headline, because MMLU's main metric is `exact_match`;
+they would reach only the secondary quasi metrics, which we did not re-score. No prediction was under-credited in any
+benchmark, and MMLU and OpenBookQA ranks are identical under H and I (tau-b 1.0).
+
+**The hand-read** (read on 2026-11-09 by AI agents working in MV2's name, by Method 5's rule, not by a human
+reviewer). All 7 `quasi_only` collision questions are **genuinely different answers**, not the same answer twice: in
+five the two options differ only by a sign (`+` against `-`, which HELM's normalisation deletes), in one only by a
+decimal point, and in one a bracketed one-letter symbol in the wrong option is lower-cased to `a` and then removed as
+an article, so two different expressions normalise to the same string. The MedQA collision is of the sign kind: the
+two options name opposite properties of the same thing. All 10 `prefix_only` collisions are also genuinely different
+answers (the longer option adds content that changes the answer, such as more digits or further items). None is a
+flawed item where crediting both letters would be defensible.
+
+**Unmapped outputs (format loss).** 1,066 outputs (0.57% of all predictions) name no option and score 0 under both
+graders: MMLU 330 (other 274, letter out of range 30, empty 26), MedQA 546 (other 460, empty 69, letter out of range
+17) and OpenBookQA 190 (other 136, letter out of range 33, empty 20, lower-case letter 1). They are concentrated: one
+model, mistral-large-2402, has 415 of the 546 MedQA ones (41.5% of its MedQA outputs; MedQA 48.9%, rank 73 of 91,
+while mistral-large-2407 scores 77.8%, rank 14), plus 18.7% of its MMLU and 5.4% of its OpenBookQA outputs.
+gpt-4-1106-preview has 11.1% of its MMLU outputs unmapped (63 of 567) but only 0.8% on MedQA. Because HELM Lite asks
+for a single output token, the archive cannot say which option these outputs meant, so no re-scoring can recover them.
+
+**What it means.** The over-credit described in #4358 is not only synthetic: it reaches one published HELM Lite
+headline, MedQA, through exactly one question in v1.13.0, and over-credits 20 of 91 models by 0.1 point each. That is
+far too small to move any model 3 places, and every colliding pair we read is a real difference in meaning, so
+scoring by option identity (the narrow fix #4358 suggests) would remove it without changing any other grade in these
+three benchmarks. A larger and separate effect in the same archives is format loss: a few models lose up to 41.5% of
+MedQA items to outputs that are not a single option letter, which says more about the one-token prompt format than
+about the models' medical knowledge.
+
+**Post-hoc, not pre-registered.** P5's ratio failed (10 vs 7), but the prefix hazard remains the more common class;
+`quasi_prefix_exact_match` is not a main metric in HELM Lite, so neither class's prefix count changes a headline. The
+comparison of the two mistral-large versions is descriptive only; we did not look at what the unmapped outputs say.
+
+**Limits.** One HELM release (Lite v1.13.0), three benchmarks, first trial only; MMLU has only HELM Lite's 5
+subjects; the census uses HELM's own normalisation and does not judge collisions under other metrics; the hand-read
+was done by AI agents, not a human; ranks are among HELM's 91 models only.

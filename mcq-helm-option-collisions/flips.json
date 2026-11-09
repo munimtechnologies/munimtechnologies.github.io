@@ -1,0 +1,439 @@
+{
+ "audit": 92,
+ "note": "Every prediction whose HELM score (H) differs from option identity (I), and every evaluated question whose gold option collides with a wrong option, by benchmark, subject, HELM instance id and option letter; no question, option or model text.",
+ "flips": [
+  {
+   "benchmark": "med_qa",
+   "model": "01-ai_yi-6b",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "allenai_olmo-7b",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "anthropic_claude-2.0",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "anthropic_claude-2.1",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "anthropic_claude-3-sonnet-20240229",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "anthropic_claude-instant-1.2",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "cohere_command",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "cohere_command-r-plus",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "deepseek-ai_deepseek-llm-67b-chat",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "google_gemini-1.0-pro-002",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "google_gemini-1.5-pro-001",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "google_text-bison@001",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "google_text-unicorn@001",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "microsoft_phi-3-small-8k-instruct",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "mistralai_mistral-7b-v0.1",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "qwen_qwen1.5-14b",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "qwen_qwen1.5-7b",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "tiiuae_falcon-40b",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "upstage_solar-pro-241126",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  },
+  {
+   "benchmark": "med_qa",
+   "model": "writer_palmyra-x-v3",
+   "subject": "-",
+   "instance_id": "id10954",
+   "direction": "over",
+   "class": "quasi_only",
+   "letter": "D",
+   "gold_letter": "C"
+  }
+ ],
+ "collision_questions": [
+  {
+   "benchmark": "med_qa",
+   "subject": "-",
+   "instance_id": "id10315",
+   "gold_letter": "B",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "D"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "med_qa",
+   "subject": "-",
+   "instance_id": "id10954",
+   "gold_letter": "C",
+   "collides": {
+    "identical": [],
+    "quasi_only": [
+     "D"
+    ],
+    "prefix_only": []
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 20
+  },
+  {
+   "benchmark": "med_qa",
+   "subject": "-",
+   "instance_id": "id11157",
+   "gold_letter": "C",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "D"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "med_qa",
+   "subject": "-",
+   "instance_id": "id12273",
+   "gold_letter": "C",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "D"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "abstract_algebra",
+   "instance_id": "id28",
+   "gold_letter": "A",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "D"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "abstract_algebra",
+   "instance_id": "id29",
+   "gold_letter": "C",
+   "collides": {
+    "identical": [],
+    "quasi_only": [
+     "D"
+    ],
+    "prefix_only": []
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "abstract_algebra",
+   "instance_id": "id32",
+   "gold_letter": "C",
+   "collides": {
+    "identical": [],
+    "quasi_only": [
+     "D"
+    ],
+    "prefix_only": []
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "abstract_algebra",
+   "instance_id": "id56",
+   "gold_letter": "C",
+   "collides": {
+    "identical": [],
+    "quasi_only": [
+     "B"
+    ],
+    "prefix_only": [
+     "D"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "abstract_algebra",
+   "instance_id": "id89",
+   "gold_letter": "B",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "D"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "abstract_algebra",
+   "instance_id": "id103",
+   "gold_letter": "A",
+   "collides": {
+    "identical": [],
+    "quasi_only": [
+     "C"
+    ],
+    "prefix_only": []
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "college_chemistry",
+   "instance_id": "id10",
+   "gold_letter": "D",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "B"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "college_chemistry",
+   "instance_id": "id13",
+   "gold_letter": "D",
+   "collides": {
+    "identical": [],
+    "quasi_only": [
+     "C"
+    ],
+    "prefix_only": [
+     "A",
+     "B"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "college_chemistry",
+   "instance_id": "id88",
+   "gold_letter": "C",
+   "collides": {
+    "identical": [],
+    "quasi_only": [
+     "B"
+    ],
+    "prefix_only": []
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "econometrics",
+   "instance_id": "id34",
+   "gold_letter": "B",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "A",
+     "C"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  },
+  {
+   "benchmark": "mmlu",
+   "subject": "econometrics",
+   "instance_id": "id121",
+   "gold_letter": "D",
+   "collides": {
+    "identical": [],
+    "quasi_only": [],
+    "prefix_only": [
+     "A"
+    ]
+   },
+   "gold_normalises_to_empty": false,
+   "over_credited_predictions": 0
+  }
+ ]
+}

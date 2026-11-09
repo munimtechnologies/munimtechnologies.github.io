@@ -1,0 +1,1758 @@
+{
+ "audit": 93,
+ "note": "Every first-trial AHELM output in the included runs that is empty after strip() (scored by HELM's guard) or punctuation-only (passes the guard, normalises to nothing), by run name and instance id, with HELM's published per-instance error rates; no text.",
+ "empty": [
+  {
+   "run": "fleurs:language=Bengali,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id909",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Bengali,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id396",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id304",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id305",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id381",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id528",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id304",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id112",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id409",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id410",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id567",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id568",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id409",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id410",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id567",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id568",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "instance_id": "id409",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "instance_id": "id410",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "instance_id": "id567",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id409",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id568",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id567",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id568",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id112",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id409",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id567",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=English,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id568",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Finnish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id22",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Finnish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id587",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Finnish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id589",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Finnish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id765",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Finnish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id809",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Hebrew,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id219",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Hebrew,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id484",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Hebrew,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id675",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Hebrew,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id722",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Hebrew,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id778",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Hebrew,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id213",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id785",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id800",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id561",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id787",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id155",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id173",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id146",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Thai,model=qwen_qwen2-audio-7b-instruct",
+   "instance_id": "id226",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id41",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id49",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id214",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id442",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id489",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id133",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id181",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id265",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id284",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id369",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id472",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id496",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id537",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id615",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id724",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id807",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs:language=Zulu,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id811",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id188",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id233",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id188",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id161",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id255",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id255",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "instance_id": "id255",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=female,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id255",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id116",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id197",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id44",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id213",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id44",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id212",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id213",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id44",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id212",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id213",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id44",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id212",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "instance_id": "id213",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id44",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id212",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "fleurs_fairness:gender=male,model=openai_whisper-1_gpt-4o-2024-11-20",
+   "instance_id": "id213",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech:model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id159",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech:model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-1.5-flash-001",
+   "instance_id": "id264",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-1.5-flash-002",
+   "instance_id": "id302",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-1.5-flash-002",
+   "instance_id": "id264",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-1.5-pro-001",
+   "instance_id": "id264",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-1.5-pro-002",
+   "instance_id": "id264",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.0-flash-001",
+   "instance_id": "id264",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.0-flash-exp",
+   "instance_id": "id264",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.0-flash-lite-001",
+   "instance_id": "id264",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id491",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1188",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id981",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id505",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id716",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id689",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1051",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id171",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id856",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id491",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id124",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1034",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id716",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id689",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id171",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id1345",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=female,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id626",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id989",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id258",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id844",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id935",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1049",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id466",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id989",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id844",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id1087",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id484",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id1097",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id564",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id157",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "librispeech_fairness:gender=male,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id476",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Dutch,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2936",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Dutch,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2936",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Dutch,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id2115",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-1.5-flash-001",
+   "instance_id": "id1101",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-1.5-flash-002",
+   "instance_id": "id1101",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-1.5-pro-001",
+   "instance_id": "id1101",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-1.5-pro-002",
+   "instance_id": "id1101",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-2.0-flash-001",
+   "instance_id": "id1101",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-2.0-flash-exp",
+   "instance_id": "id1101",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-2.0-flash-lite-001",
+   "instance_id": "id1101",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2053",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id962",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=French,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2053",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-flash-001",
+   "instance_id": "id2422",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-flash-001",
+   "instance_id": "id1129",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-flash-002",
+   "instance_id": "id2411",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-flash-002",
+   "instance_id": "id2422",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-flash-002",
+   "instance_id": "id1129",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-pro-001",
+   "instance_id": "id2411",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-pro-001",
+   "instance_id": "id2422",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-pro-001",
+   "instance_id": "id1129",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-pro-002",
+   "instance_id": "id2411",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-pro-002",
+   "instance_id": "id2422",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-1.5-pro-002",
+   "instance_id": "id1129",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.0-flash-001",
+   "instance_id": "id2422",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.0-flash-001",
+   "instance_id": "id1129",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.0-flash-exp",
+   "instance_id": "id2422",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.0-flash-exp",
+   "instance_id": "id1129",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.0-flash-lite-001",
+   "instance_id": "id2422",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.0-flash-lite-001",
+   "instance_id": "id1129",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1299",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2885",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2876",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2871",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2878",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2369",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2332",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2861",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2890",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1095",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2882",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1544",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1140",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2415",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id141",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1554",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1299",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2885",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1553",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2871",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2332",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2861",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1095",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2882",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1548",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1544",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2130",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1140",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id2415",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1554",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id1290",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=German,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id2631",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-1.5-flash-001",
+   "instance_id": "id1050",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-1.5-flash-001",
+   "instance_id": "id612",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-1.5-flash-002",
+   "instance_id": "id1050",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-1.5-pro-001",
+   "instance_id": "id1050",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-1.5-pro-002",
+   "instance_id": "id1050",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.0-flash-001",
+   "instance_id": "id1050",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.0-flash-exp",
+   "instance_id": "id1050",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.0-flash-lite-001",
+   "instance_id": "id1050",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id477",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id669",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id392",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id473",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id948",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id655",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id476",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Italian,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id253",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Polish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id56",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Polish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id115",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-1.5-flash-001",
+   "instance_id": "id833",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-1.5-flash-002",
+   "instance_id": "id474",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-1.5-flash-002",
+   "instance_id": "id557",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-1.5-flash-002",
+   "instance_id": "id833",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-1.5-pro-001",
+   "instance_id": "id833",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-1.5-pro-002",
+   "instance_id": "id833",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-2.0-flash-001",
+   "instance_id": "id833",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-2.0-flash-exp",
+   "instance_id": "id833",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-2.0-flash-lite-001",
+   "instance_id": "id833",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id134",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id283",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Portuguese,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id706",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.0-flash-lite-001",
+   "instance_id": "id2332",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1585",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id748",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id526",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1271",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1236",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id1598",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-flash-preview-05-20",
+   "instance_id": "id2",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1236",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "id1598",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id477",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id262",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id750",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "multilingual_librispeech:language=Spanish,model=openai_gpt-4o-audio-preview-2024-12-17",
+   "instance_id": "id2113",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_env_noise,level=1,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id159",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_env_noise,level=1,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_env_noise,level=2,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id159",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_env_noise,level=2,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_env_noise,level=3,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id159",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_env_noise,level=3,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_gnoise,level=1,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id159",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_gnoise,level=1,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_gnoise,level=2,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id159",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_gnoise,level=2,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_gnoise,level=3,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id159",
+   "published": {
+    "wer_score": 0.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=librispeech_gnoise,level=3,model=openai_gpt-4o-audio-preview-2024-10-01",
+   "instance_id": "id256",
+   "published": {
+    "wer_score": 0.0
+   }
+  }
+ ],
+ "punct_only": [
+  {
+   "run": "speech_robust_bench:subject=chime_far,model=google_gemini-2.0-flash-001",
+   "instance_id": "id2126",
+   "published": {
+    "wer_score": 1.0
+   }
+  },
+  {
+   "run": "speech_robust_bench:subject=chime_far,model=google_gemini-2.0-flash-exp",
+   "instance_id": "id2126",
+   "published": {
+    "wer_score": 1.0
+   }
+  }
+ ]
+}

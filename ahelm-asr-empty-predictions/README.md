@@ -118,3 +118,64 @@ the QuAC scorer). This write-up and any results are CC BY 4.0. AHELM's outputs a
 underlying speech datasets keep their own licences. Only run names, instance ids, metric names, classes, counts and
 public model names are published, never transcription or model text. Authored by AI agents working in MV2's name
 (Munim, Inc.).
+
+## Results
+
+The sealed job ran on 2026-11-09 (13:58-14:01 UTC; the unit tests passed and all fixtures matched). Outputs in this
+folder: `results.json` (group pages, every run's inclusion, classes and corrected means, every headline cell with its
+published, recomputed and corrected value and both ranks, verdicts) and `empties.json` (all 248 empty outputs and both
+punct_only outputs by run and instance id, with HELM's published per-instance scores; no text).
+
+**Structure.** Six of the seven group pages loaded (AMI has none, as expected). They list 482 runs; 468 were included,
+and for every included run our mean of HELM's per-instance values equals its `stats.json` mean. 306,373 records were
+scored. Of the 102 headline WER cells, 85 were linked to their runs and **all 85 equal the mean of their runs' means**.
+
+| # | Verdict | Numbers |
+| --- | --- | --- |
+| P1 | **FAILED** | 468 of 482 runs included (97.1%, threshold 99%); 85 of 102 cells reproduced (83.3%, threshold 95%); see below |
+| P2 | HELD | **248** empty outputs, and every one carries a published 0 |
+| P3 | HELD | 149 of 248 empty outputs (60.1%) are from Gemini models |
+| P4 | HELD | 248 of 306,373 records (0.081%) |
+| P5 | **FAILED** | largest cell rise 0.0076 WER (threshold 0.01) |
+| P6 | HELD | **16** models change rank in at least one table (14 in FLEURS Fairness, 2 in LibriSpeech Fairness) |
+| P7 | HELD | 0 runs with more than one reference per instance |
+
+**Why P1 failed: two gaps in our code, not in HELM.** (1) The 14 excluded runs are FLEURS Mandarin runs, whose main
+metric is `chinese_wer_score`; our code found no per-instance values under the names it reads, so it could not
+reproduce them. They are not part of the FLEURS WER cell. (2) The 17 unlinked cells are LibriSpeech's: that page's WER
+cells list no `run_spec_names`, so our code linked no runs to them. *Checked by hand after the run (post-hoc):* each
+LibriSpeech model has exactly one run, and its published run mean equals its published cell for all 17 models.
+
+**Where the empty outputs are.** By group: Multilingual LibriSpeech 107, FLEURS 63, LibriSpeech Fairness 39, FLEURS
+Fairness 25, Robust Speech Bench 12, LibriSpeech 2. By model: Gemini 2.5 Flash (05-20 preview) 69, GPT-4o Audio
+(Preview 2024-10-01) 61, Gemini 2.5 Pro (05-06 preview) 30, GPT-4o Audio (Preview 2024-12-17) 14, every other model 10
+or fewer (Qwen2.5-Omni 0). OpenAI's systems supply 98 of the 248, so the problem is not Gemini's alone. They make up
+248 of the 105,668 published per-instance scores of exactly 0 (0.23%). The two punct_only outputs (two Gemini 2.0 Flash
+versions on the same far-field Robust Speech Bench recording, only full stops) passed the guard and were scored 1.0, as
+they should be.
+
+**Headline effects.** The largest rises are small (0.0076 WER at most), but WER cells on these tables are close:
+
+- **FLEURS Fairness:** the leader changes. GPT-4o Transcribe + GPT-4o goes from 1st to 2nd and Gemini 2.5 Pro
+  (05-06 preview) from 4th to 1st; GPT-4o mini Transcribe + GPT-4o goes from 2nd to 4th, GPT-4o Audio (Preview
+  2024-12-17) from 3rd to 5th, and Whisper-1 + GPT-4o from 6th to 11th; 14 of 17 models change rank.
+- **LibriSpeech Fairness:** Gemini 1.5 Pro (001) and Gemini 2.5 Flash (05-20 preview) change rank (largest rise 0.0065).
+- **LibriSpeech** (post-hoc, from the run means above): GPT-4o Audio (Preview 2024-10-01) rises from 0.1129 to 0.1169
+  and swaps places with Qwen2-Audio Instruct (0.1133), ranks 14 and 15.
+- Multilingual LibriSpeech, FLEURS and Robust Speech Bench: no rank changes (largest rises 0.0051, 0.0054, 0.0020).
+
+**The hand-read.** Read on 2026-11-09 by AI agents working in MV2's name, from `empties.json` and the job log (an empty
+output has no text to read). In FLEURS Fairness, 18 of the 25 empty outputs fall on just four recordings (three in the
+male run, one in the female run), and each of those four was left empty by four or five OpenAI systems, including all
+three transcribe pipelines (Whisper-1, GPT-4o Transcribe, GPT-4o mini Transcribe), while the Gemini and Qwen models
+returned text on them. So most of the FLEURS Fairness reordering comes from four clips. We did not listen to the audio:
+whether those clips hold usable speech is open. Either way, HELM scored an empty transcription as perfect there.
+
+**What it means.** #4359's hazard is live in AHELM v1.0.0: 248 empty transcriptions are published as perfect (WER 0).
+They are rare (0.08% of records) and move no cell by a full WER point, but on the fairness tables, where models sit
+within a few thousandths of each other, valuing them at 1.0 changes the FLEURS Fairness leader and reorders 14 of 17
+models. The multi-reference `max` is inert on this leaderboard (one reference everywhere).
+
+**Limits.** AHELM v1.0.0 only; first trial; Mandarin runs (`chinese_wer_score`) not counted; AMI has no group page;
+the correction values an empty output at 1.0 as #4359 proposes, which is what jiwer gives against a non-empty
+reference; the audio of the empty-output clips was not checked.

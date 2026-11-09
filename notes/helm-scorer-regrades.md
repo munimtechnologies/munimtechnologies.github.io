@@ -48,17 +48,51 @@ Folder: [mcq-helm-option-collisions](../mcq-helm-option-collisions/). Bears on H
 - Pre-registered: 5 of 7 held; P5 (prefix collisions at least twice the quasi ones: 10 vs 7) and P6 (identical
   duplicates: 0) failed.
 
-## 4. Audit 93: empty outputs in AHELM's speech-recognition scores (pending)
+## 4. Audit 93: empty outputs in AHELM's speech-recognition scores
 
-## 5. Audit 94: log-probability ties in HELM Classic multiple choice (pending)
+Folder: [ahelm-asr-empty-predictions](../ahelm-asr-empty-predictions/). Bears on HELM issue #4359 (PR #4361).
+- AHELM v1.0.0, six WER run groups (AMI has no group page): 468 runs, 306,373 records; every included run reproduces
+  HELM's stored mean.
+- **248 empty transcriptions are published with WER 0** (a perfect score): 0.081% of records; Gemini 2.5 Flash 69,
+  GPT-4o Audio (2024-10-01) 61; OpenAI systems 98 of the 248, Gemini 149.
+- Valued at 1.0 as #4359 proposes, no cell rises by a full point (largest 0.0076), but on FLEURS Fairness the leader
+  changes (GPT-4o Transcribe 1st to 2nd, Gemini 2.5 Pro 4th to 1st) and 14 of 17 models change rank; 18 of its 25
+  empties fall on four recordings left empty by four or five OpenAI systems each.
+- Multi-reference `max` is inert (one reference per instance everywhere).
+- Pre-registered: 5 of 7 held; P1 failed on two gaps in our code (14 Mandarin runs not read; LibriSpeech's cells list
+  no runs, checked by hand afterwards) and P5 (a 0.01 rise) failed.
 
-Folder: [helm-classic-mc-ties](../helm-classic-mc-ties/). Bears on HELM issue #4363.
+## 5. Audit 94: log-probability ties in HELM Classic multiple choice
 
-## 6. Audit 95: BBQ bias scores in HELM Classic (pending)
+Folder: [helm-classic-mc-ties](../helm-classic-mc-ties/). Bears on HELM issue #4363 (PR #4364).
+- HELM Classic v0.4.0, 276 of 360 `multiple_choice_separate_*` runs included (BLiMP, HellaSwag, OpenBookQA,
+  TruthfulQA), 343,000 records; every included run reproduces HELM's published accuracy.
+- **No fractional tie score exists**: #4363's rule produced no HELM Classic number. The older rule (any tie that
+  includes a correct option scores 1) credited 2 records, both GPT-NeoX (20B) on OpenBookQA; the largest headline move
+  is 0.2 points. Neither tie involves duplicate option texts.
+- Pre-registered: 4 of 7 held; P1 failed because our code excluded 84 v0.3.0 ablation runs (an MMLU split lookup
+  and BBQ/LSAT-QA records it could not read); P6 and P7 failed.
 
-Folder: [helm-bbq-bias-regrade](../helm-bbq-bias-regrade/). Bears on HELM issues #4372 and #4368.
+## 6. Audit 95: BBQ bias scores in HELM Classic
 
-## 7. Recommendations for re-scoring HELM (so far)
+Folder: [helm-bbq-bias-regrade](../helm-bbq-bias-regrade/). Bears on HELM issues #4372 (PR #4373) and #4368.
+- 48 BBQ runs from 42 models; our transcription of `BBQMetric` reproduces all three published BBQ numbers for every
+  run; 999 of 1,000 test instances join the BBQ authors' `target_loc`; in the seven categories #4368 calls unaffected
+  our corrected target equals HELM's on 330 of 330.
+- **382 of 1,000 test instances** carry a target tag that differs from the authors' (all 262 Race_x_gender instances
+  have an empty target). As published, all 42 models have a negative (counter-stereotypical) unambiguous bias score;
+  with the authors' tags the scores spread around zero.
+- With both fixes, the ambiguous column is nearly unrelated to the published one (Kendall tau-b **0.213**): YaLM, first
+  as published, falls to 16th; T5 (11B) moves 29 places; 23 models change sign; 31 of 42 end up positive. The tag fix
+  (#4368) drives this (tau-b 0.282 alone) far more than the scaling fix (#4372, 0.889 alone).
+- Pre-registered: 6 of 7 held; P2 failed because #4368 counts a different quantity (bias-aligned answer, not the
+  target letter), so our 382 is larger than its 288 by construction.
+
+## 7. Audit 96: MedCalc-Bench in MedHELM (pending)
+
+Folder: [medcalc-helm-scorer-regrade](../medcalc-helm-scorer-regrade/). Bears on HELM issues #4351 and #4365.
+
+## 8. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -69,4 +103,10 @@ Folder: [helm-bbq-bias-regrade](../helm-bbq-bias-regrade/). Bears on HELM issues
    this removes 20 MedQA over-credits and changes no other grade.
 5. Report how many outputs name no option. A one-token answer format can cost a model far more than any scorer
    detail (up to 41.5% of MedQA items for one model).
-6. Publish per-instance scores, as HELM already does; that is what made these counts possible.
+6. Score an empty transcription as WER 1.0 (#4361) and list empty outputs per model: on AHELM's fairness tables a
+   handful of them decides the order.
+7. Re-publish HELM Classic's BBQ bias columns with the BBQ authors' `target_loc` tags: as published they mostly
+   measure a tagging artefact.
+8. Tie rules matter less than expected on archived log-probability grades: exact ties are about 1 in 170,000 records in
+   HELM Classic. Prefer the first-argmax rule anyway; it can never over-credit.
+9. Publish per-instance scores, as HELM already does; that is what made these counts possible.

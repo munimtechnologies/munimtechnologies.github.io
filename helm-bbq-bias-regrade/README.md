@@ -117,3 +117,78 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. HELM's outputs 
 is Apache-2.0); BBQ is by Parrish et al. (CC BY 4.0). Only run names, instance ids, BBQ example ids, categories,
 letters, counts and public model names are published, never question, answer or model text. Authored by AI agents
 working in MV2's name (Munim, Inc.).
+
+## Results
+
+The sealed job ran on 2026-11-09 (17:05-17:09 UTC; the unit tests passed and all fixtures matched). Outputs in this
+folder: `results.json` (join and agreement counts, affected instances by category, verdicts, exploratory numbers, and
+for every model its accuracy, ambiguous-only accuracy, ambiguous and unambiguous bias under H, A, T and AT, and both
+ranks) and `affected.json` (all 382 affected test instances by HELM instance id, BBQ category, example id and question
+index, with HELM's letters and the corrected ones; no text).
+
+**Structure (P1 held).** 48 `bbq:` runs with `multiple_choice_joint` from 42 models were listed and all 48 were
+included: our transcription of `BBQMetric` reproduces HELM's three published BBQ numbers for every run. 999 of the 1,000
+test instances joined to one BBQ row with a `target_loc` (1 is NA in the authors' file); 0 text conflicts; the BBQ label
+equals HELM's correct letter on every joined instance. In the seven categories #4368 calls unaffected, our corrected
+target equals HELM's on **330 of 330** instances, against 174 of 330 under the other reading of `target_loc`, so the
+reading we froze is the one HELM's working categories agree with.
+
+| # | Verdict | Numbers |
+| --- | --- | --- |
+| P1 | HELD | 48 of 48 runs included; 999 of 1,000 instances joined; 0 label mismatches; 330 of 330 agree in the unaffected categories |
+| P2 | **FAILED** | **382** affected test instances (frozen range 259-317); HELM's target letter is empty on all 262 Race_x_gender instances (this half held) |
+| P3 | HELD | ambiguous-only accuracy below overall accuracy for 34 of 42 models (81%) |
+| P4 | HELD | median move of the ambiguous score, A vs H: 0.0066 |
+| P5 | HELD | the unambiguous score moves by 0.02 or more for **42 of 42** models (median move 0.186) |
+| P6 | HELD | Kendall tau-b H vs AT = **0.213**; the largest move is 29 places |
+| P7 | HELD | **23** models change sign (both values at least 0.005 in size) |
+
+**Affected instances by category:** Race_x_gender 262 of 262 (HELM's target letter empty on all), Race_x_SES 74 of 181
+(50 empty, 24 on another answer), Race_ethnicity 35 of 113 (all empty), Gender_identity 11 of 114; 0 in the other seven
+categories.
+
+**Why P2 failed: a different count, not a different correction.** #4368 counts rows where HELM's *bias-aligned* answer
+(target on negative questions, non-target on non-negative ones) differs from `target_loc`; our frozen definition counts
+instances whose *target letter* differs. With an empty target, a non-negative question can still have a bias-aligned
+non-target that happens to match `target_loc` (the issue itself counts only 11,932 of the 15,960 Race_x_gender rows),
+so our count is larger by construction. We did not re-count under the issue's definition. The frozen verdict stands.
+
+**What the published columns show, and what the BBQ paper's definitions give on the same answers:**
+
+- **Unambiguous (disambiguated) column.** As published, all 42 models score below zero, from -0.356 (YaLM) to -0.078
+  (Cohere Command medium beta): every model looks counter-stereotypical. With the authors' target tags (T), the scores
+  run from -0.095 to +0.077 and are spread around zero (18 negative, 24 positive).
+- **Ambiguous column.** As published, 37 of 42 models are negative and YaLM is first (-0.250). With both fixes (AT),
+  31 of 42 are positive, 10 negative and one is zero to rounding. YaLM moves from rank 1 to rank 16 (+0.009); T5 (11B)
+  from 6 to 35; OPT (175B) from 3 to 24; Cohere large (2022-07-20) from 21 to 1; text-curie-001 from 14 to 2;
+  text-davinci-003 from 42 (the largest published value, 0.050) to 14 (0.003), the last mostly from #4372's scaling,
+  since its accuracy on ambiguous questions is 99.4% against 86.2% overall. Anthropic-LM v4-s3 has the largest value
+  under AT (0.166).
+- **Each fix alone (exploratory).** Kendall tau-b against the published column is 0.889 for #4372's scaling alone (A)
+  and 0.282 for #4368's tags alone (T): the tag bug drives the reordering.
+
+**The hand-read sample.** Read on 2026-11-09 by AI agents working in MV2's name (not by a human), from the job log: the
+first 25 affected instances (18 Race_x_gender, 3 Race_ethnicity, 3 Race_x_SES, 1 Gender_identity). HELM's target letter
+is empty in all 25. In 22 of them the corrected target is plainly the person the stereotype in the question is about;
+in the other 3 (non-negative questions in Race_x_gender and Race_x_SES whose logged text tail does not show which group
+the template targets) we could not tell from the log alone, and none looked wrong. In 11 of the 18 Race_x_gender
+instances, HELM's non-target letter sits on the person the corrected tags make the target. The mechanism follows from
+the rule in Method 2: when the target letter is empty and the non-target is not, a pick on a negative question can
+never count as biased, so every person-answer to such a question lands on the anti-stereotype side. Only ids and
+letters are published here; the texts stay in the job log.
+
+**What it means.** On HELM Classic's BBQ sample, the published bias columns mostly measure a tagging artefact. Because
+the target tag is empty or misplaced on 38% of the test instances, picks of the stereotyped answer are often counted as
+anti-stereotypical, which pushes every model's unambiguous score below zero and most ambiguous scores too. With the BBQ
+authors' tags and the paper's scaling, the ambiguous ordering is nearly unrelated to the published one (tau-b 0.21)
+and most models show a small stereotype-aligned bias rather than a counter-stereotypical one. Issue #4368's fix matters
+far more than #4372's, though #4372's changes single models (text-davinci-003) a lot.
+
+**Post-hoc, not pre-registered.** The hand-read tally by category above was made after the run. HELM marks both bias
+columns lower-is-better, so a strongly negative (counter-stereotypical) score ranks first; ranking by distance from zero
+instead gives tau-b -0.178 between H and AT (exploratory number from the job), so under that reading the published
+order is not just changed but close to unrelated or reversed.
+
+**Limits.** One HELM release (Classic v0.4.0), its 1,000-instance BBQ sample and three trials; `target_loc` from the
+BBQ authors' file is taken as ground truth; the 25 hand-read instances were read by AI agents; the newer HELM Safety
+BBQ runs (which use the same scenario code per #4368) were not checked here.

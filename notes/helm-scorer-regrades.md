@@ -32,15 +32,41 @@ Folder: [math-helm-scorer-regrade](../math-helm-scorer-regrade/). Bears on HELM 
 - Read check: 28 of 30 sampled up-flips genuine. The two misses are boxed fractions never reduced (`8/22` for
   `4/11`), so the 199 same-value class is an upper bound.
 
-## 3. Audit 92: option collisions in HELM's multiple-choice mapping (pending)
+## 3. Audit 92: option collisions in HELM's multiple-choice mapping
+
+Folder: [mcq-helm-option-collisions](../mcq-helm-option-collisions/). Bears on HELM issue #4358.
+- HELM Lite v1.13.0, MMLU (5 subjects), MedQA and OpenBookQA, 91 models each: 188,097 predictions; our
+  transcription equals HELM's recorded main metric on 188,097 of 188,097.
+- HELM scores these benchmarks by option *text*. Only MedQA uses `quasi_exact_match` as its main metric, and exactly
+  one MedQA question (`id10954`) has a wrong option that normalises to the gold's text: **20 of 91 models** chose it
+  and were credited in full (0.022% of MedQA predictions; 0.1 point each; largest rank move 2 places).
+- Census: 7 questions with a `quasi_only` collision (6 MMLU, 1 MedQA) and 10 with a `prefix_only` one; no question
+  repeats the gold text as a wrong option. Every colliding pair read (by AI agents) is a genuinely different answer:
+  sign differences, a decimal point, and a one-letter symbol removed as the article "a".
+- Larger, separate: **1,066 outputs (0.57%)** name no option letter and score 0; mistral-large-2402 alone loses
+  41.5% of its MedQA items this way. With one output token these cannot be recovered from the archive.
+- Pre-registered: 5 of 7 held; P5 (prefix collisions at least twice the quasi ones: 10 vs 7) and P6 (identical
+  duplicates: 0) failed.
 
 ## 4. Audit 93: empty outputs in AHELM's speech-recognition scores (pending)
 
-## 5. Recommendations for re-scoring HELM (so far)
+## 5. Audit 94: log-probability ties in HELM Classic multiple choice (pending)
+
+Folder: [helm-classic-mc-ties](../helm-classic-mc-ties/). Bears on HELM issue #4363.
+
+## 6. Audit 95: BBQ bias scores in HELM Classic (pending)
+
+Folder: [helm-bbq-bias-regrade](../helm-bbq-bias-regrade/). Bears on HELM issues #4372 and #4368.
+
+## 7. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
 2. Compare by value only after reduction (`8/22` should not match `4/11` where the problem asks for lowest terms).
 3. Keep the "no extractable answer scores 0" fix (#4378) even though it changes no v1.13.0 MATH grade: it guards
    other levels and suites.
-4. Publish per-instance scores, as HELM already does; that is what made these counts possible.
+4. Score multiple-choice answers by option identity (the letter), not by the option's normalised text: in HELM Lite
+   this removes 20 MedQA over-credits and changes no other grade.
+5. Report how many outputs name no option. A one-token answer format can cost a model far more than any scorer
+   detail (up to 41.5% of MedQA items for one model).
+6. Publish per-instance scores, as HELM already does; that is what made these counts possible.

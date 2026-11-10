@@ -153,10 +153,15 @@ Folder: [helm-synthetic-reasoning-operators](../helm-synthetic-reasoning-operato
 - With an operator-aware grade, every model's cell falls (largest: Llama 2 13B, 0.324 to 0.190); 26 of 69 models move
   3 or more places (Kendall tau-b 0.917; code-davinci-002 stays first). For the weakest models most of the published
   score is operator-blind (Cohere small 2022-07-20: 0.121 published, 0.013 operator-aware).
-- A hand-read (induction mode only, by AI agents) found the operator-aware grade is itself generous: 10 of 10 read
-  credits that it keeps have the right operators in the wrong places. So the share of credits for a wrong pattern is
-  between 32.9% and 42.9%. A post-hoc follow-up with a position-aware grade is queued.
 - Pre-registered: 6 of 7 held.
+- **Follow-up (post-hoc, descriptive;** [followup-positions](../helm-synthetic-reasoning-operators/followup-positions/)**):**
+  a position-aware grade finds that 5,836 of the 5,843 credits the operator-aware grade still kept without an exact
+  match put the operators in the wrong places; only 7 differ in formatting (a stray `|`, or `**` for `* *`). So
+  **24,981 of 58,270 published credits (42.9%) are for a wrong pattern** (induction 64.8%, variable substitution
+  44.7%, pattern match 37.9%), and each model's right-pattern score is its exact-match score to within 7 records
+  column-wide. 29 of 69 models move 3 or more places (tau-b 0.910); Llama 2 13B falls 0.155; for 39 of 69 models more
+  than half of the published cell is wrong-pattern credit. A hand-read of 54 credits from all three modes (by AI
+  agents) agreed with every class.
 
 ## 11. Recommendations for re-scoring HELM (so far)
 
@@ -186,5 +191,6 @@ Folder: [helm-synthetic-reasoning-operators](../helm-synthetic-reasoning-operato
 13. Put run names on the score cells of every group page (AHELM's AudioCaps page keeps them only on the model cell;
     in audit 93 LibriSpeech's score cells listed none), so a published cell can be traced to its runs without guessing.
 14. Do not score symbolic answers with a normaliser that strips punctuation: for synthetic reasoning, use exact match
-    after collapsing case and spaces, or a normaliser that keeps `+ - * =`. Check every other quasi-exact column for
-    answers whose meaning lives in punctuation.
+    after collapsing case and spaces (the follow-up shows this differs from the correct-pattern count by only 7 of
+    58,270 credits), or a normaliser that keeps `+ - * =`. Check every other quasi-exact column for answers whose
+    meaning lives in punctuation.

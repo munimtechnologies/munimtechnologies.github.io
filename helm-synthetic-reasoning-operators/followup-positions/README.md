@@ -68,3 +68,64 @@ Code is Apache-2.0 (`normalize_text`, `exact_match` and `quasi_exact_match` are 
 Apache-2.0). This write-up and any results are CC BY 4.0. HELM Classic's outputs are published by Stanford CRFM. Only
 model names, HELM instance ids, trials, classes and counts are published, never prompts, references or model text.
 Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+Graded 2026-11-10 from the sealed job `helm-synreason-positions-v1` (finished 21:40 UTC; unit tests passed).
+Outputs: [`results.json`](results.json) (totals, classes by mode, every model's cells and ranks under four grades)
+and [`positions.json`](positions.json) (all 5,843 operator-aware credits that are not exact, by run, instance id,
+trial and class; no text). **Every gate passed and both stated expectations were met.**
+
+**Gates.** All fixtures matched; 207 runs listed, 207 included; audit 99's totals reproduced exactly (exact 33,282;
+quasi-exact 58,270; operator-aware 39,125; operator-blind 19,145; other 5,843); 69 of 69 cells match a published EM
+cell.
+
+**Classes of the 58,270 published credits.**
+
+| Class | Credits | Share |
+| --- | --- | --- |
+| `exact` | 33,282 | 57.1% |
+| `format_only` | 7 | 0.01% |
+| `ops_misplaced` | 5,836 | 10.0% |
+| `ops_blind` | 19,145 | 32.9% |
+
+So 5,836 of the 5,843 operator-aware credits that are not exact (99.9%) have the gold's operators in the wrong
+places (E1 met; the threshold was half). Only 7 differ from the gold in formatting alone. The pattern-exact grade
+credits **33,289** answers, and the credits for a wrong pattern are **24,981 of 58,270 (42.9%)**: the upper bound of
+audit 99, less 7.
+
+**By mode** (share of each mode's credits that are a wrong pattern, `ops_blind` + `ops_misplaced`):
+
+| Mode | Credits | Exact | Format only | Misplaced | Operator-blind | Wrong-pattern share |
+| --- | --- | --- | --- | --- | --- | --- |
+| induction | 3,839 | 1,352 | 0 | 276 | 2,211 | 64.8% |
+| pattern_match | 27,134 | 16,852 | 0 | 3,171 | 7,111 | 37.9% |
+| variable_substitution | 27,297 | 15,078 | 7 | 2,389 | 9,823 | 44.7% |
+
+**Cells and ranks.** Because only 7 credits separate the two grades, the pattern-exact cells are within 0.0013 of the
+exact-match cells, and Kendall tau-b with the published cells is **0.910** for both (E2 met; the threshold was 0.8;
+the operator-aware grade gave 0.917). **29 of 69 models move 3 or more places** (26 under the operator-aware grade).
+The largest fall is 0.155 (Llama 2 13B: 0.324 published, 0.169 pattern-exact; 17th to 20th). code-davinci-002 stays
+first (0.540 to 0.501) and GPT-3.5 Turbo 0613 second; text-davinci-003 and Palmyra X swap 3rd and 4th. Further down,
+Cohere Command xlarge beta goes from 25th to 35th, Cohere xlarge (2022-11-08) from 31st to 38th and Mistral 7B v0.1
+from 7th to 10th, while LLaMA 7B rises from 54th to 44th, Falcon 40B Instruct from 36th to 27th and LLaMA 13B from
+37th to 29th. (Post-hoc, counted by hand from `results.json`: for **39 of the 69 models**, more than half of the
+published cell is credit for a wrong pattern.)
+
+**Hand-read (log only; no text published).** This time the job spread its prints across all three modes by a stable
+hash, capped per mode and class: 24 operator-blind credits, 24 misplaced credits and 6 of the 7 format-only credits.
+Read by AI agents, not a human: **all 24 misplaced credits are wrong patterns** (for example, the gold's operators
+moved from between two variables to before them, or a closing `=` moved inside), and so are all 24 operator-blind
+credits (operators dropped, added or changed). 5 of the 6 format-only credits are the gold followed by a stray `|`,
+and 1 writes the gold's `* *` as `**`; we count all 6 as the right pattern. The gold strings in this scenario are
+symbol sequences, not equations with equivalent rewritings, so a different token order is a different answer.
+
+**Reading.** In HELM Classic's synthetic-reasoning (abstract symbols) column as published, **42.9% of the credited
+answers are the wrong pattern**; the true right-pattern score of each model is, to within 7 records across the whole
+column, its exact-match score. The table's top survives, but the column's quasi-exact metric adds between 0.034 and
+0.155 to every model with a non-zero score. A fix for this scenario is exact match after collapsing case and spaces
+(which our pattern-exact grade is, apart from articles and non-operator punctuation).
+
+**Limits.** Post-hoc and descriptive, not a blind pre-registration (stated above). One release, one column, test
+split, unperturbed records. The pattern-exact grade is our own; it ignores articles and punctuation other than
+`+ - * =`, which this scenario's golds never use as content as far as we saw.

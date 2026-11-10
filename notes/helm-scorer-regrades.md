@@ -127,17 +127,38 @@ Folder: [helm-safety-bbq-bias-regrade](../helm-safety-bbq-bias-regrade/). Bears 
 ## 9. Audit 98: dropped judge ratings on AHELM (a negative result)
 
 Folder: [ahelm-judge-dropped-ratings](../ahelm-judge-dropped-ratings/). Bears on HELM issues #4345 and #4344.
-- #4345: when the GPT-4o judge's reply has no parseable `Rating: N`, HELM leaves the rating out of the mean. On
-  AHELM v1.0.0's two Air-Bench Chat tables (68 runs, 17 systems), **0 of 37,281 requested ratings were dropped**: every
-  run's judge count equals its number of instances, every per-instance record has a whole rating from 1 to 5, and all
-  34 cells are reproduced by the pooled rule. So the silent drop changes no published number there.
+- #4345: when the GPT-4o judge's reply has no parseable `Rating: N`, HELM leaves the rating out of the mean. On all
+  three of AHELM v1.0.0's judged tables (AudioCaps, Air-Bench Chat knowledge and reasoning; 85 runs, 17 systems),
+  **0 of 54,281 requested ratings were dropped**: every run's judge count equals its number of instances, every
+  per-instance record has a whole rating from 1 to 5, and all 51 cells are reproduced by the pooled rule. So the
+  silent drop changes no published number in this release.
 - #4344 (a score planted in the model's own output): no model output in these runs contains a string HELM's judge
   regex would read.
-- AudioCaps, the third judged table, was not read: its group page lists run names on the model cell, which our code
-  did not look at (a gap like LibriSpeech's in audit 93). A v2 job covers it.
-- Pre-registered: 1 of 7 held (P3); P1 failed on that gap, and P2 and P4 to P7 failed because nothing was dropped.
+- The judge rates audio captions far lower than chat answers: on AudioCaps 8,945 of 17,000 ratings are 1 and only
+  118 are 5.
+- v1 missed AudioCaps (its group page lists run names on the model cell, which our code did not look at, a gap like
+  LibriSpeech's in audit 93); v2 fixed only that. Pre-registered: v1 1 of 7 held (P3); v2 2 of 7 (P1, P3); P2 and P4
+  to P7 failed because nothing was dropped.
 
-## 10. Recommendations for re-scoring HELM (so far)
+## 10. Audit 99: operators erased in HELM Classic's synthetic reasoning
+
+Folder: [helm-synthetic-reasoning-operators](../helm-synthetic-reasoning-operators/). No HELM issue reported this.
+- HELM Classic v0.4.0's "Synthetic reasoning (abstract symbols)" column is scored by `quasi_exact_match`, whose
+  normaliser removes all punctuation, and with it every operator the scenario uses (`+ - * =`). So `X = Y + Y` matches
+  `X + Y = Y`.
+- 207 runs (69 models x 3 modes), 242,565 records; every stored score, run mean and all 69 published cells reproduced.
+- **19,145 of the 58,270 published credits (32.9%) have a different operator sequence from the gold's** (14,990 other
+  operators, 3,748 the same operators reordered, 407 no operators). By mode: induction 57.6%, variable substitution
+  36.0%, pattern match 26.2% (pre-registered P3, which expected pattern match highest, failed).
+- With an operator-aware grade, every model's cell falls (largest: Llama 2 13B, 0.324 to 0.190); 26 of 69 models move
+  3 or more places (Kendall tau-b 0.917; code-davinci-002 stays first). For the weakest models most of the published
+  score is operator-blind (Cohere small 2022-07-20: 0.121 published, 0.013 operator-aware).
+- A hand-read (induction mode only, by AI agents) found the operator-aware grade is itself generous: 10 of 10 read
+  credits that it keeps have the right operators in the wrong places. So the share of credits for a wrong pattern is
+  between 32.9% and 42.9%. A post-hoc follow-up with a position-aware grade is queued.
+- Pre-registered: 6 of 7 held.
+
+## 11. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -160,7 +181,10 @@ Folder: [ahelm-judge-dropped-ratings](../ahelm-judge-dropped-ratings/). Bears on
 10. Publish per-instance scores, as HELM already does; that is what made these counts possible.
 11. Keep every run that a release lists in the public bucket at the suite the index names, and store the final answer
     next to any reasoning text, so each published number can be checked.
-12. Still count unparsed judge replies (#4345) even though AHELM's Air-Bench Chat tables dropped none: a stored
+12. Still count unparsed judge replies (#4345) even though AHELM's three judged tables dropped none: a stored
     "requested vs rated" count per run would show at a glance that a judged mean is complete.
 13. Put run names on the score cells of every group page (AHELM's AudioCaps page keeps them only on the model cell;
     in audit 93 LibriSpeech's score cells listed none), so a published cell can be traced to its runs without guessing.
+14. Do not score symbolic answers with a normaliser that strips punctuation: for synthetic reasoning, use exact match
+    after collapsing case and spaces, or a normaliser that keeps `+ - * =`. Check every other quasi-exact column for
+    answers whose meaning lives in punctuation.

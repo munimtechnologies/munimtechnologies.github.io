@@ -8,6 +8,10 @@ mean instead of lowering it, and the published mean is over fewer ratings than w
 
 This module counts those drops from the published archive and re-values each dropped rating at 1, the lowest
 rating the rubric allows. Apache-2.0.
+
+v2 (2026-11-10, after the v1 job): judge_cells also reads the run names from the row's first (model) cell when the
+judge cell carries none. The AudioCaps group page of AHELM v1.0.0 stores run_spec_names only on the model cell, so
+v1 listed no AudioCaps runs. Nothing else changed.
 """
 
 import math
@@ -117,7 +121,9 @@ def corrected_mean(total, judged, dropped, low=LOW_RATING):
 
 def judge_cells(group_doc):
     """The judge column of a group's first (aggregate) table: [(model label, published value, run names)].
-    The column is the first header whose value contains 'Judge Critique'; rows without a numeric value are skipped."""
+    The column is the first header whose value contains 'Judge Critique'; rows without a numeric value are skipped.
+    Run names come from the judge cell's run_spec_names, or (v2) from the row's first cell when the judge cell has
+    none, as on AHELM's AudioCaps page."""
     if not isinstance(group_doc, list) or not group_doc or not isinstance(group_doc[0], dict):
         return None
     t = group_doc[0]
@@ -134,8 +140,10 @@ def judge_cells(group_doc):
         v = cell.get("value")
         if not is_number(v):
             continue
-        label = (row[0] or {}).get("value") if isinstance(row[0], dict) else None
-        out.append((str(label), float(v), list(cell.get("run_spec_names") or [])))
+        first = row[0] if isinstance(row[0], dict) else {}
+        label = first.get("value") if first else None
+        names = cell.get("run_spec_names") or first.get("run_spec_names") or []
+        out.append((str(label), float(v), list(names)))
     return out
 
 

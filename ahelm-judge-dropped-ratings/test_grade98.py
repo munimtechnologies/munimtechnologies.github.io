@@ -10,6 +10,10 @@ Hand traces
   judge value True is a bool, not a number (unjudged). judged 3, sum 4 + 5 + 2.5 = 11.5.
 - corrected_mean(10, 3, 1) = 11 / 4 = 2.75; (8, 2, 0) = 4.0; (0, 0, 0) -> None.
 - stat_entry skips the perturbed entry and the junk string; bleu_4 is absent -> None.
+- judge_cells on FIX_GROUP: column 1 ("GPT-4o Judge Critique"); M1 keeps its cell's two run names; M2's value None is
+  skipped; M3 one run name; (v2) M4's judge cell has no run names, so the model cell's ["audiocaps:model=m4"] is used
+  and the int 2 becomes 2.0; M5 has names on both cells and the judge cell's ["a:model=m5"] wins. The second table
+  is ignored. A header without "Judge Critique" -> None; [] and None -> None.
 - cell_rule: [(500, 1500), (500, 1600)] pooled 3100 / 1000 = 3.1 -> 'pooled'; [(400, 1200), (500, 2000)] pooled
   3200 / 900 = 3.556, mean of means (3.0 + 4.0) / 2 = 3.5 -> 'mean_of_means' for 3.5 and None for 3.6; an empty list
   or a zero count -> None.
@@ -74,6 +78,13 @@ class TestGrade98(unittest.TestCase):
         self.assertIsNone(g.judge_cells(C.FIX_GROUP_NO_COL))
         self.assertIsNone(g.judge_cells([]))
         self.assertIsNone(g.judge_cells(None))
+
+    def test_judge_cells_model_cell_names(self):
+        # v2: AudioCaps-style row, run names only on the model cell
+        doc = [{"header": [{"value": "Model"}, {"value": "GPT-4o Judge Critique"}],
+                "rows": [[{"value": "Q", "run_spec_names": ["audiocaps:model=q"]},
+                          {"value": 2.673, "description": "min=1, mean=2.673, max=5, sum=2673 (1000)"}]]}]
+        self.assertEqual(g.judge_cells(doc), [("Q", 2.673, ["audiocaps:model=q"])])
 
     def test_cell_rule(self):
         for (value, runs), want in C.FIX_RULES:

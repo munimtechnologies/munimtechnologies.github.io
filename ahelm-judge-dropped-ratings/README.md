@@ -154,3 +154,36 @@ two of the three judged tables; AudioCaps is pending v2.
 replies (they are not stored), so we cannot tell whether HELM re-requested ratings that failed to parse before
 writing these files. The issue's other paths (`ModelCritiqueClient`, Reka Vibe-Eval) are not measured. Nothing in the
 pre-registered part above was changed.
+
+## Results, v2 (AudioCaps)
+
+Graded 2026-11-10 from the sealed job `ahelm-judge-dropped-ratings-v2` (finished 13:42 UTC; unit tests and every
+fixture passed, including the new one for run names that sit only on the model cell). v2 changes one thing in our
+code: when a judge cell has no run names, the reader takes them from the row's first (model) cell. The predictions,
+thresholds and everything else are unchanged. Outputs: [`results-v2.json`](results-v2.json); the v2 code replaces
+the v1 files in this folder (v1's results stay in `results.json`). **With all three tables read, 2 of 7 predictions
+held (P1 and P3); P2, P4 to P7 failed because no rating was dropped.** The v1 verdict above (1 of 7, P1 failed
+because of our code) stays as it was graded; v2 only fixes our reader.
+
+| # | Verdict (v2) | Number (all three tables, 85 runs, 17 systems) |
+| --- | --- | --- |
+| P1 | HELD | fixtures yes; 3 pages with a judge column; 85 runs listed; 85 of 85 included; 51 of 51 cells rebuilt |
+| P2 | FAILED | **0** ratings dropped of 54,281 requested |
+| P3 | HELD | 0 of 54,281 (0%) |
+| P4 | FAILED | no drops to concentrate |
+| P5 | FAILED | largest cell fall 0.0 in every table |
+| P6 | FAILED | 0 rank changes in every table |
+| P7 | FAILED | no dropped instances to classify |
+
+**AudioCaps.** 17 runs (one per system), 17,000 ratings requested and 17,000 averaged; every per-instance record has
+a numeric judge value and every run mean matches HELM's. All 17 AudioCaps cells are rebuilt. The AudioCaps ratings
+(the v2 totals minus the Air-Bench Chat totals above) are 1: 8,945; 2: 4,223; 3: 2,845; 4: 869; 5: 118, so the GPT-4o
+judge rates audio captions much lower than chat answers. No model output contains a string the judge regex would read
+(`rating_text` 0 across all 85 runs).
+
+**Reading.** HELM issue #4345's silent drop is a real code path, but it did not fire anywhere on AHELM v1.0.0's three
+judged headline columns: 54,281 of 54,281 requested ratings were counted. A fix would change no published number in
+this release. It would still matter for future runs where the judge's reply format drifts.
+
+**Limits.** As above. The rating histogram for AudioCaps is derived by subtraction from two job outputs, not printed
+by the job directly.

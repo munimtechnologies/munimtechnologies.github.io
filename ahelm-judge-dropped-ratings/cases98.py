@@ -1,4 +1,8 @@
-"""Audit 98: data source, gates, thresholds and the hand-traced fixtures (traces in test_grade98.py). Apache-2.0."""
+"""Audit 98: data source, gates, thresholds and the hand-traced fixtures (traces in test_grade98.py). Apache-2.0.
+
+v2 (2026-11-10): FIX_GROUP gains rows M4 (run names only on the model cell, as on AHELM's AudioCaps page) and M5
+(run names on both cells; the judge cell's list is used). Gates, thresholds and every other fixture are unchanged.
+"""
 
 from fractions import Fraction
 
@@ -75,10 +79,14 @@ FIX_GROUP = [
     {"title": "", "header": [{"value": "Model"}, {"value": "GPT-4o Judge Critique"}, {"value": "# eval"}],
      "rows": [[{"value": "M1"}, {"value": 3.0, "run_spec_names": ["a:model=m1", "b:model=m1"]}, {"value": 1000}],
               [{"value": "M2"}, {"value": None}, {"value": 5}],
-              [{"value": "M3"}, {"value": 2.5, "run_spec_names": ["a:model=m3"]}, {"value": 500}]]},
+              [{"value": "M3"}, {"value": 2.5, "run_spec_names": ["a:model=m3"]}, {"value": 500}],
+              [{"value": "M4", "run_spec_names": ["audiocaps:model=m4"]}, {"value": 2}, {"value": 1000}],
+              [{"value": "M5", "run_spec_names": ["x:model=m5"]}, {"value": 1.5, "run_spec_names": ["a:model=m5"]},
+               {"value": 10}]]},
     {"title": "sub", "rows": []},
 ]
-FIX_GROUP_CELLS = [("M1", 3.0, ["a:model=m1", "b:model=m1"]), ("M3", 2.5, ["a:model=m3"])]
+FIX_GROUP_CELLS = [("M1", 3.0, ["a:model=m1", "b:model=m1"]), ("M3", 2.5, ["a:model=m3"]),
+                   ("M4", 2.0, ["audiocaps:model=m4"]), ("M5", 1.5, ["a:model=m5"])]
 FIX_GROUP_NO_COL = [{"title": "", "header": [{"value": "Model"}, {"value": "BLEU-4"}], "rows": []}]
 # cell_rule(value, [(count, sum)], tol)
 FIX_RULES = [

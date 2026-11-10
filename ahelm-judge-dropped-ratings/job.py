@@ -12,6 +12,9 @@ to results.json and unjudged.json; model output text is printed to the job log o
 Gates before any verdict: the hand-traced fixtures match; all 3 group pages load; at least 50 runs; at least 95% of
 listed runs download, have num_respondents 1, list every instance once, and reproduce HELM's count and mean
 (within 1e-6); at least 90% of headline cells are rebuilt from their runs (pooled or mean of means, within 1e-6).
+
+v2 (2026-11-10): the only change is in grade98.judge_cells, which now also takes run names from the model cell (the
+v1 job listed no AudioCaps runs because that page keeps them there). Gates, thresholds and predictions unchanged.
 Usage: python job.py --out-dir /out (network required). Apache-2.0.
 """
 
@@ -27,6 +30,7 @@ import cases98 as C
 import grade98 as g
 
 UA = {"User-Agent": "mv2-eval-reliability-audits/1.0 (research; contact mv2@munimtech.com)"}
+VERSION = "v2"
 
 
 def _get(url, tries=4):
@@ -99,6 +103,7 @@ def main():
     os.makedirs(args.out_dir, exist_ok=True)
 
     fx = fixture_ok()
+    print("[version] %s" % VERSION)
     print("[fixture] %s" % fx)
     if not all(fx.values()):
         raise SystemExit("fixture mismatch -- aborting before real data")
@@ -192,8 +197,8 @@ def main():
     print("[P1] %s" % p1_parts)
     if groups_with_cells == 0 or inc_share < C.ABORT_RUNS_REPRODUCED:
         with open(os.path.join(args.out_dir, "results.json"), "w", encoding="utf-8") as fh:
-            json.dump({"audit": 98, "aborted": True, "fixture": fx, "p1_parts": p1_parts, "group_errors": group_err,
-                       "runs": runs_out}, fh, indent=1, ensure_ascii=True)
+            json.dump({"audit": 98, "version": VERSION, "aborted": True, "fixture": fx, "p1_parts": p1_parts,
+                       "group_errors": group_err, "runs": runs_out}, fh, indent=1, ensure_ascii=True)
         raise SystemExit("group or reproduction gate failed -- aborting (diagnostics in results.json)")
 
     # ----- Census over included runs -----
@@ -277,6 +282,7 @@ def main():
 
     out = {
         "audit": 98,
+        "version": VERSION,
         "slug": "ahelm-judge-dropped-ratings",
         "dataset": ("Per-instance outputs and stats of AHELM (HELM audio) suite %s, Stanford CRFM: every run listed in "
                     "the GPT-4o Judge Critique column of the run-group pages %s, first trial. Only run names, instance "
@@ -301,14 +307,15 @@ def main():
                  "rating counted as 1, the lowest rating. A headline cell is rebuilt by the rule that reproduces it "
                  "(pooled first, then mean of run means). Ranks: higher is better, 1 + number of models strictly "
                  "higher. rating_text = model outputs that already contain a string HELM's judge regex would read "
-                 "(HELM issue #4344); exploratory."),
+                 "(HELM issue #4344); exploratory. v2 reads AudioCaps run names from the model cell."),
     }
     with open(os.path.join(args.out_dir, "results.json"), "w", encoding="utf-8") as fh:
         json.dump(out, fh, indent=1, ensure_ascii=True)
     with open(os.path.join(args.out_dir, "unjudged.json"), "w", encoding="utf-8") as fh:
-        json.dump({"audit": 98, "note": ("Every first-trial AHELM instance in the included runs whose published "
-                   "stats carry no gpt4_audio_critique value (the dropped ratings), and every model output that "
-                   "already contains a 'Rating: 1-5' string, by run name and instance id; no text."),
+        json.dump({"audit": 98, "version": VERSION,
+                   "note": ("Every first-trial AHELM instance in the included runs whose published "
+                            "stats carry no gpt4_audio_critique value (the dropped ratings), and every model output "
+                            "that already contains a 'Rating: 1-5' string, by run name and instance id; no text."),
                    "unjudged": unjudged_pub, "rating_text": rating_pub}, fh, indent=1, ensure_ascii=True)
     print("[done] wrote results.json and unjudged.json (%d unjudged, %d rating_text)" % (len(unjudged_pub),
                                                                                          len(rating_pub)))

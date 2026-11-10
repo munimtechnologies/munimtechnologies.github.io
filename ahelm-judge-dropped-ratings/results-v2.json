@@ -1,0 +1,4757 @@
+{
+ "audit": 98,
+ "version": "v2",
+ "slug": "ahelm-judge-dropped-ratings",
+ "dataset": "Per-instance outputs and stats of AHELM (HELM audio) suite v1.0.0, Stanford CRFM: every run listed in the GPT-4o Judge Critique column of the run-group pages audiocaps, air_bench_chat_knowledge, air_bench_chat_reasoning, first trial. Only run names, instance ids, output classes, counts and public model names are published.",
+ "fixture": {
+  "models": true,
+  "classes": true,
+  "run_summary": true,
+  "stats": true,
+  "respondents": true,
+  "corrected": true,
+  "cells": true,
+  "rules": true,
+  "cell_values": true,
+  "ranks": true,
+  "topk": true,
+  "verdicts": true
+ },
+ "p1_parts": {
+  "fixtures": true,
+  "groups": true,
+  "runs": true,
+  "runs_included": true,
+  "cells_rebuilt": true
+ },
+ "group_errors": {},
+ "runs_listed": 85,
+ "runs_included": [
+  85,
+  85
+ ],
+ "cells_rebuilt": [
+  51,
+  51
+ ],
+ "totals": {
+  "runs": 85,
+  "requested": 54281,
+  "dropped": 0,
+  "dropped_share": 0.0,
+  "unjudged_in_predictions": 0,
+  "unjudged_classes": {
+   "missing": 0,
+   "empty": 0,
+   "rating_text": 0,
+   "text": 0
+  },
+  "rating_hist": {
+   "1": 18863,
+   "2": 8677,
+   "3": 7275,
+   "4": 14027,
+   "5": 5439,
+   "other": 0
+  },
+  "runs_with_drops": 0,
+  "runs_over_requested": [],
+  "top3_models_dropped": 0,
+  "rating_text_outputs": 0,
+  "rating_text_hist": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "other": 0,
+   "unjudged": 0
+  }
+ },
+ "by_group": {
+  "audiocaps": {
+   "runs_listed": 17,
+   "runs_included": 17,
+   "requested": 17000,
+   "dropped": 0
+  },
+  "air_bench_chat_knowledge": {
+   "runs_listed": 34,
+   "runs_included": 34,
+   "requested": 17000,
+   "dropped": 0
+  },
+  "air_bench_chat_reasoning": {
+   "runs_listed": 34,
+   "runs_included": 34,
+   "requested": 20281,
+   "dropped": 0
+  }
+ },
+ "by_model": {
+  "google_gemini-1.5-flash-001": 0,
+  "google_gemini-1.5-flash-002": 0,
+  "google_gemini-1.5-pro-001": 0,
+  "google_gemini-1.5-pro-002": 0,
+  "google_gemini-2.0-flash-001": 0,
+  "google_gemini-2.0-flash-exp": 0,
+  "google_gemini-2.0-flash-lite-001": 0,
+  "google_gemini-2.5-flash-preview-05-20": 0,
+  "google_gemini-2.5-pro-preview-05-06": 0,
+  "openai_gpt-4o-audio-preview-2024-10-01": 0,
+  "openai_gpt-4o-audio-preview-2024-12-17": 0,
+  "openai_gpt-4o-mini-audio-preview-2024-12-17": 0,
+  "openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20": 0,
+  "openai_gpt-4o-transcribe_gpt-4o-2024-11-20": 0,
+  "openai_whisper-1_gpt-4o-2024-11-20": 0,
+  "qwen_qwen2-audio-7b-instruct": 0,
+  "qwen_qwen2.5-omni-7b": 0
+ },
+ "ranks": {
+  "audiocaps": {
+   "complete_cells": 17,
+   "cells": 17,
+   "models_rank_changed": [],
+   "max_fall": 0.0
+  },
+  "air_bench_chat_knowledge": {
+   "complete_cells": 17,
+   "cells": 17,
+   "models_rank_changed": [],
+   "max_fall": 0.0
+  },
+  "air_bench_chat_reasoning": {
+   "complete_cells": 17,
+   "cells": 17,
+   "models_rank_changed": [],
+   "max_fall": 0.0
+  }
+ },
+ "predictions": {
+  "P2_drops_live": false,
+  "P3_drops_rare": true,
+  "P4_concentrated": false,
+  "P5_headline_falls": false,
+  "P6_rank_changes": false,
+  "P7_not_mainly_empty": false,
+  "P1_structural": true
+ },
+ "prediction_numbers": {
+  "P2_dropped": 0,
+  "P3_dropped_of_requested": [
+   0,
+   54281
+  ],
+  "P4_top3_of_dropped": [
+   0,
+   0
+  ],
+  "P5_max_cell_fall": 0.0,
+  "P6_models_rank_changed": 0,
+  "P7_empty_of_unjudged": [
+   0,
+   0
+  ]
+ },
+ "cells": {
+  "audiocaps": [
+   {
+    "model": "Qwen2-Audio Instruct (7B)",
+    "published": 2.673,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=qwen_qwen2-audio-7b-instruct"
+    ],
+    "ours_published": 2.673,
+    "corrected": 2.673,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 1,
+    "rank_corrected": 1
+   },
+   {
+    "model": "Qwen2.5-Omni (7B)",
+    "published": 2.653,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=qwen_qwen2.5-omni-7b"
+    ],
+    "ours_published": 2.653,
+    "corrected": 2.653,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 2,
+    "rank_corrected": 2
+   },
+   {
+    "model": "Gemini 1.5 Pro (001)",
+    "published": 1.348,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-1.5-pro-001"
+    ],
+    "ours_published": 1.348,
+    "corrected": 1.348,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 14,
+    "rank_corrected": 14
+   },
+   {
+    "model": "Gemini 1.5 Flash (001)",
+    "published": 1.363,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-1.5-flash-001"
+    ],
+    "ours_published": 1.363,
+    "corrected": 1.363,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 13,
+    "rank_corrected": 13
+   },
+   {
+    "model": "Gemini 1.5 Pro (002)",
+    "published": 1.366,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-1.5-pro-002"
+    ],
+    "ours_published": 1.366,
+    "corrected": 1.366,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 12,
+    "rank_corrected": 12
+   },
+   {
+    "model": "Gemini 1.5 Flash (002)",
+    "published": 1.416,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-1.5-flash-002"
+    ],
+    "ours_published": 1.416,
+    "corrected": 1.416,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 11,
+    "rank_corrected": 11
+   },
+   {
+    "model": "Gemini 2.0 Flash (Experimental)",
+    "published": 1.977,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-2.0-flash-exp"
+    ],
+    "ours_published": 1.977,
+    "corrected": 1.977,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 5,
+    "rank_corrected": 5
+   },
+   {
+    "model": "Gemini 2.0 Flash",
+    "published": 1.979,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-2.0-flash-001"
+    ],
+    "ours_published": 1.979,
+    "corrected": 1.979,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 4,
+    "rank_corrected": 4
+   },
+   {
+    "model": "Gemini 2.0 Flash Lite",
+    "published": 1.884,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-2.0-flash-lite-001"
+    ],
+    "ours_published": 1.884,
+    "corrected": 1.884,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 8,
+    "rank_corrected": 8
+   },
+   {
+    "model": "Gemini 2.5 Pro (05-06 preview)",
+    "published": 2.275,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-2.5-pro-preview-05-06"
+    ],
+    "ours_published": 2.275,
+    "corrected": 2.275,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 3,
+    "rank_corrected": 3
+   },
+   {
+    "model": "Gemini 2.5 Flash (05-20 preview)",
+    "published": 1.971,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=google_gemini-2.5-flash-preview-05-20"
+    ],
+    "ours_published": 1.971,
+    "corrected": 1.971,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 6,
+    "rank_corrected": 6
+   },
+   {
+    "model": "Whisper-1 + GPT-4o (2024-11-20)",
+    "published": 1.093,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=openai_whisper-1_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 1.093,
+    "corrected": 1.093,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 17,
+    "rank_corrected": 17
+   },
+   {
+    "model": "GPT-4o Transcribe + GPT-4o (2024-11-20)",
+    "published": 1.171,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 1.171,
+    "corrected": 1.171,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 16,
+    "rank_corrected": 16
+   },
+   {
+    "model": "GPT-4o mini Transcribe + GPT-4o (2024-11-20)",
+    "published": 1.283,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 1.283,
+    "corrected": 1.283,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 15,
+    "rank_corrected": 15
+   },
+   {
+    "model": "GPT-4o Audio (Preview 2024-10-01)",
+    "published": 1.797,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=openai_gpt-4o-audio-preview-2024-10-01"
+    ],
+    "ours_published": 1.797,
+    "corrected": 1.797,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 10,
+    "rank_corrected": 10
+   },
+   {
+    "model": "GPT-4o Audio (Preview 2024-12-17)",
+    "published": 1.908,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=openai_gpt-4o-audio-preview-2024-12-17"
+    ],
+    "ours_published": 1.908,
+    "corrected": 1.908,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 7,
+    "rank_corrected": 7
+   },
+   {
+    "model": "GPT-4o mini Audio (Preview 2024-12-17)",
+    "published": 1.835,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "audiocaps:model=openai_gpt-4o-mini-audio-preview-2024-12-17"
+    ],
+    "ours_published": 1.835,
+    "corrected": 1.835,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 9,
+    "rank_corrected": 9
+   }
+  ],
+  "air_bench_chat_knowledge": [
+   {
+    "model": "Qwen2-Audio Instruct (7B)",
+    "published": 3.113,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=qwen_qwen2-audio-7b-instruct",
+     "air_bench_chat:subject=sound,model=qwen_qwen2-audio-7b-instruct"
+    ],
+    "ours_published": 3.113,
+    "corrected": 3.113,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 3,
+    "rank_corrected": 3
+   },
+   {
+    "model": "Qwen2.5-Omni (7B)",
+    "published": 2.669,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=qwen_qwen2.5-omni-7b",
+     "air_bench_chat:subject=sound,model=qwen_qwen2.5-omni-7b"
+    ],
+    "ours_published": 2.669,
+    "corrected": 2.669,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 12,
+    "rank_corrected": 12
+   },
+   {
+    "model": "Gemini 1.5 Pro (001)",
+    "published": 2.255,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-1.5-pro-001",
+     "air_bench_chat:subject=sound,model=google_gemini-1.5-pro-001"
+    ],
+    "ours_published": 2.255,
+    "corrected": 2.255,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 15,
+    "rank_corrected": 15
+   },
+   {
+    "model": "Gemini 1.5 Flash (001)",
+    "published": 2.393,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-1.5-flash-001",
+     "air_bench_chat:subject=sound,model=google_gemini-1.5-flash-001"
+    ],
+    "ours_published": 2.393,
+    "corrected": 2.393,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 13,
+    "rank_corrected": 13
+   },
+   {
+    "model": "Gemini 1.5 Pro (002)",
+    "published": 2.864,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-1.5-pro-002",
+     "air_bench_chat:subject=sound,model=google_gemini-1.5-pro-002"
+    ],
+    "ours_published": 2.864,
+    "corrected": 2.864,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 9,
+    "rank_corrected": 9
+   },
+   {
+    "model": "Gemini 1.5 Flash (002)",
+    "published": 2.822,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-1.5-flash-002",
+     "air_bench_chat:subject=sound,model=google_gemini-1.5-flash-002"
+    ],
+    "ours_published": 2.822,
+    "corrected": 2.822,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 10,
+    "rank_corrected": 10
+   },
+   {
+    "model": "Gemini 2.0 Flash (Experimental)",
+    "published": 3.018,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-2.0-flash-exp",
+     "air_bench_chat:subject=sound,model=google_gemini-2.0-flash-exp"
+    ],
+    "ours_published": 3.018,
+    "corrected": 3.018,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 7,
+    "rank_corrected": 7
+   },
+   {
+    "model": "Gemini 2.0 Flash",
+    "published": 3.042,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-2.0-flash-001",
+     "air_bench_chat:subject=sound,model=google_gemini-2.0-flash-001"
+    ],
+    "ours_published": 3.042,
+    "corrected": 3.042,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 4,
+    "rank_corrected": 4
+   },
+   {
+    "model": "Gemini 2.0 Flash Lite",
+    "published": 2.923,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-2.0-flash-lite-001",
+     "air_bench_chat:subject=sound,model=google_gemini-2.0-flash-lite-001"
+    ],
+    "ours_published": 2.923,
+    "corrected": 2.923,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 8,
+    "rank_corrected": 8
+   },
+   {
+    "model": "Gemini 2.5 Pro (05-06 preview)",
+    "published": 3.413,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-2.5-pro-preview-05-06",
+     "air_bench_chat:subject=sound,model=google_gemini-2.5-pro-preview-05-06"
+    ],
+    "ours_published": 3.413,
+    "corrected": 3.413,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 1,
+    "rank_corrected": 1
+   },
+   {
+    "model": "Gemini 2.5 Flash (05-20 preview)",
+    "published": 3.182,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=google_gemini-2.5-flash-preview-05-20",
+     "air_bench_chat:subject=sound,model=google_gemini-2.5-flash-preview-05-20"
+    ],
+    "ours_published": 3.182,
+    "corrected": 3.182,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 2,
+    "rank_corrected": 2
+   },
+   {
+    "model": "Whisper-1 + GPT-4o (2024-11-20)",
+    "published": 2.156,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=openai_whisper-1_gpt-4o-2024-11-20",
+     "air_bench_chat:subject=sound,model=openai_whisper-1_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 2.156,
+    "corrected": 2.156,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 16,
+    "rank_corrected": 16
+   },
+   {
+    "model": "GPT-4o Transcribe + GPT-4o (2024-11-20)",
+    "published": 2.137,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+     "air_bench_chat:subject=sound,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 2.137,
+    "corrected": 2.137,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 17,
+    "rank_corrected": 17
+   },
+   {
+    "model": "GPT-4o mini Transcribe + GPT-4o (2024-11-20)",
+    "published": 2.298,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+     "air_bench_chat:subject=sound,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 2.298,
+    "corrected": 2.298,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 14,
+    "rank_corrected": 14
+   },
+   {
+    "model": "GPT-4o Audio (Preview 2024-10-01)",
+    "published": 3.037,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=openai_gpt-4o-audio-preview-2024-10-01",
+     "air_bench_chat:subject=sound,model=openai_gpt-4o-audio-preview-2024-10-01"
+    ],
+    "ours_published": 3.037,
+    "corrected": 3.037,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 6,
+    "rank_corrected": 6
+   },
+   {
+    "model": "GPT-4o Audio (Preview 2024-12-17)",
+    "published": 3.041,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=openai_gpt-4o-audio-preview-2024-12-17",
+     "air_bench_chat:subject=sound,model=openai_gpt-4o-audio-preview-2024-12-17"
+    ],
+    "ours_published": 3.041,
+    "corrected": 3.041,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 5,
+    "rank_corrected": 5
+   },
+   {
+    "model": "GPT-4o mini Audio (Preview 2024-12-17)",
+    "published": 2.779,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=music,model=openai_gpt-4o-mini-audio-preview-2024-12-17",
+     "air_bench_chat:subject=sound,model=openai_gpt-4o-mini-audio-preview-2024-12-17"
+    ],
+    "ours_published": 2.779,
+    "corrected": 2.779,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1000,
+    "rank_published": 11,
+    "rank_corrected": 11
+   }
+  ],
+  "air_bench_chat_reasoning": [
+   {
+    "model": "Qwen2-Audio Instruct (7B)",
+    "published": 3.3042749371332776,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=qwen_qwen2-audio-7b-instruct",
+     "air_bench_chat:subject=speech,model=qwen_qwen2-audio-7b-instruct"
+    ],
+    "ours_published": 3.3042749371332776,
+    "corrected": 3.3042749371332776,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 5,
+    "rank_corrected": 5
+   },
+   {
+    "model": "Qwen2.5-Omni (7B)",
+    "published": 3.0117351215423303,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=qwen_qwen2.5-omni-7b",
+     "air_bench_chat:subject=speech,model=qwen_qwen2.5-omni-7b"
+    ],
+    "ours_published": 3.0117351215423303,
+    "corrected": 3.0117351215423303,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 14,
+    "rank_corrected": 14
+   },
+   {
+    "model": "Gemini 1.5 Pro (001)",
+    "published": 3.02430846605197,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-1.5-pro-001",
+     "air_bench_chat:subject=speech,model=google_gemini-1.5-pro-001"
+    ],
+    "ours_published": 3.02430846605197,
+    "corrected": 3.02430846605197,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 13,
+    "rank_corrected": 13
+   },
+   {
+    "model": "Gemini 1.5 Flash (001)",
+    "published": 3.0838222967309306,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-1.5-flash-001",
+     "air_bench_chat:subject=speech,model=google_gemini-1.5-flash-001"
+    ],
+    "ours_published": 3.0838222967309306,
+    "corrected": 3.0838222967309306,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 12,
+    "rank_corrected": 12
+   },
+   {
+    "model": "Gemini 1.5 Pro (002)",
+    "published": 3.2414082145850798,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-1.5-pro-002",
+     "air_bench_chat:subject=speech,model=google_gemini-1.5-pro-002"
+    ],
+    "ours_published": 3.2414082145850798,
+    "corrected": 3.2414082145850798,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 6,
+    "rank_corrected": 6
+   },
+   {
+    "model": "Gemini 1.5 Flash (002)",
+    "published": 3.2271584241408213,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-1.5-flash-002",
+     "air_bench_chat:subject=speech,model=google_gemini-1.5-flash-002"
+    ],
+    "ours_published": 3.2271584241408213,
+    "corrected": 3.2271584241408213,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 7,
+    "rank_corrected": 7
+   },
+   {
+    "model": "Gemini 2.0 Flash (Experimental)",
+    "published": 3.3394803017602683,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-2.0-flash-exp",
+     "air_bench_chat:subject=speech,model=google_gemini-2.0-flash-exp"
+    ],
+    "ours_published": 3.3394803017602683,
+    "corrected": 3.3394803017602683,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 3,
+    "rank_corrected": 3
+   },
+   {
+    "model": "Gemini 2.0 Flash",
+    "published": 3.3310980720871752,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-2.0-flash-001",
+     "air_bench_chat:subject=speech,model=google_gemini-2.0-flash-001"
+    ],
+    "ours_published": 3.3310980720871752,
+    "corrected": 3.3310980720871752,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 4,
+    "rank_corrected": 4
+   },
+   {
+    "model": "Gemini 2.0 Flash Lite",
+    "published": 3.1726739312657166,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-2.0-flash-lite-001",
+     "air_bench_chat:subject=speech,model=google_gemini-2.0-flash-lite-001"
+    ],
+    "ours_published": 3.1726739312657166,
+    "corrected": 3.1726739312657166,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 9,
+    "rank_corrected": 9
+   },
+   {
+    "model": "Gemini 2.5 Pro (05-06 preview)",
+    "published": 3.6211232187761944,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-2.5-pro-preview-05-06",
+     "air_bench_chat:subject=speech,model=google_gemini-2.5-pro-preview-05-06"
+    ],
+    "ours_published": 3.6211232187761944,
+    "corrected": 3.6211232187761944,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 1,
+    "rank_corrected": 1
+   },
+   {
+    "model": "Gemini 2.5 Flash (05-20 preview)",
+    "published": 3.4945515507124894,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=google_gemini-2.5-flash-preview-05-20",
+     "air_bench_chat:subject=speech,model=google_gemini-2.5-flash-preview-05-20"
+    ],
+    "ours_published": 3.4945515507124894,
+    "corrected": 3.4945515507124894,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 2,
+    "rank_corrected": 2
+   },
+   {
+    "model": "Whisper-1 + GPT-4o (2024-11-20)",
+    "published": 3.1257334450963956,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=openai_whisper-1_gpt-4o-2024-11-20",
+     "air_bench_chat:subject=speech,model=openai_whisper-1_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 3.1257334450963956,
+    "corrected": 3.1257334450963956,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 11,
+    "rank_corrected": 11
+   },
+   {
+    "model": "GPT-4o Transcribe + GPT-4o (2024-11-20)",
+    "published": 2.663872590108969,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+     "air_bench_chat:subject=speech,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 2.663872590108969,
+    "corrected": 2.663872590108969,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 17,
+    "rank_corrected": 17
+   },
+   {
+    "model": "GPT-4o mini Transcribe + GPT-4o (2024-11-20)",
+    "published": 2.897736797988265,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+     "air_bench_chat:subject=speech,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20"
+    ],
+    "ours_published": 2.897736797988265,
+    "corrected": 2.897736797988265,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 16,
+    "rank_corrected": 16
+   },
+   {
+    "model": "GPT-4o Audio (Preview 2024-10-01)",
+    "published": 3.1525565800502933,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=openai_gpt-4o-audio-preview-2024-10-01",
+     "air_bench_chat:subject=speech,model=openai_gpt-4o-audio-preview-2024-10-01"
+    ],
+    "ours_published": 3.1525565800502933,
+    "corrected": 3.1525565800502933,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 10,
+    "rank_corrected": 10
+   },
+   {
+    "model": "GPT-4o Audio (Preview 2024-12-17)",
+    "published": 3.21709974853311,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=openai_gpt-4o-audio-preview-2024-12-17",
+     "air_bench_chat:subject=speech,model=openai_gpt-4o-audio-preview-2024-12-17"
+    ],
+    "ours_published": 3.21709974853311,
+    "corrected": 3.21709974853311,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 8,
+    "rank_corrected": 8
+   },
+   {
+    "model": "GPT-4o mini Audio (Preview 2024-12-17)",
+    "published": 2.914501257334451,
+    "rule": "pooled",
+    "complete": true,
+    "runs": [
+     "air_bench_chat:subject=mix,model=openai_gpt-4o-mini-audio-preview-2024-12-17",
+     "air_bench_chat:subject=speech,model=openai_gpt-4o-mini-audio-preview-2024-12-17"
+    ],
+    "ours_published": 2.914501257334451,
+    "corrected": 2.914501257334451,
+    "fall": 0.0,
+    "dropped": 0,
+    "requested": 1193,
+    "rank_published": 15,
+    "rank_corrected": 15
+   }
+  ]
+ },
+ "runs": {
+  "air_bench_chat:subject=mix,model=google_gemini-1.5-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-001",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 183,
+    "2": 55,
+    "3": 40,
+    "4": 61,
+    "5": 61,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 962,
+    "mean": 2.405
+   },
+   "ours_mean": 2.405,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.405
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-1.5-flash-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-002",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 157,
+    "2": 55,
+    "3": 43,
+    "4": 88,
+    "5": 57,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1033,
+    "mean": 2.5825
+   },
+   "ours_mean": 2.5825,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.5825
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-1.5-pro-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-001",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 222,
+    "2": 31,
+    "3": 27,
+    "4": 55,
+    "5": 65,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 910,
+    "mean": 2.275
+   },
+   "ours_mean": 2.275,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.275
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-1.5-pro-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-002",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 155,
+    "2": 41,
+    "3": 41,
+    "4": 102,
+    "5": 61,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1073,
+    "mean": 2.6825
+   },
+   "ours_mean": 2.6825,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.6825
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-2.0-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-001",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 145,
+    "2": 66,
+    "3": 47,
+    "4": 82,
+    "5": 60,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1046,
+    "mean": 2.615
+   },
+   "ours_mean": 2.615,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.615
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-2.0-flash-exp": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-exp",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 141,
+    "2": 68,
+    "3": 47,
+    "4": 87,
+    "5": 57,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1051,
+    "mean": 2.6275
+   },
+   "ours_mean": 2.6275,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.6275
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-2.0-flash-lite-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-001",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 160,
+    "2": 57,
+    "3": 50,
+    "4": 76,
+    "5": 57,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1013,
+    "mean": 2.5325
+   },
+   "ours_mean": 2.5325,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.5325
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-2.5-flash-preview-05-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-flash-preview-05-20",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 6,
+    "rating_text": 0,
+    "text": 394
+   },
+   "judged": 400,
+   "hist": {
+    "1": 156,
+    "2": 51,
+    "3": 44,
+    "4": 62,
+    "5": 87,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1073,
+    "mean": 2.6825
+   },
+   "ours_mean": 2.6825,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.6825
+  },
+  "air_bench_chat:subject=mix,model=google_gemini-2.5-pro-preview-05-06": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 120,
+    "2": 54,
+    "3": 36,
+    "4": 90,
+    "5": 100,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1196,
+    "mean": 2.99
+   },
+   "ours_mean": 2.99,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.99
+  },
+  "air_bench_chat:subject=mix,model=openai_gpt-4o-audio-preview-2024-10-01": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-10-01",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 187,
+    "2": 39,
+    "3": 30,
+    "4": 92,
+    "5": 52,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 983,
+    "mean": 2.4575
+   },
+   "ours_mean": 2.4575,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.4575
+  },
+  "air_bench_chat:subject=mix,model=openai_gpt-4o-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 169,
+    "2": 45,
+    "3": 37,
+    "4": 84,
+    "5": 65,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1031,
+    "mean": 2.5775
+   },
+   "ours_mean": 2.5775,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.5775
+  },
+  "air_bench_chat:subject=mix,model=openai_gpt-4o-mini-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 235,
+    "2": 35,
+    "3": 24,
+    "4": 58,
+    "5": 48,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 849,
+    "mean": 2.1225
+   },
+   "ours_mean": 2.1225,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.1225
+  },
+  "air_bench_chat:subject=mix,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 227,
+    "2": 36,
+    "3": 22,
+    "4": 52,
+    "5": 63,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 888,
+    "mean": 2.22
+   },
+   "ours_mean": 2.22,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.22
+  },
+  "air_bench_chat:subject=mix,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 221,
+    "2": 38,
+    "3": 28,
+    "4": 45,
+    "5": 68,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 901,
+    "mean": 2.2525
+   },
+   "ours_mean": 2.2525,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.2525
+  },
+  "air_bench_chat:subject=mix,model=openai_whisper-1_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_whisper-1_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 193,
+    "2": 57,
+    "3": 29,
+    "4": 63,
+    "5": 58,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 936,
+    "mean": 2.34
+   },
+   "ours_mean": 2.34,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.34
+  },
+  "air_bench_chat:subject=mix,model=qwen_qwen2-audio-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-audio-7b-instruct",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 125,
+    "2": 60,
+    "3": 49,
+    "4": 81,
+    "5": 85,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 1141,
+    "mean": 2.8525
+   },
+   "ours_mean": 2.8525,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.8525
+  },
+  "air_bench_chat:subject=mix,model=qwen_qwen2.5-omni-7b": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-omni-7b",
+   "respondents": 1,
+   "num_instances": 400.0,
+   "counts": {
+    "n_records": 400,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 400
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 400
+   },
+   "judged": 400,
+   "hist": {
+    "1": 175,
+    "2": 51,
+    "3": 50,
+    "4": 98,
+    "5": 26,
+    "other": 0
+   },
+   "published": {
+    "count": 400,
+    "sum": 949,
+    "mean": 2.3725
+   },
+   "ours_mean": 2.3725,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.3725
+  },
+  "air_bench_chat:subject=music,model=google_gemini-1.5-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 188,
+    "2": 72,
+    "3": 65,
+    "4": 137,
+    "5": 38,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1265,
+    "mean": 2.53
+   },
+   "ours_mean": 2.53,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.53
+  },
+  "air_bench_chat:subject=music,model=google_gemini-1.5-flash-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-002",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 144,
+    "2": 59,
+    "3": 51,
+    "4": 189,
+    "5": 57,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1456,
+    "mean": 2.912
+   },
+   "ours_mean": 2.912,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.912
+  },
+  "air_bench_chat:subject=music,model=google_gemini-1.5-pro-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 248,
+    "2": 55,
+    "3": 50,
+    "4": 119,
+    "5": 28,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1124,
+    "mean": 2.248
+   },
+   "ours_mean": 2.248,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.248
+  },
+  "air_bench_chat:subject=music,model=google_gemini-1.5-pro-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-002",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 132,
+    "2": 55,
+    "3": 53,
+    "4": 210,
+    "5": 50,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1491,
+    "mean": 2.982
+   },
+   "ours_mean": 2.982,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.982
+  },
+  "air_bench_chat:subject=music,model=google_gemini-2.0-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 111,
+    "2": 60,
+    "3": 77,
+    "4": 194,
+    "5": 58,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1528,
+    "mean": 3.056
+   },
+   "ours_mean": 3.056,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.056
+  },
+  "air_bench_chat:subject=music,model=google_gemini-2.0-flash-exp": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-exp",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 114,
+    "2": 57,
+    "3": 77,
+    "4": 193,
+    "5": 59,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1526,
+    "mean": 3.052
+   },
+   "ours_mean": 3.052,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.052
+  },
+  "air_bench_chat:subject=music,model=google_gemini-2.0-flash-lite-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 118,
+    "2": 66,
+    "3": 66,
+    "4": 183,
+    "5": 67,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1515,
+    "mean": 3.03
+   },
+   "ours_mean": 3.03,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.03
+  },
+  "air_bench_chat:subject=music,model=google_gemini-2.5-flash-preview-05-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-flash-preview-05-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 3,
+    "rating_text": 0,
+    "text": 497
+   },
+   "judged": 500,
+   "hist": {
+    "1": 102,
+    "2": 54,
+    "3": 56,
+    "4": 192,
+    "5": 96,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1626,
+    "mean": 3.252
+   },
+   "ours_mean": 3.252,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.252
+  },
+  "air_bench_chat:subject=music,model=google_gemini-2.5-pro-preview-05-06": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 76,
+    "2": 45,
+    "3": 49,
+    "4": 221,
+    "5": 109,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1742,
+    "mean": 3.484
+   },
+   "ours_mean": 3.484,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.484
+  },
+  "air_bench_chat:subject=music,model=openai_gpt-4o-audio-preview-2024-10-01": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-10-01",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 127,
+    "2": 57,
+    "3": 65,
+    "4": 204,
+    "5": 47,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1487,
+    "mean": 2.974
+   },
+   "ours_mean": 2.974,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.974
+  },
+  "air_bench_chat:subject=music,model=openai_gpt-4o-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 125,
+    "2": 39,
+    "3": 82,
+    "4": 206,
+    "5": 48,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1513,
+    "mean": 3.026
+   },
+   "ours_mean": 3.026,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.026
+  },
+  "air_bench_chat:subject=music,model=openai_gpt-4o-mini-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 168,
+    "2": 57,
+    "3": 71,
+    "4": 177,
+    "5": 27,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1338,
+    "mean": 2.676
+   },
+   "ours_mean": 2.676,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.676
+  },
+  "air_bench_chat:subject=music,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 206,
+    "2": 88,
+    "3": 79,
+    "4": 104,
+    "5": 23,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1150,
+    "mean": 2.3
+   },
+   "ours_mean": 2.3,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.3
+  },
+  "air_bench_chat:subject=music,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 239,
+    "2": 64,
+    "3": 68,
+    "4": 116,
+    "5": 13,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1100,
+    "mean": 2.2
+   },
+   "ours_mean": 2.2,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.2
+  },
+  "air_bench_chat:subject=music,model=openai_whisper-1_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_whisper-1_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 216,
+    "2": 87,
+    "3": 64,
+    "4": 116,
+    "5": 17,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1131,
+    "mean": 2.262
+   },
+   "ours_mean": 2.262,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.262
+  },
+  "air_bench_chat:subject=music,model=qwen_qwen2-audio-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-audio-7b-instruct",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 66,
+    "2": 63,
+    "3": 82,
+    "4": 231,
+    "5": 58,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1652,
+    "mean": 3.304
+   },
+   "ours_mean": 3.304,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.304
+  },
+  "air_bench_chat:subject=music,model=qwen_qwen2.5-omni-7b": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-omni-7b",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 137,
+    "2": 108,
+    "3": 129,
+    "4": 119,
+    "5": 7,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1251,
+    "mean": 2.502
+   },
+   "ours_mean": 2.502,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.502
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-1.5-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 232,
+    "2": 76,
+    "3": 48,
+    "4": 120,
+    "5": 24,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1128,
+    "mean": 2.256
+   },
+   "ours_mean": 2.256,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.256
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-1.5-flash-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-002",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 151,
+    "2": 75,
+    "3": 58,
+    "4": 189,
+    "5": 27,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1366,
+    "mean": 2.732
+   },
+   "ours_mean": 2.732,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.732
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-1.5-pro-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 224,
+    "2": 86,
+    "3": 50,
+    "4": 115,
+    "5": 25,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1131,
+    "mean": 2.262
+   },
+   "ours_mean": 2.262,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.262
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-1.5-pro-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-002",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 165,
+    "2": 68,
+    "3": 37,
+    "4": 189,
+    "5": 41,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1373,
+    "mean": 2.746
+   },
+   "ours_mean": 2.746,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.746
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-2.0-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 103,
+    "2": 74,
+    "3": 74,
+    "4": 204,
+    "5": 45,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1514,
+    "mean": 3.028
+   },
+   "ours_mean": 3.028,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.028
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-2.0-flash-exp": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-exp",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 110,
+    "2": 71,
+    "3": 75,
+    "4": 205,
+    "5": 39,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1492,
+    "mean": 2.984
+   },
+   "ours_mean": 2.984,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.984
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-2.0-flash-lite-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-001",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 139,
+    "2": 68,
+    "3": 67,
+    "4": 198,
+    "5": 28,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1408,
+    "mean": 2.816
+   },
+   "ours_mean": 2.816,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.816
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-2.5-flash-preview-05-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-flash-preview-05-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 6,
+    "rating_text": 0,
+    "text": 494
+   },
+   "judged": 500,
+   "hist": {
+    "1": 113,
+    "2": 59,
+    "3": 57,
+    "4": 201,
+    "5": 70,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1556,
+    "mean": 3.112
+   },
+   "ours_mean": 3.112,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.112
+  },
+  "air_bench_chat:subject=sound,model=google_gemini-2.5-pro-preview-05-06": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 89,
+    "2": 46,
+    "3": 51,
+    "4": 233,
+    "5": 81,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1671,
+    "mean": 3.342
+   },
+   "ours_mean": 3.342,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.342
+  },
+  "air_bench_chat:subject=sound,model=openai_gpt-4o-audio-preview-2024-10-01": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-10-01",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 105,
+    "2": 58,
+    "3": 58,
+    "4": 240,
+    "5": 39,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1550,
+    "mean": 3.1
+   },
+   "ours_mean": 3.1,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.1
+  },
+  "air_bench_chat:subject=sound,model=openai_gpt-4o-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 109,
+    "2": 59,
+    "3": 68,
+    "4": 223,
+    "5": 41,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1528,
+    "mean": 3.056
+   },
+   "ours_mean": 3.056,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.056
+  },
+  "air_bench_chat:subject=sound,model=openai_gpt-4o-mini-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 126,
+    "2": 74,
+    "3": 76,
+    "4": 181,
+    "5": 43,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1441,
+    "mean": 2.882
+   },
+   "ours_mean": 2.882,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.882
+  },
+  "air_bench_chat:subject=sound,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 211,
+    "2": 88,
+    "3": 56,
+    "4": 132,
+    "5": 13,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1148,
+    "mean": 2.296
+   },
+   "ours_mean": 2.296,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.296
+  },
+  "air_bench_chat:subject=sound,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 250,
+    "2": 79,
+    "3": 59,
+    "4": 108,
+    "5": 4,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1037,
+    "mean": 2.074
+   },
+   "ours_mean": 2.074,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.074
+  },
+  "air_bench_chat:subject=sound,model=openai_whisper-1_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_whisper-1_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 252,
+    "2": 85,
+    "3": 55,
+    "4": 102,
+    "5": 6,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1025,
+    "mean": 2.05
+   },
+   "ours_mean": 2.05,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.05
+  },
+  "air_bench_chat:subject=sound,model=qwen_qwen2-audio-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-audio-7b-instruct",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 96,
+    "2": 82,
+    "3": 118,
+    "4": 173,
+    "5": 31,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1461,
+    "mean": 2.922
+   },
+   "ours_mean": 2.922,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.922
+  },
+  "air_bench_chat:subject=sound,model=qwen_qwen2.5-omni-7b": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-omni-7b",
+   "respondents": 1,
+   "num_instances": 500.0,
+   "counts": {
+    "n_records": 500,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 500
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 500
+   },
+   "judged": 500,
+   "hist": {
+    "1": 75,
+    "2": 106,
+    "3": 147,
+    "4": 170,
+    "5": 2,
+    "other": 0
+   },
+   "published": {
+    "count": 500,
+    "sum": 1418,
+    "mean": 2.836
+   },
+   "ours_mean": 2.836,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.836
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-1.5-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-001",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 119,
+    "2": 86,
+    "3": 87,
+    "4": 340,
+    "5": 161,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2717,
+    "mean": 3.4262295081967213
+   },
+   "ours_mean": 3.4262295081967213,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.4262295081967213
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-1.5-flash-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-002",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 90,
+    "2": 86,
+    "3": 83,
+    "4": 364,
+    "5": 170,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2817,
+    "mean": 3.5523329129886507
+   },
+   "ours_mean": 3.5523329129886507,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.5523329129886507
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-1.5-pro-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-001",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 138,
+    "2": 63,
+    "3": 93,
+    "4": 340,
+    "5": 159,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2698,
+    "mean": 3.4022698612862547
+   },
+   "ours_mean": 3.4022698612862547,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.4022698612862547
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-1.5-pro-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-002",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 103,
+    "2": 73,
+    "3": 75,
+    "4": 390,
+    "5": 152,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2794,
+    "mean": 3.523329129886507
+   },
+   "ours_mean": 3.523329129886507,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.523329129886507
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-2.0-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-001",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 72,
+    "2": 70,
+    "3": 89,
+    "4": 361,
+    "5": 201,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2928,
+    "mean": 3.6923076923076925
+   },
+   "ours_mean": 3.6923076923076925,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.6923076923076925
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-2.0-flash-exp": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-exp",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 71,
+    "2": 67,
+    "3": 89,
+    "4": 369,
+    "5": 197,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2933,
+    "mean": 3.698612862547289
+   },
+   "ours_mean": 3.698612862547289,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.698612862547289
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-2.0-flash-lite-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-001",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 101,
+    "2": 78,
+    "3": 109,
+    "4": 337,
+    "5": 168,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2772,
+    "mean": 3.4955863808322825
+   },
+   "ours_mean": 3.4955863808322825,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.4955863808322825
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-2.5-flash-preview-05-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-flash-preview-05-20",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 7,
+    "rating_text": 0,
+    "text": 786
+   },
+   "judged": 793,
+   "hist": {
+    "1": 65,
+    "2": 50,
+    "3": 65,
+    "4": 329,
+    "5": 284,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 3096,
+    "mean": 3.9041614123581336
+   },
+   "ours_mean": 3.9041614123581336,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.9041614123581336
+  },
+  "air_bench_chat:subject=speech,model=google_gemini-2.5-pro-preview-05-06": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 8,
+    "rating_text": 0,
+    "text": 785
+   },
+   "judged": 793,
+   "hist": {
+    "1": 60,
+    "2": 46,
+    "3": 56,
+    "4": 351,
+    "5": 280,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 3124,
+    "mean": 3.939470365699874
+   },
+   "ours_mean": 3.939470365699874,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.939470365699874
+  },
+  "air_bench_chat:subject=speech,model=openai_gpt-4o-audio-preview-2024-10-01": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-10-01",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 117,
+    "2": 65,
+    "3": 69,
+    "4": 386,
+    "5": 156,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2778,
+    "mean": 3.5031525851197984
+   },
+   "ours_mean": 3.5031525851197984,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.5031525851197984
+  },
+  "air_bench_chat:subject=speech,model=openai_gpt-4o-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 119,
+    "2": 54,
+    "3": 72,
+    "4": 376,
+    "5": 172,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2807,
+    "mean": 3.539722572509458
+   },
+   "ours_mean": 3.539722572509458,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.539722572509458
+  },
+  "air_bench_chat:subject=speech,model=openai_gpt-4o-mini-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 160,
+    "2": 58,
+    "3": 68,
+    "4": 387,
+    "5": 120,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2628,
+    "mean": 3.3139974779319044
+   },
+   "ours_mean": 3.3139974779319044,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.3139974779319044
+  },
+  "air_bench_chat:subject=speech,model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 155,
+    "2": 99,
+    "3": 81,
+    "4": 317,
+    "5": 141,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2569,
+    "mean": 3.239596469104666
+   },
+   "ours_mean": 3.239596469104666,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.239596469104666
+  },
+  "air_bench_chat:subject=speech,model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 221,
+    "2": 120,
+    "3": 84,
+    "4": 276,
+    "5": 92,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2277,
+    "mean": 2.871374527112232
+   },
+   "ours_mean": 2.871374527112232,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.871374527112232
+  },
+  "air_bench_chat:subject=speech,model=openai_whisper-1_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_whisper-1_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 116,
+    "2": 66,
+    "3": 67,
+    "4": 376,
+    "5": 168,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2793,
+    "mean": 3.5220680958385877
+   },
+   "ours_mean": 3.5220680958385877,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.5220680958385877
+  },
+  "air_bench_chat:subject=speech,model=qwen_qwen2-audio-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-audio-7b-instruct",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 81,
+    "2": 100,
+    "3": 111,
+    "4": 318,
+    "5": 183,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2801,
+    "mean": 3.532156368221942
+   },
+   "ours_mean": 3.532156368221942,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.532156368221942
+  },
+  "air_bench_chat:subject=speech,model=qwen_qwen2.5-omni-7b": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-omni-7b",
+   "respondents": 1,
+   "num_instances": 793.0,
+   "counts": {
+    "n_records": 793,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 793
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 793
+   },
+   "judged": 793,
+   "hist": {
+    "1": 92,
+    "2": 94,
+    "3": 150,
+    "4": 371,
+    "5": 86,
+    "other": 0
+   },
+   "published": {
+    "count": 793,
+    "sum": 2644,
+    "mean": 3.3341740226986127
+   },
+   "ours_mean": 3.3341740226986127,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 3.3341740226986127
+  },
+  "audiocaps:model=google_gemini-1.5-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-001",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 731,
+    "2": 190,
+    "3": 64,
+    "4": 15,
+    "5": 0,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1363,
+    "mean": 1.363
+   },
+   "ours_mean": 1.363,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.363
+  },
+  "audiocaps:model=google_gemini-1.5-flash-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-002",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 682,
+    "2": 234,
+    "3": 70,
+    "4": 14,
+    "5": 0,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1416,
+    "mean": 1.416
+   },
+   "ours_mean": 1.416,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.416
+  },
+  "audiocaps:model=google_gemini-1.5-pro-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-001",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 748,
+    "2": 176,
+    "3": 59,
+    "4": 14,
+    "5": 3,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1348,
+    "mean": 1.348
+   },
+   "ours_mean": 1.348,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.348
+  },
+  "audiocaps:model=google_gemini-1.5-pro-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-002",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 731,
+    "2": 187,
+    "3": 69,
+    "4": 11,
+    "5": 2,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1366,
+    "mean": 1.366
+   },
+   "ours_mean": 1.366,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.366
+  },
+  "audiocaps:model=google_gemini-2.0-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-001",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 363,
+    "2": 361,
+    "3": 220,
+    "4": 46,
+    "5": 10,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1979,
+    "mean": 1.979
+   },
+   "ours_mean": 1.979,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.979
+  },
+  "audiocaps:model=google_gemini-2.0-flash-exp": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-exp",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 365,
+    "2": 360,
+    "3": 219,
+    "4": 45,
+    "5": 11,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1977,
+    "mean": 1.977
+   },
+   "ours_mean": 1.977,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.977
+  },
+  "audiocaps:model=google_gemini-2.0-flash-lite-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-001",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 416,
+    "2": 342,
+    "3": 192,
+    "4": 42,
+    "5": 8,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1884,
+    "mean": 1.884
+   },
+   "ours_mean": 1.884,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.884
+  },
+  "audiocaps:model=google_gemini-2.5-flash-preview-05-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-flash-preview-05-20",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 362,
+    "2": 367,
+    "3": 215,
+    "4": 50,
+    "5": 6,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1971,
+    "mean": 1.971
+   },
+   "ours_mean": 1.971,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.971
+  },
+  "audiocaps:model=google_gemini-2.5-pro-preview-05-06": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 246,
+    "2": 355,
+    "3": 293,
+    "4": 90,
+    "5": 16,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 2275,
+    "mean": 2.275
+   },
+   "ours_mean": 2.275,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.275
+  },
+  "audiocaps:model=openai_gpt-4o-audio-preview-2024-10-01": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-10-01",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 523,
+    "2": 218,
+    "3": 200,
+    "4": 57,
+    "5": 2,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1797,
+    "mean": 1.797
+   },
+   "ours_mean": 1.797,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.797
+  },
+  "audiocaps:model=openai_gpt-4o-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 441,
+    "2": 272,
+    "3": 226,
+    "4": 60,
+    "5": 1,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1908,
+    "mean": 1.908
+   },
+   "ours_mean": 1.908,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.908
+  },
+  "audiocaps:model=openai_gpt-4o-mini-audio-preview-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-audio-preview-2024-12-17",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 471,
+    "2": 276,
+    "3": 202,
+    "4": 49,
+    "5": 2,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1835,
+    "mean": 1.835
+   },
+   "ours_mean": 1.835,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.835
+  },
+  "audiocaps:model=openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 802,
+    "2": 125,
+    "3": 62,
+    "4": 10,
+    "5": 1,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1283,
+    "mean": 1.283
+   },
+   "ours_mean": 1.283,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.283
+  },
+  "audiocaps:model=openai_gpt-4o-transcribe_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-transcribe_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 887,
+    "2": 63,
+    "3": 42,
+    "4": 8,
+    "5": 0,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1171,
+    "mean": 1.171
+   },
+   "ours_mean": 1.171,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.171
+  },
+  "audiocaps:model=openai_whisper-1_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_whisper-1_gpt-4o-2024-11-20",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 922,
+    "2": 66,
+    "3": 9,
+    "4": 3,
+    "5": 0,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 1093,
+    "mean": 1.093
+   },
+   "ours_mean": 1.093,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 1.093
+  },
+  "audiocaps:model=qwen_qwen2-audio-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-audio-7b-instruct",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 104,
+    "2": 339,
+    "3": 361,
+    "4": 172,
+    "5": 24,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 2673,
+    "mean": 2.673
+   },
+   "ours_mean": 2.673,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.673
+  },
+  "audiocaps:model=qwen_qwen2.5-omni-7b": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-omni-7b",
+   "respondents": 1,
+   "num_instances": 1000.0,
+   "counts": {
+    "n_records": 1000,
+    "other_trial": 0,
+    "perturbed": 0,
+    "duplicate": 0,
+    "kept": 1000
+   },
+   "classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 1000
+   },
+   "judged": 1000,
+   "hist": {
+    "1": 151,
+    "2": 292,
+    "3": 342,
+    "4": 183,
+    "5": 32,
+    "other": 0
+   },
+   "published": {
+    "count": 1000,
+    "sum": 2653,
+    "mean": 2.653
+   },
+   "ours_mean": 2.653,
+   "dropped": 0,
+   "unjudged_classes": {
+    "missing": 0,
+    "empty": 0,
+    "rating_text": 0,
+    "text": 0
+   },
+   "rating_text": 0,
+   "corrected_mean": 2.653
+  }
+ },
+ "note": "requested = num_instances x num_respondents (1 everywhere included); dropped = requested - the count of HELM's gpt4_audio_critique stat, i.e. ratings HELM left out of the mean because the judge reply had no 'Rating: 1-5' (Stat.add skips None) or no reply came back. corrected = each dropped rating counted as 1, the lowest rating. A headline cell is rebuilt by the rule that reproduces it (pooled first, then mean of run means). Ranks: higher is better, 1 + number of models strictly higher. rating_text = model outputs that already contain a string HELM's judge regex would read (HELM issue #4344); exploratory. v2 reads AudioCaps run names from the model cell."
+}

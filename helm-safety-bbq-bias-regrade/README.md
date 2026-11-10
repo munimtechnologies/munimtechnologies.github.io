@@ -117,3 +117,106 @@ Code is Apache-2.0 (HELM's `BBQMetric` is transcribed from stanford-crfm/helm, A
 results are CC BY 4.0. Upstream: BBQ (Parrish et al., 2022) is published by NYU MLL under CC BY 4.0; HELM Safety's
 outputs are published by Stanford CRFM. Only model names, HELM instance ids, BBQ keys, categories, letters and counts
 are published, never questions, answers or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-10 after the sealed run (job `helm-safety-bbq-bias-regrade-v1`, 2026-11-10 05:10-05:15 UTC; unit tests
+passed first; every fixture matched). Everything above this heading is unchanged. Graded by AI agents working in
+MV2's name. Files: [results.json](results.json) (per model and per run: published, H, A, T and AT values, ranks,
+non-letter counts, exclusions) and [affected.json](affected.json) (the 382 affected instances: ids, BBQ keys,
+categories, HELM's and the corrected letters).*
+
+**Verdict: 6 of 8 predictions held. P1 failed (80 of 87 runs included, 92.0%, below the 95% gate) and P7 failed (5
+sign changes, not 10).**
+
+| # | Measured | Verdict |
+| --- | --- | --- |
+| P1 | fixtures all match; 87 BBQ runs listed (all `multiple_choice_joint`); **80 of 87 included (92.0%)**; 999 of 1,000 test instances joined (1 has an NA `target_loc` in the authors' file); 0 label mismatches; unaffected categories agree on 330 of 330 | **FAILED** (inclusion only) |
+| P2 | **382** affected test instances; all 262 Race_x_gender instances have an empty HELM target; 382 of 382 affected BBQ keys (100%) are audit 95's HELM Classic keys, and so are the 382 HELM instance ids | HELD |
+| P3 | as published, **80 of 80** included models (100%) have a negative unambiguous bias score (from -0.346 to -0.119) | HELD |
+| P4 | median over models of \|T - H\| on the unambiguous column = **0.202** | HELD |
+| P5 | median \|T\| = **0.0101**, median \|H\| = 0.194 (ratio 0.052) | HELD |
+| P6 | Kendall tau-b between the published ambiguous column (H) and AT = **0.257** | HELD |
+| P7 | **5** models change the sign of their ambiguous bias between H and AT | **FAILED** |
+| P8 | **5** models give a non-letter completion for at least 1% of kept completions | HELD |
+
+### Why P1 failed: seven runs could not be re-scored
+
+- **Six models' per-instance files are not where the release index points.** HELM Safety v1.17.0's
+  `runs_to_run_suites.json` places all five runs of Gemini 2.0 Flash, Gemini 2.0 Flash-Lite (preview 02-05), Gemini 2.0
+  Pro (exp 02-05), Mistral Small (2501), Qwen2.5 Instruct Turbo 72B and Qwen2.5 Instruct Turbo 7B in suite v1.1.0. The
+  public bucket's v1.1.0 folder holds 30 runs for six other models (DeepSeek-R1, DeepSeek-R1 hide-reasoning, DeepSeek-V3,
+  o1, o1-mini, o3-mini) and none for these six, so every download returned HTTP 404. *Checked by hand after the run, not
+  pre-registered:* their BBQ folders are also absent from suites v1.0.0 and v1.2.0 to v1.6.0 (v1.7.0 to v1.17.0 were not
+  searched), while the published BBQ table still shows values for them (for example Qwen2.5 72B: accuracy 0.954,
+  unambiguous bias -0.206). Their published numbers cannot be checked against per-instance outputs.
+- **DeepSeek-R1 was not reproduced, a limit of our code.** Its `display_predictions.json` holds the raw output with the
+  reasoning block (`<think>...`), so all 1,000 completions are non-letters to our transcription, which does not strip
+  reasoning; HELM's published numbers clearly come from the final answers. *Observed after the run:* the published
+  DeepSeek-R1 BBQ numbers (accuracy 0.966, ambiguous 0.01545, unambiguous -0.19277) equal those of the separate
+  DeepSeek-R1 (hide reasoning) run to every stored digit; we did not check why. Including DeepSeek-R1 would give 81 of
+  87 (93.1%), still below the gate, so the frozen verdict stands either way. Neither gap affects the other 80 runs,
+  where HELM's three published numbers were reproduced to 1e-9.
+
+### The unambiguous column: an artefact on today's leaderboard
+
+- As published, every one of the 80 models looks counter-stereotypical in disambiguated contexts, by a median of
+  0.194. With the BBQ authors' tags the column centres on zero: median \|T\| 0.0101; **53 of 80 models become
+  positive** and 43 change sign (exploratory). The order changes too: Kendall tau-b between H and T is 0.508, and the
+  largest rank move is 73 places (OLMoE 1B-7B Instruct, 78th to 5th).
+- The same 382 instances are affected as in HELM Classic, so the cause is the shared 1,000-instance sample and the
+  shared tagging code, not anything specific to either leaderboard.
+- **First place is a format effect.** DBRX Instruct is first (most counter-stereotypical) under both H and T. 133 of
+  its 1,000 completions (13.3%) are not a letter at all (the two we read are a control character and an invalid byte),
+  and HELM counts each as a non-biased answer.
+
+### The ambiguous column: re-ordered by both fixes
+
+- Kendall tau-b between the published ambiguous column and AT is **0.257**; the scaling fix alone gives 0.617 and the
+  tag fix alone 0.518 (exploratory). Unlike HELM Classic, where the tag fix drove almost all of the change, both fixes
+  matter here.
+- The scaling fix moves several of the most accurate recent models a long way. HELM multiplies the ambiguous bias by 1 minus *overall*
+  accuracy, so a model's mistakes on disambiguated questions inflate its ambiguous score. Claude 3.7 Sonnet goes from
+  79th to 14th (0.079 to 0.0081), GPT-4.5 (preview) from 80th to 31st, and Claude Haiku 4.5 from 78th to 17th. The tag
+  fix moves weaker models the other way: OLMo 2 7B Instruct goes from 4th to 80th and GPT-3.5 Turbo (0613) from 7th to
+  72nd.
+- **Why P7 failed.** As published, 71 of 80 ambiguous scores are already positive, and 76 are with both fixes, so only
+  5 change sign (OLMo 2 7B, DeepSeek LLM 67B Chat, Marin 8B, GPT-3.5 Turbo 0613 and 1106). In HELM Classic 23 of 42
+  did. Under the corrected tags, the remaining errors of today's models on ambiguous questions lean bias-aligned (76
+  of 80 positive). The prediction assumed more negative published scores than the leaderboard holds.
+
+### Format loss (P8)
+
+Five models give a non-letter for at least 1% of their kept completions: DBRX Instruct 133 of 1,000; Marin 8B
+Instruct 56 of 1,000; Qwen3-Next 80B A3B Thinking 49 of 996; Granite 4.0 Micro with Guardian and Granite 4.0 H Small
+with Guardian 29 of 1,000 each. Neither fix touches these; under HELM's rule each one is a wrong answer and a
+non-biased one.
+
+### Hand-read (by class, read by AI agents; texts are not published)
+
+- **Affected instances (10 printed, the first 10 by instance id):** all 10 have an empty HELM target (7 Race_x_gender,
+  2 Race_ethnicity, 1 Race_x_SES). In all 10 the authors' tag picks a named person, never the "unknown" option. In 6
+  of 10, HELM's non-target letter is the very answer the authors mark as bias-aligned.
+- **Non-letter completions (30 printed, at most 2 per model):** 4 refusals from the two Guardian-wrapped Granite models;
+  6 first words of a sentence cut off by `max_tokens` 1 (Mistral, Mixtral, Marin); 6 single wrong characters (`Q`,
+  `D`, `I`, `L`) and 3 lower-case letters (`b`, `c`); 2 control or invalid bytes (DBRX); 2 unrelated words (OLMoE);
+  5 longer answers from reasoning-capable models (Gemini 3 Pro writes a sentence; DeepSeek-R1 hide-reasoning and
+  R1-0528 give a letter followed by more text, or a lone quote mark); and DeepSeek-R1's 2 raw reasoning blocks
+  (above). 5 of the 30 contain an answer letter (the 3 lower-case letters and 2 capital letters followed by more text)
+  that HELM's exact-match rule does not read.
+
+### What this means
+
+- HELM Safety's BBQ (unambiguous) column, as published today, says that all 80 re-scored models, from GPT-3.5 to GPT-5.1
+  and Gemini 3 Pro, are counter-stereotypical by about 0.2. That is the tagging bug in #4368, measured on the current
+  leaderboard: with the authors' tags the column sits near zero and most models are slightly positive.
+- The ambiguous column's order is mostly set by the two bugs: tau-b 0.257 with both fixed. Re-publishing the BBQ page
+  with #4368's `target_loc` fix and #4372's scaling fix (PR #4373) would change both bias columns. The headline BBQ
+  accuracy does not change.
+- Smaller, separate: six models' runs in the release are not in the public bucket where the index points, and the
+  stored DeepSeek-R1 predictions keep the reasoning text.
+
+**Limits.** One release (v1.17.0), one sample of 1,000 instances per model, one trial. The authors' `target_loc` is
+taken as ground truth; one test instance has no usable `target_loc` (NA in the authors' file). Ranks follow HELM's lower-is-better order, in
+which a negative bias ranks above zero; another order (for example by absolute value) would rank differently. The
+hand-read covers only the printed sample and was done by AI agents. Seven of 87 runs are not re-scored.

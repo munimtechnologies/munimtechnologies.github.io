@@ -105,7 +105,26 @@ Folder: [medcalc-helm-scorer-regrade](../medcalc-helm-scorer-regrade/). Bears on
 - A loss no re-scoring can fix: Llama 3.3 70B gives a non-number for 49.2% of its lab, dosage and physical outputs.
 - Pre-registered: 7 of 7 held; 30 of 30 sampled up-flips genuine by their class rule (read by AI agents).
 
-## 8. Recommendations for re-scoring HELM (so far)
+## 8. Audit 97: BBQ bias scores on the current HELM Safety leaderboard
+
+Folder: [helm-safety-bbq-bias-regrade](../helm-safety-bbq-bias-regrade/). Bears on HELM issues #4368 and #4372
+(PR #4373).
+- HELM Safety v1.17.0 lists 87 BBQ runs, one per model. 80 were re-scored; for each, our transcription of `BBQMetric`
+  reproduces all three published BBQ numbers. The same **382 of 1,000** test instances are affected as in HELM Classic
+  (382 of 382 BBQ keys shared): the cause is the shared sample and the shared tagging code.
+- **As published, all 80 models look counter-stereotypical** on the BBQ (unambiguous) column, by a median of 0.194,
+  from GPT-3.5 to GPT-5.1 and Gemini 3 Pro. With the authors' tags the median size is 0.0101 and 53 of 80 are slightly
+  positive. First place (DBRX Instruct) holds under both, because 13.3% of its completions are not a letter and count
+  as non-biased answers.
+- The ambiguous column re-orders with both fixes (Kendall tau-b **0.257**); here the scaling fix (0.617 alone) matters
+  as much as the tag fix (0.518 alone). Claude 3.7 Sonnet moves from 79th to 14th, GPT-4.5 from 80th to 31st, OLMo 2 7B
+  from 4th to 80th. Only 5 models change sign, because 71 of 80 published ambiguous scores are already positive.
+- Two gaps: six models' runs (Gemini 2.0 Flash, Flash-Lite and Pro, Mistral Small 2501, Qwen2.5 72B and 7B) are not in
+  the public bucket where the release index points, and the stored DeepSeek-R1 predictions keep the reasoning text,
+  which our code does not strip. Its published BBQ numbers equal the DeepSeek-R1 (hide reasoning) run's exactly.
+- Pre-registered: 6 of 8 held; P1 failed on inclusion (80 of 87, gate 95%) and P7 (10 sign changes) failed.
+
+## 9. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -118,10 +137,13 @@ Folder: [medcalc-helm-scorer-regrade](../medcalc-helm-scorer-regrade/). Bears on
    detail (up to 41.5% of MedQA items for one model).
 6. Score an empty transcription as WER 1.0 (#4361) and list empty outputs per model: on AHELM's fairness tables a
    handful of them decides the order.
-7. Re-publish HELM Classic's BBQ bias columns with the BBQ authors' `target_loc` tags: as published they mostly
-   measure a tagging artefact.
+7. Re-publish the BBQ bias columns of both HELM Classic and HELM Safety with the BBQ authors' `target_loc` tags and
+   the paper's ambiguous-accuracy scaling: as published, the unambiguous column mostly measures a tagging artefact
+   (every one of 42 Classic and 80 Safety models looks counter-stereotypical).
 8. Tie rules matter less than expected on archived log-probability grades: exact ties are about 1 in 170,000 records in
    HELM Classic. Prefer the first-argmax rule anyway; it can never over-credit.
 9. Merge PR #4352 and re-publish MedHELM's MedCalc column: as published it scores 35% of the test set as 0 for every
    model and leaves first place tied. Make an unknown category raise rather than score 0.
 10. Publish per-instance scores, as HELM already does; that is what made these counts possible.
+11. Keep every run that a release lists in the public bucket at the suite the index names, and store the final answer
+    next to any reasoning text, so each published number can be checked.

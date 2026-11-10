@@ -124,7 +124,20 @@ Folder: [helm-safety-bbq-bias-regrade](../helm-safety-bbq-bias-regrade/). Bears 
   which our code does not strip. Its published BBQ numbers equal the DeepSeek-R1 (hide reasoning) run's exactly.
 - Pre-registered: 6 of 8 held; P1 failed on inclusion (80 of 87, gate 95%) and P7 (10 sign changes) failed.
 
-## 9. Recommendations for re-scoring HELM (so far)
+## 9. Audit 98: dropped judge ratings on AHELM (a negative result)
+
+Folder: [ahelm-judge-dropped-ratings](../ahelm-judge-dropped-ratings/). Bears on HELM issues #4345 and #4344.
+- #4345: when the GPT-4o judge's reply has no parseable `Rating: N`, HELM leaves the rating out of the mean. On
+  AHELM v1.0.0's two Air-Bench Chat tables (68 runs, 17 systems), **0 of 37,281 requested ratings were dropped**: every
+  run's judge count equals its number of instances, every per-instance record has a whole rating from 1 to 5, and all
+  34 cells are reproduced by the pooled rule. So the silent drop changes no published number there.
+- #4344 (a score planted in the model's own output): no model output in these runs contains a string HELM's judge
+  regex would read.
+- AudioCaps, the third judged table, was not read: its group page lists run names on the model cell, which our code
+  did not look at (a gap like LibriSpeech's in audit 93). A v2 job covers it.
+- Pre-registered: 1 of 7 held (P3); P1 failed on that gap, and P2 and P4 to P7 failed because nothing was dropped.
+
+## 10. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -147,3 +160,7 @@ Folder: [helm-safety-bbq-bias-regrade](../helm-safety-bbq-bias-regrade/). Bears 
 10. Publish per-instance scores, as HELM already does; that is what made these counts possible.
 11. Keep every run that a release lists in the public bucket at the suite the index names, and store the final answer
     next to any reasoning text, so each published number can be checked.
+12. Still count unparsed judge replies (#4345) even though AHELM's Air-Bench Chat tables dropped none: a stored
+    "requested vs rated" count per run would show at a glance that a judged mean is complete.
+13. Put run names on the score cells of every group page (AHELM's AudioCaps page keeps them only on the model cell;
+    in audit 93 LibriSpeech's score cells listed none), so a published cell can be traced to its runs without guessing.

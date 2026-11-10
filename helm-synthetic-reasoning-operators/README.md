@@ -110,3 +110,72 @@ Code is Apache-2.0 (`normalize_text`, `exact_match` and `quasi_exact_match` are 
 Apache-2.0). This write-up and any results are CC BY 4.0. HELM Classic's outputs are published by Stanford CRFM. Only
 model names, HELM instance ids, trials, classes and counts are published, never prompts, references or model text.
 Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+Graded 2026-11-10 from the sealed job `helm-synreason-operators-v1` (finished 13:45 UTC; unit tests and every fixture
+passed). Output: [`results.json`](results.json) (every run, every model's cells and ranks). The job also wrote
+`flips.json` (every operator-blind credit by run, instance id, trial and class; no text), but at over 2 MB it is too
+large for this repository's publishing path, so it is not included here; running `job.py` rebuilds it exactly.
+**6 of 7 predictions held. P3 failed.**
+
+**Reproduction.** The release index lists **207** `synthetic_reasoning:` runs for **69** models, not the 204 runs (68
+models) counted before freezing; all 207 were included: every stored score reproduced, every record count matched
+`num_instances`, and every run mean matched `stats.json`. 132 runs have 3 trials (1,545 records) and 75 runs have 1
+trial (515 records), so a cell averages 9 or 3 trial means, not always 9 as the method says; the cell rule is
+otherwise the same, and **all 69 rebuilt cells match a published EM cell** within 1e-9. 242,565 graded records.
+
+| # | Verdict | Number |
+| --- | --- | --- |
+| P1 | HELD | fixtures all pass; 207 runs listed; 207 of 207 included; 69 of 69 cells match |
+| P2 | HELD | **19,145 of 58,270** quasi-exact credits (32.9%) are operator-blind (threshold 5%) |
+| P3 | FAILED | operator-blind share of each mode's credits: induction **57.6%** (2,211 of 3,839), variable_substitution 36.0% (9,823 of 27,297), pattern_match **26.2%** (7,111 of 27,134): pattern_match is the lowest, not the highest |
+| P4 | HELD | largest cell fall **0.133** (Llama 2 13B: 0.324 published, 0.190 operator-aware) |
+| P5 | HELD | **26** of 69 models move 3 or more places |
+| P6 | HELD | Kendall tau-b 0.917 between published and operator-aware cells |
+| P7 | HELD | operator-blind credits are 19,145 of the 24,988 quasi-exact credits that are not exact (76.6%) |
+
+**What the numbers say.** Of the 58,270 credits behind the published column, 33,282 (57.1%) are exact matches.
+19,145 (32.9%) are answers with a different sequence of operators from the gold's: 14,990 with other operators,
+3,748 with the gold's operators in another order and 407 with no operators at all. The remaining 5,843 keep the
+gold's operators in the gold's order without an exact match. Under the operator-aware grade every model's cell falls
+(except T0pp, which scores 0 either way): by 0.015 to 0.032 for the six leaders and by 0.05 to 0.13 for most of the
+rest. The top of the table holds (code-davinci-002 stays first; GPT-3.5 Turbo 0613 and Palmyra X swap 2nd and 3rd),
+but the middle and bottom reshuffle: Mistral 7B v0.1 goes from 7th to 10th, Llama 2 13B from 17th to 21st, Cohere
+xlarge (2022-11-08) from 31st to 39th and Cohere Command xlarge beta from 25th to 32nd, while UL2 rises from 39th to
+30th and Falcon 40B Instruct and LLaMA 7B each rise 8 places. For the weakest models most of the published score is
+operator-blind: for example Cohere small (2022-07-20) 0.121 published, 0.013 operator-aware; text-babbage-001 0.123
+and 0.023; Falcon 7B Instruct 0.037 and 0.003. (Post-hoc, counted by hand from `results.json`: for 28 of the 69
+models, operator-blind credit is more than half of the published cell.)
+
+**Why P3 failed (post-hoc).** We expected pattern_match, where the model chooses among patterns built from the same
+pieces, to have the most operator-blind credits. It has the fewest, relative to its credits. Induction has the most:
+there the gold rule is an irregular string of variables and operators, and in the hand-read (below) models usually
+wrote a tidier, equation-like rule with the same variables in the same order, which the normaliser accepts.
+
+**Hand-read, by class (log only; no text published).** The job printed 40 operator-blind credits and 10 of the 5,843
+other quasi-exact-only credits. Because the job printed the first records in run-name order, **all 50 are from the
+induction mode** (14 models and a handful of instances), so they show the kinds of error, not their frequency. All 40
+operator-blind credits are wrong rules, not other ways of writing the right one: most are a well-formed equation with
+the gold's variables (15 of 40 have the same "two variables, an operator, an equals sign, a third variable" shape),
+or a shortened rule that drops some of the gold's operators. **All 10 of the other credits are also wrong rules**:
+they have the gold's operators in the gold's order, but in other places between the variables. So our operator-aware
+grade is generous: it still credits some wrong patterns.
+
+**What this means for the headline.** The true count of credits for a wrong pattern lies between **19,145 (32.9%)**,
+the operator-blind credits, and **24,988 (42.9%)**, every quasi-exact credit that is not an exact match. The
+operator-aware cells above are therefore an upper bound on each model's right-pattern score, and the exact-match cells
+in `results.json` a lower bound. A post-hoc follow-up, `helm-synreason-positions` (a pattern-exact grade that also
+checks where each operator sits, with a hand-read from all three modes), is queued and will be reported separately.
+
+**Reading.** In HELM Classic's synthetic-reasoning (abstract symbols) column as published, at least a third (32.9%)
+of the answers counted as correct are patterns with the wrong operators. The ordering of the strongest models
+survives, but for many weaker models the published score is 2 to 11 times the operator-aware one, and more than a
+third of the table (26 of 69 models) moves 3 or more places. A fix is
+simple for this scenario: compare answers with exact match after collapsing spaces and case, or with a normaliser
+that keeps `+ - * =`.
+
+**Limits.** One release (v0.4.0), one column, test split, unperturbed records. The operator-aware grade is a partial
+fix (see above). The hand-read covered the induction mode only, and was done by AI agents, not a human. The
+pre-registration's run and model counts (204, 68) and "9 trial means" were wrong in detail; the job counted what the
+release lists. Nothing in the pre-registered part above was changed.

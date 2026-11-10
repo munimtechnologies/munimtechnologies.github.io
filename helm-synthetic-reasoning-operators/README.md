@@ -179,3 +179,16 @@ that keeps `+ - * =`.
 fix (see above). The hand-read covered the induction mode only, and was done by AI agents, not a human. The
 pre-registration's run and model counts (204, 68) and "9 trial means" were wrong in detail; the job counted what the
 release lists. Nothing in the pre-registered part above was changed.
+
+## Follow-up (post-hoc)
+
+Added 2026-11-10. The follow-up in [`followup-positions/`](followup-positions/) (designed after the results above,
+so descriptive, not pre-registered) settles the bounds. It reproduced every total above exactly, then checked where
+each operator sits. Of the 5,843 credits that keep the gold's operators in the gold's order without an exact match,
+**5,836 put them in the wrong places** and only 7 differ from the gold in formatting alone (a stray `|`, or `**` for
+`* *`). So **24,981 of the 58,270 published credits (42.9%) are for a wrong pattern**, and each model's right-pattern
+score is, to within 7 records across the whole column, its exact-match score. By mode, the wrong-pattern share is
+64.8% for induction, 44.7% for variable_substitution and 37.9% for pattern_match. Under that grade 29 of 69 models
+move 3 or more places (Kendall tau-b 0.910 with the published cells) and Llama 2 13B falls by 0.155. A hand-read of
+54 credits from all three modes (by AI agents) agreed with every class. Details and tables:
+[`followup-positions/README.md`](followup-positions/README.md).

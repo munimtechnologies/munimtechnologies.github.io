@@ -88,9 +88,22 @@ Folder: [helm-bbq-bias-regrade](../helm-bbq-bias-regrade/). Bears on HELM issues
 - Pre-registered: 6 of 7 held; P2 failed because #4368 counts a different quantity (bias-aligned answer, not the
   target letter), so our 382 is larger than its 288 by construction.
 
-## 7. Audit 96: MedCalc-Bench in MedHELM (pending)
+## 7. Audit 96: MedCalc-Bench in MedHELM
 
-Folder: [medcalc-helm-scorer-regrade](../medcalc-helm-scorer-regrade/). Bears on HELM issues #4351 and #4365.
+Folder: [medcalc-helm-scorer-regrade](../medcalc-helm-scorer-regrade/). Bears on HELM issues #4351 (PR #4352) and
+#4365.
+- MedHELM v4.0.0, all 13 `medcalc_bench` runs, 13,000 predictions; our transcription of `MedCalcBenchMetric` equals
+  HELM's recorded score on 13,000 of 13,000.
+- **All 4,602 lab and dosage predictions (35.4% of the test set) are published as 0**, whatever the answer. Scoring
+  them against the 5% limits HELM already ships with each instance (#4351's fix) credits 1,797 more; accepting other
+  forms of the same week/day duration (#4365) adds 144. Mean accuracy goes from 24.7% to 39.6%; no grade goes down.
+- **The published top is a tie the fix breaks:** DeepSeek-R1 and Gemini 2.5 Pro share first at 0.348; corrected,
+  Gemini 2.5 Pro leads (0.602), o3-mini is second and DeepSeek-R1 fifth (0.563). Four of the six reasoning models
+  change rank; nothing below them moves.
+- Our #4351 fix reproduces PR #4352's two re-scored models exactly (Claude 3.7 Sonnet 0.210 to 0.314; GPT-4o 0.188 to
+  0.280). Our duration rule, written independently, finds 144 of #4365's 148.
+- A loss no re-scoring can fix: Llama 3.3 70B gives a non-number for 49.2% of its lab, dosage and physical outputs.
+- Pre-registered: 7 of 7 held; 30 of 30 sampled up-flips genuine by their class rule (read by AI agents).
 
 ## 8. Recommendations for re-scoring HELM (so far)
 
@@ -109,4 +122,6 @@ Folder: [medcalc-helm-scorer-regrade](../medcalc-helm-scorer-regrade/). Bears on
    measure a tagging artefact.
 8. Tie rules matter less than expected on archived log-probability grades: exact ties are about 1 in 170,000 records in
    HELM Classic. Prefer the first-argmax rule anyway; it can never over-credit.
-9. Publish per-instance scores, as HELM already does; that is what made these counts possible.
+9. Merge PR #4352 and re-publish MedHELM's MedCalc column: as published it scores 35% of the test set as 0 for every
+   model and leaves first place tied. Make an unknown category raise rather than score 0.
+10. Publish per-instance scores, as HELM already does; that is what made these counts possible.

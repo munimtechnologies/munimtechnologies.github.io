@@ -112,3 +112,45 @@ python job.py --out-dir out   # downloads the three group pages and about a hund
 Code is Apache-2.0 (the regex is quoted from stanford-crfm/helm, Apache-2.0). This write-up and any results are CC BY
 4.0. AHELM's outputs are published by Stanford CRFM. Only model names, HELM instance ids, output classes and counts are
 published, never prompts, references or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+Graded 2026-11-10 from the sealed job `ahelm-judge-dropped-ratings-v1` (finished 06:55 UTC; unit tests and every
+fixture passed). Outputs: [`results.json`](results.json) (every run and cell) and [`unjudged.json`](unjudged.json)
+(empty here). **1 of 7 predictions held (P3); P1 failed because of a gap in our code, and P2, P4 to P7 failed
+because no rating was dropped.**
+
+**A gap in our code (P1).** Our reader takes each cell's run names from the judge cell. The AudioCaps group page keeps
+them only on the model-name cell, so the job listed **0 AudioCaps runs** (17 cells, none rebuilt). The two Air-Bench
+Chat tables were read in full. P1's parts: fixtures yes; 3 group pages with a judge column yes; 68 runs listed (at
+least 50) yes; 68 of 68 included (100%) yes; cells rebuilt 34 of 51 (66.7%, below 90%) **no**. Everything below
+covers the two Air-Bench Chat tables only. A v2 job with one change (run names also read from the model cell, with a
+new fixture) is queued to cover AudioCaps; its result will be added here as a separate section. Before freezing we
+had seen one AudioCaps run, Qwen2-Audio Instruct, and it dropped nothing.
+
+| # | Verdict | Number (Air-Bench Chat knowledge + reasoning, 68 runs, 17 models) |
+| --- | --- | --- |
+| P1 | FAILED (our code) | AudioCaps runs not listed; 34 of 51 cells rebuilt |
+| P2 | FAILED | **0** ratings dropped of 37,281 requested |
+| P3 | HELD | 0 of 37,281 (0%) |
+| P4 | FAILED | no drops to concentrate |
+| P5 | FAILED | largest cell fall 0.0 |
+| P6 | FAILED | 0 rank changes |
+| P7 | FAILED | no dropped instances to classify |
+
+**What the numbers say.** In every one of the 68 Air-Bench Chat runs (17 systems; knowledge: 34 runs, 17,000
+ratings; reasoning: 34 runs, 20,281 ratings), the count of HELM's `gpt4_audio_critique` stat equals `num_instances`,
+every per-instance record carries a numeric judge value, and our mean equals HELM's to 1e-6. All 34 cells are
+reproduced by the pooled rule (sum of sums over sum of counts). The 37,281 ratings are all whole numbers from 1 to 5
+(1: 9,918; 2: 4,454; 3: 4,430; 4: 13,158; 5: 5,321). No model output contains a string HELM's judge regex would read
+(`rating_text` 0), so the planted-score path of #4344 does not arise in these two tables either.
+
+**Reading.** In this release, #4345's silent drop never fired on the Air-Bench Chat columns: GPT-4o's reply always
+contained a parseable `Rating: N`, or the run was completed until it did. The code path is real (the issue's
+synthetic reproduction stands), but on these published numbers it changes nothing. This is a negative result for
+two of the three judged tables; AudioCaps is pending v2.
+
+**Limits.** One suite (v1.0.0), two of three judged tables, first trial, unperturbed. We cannot see the judge's
+replies (they are not stored), so we cannot tell whether HELM re-requested ratings that failed to parse before
+writing these files. The issue's other paths (`ModelCritiqueClient`, Reka Vibe-Eval) are not measured. Nothing in the
+pre-registered part above was changed.

@@ -1,0 +1,6 @@
+{
+ "audit": 98,
+ "note": "Every first-trial AHELM instance in the included runs whose published stats carry no gpt4_audio_critique value (the dropped ratings), and every model output that already contains a 'Rating: 1-5' string, by run name and instance id; no text.",
+ "unjudged": [],
+ "rating_text": []
+}

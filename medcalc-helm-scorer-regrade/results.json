@@ -1,0 +1,1358 @@
+{
+ "audit": 96,
+ "slug": "medcalc-helm-scorer-regrade",
+ "dataset": "Per-instance outputs of MedHELM release v4.0.0 (Stanford CRFM): every medcalc_bench run, first trial. Only model names, instance ids, categories, classes and counts are published.",
+ "fixture": {
+  "helm": true,
+  "grades": true,
+  "rounded_only": true,
+  "durations": true,
+  "runs": true,
+  "ranks": true,
+  "verdicts": true
+ },
+ "p1_parts": {
+  "fixtures": true,
+  "models": true,
+  "consistent": true
+ },
+ "n_models_included": 13,
+ "scorer_consistency": [
+  13000,
+  13000
+ ],
+ "categories": {
+  "date": {
+   "n": 754,
+   "H": 80,
+   "R": 80,
+   "C": 224,
+   "not_number": 0,
+   "rounded_only": 0
+  },
+  "diagnosis": {
+   "n": 728,
+   "H": 225,
+   "R": 225,
+   "C": 225,
+   "not_number": 0,
+   "rounded_only": 0
+  },
+  "dosage": {
+   "n": 507,
+   "H": 0,
+   "R": 187,
+   "C": 187,
+   "not_number": 38,
+   "rounded_only": 0
+  },
+  "lab": {
+   "n": 4095,
+   "H": 0,
+   "R": 1610,
+   "C": 1610,
+   "not_number": 450,
+   "rounded_only": 0
+  },
+  "physical": {
+   "n": 2925,
+   "H": 1884,
+   "R": 1884,
+   "C": 1884,
+   "not_number": 156,
+   "rounded_only": 0
+  },
+  "risk": {
+   "n": 3016,
+   "H": 801,
+   "R": 801,
+   "C": 801,
+   "not_number": 0,
+   "rounded_only": 0
+  },
+  "severity": {
+   "n": 975,
+   "H": 221,
+   "R": 221,
+   "C": 221,
+   "not_number": 0,
+   "rounded_only": 0
+  }
+ },
+ "totals": {
+  "predictions": 13000,
+  "H": 3211,
+  "R": 5008,
+  "C": 5152,
+  "up_flips_by_class": {
+   "range_lab": 1610,
+   "range_dosage": 187,
+   "duration_format": 144,
+   "same_value": 0
+  }
+ },
+ "ranks": {
+  "kendall_tau_b_H_vs_R": 0.8572151502191164,
+  "kendall_tau_b_H_vs_C": 0.8572151502191164,
+  "models_rank_changed_H_to_C": 4
+ },
+ "predictions": {
+  "P2_lab_dosage_zero": true,
+  "P3_range_fix_size": true,
+  "P4_duration_replicates": true,
+  "P5_same_value_rare": true,
+  "P6_ranks_change": true,
+  "P7_format_loss": true,
+  "P1_structural": true
+ },
+ "prediction_numbers": {
+  "P2_lab_dosage_H_credits": 0,
+  "P3_mean_and_min_gain_R": [
+   0.13823076923076924,
+   0.025
+  ],
+  "P4_duration_format_upflips": 144,
+  "P5_same_value_upflips_and_exact_predictions": [
+   0,
+   4719
+  ],
+  "P6_models_rank_changed": 4,
+  "P7_models_range_not_number_10pct": 3
+ },
+ "per_model": [
+  {
+   "model": "deepseek-ai_deepseek-r1",
+   "n": 1000,
+   "H": 0.348,
+   "R": 0.544,
+   "C": 0.563,
+   "gain_R": 0.196,
+   "gain_C": 0.215,
+   "range_outputs": 579,
+   "range_not_number": 28,
+   "range_not_number_share": 0.04835924006908463,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 3,
+     "R": 3,
+     "C": 22
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 31,
+     "R": 31,
+     "C": 31
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 22,
+     "C": 22
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 174,
+     "C": 174
+    },
+    "physical": {
+     "n": 225,
+     "H": 200,
+     "R": 200,
+     "C": 200
+    },
+    "risk": {
+     "n": 232,
+     "H": 93,
+     "R": 93,
+     "C": 93
+    },
+    "severity": {
+     "n": 75,
+     "H": 21,
+     "R": 21,
+     "C": 21
+    }
+   },
+   "up_flips": {
+    "range_lab": 174,
+    "range_dosage": 22,
+    "duration_format": 19,
+    "same_value": 0
+   },
+   "rank_H": 1,
+   "rank_R": 5,
+   "rank_C": 5
+  },
+  {
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "n": 1000,
+   "H": 0.348,
+   "R": 0.584,
+   "C": 0.602,
+   "gain_R": 0.236,
+   "gain_C": 0.254,
+   "range_outputs": 579,
+   "range_not_number": 12,
+   "range_not_number_share": 0.02072538860103627,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 4,
+     "R": 4,
+     "C": 22
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 26,
+     "R": 26,
+     "C": 26
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 22,
+     "C": 22
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 214,
+     "C": 214
+    },
+    "physical": {
+     "n": 225,
+     "H": 201,
+     "R": 201,
+     "C": 201
+    },
+    "risk": {
+     "n": 232,
+     "H": 96,
+     "R": 96,
+     "C": 96
+    },
+    "severity": {
+     "n": 75,
+     "H": 21,
+     "R": 21,
+     "C": 21
+    }
+   },
+   "up_flips": {
+    "range_lab": 214,
+    "range_dosage": 22,
+    "duration_format": 18,
+    "same_value": 0
+   },
+   "rank_H": 1,
+   "rank_R": 1,
+   "rank_C": 1
+  },
+  {
+   "model": "openai_gpt-5-mini-2025-08-07",
+   "n": 1000,
+   "H": 0.341,
+   "R": 0.559,
+   "C": 0.578,
+   "gain_R": 0.218,
+   "gain_C": 0.237,
+   "range_outputs": 579,
+   "range_not_number": 5,
+   "range_not_number_share": 0.008635578583765112,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 3,
+     "R": 3,
+     "C": 22
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 14,
+     "R": 14,
+     "C": 14
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 22,
+     "C": 22
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 196,
+     "C": 196
+    },
+    "physical": {
+     "n": 225,
+     "H": 206,
+     "R": 206,
+     "C": 206
+    },
+    "risk": {
+     "n": 232,
+     "H": 95,
+     "R": 95,
+     "C": 95
+    },
+    "severity": {
+     "n": 75,
+     "H": 23,
+     "R": 23,
+     "C": 23
+    }
+   },
+   "up_flips": {
+    "range_lab": 196,
+    "range_dosage": 22,
+    "duration_format": 19,
+    "same_value": 0
+   },
+   "rank_H": 3,
+   "rank_R": 3,
+   "rank_C": 3
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "n": 1000,
+   "H": 0.34,
+   "R": 0.568,
+   "C": 0.587,
+   "gain_R": 0.228,
+   "gain_C": 0.247,
+   "range_outputs": 579,
+   "range_not_number": 22,
+   "range_not_number_share": 0.037996545768566495,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 3,
+     "R": 3,
+     "C": 22
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 12,
+     "R": 12,
+     "C": 12
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 23,
+     "C": 23
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 205,
+     "C": 205
+    },
+    "physical": {
+     "n": 225,
+     "H": 204,
+     "R": 204,
+     "C": 204
+    },
+    "risk": {
+     "n": 232,
+     "H": 101,
+     "R": 101,
+     "C": 101
+    },
+    "severity": {
+     "n": 75,
+     "H": 20,
+     "R": 20,
+     "C": 20
+    }
+   },
+   "up_flips": {
+    "range_lab": 205,
+    "range_dosage": 23,
+    "duration_format": 19,
+    "same_value": 0
+   },
+   "rank_H": 4,
+   "rank_R": 2,
+   "rank_C": 2
+  },
+  {
+   "model": "openai_o4-mini-2025-04-16",
+   "n": 1000,
+   "H": 0.34,
+   "R": 0.533,
+   "C": 0.552,
+   "gain_R": 0.193,
+   "gain_C": 0.212,
+   "range_outputs": 579,
+   "range_not_number": 11,
+   "range_not_number_share": 0.018998272884283247,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 3,
+     "R": 3,
+     "C": 22
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 13,
+     "R": 13,
+     "C": 13
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 22,
+     "C": 22
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 171,
+     "C": 171
+    },
+    "physical": {
+     "n": 225,
+     "H": 206,
+     "R": 206,
+     "C": 206
+    },
+    "risk": {
+     "n": 232,
+     "H": 98,
+     "R": 98,
+     "C": 98
+    },
+    "severity": {
+     "n": 75,
+     "H": 20,
+     "R": 20,
+     "C": 20
+    }
+   },
+   "up_flips": {
+    "range_lab": 171,
+    "range_dosage": 22,
+    "duration_format": 19,
+    "same_value": 0
+   },
+   "rank_H": 4,
+   "rank_R": 6,
+   "rank_C": 6
+  },
+  {
+   "model": "openai_gpt-5-2025-08-07",
+   "n": 1000,
+   "H": 0.333,
+   "R": 0.556,
+   "C": 0.574,
+   "gain_R": 0.223,
+   "gain_C": 0.241,
+   "range_outputs": 579,
+   "range_not_number": 18,
+   "range_not_number_share": 0.031088082901554404,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 3,
+     "R": 3,
+     "C": 21
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 12,
+     "R": 12,
+     "C": 12
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 23,
+     "C": 23
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 200,
+     "C": 200
+    },
+    "physical": {
+     "n": 225,
+     "H": 202,
+     "R": 202,
+     "C": 202
+    },
+    "risk": {
+     "n": 232,
+     "H": 90,
+     "R": 90,
+     "C": 90
+    },
+    "severity": {
+     "n": 75,
+     "H": 26,
+     "R": 26,
+     "C": 26
+    }
+   },
+   "up_flips": {
+    "range_lab": 200,
+    "range_dosage": 23,
+    "duration_format": 18,
+    "same_value": 0
+   },
+   "rank_H": 6,
+   "rank_R": 4,
+   "rank_C": 4
+  },
+  {
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "n": 1000,
+   "H": 0.218,
+   "R": 0.317,
+   "C": 0.328,
+   "gain_R": 0.099,
+   "gain_C": 0.11,
+   "range_outputs": 579,
+   "range_not_number": 53,
+   "range_not_number_share": 0.09153713298791019,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 13,
+     "R": 13,
+     "C": 24
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 17,
+     "R": 17,
+     "C": 17
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 10,
+     "C": 10
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 89,
+     "C": 89
+    },
+    "physical": {
+     "n": 225,
+     "H": 136,
+     "R": 136,
+     "C": 136
+    },
+    "risk": {
+     "n": 232,
+     "H": 37,
+     "R": 37,
+     "C": 37
+    },
+    "severity": {
+     "n": 75,
+     "H": 15,
+     "R": 15,
+     "C": 15
+    }
+   },
+   "up_flips": {
+    "range_lab": 89,
+    "range_dosage": 10,
+    "duration_format": 11,
+    "same_value": 0
+   },
+   "rank_H": 7,
+   "rank_R": 7,
+   "rank_C": 7
+  },
+  {
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "n": 1000,
+   "H": 0.21,
+   "R": 0.314,
+   "C": 0.323,
+   "gain_R": 0.104,
+   "gain_C": 0.113,
+   "range_outputs": 579,
+   "range_not_number": 28,
+   "range_not_number_share": 0.04835924006908463,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 5,
+     "R": 5,
+     "C": 14
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 18,
+     "R": 18,
+     "C": 18
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 12,
+     "C": 12
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 92,
+     "C": 92
+    },
+    "physical": {
+     "n": 225,
+     "H": 128,
+     "R": 128,
+     "C": 128
+    },
+    "risk": {
+     "n": 232,
+     "H": 44,
+     "R": 44,
+     "C": 44
+    },
+    "severity": {
+     "n": 75,
+     "H": 15,
+     "R": 15,
+     "C": 15
+    }
+   },
+   "up_flips": {
+    "range_lab": 92,
+    "range_dosage": 12,
+    "duration_format": 9,
+    "same_value": 0
+   },
+   "rank_H": 8,
+   "rank_R": 8,
+   "rank_C": 8
+  },
+  {
+   "model": "openai_gpt-4o-2024-05-13",
+   "n": 1000,
+   "H": 0.188,
+   "R": 0.28,
+   "C": 0.28,
+   "gain_R": 0.092,
+   "gain_C": 0.092,
+   "range_outputs": 579,
+   "range_not_number": 1,
+   "range_not_number_share": 0.0017271157167530224,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 8,
+     "R": 8,
+     "C": 8
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 17,
+     "R": 17,
+     "C": 17
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 13,
+     "C": 13
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 79,
+     "C": 79
+    },
+    "physical": {
+     "n": 225,
+     "H": 112,
+     "R": 112,
+     "C": 112
+    },
+    "risk": {
+     "n": 232,
+     "H": 37,
+     "R": 37,
+     "C": 37
+    },
+    "severity": {
+     "n": 75,
+     "H": 14,
+     "R": 14,
+     "C": 14
+    }
+   },
+   "up_flips": {
+    "range_lab": 79,
+    "range_dosage": 13,
+    "duration_format": 0,
+    "same_value": 0
+   },
+   "rank_H": 9,
+   "rank_R": 9,
+   "rank_C": 9
+  },
+  {
+   "model": "google_gemini-2.0-flash-001",
+   "n": 1000,
+   "H": 0.158,
+   "R": 0.232,
+   "C": 0.24,
+   "gain_R": 0.074,
+   "gain_C": 0.082,
+   "range_outputs": 579,
+   "range_not_number": 78,
+   "range_not_number_share": 0.13471502590673576,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 13,
+     "R": 13,
+     "C": 21
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 14,
+     "R": 14,
+     "C": 14
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 11,
+     "C": 11
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 63,
+     "C": 63
+    },
+    "physical": {
+     "n": 225,
+     "H": 95,
+     "R": 95,
+     "C": 95
+    },
+    "risk": {
+     "n": 232,
+     "H": 23,
+     "R": 23,
+     "C": 23
+    },
+    "severity": {
+     "n": 75,
+     "H": 13,
+     "R": 13,
+     "C": 13
+    }
+   },
+   "up_flips": {
+    "range_lab": 63,
+    "range_dosage": 11,
+    "duration_format": 8,
+    "same_value": 0
+   },
+   "rank_H": 10,
+   "rank_R": 10,
+   "rank_C": 10
+  },
+  {
+   "model": "openai_gpt-4o-mini-2024-07-18",
+   "n": 1000,
+   "H": 0.154,
+   "R": 0.215,
+   "C": 0.215,
+   "gain_R": 0.061,
+   "gain_C": 0.061,
+   "range_outputs": 579,
+   "range_not_number": 22,
+   "range_not_number_share": 0.037996545768566495,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 12,
+     "R": 12,
+     "C": 12
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 21,
+     "R": 21,
+     "C": 21
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 3,
+     "C": 3
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 58,
+     "C": 58
+    },
+    "physical": {
+     "n": 225,
+     "H": 84,
+     "R": 84,
+     "C": 84
+    },
+    "risk": {
+     "n": 232,
+     "H": 26,
+     "R": 26,
+     "C": 26
+    },
+    "severity": {
+     "n": 75,
+     "H": 11,
+     "R": 11,
+     "C": 11
+    }
+   },
+   "up_flips": {
+    "range_lab": 58,
+    "range_dosage": 3,
+    "duration_format": 0,
+    "same_value": 0
+   },
+   "rank_H": 11,
+   "rank_R": 11,
+   "rank_C": 11
+  },
+  {
+   "model": "google_gemini-1.5-pro-001",
+   "n": 1000,
+   "H": 0.12,
+   "R": 0.168,
+   "C": 0.17,
+   "gain_R": 0.048,
+   "gain_C": 0.05,
+   "range_outputs": 579,
+   "range_not_number": 81,
+   "range_not_number_share": 0.13989637305699482,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 5,
+     "R": 5,
+     "C": 7
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 15,
+     "R": 15,
+     "C": 15
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 4,
+     "C": 4
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 44,
+     "C": 44
+    },
+    "physical": {
+     "n": 225,
+     "H": 61,
+     "R": 61,
+     "C": 61
+    },
+    "risk": {
+     "n": 232,
+     "H": 27,
+     "R": 27,
+     "C": 27
+    },
+    "severity": {
+     "n": 75,
+     "H": 12,
+     "R": 12,
+     "C": 12
+    }
+   },
+   "up_flips": {
+    "range_lab": 44,
+    "range_dosage": 4,
+    "duration_format": 2,
+    "same_value": 0
+   },
+   "rank_H": 12,
+   "rank_R": 12,
+   "rank_C": 12
+  },
+  {
+   "model": "meta_llama-3.3-70b-instruct",
+   "n": 1000,
+   "H": 0.113,
+   "R": 0.138,
+   "C": 0.14,
+   "gain_R": 0.025,
+   "gain_C": 0.027,
+   "range_outputs": 579,
+   "range_not_number": 285,
+   "range_not_number_share": 0.49222797927461137,
+   "by_category": {
+    "date": {
+     "n": 58,
+     "H": 5,
+     "R": 5,
+     "C": 7
+    },
+    "diagnosis": {
+     "n": 56,
+     "H": 15,
+     "R": 15,
+     "C": 15
+    },
+    "dosage": {
+     "n": 39,
+     "H": 0,
+     "R": 0,
+     "C": 0
+    },
+    "lab": {
+     "n": 315,
+     "H": 0,
+     "R": 25,
+     "C": 25
+    },
+    "physical": {
+     "n": 225,
+     "H": 49,
+     "R": 49,
+     "C": 49
+    },
+    "risk": {
+     "n": 232,
+     "H": 34,
+     "R": 34,
+     "C": 34
+    },
+    "severity": {
+     "n": 75,
+     "H": 10,
+     "R": 10,
+     "C": 10
+    }
+   },
+   "up_flips": {
+    "range_lab": 25,
+    "range_dosage": 0,
+    "duration_format": 2,
+    "same_value": 0
+   },
+   "rank_H": 13,
+   "rank_R": 13,
+   "rank_C": 13
+  }
+ ],
+ "sample_ids": [
+  {
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "381",
+   "class": "range_lab"
+  },
+  {
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "instance_id": "494",
+   "class": "range_lab"
+  },
+  {
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "736",
+   "class": "range_lab"
+  },
+  {
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "instance_id": "528",
+   "class": "range_lab"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "24",
+   "class": "range_lab"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "793",
+   "class": "range_lab"
+  },
+  {
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "instance_id": "20",
+   "class": "range_lab"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "366",
+   "class": "range_lab"
+  },
+  {
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "instance_id": "776",
+   "class": "range_lab"
+  },
+  {
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "instance_id": "101",
+   "class": "range_lab"
+  },
+  {
+   "model": "openai_gpt-4o-2024-05-13",
+   "instance_id": "953",
+   "class": "range_dosage"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "963",
+   "class": "range_dosage"
+  },
+  {
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "1006",
+   "class": "range_dosage"
+  },
+  {
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "instance_id": "958",
+   "class": "range_dosage"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "961",
+   "class": "range_dosage"
+  },
+  {
+   "model": "deepseek-ai_deepseek-r1",
+   "instance_id": "948",
+   "class": "range_dosage"
+  },
+  {
+   "model": "deepseek-ai_deepseek-r1",
+   "instance_id": "1002",
+   "class": "range_dosage"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "948",
+   "class": "range_dosage"
+  },
+  {
+   "model": "deepseek-ai_deepseek-r1",
+   "instance_id": "1006",
+   "class": "range_dosage"
+  },
+  {
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "995",
+   "class": "range_dosage"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "1038",
+   "class": "duration_format"
+  },
+  {
+   "model": "openai_o3-mini-2025-01-31",
+   "instance_id": "1036",
+   "class": "duration_format"
+  },
+  {
+   "model": "openai_gpt-5-mini-2025-08-07",
+   "instance_id": "1039",
+   "class": "duration_format"
+  },
+  {
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "1030",
+   "class": "duration_format"
+  },
+  {
+   "model": "openai_o4-mini-2025-04-16",
+   "instance_id": "1038",
+   "class": "duration_format"
+  },
+  {
+   "model": "openai_gpt-5-2025-08-07",
+   "instance_id": "1039",
+   "class": "duration_format"
+  },
+  {
+   "model": "google_gemini-2.5-pro-preview-05-06",
+   "instance_id": "1033",
+   "class": "duration_format"
+  },
+  {
+   "model": "google_gemini-2.0-flash-001",
+   "instance_id": "1043",
+   "class": "duration_format"
+  },
+  {
+   "model": "openai_gpt-5-mini-2025-08-07",
+   "instance_id": "1031",
+   "class": "duration_format"
+  },
+  {
+   "model": "openai_o4-mini-2025-04-16",
+   "instance_id": "1030",
+   "class": "duration_format"
+  }
+ ],
+ "runs": {
+  "anthropic_claude-3-5-sonnet-20241022": {
+   "run": "medcalc_bench:model=anthropic_claude-3-5-sonnet-20241022,model_deployment=stanfordhealthcare_claude-3-5-sonnet-20241022",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "anthropic_claude-3-7-sonnet-20250219": {
+   "run": "medcalc_bench:model=anthropic_claude-3-7-sonnet-20250219,model_deployment=stanfordhealthcare_claude-3-7-sonnet-20250219",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "deepseek-ai_deepseek-r1": {
+   "run": "medcalc_bench:num_output_tokens=4000,model=deepseek-ai_deepseek-r1,model_deployment=stanfordhealthcare_deepseek-r1",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "google_gemini-1.5-pro-001": {
+   "run": "medcalc_bench:model=google_gemini-1.5-pro-001,model_deployment=stanfordhealthcare_gemini-1.5-pro-001",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "google_gemini-2.0-flash-001": {
+   "run": "medcalc_bench:model=google_gemini-2.0-flash-001,model_deployment=stanfordhealthcare_gemini-2.0-flash-001",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "google_gemini-2.5-pro-preview-05-06": {
+   "run": "medcalc_bench:num_output_tokens=4000,model=google_gemini-2.5-pro-preview-05-06,model_deployment=stanfordhealthcare_gemini-2.5-pro-preview-05-06",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "meta_llama-3.3-70b-instruct": {
+   "run": "medcalc_bench:model=meta_llama-3.3-70b-instruct,model_deployment=stanfordhealthcare_llama-3.3-70b-instruct",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "openai_gpt-4o-2024-05-13": {
+   "run": "medcalc_bench:model=openai_gpt-4o-2024-05-13,model_deployment=stanfordhealthcare_gpt-4o-2024-05-13",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "openai_gpt-4o-mini-2024-07-18": {
+   "run": "medcalc_bench:model=openai_gpt-4o-mini-2024-07-18,model_deployment=stanfordhealthcare_gpt-4o-mini-2024-07-18",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "openai_gpt-5-2025-08-07": {
+   "run": "medcalc_bench:num_output_tokens=4000,model=openai_gpt-5-2025-08-07,model_deployment=stanfordhealthcare_gpt-5-2025-08-07",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "openai_gpt-5-mini-2025-08-07": {
+   "run": "medcalc_bench:num_output_tokens=4000,model=openai_gpt-5-mini-2025-08-07,model_deployment=stanfordhealthcare_gpt-5-mini-2025-08-07",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "openai_o3-mini-2025-01-31": {
+   "run": "medcalc_bench:num_output_tokens=4000,model=openai_o3-mini-2025-01-31,model_deployment=stanfordhealthcare_o3-mini-2025-01-31",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  },
+  "openai_o4-mini-2025-04-16": {
+   "run": "medcalc_bench:num_output_tokens=4000,model=openai_o4-mini-2025-04-16,model_deployment=stanfordhealthcare_o4-mini-2025-04-16",
+   "suite": "v4.0.0",
+   "counts": {
+    "n_pred": 1000,
+    "other_trial": 0,
+    "trial0": 1000,
+    "no_gold": 0,
+    "duplicate": 0,
+    "scored": 1000,
+    "consistent": 1000,
+    "inconsistent": 0,
+    "no_stat": 0
+   },
+   "scorer_consistent": 1.0,
+   "inconsistent_ids": [],
+   "status": "included"
+  }
+ },
+ "note": "H = HELM's MedCalcBenchMetric (transcribed), gated against HELM's recorded medcalc_bench_accuracy; R = H plus a range check for lab and dosage (#4351); C = R plus whole-string (weeks, days) tuples in other forms within the limits and numbers equal in value to a numeric risk/severity/diagnosis reference. rounded_only (exploratory, not in C) counts risk/severity/diagnosis outputs that equal an integer reference only after rounding. P2 H credits no lab or dosage prediction; P3 mean R - H gain >= 5 points and every model >= 2; P4 120-175 duration_format up-flips; P5 same_value up-flips < 1% of risk/severity/diagnosis predictions; P6 >= 3 models change rank H -> C; P7 >= 3 models have >= 10% of lab/dosage/physical outputs that are not a plain number."
+}

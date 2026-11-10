@@ -114,3 +114,66 @@ any results are CC BY 4.0. Upstream: MedCalc-Bench is published by NCBI (ncbi-nl
 are published by Stanford CRFM. Only model names, HELM instance ids, categories, classes and counts are published,
 never patient notes, questions, references or model text. This is research on benchmark scoring, not medical advice.
 Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+Added 2026-11-10. The sealed job ran on 2026-11-09 (21:37-21:40 UTC) with the code above, unchanged. Its outputs are
+`results.json` (all counts, per model and per category) and `flips.json` (model, instance id, category and class of
+every up-flip; no texts). **All 7 pre-registered predictions held.**
+
+| # | Verdict | Measured |
+| --- | --- | --- |
+| P1 | HELD | all fixtures matched; 13 of 13 models included; our H equals HELM's recorded score on 13,000 of 13,000 predictions |
+| P2 | HELD | H credits 0 of 4,602 lab and dosage predictions (all 13 runs) |
+| P3 | HELD | R raises the mean of the 13 models' accuracies by 13.8 points (24.7% to 38.5%); the smallest gain is 2.5 points (Llama 3.3 70B) |
+| P4 | HELD | 144 `duration_format` up-flips (#4365 counted 148; we did not identify which 4 differ) |
+| P5 | HELD | 0 `same_value` up-flips among 4,719 risk, severity and diagnosis predictions |
+| P6 | HELD | 4 models change rank under C (Kendall tau-b, H vs C: 0.857) |
+| P7 | HELD | 3 models give a non-number for at least 10% of their 579 lab, dosage and physical outputs |
+
+**The size of the gap.** Across the 13,000 published predictions, HELM's metric credits 3,211 (24.7%). Scoring lab
+and dosage answers against the limits HELM already ships with each instance (#4351's fix) credits 1,797 more (1,610
+lab, 187 dosage). Accepting other forms of the same week/day duration (#4365) adds 144. The corrected grade credits
+5,152 (39.6%), and no grade goes down. In the published runs, **every one of the 4,602 lab and dosage predictions
+(35.4% of the test set) scores 0**, whatever the answer.
+
+**Per model** (accuracy over each model's 1,000 predictions; rank = 1 + the number of models strictly more accurate):
+
+| Model | HELM (H) | #4351 fix (R) | Corrected (C) | Rank H to C | Non-number lab/dosage/physical outputs |
+| --- | --- | --- | --- | --- | --- |
+| deepseek-r1 | 0.348 | 0.544 | 0.563 | 1 to 5 | 28 of 579 |
+| gemini-2.5-pro-preview-05-06 | 0.348 | 0.584 | 0.602 | 1 to 1 | 12 of 579 |
+| gpt-5-mini-2025-08-07 | 0.341 | 0.559 | 0.578 | 3 to 3 | 5 of 579 |
+| o3-mini-2025-01-31 | 0.340 | 0.568 | 0.587 | 4 to 2 | 22 of 579 |
+| o4-mini-2025-04-16 | 0.340 | 0.533 | 0.552 | 4 to 6 | 11 of 579 |
+| gpt-5-2025-08-07 | 0.333 | 0.556 | 0.574 | 6 to 4 | 18 of 579 |
+| claude-3-5-sonnet-20241022 | 0.218 | 0.317 | 0.328 | 7 to 7 | 53 of 579 |
+| claude-3-7-sonnet-20250219 | 0.210 | 0.314 | 0.323 | 8 to 8 | 28 of 579 |
+| gpt-4o-2024-05-13 | 0.188 | 0.280 | 0.280 | 9 to 9 | 1 of 579 |
+| gemini-2.0-flash-001 | 0.158 | 0.232 | 0.240 | 10 to 10 | 78 of 579 |
+| gpt-4o-mini-2024-07-18 | 0.154 | 0.215 | 0.215 | 11 to 11 | 22 of 579 |
+| gemini-1.5-pro-001 | 0.120 | 0.168 | 0.170 | 12 to 12 | 81 of 579 |
+| llama-3.3-70b-instruct | 0.113 | 0.138 | 0.140 | 13 to 13 | 285 of 579 |
+
+- **The published top is a tie that the fix breaks.** As published, DeepSeek-R1 and Gemini 2.5 Pro share first place
+  at 0.348. Corrected, Gemini 2.5 Pro leads at 0.602 and DeepSeek-R1 is fifth at 0.563; o3-mini rises from fourth to
+  second and GPT-5 from sixth to fourth. All four rank changes are among the six reasoning models (the runs with
+  `num_output_tokens=4000`), whose corrected scores lie within 5.0 points of each other (0.552 to 0.602).
+- **The corrected grade adds 21.2 to 25.4 points to each reasoning model** (o4-mini +21.2, Gemini 2.5 Pro +25.4), but
+  only 2.7 points to Llama 3.3 70B, which gives a non-number for 285 of its 579 lab, dosage and physical outputs (49.2%).
+  Gemini 1.5 Pro (14.0%) and Gemini 2.0 Flash (13.5%) are the other two models over 10%. No re-scoring can recover an
+  answer that is not there, so for these models the published column also measures the answer format.
+- **Independent replication of PR #4352.** For the two models that #4351's author re-scored on MedHELM v3.0.0, our R
+  on v4.0.0 gives the same numbers: Claude 3.7 Sonnet 0.210 to 0.314 and GPT-4o 0.188 to 0.280.
+- **Exact-string scoring of risk, severity and diagnosis answers costs nothing** in these runs (0 of 4,719), and the
+  benchmark authors' rounding rule credits no extra answer (`rounded_only` is 0 in every category).
+
+**Hand-read (by AI agents, by class).** All 30 printed up-flips are genuine correct answers by their class rule: 10 of
+10 `range_lab` and 10 of 10 `range_dosage` outputs are plain numbers inside the instance's own limits (MedCalc-Bench's
+5% band around the reference), and 10 of 10 `duration_format` outputs give the reference's weeks and days exactly, as
+a bare tuple or with labels.
+
+**Limits.** One release (MedHELM v4.0.0), first trial, 1,000 instances per model. The range rule is the benchmark's own
+5% band, applied as HELM already applies it to `physical`; it is not a judgement of clinical correctness. The 4
+duration answers by which we differ from #4365 are not resolved. Ranks use three-decimal accuracies that are exact here
+(1,000 instances per model). This is research on benchmark scoring, not medical advice.

@@ -163,7 +163,27 @@ Folder: [helm-synthetic-reasoning-operators](../helm-synthetic-reasoning-operato
   than half of the published cell is wrong-pattern credit. A hand-read of 54 credits from all three modes (by AI
   agents) agreed with every class.
 
-## 11. Recommendations for re-scoring HELM (so far)
+## 11. Audit 100: HELM Classic's Dyck column checks only the last bracket
+
+Folder: [helm-dyck-last-token](../helm-dyck-last-token/). No HELM issue reported this.
+- HELM Classic scores Dyck (write the 1 to 3 closing brackets of a Dyck-3 prefix) with `exact_match_indicator`, which
+  keeps only the text after the last space, its default indicator. For the gold `) ] }` only `}` is compared, while
+  the HELM paper says Dyck reports strict exact match.
+- Release v0.4.0: 69 runs, 78,500 records; every stored per-record score, run mean and all 69 published cells
+  reproduced.
+- **24,395 of the 40,778 published credits (59.8%) are wrong closing sequences.** The share grows with the number of
+  closers: 42.3% on 1-closer golds, 57.8% on 2, 76.5% on 3. The wrong credits are extra closers in front of the right
+  ones (8,689), only the last one or two closers (6,349), the right count with wrong inner brackets (2,022) and other
+  wrong sequences (7,335). Only 20.9% of records are strictly right, against 51.9% credited.
+- Every cell falls (largest YaLM, 0.633 to 0.033); 54 of 69 runs move 3 or more places; Kendall tau-b **0.589**
+  (pre-registered P6, which expected at least 0.8, failed). The two leaders swap: code-davinci-002 (0.567) is first and
+  Anthropic-LM v4-s3 (0.849 published, 0.526) second; Llama 30B falls from 11th to 46th. Post-hoc: in 56 of 69 runs
+  more than half of the published score is wrong-sequence credit.
+- The other direction is small: 34 right answers in two `stop=hash` runs (T5 11B, UL2) score 0 because the stored
+  output keeps the `#` stop character glued to the last bracket.
+- Pre-registered: 6 of 7 held. A hand-read of 32 wrong credits from 8 runs (by AI agents) agreed with every class.
+
+## 12. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -194,3 +214,7 @@ Folder: [helm-synthetic-reasoning-operators](../helm-synthetic-reasoning-operato
     after collapsing case and spaces (the follow-up shows this differs from the correct-pattern count by only 7 of
     58,270 credits), or a normaliser that keeps `+ - * =`. Check every other quasi-exact column for answers whose
     meaning lives in punctuation.
+15. Never score a multi-token answer with `exact_match_indicator` and its default space indicator: it compares only
+    the last token. For Dyck, use exact match after collapsing whitespace (in HELM Classic this removes 24,395 wrong
+    credits and adds 34 right ones once a glued stop character is stripped). Keep the indicator only where the last
+    token is the answer by design, as in GSM8K's worked solutions.

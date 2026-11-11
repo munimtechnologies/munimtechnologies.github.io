@@ -218,3 +218,20 @@ Folder: [helm-dyck-last-token](../helm-dyck-last-token/). No HELM issue reported
     the last token. For Dyck, use exact match after collapsing whitespace (in HELM Classic this removes 24,395 wrong
     credits and adds 34 right ones once a glued stop character is stripped). Keep the indicator only where the last
     token is the answer by design, as in GSM8K's worked solutions.
+
+## Across audits 90-100: what a bug report should carry (added 2026-11-11)
+
+- **The gate held everywhere it was applied.** In the eight audits that grade individual records (90-94, 96, 99,
+  100), our transcriptions reproduce 1,301,302 published per-instance records; audits 95, 97 and 98 reproduce every
+  run-level number or cell they include.
+- **Pre-registration record:** 61 of 79 predictions held (audit 98 counted as v2). Of the 18 failures, 3 were
+  inclusion gaps in our own code (P1 of 93, 94 and 97), 5 were audit 98's predictions of drops that never happened,
+  and 10 were effects we guessed wrong.
+- **Severity in code is not effect on the archive.** Four of the eleven open HELM issues we tested (#4374, #4363,
+  #4345, #4344) change no published number in the releases checked, and #4358 changes 20 predictions. The two largest
+  over-credits we found (audits 99 and 100: 49,376 wrong credits together) had no issue at all. A scorer bug report
+  that states how many published grades it changes (for example "N of M records in release vX") lets maintainers
+  triage, and HELM's per-instance archive makes that a one-run count.
+- **A desk check, not an audit:** HELM issue #4379 (DecodingTrust OOD-knowledge accuracy always 0, filed 2026-11-10)
+  concerns a metric whose suite is not among the 26 top-level folders of HELM's public results bucket
+  (crfm-helm-public, listed 2026-11-11), so we know of no published HELM leaderboard number it changes.

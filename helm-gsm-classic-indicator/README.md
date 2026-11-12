@@ -123,3 +123,87 @@ Code is Apache-2.0 (`exact_match`, `exact_match_indicator` and `final_number_exa
 stanford-crfm/helm, Apache-2.0). This write-up and any results are CC BY 4.0. HELM Classic's outputs are published by
 Stanford CRFM. Only run names, model names, HELM instance ids, trials, classes and counts are published, never
 prompts, references or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-12, after the sealed job ran (job `helm-gsm-classic-indicator-v1`, 2026-11-12 12:37 to 12:41 UTC,
+exit 0; the unit tests and every fixture passed before any data was read). Nothing above this section was changed.
+The full output is in [results.json](results.json).*
+
+**6 of 7 predictions held.** HELM Classic's GSM8K column scores **2,949 answers 0 whose stated answer is right:
+16.7% of its 17,694 published credits.** It hits the chat models hardest. Under a stated-answer grade, and also under
+HELM's own `final_number_exact_match`, **GPT-3.5 Turbo (0301) leads the column instead of Palmyra X**.
+
+| # | Verdict | Measured |
+| --- | --- | --- |
+| P1 | HELD | all fixtures match; 69 runs listed, 69 included (100%); 69 of 69 cells match a published EM cell |
+| P2 | HELD | under-credits 2,949 = **16.7%** of the 17,694 IND credits (threshold 1%) |
+| P3 | HELD | over-credits 34 against 2,949 under-credits (and see the hand-read: all 8 read are our grade's misreads) |
+| P4 | HELD | largest rise **0.287** (GPT-3.5 Turbo 0613, 0.469 to 0.756) |
+| P5 | HELD | **20** runs move 3 or more places |
+| P6 | HELD | Kendall tau-b, published against CORR: **0.927** (against FNEM: 0.925) |
+| P7 | FAILED | `continued` has only 2 records; the largest class is `number_form` (1,131) |
+
+**Census.** 69 runs (44 with 3 trials, 25 with 1), 157,000 test records; every stored `exact_match_indicator` was
+reproduced (0 mismatches, 0 missing) and all 69 cells equal a published EM cell.
+
+**Under-credits by class** (CORR 1, IND 0): `number_form` 1,131 (6.4% of published credits: `The answer is $72.` or
+`1,000.`), `no_phrase` 989 (5.6%), `words_after` 822 (4.6%: `The answer is 10 inches.`, `60%.`), `no_period` 5,
+`continued` 2. Net, the stated-answer grade credits 20,609 records against 17,694 published (+16.5%). HELM's own
+`final_number_exact_match`, which the GSM8K run spec names but the v0.4.0 runs do not store, credits 20,466: it gains
+2,772 records over the published metric and loses none. In 2,751 outputs its regex finds an empty final number (the
+#4337 case, counted in HELM Lite by audit 90); none of them is a published credit.
+
+**The top of the column** (cells are the mean of a run's trial means; ranks: 1 + the number of runs strictly higher):
+
+| Model | Published EM | Stated-answer grade | HELM's final-number EM | Rank: published to stated-answer |
+| --- | --- | --- | --- | --- |
+| Palmyra X | 0.633 | 0.639 | 0.639 | 1 to 3 |
+| code-davinci-002 | 0.568 | 0.585 | 0.584 | 2 to 5 |
+| GPT-3.5 Turbo (0301) | 0.531 | **0.775** | **0.764** | 3 to **1** |
+| text-davinci-003 | 0.506 | 0.609 | 0.605 | 4 to 4 |
+| Llama 2 (70B) | 0.484 | 0.567 | 0.555 | 5 to 6 |
+| GPT-3.5 Turbo (0613) | 0.469 | **0.756** | **0.746** | 6 to **2** |
+| LLaMA (65B) | 0.466 | 0.489 | 0.492 | 7 to 7 |
+
+Where the gains come from: GPT-3.5 Turbo 0301 has 245 under-credits in 1,000 records (`number_form` 211, `words_after`
+27, `no_phrase` 7), GPT-3.5 Turbo 0613 has 287 (`number_form` 178, `no_phrase` 79, `words_after` 30), text-davinci-003
+has 310 in 3,000 (`words_after` 224, `number_form` 86), and Palmyra X has 18 in 3,000 (17 `number_form`). The two
+chat models write the right number in their own form (`$72`, `1,000`) rather than the in-context examples' bare
+`72.`, and the last-token comparison scores that form 0. Lower down, 20 runs move 3 or more places, mostly near zero
+where cells are close (T0pp 0.000 to 0.029, rank 68 to 53; Alpaca 7B rank 59 to 49). 991 of the under-credits are in
+outputs that reached the 400-token limit.
+
+**Hand-read** (as pre-registered: up to 8 per class, at most one per run; 26 under-credits and 8 over-credits read;
+texts not published):
+
+- `number_form`: **8 of 8 right** (for example `The answer is 3,000.` for the gold's `3000.`, `The answer is $800.`).
+  In one, the stated `$3` equals the gold although the working before it does not lead there.
+- `words_after`: 6 of 8 right (`The answer is 10 inches.`, `60%.`, `-3 degrees Celsius.`); 1 wrong, our grade's error
+  (`The answer is 4/10.` read as 4, the gold); 1 doubtful (a degenerate T5 11B output).
+- `no_phrase`: 4 of 8 right (a closing sentence such as "...a total of $180."); **2 wrong by chance** (repetition
+  loops whose last number happens to equal the gold); 2 doubtful (loops repeating the right computation).
+- `no_period` 1 of 1 and `continued` 1 of 1 right.
+- Over-credits (`changed`): **all 8 read are right answers that our grade misread**: the output says "the answer is
+  300 - 240 = 60 miles. The answer is 60." and our grade took the first number after the phrase. So the 34
+  over-credits are not HELM over-credits; they make our total a slight underestimate. (Lyu et al., arXiv 2402.18540,
+  extract answers of exactly this "the answer is {expression} = {answer}" form.)
+
+In all, 20 of the 26 under-credits read are right answers, 3 are wrong (2 by chance, 1 from our fraction handling) and
+3 doubtful. The `no_phrase` class is the noisiest and mostly comes from weak models' loops. The headline does not
+rest on it. *Post hoc, not pre-registered:* counting only `number_form` (8 of 8 read right) and nothing else, GPT-3.5
+Turbo 0301 scores 0.742, GPT-3.5 Turbo 0613 0.647 and Palmyra X 0.639, so the same three lead in the same order as
+under the full stated-answer grade.
+
+**What this means.** As pre-registered, P2 holding means HELM Classic's GSM8K column under-counts right answers.
+Comparing the last token is not a safe way to read a stated answer even where it was meant to be one. The effect is
+not uniform: it costs the two GPT-3.5 Turbo models 0.244 and 0.287 and Palmyra X 0.006, so the published leader is
+an artefact of answer formatting. HELM Lite's later switch to `final_number_exact_match` removes almost all of it
+(FNEM is within 0.012 of our grade in every cell of the table above). Together with audit 100 (Dyck, where 59.8% of
+the same metric's credits are wrong closing sequences), `exact_match_indicator` misgrades both HELM Classic columns we
+have measured that use it as the main metric, in opposite directions.
+
+**Limits.** One column of one release; CORR is our own grade, with the two known errors seen above (a fraction read as
+its numerator, an expression after "the answer is"); the hand-read is 34 records; 25 runs have one trial and 44 have
+three, so a single record moves a cell by 0.001 or 0.00033. HELM Classic is a legacy leaderboard; its current
+releases (Lite and later) already use `final_number_exact_match` for GSM8K.

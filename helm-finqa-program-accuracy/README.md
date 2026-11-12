@@ -137,3 +137,53 @@ FinQA's `evaluate.py` (Zhiyu Chen, MIT License) is downloaded at run time and no
 and any results are CC BY 4.0. HELM Finance's outputs are published by Stanford CRFM. Only run names, model names,
 HELM instance ids, trials, classes and counts are published, never prompts, references or model text. Authored by AI
 agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-12. The sealed job `helm-finqa-program-accuracy-v1` ran once, on 2026-11-12 from 15:25 to 15:29 UTC,
+and exited 0. Full numbers: [results.json](results.json). Graded and hand-read by AI agents working in MV2's name; no
+human has checked these counts.*
+
+**8 of 8 predictions held** (P8 exactly on its boundary). The plan above is unchanged.
+
+| # | Verdict | What was measured |
+| --- | --- | --- |
+| P1 | HELD | all six helper fixtures and the unit tests passed (helper SHA-256 `b07e4522...486a`); 22 runs listed, 22 included; every stored per-record score and run mean reproduced; 22 of 22 cells match the published column; all 22 runs also pass the execution-accuracy gate |
+| P2 | HELD | **539 of 22,000 records (2.45%)** are scored 0 by HELM and 1 once arguments and operation names are normalised; that is 6.3% as many as the 8,600 credits HELM publishes. No record goes down |
+| P3 | HELD | up-flips by class: `const` 260, `table_name` 101, `number_form` 86, `combined` 84, `table_none` 8 |
+| P4 | HELD | **625 records** use a hyphenated table operation, as HELM's own instructions spell it; the scorer's structure check rejects that spelling |
+| P5 | HELD | largest rise: Gemini 1.5 Pro 002, **0.587 to 0.654 (+0.067)**; Gemini 1.5 Flash 001 +0.064, Llama 3.1 405B +0.044; 19 of 22 cells rise by 0.01 or more |
+| P6 | HELD | Kendall tau-b 0.939; one model moves 3 or more places: **Gemini 1.5 Flash 001, 5th to 2nd** (0.535 to 0.599) |
+| P7 | HELD | Gemini 1.5 Pro 002 stays first |
+| P8 | HELD | execution accuracy exceeds program accuracy by 0.05 or more in **11 of 22 runs**, exactly half (largest: Gemini 1.5 Flash and GPT-4o 2024-05-13, +0.102) |
+
+**Totals.** Program accuracy 8,600 of 22,000 (39.1%); argument-normalised 9,139 (41.5%); execution accuracy 9,867
+(44.9%); execution accuracy with the same fixes 10,009 (45.5%). 846 records execute to the right answer with a
+program that still differs from the gold after normalisation. Also counted: 190 one-argument table operations, and
+5,841 outputs (26.6%) that FinQA's executor rejects.
+
+**Hand-read** (by AI agents; up to 8 records per class, one per run, gold program, answer and prediction printed in
+the job log):
+
+- All **38 up-flips read are right programs**: `const` 8 of 8 (`multiply(#0, 100)` for `multiply(#0, const_100)`,
+  `divide(455, 7)` for `divide(455, const_7)`), `table_name` 8 of 8 (identical to the gold but for `table-max`),
+  `table_none` 6 of 6 (identical but for the missing `, none`), `number_form` 8 of 8 (`divide(850, 650)` for
+  `divide(850.0, 650.0)`, the same question in five of them; `multiply(375, 0.05)` for `multiply(375, 5.0%)`),
+  `combined` 8 of 8 (`divide(2.0, 5.0)` for `divide(const_2, const_5)`; two rearrange `(a - 100)/100 - (b - 100)/100`
+  as `(a - b)/100`, which FinQA's symbolic comparison accepts once 100 is mapped).
+- `exec_only`, 8 read (not counted as right programs): 1 is the same computation written differently
+  (`divide(a, b), subtract(#0, 1)` for `(a - b)/b`; the `1` is not in the gold's symbol map), 2 precompute an
+  intermediate number, 3 use other numbers that reach the same answer, 1 uses `table_average` for an add-and-halve,
+  and 1 adds extra steps.
+
+**What it means.** HELM Finance's FinQA column scores a right program 0 when it spells an argument or operation
+differently from the gold: 539 such records, 6.3% as many as the column credits, and every cell but one rises when
+they count. 101 of them, and the 625 hyphenated records in all, come from following HELM's own instructions, which
+spell the table operations `table-max` while the scorer accepts only `table_max`. The fix is small: spell the
+operations with underscores in the prompt, mention `none` and `const_N`, or normalise arguments before comparing.
+The order mostly holds; Gemini 1.5 Flash moves from 5th to 2nd. Separately, execution accuracy, which HELM stores but
+does not show, is 0.05 to 0.10 higher than program accuracy for half the models.
+
+**Limits.** One release, one column. ANPA fixes only spelling: other right programs that HELM scores 0 (the
+`exec_only` read shows a few) are not in the 539. The hand-read covers 38 of 539 up-flips. Counts are by AI agents and have not been
+checked by a human.

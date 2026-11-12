@@ -229,7 +229,45 @@ defect but a prompt one: it is the input, not the grade, that differs from the b
   whose figure also appears on the given page, so 32 is an upper bound on truly unanswerable questions.
 - Pre-registered: 7 of 8 held; P7 (a model moving 3 or more places) failed.
 
-## 14. Recommendations for re-scoring HELM (so far)
+## 14. Audit 105: HELM Capabilities' MMLU-Pro column reads boxed answers as no answer
+
+Folder: [helm-mmlu-pro-answer-extraction](../helm-mmlu-pro-answer-extraction/). Bears on open HELM PR #4323 (the
+escaped `Answer:` regex), which gives no count; no issue reported the rest.
+- HELM Capabilities v1.15.0 (the current leaderboard) scores MMLU-Pro and GPQA "COT correct" with one
+  `extract_answer()`: the **first** match of `answer is X`, a dead `\[aA\]nswer:` regex, then two "correct answer is"
+  fallbacks. `\boxed{C}`, `Answer: C` and `**The correct answer is** **C**` are read as no answer.
+- 67 of 68 runs (one is missing from the public bucket), 67,000 records; every stored per-record score and all 67
+  cells reproduced (59 runs by HELM main's extractor, 8 older ones by the version before PR #3445).
+- Graded by the model's **last** explicit answer statement: **952 records gain, 133 lose** (net 819, 1.2% of
+  records). Boxed right letters are most of the gains (619); 223 are answer phrases HELM's regexes miss (often bold
+  markup); 110 are cases where HELM read another letter, from an earlier statement or from text such as "(insert
+  answer here)".
+- **Two models carry most of it:** Gemini 2.5 Flash-Lite 0.537 to 0.778 (rank 54 to 27 of 67; 237 boxed right
+  answers) and Gemini 2.5 Flash preview 0.639 to 0.814 (rank 42 to 16; 175). 15 other models gain 0.01 or more, the
+  top ten change by at most 0.001, and Kendall tau-b is 0.930. PR #4323's fix would recover 63 of the 952.
+- Hand-read (by AI agents): 6 of 6 boxed and 6 of 6 other-letter up-flips genuine; 6 of 6 revised-answer down-flips
+  genuine (HELM credits the answer the model later abandoned); 5 of 6 `down_fallback` cases are right answers our
+  narrow rule misses, so the net gain is an underestimate.
+- GPQA uses the same extractor; its outputs are encrypted in the public archive, so it was not checked.
+- Pre-registered: 7 of 8 held; P8 (two other Gemini models gaining 0.02) failed: only one did.
+
+## 15. Audit 107: HELM Finance's FinQA prompt and scorer spell programs differently
+
+Folder: [helm-finqa-program-accuracy](../helm-finqa-program-accuracy/). No HELM issue reported this.
+- HELM Finance v1.0.0's only FinQA column, Program Accuracy, uses FinQA's own `equal_program`, which maps arguments
+  by their literal spelling. HELM's instructions spell the table operations `table-max` (the scorer accepts only
+  `table_max`), omit the `none` argument, and never mention `const_100`.
+- 22 runs, 22,000 records; every stored per-record score, run mean and all 22 cells reproduced; execution accuracy
+  too.
+- **539 records (2.45%) are right programs scored 0 for spelling**, 6.3% as many as the 8,600 published credits:
+  `const_N` written as a number 260, hyphenated operation names 101, other number forms (`850` for `850.0`, `0.05` for
+  `5.0%`) 86, combined 84, missing `none` 8. No record goes down. 625 records in all use the prompt's hyphenated names.
+- Gemini 1.5 Pro stays first (0.587 to 0.654); Gemini 1.5 Flash moves 5th to 2nd; Kendall tau-b 0.939. Execution
+  accuracy, stored but not shown, is 0.05 or more above program accuracy in 11 of 22 runs.
+- Hand-read (by AI agents): 38 of 38 up-flips read are right programs.
+- Pre-registered: 8 of 8 held (P8 exactly on its boundary).
+
+## 16. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -270,25 +308,40 @@ defect but a prompt one: it is the input, not the grade, that differs from the b
 17. Build FinanceBench prompts from the full pages of every cited evidence item, without duplicates, as the paper's
     Oracle setting did, and re-run the column: as published, 32 of its 140 questions are asked without a page they
     cite. Check other open-book scenarios for the same `evidence[0]` pattern.
+18. In `GPQAChainOfThoughtMetric`, read `\boxed{X}` and take the **last** answer statement, not the first; merge
+    PR #4323 too. On HELM Capabilities' MMLU-Pro this credits 952 records and removes 133, and moves Gemini 2.5
+    Flash-Lite from 54th to 27th. Re-check GPQA, which uses the same extractor, with the decrypted outputs.
+19. Make FinQA's prompt and scorer agree: spell the table operations `table_max` etc. in HELM's instructions, show
+    the `none` argument and `const_N`, or normalise both programs' arguments before `equal_program`. This credits 539
+    right programs in HELM Finance and lowers none. Consider showing execution accuracy beside program accuracy.
 
-## Across audits 90-101 and 108: what a bug report should carry (added 2026-11-11, updated 2026-11-12)
+## Across audits 90-101, 105, 107 and 108: what a bug report should carry (added 2026-11-11, updated 2026-11-12)
 
-- **The gate held everywhere it was applied.** In the nine audits that grade individual records (90-94, 96, 99-101),
-  our transcriptions reproduce 1,458,302 published per-instance records; audits 95, 97 and 98 reproduce every
-  run-level number or cell they include, and audit 108 matches all 3,080 judge labels to HELM's stored stats and all
-  22 cells.
-- **Pre-registration record:** 74 of 94 predictions held (audit 98 counted as v2). Of the 20 failures, 3 were
+- **The gate held everywhere it was applied.** In the eleven audits that grade individual records (90-94, 96, 99-101,
+  105, 107), our transcriptions reproduce 1,547,302 published per-instance records; audits 95, 97 and 98 reproduce
+  every run-level number or cell they include, and audit 108 matches all 3,080 judge labels to HELM's stored stats and
+  all 22 cells.
+- **Pre-registration record:** 89 of 110 predictions held (audit 98 counted as v2). Of the 21 failures, 3 were
   inclusion gaps in our own code (P1 of 93, 94 and 97), 5 were audit 98's predictions of drops that never happened,
-  and 12 were effects we guessed wrong.
+  and 13 were effects we guessed wrong. Separately, audit 102's first run stopped before grading on a gap in our code
+  (a 5,760-digit number); it is not counted until it is graded.
 - **Severity in code is not effect on the archive.** Four of the eleven open HELM issues we tested (#4374, #4363,
   #4345, #4344) change no published number in the releases checked, and #4358 changes 20 predictions. The two largest
   over-credits we found (audits 99 and 100: 49,376 wrong credits together) and audit 101's under-credit (2,949
-  right answers scored 0) had no issue before MV2's own (#4381, for audit 99). A
+  right answers scored 0) had no issue before MV2's own (#4381, for audit 99). Open PR #4323 fixes a real dead regex
+  that recovers 63 MMLU-Pro records, while the first-match and boxed-answer rules beside it cost 889 more. A
   scorer bug report that states how many published grades it changes (for example "N of M records in release vX")
   lets maintainers triage, and HELM's per-instance archive makes that a one-run count.
 - **One metric, two directions.** `exact_match_indicator` over-credits Dyck (59.8% of credits are wrong sequences)
   and under-credits GSM8K (2,949 right answers scored 0) in the same release. Checking a metric on one column says
   little about another column that uses it.
+- **Format habits concentrate on a few models.** On the current MMLU-Pro column, 51 of 67 models are within 0.01 of
+  their stated-answer score, while two Gemini 2.5 models lose 0.24 and 0.18. An average over models hides this; a
+  per-model count of "no answer extracted" shows it at once (324 for Gemini 2.5 Flash-Lite against 0 to 5 for each Claude 4
+  and GPT-5 model).
+- **The prompt can contradict the scorer.** In FinQA, HELM's own instructions spell `table-max`, which its scorer
+  rejects; 625 records follow the instructions. A test that runs each prompt's own examples through its scorer would
+  catch this.
 - **A level can be wrong while the order is right.** In audit 108 a fifth of FinanceBench's questions are asked
   without a page they need, which lowers every model's score by about 0.10 to 0.16 but moves no model 3 places. A
   leaderboard user comparing models is barely affected; one reading the number as "how well a model answers from the

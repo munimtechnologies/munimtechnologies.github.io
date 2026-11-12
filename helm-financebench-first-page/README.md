@@ -131,3 +131,113 @@ Code is Apache-2.0. This write-up and any results are CC BY 4.0. FinanceBench (P
 and not redistributed here. HELM Finance's outputs are published by Stanford CRFM (HELM is Apache-2.0). Only run names,
 model names, FinanceBench ids, classes, question types and counts are published, never questions, evidence, answers,
 model text or judge explanations. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-12, after the sealed job ran (job `helm-financebench-first-page-v1`, 2026-11-12 14:27 to 14:31 UTC,
+exit 0; the unit tests passed before any data was read). Nothing above this section was changed. The full output is
+in [results.json](results.json).*
+
+**7 of 8 predictions held.** **32 of HELM Finance's 140 FinanceBench test questions (22.9%) cite a page that HELM's
+prompt leaves out.** On those 32, the 22 models are judged correct on **10.4%** of answers, against **65.4%** on the
+other 108, and the judge's "failure to answer" share is **5.8 times** higher. The order of the column barely changes
+(Kendall tau-b 0.965, no model moves 3 or more places), so the main effect is on the level of every score, not the
+ranking.
+
+| # | Verdict | Measured |
+| --- | --- | --- |
+| P1 | HELD | unit tests pass; 140 of 140 test ids are FinanceBench records; in all 22 runs **100%** of test prompts equal item 0's page plus the question; 189 of 189 cited snippets found in their own page; 22 runs listed, 22 included; 22 of 22 cells match a published cell |
+| P2 | HELD | **32 of 140** test questions missing (22.9%; threshold 20%); all 150 records: 35 missing, 115 single, 0 covered, 0 unverifiable |
+| P3 | HELD | pooled `failure_to_answer`: **39.2%** on missing questions (276 of 704) against **6.7%** on complete ones (160 of 2,376), a ratio of **5.8** (threshold 2) |
+| P4 | HELD | **22 of 22** runs (100%) are less often correct on missing than on complete questions |
+| P5 | HELD | metrics-generated questions only (21 missing, 26 complete): pooled correct **6.5%** on missing (30 of 462) against **70.3%** on complete (402 of 572), a gap of **0.638** (threshold 0.10) |
+| P6 | HELD | Kendall tau-b, published against complete-only cells: **0.965** |
+| P7 | FAILED | **no** run moves 3 or more places; the largest moves are 2 (GPT-4o mini 12th to 10th, Gemini 1.5 Flash 9th to 7th) |
+| P8 | HELD | Claude 3 Opus is first on complete questions (0.852; next GPT-4o and Claude 3.5 Sonnet, 0.806) |
+
+**Which questions.** Of the 32 missing questions, 21 are metrics-generated (ratios and sums built from two
+statements), 8 domain-relevant and 3 novel-generated. So 21 of the 47 metrics-generated test questions (44.7%) are
+asked without a page they cite. No test question is `covered` or `unverifiable`: every test question that cites more
+than one item has at least one item on another page whose snippet is absent from the page HELM gives.
+
+**Pooled over 22 runs** (3,080 judged answers):
+
+| Questions | Answers | Correct | Incorrect | Failure to answer |
+| --- | --- | --- | --- | --- |
+| Complete (108) | 2,376 | 1,555 (65.4%) | 661 (27.8%) | 160 (6.7%) |
+| Missing (32) | 704 | 73 (10.4%) | 355 (50.4%) | 276 (39.2%) |
+
+The missing questions supply 73 of the column's 1,628 published credits (4.5%) while making up 22.9% of it. Every
+cell rises on complete questions only; the pooled mean goes from 0.529 to 0.654.
+
+**All 22 runs** (counts out of 32 missing and 108 complete questions; ranks: 1 + the number of runs strictly higher):
+
+| Model | Published | Complete only | Correct on missing | Failure to answer on missing | Rank: published to complete only |
+| --- | --- | --- | --- | --- | --- |
+| Claude 3 Opus | 0.700 | 0.852 (92) | 6 | 21 | 1 to 1 |
+| GPT-4o (2024-05-13) | 0.664 | 0.806 (87) | 6 | 7 | 2 to 2 |
+| Claude 3.5 Sonnet (2024-06-20) | 0.650 | 0.806 (87) | 4 | 25 | 3 to 2 |
+| Claude 3 Sonnet | 0.650 | 0.796 (86) | 5 | 19 | 3 to 4 |
+| Llama 3.1 Instruct Turbo 405B | 0.629 | 0.787 (85) | 3 | 22 | 5 to 5 |
+| Llama 3 Instruct 70B | 0.607 | 0.759 (82) | 3 | 17 | 6 to 6 |
+| GPT-3.5 Turbo (0125) | 0.600 | 0.722 (78) | 6 | **0** | 7 to 7 |
+| Gemini 1.5 Pro (002) | 0.579 | 0.722 (78) | 3 | 10 | 8 to 7 |
+| Gemini 1.5 Flash (001) | 0.571 | 0.722 (78) | 2 | 6 | 9 to 7 |
+| Llama 3.2 Vision Instruct Turbo 90B | 0.557 | 0.685 (74) | 4 | 16 | 10 to 10 |
+| Qwen2 Instruct 72B | 0.550 | 0.676 (73) | 4 | 7 | 11 to 12 |
+| GPT-4o mini (2024-07-18) | 0.543 | 0.685 (74) | 2 | 7 | 12 to 10 |
+| Llama 3.1 Instruct Turbo 70B | 0.536 | 0.657 (71) | 4 | 21 | 13 to 14 |
+| Qwen1.5 Chat 72B | 0.529 | 0.667 (72) | 2 | 14 | 14 to 13 |
+| Mixtral Instruct 8x22B | 0.521 | 0.639 (69) | 4 | 18 | 15 to 15 |
+| Llama 3.1 Instruct Turbo 8B | 0.514 | 0.639 (69) | 3 | 9 | 16 to 15 |
+| Llama 3.2 Vision Instruct Turbo 11B | 0.507 | 0.620 (67) | 4 | 7 | 17 to 17 |
+| Mixtral Instruct 8x7B | 0.443 | 0.546 (59) | 3 | 8 | 18 to 18 |
+| Gemini 1.0 Pro (002) | 0.436 | 0.546 (59) | 2 | 8 | 19 to 18 |
+| Mistral Instruct v0.3 7B | 0.393 | 0.500 (54) | 1 | 2 | 20 to 20 |
+| Llama 3.2 Instruct Turbo 3B | 0.257 | 0.315 (34) | 2 | 4 | 21 to 21 |
+| Llama 3 Instruct 8B | 0.193 | 0.250 (27) | 0 | 28 | 22 to 22 |
+
+How models handle a missing page differs widely: Claude 3.5 Sonnet declines on 25 of 32, Claude 3 Opus on 21, GPT-4o
+on 7 (all seven of GPT-4o's "failure to answer" labels in the column fall on these 32 questions) and GPT-3.5 Turbo
+(0125) on none, yet GPT-3.5 Turbo is judged correct on as many of them (6) as Claude 3 Opus. A model that says the
+needed statement is not in the evidence scores the same 0 as a wrong guess. Llama 3 Instruct 8B's 28 are mostly
+off-topic answers, not declines: it is also labelled "failure to answer" on 60 of the 108 complete questions.
+
+**Hand-read** (by AI agents, from the job log, as pre-registered; texts not published):
+
+- **8 missing questions:** in **7 the prompt lacks figures the answer needs**: a return-on-assets question given only
+  the balance sheet (net income is on the left-out income statement), a fixed-asset-turnover question given only the
+  balance sheet (revenue left out), an inventory-turnover question given only the income statement (inventories left
+  out), and four questions needing the left-out cash-flow statement (dividends paid, capital expenditure, depreciation
+  and amortization, cash from operations). In the eighth (PepsiCo's geographies) the given page holds the start of a
+  list whose last two items are on the left-out page.
+- **8 "failure to answer" on missing questions** (8 runs): 6 say plainly that the statement or figure the question
+  needs is not in the evidence (for example "the statement of cash flows is not included"); 1 restates the formula
+  without a number; 1 answers a different question (Llama 3 Instruct 8B).
+- **8 "failure to answer" on complete questions:** 3 say the information is not in the evidence, 2 argue the metric
+  is not meaningful for the company, 1 gives part of a multi-year answer, 2 are off-topic or confused. So declining for
+  lack of evidence is common on missing questions and rare elsewhere, as P3's ratio says.
+- **8 "correct" on missing questions:** 3 are one question (`financebench_id_04254`, an EBITDA sum) whose
+  depreciation line also appears on the given income statement, so the left-out page was not needed; 2 are a yes/no
+  question credited without the ratio it asks for; 1 is a "not meaningful" answer the gold also gives; 1 is a right
+  yes/no reached by assuming a figure the model says it does not have; 1 is the partial geography list. So credits on
+  missing questions come mostly from questions answerable without the left-out page and from lenient judging of
+  yes/no answers.
+
+**What this means.** As pre-registered, P2 and P3 holding means part of HELM's FinanceBench column measures whether a
+model declines or guesses when the prompt lacks the numbers it needs, not open-book question answering as in the
+FinanceBench paper's Oracle setting, which gave all cited pages. The cost is large and nearly uniform: about a fifth of
+the column is close to unanswerable as prompted (10.4% correct against 65.4%), so 20 of 22 published scores are 0.10
+to 0.16 lower than on the complete questions (0.06 for the two weakest models), while the order holds (P7 failed: no model moves 3 or more
+places). The column also cannot tell an honest "the cash-flow statement is not given" from a wrong number. For
+context only (another model, all 150 questions, the paper's own grading): the FinanceBench paper (arXiv:2311.11944,
+Table 2) reports its Oracle setting, with the relevant page(s) or financial statement(s) in the prompt, at 85% correct
+and 0 failures to answer for GPT-4-Turbo; in HELM, GPT-4o (2024-05-13) is judged correct on 0.664 of the column, and
+all 7 of its failures to answer fall on the 32 questions with a page left out. The fix
+would be to join the full pages of every cited item, without duplicates, as the paper did; that needs new model runs,
+so this audit cannot say what the re-run scores would be.
+
+**Limits.** One column of one release, 140 questions; `missing` is a page test, not a needs test: a left-out page can
+repeat a figure the given page already has (as for `04254`), so 32 is an upper bound on questions that truly cannot be
+answered, and the hand-read is 8 of 32. The judge is not checked; its leniency on yes/no answers shows in the read. The
+complete-only cells are a re-cut of the same answers, not what the models would score with all pages in the prompt.

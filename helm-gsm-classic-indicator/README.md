@@ -186,8 +186,9 @@ texts not published):
 - `no_period` 1 of 1 and `continued` 1 of 1 right.
 - Over-credits (`changed`): **all 8 read are right answers that our grade misread**: the output says "the answer is
   300 - 240 = 60 miles. The answer is 60." and our grade took the first number after the phrase. So the 34
-  over-credits are not HELM over-credits; they make our total a slight underestimate. (Lyu et al., arXiv 2402.18540,
-  extract answers of exactly this "the answer is {expression} = {answer}" form.)
+  over-credits are not HELM over-credits; they make our total a slight underestimate. *(Corrected 2026-11-12: an
+  earlier version cited Lyu et al., arXiv 2402.18540, as extracting answers of this "the answer is {expression} =
+  {answer}" form; that paper does not describe this form, so the citation was removed.)*
 
 In all, 20 of the 26 under-credits read are right answers, 3 are wrong (2 by chance, 1 from our fraction handling) and
 3 doubtful. The `no_phrase` class is the noisiest and mostly comes from weak models' loops. The headline does not
@@ -201,7 +202,9 @@ not uniform: it costs the two GPT-3.5 Turbo models 0.244 and 0.287 and Palmyra X
 an artefact of answer formatting. HELM Lite's later switch to `final_number_exact_match` removes almost all of it
 (FNEM is within 0.012 of our grade in every cell of the table above). Together with audit 100 (Dyck, where 59.8% of
 the same metric's credits are wrong closing sequences), `exact_match_indicator` misgrades both HELM Classic columns we
-have measured that use it as the main metric, in opposite directions.
+have measured that use it as the main metric, in opposite directions. *(Added 2026-11-12: these two, Dyck and GSM8K,
+are the only run groups in HELM's `schema_classic.yaml` whose main metric is `exact_match_indicator`, checked on the
+main branch.)*
 
 **Limits.** One column of one release; CORR is our own grade, with the two known errors seen above (a fraction read as
 its numerator, an expression after "the answer is"); the hand-read is 34 records; 25 runs have one trial and 44 have

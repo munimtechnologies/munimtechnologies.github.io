@@ -142,7 +142,8 @@ Folder: [ahelm-judge-dropped-ratings](../ahelm-judge-dropped-ratings/). Bears on
 
 ## 10. Audit 99: operators erased in HELM Classic's synthetic reasoning
 
-Folder: [helm-synthetic-reasoning-operators](../helm-synthetic-reasoning-operators/). No HELM issue reported this.
+Folder: [helm-synthetic-reasoning-operators](../helm-synthetic-reasoning-operators/). No earlier HELM issue reported
+this; MV2 reported it as issue [#4381](https://github.com/stanford-crfm/helm/issues/4381) on 2026-11-12.
 - HELM Classic v0.4.0's "Synthetic reasoning (abstract symbols)" column is scored by `quasi_exact_match`, whose
   normaliser removes all punctuation, and with it every operator the scenario uses (`+ - * =`). So `X = Y + Y` matches
   `X + Y = Y`.
@@ -183,7 +184,30 @@ Folder: [helm-dyck-last-token](../helm-dyck-last-token/). No HELM issue reported
   output keeps the `#` stop character glued to the last bracket.
 - Pre-registered: 6 of 7 held. A hand-read of 32 wrong credits from 8 runs (by AI agents) agreed with every class.
 
-## 12. Recommendations for re-scoring HELM (so far)
+## 12. Audit 101: HELM Classic's GSM8K column scores right answers 0
+
+Folder: [helm-gsm-classic-indicator](../helm-gsm-classic-indicator/). No HELM issue reported this (#4337 is about
+HELM Lite's other GSM8K metric).
+- The same `exact_match_indicator` is the main metric of HELM Classic's GSM8K column. The gold ends
+  `The answer is 72.`, so only `72.` is compared, literally: `The answer is $72.`, `1,000.` against `1000.`, or
+  `72 apples.` score 0. We expected comparing the last token to be safe here (audit 100's recommendation said so); it
+  is not.
+- Release v0.4.0: 69 runs, 157,000 records; every stored per-record score, run mean and all 69 published cells
+  reproduced.
+- **2,949 answers whose stated answer is right score 0: 16.7% of the 17,694 published credits.** By class: the number
+  written differently (1,131), words after it (822), no "the answer is" but a right last number (989, the noisiest).
+  HELM's own `final_number_exact_match`, which the GSM8K run spec lists but these runs do not store, credits 2,772
+  more answers than the published metric and none fewer.
+- **The leader changes:** GPT-3.5 Turbo 0301 goes from 0.531 (3rd) to 0.775 (1st) and 0613 from 0.469 (6th) to 0.756
+  (2nd); Palmyra X, first as published, goes from 0.633 to 0.639 (3rd). HELM's `final_number_exact_match` gives the
+  same top three. 20 runs move 3 or more places (Kendall tau-b 0.927). Post hoc, counting only the 1,131 differently
+  written numbers (8 of 8 read were right) gives the same top three in the same order.
+- Hand-read (by AI agents) of 26 under-credits: 20 right, 3 wrong (2 repetition loops ending on the gold's number by
+  chance, 1 fraction our grade misread), 3 doubtful. All 8 "over-credits" read were right answers our grade misread
+  ("the answer is 300 - 240 = 60"), so our total is a slight underestimate.
+- Pre-registered: 6 of 7 held; P7 (output continuing after the answer as the main cause) failed: 2 records.
+
+## 13. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -216,22 +240,29 @@ Folder: [helm-dyck-last-token](../helm-dyck-last-token/). No HELM issue reported
     meaning lives in punctuation.
 15. Never score a multi-token answer with `exact_match_indicator` and its default space indicator: it compares only
     the last token. For Dyck, use exact match after collapsing whitespace (in HELM Classic this removes 24,395 wrong
-    credits and adds 34 right ones once a glued stop character is stripped). Keep the indicator only where the last
-    token is the answer by design, as in GSM8K's worked solutions.
+    credits and adds 34 right ones once a glued stop character is stripped). *Corrected 2026-11-12:* an earlier
+    version said to keep the indicator where the last token is the answer by design, as in GSM8K; audit 101 shows
+    that even there it scores 2,949 right answers 0 (16.7% of the published credits).
+16. Re-publish HELM Classic's GSM8K column with `final_number_exact_match`, the metric its run spec already lists and
+    HELM Lite already uses: it credits 2,772 more answers, none fewer, and changes the column's leader.
 
-## Across audits 90-100: what a bug report should carry (added 2026-11-11)
+## Across audits 90-101: what a bug report should carry (added 2026-11-11, updated 2026-11-12)
 
-- **The gate held everywhere it was applied.** In the eight audits that grade individual records (90-94, 96, 99,
-  100), our transcriptions reproduce 1,301,302 published per-instance records; audits 95, 97 and 98 reproduce every
+- **The gate held everywhere it was applied.** In the nine audits that grade individual records (90-94, 96, 99-101),
+  our transcriptions reproduce 1,458,302 published per-instance records; audits 95, 97 and 98 reproduce every
   run-level number or cell they include.
-- **Pre-registration record:** 61 of 79 predictions held (audit 98 counted as v2). Of the 18 failures, 3 were
+- **Pre-registration record:** 67 of 86 predictions held (audit 98 counted as v2). Of the 19 failures, 3 were
   inclusion gaps in our own code (P1 of 93, 94 and 97), 5 were audit 98's predictions of drops that never happened,
-  and 10 were effects we guessed wrong.
+  and 11 were effects we guessed wrong.
 - **Severity in code is not effect on the archive.** Four of the eleven open HELM issues we tested (#4374, #4363,
   #4345, #4344) change no published number in the releases checked, and #4358 changes 20 predictions. The two largest
-  over-credits we found (audits 99 and 100: 49,376 wrong credits together) had no issue at all. A scorer bug report
-  that states how many published grades it changes (for example "N of M records in release vX") lets maintainers
-  triage, and HELM's per-instance archive makes that a one-run count.
+  over-credits we found (audits 99 and 100: 49,376 wrong credits together) and audit 101's under-credit (2,949
+  right answers scored 0) had no issue before MV2's own (#4381, for audit 99). A
+  scorer bug report that states how many published grades it changes (for example "N of M records in release vX")
+  lets maintainers triage, and HELM's per-instance archive makes that a one-run count.
+- **One metric, two directions.** `exact_match_indicator` over-credits Dyck (59.8% of credits are wrong sequences)
+  and under-credits GSM8K (2,949 right answers scored 0) in the same release. Checking a metric on one column says
+  little about another column that uses it.
 - **A desk check, not an audit:** HELM issue #4379 (DecodingTrust OOD-knowledge accuracy always 0, filed 2026-11-10)
   concerns a metric whose suite is not among the 26 top-level folders of HELM's public results bucket
   (crfm-helm-public, listed 2026-11-11), so we know of no published HELM leaderboard number it changes.

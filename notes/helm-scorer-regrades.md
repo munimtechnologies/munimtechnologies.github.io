@@ -207,7 +207,29 @@ HELM Lite's other GSM8K metric).
   ("the answer is 300 - 240 = 60"), so our total is a slight underestimate.
 - Pre-registered: 6 of 7 held; P7 (output continuing after the answer as the main cause) failed: 2 records.
 
-## 13. Recommendations for re-scoring HELM (so far)
+## 13. Audit 108: HELM Finance's FinanceBench prompt keeps only the first evidence page
+
+Folder: [helm-financebench-first-page](../helm-financebench-first-page/). No HELM issue reported this. Not a scorer
+defect but a prompt one: it is the input, not the grade, that differs from the benchmark's design.
+- HELM Finance v1.0.0's FinanceBench column (22 models, 140 test questions, GPT-4o judge) builds each prompt from the
+  first cited evidence item's page only. The FinanceBench paper's Oracle setting gave all cited pages.
+- All 22 runs included; every one of their 140 test prompts is exactly the first page plus the question; every judge
+  label agrees with HELM's stored stat (3,080 labels) and all 22 published cells are reproduced.
+- **32 of 140 test questions (22.9%) cite a page the prompt leaves out**, 21 of them metrics-generated (ratios built
+  from two statements: 21 of the 47 metrics-generated test questions).
+- On those 32, the models are judged correct on **10.4%** of answers (73 of 704) against **65.4%** (1,555 of 2,376) on
+  the other 108; "failure to answer" is 39.2% against 6.7%, **5.8 times** as common; all 22 runs do worse there. Among
+  metrics-generated questions only: 6.5% against 70.3%.
+- The order holds (Kendall tau-b 0.965; no model moves 3 or more places; Claude 3 Opus first either way), but 20 of 22
+  cells are 0.10 to 0.16 lower than on complete questions. A model that says the needed statement is not given scores
+  the same as a wrong guess: Claude 3.5 Sonnet declines on 25 of the 32, GPT-3.5 Turbo (0125) on none, and both are
+  judged correct on a similar few (4 and 6).
+- Hand-read (by AI agents): 7 of 8 missing questions lack a figure the answer needs (net income, revenue, inventories
+  or a cash-flow line); 6 of 8 "failure to answer" labels on them say so; 3 of 8 "correct" labels read are one question
+  whose figure also appears on the given page, so 32 is an upper bound on truly unanswerable questions.
+- Pre-registered: 7 of 8 held; P7 (a model moving 3 or more places) failed.
+
+## 14. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -245,15 +267,19 @@ HELM Lite's other GSM8K metric).
     that even there it scores 2,949 right answers 0 (16.7% of the published credits).
 16. Re-publish HELM Classic's GSM8K column with `final_number_exact_match`, the metric its run spec already lists and
     HELM Lite already uses: it credits 2,772 more answers, none fewer, and changes the column's leader.
+17. Build FinanceBench prompts from the full pages of every cited evidence item, without duplicates, as the paper's
+    Oracle setting did, and re-run the column: as published, 32 of its 140 questions are asked without a page they
+    cite. Check other open-book scenarios for the same `evidence[0]` pattern.
 
-## Across audits 90-101: what a bug report should carry (added 2026-11-11, updated 2026-11-12)
+## Across audits 90-101 and 108: what a bug report should carry (added 2026-11-11, updated 2026-11-12)
 
 - **The gate held everywhere it was applied.** In the nine audits that grade individual records (90-94, 96, 99-101),
   our transcriptions reproduce 1,458,302 published per-instance records; audits 95, 97 and 98 reproduce every
-  run-level number or cell they include.
-- **Pre-registration record:** 67 of 86 predictions held (audit 98 counted as v2). Of the 19 failures, 3 were
+  run-level number or cell they include, and audit 108 matches all 3,080 judge labels to HELM's stored stats and all
+  22 cells.
+- **Pre-registration record:** 74 of 94 predictions held (audit 98 counted as v2). Of the 20 failures, 3 were
   inclusion gaps in our own code (P1 of 93, 94 and 97), 5 were audit 98's predictions of drops that never happened,
-  and 11 were effects we guessed wrong.
+  and 12 were effects we guessed wrong.
 - **Severity in code is not effect on the archive.** Four of the eleven open HELM issues we tested (#4374, #4363,
   #4345, #4344) change no published number in the releases checked, and #4358 changes 20 predictions. The two largest
   over-credits we found (audits 99 and 100: 49,376 wrong credits together) and audit 101's under-credit (2,949
@@ -263,6 +289,10 @@ HELM Lite's other GSM8K metric).
 - **One metric, two directions.** `exact_match_indicator` over-credits Dyck (59.8% of credits are wrong sequences)
   and under-credits GSM8K (2,949 right answers scored 0) in the same release. Checking a metric on one column says
   little about another column that uses it.
+- **A level can be wrong while the order is right.** In audit 108 a fifth of FinanceBench's questions are asked
+  without a page they need, which lowers every model's score by about 0.10 to 0.16 but moves no model 3 places. A
+  leaderboard user comparing models is barely affected; one reading the number as "how well a model answers from the
+  filing" is.
 - **A desk check, not an audit:** HELM issue #4379 (DecodingTrust OOD-knowledge accuracy always 0, filed 2026-11-10)
   concerns a metric whose suite is not among the 26 top-level folders of HELM's public results bucket
   (crfm-helm-public, listed 2026-11-11), so we know of no published HELM leaderboard number it changes.

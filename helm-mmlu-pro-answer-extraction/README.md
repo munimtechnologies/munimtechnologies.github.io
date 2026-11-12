@@ -132,3 +132,63 @@ Code is Apache-2.0. HELM's `extract_answer` is transcribed from stanford-crfm/he
 any results are CC BY 4.0. HELM Capabilities' outputs are published by Stanford CRFM. Only run names, model names,
 HELM instance ids, letters, classes and counts are published, never prompts, references or model text. Authored by
 AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-12. The sealed job `helm-mmlu-pro-answer-extraction-v1` ran once, on 2026-11-12 from 16:33 to 16:40
+UTC, and exited 0. Full numbers: [results.json](results.json); every flipped record (model, instance id, trial,
+class, gold, HELM's letter, stated letter): [flips.json](flips.json). Graded and hand-read by AI agents working in
+MV2's name; no human has checked these counts.*
+
+**7 of 8 predictions held.** The plan above is unchanged.
+
+| # | Verdict | What was measured |
+| --- | --- | --- |
+| P1 | HELD | all fixtures matched; 67 of 68 listed runs included (Gemini 1.5 Pro 002's `display_predictions.json` is missing from the public bucket, HTTP 404); all 67,000 stored per-record scores reproduced exactly; 67 of 67 cells match a published "COT correct" value. 59 runs are reproduced by HELM main's extractor (v4), 8 older ones by v3 |
+| P2 | HELD | Gemini 2.5 Flash-Lite: **0.537 published, 0.778 by its stated answer (+0.241)**, rank 54 to 27 of 67; 237 of its answers are a boxed right letter that HELM reads as no answer |
+| P3 | HELD | 15 other models gain 0.01 or more |
+| P4 | HELD | up-flips 952, down-flips 133 (7.2 to 1) |
+| P5 | HELD | `up_boxed` 619, `up_phrase` 223, `up_other_letter` 110 |
+| P6 | HELD | PR #4323's fix recovers 63 records (and lowers 4): 6.6% of the 952 |
+| P7 | HELD | 13 models move 3 or more places; Kendall tau-b 0.930 |
+| P8 | FAILED | only one other Gemini model gains 0.02 or more: Gemini 2.5 Flash (preview 04-17), **0.639 to 0.814 (+0.175), rank 42 to 16**. Gemini 2.0 Flash +0.005, Gemini 3 Pro +0.001, Gemini 2.5 Pro 0.000, Gemini 1.5 Flash -0.001, Gemini 2.0 Flash-Lite -0.004 |
+
+**Totals.** 67,000 records; HELM credits 44,458 (66.4%). Graded by the last stated answer, 45,277 are right: 952
+records gain and 133 lose, a net 819 (1.2% of records). Pooled classes: `up_boxed` 619, `up_phrase` 223,
+`up_other_letter` 110; `down_fallback` 97, `down_other_letter` 32, `down_spurious_capital` 4.
+
+**Where it matters.** Two models carry most of the effect: Gemini 2.5 Flash-Lite (+0.241) and Gemini 2.5 Flash
+preview (+0.175) together hold 412 of the 619 boxed up-flips. They jump 27 and 26 places. The next largest gains are
+Mixtral 8x7B Instruct (+0.048, 0.335 to 0.383), Writer Palmyra Fin (+0.040), Qwen2.5 72B Instruct Turbo (+0.038),
+Writer Palmyra X 004 (+0.033), GPT-4.1 nano (+0.032), Marin 8B Instruct (+0.030), Mistral Large 2411 (+0.026) and
+Mistral Small 2503 (+0.021). Every model in the published top ten changes by at most 0.001. *Post hoc:* 10 of the 13 movers gain or lose 0.002 or less; they move because the two
+Gemini 2.5 models jump past them.
+
+**Hand-read** (by AI agents, the last 160 characters of up to 6 records per class, printed in the job log):
+
+- `up_boxed`, 6 of 6 genuine: each ends with a boxed letter equal to the gold (`The final answer is $\boxed{J}$`,
+  `\boxed{\text{C}}`, `\boxed{F}`) and HELM extracts nothing.
+- `up_other_letter`, 6 of 6: the model's last statement is the gold. In two the visible text shows where HELM's letter
+  came from: "the correct answer is (insert answer here)", read as A by regex 4, before the model's "**Answer: F**",
+  and "the correct answer is False, True", read as F, before "The correct answer is C."
+- `up_phrase`, 3 of 6 visible and genuine (GPT-4.1 nano: `**The correct answer is** **A. ...**`; regexes 3 and 4 need
+  a space right after "is", so the bold markup defeats them); in the other 3 the statement lies before the logged
+  tail, so we could not check it.
+- `down_other_letter`, 6 of 6 genuine: the model first named the right letter and later changed it ("**Correction:**
+  ... **The correct answer is I.**"); HELM's first-match rule credits the abandoned answer.
+- `down_fallback`, 5 of 6 are **right answers our narrow rule does not read** (`the correct answer is \( D. 35 ... \)`,
+  `\text{The correct answer is } C.`); the sixth is not visible. So most of the 97 down-flips are our grade's misses,
+  and the net gain of 819 is, if anything, an underestimate.
+- `down_spurious_capital`, 4 records, 3 on one question (`id7758`); none ends with a clear right answer.
+
+**What it means.** On HELM Capabilities v1.15.0's MMLU-Pro column, the score of most models is what their stated
+answers earn, to within 0.01 (51 of 67). For a few models whose habit is to box the final letter, mostly Gemini 2.5
+Flash-Lite and Gemini 2.5 Flash preview, the published number largely measures that habit: 237 and 175 of their
+1,000 answers are a boxed right letter read as no answer. One may count "use the requested phrase" as part of the task; this page
+reports both numbers. Open PR #4323 fixes a real dead regex but would recover only 63 of the 952. Reading `\boxed{X}`
+and taking the **last** answer statement would recover most of the rest. The same extractor scores GPQA, whose
+outputs are encrypted in the public archive, so we could not check how much the two Gemini 2.5 models lose there.
+
+**Limits.** One release, one benchmark. The stated-answer rule is narrow by design (it misses LaTeX-wrapped
+statements, as the `down_fallback` read shows). The hand-read covers only the last 160 characters. Counts are by AI
+agents and have not been checked by a human.

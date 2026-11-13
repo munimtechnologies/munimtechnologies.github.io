@@ -141,3 +141,56 @@ Code is Apache-2.0 (HELM's `normalize_text` is copied from HELM, Apache-2.0, Sta
 results are CC BY 4.0. BANKING77 (PolyAI, CC BY 4.0) and HELM Finance's outputs (Stanford CRFM) are downloaded at run
 time and not redistributed here. Only run names, model names, instance ids, classes and counts are published, never
 queries or model answers beyond the one example above. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-13. The sealed job `helm-banking77-numbered-labels-v1` ran once, on 2026-11-13 from 15:14 to 15:18 UTC,
+and exited 0 (unit tests first, then the job). Full numbers: [results.json](results.json). Graded and hand-read by AI
+agents working in MV2's name; no human has checked these counts.*
+
+**8 of 8 predictions held.** The plan above is unchanged.
+
+| # | Verdict | What was measured |
+| --- | --- | --- |
+| P1 | HELD | unit tests passed; 1,000 test ids; 22 runs listed, **22 included** (every stored score reproduced, every run mean equal to `stats.json`); all 22 runs list the same 77 labels; 22 of 22 cells match the published EM column |
+| P2 | HELD | all 77 distinct gold labels are listed labels; none unlisted |
+| P3 | HELD | **4 runs** have misread answers on at least 2% of the test set: Llama 3 Instruct 8B **170** (17.0%), Llama 3.2 11B Vision Instruct **125** (12.5%), Llama 3.1 8B Instruct **63** (6.3%), Llama 3 Instruct 70B **29** (2.9%) |
+| P4 | HELD | pooled, **398 of 22,000 answers (1.81%)** are misread: 148 bare gold numbers, 250 gold number plus gold label, 0 spacing-only. That is 2.7% as many as the 14,479 answers HELM credits |
+| P5 | HELD | largest gain: **Llama 3 Instruct 8B, 0.327 to 0.497 (+0.170)**; Llama 3.2 11B Vision 0.407 to 0.532 (+0.125); Llama 3.1 8B 0.466 to 0.529 (+0.063) |
+| P6 | HELD | Kendall tau-b between published and lenient cells **0.956** |
+| P7 | HELD | **Llama 3 Instruct 70B moves from 11th to 7th** (0.722 to 0.751); Llama 3.2 11B Vision and Llama 3.1 8B swap 20th and 19th |
+| P8 | HELD | GPT-4o 2024-05-13 stays first (0.785; it has no misread answers) |
+
+**Where it happens.** 15 of the 22 runs have no misread answer at all, including every GPT, Claude and Qwen run,
+Gemini 1.5 Pro and Flash, Llama 3.1 70B and 405B and Llama 3.2 90B Vision. The other seven: the four Llama runs above,
+Llama 3.2 3B Instruct (5), Mixtral 8x22B Instruct (4) and Gemini 1.0 Pro (2). Besides the misread answers, 375 answers
+are a bare number for another label (211 of them from Llama 3 Instruct 8B, 82 from Llama 3.2 3B), 81 contain the gold
+label among other words (`contains_gold`, never credited; 38 from Mixtral 8x7B), none are empty and 6,667 are another
+answer.
+
+**Hand-read** (by AI agents; up to 8 answers per class, one per run where possible, printed in the job log; answer
+texts are not published):
+
+- `number_gold`, 4 read: each is a bare number, and in the list it labels the gold intent (checked against the
+  numbered list for labels 47, 61, 72 and 73).
+- `numbered_gold`, 7 read (all there were across distinct runs): each is "N. label" with N the gold label's own number
+  and the gold label text (labels 16, 23, 29 twice, 55, 71, 74).
+- `number_other`, 4 read: bare numbers for other labels. *Post hoc:* in 2 of the 4 the number is the gold label's
+  number plus one.
+- `contains_gold`, 8 read, none credited: 3 are a number and the gold label text where the number belongs to a nearby
+  label (the gold label's number plus one or plus two), 2 list several labels, 1 hedges between two labels, 1 explains
+  and then gives the gold label (Claude 3 Sonnet), 1 gives the gold label with escaped underscores and a comment. Some
+  of these are right answers that the lenient cell still does not count, so the lenient cells are conservative.
+- `other`, 8 read: each is a different label from the list, not a form of the gold.
+
+**What it means.** For most of HELM Finance's BANKING77 column, the numbered label list is harmless: 15 models never
+answer with a number. But for the smaller Llama 3 chat models it is a large part of the score: Llama 3 Instruct 8B
+loses 17 points and Llama 3.2 11B Vision 12.5 points for answers that name the right intent by its list number, and
+Llama 3 Instruct 70B ranks 11th instead of 7th. The numbers in the prompt served only the RAFT paper's
+first-token probability scoring; HELM generates the label, so either dropping the numbers from the list or mapping a
+leading list number back to its label before scoring would remove this.
+
+**Limits.** One release, one column. The lenient cell credits only the three pre-registered forms; `contains_gold`
+answers (81) and other near-misses are not credited. The hand-read covers 11 of the 398 misread answers. We did not
+measure HELM Classic's RAFT prompts, which use the same numbered lists. Counts are by AI agents and have not been
+checked by a human.

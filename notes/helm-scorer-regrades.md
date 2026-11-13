@@ -332,8 +332,12 @@ runs for these scenarios, so their effect on published scores is not measured.
 - **Audit 117, ConvFinQACalc** ([helm-convfinqa-five-tokens](../helm-convfinqa-five-tokens/)): the run spec never sets
   `max_tokens`, so answers are cut at the helper's default of **5 tokens**, while `float_equiv` needs the gold (to 5
   decimals) within 1e-6 and reads only the first number. For digit-split tokenizers (LLaMA 1, Llama 2) a gold such as
-  `0.14136` cannot be written in 5 tokens; `yes`/`no` golds score 0 for every model. A check job on the validation
-  golds is queued.
+  `0.14136` cannot be written in 5 tokens; `yes`/`no` golds score 0 for every model. *Check job, 2026-11-13:* on
+  ConvFinQA's 1,490 validation golds at the commit HELM pins, **a digit-splitting model can score at most 0.644**
+  (959 golds fit in 5 such tokens even written in their shortest form; 527 numeric golds do not, and 4 are
+  `yes`/`no`), while OpenAI's `cl100k_base` and `o200k_base` reach 1,484 of 1,490 in 5 tokens. So the cut falls by
+  tokenizer, not skill. Rounding to 2 decimals caps any model at 0.681, a thousands separator loses all 355 golds of
+  1,000 or more, and 214 of 252 percent-worded questions have a gold below 1 (most likely a fraction).
 - **Where else the 5-token default applies (a census of HELM main, read 2026-11-13).** `get_generation_adapter_spec`
   defaults to `max_tokens=5`; `AdapterSpec` itself and the translation and summarization helpers default to 100. We
   read the run spec files for Classic, Lite, Capabilities, Safety, SEA-HELM, Long Context, CLEVA, Multilingual,
@@ -405,7 +409,7 @@ runs for these scenarios, so their effect on published scores is not measured.
 22. Read full ICD-10 codes, including ICD-10-PCS procedure codes and lettered extensions, in the MIMIC-IV Billing Code
     metric, or state that it scores diagnosis categories only (audit 114).
 23. Set `max_tokens` explicitly in every generation run spec: ConvFinQACalc inherits the 5-token default while FinQA
-    and KPI-EDGAR allow 100 (audit 117).
+    and KPI-EDGAR allow 100 (audit 117); on its validation golds the default caps a digit-splitting model at 0.644.
 
 ## Across audits 90-101, 103, 105 and 107-109: what a bug report should carry (added 2026-11-11, updated 2026-11-13)
 
@@ -449,4 +453,5 @@ runs for these scenarios, so their effect on published scores is not measured.
   concerns a metric whose suite is not among the 26 top-level folders of HELM's public results bucket
   (crfm-helm-public, listed 2026-11-11), so we know of no published HELM leaderboard number it changes. Audits 114,
   116 and 117 (section 18) are the same kind: the mechanism is certain from the code, its effect on published scores is
-  unmeasured.
+  unmeasured. For audit 117 a count on the real golds now bounds it: a model whose tokenizer splits digits cannot score
+  above 0.644 there, whatever it knows.

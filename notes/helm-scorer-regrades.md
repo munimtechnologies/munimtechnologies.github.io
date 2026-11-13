@@ -166,7 +166,8 @@ this; MV2 reported it as issue [#4381](https://github.com/stanford-crfm/helm/iss
 
 ## 11. Audit 100: HELM Classic's Dyck column checks only the last bracket
 
-Folder: [helm-dyck-last-token](../helm-dyck-last-token/). No HELM issue reported this.
+Folder: [helm-dyck-last-token](../helm-dyck-last-token/). MV2 reported it, with audit 101, as HELM issue
+[#4382](https://github.com/stanford-crfm/helm/issues/4382) on 2026-11-13.
 - HELM Classic scores Dyck (write the 1 to 3 closing brackets of a Dyck-3 prefix) with `exact_match_indicator`, which
   keeps only the text after the last space, its default indicator. For the gold `) ] }` only `}` is compared, while
   the HELM paper says Dyck reports strict exact match.
@@ -186,8 +187,8 @@ Folder: [helm-dyck-last-token](../helm-dyck-last-token/). No HELM issue reported
 
 ## 12. Audit 101: HELM Classic's GSM8K column scores right answers 0
 
-Folder: [helm-gsm-classic-indicator](../helm-gsm-classic-indicator/). No HELM issue reported this (#4337 is about
-HELM Lite's other GSM8K metric).
+Folder: [helm-gsm-classic-indicator](../helm-gsm-classic-indicator/). Reported with audit 100 as HELM issue
+[#4382](https://github.com/stanford-crfm/helm/issues/4382) (#4337 is about HELM Lite's other GSM8K metric).
 - The same `exact_match_indicator` is the main metric of HELM Classic's GSM8K column. The gold ends
   `The answer is 72.`, so only `72.` is compared, literally: `The answer is $72.`, `1,000.` against `1000.`, or
   `72 apples.` score 0. We expected comparing the last token to be safe here (audit 100's recommendation said so); it
@@ -267,7 +268,87 @@ Folder: [helm-finqa-program-accuracy](../helm-finqa-program-accuracy/). No HELM 
 - Hand-read (by AI agents): 38 of 38 up-flips read are right programs.
 - Pre-registered: 8 of 8 held (P8 exactly on its boundary).
 
-## 16. Recommendations for re-scoring HELM (so far)
+## 16. Audit 109: HELM Finance's BANKING77 prompt numbers the labels, the scorer reads only their text
+
+Folder: [helm-banking77-numbered-labels](../helm-banking77-numbered-labels/). No HELM issue reported this (#2909 shows
+the numbered list and the RAFT paper's reason for it, but nobody there discusses how numbered answers are scored).
+- HELM Finance v1.0.0's BANKING77 "EM" column (22 models, 1,000 test queries) reuses RAFT's instructions, which list
+  the 77 intent labels as a **numbered** list. The numbers served the RAFT paper's first-token probability scoring;
+  HELM generates the label and compares it with the label text by quasi-exact match, so the right label's number
+  (`71`), or the number plus the right label (`71. verify_source_of_funds`), scores 0.
+- All 22 runs, every stored score and all 22 cells reproduced.
+- **398 of 22,000 answers (1.81%) name the right intent by its list number** and score 0: 148 bare numbers, 250
+  number plus label, 0 spacing-only. That is 2.7% as many as the 14,479 answers HELM credits.
+- **15 of 22 models never do it** (every GPT, Claude and Qwen run, Gemini 1.5, the larger Llama 3.1 and 3.2 models).
+  For the smaller Llama 3 chat models it is a large part of the score: **Llama 3 Instruct 8B 0.327 to 0.497
+  (+0.170)**, Llama 3.2 11B Vision 0.407 to 0.532, Llama 3.1 8B 0.466 to 0.529; **Llama 3 Instruct 70B moves 11th to
+  7th**. Kendall tau-b 0.956; GPT-4o stays first.
+- Hand-read (by AI agents): 11 of 11 misread answers read are right. 81 answers contain the gold label among other
+  words and are not credited; 3 of the 8 read pair the gold label with a neighbouring label's number, so the lenient
+  cells are conservative.
+- HELM's banking77 run spec adds "Answer with only the label for the last query." to the RAFT instructions; the
+  numbered answers occur despite it.
+- Pre-registered: 8 of 8 held.
+
+## 17. Audit 103: HELM Classic's WikiFact column mixes three decoding regimes
+
+Folder: [helm-wikifact-best-of-five](../helm-wikifact-best-of-five/). No HELM issue reported this (#42 and PR #834
+added the sort by log probability).
+- HELM Classic v0.4.0 asks each model for 5 completions per WikiFact prompt at temperature 1.0 and publishes the
+  quasi-exact match of the completion with the **highest log probability**. What that completion is depends on how
+  each model's API answered.
+- All 669 runs (67 models, 10 relations, 1,124,212 records) and 67 of 67 cells reproduced.
+- **In ranked runs the published score is 20.08% against 14.48% single-draw accuracy (+5.60 points)**; median
+  bonus (published minus single-draw) 0.054 for ranked models against 0.000 for the 25 unranked ones, all of which
+  keep or improve their rank under single-draw accuracy.
+- **48 of 67 models move 3 or more places** when ranked by single-draw accuracy (Kendall tau-b **0.758**, below the
+  pre-registered 0.9): text-davinci-002 3rd to 20th, text-davinci-003 5th to 18th, TNLG v2 530B 14th to 33rd.
+- *Post hoc,* three regimes: **28 models get a best-of-five pick** (bonus 0.002 to 0.121, median 0.065: OpenAI GPT-3
+  and InstructGPT, AI21 J1 and J2, TNLG v2, and the Together-served OPT, BLOOM, GLM, GPT-J, GPT-NeoX, UL2, T5, T0pp,
+  YaLM); **24 have every completion scoring alike** (Llama, Llama 2, Falcon, MPT, Mistral 7B, Pythia,
+  RedPajama-INCITE, Vicuna, Alpaca, Cohere command-medium-beta; the two spot-checked `author` runs returned fewer than
+  five completions per record); **4 are scored on one random draw of five** (GPT-3.5 Turbo 0301 and 0613, Palmyra X,
+  Palmyra Instruct 30: log probability 0 everywhere, any-of-five 7.4 to 17.7 points higher). The remaining 11 return
+  nearly identical completions.
+- The prediction page shows the first completion, not the scored one: they differ on 25.8% of ranked records and
+  their scores differ on 3.82% (pre-registered at least 5%: failed). Hand-read (by AI agents) of 16 such records:
+  every one is classed correctly.
+- Pre-registered: 6 of 8 held; P6 and P7 failed.
+
+## 18. Desk checks: audits 114, 116 and 117 (code-certain, no published number re-computed)
+
+These read HELM's code and test the mechanism on synthetic inputs; HELM's archive either redacts the data or holds no
+runs for these scenarios, so their effect on published scores is not measured.
+- **Audit 114, MedHELM MIMIC-IV Billing Code** ([helm-mimic-billing-icd-regex](../helm-mimic-billing-icd-regex/)):
+  one pattern, `\b[A-Z]\d{1,3}(?:\.\d{1,4})?\.?\b`, reads both the gold list and the answer. It can never match a
+  seven-character ICD-10-PCS procedure code (about 27% of the source set's distinct codes), it cuts `S72.001A` to
+  `S72` (so a different fracture scores as an exact match), and it drops codes like `Z3A`. In four synthetic notes
+  HELM's F1 is 1.0 where full-code F1 is 0.8, 0.0, 0.667 and 0.667.
+- **Audit 116, KPI-EDGAR adjusted macro F1** ([helm-kpi-edgar-adjusted-f1](../helm-kpi-edgar-adjusted-f1/)): partial
+  credit is applied once per tag across the whole test set. Per tag the score is 2p/(2+p-r) as coded and 2r/(2+r-p)
+  with open PR #4350's swap, so **both orders have a floor of 2/3**: as coded, a tag with no wrong words scores at
+  least 0.667 however little it finds; with the swap, repeating the sentence under every tag does. An unexpected
+  lower-case tag raises `KeyError` and the run writes no scores. A check job on the test split is queued.
+- **Audit 117, ConvFinQACalc** ([helm-convfinqa-five-tokens](../helm-convfinqa-five-tokens/)): the run spec never sets
+  `max_tokens`, so answers are cut at the helper's default of **5 tokens**, while `float_equiv` needs the gold (to 5
+  decimals) within 1e-6 and reads only the first number. For digit-split tokenizers (LLaMA 1, Llama 2) a gold such as
+  `0.14136` cannot be written in 5 tokens; `yes`/`no` golds score 0 for every model. A check job on the validation
+  golds is queued.
+- **Where else the 5-token default applies (a census of HELM main, read 2026-11-13).** `get_generation_adapter_spec`
+  defaults to `max_tokens=5`; `AdapterSpec` itself and the translation and summarization helpers default to 100. We
+  read the run spec files for Classic, Lite, Capabilities, Safety, SEA-HELM, Long Context, CLEVA, Multilingual,
+  Enterprise, LMKT, Finance, Arabic, Arabic Enterprise, SQL, MELT, MedHELM, Simple and Experimental. Every
+  generation spec on a current leaderboard other than those below sets `max_tokens` (CLEVA's generic branch falls
+  back to 20 tokens, but its published translation and math word problem runs store 201). Left on the default: in
+  HELM Classic, BoolQ, IMDB, CivilComments and entity matching (yes/no or one-word answers), entity data imputation
+  (a missing city or manufacturer) and bAbI (whose task 8 answers are comma lists such as `milk,apple`); in the
+  enterprise set, ConvFinQACalc (audit 117) and two one-label classifiers; in MedHELM, `medbullets_freetext`, which
+  asks for an answer and an explanation but is not among MedHELM v4.0.0's runs. So audit 117's scenario is the only case
+  we found where the default can cut a numeric answer, and bAbI task 8 is the only list-valued one (not measured).
+  Not read: BLUEX, ENEM, OAB, HealthQA-BR, the Portuguese and African-language files, CodeInsights, VLM, audio,
+  Unitxt, HEIM, AIR-Bench, DecodingTrust and instruction following.
+
+## 19. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -314,38 +395,58 @@ Folder: [helm-finqa-program-accuracy](../helm-finqa-program-accuracy/). No HELM 
 19. Make FinQA's prompt and scorer agree: spell the table operations `table_max` etc. in HELM's instructions, show
     the `none` argument and `const_N`, or normalise both programs' arguments before `equal_program`. This credits 539
     right programs in HELM Finance and lowers none. Consider showing execution accuracy beside program accuracy.
+20. Where a generation prompt numbers its labels (BANKING77 in HELM Finance; the RAFT prompts it was copied from),
+    either drop the numbers, which served only the RAFT paper's probability scoring, or map a leading list number to
+    its label before scoring. In HELM Finance this credits 398 right answers and lowers none; it moves Llama 3
+    Instruct 70B from 11th to 7th. HELM Classic's RAFT columns use the same lists and were not measured.
+21. Score a k-sample generation column on one decoding regime for every model: report single-sample accuracy (the
+    mean over the returned completions) or any-of-k, not the highest-log-probability completion, which is a
+    best-of-five pick only for APIs that return log probabilities. Show the scored completion on the prediction page.
+22. Read full ICD-10 codes, including ICD-10-PCS procedure codes and lettered extensions, in the MIMIC-IV Billing Code
+    metric, or state that it scores diagnosis categories only (audit 114).
+23. Set `max_tokens` explicitly in every generation run spec: ConvFinQACalc inherits the 5-token default while FinQA
+    and KPI-EDGAR allow 100 (audit 117).
 
-## Across audits 90-101, 105, 107 and 108: what a bug report should carry (added 2026-11-11, updated 2026-11-12)
+## Across audits 90-101, 103, 105 and 107-109: what a bug report should carry (added 2026-11-11, updated 2026-11-13)
 
-- **The gate held everywhere it was applied.** In the eleven audits that grade individual records (90-94, 96, 99-101,
-  105, 107), our transcriptions reproduce 1,547,302 published per-instance records; audits 95, 97 and 98 reproduce
-  every run-level number or cell they include, and audit 108 matches all 3,080 judge labels to HELM's stored stats and
-  all 22 cells.
-- **Pre-registration record:** 89 of 110 predictions held (audit 98 counted as v2). Of the 21 failures, 3 were
+- **The gate held everywhere it was applied.** In the thirteen audits that grade individual records (90-94, 96,
+  99-101, 103, 105, 107, 109), our transcriptions reproduce **2,693,514** published per-instance records; audits 95, 97
+  and 98 reproduce every run-level number or cell they include, and audit 108 matches all 3,080 judge labels to HELM's
+  stored stats and all 22 cells.
+- **Pre-registration record:** **103 of 126** predictions held (audit 98 counted as v2). Of the 23 failures, 3 were
   inclusion gaps in our own code (P1 of 93, 94 and 97), 5 were audit 98's predictions of drops that never happened,
-  and 13 were effects we guessed wrong. Separately, audit 102's first run stopped before grading on a gap in our code
-  (a 5,760-digit number); it is not counted until it is graded.
+  and 15 were effects we guessed wrong (most recently audit 103's P6, the order moved far more than predicted, and
+  P7). Separately, audit 102's first run stopped before grading on a gap in our code (a 5,760-digit number); it is not
+  counted until it is graded.
 - **Severity in code is not effect on the archive.** Four of the eleven open HELM issues we tested (#4374, #4363,
-  #4345, #4344) change no published number in the releases checked, and #4358 changes 20 predictions. The two largest
-  over-credits we found (audits 99 and 100: 49,376 wrong credits together) and audit 101's under-credit (2,949
-  right answers scored 0) had no issue before MV2's own (#4381, for audit 99). Open PR #4323 fixes a real dead regex
-  that recovers 63 MMLU-Pro records, while the first-match and boxed-answer rules beside it cost 889 more. A
-  scorer bug report that states how many published grades it changes (for example "N of M records in release vX")
-  lets maintainers triage, and HELM's per-instance archive makes that a one-run count.
+  #4345, #4344) change no published number in the releases checked, and #4358 changes 20 predictions. The largest
+  effects we found (audits 99 and 100: 49,376 wrong credits together; audit 101: 2,949 right answers scored 0) had no
+  issue before MV2's own (#4381 for audit 99, #4382 for audits 100 and 101), and audit 103's (48 of 67 WikiFact
+  models moving 3 or more places on a common footing) has none yet. Open PR #4323 fixes a real dead regex that recovers 63 MMLU-Pro records, while the first-match
+  and boxed-answer rules beside it cost 889 more. A scorer bug report that states how many published grades it changes
+  (for example "N of M records in release vX") lets maintainers triage, and HELM's per-instance archive makes that a
+  one-run count.
 - **One metric, two directions.** `exact_match_indicator` over-credits Dyck (59.8% of credits are wrong sequences)
   and under-credits GSM8K (2,949 right answers scored 0) in the same release. Checking a metric on one column says
   little about another column that uses it.
 - **Format habits concentrate on a few models.** On the current MMLU-Pro column, 51 of 67 models are within 0.01 of
-  their stated-answer score, while two Gemini 2.5 models lose 0.24 and 0.18. An average over models hides this; a
-  per-model count of "no answer extracted" shows it at once (324 for Gemini 2.5 Flash-Lite against 0 to 5 for each Claude 4
-  and GPT-5 model).
+  their stated-answer score, while two Gemini 2.5 models lose 0.24 and 0.18. On BANKING77, 15 of 22 models never
+  answer with a list number while Llama 3 Instruct 8B loses 17 points that way. An average over models hides this; a
+  per-model count of "no answer extracted" shows it at once (324 for Gemini 2.5 Flash-Lite against 0 to 5 for each
+  Claude 4 and GPT-5 model).
 - **The prompt can contradict the scorer.** In FinQA, HELM's own instructions spell `table-max`, which its scorer
-  rejects; 625 records follow the instructions. A test that runs each prompt's own examples through its scorer would
-  catch this.
+  rejects; 625 records follow the instructions. In BANKING77, the prompt numbers the labels and the scorer reads only
+  their text. A test that runs each prompt's own examples, and its own list formats, through its scorer would catch
+  both.
+- **The API can decide the score.** In WikiFact the same metric is a best-of-five pick for models whose API returns
+  log probabilities and a single random draw for those that return zeros; 48 of 67 models move 3 or more places on a
+  common footing. A column that samples more than once should record which regime each model got.
 - **A level can be wrong while the order is right.** In audit 108 a fifth of FinanceBench's questions are asked
   without a page they need, which lowers every model's score by about 0.10 to 0.16 but moves no model 3 places. A
   leaderboard user comparing models is barely affected; one reading the number as "how well a model answers from the
   filing" is.
 - **A desk check, not an audit:** HELM issue #4379 (DecodingTrust OOD-knowledge accuracy always 0, filed 2026-11-10)
   concerns a metric whose suite is not among the 26 top-level folders of HELM's public results bucket
-  (crfm-helm-public, listed 2026-11-11), so we know of no published HELM leaderboard number it changes.
+  (crfm-helm-public, listed 2026-11-11), so we know of no published HELM leaderboard number it changes. Audits 114,
+  116 and 117 (section 18) are the same kind: the mechanism is certain from the code, its effect on published scores is
+  unmeasured.

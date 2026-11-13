@@ -129,3 +129,69 @@ Code is Apache-2.0 (HELM's normalisation and quasi-exact match are transcribed f
 This write-up and any results are CC BY 4.0. HELM Classic's outputs are published by Stanford CRFM. Only run names,
 model names, HELM instance ids, trials, classes and counts are published, never prompts, references or model text.
 Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-13. The sealed job `helm-wikifact-best-of-five-v1` ran once, on 2026-11-13 from 15:42 to 16:01 UTC,
+and exited 0 (unit tests first, then the job). Full numbers: [results.json](results.json). Graded and hand-read by AI
+agents working in MV2's name; no human has checked these counts.*
+
+**6 of 8 predictions held; P6 and P7 failed.** The plan above is unchanged.
+
+| # | Verdict | What was measured |
+| --- | --- | --- |
+| P1 | HELD | all fixtures matched and the unit tests passed; **669 runs listed, 669 included** (every stored record score reproduced as H, every run mean equal to `stats.json`); 67 cells, 67 of 67 match a published "EM" value |
+| P2 | HELD | 25 unranked adapters (15 `zero_logprob`, 10 `collapsed`); 40 `ranked`; 2 `mixed` |
+| P3 | HELD | pooled over the 737,598 records of ranked runs, **H = 20.08% and M = 14.48%: +5.60 points** (F = 17.41%, K = 25.42%) |
+| P4 | HELD | median bonus (H minus M): ranked adapters **0.054**, unranked adapters **0.000** |
+| P5 | HELD | **48 of 67 adapters** move 3 or more places when ranked by M instead of the published EM |
+| P6 | **FAILED** | Kendall tau-b between H and M cells is **0.758**, below 0.9: re-ranking on single-sample accuracy reorders the column far more than we predicted |
+| P7 | **FAILED** | in ranked runs the shown first completion and the scored one get different scores on **28,202 of 737,598 records (3.82%)**, below 5%. The scored completion is not the first one on 190,536 records (25.8%) |
+| P8 | HELD | **25 of 25** unranked adapters keep or improve their rank under M |
+
+**Three decoding regimes in one column** (*post hoc*, read from the per-adapter cells in results.json; not a
+pre-registered split):
+
+- **28 adapters get a best-of-five pick.** Their bonus H minus M is positive, from 0.002 (T0pp) to 0.121 (J1-Grande
+  v2 beta), median 0.065. These are OpenAI's GPT-3 base and InstructGPT models, AI21's J1 and J2, Microsoft TNLG v2
+  and the Together-served OPT, BLOOM, GLM, GPT-J, GPT-NeoX, UL2, T5, T0pp and YaLM. Examples, published rank to rank
+  under M: **text-davinci-002 3rd to 20th** (0.392 to 0.294), text-davinci-003 5th to 18th, TNLG v2 530B 14th to 33rd,
+  J1-Grande v2 beta 21st to 39th, davinci 24th to 40th.
+- **24 adapters' completions all score alike.** Published EM, the first completion, the mean and any-of-five are
+  exactly equal: Llama, Llama 2, Falcon, MPT, Mistral 7B, Pythia, RedPajama-INCITE, Vicuna, Alpaca and Cohere
+  command-medium-beta. In the runs we spot-checked (the `author` runs of Llama 7B and Llama 2 70B: 850 records each,
+  one trial) no record has five completions; pooled, 89,544 records of ranked-class runs and 82,089 of
+  zero-logprob-class runs have fewer than five. These models were effectively scored on one answer.
+- **4 adapters are scored on one of five different draws with no pick.** GPT-3.5 Turbo 0301 and 0613, Palmyra X and
+  Palmyra Instruct 30 return log probability 0, so HELM scores the first of their five samples, while any-of-five is
+  7.4 to 17.7 points higher (Palmyra Instruct 30: 0.209 published, 0.387 any-of-five).
+- The other 11 (Cohere, Anthropic's v4-s3 and Aleph Alpha Luminous) return nearly identical completions; their bonus
+  is under 0.002 either way.
+
+So the published order mixes a best-of-five pick, a single answer and a single random draw. Under M, Llama 2 70B,
+Llama 65B, Falcon 40B, MPT 30B and Llama 2 13B take the first five places (published: 1, 2, 4, 6, 7).
+
+**The display check.** For ranked runs, HELM's prediction pages show the first completion while the score shown next
+to it belongs to the highest-log-probability completion. That completion is not the first one on 25.8% of ranked
+records, and the two scores differ on 3.82% (P7 predicted at least 5%). In collapsed-class runs the scores differ on 342 records (0.14%);
+in zero-logprob runs never.
+
+**Hand-read** (by AI agents; 16 records printed in the job log, 8 from ranked and 8 from collapsed-class runs, one per
+run; texts are not published): in all 16 the shown first completion and the scored completion are different answers
+with different scores, as classed. In 7 of the 8 ranked records the shown answer is wrong and the scored one right; in
+1 the reverse. In the collapsed-class records the scored completion is a lone different answer among four identical
+ones in 4 of 8, and it is the wrong one in 5 of 8.
+
+**What it means.** HELM Classic's WikiFact "EM" is not one measurement. For 28 models it is the most likely of five
+temperature-1 samples, worth a median 6.5 points over a single sample; for 24 models every answer scores the same;
+for 4 chat or no-log-probability models it is one random draw out of five. Part of the gaps in the column therefore
+comes from how each API answered rather than from what the model knows; text-davinci-002, published 3rd, is 20th on
+single-sample accuracy. Neither H nor M is a like-for-like comparison with greedy decoding, which HELM did not run for
+this column: M likely understates a sampled model's greedy accuracy, and H overstates its single-draw accuracy.
+Separately, for ranked models the prediction page often shows a different completion from the one scored (a quarter of
+records), though the two scores differ less often than we predicted.
+
+**Limits.** One column of one release. M is single-draw accuracy at temperature 1 for models that returned diverse
+samples, and the one returned answer for the 24 single-answer adapters; we cannot tell from the archive whether those
+answers were decoded greedily. The three-regime split is post hoc. The hand-read covers 16 records. Counts are by AI
+agents and have not been checked by a human.

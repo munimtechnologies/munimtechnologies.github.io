@@ -127,3 +127,101 @@ the equal-mass ECE is re-implemented from the description of `uncertainty-calibr
 byte table follows openai/gpt-2 (MIT). This write-up and any results are CC BY 4.0. HELM Classic's outputs are
 published by Stanford CRFM. Only run names, model names, HELM instance ids, trials, classes and counts are published,
 never prompts, references or model text. Authored by AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-15. The sealed job ran once on 2026-11-15 (08:29 to 08:53 UTC, 2 CPUs, unit tests and fixtures passed
+first). Everything above this section is unchanged from the pre-registration. Full numbers:
+[results.json](results.json). Graded by AI agents working in MV2's name; post-hoc observations are marked as such.*
+
+**Verdict: 5 of 8 predictions HELD** (P2, P3, P4, P6, P8); P1, P5 and P7 FAILED.
+
+### What was read
+
+- The release index lists **67** canonical BoolQ runs (suites v0.3.0 and v0.4.0; the pre-registration counted 66);
+  all 67 downloaded. **54** have a published ECE, and **all 54 are included**: our ECE from HELM's own `max_prob` and
+  our exact-match mean equal the stored values within 1e-9, with matching trial counts. The other 13 (GPT-3.5 Turbo
+  0301 and 0613, Llama 2 70B, LLaMA 65B, Mistral 7B, MPT 30B and MPT-Instruct 30B, four Falcon models, both Palmyra
+  models) have no ECE because HELM skips calibration when every log probability is 0; they are reported, not counted.
+- The BoolQ group page shows **48** "ECE (10-bin)" values; **all 48 match one of our 54 cells** within 1e-9. Six of
+  our cells are not on that page (we did not determine which), so the ranks below are among the 54 runs with a
+  stored ECE.
+
+### The mechanism is real and common
+
+- **21 of the 54 adapters are `overrun`**: their stored token list and summed log probability run past the newline at
+  which the scored text was cut. They are 11 of the 14 adapters with an ECE whose run names carry `together_` (GPT-J 6B, GPT-NeoX 20B, OPT
+  175B and 66B, BLOOM, four RedPajama-INCITE models, T5 11B, UL2; not GLM, T0pp or YaLM) plus LLaMA 7B, 13B and 30B, Llama 2 7B and 13B, Pythia
+  6.9B and 12B, Vicuna 7B and 13B, and Alpaca 7B. The other 33 are `clean` (no record past the stop).
+- In the overrun runs **34,539 of 35,000 records** carry tokens past the stop. The median record's excess (stored
+  minus answer-only log probability) is **-0.163 nats** (10th percentile -0.555, 90th -0.039): the published
+  confidence is typically about 15% below the probability of the answer that was scored. On **2,055 records** it is
+  less than half of it.
+- Hand-read (by AI agents), four overrun records from four runs (LLaMA 30B, LLaMA 7B, RedPajama-INCITE base 7B,
+  Pythia 6.9B; all the same question, answered and credited `Yes`): each stores five tokens, the answer, two newlines
+  and the two tokens that start the next "Passage:", exactly the pre-registered mechanism. Their confidence rises
+  from 0.84 to 0.98, 0.62 to 0.86, 0.69 to 0.75 and 0.60 to 0.68 when only the answer's token is counted.
+
+### Calibration with the answer-only confidence
+
+| Adapter | Published ECE | Answer-only ECE | Rank (of 54) |
+| --- | --- | --- | --- |
+| Alpaca 7B | 0.343 | 0.078 | 50 to 20 |
+| LLaMA 7B | 0.292 | 0.093 | 47 to 29 |
+| Vicuna 7B v1.3 | 0.322 | 0.146 | 49 to 39 |
+| BLOOM | 0.209 | 0.080 | 42 to 22 |
+| LLaMA 30B | 0.164 | 0.049 | 34 to 8 |
+| GPT-NeoX 20B | 0.195 | 0.087 | 40 to 25 |
+| OPT 66B | 0.200 | 0.107 | 41 to 35 |
+| OPT 175B | 0.194 | 0.102 | 39 to 33 |
+| Vicuna 13B v1.3 | 0.159 | 0.070 | 33 to 18 |
+| RedPajama-INCITE base 3B | 0.187 | 0.121 | 38 to 36 |
+| RedPajama-INCITE base 7B | 0.127 | 0.066 | 26 to 14 |
+| Pythia 6.9B | 0.106 | 0.046 | 23 to 6 |
+| Pythia 12B | 0.140 | 0.093 | 28 to 28 |
+| LLaMA 13B | 0.078 | 0.038 | 15 to 3 |
+| Llama 2 13B | 0.116 | 0.089 | 25 to 27 |
+| T5 11B (`stop=hash`) * | 0.433 | 0.233 | 53 to 49 |
+| UL2 (`stop=hash`) * | 0.460 | 0.272 | 54 to 51 |
+
+Changes under 0.02: RedPajama-INCITE instruct 7B (0.035 to 0.033), GPT-J 6B (0.062 to 0.059), RedPajama-INCITE
+instruct 3B (0.141 to 0.144) and Llama 2 7B * (0.215 to 0.219). Clean adapters keep their ECE and fall in rank as
+overrun adapters pass them (text-davinci-003 22nd to 32nd, Luminous Extended 27th to 37th). The leader, Cohere
+command-xlarge-beta (0.023), is unchanged.
+
+\* Not trustworthy: see P5.
+
+### Predictions
+
+| # | Verdict | Result |
+| --- | --- | --- |
+| P1 | **FAILED** | Fixtures matched and 54 of 54 runs with an ECE were included, but there are **54** cells (threshold 55) and 48 of 54 (88.9%) match a published value (threshold 90%), because the group page shows only 48. Every published value was matched, so this is a size threshold set too high, not a failure to reproduce |
+| P2 | HELD | **21** overrun adapters (threshold 8) |
+| P3 | HELD | In **16 of 21** the median record's excess is at most -0.1 nats |
+| P4 | HELD | In **17 of 21** ECE changes by at least 0.02 |
+| P5 | **FAILED** | The kept tokens decode to the scored text on **27,806 of 34,539** overrun records (80.5%, threshold 95%). 6,540 of the 6,733 others are in three runs: T5 11B (93 of 3,000 records consistent) and UL2 (100 of 3,000), both run with `stop=hash`, and Llama 2 7B (74 of 1,000, mean 1.3 tokens). Their answer-only ECEs are marked * above and should not be used |
+| P6 | HELD | **42 of 54** adapters move 3 or more places |
+| P7 | **FAILED** | Kendall tau-b between the two orders is **0.683** (threshold 0.8) |
+| P8 | HELD | Of the 17 adapters whose ECE changes by 0.02 or more, **17 get better and 0 worse** |
+
+*Post hoc.* Without the three runs P5 flags, at least 27,539 of the remaining 27,732 overrun records (99.3%) are
+consistent, and 15 of the remaining 18 overrun adapters still change by at least 0.02, all of them for the better.
+YaLM, classed `clean` (5 tokens per answer but no newline among them), has kept tokens that decode to its text on
+only 1 of 3,000 records, so its class is not verified either; its ECE is unchanged by construction.
+
+### What this means
+
+For 21 of the 54 BoolQ adapters with a published calibration score in HELM Classic v0.4.0, the "ECE (10-bin)" cell
+measures in part how predictable the text after the answer is (newlines and the start of the next passage), not only
+how well the model's confidence in its answer matches its accuracy. Counting only the answer's tokens lowers ECE for
+every one of the 17 that change by 2 points or more, and re-orders the column (tau-b 0.683): LLaMA 30B goes from 34th
+to 8th, Pythia 6.9B from 23rd to 6th, Alpaca 7B from 50th to 20th. The fix is small: cut the token list and its log
+probability where the text was cut, before computing `max_prob`.
+
+### Limits
+
+- One scenario (BoolQ) in one release. HELM Classic's other calibration columns use the same `max_prob`, and MS MARCO
+  ranks passages by this log probability; neither is measured here.
+- The answer-only probability is our reconstruction from the stored token strings; where those do not decode to the
+  scored text (T5 11B, UL2, Llama 2 7B, and YaLM) it is not reliable.
+- We rank the 54 runs with a stored ECE; six of them are not on the group page.

@@ -315,7 +315,50 @@ added the sort by log probability).
   every one is classed correctly.
 - Pre-registered: 6 of 8 held; P6 and P7 failed.
 
-## 18. Desk checks: audits 114, 116 and 117 (code-certain, no published number re-computed)
+## 18. Audit 104: HELM Classic's BoolQ calibration counts the text after the answer
+
+Folder: [helm-boolq-post-stop-calibration](../helm-boolq-post-stop-calibration/). No HELM issue reported this (the
+response pasted in #1828, 2023, shows the pattern without raising it).
+- HELM's calibration confidence is `max_prob` = exp(stored log probability of the completion). Some providers return
+  the answer text cut at the stop newline but a token list and summed log probability that run on to `max_tokens`,
+  so the confidence includes the newlines and the start of the next "Passage:".
+- Release v0.4.0 lists 67 canonical BoolQ runs; 54 have a stored ECE and all 54 are reproduced (ECE and exact match
+  within 1e-9); all 48 values on the group page match. The 13 others store log probability 0 everywhere.
+- **21 of the 54 adapters are affected** (11 of the 14 `together_` adapters, LLaMA 7B to 30B, Llama 2 7B and 13B,
+  Pythia, Vicuna, Alpaca): 34,539 of the 35,000 records in their runs. The median record's stored confidence is about
+  15% below the probability of the answer that was scored (-0.163 nats); on 2,055 records it is less than half.
+- With the answer-only confidence, **17 of the 21 become better calibrated by 0.02 or more and none worse**: LLaMA 30B
+  0.164 to 0.049 (rank 34 to 8 of 54), Pythia 6.9B 23rd to 6th, LLaMA 13B 15th to 3rd, Alpaca 7B 0.343 to 0.078 (50th
+  to 20th). 42 of 54 adapters move 3 or more places (Kendall tau-b 0.683); the leader holds.
+- For T5 11B, UL2 (both `stop=hash`) and Llama 2 7B the stored tokens do not decode to the scored text on most records,
+  so their answer-only ECE is not reliable; without them 15 of the other 18 still improve by 0.02 or more (post hoc).
+- Hand-read (by AI agents): four overrun records from four runs each store the answer, two newlines and the two
+  tokens that start the next passage.
+- Pre-registered: 5 of 8 held; P1 failed on a size threshold (54 cells, only 48 on the group page, all matched), P5
+  on the three runs above (kept tokens match the text on 80.5% of overrun records), P7 (tau-b 0.683, not 0.8).
+
+## 19. Audit 118: VHELM's Unicorn cell is mostly answerable without the image
+
+Folder: [vhelm-unicorn-blind-answers](../vhelm-unicorn-blind-answers/). No HELM issue reported this.
+- VHELM suite v2.1.2, 51 models, 102 runs (OODCV-VQA and Sketchy-VQA, 1,000 questions each), one output token,
+  scored by `quasi_prefix_exact_match`. Every stored per-record score and run mean reproduced.
+- In OODCV-VQA all 343 presence golds are `Yes` and all 229 unicorn golds are `0`: **572 of 1,000 questions need no
+  image**, and the no-image answer (`Yes` / `0` / `1`) scores **0.704**, above **15 of 51 models**. The best cell
+  (Qwen2-VL 72B Instruct, 0.848) is 0.144 higher.
+- **13 of 51 models get no credit on any of the 428 real-object count questions**, and they are the bottom 13 cells.
+  Six Claude models store an **empty answer on 624 to 657 of the 657 number questions** (their yes/no Sketchy-VQA
+  cells are 0.749 to 0.941); Claude 3.7 Sonnet (thinking) and Gemini 2.0 Flash Thinking are empty on every question;
+  Pixtral 12B, three IDEFICS models and Qwen-VL Chat give cut words, sentences or nothing. The run spec allows one
+  token with no prefill; we did not check the cause of the empty replies.
+- Ranked by real-object counts, 23 models move 3 or more places (Kendall tau-b 0.858; 14 without the zero-count
+  ties); Qwen2.5-VL 32B Instruct goes from 37th to 3rd: it answers at least 134 number questions with a yes/no word.
+- Prefix credit: 977 of 78,403 credits are prefix-only (1.25%), 963 of them Qwen-VL Chat's sentences beginning with
+  the gold word (its Sketchy-VQA cell 0.651 would be 0.012 under quasi-exact match); 14 others, all 7 read being counts
+  of 10 or more credited for the gold 1.
+- Pre-registered: 4 of 8 held; P3 (pooled presence 0.937 and unicorn 0.727, pulled down by the empty runs), P5, P7
+  (no Sketchy run gives one answer 80% of the time) and P8 (Qwen2-VL 72B leads both ways) failed.
+
+## 20. Desk checks: audits 114, 116 and 117 (code-certain, no published number re-computed)
 
 These read HELM's code and test the mechanism on synthetic inputs; HELM's archive either redacts the data or holds no
 runs for these scenarios, so their effect on published scores is not measured.
@@ -352,7 +395,7 @@ runs for these scenarios, so their effect on published scores is not measured.
   Not read: BLUEX, ENEM, OAB, HealthQA-BR, the Portuguese and African-language files, CodeInsights, VLM, audio,
   Unitxt, HEIM, AIR-Bench, DecodingTrust and instruction following.
 
-## 19. Recommendations for re-scoring HELM (so far)
+## 21. Recommendations for re-scoring HELM (so far)
 
 1. Grade the answer a model states, not only a fixed format: on MATH, accept an unboxed final answer; on GSM8K,
    compare final numbers by value.
@@ -410,18 +453,28 @@ runs for these scenarios, so their effect on published scores is not measured.
     metric, or state that it scores diagnosis categories only (audit 114).
 23. Set `max_tokens` explicitly in every generation run spec: ConvFinQACalc inherits the 5-token default while FinQA
     and KPI-EDGAR allow 100 (audit 117); on its validation golds the default caps a digit-splitting model at 0.644.
+24. Compute `max_prob`, and any confidence built from log probabilities, from the tokens up to where the scored text
+    ends: cut the token list wherever the provider already cut the text. On HELM Classic's BoolQ calibration column
+    this lowers ECE by 0.02 or more for 17 of the 21 affected adapters and raises none by that much (audit 104). Check
+    the other Classic calibration columns and MS MARCO, which ranks passages by the same log probability.
+25. For one-token answer formats, count empty answers per model and either allow more tokens or prefill the answer.
+    On VHELM's Unicorn, report the 428 image-dependent count questions apart from the 572 a no-image answer gets
+    right (0.704), and score counts by numeric equality rather than prefix, so `10` is not credited for `1` (audit
+    118).
 
-## Across audits 90-101, 103, 105 and 107-109: what a bug report should carry (added 2026-11-11, updated 2026-11-13)
+## Across audits 90-101, 103-105, 107-109 and 118: what a bug report should carry (added 2026-11-11, updated 2026-11-15)
 
-- **The gate held everywhere it was applied.** In the thirteen audits that grade individual records (90-94, 96,
-  99-101, 103, 105, 107, 109), our transcriptions reproduce **2,693,514** published per-instance records; audits 95, 97
-  and 98 reproduce every run-level number or cell they include, and audit 108 matches all 3,080 judge labels to HELM's
+- **The gate held everywhere it was applied.** In the fourteen audits that grade individual records (90-94, 96,
+  99-101, 103, 105, 107, 109, 118), our transcriptions reproduce **2,795,514** published per-instance records; audits
+  95, 97 and 98 reproduce every run-level number or cell they include, audit 104 reproduces all 54 stored BoolQ ECE
+  and accuracy values within 1e-9 and all 48 published cells, and audit 108 matches all 3,080 judge labels to HELM's
   stored stats and all 22 cells.
-- **Pre-registration record:** **103 of 126** predictions held (audit 98 counted as v2). Of the 23 failures, 3 were
-  inclusion gaps in our own code (P1 of 93, 94 and 97), 5 were audit 98's predictions of drops that never happened,
-  and 15 were effects we guessed wrong (most recently audit 103's P6, the order moved far more than predicted, and
-  P7). Separately, audit 102's first run stopped before grading on a gap in our code (a 5,760-digit number); it is not
-  counted until it is graded.
+- **Pre-registration record:** **112 of 142** predictions held (audit 98 counted as v2). Of the 30 failures, 3 were
+  inclusion gaps in our own code (P1 of 93, 94 and 97), 1 was a size threshold set too high (P1 of 104: every
+  published value matched), 1 was a method check that failed (P5 of 104: in three runs the stored tokens do not decode
+  to the scored text), 5 were audit 98's predictions of drops that never happened, and 20 were effects we guessed
+  wrong (most recently audit 118's P3, P5, P7 and P8, and audit 104's P7). Separately, audit 102's first run stopped
+  before grading on a gap in our code (a 5,760-digit number); it is not counted until it is graded.
 - **Severity in code is not effect on the archive.** Four of the eleven open HELM issues we tested (#4374, #4363,
   #4345, #4344) change no published number in the releases checked, and #4358 changes 20 predictions. The largest
   effects we found (audits 99 and 100: 49,376 wrong credits together; audit 101: 2,949 right answers scored 0) had no
@@ -438,6 +491,13 @@ runs for these scenarios, so their effect on published scores is not measured.
   answer with a list number while Llama 3 Instruct 8B loses 17 points that way. An average over models hides this; a
   per-model count of "no answer extracted" shows it at once (324 for Gemini 2.5 Flash-Lite against 0 to 5 for each
   Claude 4 and GPT-5 model).
+- **A one-token answer can measure the API, not the model.** On VHELM's Unicorn, six Claude models store an empty
+  answer on nearly every number question and two thinking models on every question, so 13 of 51 cells measure output
+  format rather than counting (audit 118). MedQA's 1,066 outputs naming no option (audit 92) and ThaiExam's cut
+  answers (audit 111) are the same pattern for letters.
+- **A confidence must come from the tokens that were scored.** In HELM Classic's BoolQ calibration column, 21 of 54
+  adapters store the probability of the answer plus the text after it; counting only the answer re-orders the column
+  (tau-b 0.683) and improves every adapter that changes by 2 points (audit 104).
 - **The prompt can contradict the scorer.** In FinQA, HELM's own instructions spell `table-max`, which its scorer
   rejects; 625 records follow the instructions. In BANKING77, the prompt numbers the labels and the scorer reads only
   their text. A test that runs each prompt's own examples, and its own list formats, through its scorer would catch
@@ -452,6 +512,6 @@ runs for these scenarios, so their effect on published scores is not measured.
 - **A desk check, not an audit:** HELM issue #4379 (DecodingTrust OOD-knowledge accuracy always 0, filed 2026-11-10)
   concerns a metric whose suite is not among the 26 top-level folders of HELM's public results bucket
   (crfm-helm-public, listed 2026-11-11), so we know of no published HELM leaderboard number it changes. Audits 114,
-  116 and 117 (section 18) are the same kind: the mechanism is certain from the code, its effect on published scores is
+  116 and 117 (section 20) are the same kind: the mechanism is certain from the code, its effect on published scores is
   unmeasured. For audit 117 a count on the real golds now bounds it: a model whose tokenizer splits digits cannot score
   above 0.644 there, whatever it knows.

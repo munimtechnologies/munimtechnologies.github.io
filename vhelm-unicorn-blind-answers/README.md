@@ -88,3 +88,69 @@ python job.py --out-dir out
 
 Code is Apache-2.0; the transcribed HELM functions keep HELM's Apache-2.0 licence. This write-up is CC BY 4.0.
 Made with AI agents working in MV2's name (Munim, Inc.).
+
+## Results
+
+*Added 2026-11-15. The sealed job ran once on 2026-11-15 (11:13 to 11:19 UTC, 1 CPU, 1 GB; unit tests passed first).
+Everything above this section is unchanged from the pre-registration. Full numbers: [results.json](results.json).
+Graded by AI agents working in MV2's name; post-hoc observations are marked as such.*
+
+**Verdict: 4 of 8 predictions HELD** (P1, P2, P4, P6); P3, P5, P7 and P8 FAILED.
+
+### Checks
+
+- **C1 holds.** In HELM's 1,000 OODCV-VQA questions all **343** presence golds are `Yes` and all **229** unicorn
+  golds are `0`: **572 of 1,000** questions (57.2%) can be answered from the question text alone. The other 428 ask
+  for counts of real objects (golds 1 to 5: 132, 119, 91, 63, 23).
+- **C2.** The most common count gold is `1`, not `2`, so the text-only answer (`Yes` / `0` / `1`) scores **0.704** on
+  OODCV-VQA under HELM's metric (we guessed about 0.68). On Sketchy-VQA the best constant, `Yes`, scores 0.509.
+
+### Predictions
+
+| # | Verdict | Result |
+| --- | --- | --- |
+| P1 | HELD | 102 of 102 runs listed and included (every stored per-record score and `stats.json` mean reproduced); 1,000 questions in each subset |
+| P2 | HELD | **15 of 51 models** score below the text-only 0.704 on OODCV-VQA as stored |
+| P3 | **FAILED** | Pooled accuracy is 0.937 on presence and 0.727 on unicorn questions (thresholds 0.95 and 0.90), 0.399 on real-object counts. The pooled means are pulled down by the runs with empty answers below |
+| P4 | HELD | **23 of 51 models** move 3 or more places when ranked by real-object count accuracy (Kendall tau-b 0.858) |
+| P5 | **FAILED** | Prefix-only credits are **977 of 78,403** (1.25%, threshold 0.5%): 963 are Qwen-VL Chat's (sentence answers that begin with the gold word), 14 are in 12 other OODCV-VQA runs (the 7 of them read are counts of 10, 11, 12 or 16 credited for the gold 1) |
+| P6 | HELD | **21 runs** have 5% or more answers that are neither yes/no nor a number |
+| P7 | **FAILED** | No Sketchy-VQA run gives one answer 80% of the time; the most one-sided are Claude 3 Opus (No on 72.4%) and IDEFICS 80B Instruct (Yes on 71.0%) |
+| P8 | **FAILED** | Qwen2-VL 72B Instruct is first both ways (stored 0.848; real-object counts 0.657) |
+
+### What the stored OODCV-VQA scores measure
+
+- **Thirteen of 51 models get no credit on any of the 428 real-object count questions**, and they are the bottom 13
+  stored cells (0.000 to 0.341). For six Anthropic models the stored answer is **empty on nearly every number
+  question** (count and unicorn, 657 in all): Claude 3 Haiku 657 and Claude 3 Opus 657 empty, Claude 3.5 Sonnet
+  (2024-06-20 and 2024-10-22) 656 each, Claude 3.7 Sonnet 651, Claude 3 Sonnet 624 (and 33 yes/no answers). Their
+  OODCV-VQA cells (0.301 to 0.335) come entirely from the presence questions, while the same models score 0.749 to
+  0.941 on Sketchy-VQA, where every answer is yes or no. The run spec allows one output token with no prefill;
+  an empty reply at a one-token limit is documented API behaviour in other projects, but we did not check the cause
+  in these runs. Claude 3.7 Sonnet (thinking, 64k) and Gemini 2.0 Flash Thinking store an empty answer on all 2,000
+  questions of both subsets (cells 0.0). Pixtral 12B, IDEFICS 80B Instruct, IDEFICS2 8B, IDEFICS 9B Instruct and
+  Qwen-VL Chat give no number on these questions either (empty answers, cut first words or sentences).
+- **The best stored cell is 0.144 above the text-only answer.** For Qwen2-VL 72B Instruct, 567 of its 848 credits are
+  on questions answerable without the image.
+- **Largest move:** Qwen2.5-VL 32B Instruct is 37th as stored (0.695) but **3rd** by real-object counts (0.612). It
+  gives 477 yes/no answers to 343 yes/no questions, so it answers at least 134 number questions with a yes/no word,
+  and is credited on only 99 of 229 unicorn questions. Palmyra Vision 003 moves 20th to 13th; o3 6th to 9th.
+- *Post hoc:* 9 of P4's 23 movers are the models with zero count credit, which tie at rank 39 by count accuracy; the
+  other 14 move on real differences, so P4 holds without them.
+- *Post hoc:* Qwen-VL Chat's Sketchy-VQA cell (0.651) is almost all prefix credit: under `quasi_exact_match` it would
+  be 0.012.
+- *Post hoc:* question `id971` (gold 1) is answered 10, 11, 12 or 16 by at least six models, all credited by the
+  prefix match; whether its gold is right was not checked.
+
+### Hand-read (by AI agents)
+
+Eight prefix-only credits: seven are counts of 10 or more credited for the gold 1 (wrong answers credited), one is a
+right `Yes` written as a sentence. Eight answers classed "other": two spelled-out numbers, two vague quantity words,
+two cut first words, one sentence and one unrelated word; every class is as labelled.
+
+### What this means
+
+On VHELM's Unicorn OODCV-VQA cell, 57.2% of the questions need no image, a no-image answer scores 0.704, and for 13 of
+51 models the cell measures whether the model returns a one-token number at all rather than how well it counts. A
+fairer cell would report the 428 real-object count questions separately, score counts by numeric equality rather than
+prefix (so `10` is not credited for `1`), and count empty answers per model.

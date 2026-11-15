@@ -1,0 +1,4981 @@
+{
+ "audit": 118,
+ "slug": "vhelm-unicorn-blind-answers",
+ "dataset": "Per-instance outputs of HELM's VHELM run suite v2.1.2 (Stanford CRFM), every unicorn run in the public bucket; Unicorn benchmark by Tu et al. (arXiv 2311.16101). Only run names, instance ids, classes, counts and public model names are published.",
+ "ids": {
+  "OODCV-VQA": 1000,
+  "Sketchy-VQA": 1000
+ },
+ "gold_tally": {
+  "OODCV-VQA": {
+   "presence": {
+    "Yes": 343
+   },
+   "unicorn": {
+    "0": 229
+   },
+   "count": {
+    "1": 132,
+    "5": 23,
+    "4": 63,
+    "2": 119,
+    "3": 91
+   }
+  },
+  "Sketchy-VQA": {
+   "sketch": {
+    "Yes": 509,
+    "No": 491
+   }
+  }
+ },
+ "check_c1": true,
+ "text_answerable_oodcv": 572,
+ "best_count": "1",
+ "best_sketch": "Yes",
+ "text_only_oodcv": 0.704,
+ "text_only_sketchy": 0.509,
+ "runs_listed": 102,
+ "runs_included": 102,
+ "pooled_oodcv": {
+  "presence": 0.9367175441605213,
+  "unicorn": 0.7266033050774895,
+  "count": 0.39902877038665935
+ },
+ "below_text_only_oodcv": [
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-80b-instruct",
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-9b-instruct",
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics2-8b",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20240620",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20241022",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-haiku-20240307",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-opus-20240229",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-sonnet-20240229",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21",
+  "unicorn:subject=OODCV-VQA,model=mistralai_pixtral-12b-2409",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-05-13",
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen-vl-chat",
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-32b-instruct"
+ ],
+ "below_text_only_sketchy": [
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21"
+ ],
+ "tau_b_published_vs_count": 0.858423462923618,
+ "movers_3plus": [
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-9b-instruct",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20240620",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20241022",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-haiku-20240307",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-opus-20240229",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-sonnet-20240229",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-001-safety-block-none",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-preview-0409",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-preview-0514",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-lite-001",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-lite-preview-02-05",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-pro-exp-02-05",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.5-pro-exp-03-25",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4.1-mini-2025-04-14",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-11-20",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-mini-2024-07-18",
+  "unicorn:subject=OODCV-VQA,model=openai_o3-2025-04-16-high-reasoning-effort",
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen-vl-chat",
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-32b-instruct",
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-3b-instruct",
+  "unicorn:subject=OODCV-VQA,model=writer_palmyra-vision-003"
+ ],
+ "leaders": [
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2-vl-72b-instruct"
+ ],
+ "leader_changes": false,
+ "pooled_credits": 78403,
+ "pooled_prefix_only": 977,
+ "runs_nonanswer5": [
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-80b-instruct",
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-9b-instruct",
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics2-8b",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20240620",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20241022",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-haiku-20240307",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-opus-20240229",
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-sonnet-20240229",
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21",
+  "unicorn:subject=OODCV-VQA,model=google_paligemma-3b-mix-448",
+  "unicorn:subject=OODCV-VQA,model=mistralai_pixtral-12b-2409",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4-turbo-2024-04-09",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-05-13",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-08-06",
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-mini-2024-07-18",
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen-vl-chat",
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21",
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen-vl-chat"
+ ],
+ "sketchy_one_answer80": [],
+ "verdicts": {
+  "P1": "HELD",
+  "P2": "HELD",
+  "P3": "FAILED",
+  "P4": "HELD",
+  "P5": "FAILED",
+  "P6": "HELD",
+  "P7": "FAILED",
+  "P8": "FAILED"
+ },
+ "table": [
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=qwen_qwen2-vl-72b-instruct",
+   "model": "qwen_qwen2-vl-72b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.848,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 339,
+   "no": 4,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 339,
+     "exact": 339
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 281,
+     "exact": 281
+    }
+   },
+   "count_accuracy": 0.6565420560747663,
+   "rank_published": 1,
+   "rank_count": 1,
+   "credits_text_answerable": 567,
+   "credits": 848
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=qwen_qwen2-vl-7b-instruct",
+   "model": "qwen_qwen2-vl-7b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.831,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 344,
+    "number": 656,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 340,
+   "no": 4,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 339,
+     "exact": 339
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 263,
+     "exact": 263
+    }
+   },
+   "count_accuracy": 0.6144859813084113,
+   "rank_published": 2,
+   "rank_count": 2,
+   "credits_text_answerable": 568,
+   "credits": 831
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-001",
+   "model": "google_gemini-2.0-flash-001",
+   "subject": "OODCV-VQA",
+   "published": 0.828,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 345,
+    "number": 655,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 343,
+   "no": 2,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 341,
+     "exact": 341
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 259,
+     "exact": 259
+    }
+   },
+   "count_accuracy": 0.6051401869158879,
+   "rank_published": 3,
+   "rank_count": 4,
+   "credits_text_answerable": 569,
+   "credits": 828
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-flash-002",
+   "model": "google_gemini-1.5-flash-002",
+   "subject": "OODCV-VQA",
+   "published": 0.827,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 345,
+    "number": 654,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 344,
+   "no": 1,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 342,
+     "exact": 342
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 257,
+     "exact": 257
+    }
+   },
+   "count_accuracy": 0.6004672897196262,
+   "rank_published": 4,
+   "rank_count": 5,
+   "credits_text_answerable": 570,
+   "credits": 827
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_o4-mini-2025-04-16-high-reasoning-effort",
+   "model": "openai_o4-mini-2025-04-16-high-reasoning-effort",
+   "subject": "OODCV-VQA",
+   "published": 0.824,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 338,
+   "no": 5,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 338,
+     "exact": 338
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 257,
+     "exact": 257
+    }
+   },
+   "count_accuracy": 0.6004672897196262,
+   "rank_published": 5,
+   "rank_count": 5,
+   "credits_text_answerable": 567,
+   "credits": 824
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_o3-2025-04-16-high-reasoning-effort",
+   "model": "openai_o3-2025-04-16-high-reasoning-effort",
+   "subject": "OODCV-VQA",
+   "published": 0.823,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 338,
+   "no": 5,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 338,
+     "exact": 338
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 256,
+     "exact": 255
+    }
+   },
+   "count_accuracy": 0.5981308411214953,
+   "rank_published": 6,
+   "rank_count": 9,
+   "credits_text_answerable": 567,
+   "credits": 823
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-flash-001-safety-block-none",
+   "model": "google_gemini-1.5-flash-001-safety-block-none",
+   "subject": "OODCV-VQA",
+   "published": 0.822,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 656,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 341,
+   "no": 2,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 341,
+     "exact": 341
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 224,
+     "exact": 224
+    },
+    "count": {
+     "n": 428,
+     "credit": 257,
+     "exact": 257
+    }
+   },
+   "count_accuracy": 0.6004672897196262,
+   "rank_published": 7,
+   "rank_count": 5,
+   "credits_text_answerable": 565,
+   "credits": 822
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-flash-preview-0514",
+   "model": "google_gemini-1.5-flash-preview-0514",
+   "subject": "OODCV-VQA",
+   "published": 0.822,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 656,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 341,
+   "no": 2,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 341,
+     "exact": 341
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 224,
+     "exact": 224
+    },
+    "count": {
+     "n": 428,
+     "credit": 257,
+     "exact": 257
+    }
+   },
+   "count_accuracy": 0.6004672897196262,
+   "rank_published": 7,
+   "rank_count": 5,
+   "credits_text_answerable": 565,
+   "credits": 822
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-002",
+   "model": "google_gemini-1.5-pro-002",
+   "subject": "OODCV-VQA",
+   "published": 0.819,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 654,
+    "empty": 0,
+    "other": 3
+   },
+   "yes": 341,
+   "no": 2,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 341,
+     "exact": 341
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 250,
+     "exact": 250
+    }
+   },
+   "count_accuracy": 0.5841121495327103,
+   "rank_published": 9,
+   "rank_count": 11,
+   "credits_text_answerable": 569,
+   "credits": 819
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4.5-preview-2025-02-27",
+   "model": "openai_gpt-4.5-preview-2025-02-27",
+   "subject": "OODCV-VQA",
+   "published": 0.818,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 645,
+    "empty": 0,
+    "other": 12
+   },
+   "yes": 338,
+   "no": 5,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 338,
+     "exact": 338
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 227,
+     "exact": 227
+    },
+    "count": {
+     "n": 428,
+     "credit": 253,
+     "exact": 252
+    }
+   },
+   "count_accuracy": 0.5911214953271028,
+   "rank_published": 10,
+   "rank_count": 10,
+   "credits_text_answerable": 565,
+   "credits": 818
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-3b-instruct",
+   "model": "qwen_qwen2.5-vl-3b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.817,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 341,
+   "no": 2,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 341,
+     "exact": 341
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 247,
+     "exact": 247
+    }
+   },
+   "count_accuracy": 0.5771028037383178,
+   "rank_published": 11,
+   "rank_count": 15,
+   "credits_text_answerable": 570,
+   "credits": 817
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-exp",
+   "model": "google_gemini-2.0-flash-exp",
+   "subject": "OODCV-VQA",
+   "published": 0.816,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 248,
+     "exact": 248
+    }
+   },
+   "count_accuracy": 0.5794392523364486,
+   "rank_published": 12,
+   "rank_count": 13,
+   "credits_text_answerable": 568,
+   "credits": 816
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-preview-0409",
+   "model": "google_gemini-1.5-pro-preview-0409",
+   "subject": "OODCV-VQA",
+   "published": 0.81,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 339,
+   "no": 4,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 339,
+     "exact": 339
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 243,
+     "exact": 243
+    }
+   },
+   "count_accuracy": 0.5677570093457944,
+   "rank_published": 13,
+   "rank_count": 17,
+   "credits_text_answerable": 567,
+   "credits": 810
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-11-20",
+   "model": "openai_gpt-4o-2024-11-20",
+   "subject": "OODCV-VQA",
+   "published": 0.808,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 656,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 339,
+   "no": 4,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 339,
+     "exact": 339
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 241,
+     "exact": 240
+    }
+   },
+   "count_accuracy": 0.5630841121495327,
+   "rank_published": 14,
+   "rank_count": 18,
+   "credits_text_answerable": 567,
+   "credits": 808
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-72b-instruct",
+   "model": "qwen_qwen2.5-vl-72b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.808,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 330,
+   "no": 13,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 330,
+     "exact": 330
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 249,
+     "exact": 249
+    }
+   },
+   "count_accuracy": 0.5817757009345794,
+   "rank_published": 14,
+   "rank_count": 12,
+   "credits_text_answerable": 559,
+   "credits": 808
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-7b-instruct",
+   "model": "qwen_qwen2.5-vl-7b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.805,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 351,
+    "number": 648,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 337,
+   "no": 14,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 332,
+     "exact": 332
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 244,
+     "exact": 244
+    }
+   },
+   "count_accuracy": 0.5700934579439252,
+   "rank_published": 16,
+   "rank_count": 16,
+   "credits_text_answerable": 561,
+   "credits": 805
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-001-safety-block-none",
+   "model": "google_gemini-1.5-pro-001-safety-block-none",
+   "subject": "OODCV-VQA",
+   "published": 0.804,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 227,
+     "exact": 227
+    },
+    "count": {
+     "n": 428,
+     "credit": 237,
+     "exact": 237
+    }
+   },
+   "count_accuracy": 0.5537383177570093,
+   "rank_published": 17,
+   "rank_count": 20,
+   "credits_text_answerable": 567,
+   "credits": 804
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-preview-0514",
+   "model": "google_gemini-1.5-pro-preview-0514",
+   "subject": "OODCV-VQA",
+   "published": 0.804,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 227,
+     "exact": 227
+    },
+    "count": {
+     "n": 428,
+     "credit": 237,
+     "exact": 237
+    }
+   },
+   "count_accuracy": 0.5537383177570093,
+   "rank_published": 17,
+   "rank_count": 20,
+   "credits_text_answerable": 567,
+   "credits": 804
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-pro-exp-02-05",
+   "model": "google_gemini-2.0-pro-exp-02-05",
+   "subject": "OODCV-VQA",
+   "published": 0.802,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 233,
+     "exact": 233
+    }
+   },
+   "count_accuracy": 0.544392523364486,
+   "rank_published": 19,
+   "rank_count": 22,
+   "credits_text_answerable": 569,
+   "credits": 802
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=writer_palmyra-vision-003",
+   "model": "writer_palmyra-vision-003",
+   "subject": "OODCV-VQA",
+   "published": 0.798,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 326,
+    "number": 674,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 323,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 323,
+     "exact": 323
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 227,
+     "exact": 227
+    },
+    "count": {
+     "n": 428,
+     "credit": 248,
+     "exact": 248
+    }
+   },
+   "count_accuracy": 0.5794392523364486,
+   "rank_published": 20,
+   "rank_count": 13,
+   "credits_text_answerable": 550,
+   "credits": 798
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-2.5-pro-exp-03-25",
+   "model": "google_gemini-2.5-pro-exp-03-25",
+   "subject": "OODCV-VQA",
+   "published": 0.797,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 656,
+    "empty": 1,
+    "other": 0
+   },
+   "yes": 339,
+   "no": 4,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 339,
+     "exact": 339
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 229,
+     "exact": 228
+    }
+   },
+   "count_accuracy": 0.5350467289719626,
+   "rank_published": 21,
+   "rank_count": 25,
+   "credits_text_answerable": 568,
+   "credits": 797
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-lite-001",
+   "model": "google_gemini-2.0-flash-lite-001",
+   "subject": "OODCV-VQA",
+   "published": 0.796,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 228,
+     "exact": 228
+    }
+   },
+   "count_accuracy": 0.5327102803738317,
+   "rank_published": 22,
+   "rank_count": 26,
+   "credits_text_answerable": 568,
+   "credits": 796
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_paligemma-3b-mix-224",
+   "model": "google_paligemma-3b-mix-224",
+   "subject": "OODCV-VQA",
+   "published": 0.795,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 641,
+    "empty": 0,
+    "other": 16
+   },
+   "yes": 336,
+   "no": 7,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 336,
+     "exact": 336
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 230,
+     "exact": 230
+    }
+   },
+   "count_accuracy": 0.5373831775700935,
+   "rank_published": 23,
+   "rank_count": 23,
+   "credits_text_answerable": 565,
+   "credits": 795
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4.1-mini-2025-04-14",
+   "model": "openai_gpt-4.1-mini-2025-04-14",
+   "subject": "OODCV-VQA",
+   "published": 0.794,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 656,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 331,
+   "no": 12,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 331,
+     "exact": 331
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 223,
+     "exact": 223
+    },
+    "count": {
+     "n": 428,
+     "credit": 240,
+     "exact": 239
+    }
+   },
+   "count_accuracy": 0.5607476635514018,
+   "rank_published": 24,
+   "rank_count": 19,
+   "credits_text_answerable": 554,
+   "credits": 794
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-lite-preview-02-05",
+   "model": "google_gemini-2.0-flash-lite-preview-02-05",
+   "subject": "OODCV-VQA",
+   "published": 0.791,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 338,
+   "no": 5,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 338,
+     "exact": 338
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 227,
+     "exact": 227
+    },
+    "count": {
+     "n": 428,
+     "credit": 226,
+     "exact": 226
+    }
+   },
+   "count_accuracy": 0.5280373831775701,
+   "rank_published": 25,
+   "rank_count": 28,
+   "credits_text_answerable": 565,
+   "credits": 791
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4.1-2025-04-14",
+   "model": "openai_gpt-4.1-2025-04-14",
+   "subject": "OODCV-VQA",
+   "published": 0.791,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 637,
+    "empty": 0,
+    "other": 20
+   },
+   "yes": 335,
+   "no": 8,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 335,
+     "exact": 335
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 226,
+     "exact": 226
+    },
+    "count": {
+     "n": 428,
+     "credit": 230,
+     "exact": 229
+    }
+   },
+   "count_accuracy": 0.5373831775700935,
+   "rank_published": 25,
+   "rank_count": 23,
+   "credits_text_answerable": 561,
+   "credits": 791
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_o1-2024-12-17",
+   "model": "openai_o1-2024-12-17",
+   "subject": "OODCV-VQA",
+   "published": 0.789,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 333,
+   "no": 10,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 333,
+     "exact": 333
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 227,
+     "exact": 226
+    }
+   },
+   "count_accuracy": 0.530373831775701,
+   "rank_published": 27,
+   "rank_count": 27,
+   "credits_text_answerable": 562,
+   "credits": 789
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=meta_llama-4-maverick-17b-128e-instruct-fp8",
+   "model": "meta_llama-4-maverick-17b-128e-instruct-fp8",
+   "subject": "OODCV-VQA",
+   "published": 0.776,
+   "n": 1000,
+   "prefix_only": 2,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 338,
+   "no": 5,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 338,
+     "exact": 338
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 210,
+     "exact": 208
+    }
+   },
+   "count_accuracy": 0.49065420560747663,
+   "rank_published": 28,
+   "rank_count": 29,
+   "credits_text_answerable": 566,
+   "credits": 776
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-1.0-pro-vision-001",
+   "model": "google_gemini-1.0-pro-vision-001",
+   "subject": "OODCV-VQA",
+   "published": 0.771,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 656,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 226,
+     "exact": 226
+    },
+    "count": {
+     "n": 428,
+     "credit": 205,
+     "exact": 205
+    }
+   },
+   "count_accuracy": 0.47897196261682246,
+   "rank_published": 29,
+   "rank_count": 31,
+   "credits_text_answerable": 566,
+   "credits": 771
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=meta_llama-4-scout-17b-16e-instruct",
+   "model": "meta_llama-4-scout-17b-16e-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.769,
+   "n": 1000,
+   "prefix_only": 2,
+   "kinds": {
+    "yesno": 343,
+    "number": 657,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 334,
+   "no": 9,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 334,
+     "exact": 334
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 206,
+     "exact": 204
+    }
+   },
+   "count_accuracy": 0.48130841121495327,
+   "rank_published": 30,
+   "rank_count": 30,
+   "credits_text_answerable": 563,
+   "credits": 769
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_paligemma-3b-mix-448",
+   "model": "google_paligemma-3b-mix-448",
+   "subject": "OODCV-VQA",
+   "published": 0.755,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 569,
+    "empty": 0,
+    "other": 88
+   },
+   "yes": 339,
+   "no": 4,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 339,
+     "exact": 339
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 228,
+     "exact": 228
+    },
+    "count": {
+     "n": 428,
+     "credit": 188,
+     "exact": 188
+    }
+   },
+   "count_accuracy": 0.4392523364485981,
+   "rank_published": 31,
+   "rank_count": 33,
+   "credits_text_answerable": 567,
+   "credits": 755
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-mini-2024-07-18",
+   "model": "openai_gpt-4o-mini-2024-07-18",
+   "subject": "OODCV-VQA",
+   "published": 0.741,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 527,
+    "empty": 1,
+    "other": 129
+   },
+   "yes": 332,
+   "no": 11,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 332,
+     "exact": 332
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 227,
+     "exact": 227
+    },
+    "count": {
+     "n": 428,
+     "credit": 182,
+     "exact": 182
+    }
+   },
+   "count_accuracy": 0.4252336448598131,
+   "rank_published": 32,
+   "rank_count": 35,
+   "credits_text_answerable": 559,
+   "credits": 741
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4.1-nano-2025-04-14",
+   "model": "openai_gpt-4.1-nano-2025-04-14",
+   "subject": "OODCV-VQA",
+   "published": 0.74,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 619,
+    "empty": 0,
+    "other": 38
+   },
+   "yes": 332,
+   "no": 11,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 332,
+     "exact": 332
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 214,
+     "exact": 214
+    },
+    "count": {
+     "n": 428,
+     "credit": 194,
+     "exact": 194
+    }
+   },
+   "count_accuracy": 0.4532710280373832,
+   "rank_published": 33,
+   "rank_count": 32,
+   "credits_text_answerable": 546,
+   "credits": 740
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4-turbo-2024-04-09",
+   "model": "openai_gpt-4-turbo-2024-04-09",
+   "subject": "OODCV-VQA",
+   "published": 0.734,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 344,
+    "number": 585,
+    "empty": 0,
+    "other": 71
+   },
+   "yes": 330,
+   "no": 14,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 330,
+     "exact": 330
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 224,
+     "exact": 224
+    },
+    "count": {
+     "n": 428,
+     "credit": 180,
+     "exact": 179
+    }
+   },
+   "count_accuracy": 0.4205607476635514,
+   "rank_published": 34,
+   "rank_count": 36,
+   "credits_text_answerable": 554,
+   "credits": 734
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4-1106-vision-preview",
+   "model": "openai_gpt-4-1106-vision-preview",
+   "subject": "OODCV-VQA",
+   "published": 0.726,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 361,
+    "number": 594,
+    "empty": 0,
+    "other": 45
+   },
+   "yes": 332,
+   "no": 29,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 331,
+     "exact": 331
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 209,
+     "exact": 209
+    },
+    "count": {
+     "n": 428,
+     "credit": 186,
+     "exact": 185
+    }
+   },
+   "count_accuracy": 0.43457943925233644,
+   "rank_published": 35,
+   "rank_count": 34,
+   "credits_text_answerable": 540,
+   "credits": 726
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-08-06",
+   "model": "openai_gpt-4o-2024-08-06",
+   "subject": "OODCV-VQA",
+   "published": 0.71,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 456,
+    "empty": 0,
+    "other": 201
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 229,
+     "exact": 229
+    },
+    "count": {
+     "n": 428,
+     "credit": 141,
+     "exact": 141
+    }
+   },
+   "count_accuracy": 0.3294392523364486,
+   "rank_published": 36,
+   "rank_count": 37,
+   "credits_text_answerable": 569,
+   "credits": 710
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-32b-instruct",
+   "model": "qwen_qwen2.5-vl-32b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.695,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 477,
+    "number": 523,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 336,
+   "no": 141,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 334,
+     "exact": 334
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 99,
+     "exact": 99
+    },
+    "count": {
+     "n": 428,
+     "credit": 262,
+     "exact": 262
+    }
+   },
+   "count_accuracy": 0.6121495327102804,
+   "rank_published": 37,
+   "rank_count": 3,
+   "credits_text_answerable": 433,
+   "credits": 695
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-05-13",
+   "model": "openai_gpt-4o-2024-05-13",
+   "subject": "OODCV-VQA",
+   "published": 0.694,
+   "n": 1000,
+   "prefix_only": 1,
+   "kinds": {
+    "yesno": 343,
+    "number": 432,
+    "empty": 0,
+    "other": 225
+   },
+   "yes": 338,
+   "no": 5,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 338,
+     "exact": 338
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 227,
+     "exact": 227
+    },
+    "count": {
+     "n": 428,
+     "credit": 129,
+     "exact": 128
+    }
+   },
+   "count_accuracy": 0.3014018691588785,
+   "rank_published": 38,
+   "rank_count": 38,
+   "credits_text_answerable": 565,
+   "credits": 694
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=mistralai_pixtral-12b-2409",
+   "model": "mistralai_pixtral-12b-2409",
+   "subject": "OODCV-VQA",
+   "published": 0.341,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 347,
+    "number": 0,
+    "empty": 386,
+    "other": 267
+   },
+   "yes": 345,
+   "no": 2,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 341,
+     "exact": 341
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 39,
+   "rank_count": 39,
+   "credits_text_answerable": 341,
+   "credits": 341
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-80b-instruct",
+   "model": "HuggingFaceM4_idefics-80b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.34,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 0,
+    "other": 657
+   },
+   "yes": 340,
+   "no": 3,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 340,
+     "exact": 340
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 40,
+   "rank_count": 39,
+   "credits_text_answerable": 340,
+   "credits": 340
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics2-8b",
+   "model": "HuggingFaceM4_idefics2-8b",
+   "subject": "OODCV-VQA",
+   "published": 0.335,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 307,
+    "other": 350
+   },
+   "yes": 335,
+   "no": 8,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 335,
+     "exact": 335
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 41,
+   "rank_count": 39,
+   "credits_text_answerable": 335,
+   "credits": 335
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219",
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "subject": "OODCV-VQA",
+   "published": 0.335,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 651,
+    "other": 6
+   },
+   "yes": 335,
+   "no": 8,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 335,
+     "exact": 335
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 41,
+   "rank_count": 39,
+   "credits_text_answerable": 335,
+   "credits": 335
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20241022",
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "subject": "OODCV-VQA",
+   "published": 0.333,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 656,
+    "other": 1
+   },
+   "yes": 333,
+   "no": 10,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 333,
+     "exact": 333
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 43,
+   "rank_count": 39,
+   "credits_text_answerable": 333,
+   "credits": 333
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20240620",
+   "model": "anthropic_claude-3-5-sonnet-20240620",
+   "subject": "OODCV-VQA",
+   "published": 0.329,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 656,
+    "other": 1
+   },
+   "yes": 329,
+   "no": 14,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 329,
+     "exact": 329
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 44,
+   "rank_count": 39,
+   "credits_text_answerable": 329,
+   "credits": 329
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=qwen_qwen-vl-chat",
+   "model": "qwen_qwen-vl-chat",
+   "subject": "OODCV-VQA",
+   "published": 0.324,
+   "n": 1000,
+   "prefix_only": 324,
+   "kinds": {
+    "yesno": 0,
+    "number": 0,
+    "empty": 0,
+    "other": 1000
+   },
+   "yes": 0,
+   "no": 0,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 324,
+     "exact": 0
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 45,
+   "rank_count": 39,
+   "credits_text_answerable": 324,
+   "credits": 324
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-9b-instruct",
+   "model": "HuggingFaceM4_idefics-9b-instruct",
+   "subject": "OODCV-VQA",
+   "published": 0.319,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 171,
+    "other": 486
+   },
+   "yes": 319,
+   "no": 24,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 319,
+     "exact": 319
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 46,
+   "rank_count": 39,
+   "credits_text_answerable": 319,
+   "credits": 319
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-sonnet-20240229",
+   "model": "anthropic_claude-3-sonnet-20240229",
+   "subject": "OODCV-VQA",
+   "published": 0.314,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 376,
+    "number": 0,
+    "empty": 624,
+    "other": 0
+   },
+   "yes": 314,
+   "no": 62,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 314,
+     "exact": 314
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 47,
+   "rank_count": 39,
+   "credits_text_answerable": 314,
+   "credits": 314
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-haiku-20240307",
+   "model": "anthropic_claude-3-haiku-20240307",
+   "subject": "OODCV-VQA",
+   "published": 0.313,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 657,
+    "other": 0
+   },
+   "yes": 313,
+   "no": 30,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 313,
+     "exact": 313
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 48,
+   "rank_count": 39,
+   "credits_text_answerable": 313,
+   "credits": 313
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-opus-20240229",
+   "model": "anthropic_claude-3-opus-20240229",
+   "subject": "OODCV-VQA",
+   "published": 0.301,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 343,
+    "number": 0,
+    "empty": 657,
+    "other": 0
+   },
+   "yes": 301,
+   "no": 42,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 301,
+     "exact": 301
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 49,
+   "rank_count": 39,
+   "credits_text_answerable": 301,
+   "credits": 301
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+   "model": "anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+   "subject": "OODCV-VQA",
+   "published": 0.0,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 0,
+    "number": 0,
+    "empty": 1000,
+    "other": 0
+   },
+   "yes": 0,
+   "no": 0,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 0,
+     "exact": 0
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 50,
+   "rank_count": 39,
+   "credits_text_answerable": 0,
+   "credits": 0
+  },
+  {
+   "run": "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21",
+   "model": "google_gemini-2.0-flash-thinking-exp-01-21",
+   "subject": "OODCV-VQA",
+   "published": 0.0,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 0,
+    "number": 0,
+    "empty": 1000,
+    "other": 0
+   },
+   "yes": 0,
+   "no": 0,
+   "by_class": {
+    "presence": {
+     "n": 343,
+     "credit": 0,
+     "exact": 0
+    },
+    "unicorn": {
+     "n": 229,
+     "credit": 0,
+     "exact": 0
+    },
+    "count": {
+     "n": 428,
+     "credit": 0,
+     "exact": 0
+    }
+   },
+   "count_accuracy": 0.0,
+   "rank_published": 50,
+   "rank_count": 39,
+   "credits_text_answerable": 0,
+   "credits": 0
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=qwen_qwen2-vl-72b-instruct",
+   "model": "qwen_qwen2-vl-72b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.976,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 499,
+   "no": 501,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 976,
+     "exact": 976
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=qwen_qwen2-vl-7b-instruct",
+   "model": "qwen_qwen2-vl-7b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.972,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 489,
+   "no": 511,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 972,
+     "exact": 972
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-001",
+   "model": "google_gemini-2.0-flash-001",
+   "subject": "Sketchy-VQA",
+   "published": 0.97,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 487,
+   "no": 513,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 970,
+     "exact": 970
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-pro-exp-02-05",
+   "model": "google_gemini-2.0-pro-exp-02-05",
+   "subject": "Sketchy-VQA",
+   "published": 0.97,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 495,
+   "no": 505,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 970,
+     "exact": 970
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-exp",
+   "model": "google_gemini-2.0-flash-exp",
+   "subject": "Sketchy-VQA",
+   "published": 0.963,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 480,
+   "no": 520,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 963,
+     "exact": 963
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-002",
+   "model": "google_gemini-1.5-pro-002",
+   "subject": "Sketchy-VQA",
+   "published": 0.962,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 475,
+   "no": 525,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 962,
+     "exact": 962
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-lite-001",
+   "model": "google_gemini-2.0-flash-lite-001",
+   "subject": "Sketchy-VQA",
+   "published": 0.962,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 485,
+   "no": 515,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 962,
+     "exact": 962
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-lite-preview-02-05",
+   "model": "google_gemini-2.0-flash-lite-preview-02-05",
+   "subject": "Sketchy-VQA",
+   "published": 0.962,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 483,
+   "no": 517,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 962,
+     "exact": 962
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-2.5-pro-exp-03-25",
+   "model": "google_gemini-2.5-pro-exp-03-25",
+   "subject": "Sketchy-VQA",
+   "published": 0.962,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 491,
+   "no": 509,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 962,
+     "exact": 962
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-flash-002",
+   "model": "google_gemini-1.5-flash-002",
+   "subject": "Sketchy-VQA",
+   "published": 0.961,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 512,
+   "no": 488,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 961,
+     "exact": 961
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.0-pro-vision-001",
+   "model": "google_gemini-1.0-pro-vision-001",
+   "subject": "Sketchy-VQA",
+   "published": 0.954,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 487,
+   "no": 513,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 954,
+     "exact": 954
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-flash-001-safety-block-none",
+   "model": "google_gemini-1.5-flash-001-safety-block-none",
+   "subject": "Sketchy-VQA",
+   "published": 0.953,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 532,
+   "no": 468,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 953,
+     "exact": 953
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-flash-preview-0514",
+   "model": "google_gemini-1.5-flash-preview-0514",
+   "subject": "Sketchy-VQA",
+   "published": 0.953,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 532,
+   "no": 468,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 953,
+     "exact": 953
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-001-safety-block-none",
+   "model": "google_gemini-1.5-pro-001-safety-block-none",
+   "subject": "Sketchy-VQA",
+   "published": 0.951,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 997,
+    "number": 3,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 466,
+   "no": 531,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 951,
+     "exact": 951
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-preview-0514",
+   "model": "google_gemini-1.5-pro-preview-0514",
+   "subject": "Sketchy-VQA",
+   "published": 0.951,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 997,
+    "number": 3,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 466,
+   "no": 531,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 951,
+     "exact": 951
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-2024-08-06",
+   "model": "openai_gpt-4o-2024-08-06",
+   "subject": "Sketchy-VQA",
+   "published": 0.949,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 488,
+   "no": 512,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 949,
+     "exact": 949
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.5-preview-2025-02-27",
+   "model": "openai_gpt-4.5-preview-2025-02-27",
+   "subject": "Sketchy-VQA",
+   "published": 0.947,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 484,
+   "no": 516,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 947,
+     "exact": 947
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=writer_palmyra-vision-003",
+   "model": "writer_palmyra-vision-003",
+   "subject": "Sketchy-VQA",
+   "published": 0.945,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 997,
+    "number": 3,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 502,
+   "no": 495,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 945,
+     "exact": 945
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-7-sonnet-20250219",
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "subject": "Sketchy-VQA",
+   "published": 0.941,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 472,
+   "no": 528,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 941,
+     "exact": 941
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-32b-instruct",
+   "model": "qwen_qwen2.5-vl-32b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.94,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 463,
+   "no": 537,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 940,
+     "exact": 940
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-7b-instruct",
+   "model": "qwen_qwen2.5-vl-7b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.939,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 462,
+   "no": 538,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 939,
+     "exact": 939
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-2024-05-13",
+   "model": "openai_gpt-4o-2024-05-13",
+   "subject": "Sketchy-VQA",
+   "published": 0.936,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 453,
+   "no": 547,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 936,
+     "exact": 936
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-preview-0409",
+   "model": "google_gemini-1.5-pro-preview-0409",
+   "subject": "Sketchy-VQA",
+   "published": 0.935,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 452,
+   "no": 548,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 935,
+     "exact": 935
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-72b-instruct",
+   "model": "qwen_qwen2.5-vl-72b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.933,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 458,
+   "no": 542,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 933,
+     "exact": 933
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=mistralai_pixtral-12b-2409",
+   "model": "mistralai_pixtral-12b-2409",
+   "subject": "Sketchy-VQA",
+   "published": 0.93,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 493,
+   "no": 507,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 930,
+     "exact": 930
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-5-sonnet-20241022",
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "subject": "Sketchy-VQA",
+   "published": 0.927,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 450,
+   "no": 550,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 927,
+     "exact": 927
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-2024-11-20",
+   "model": "openai_gpt-4o-2024-11-20",
+   "subject": "Sketchy-VQA",
+   "published": 0.927,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 454,
+   "no": 546,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 927,
+     "exact": 927
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_o4-mini-2025-04-16-high-reasoning-effort",
+   "model": "openai_o4-mini-2025-04-16-high-reasoning-effort",
+   "subject": "Sketchy-VQA",
+   "published": 0.925,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 446,
+   "no": 554,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 925,
+     "exact": 925
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=HuggingFaceM4_idefics2-8b",
+   "model": "HuggingFaceM4_idefics2-8b",
+   "subject": "Sketchy-VQA",
+   "published": 0.923,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 999,
+    "number": 0,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 467,
+   "no": 532,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 923,
+     "exact": 923
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.1-2025-04-14",
+   "model": "openai_gpt-4.1-2025-04-14",
+   "subject": "Sketchy-VQA",
+   "published": 0.923,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 446,
+   "no": 554,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 923,
+     "exact": 923
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=meta_llama-4-scout-17b-16e-instruct",
+   "model": "meta_llama-4-scout-17b-16e-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.92,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 455,
+   "no": 545,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 920,
+     "exact": 920
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.1-mini-2025-04-14",
+   "model": "openai_gpt-4.1-mini-2025-04-14",
+   "subject": "Sketchy-VQA",
+   "published": 0.918,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 465,
+   "no": 535,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 918,
+     "exact": 918
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_o3-2025-04-16-high-reasoning-effort",
+   "model": "openai_o3-2025-04-16-high-reasoning-effort",
+   "subject": "Sketchy-VQA",
+   "published": 0.918,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 453,
+   "no": 547,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 918,
+     "exact": 918
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-5-sonnet-20240620",
+   "model": "anthropic_claude-3-5-sonnet-20240620",
+   "subject": "Sketchy-VQA",
+   "published": 0.914,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 433,
+   "no": 567,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 914,
+     "exact": 914
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_paligemma-3b-mix-224",
+   "model": "google_paligemma-3b-mix-224",
+   "subject": "Sketchy-VQA",
+   "published": 0.911,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 494,
+   "no": 506,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 911,
+     "exact": 911
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=meta_llama-4-maverick-17b-128e-instruct-fp8",
+   "model": "meta_llama-4-maverick-17b-128e-instruct-fp8",
+   "subject": "Sketchy-VQA",
+   "published": 0.907,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 500,
+   "no": 500,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 907,
+     "exact": 907
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_o1-2024-12-17",
+   "model": "openai_o1-2024-12-17",
+   "subject": "Sketchy-VQA",
+   "published": 0.907,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 418,
+   "no": 582,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 907,
+     "exact": 907
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-mini-2024-07-18",
+   "model": "openai_gpt-4o-mini-2024-07-18",
+   "subject": "Sketchy-VQA",
+   "published": 0.903,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 997,
+    "number": 0,
+    "empty": 3,
+    "other": 0
+   },
+   "yes": 420,
+   "no": 577,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 903,
+     "exact": 903
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_paligemma-3b-mix-448",
+   "model": "google_paligemma-3b-mix-448",
+   "subject": "Sketchy-VQA",
+   "published": 0.891,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 999,
+    "number": 0,
+    "empty": 0,
+    "other": 1
+   },
+   "yes": 494,
+   "no": 505,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 891,
+     "exact": 891
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4-turbo-2024-04-09",
+   "model": "openai_gpt-4-turbo-2024-04-09",
+   "subject": "Sketchy-VQA",
+   "published": 0.889,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 430,
+   "no": 570,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 889,
+     "exact": 889
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.1-nano-2025-04-14",
+   "model": "openai_gpt-4.1-nano-2025-04-14",
+   "subject": "Sketchy-VQA",
+   "published": 0.886,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 419,
+   "no": 581,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 886,
+     "exact": 886
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=HuggingFaceM4_idefics-9b-instruct",
+   "model": "HuggingFaceM4_idefics-9b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.881,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 995,
+    "number": 0,
+    "empty": 0,
+    "other": 5
+   },
+   "yes": 456,
+   "no": 539,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 881,
+     "exact": 881
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-sonnet-20240229",
+   "model": "anthropic_claude-3-sonnet-20240229",
+   "subject": "Sketchy-VQA",
+   "published": 0.875,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 416,
+   "no": 584,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 875,
+     "exact": 875
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=openai_gpt-4-1106-vision-preview",
+   "model": "openai_gpt-4-1106-vision-preview",
+   "subject": "Sketchy-VQA",
+   "published": 0.866,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 399,
+   "no": 601,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 866,
+     "exact": 866
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-haiku-20240307",
+   "model": "anthropic_claude-3-haiku-20240307",
+   "subject": "Sketchy-VQA",
+   "published": 0.856,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 377,
+   "no": 623,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 856,
+     "exact": 856
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-3b-instruct",
+   "model": "qwen_qwen2.5-vl-3b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.798,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 858,
+    "number": 142,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 505,
+   "no": 353,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 798,
+     "exact": 798
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-opus-20240229",
+   "model": "anthropic_claude-3-opus-20240229",
+   "subject": "Sketchy-VQA",
+   "published": 0.749,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 276,
+   "no": 724,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 749,
+     "exact": 749
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=HuggingFaceM4_idefics-80b-instruct",
+   "model": "HuggingFaceM4_idefics-80b-instruct",
+   "subject": "Sketchy-VQA",
+   "published": 0.739,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 1000,
+    "number": 0,
+    "empty": 0,
+    "other": 0
+   },
+   "yes": 710,
+   "no": 290,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 739,
+     "exact": 739
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=qwen_qwen-vl-chat",
+   "model": "qwen_qwen-vl-chat",
+   "subject": "Sketchy-VQA",
+   "published": 0.651,
+   "n": 1000,
+   "prefix_only": 639,
+   "kinds": {
+    "yesno": 20,
+    "number": 0,
+    "empty": 0,
+    "other": 980
+   },
+   "yes": 5,
+   "no": 15,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 651,
+     "exact": 12
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+   "model": "anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+   "subject": "Sketchy-VQA",
+   "published": 0.0,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 0,
+    "number": 0,
+    "empty": 1000,
+    "other": 0
+   },
+   "yes": 0,
+   "no": 0,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 0,
+     "exact": 0
+    }
+   }
+  },
+  {
+   "run": "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21",
+   "model": "google_gemini-2.0-flash-thinking-exp-01-21",
+   "subject": "Sketchy-VQA",
+   "published": 0.0,
+   "n": 1000,
+   "prefix_only": 0,
+   "kinds": {
+    "yesno": 0,
+    "number": 0,
+    "empty": 1000,
+    "other": 0
+   },
+   "yes": 0,
+   "no": 0,
+   "by_class": {
+    "sketch": {
+     "n": 1000,
+     "credit": 0,
+     "exact": 0
+    }
+   }
+  }
+ ],
+ "runs": {
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-80b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "HuggingFaceM4_idefics-80b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 340
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics-9b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "HuggingFaceM4_idefics-9b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 319
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=HuggingFaceM4_idefics2-8b": {
+   "status": "included",
+   "reasons": [],
+   "model": "HuggingFaceM4_idefics2-8b",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 335
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20240620": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-5-sonnet-20240620",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 329
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-5-sonnet-20241022": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 333
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 335
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 0
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-haiku-20240307": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-haiku-20240307",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 313
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-opus-20240229": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-opus-20240229",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 301
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=anthropic_claude-3-sonnet-20240229": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-sonnet-20240229",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 314
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.0-pro-vision-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.0-pro-vision-001",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 771
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-flash-001-safety-block-none": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-001-safety-block-none",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 822
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-flash-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-002",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 827
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-flash-preview-0514": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-preview-0514",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 822
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-001-safety-block-none": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-001-safety-block-none",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 804
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-002",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 819
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-preview-0409": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-preview-0409",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 810
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-1.5-pro-preview-0514": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-preview-0514",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 804
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-001",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 828
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-exp": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-exp",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 816
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-lite-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-001",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 796
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-lite-preview-02-05": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-preview-02-05",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 791
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-thinking-exp-01-21",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 0
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.0-pro-exp-02-05": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-pro-exp-02-05",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 802
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_gemini-2.5-pro-exp-03-25": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-pro-exp-03-25",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 797
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_paligemma-3b-mix-224": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_paligemma-3b-mix-224",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 795
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=google_paligemma-3b-mix-448": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_paligemma-3b-mix-448",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 755
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=meta_llama-4-maverick-17b-128e-instruct-fp8": {
+   "status": "included",
+   "reasons": [],
+   "model": "meta_llama-4-maverick-17b-128e-instruct-fp8",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 2,
+    "credit": 776
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=meta_llama-4-scout-17b-16e-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "meta_llama-4-scout-17b-16e-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 2,
+    "credit": 769
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=mistralai_pixtral-12b-2409": {
+   "status": "included",
+   "reasons": [],
+   "model": "mistralai_pixtral-12b-2409",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 341
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4-1106-vision-preview": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4-1106-vision-preview",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 726
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4-turbo-2024-04-09": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4-turbo-2024-04-09",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 734
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4.1-2025-04-14": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.1-2025-04-14",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 791
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4.1-mini-2025-04-14": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.1-mini-2025-04-14",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 794
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4.1-nano-2025-04-14": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.1-nano-2025-04-14",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 740
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4.5-preview-2025-02-27": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.5-preview-2025-02-27",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 818
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-05-13": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-2024-05-13",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 694
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-08-06": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-2024-08-06",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 710
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-2024-11-20",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 808
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_gpt-4o-mini-2024-07-18": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-2024-07-18",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 741
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_o1-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_o1-2024-12-17",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 789
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_o3-2025-04-16-high-reasoning-effort": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_o3-2025-04-16-high-reasoning-effort",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 1,
+    "credit": 823
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=openai_o4-mini-2025-04-16-high-reasoning-effort": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_o4-mini-2025-04-16-high-reasoning-effort",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 824
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen-vl-chat": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen-vl-chat",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 324,
+    "credit": 324
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2-vl-72b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-vl-72b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 848
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2-vl-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-vl-7b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 831
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-32b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-32b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 695
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-3b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-3b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 817
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-72b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-72b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 808
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=qwen_qwen2.5-vl-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-7b-instruct",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 805
+   }
+  },
+  "unicorn:subject=OODCV-VQA,model=writer_palmyra-vision-003": {
+   "status": "included",
+   "reasons": [],
+   "model": "writer_palmyra-vision-003",
+   "subject": "OODCV-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 798
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=HuggingFaceM4_idefics-80b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "HuggingFaceM4_idefics-80b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 739
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=HuggingFaceM4_idefics-9b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "HuggingFaceM4_idefics-9b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 881
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=HuggingFaceM4_idefics2-8b": {
+   "status": "included",
+   "reasons": [],
+   "model": "HuggingFaceM4_idefics2-8b",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 923
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-5-sonnet-20240620": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-5-sonnet-20240620",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 914
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-5-sonnet-20241022": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-5-sonnet-20241022",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 927
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-7-sonnet-20250219": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-7-sonnet-20250219",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 941
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-7-sonnet-20250219-thinking-64k": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-7-sonnet-20250219-thinking-64k",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 0
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-haiku-20240307": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-haiku-20240307",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 856
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-opus-20240229": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-opus-20240229",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 749
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=anthropic_claude-3-sonnet-20240229": {
+   "status": "included",
+   "reasons": [],
+   "model": "anthropic_claude-3-sonnet-20240229",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 875
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.0-pro-vision-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.0-pro-vision-001",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 954
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-flash-001-safety-block-none": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-001-safety-block-none",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 953
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-flash-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-002",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 961
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-flash-preview-0514": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-flash-preview-0514",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 953
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-001-safety-block-none": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-001-safety-block-none",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 951
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-002": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-002",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 962
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-preview-0409": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-preview-0409",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 935
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-1.5-pro-preview-0514": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-1.5-pro-preview-0514",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 951
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-001",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 970
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-exp": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-exp",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 963
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-lite-001": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-001",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 962
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-lite-preview-02-05": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-lite-preview-02-05",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 962
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-flash-thinking-exp-01-21": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-flash-thinking-exp-01-21",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 0
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.0-pro-exp-02-05": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.0-pro-exp-02-05",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 970
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_gemini-2.5-pro-exp-03-25": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_gemini-2.5-pro-exp-03-25",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 962
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_paligemma-3b-mix-224": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_paligemma-3b-mix-224",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 911
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=google_paligemma-3b-mix-448": {
+   "status": "included",
+   "reasons": [],
+   "model": "google_paligemma-3b-mix-448",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 891
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=meta_llama-4-maverick-17b-128e-instruct-fp8": {
+   "status": "included",
+   "reasons": [],
+   "model": "meta_llama-4-maverick-17b-128e-instruct-fp8",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 907
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=meta_llama-4-scout-17b-16e-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "meta_llama-4-scout-17b-16e-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 920
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=mistralai_pixtral-12b-2409": {
+   "status": "included",
+   "reasons": [],
+   "model": "mistralai_pixtral-12b-2409",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 930
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4-1106-vision-preview": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4-1106-vision-preview",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 866
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4-turbo-2024-04-09": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4-turbo-2024-04-09",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 889
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.1-2025-04-14": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.1-2025-04-14",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 923
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.1-mini-2025-04-14": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.1-mini-2025-04-14",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 918
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.1-nano-2025-04-14": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.1-nano-2025-04-14",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 886
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4.5-preview-2025-02-27": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4.5-preview-2025-02-27",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 947
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-2024-05-13": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-2024-05-13",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 936
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-2024-08-06": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-2024-08-06",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 949
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-2024-11-20": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-2024-11-20",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 927
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_gpt-4o-mini-2024-07-18": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_gpt-4o-mini-2024-07-18",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 903
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_o1-2024-12-17": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_o1-2024-12-17",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 907
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_o3-2025-04-16-high-reasoning-effort": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_o3-2025-04-16-high-reasoning-effort",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 918
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=openai_o4-mini-2025-04-16-high-reasoning-effort": {
+   "status": "included",
+   "reasons": [],
+   "model": "openai_o4-mini-2025-04-16-high-reasoning-effort",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 925
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen-vl-chat": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen-vl-chat",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 639,
+    "credit": 651
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen2-vl-72b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-vl-72b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 976
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen2-vl-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2-vl-7b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 972
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-32b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-32b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 940
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-3b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-3b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 798
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-72b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-72b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 933
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=qwen_qwen2.5-vl-7b-instruct": {
+   "status": "included",
+   "reasons": [],
+   "model": "qwen_qwen2.5-vl-7b-instruct",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 939
+   }
+  },
+  "unicorn:subject=Sketchy-VQA,model=writer_palmyra-vision-003": {
+   "status": "included",
+   "reasons": [],
+   "model": "writer_palmyra-vision-003",
+   "subject": "Sketchy-VQA",
+   "counts": {
+    "n_records": 1000,
+    "perturbed": 0,
+    "not_test": 0,
+    "duplicate": 0,
+    "kept": 1000,
+    "stored_missing": 0,
+    "mismatch": 0,
+    "prefix_only": 0,
+    "credit": 945
+   }
+  }
+ }
+}
